@@ -541,10 +541,10 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 21, 21712, "", "=q4=Amulet of the Fallen God", "=q1=#m4#: =ds=#s2#"};
 		{ 22, 21709, "", "=q4=Ring of the Fallen God", "=q1=#m4#: =ds=#s13#"};
 		{ 24, 222734, "", "=q1=Base of Atiesh", "=ds=#m3#"};
-		{ 25, 222632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"};
-		{ 26, 222589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"};
-		{ 27, 222631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"};
-		{ 28, 222630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"};
+		{ 25, 222632, "", "=q5=Atiesh, Greatstaff of the Guardian (Druid)", "=ds=#m4#, =q1=#m1# =ds=#c1#"},
+		{ 26, 222589, "", "=q5=Atiesh, Greatstaff of the Guardian (Mage)", "=ds=#m4#, =q1=#m1# =ds=#c3#"},
+		{ 27, 222631, "", "=q5=Atiesh, Greatstaff of the Guardian (Priest)", "=ds=#m4#, =q1=#m1# =ds=#c5#"},
+		{ 28, 222630, "", "=q5=Atiesh, Greatstaff of the Guardian (Warlock)", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
 		Prev = "AQ40Ouro";
 		Type = "Raid";
 		Dif = AL_Dif.Ascended;
@@ -1546,7 +1546,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 216842, "", "=q4=Earthfury Helmet", "=q1=#m1# =ds=#c7# (T1)", "", "3.91%"};
 		{ 23, 216866, "", "=q4=Helm of Might", "=q1=#m1# =ds=#c9# (T1)", "", "11.39%"};
 		{ 24, 216854, "", "=q4=Lawbringer Helm", "=q1=#m1# =ds=#c4# (T1)", "", "7.23%"};
-		{ 26, 218564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%"}; --Needs to be correctly added to the Difficulty loot table
+		{ 26, 218564, "", "=q5=Bindings of the Windseeker (Right)", "=ds=#m3#, =q1=#m9#", "", "3.74%"};
 		{ 27, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCGehennas";
 		Next = "MCShazzrah";
@@ -1596,8 +1596,9 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 18, 216836, "", "=q4=Cenarion Spaulders", "=q1=#m1# =ds=#c1# (T1)", "", "19.52%"};
 		{ 19, 216856, "", "=q4=Lawbringer Spaulders", "=q1=#m1# =ds=#c4# (T1)", "", "12.62%"};
 		{ 20, 216844, "", "=q4=Earthfury Epaulets", "=q1=#m1# =ds=#c7# (T1)", "", "7.29%"};
-		{ 22, 218563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%"}; --Needs to be correctly added to the Difficulty loot table
-		{ 23, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 22, 217782, "", "=q5=Talisman of Binding Shard", "=ds=#s2#", "", ""};
+		{ 24, 218563, "", "=q5=Bindings of the Windseeker (Left)", " =ds=#m3#, =q1=#m10#", "", "3.78%"};
+		{ 25, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCShazzrah";
 		Next = "MCGolemagg";
 		Type = "Raid";
@@ -4744,10 +4745,10 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 24, 223059, "", "=q4=Ring of the Dreadnaught", "=ds=#s13# =q1=#m1# =ds=#c9#" ,"","22.22%"},
 		{ 25, 0,"","","" },
 		{ 26, 222733, "", "=q1=Staff Head of Atiesh", "=ds=#m3#" },
-		{ 27, 222632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"},
-		{ 28, 222589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"},
-		{ 29, 222631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"},
-		{ 30, 222630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
+		{ 27, 222632, "", "=q5=Atiesh, Greatstaff of the Guardian (Druid)", "=ds=#m4#, =q1=#m1# =ds=#c1#"},
+		{ 28, 222589, "", "=q5=Atiesh, Greatstaff of the Guardian (Mage)", "=ds=#m4#, =q1=#m1# =ds=#c3#"},
+		{ 29, 222631, "", "=q5=Atiesh, Greatstaff of the Guardian (Priest)", "=ds=#m4#, =q1=#m1# =ds=#c5#"},
+		{ 30, 222630, "", "=q5=Atiesh, Greatstaff of the Guardian (Warlock)", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
 		Prev = "NAXSapphiron";
 		Next = "NAXTrash";
 		Type = "Raid";
