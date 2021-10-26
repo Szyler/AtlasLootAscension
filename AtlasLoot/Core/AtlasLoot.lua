@@ -664,7 +664,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 							text = itemColor..itemName;
 						elseif dataSource[dataID][i][2] ~= IDfound then
 							--If the item is not in cache, use the saved value and process it
-							if tonumber(ItemindexID) then
+							if tonumber(ItemindexID) and not dataSource[dataID][i][4]:match("=q5=") then
 								text = (string.sub(dataSource[dataID][i][4], 5));
 								text = "=q4=" .. text;
 								text = AtlasLoot_FixText(text);
