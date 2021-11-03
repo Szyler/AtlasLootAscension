@@ -1898,9 +1898,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 28790, "", "=q4=Naaru Lightwarden's Band", "=q1=#m4#: =ds=#s13#"};
 		{ 25, 28793, "", "=q4=Band of Crimson Fury", "=q1=#m4#: =ds=#s13#"};
 		{ 26, 28792, "", "=q4=A'dal's Signet of Defense", "=q1=#m4#: =ds=#s13#"};
-		{ 28, 816252, "", "=q2=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
+		{ 28, 816252, "", "=q3=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
 		{ 29, 428775, "", "=q4=Bor -o G'urth, the Hand of Death", "=ds=#w7#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic};
-		{ 30, 428775, "", "=q4=Lebed -o G'urth, the Finger of Death", "=ds=#w7#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic};
+		{ 30, 428776, "", "=q4=Lebed -o G'urth, the Finger of Death", "=ds=#w7#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic};
 		Type = "BCRaid";
 	};
 

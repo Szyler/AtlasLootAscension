@@ -1133,6 +1133,8 @@ function AtlasLoot_FixText(text)
     text = gsub(text, "#t10mark#", "|TInterface\\Icons\\ability_paladin_shieldofthetemplar:0|t");
 	text = gsub(text, "#valentineday#", "|TInterface\\Icons\\inv_valentinescard01:0|t");
 	text = gsub(text, "#valentineday2#", "|TInterface\\Icons\\inv_jewelry_necklace_43:0|t");
+    text = gsub(text, "#felsoul#", "|TInterface\\PVPFrame\\PVP-ArenaPoints-Icon:14:14:2:-1|t");
+    text = gsub(text, "#legcrest#", "|TInterface\\PVPFrame\\PVP-ArenaPoints-Icon:14:14:2:-1|t");
 
     englishFaction, _ = UnitFactionGroup("player")
     if englishFaction == "Horde" then

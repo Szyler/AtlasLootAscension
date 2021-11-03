@@ -2413,6 +2413,15 @@ end
 	AtlasLoot_TableNames["Arena1Weapons2"] = { AL["Arena Season 1 Weapons"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["Arena0Weapons1_A"] = { AL["Arena Season 0 Weapons"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["Arena0Weapons1_H"] = { AL["Arena Season 0 Weapons"], "AtlasLootBurningCrusade" };
+	
+-----------------
+--- Ascension ---
+-----------------
+	AtlasLoot_TableNames["SoulRewards"] = { "Soul Rewards", "AtlasLootAscension" };
+	AtlasLoot_TableNames["FelProgression"] = { "Fel Progression", "AtlasLootAscension" };
+	AtlasLoot_TableNames["FelHeirloom"] = { "Fel Heirloom", "AtlasLootAscension" };
+	AtlasLoot_TableNames["LegionCrest"] = { "Legion Crest", "AtlasLootAscension" };
+
 -------------
 --- Other ---
 -------------

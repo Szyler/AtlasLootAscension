@@ -1,0 +1,17 @@
+﻿## Interface: 30300
+## Title: AtlasLoot_Ascension
+## Notes: AtlasLoot loot tables from Ascension
+## Author: Original: Hegarol, Ascension: Skray/Szyler/Anch/Rvng
+## Version: v6.0.0
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: https://discord.gg/uYCE2X2FgA
+## Dependencies: AtlasLoot
+## LoadOnDemand: 1
+## X-Curse-Packaged-Version: v6.0.0
+## X-Curse-Project-Name: Atlasloot Enhanced
+## X-Curse-Project-ID: atlasloot-enhanced
+## X-Curse-Repository-ID: wow/atlasloot-enhanced/mainline
+
+ascension.lua
+

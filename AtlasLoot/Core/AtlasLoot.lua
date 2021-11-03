@@ -547,7 +547,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	if dataID == "FilterList" then
 		Type = lastType;
 	else
-		Type = dataSource[dataID].Type;
+		Type = dataSource[dataID].Type or nil;
 	end
 	
 	if Type ~= lastType then
@@ -1153,6 +1153,8 @@ function AtlasLoot_GetLODModule(dataSource)
 		return "AtlasLoot_WorldEvents";
 	elseif (dataSource=="AtlasLootWotLK") then
 		return "AtlasLoot_WrathoftheLichKing";
+	elseif(dataSource=="AtlasAscension") then
+		return "AtlasLoot_Ascension";
 	end
 end
 
@@ -1161,12 +1163,14 @@ AtlasLoot_LoadAllModules()
 Used to load all available LoD modules
 ]]
 function AtlasLoot_LoadAllModules()
-	local orig, bc, wotlk, craft, world;
+	local orig, bc, wotlk, craft, world, asc;
     orig, _ = LoadAddOn("AtlasLoot_OriginalWoW");
     bc, _ = LoadAddOn("AtlasLoot_BurningCrusade");
     craft, _ = LoadAddOn("AtlasLoot_Crafting");
     world, _ = LoadAddOn("AtlasLoot_WorldEvents");
     wotlk, _ = LoadAddOn("AtlasLoot_WrathoftheLichKing");
+	asc, _ = LoadAddOn("AtlasLoot_Ascension");
+
     local flag=0;
 	if not orig then
 		LoadAddOn("AtlasLoot_OriginalWoW");
@@ -1186,6 +1190,10 @@ function AtlasLoot_LoadAllModules()
 	end
     if not wotlk then
 		LoadAddOn("AtlasLoot_WrathoftheLichKing");
+		flag=1;
+	end
+	if not asc then
+		LoadAddon("AtlasLoot_Ascension");
 		flag=1;
 	end
 	if flag == 1 then

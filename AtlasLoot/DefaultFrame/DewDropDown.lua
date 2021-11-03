@@ -234,10 +234,10 @@ AtlasLoot_DewDropDown = {
 			[11] = {			
 				{ "Dungeons:", "WrathKeys", "Table", "Header" },		
 			},			
-           			 [12] = {			
+           	[12] = {			
 				{ BabbleZone["Ahn'kahet: The Old Kingdom"], "Ahnkahet", "Submenu" },		
 			},			
-        	  		[13] = {			
+        	[13] = {			
 				{ BabbleZone["Azjol-Nerub"], "AzjolNerub", "Submenu" },		
 			},			
 			[14] = {			
@@ -303,6 +303,16 @@ AtlasLoot_DewDropDown = {
 	[9] = {
 		{ AL["World Events"], "WORLDEVENTMENU", "Table", "Submenu2Table" },
 	},
+	[10] = {					
+		["Ascension"] = {				
+			[1] = {			
+				{ "Events:", "", "", "Header" },
+			},
+			[2] = {
+				{ "Felforged", "Felforged", "Submenu"},
+			},
+		},
+	},	
 };
  
 AtlasLoot_DewDropDown_SubTables = {
@@ -956,5 +966,11 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "ICCSindragosa" },
 		{ "", "ICCLichKing" },
 		{ "", "ICCTrash25Man" },
+	},
+	["Felforged"] = {
+		{"", "SoulRewards"},
+		{"", "FelProgression"},
+		{"", "FelHeirloom"},
+		{"", "LegionCrest"}
 	},
 };
