@@ -4,4 +4,5 @@
     <Script file="SetMenus.lua"/>
     <Script file="WorldEventMenus.lua"/>
     <Script file="RepMenus.lua"/>
+    <Script file="AscensionMenu.lua"/>
 </Ui>

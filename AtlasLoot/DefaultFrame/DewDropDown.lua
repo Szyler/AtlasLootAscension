@@ -303,16 +303,9 @@ AtlasLoot_DewDropDown = {
 	[9] = {
 		{ AL["World Events"], "WORLDEVENTMENU", "Table" },
 	},
-	[10] = {					
-		["Ascension"] = {				
-			[1] = {			
-				{ "Events:", "", "", "Header" },
-			},
-			[2] = {
-				{ "Felforged", "Felforged", "Submenu"},
-			},
-		},
-	},	
+	[10] = {
+		{ "Ascension", "ASCENSIONMENU", "Table" },
+	},
 };
  
 AtlasLoot_DewDropDown_SubTables = {

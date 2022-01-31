@@ -2425,14 +2425,6 @@ end
 	AtlasLoot_TableNames["Arena0Weapons1_A"] = { AL["Arena Season 0 Weapons"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["Arena0Weapons1_H"] = { AL["Arena Season 0 Weapons"], "AtlasLootBurningCrusade" };
 	
------------------
---- Ascension ---
------------------
-	AtlasLoot_TableNames["SoulRewards"] = { "Soul Rewards", "AtlasLootAscension" };
-	AtlasLoot_TableNames["FelProgression"] = { "Fel Progression", "AtlasLootAscension" };
-	AtlasLoot_TableNames["FelHeirloom"] = { "Fel Heirloom", "AtlasLootAscension" };
-	AtlasLoot_TableNames["LegionCrest"] = { "Legion Crest", "AtlasLootAscension" };
-
 -------------
 --- Other ---
 -------------
@@ -2527,5 +2519,34 @@ end
 	AtlasLoot_TableNames["ItemUncommon"] = { AL["Item Uncommon"], "Menu" };
 	AtlasLoot_TableNames["ItemRare"] = { AL["Item Rare"], "Menu" };
 	AtlasLoot_TableNames["ItemEpic"] = { AL["Item Epic"], "Menu" };
+
+	-----------------
+	--- Ascension ---
+	-----------------
+
+	AtlasLoot_TableNames["ASCENSIONMENU"] = { "Ascension", "Menu" };
+	AtlasLoot_TableNames["FELFORGEDMENU"] = { "Felforged", "Menu" };
+
+	AtlasLoot_TableNames["Tabard"] = { "Tabards", "AtlasAscension" };
+	AtlasLoot_TableNames["Toys"] = { "Toys", "Menu", "AtlasAscension" };
+	AtlasLoot_TableNames["Toys2"] = { "Toys", "Menu", "AtlasAscension" };
+	AtlasLoot_TableNames["Incarnation"] = { "Incarnation", "AtlasAscension" };
+	AtlasLoot_TableNames["Incarnation2"] = { "Incarnation", "AtlasAscension" };
+	AtlasLoot_TableNames["Incarnation3"] = { "Incarnation", "AtlasAscension" };
+	AtlasLoot_TableNames["Misc"] = { "Misc", "AtlasAscension" };
+	AtlasLoot_TableNames["Pets"] = { "Pets", "AtlasAscension" };
+	AtlasLoot_TableNames["Pets2"] = { "Pets", "AtlasAscension" };
+	AtlasLoot_TableNames["Hearthstones"] = { "Hearthstones", "AtlasAscension" };
+	AtlasLoot_TableNames["Mounts"] = { "Mounts", "AtlasAscension" };
+	AtlasLoot_TableNames["Mounts2"] = { "Mounts", "AtlasAscension" };
+	AtlasLoot_TableNames["Mounts3"] = { "Mounts", "AtlasAscension" };
+	AtlasLoot_TableNames["Mounts4"] = { "Mounts", "AtlasAscension" };
+	AtlasLoot_TableNames["Mounts5"] = { "Mounts", "AtlasAscension" };
+
+	--Felforged
+	
+	AtlasLoot_TableNames["SoulRewards"] = { "Felforged", "AtlasAscension" };
+	AtlasLoot_TableNames["FelProgression"] = { "Felforged", "AtlasAscension" };
+	AtlasLoot_TableNames["FelHeirloom"] = { "Felforged", "AtlasAscension" };
 	
 	

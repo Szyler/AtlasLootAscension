@@ -39,6 +39,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{ 13,597600, "", "=q7=Tabard of Ascension: 1st Edition"}, -- [13]
 			{ 14,38313, "", "=q7=Tabard of Fury"}, -- [14]
 			{ 15,101189, "", "=q6=Alliance Tabard"}, -- [15]
+			Back = "ASCENSIONMENU";
 		};
 
 		AtlasLoot_Data["Toys"] = {
@@ -72,6 +73,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{ 28,499174, "", "=q7=Flag of Ownership (Nerd)"}, -- [28]
 			{ 29,499175, "", "=q7=Flag of Ownership (Joy)"}, -- [29]
 			{ 30,499176, "", "=q7=Flag of Ownership (Grimacing)"}, -- [30]
+			Back = "ASCENSIONMENU";
+			Next = "Toys2";
 		};
 
 		AtlasLoot_Data["Toys2"] = {
@@ -94,6 +97,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{ 17,102103, "", "=q7=Spiteful Apparition"}, -- [47]
 			{ 18,100576, "", "=q7=Legion Pocket Portal"}, -- [48]
 			{ 19,499168, "", "=q7=Flag of Ownership (Weary)"}, -- [49]
+			Back = "ASCENSIONMENU";
+			Prev ="Toys";
 		};
 
 		AtlasLoot_Data["Incarnation"] = {
@@ -127,6 +132,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{ 28,6300607, "", "=q7=Incarnation: Claws of Ursoc (Burgundy)"}, -- [28]
 			{ 29,6300611, "", "=q7=Incarnation: Claws of Ursoc (Purple)"}, -- [29]
 			{ 30,6300619, "", "=q7=Incarnation: Fallen to Nightmare (Gray/Red)"}, -- [30]
+			Back = "ASCENSIONMENU";
+			Next = "Incarnation2";
 		};
 
 		AtlasLoot_Data["Incarnation2"] = {
@@ -160,6 +167,9 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{ 28,6300625, "", "=q7=Incarnation: Might of The Grizzlemaw (Blonde)"}, -- [58]
 			{ 29,6300633, "", "=q7=Incarnation: Primal Stalker (Orange)"}, -- [59]
 			{ 30,6300637, "", "=q7=Incarnation: Ghost of the Pridemother (Green)"}, -- [60]
+			Back = "ASCENSIONMENU";
+			Next = "Incarnation3";
+			Prev ="Incarnation";
 		};
 
 		AtlasLoot_Data["Incarnation3"] = {
@@ -169,6 +179,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{ 4,6300653, "", "=q7=Incarnation: Kul Tiran Aquatic Form (Brown)"}, -- [64]
 			{ 5,6300600, "", "=q7=Incarnation: Avatar of Ursol (Green)"}, -- [65]
 			{ 6,6300640, "", "=q7=Incarnation: Nature's Fury (Blue)"}, -- [66]
+			Back = "ASCENSIONMENU";
+			Prev ="Incarnation2";
 		};
 
 		AtlasLoot_Data["Misc"] = {
@@ -183,6 +195,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{ 9,101179, "", "=q6=Horde Balloon"}, -- [30]
 			{ 10,101427, "", "=q6=Portable Alchemy Lab"}, -- [35]
 			{ 11,246188, "", "=q6=Microbot 8D"}, -- [36]
+			Back = "ASCENSIONMENU";
 		};
 
 		AtlasLoot_Data["Pets"] = {
@@ -216,6 +229,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{ 28,39656, "", "=q7=Tyrael's Hilt"}, -- [28]
 			{ 29,499305, "", "=q7=Syd"}, -- [29]
 			{ 30,499306, "", "=q7=Soul of the Aspects"}, -- [30]
+			Back = "ASCENSIONMENU";
+			Next = "Pets2";
 		};
 
 		AtlasLoot_Data["Pets2"] = {
@@ -245,6 +260,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{ 24,842004, "", "=q7=Pet Cage - World First Magtheridon 10 HC"}, -- [54]
 			{ 25,49287, "", "=q7=Tuskarr Kite"}, -- [55]
 			{ 26,842007, "", "=q7=Pet Cage - World First Kael'thas Sunstrider"}, -- [56]
+			Back = "ASCENSIONMENU";
+			Prev ="Pets";
 		};
 
 		AtlasLoot_Data["Hearthstones"] = {
@@ -275,6 +292,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{ 26,106951, "", "=q7=Dark Rune of Retreat"}, -- [28]
 			{ 27,106952, "", "=q7=Holy Rune of Retreat"}, -- [29]
 			{ 28,82314, "", "=q7=Frostforged Rune of Retreat"}, -- [5]
+			Back = "ASCENSIONMENU";
 		};
 
 		AtlasLoot_Data["Mounts"] = {
@@ -308,6 +326,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{28,1175634, "", "=q7=Summon Dreadsteed"}, -- [28]
 			{29,1175635, "", "=q6=Summon Charger"}, -- [29]
 			{30,499869, "", "=q7=Vicious White Bonesteed"}, -- [30]
+			Back = "ASCENSIONMENU";
+			Next = "Mounts2";
 		};
 		
 		AtlasLoot_Data["Mounts2"] = {
@@ -341,6 +361,9 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{28,98476, "", "=q7=Misty Fox"}, -- [28]
 			{29,499476, "", "=q7=Rabid Worg (Stone)"}, -- [29]
 			{30,499475, "", "=q7=Rabid Worg (White)"}, -- [30]
+			Back = "ASCENSIONMENU";
+			Next = "Mounts3";
+			Prev ="Mounts";
 		};
 
 		AtlasLoot_Data["Mounts3"] = {
@@ -374,6 +397,9 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{28,37828, "", "=q7=Great Brewfest Kodo"}, -- [28]
 			{29,46778, "", "=q7=Magical Rooster"}, -- [29]
 			{30,1002011, "", "=q7=Bound Blue Qiraji Resonating Crystal"}, -- [30]
+			Back = "ASCENSIONMENU";
+			Next = "Mounts4";
+			Prev ="Mounts2";
 		};
 
 		AtlasLoot_Data["Mounts4"] = {
@@ -407,6 +433,9 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{28,499389, "", "=q7=Vilebrood Vanquisher"}, -- [28]
 			{29,499391, "", "=q7=Heavenly Onyx Cloud Serpent"}, -- [29]
 			{30,170006, "", "=q7=Prestigious War Wolf"}, -- [30]
+			Back = "ASCENSIONMENU";
+			Next = "Mounts5";
+			Prev ="Mounts3";
 		};
 
 		AtlasLoot_Data["Mounts5"] = {
@@ -439,6 +468,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 			{27,499539, "", "=q7=Dawnforge Ram"}, -- [27]
 			{28,1002013, "", "=q7=Bound Green Qiraji Resonating Crystal"}, -- [28]
 			{29,499944, "", "=q7=Royal Snapdragon"}, -- [29]
+			Back = "ASCENSIONMENU";
+			Prev ="Mounts4";
 		};
 
 	------------------------
@@ -474,6 +505,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 27, 82309, "", "=q5=Zealous Felslinger's Leggings", "4450#felsoul#"};
 		{ 28, 82310, "", "=q5=Zealous Felslinger's Epaulets", "2550#felsoul#"};
 		{ 29, 82312, "", "=q5=Zealous Felslinger's Cuffs", "2280#felsoul#"};
+		Back = "FELFORGEDMENU";
 	};
 
 	AtlasLoot_Data["FelProgression"] = {
@@ -490,6 +522,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 21, 1008020, "", "=q1=Huge Brown Sack", "50#felsoul#"};
 		{ 22, 1008025, "", "=q1=Runecloth Bag", "75#felsoul#"};
 		{ 23, 1008022, "", "=q2=Traveler's Backpack", "100#felsoul#"};
+		Back = "FELFORGEDMENU";
 	};
 
 	AtlasLoot_Data["FelHeirloom"] = {
@@ -511,6 +544,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 22, 492289, "", "=q5=Archimonde's Felforged Bracer", "2280#felsoul#"};
 		{ 23, 492290, "", "=q5=Archimonde's Felforged Gauntlet", "4550#felsoul#"};
 		{ 24, 492293, "", "=q5=Archimonde's Felforged Drape", "2280#felsoul#"};
+		Back = "FELFORGEDMENU";
 	};
 
 	AtlasLoot_Data["LegionCrest"] = {
