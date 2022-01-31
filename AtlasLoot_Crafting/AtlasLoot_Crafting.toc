@@ -7,7 +7,7 @@
 ## Notes-zhCN: AtlasLoot 交易技能制造出的物品表
 ## Notes-zhTW: AtlasLoot 商業技能物品資料庫
 ## Author: Original: Hegarol, Ascension: Skray/Szyler/Anch/Rvng
-## Version: v6.0.0
+## Version: v6.2.0
 ## X-eMail: manager@atlasloot.net
 ## X-Category: Map
 ## X-License: GPL v2

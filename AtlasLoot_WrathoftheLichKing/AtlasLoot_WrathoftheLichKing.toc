@@ -6,7 +6,7 @@
 ## Notes-zhCN: AtlasLoot Enhanced 的《巫妖王之怒》副本掉落信息
 ## Notes-zhTW: AtlasLoot 巫妖王之怒副本掉落物品資料庫
 ## Author: Original: Hegarol, Ascension: Skray/Szyler/Anch/Rvng
-## Version: v6.0.0
+## Version: v6.2.0
 ## X-eMail: manager@atlasloot.net
 ## X-Category: Map
 ## X-License: GPL v2

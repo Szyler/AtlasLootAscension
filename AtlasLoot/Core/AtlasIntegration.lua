@@ -37,7 +37,7 @@ function AtlasLootBoss_OnClick(name)
     local zoneID = ATLAS_DROPDOWNS[AtlasOptions.AtlasType][AtlasOptions.AtlasZone];
     local id = this.idnum;
     
-    
+    AtlasLoot_Lastboss = AtlasLootBossButtons[zoneID][id];
     --If the loot table was already shown and boss clicked again, hide the loot table and fix boss list icons
     if getglobal(name.."_Selected"):IsVisible() then
         getglobal(name.."_Selected"):Hide();

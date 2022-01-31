@@ -1534,6 +1534,17 @@ end
 	AtlasLoot_TableNames["T1T2Warlock"] = { LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T1T2Warrior"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T1T2DPSWarrior"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "AtlasLootOriginalWoW" };
+	
+	AtlasLoot_TableNames["T1Bracers"] = {"Teir 1 Bracers", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T1Belts"] = {"Teir 1 Belts", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T1Gloves"] = {"Teir 1 Gloves", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T1Shoulders"] = {"Teir 1 Shoulders", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T1Boots"] = {"Teir 1 Boots", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T1Legs"] = {"Teir 1 Legs", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T1Helms"] = {"Teir 1 Helms", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T1Chests"] = {"Teir 1 Chests", "AtlasLootOriginalWoW" };
+
+	
  -- T1/T2 Sets HEROIC FLEX
 	AtlasLoot_TableNames["T1T2Druid25Man"] = { "Druid", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T1T2Hunter25Man"] = { LOCALIZED_CLASS_NAMES_MALE["HUNTER"], "AtlasLootOriginalWoW" };

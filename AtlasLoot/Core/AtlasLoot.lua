@@ -55,6 +55,7 @@ ATLASLOOT_INDENT = "   ";
 AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu2 = AceLibrary("Dewdrop-2.0");
+AtlasLoot_DifficultyAtlas = AceLibrary("Dewdrop-2.0");
 --Variable to cap debug spam
 ATLASLOOT_DEBUGSHOWN = false;
 
@@ -81,11 +82,12 @@ Hooked_Atlas_Refresh = nil;
 Hooked_Atlas_OnShow = nil;
 Hooked_AtlasScrollBar_Update = nil;
 
---Pre Sets for defficuilty menu
-SelectedTable2TextSet = true
 isTablereference = false
 notPattern = false
 
+--Search panel open and close save variables
+--dataID, dataSource, boss, pFrame
+SearchPrevData = {"", "", "", ""};
 
 AtlasLootCharDB={};
 
@@ -364,6 +366,7 @@ function AtlasLoot_OnVariablesLoaded()
 	AtlasLootDefaultFrame_SelectedCategory:SetText(AL["Choose Table ..."]);
 	AtlasLootDefaultFrame_SelectedTable:SetText("");
 	AtlasLootDefaultFrame_SelectedTable2:SetText("");
+	AtlasLootItemsFrame_DifficultyAtlasButton:SetText("Select Difficulty");
 	AtlasLootDefaultFrame_SelectedCategory:Show();
 	AtlasLootDefaultFrame_SelectedTable:Show();
 	AtlasLootDefaultFrame_SelectedTable2:Show();
@@ -506,6 +509,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	local isItem;
 	local spellName, spellIcon;
 
+	SearchPrevData = {dataID, dataSource, boss, pFrame};
+
     --If the loot table name has not been passed, throw up a debugging statement
 	if dataID==nil then
 		DEFAULT_CHAT_FRAME:AddMessage("No dataID!");
@@ -516,21 +521,37 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		HideUIPanel(AtlasQuestInsideFrame);
 	end
 
+	--Hide Advanced search if it is up and reshow Querybutton
+	AtlasLootAdvancedSearch:Hide();
+	AtlasLootServerQueryButton:Show();
+
     --Ditch the Quicklook selector
     AtlasLoot_QuickLooks:Hide();
     AtlasLootQuickLooksButton:Hide();
-	
+
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
-    
+
+	-- Hide Selector
+	AtlasLootItemsFrame_DifficultyAtlasButton:Disable();
+	AtlasLootItemsFrame_DifficultyAtlasButton:Hide();
+
+	-- Updates AtlasLoot_Lastboss if your in a main loot table
+	if AtlasLoot_Hold == false or AtlasLoot_Lastboss == nil then
+		AtlasLoot_Lastboss = dataID;
+	end
     dataSource_backup = dataSource;
+
 	if dataID == "SearchResult" or dataID == "WishList" then
         ItemindexID = "";
+		AtlasLootItemsFrame_DifficultyAtlasButton:Disable();
+		AtlasLootItemsFrame_DifficultyAtlasButton:Hide();
 		AtlasLootDefaultFrame_SubMenu2:Disable();
 		AtlasLootDefaultFrame_SelectedTable2:SetText("");
 		AtlasLootDefaultFrame_SelectedTable2:Hide();
-		dataSource = {};
-        -- Match the page number to display
+        AtlasLootItemsFrame_DifficultyAtlasButton:SetText("Select Difficulty");
+        dataSource = {};
+		-- Match the page number to display
         wlPage = tonumber(dataSource_backup:match("%d+$"));
         -- Aquiring items of the page
         if dataID == "SearchResult" then
@@ -544,12 +565,13 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
     else
         dataSource = AtlasLoot_Data;
     end
+
 	if dataID == "FilterList" then
 		Type = lastType;
 	else
 		Type = dataSource[dataID].Type or nil;
 	end
-	
+
 	if Type ~= lastType then
 		AtlasLoot_DifficultyDisable()
 		if lastReference ~= nil then
@@ -565,6 +587,13 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	if dataID:match("MENU") and ATLASLOOT_FILTER_ENABLE then
 		AtlasLootFilterCheck:SetChecked(false);
 		ATLASLOOT_FILTER_ENABLE = false
+	end
+	if (AtlasLootItemsFrame:GetParent() == AlphaMapAlphaMapFrame or AtlasLootItemsFrame:GetParent() == AtlasFrame) then
+		AtlasMapMenu = true;		
+	else
+		AtlasLootItemsFrame_DifficultyAtlasButton:Hide();
+		AtlasLootItemsFrame_DifficultyAtlasButton:Disable();
+		AtlasMapMenu = false;
 	end
 
 	if Type == nil and ATLASLOOT_FILTER_ENABLE == false or dataID:match("MENU") or ATLASLOOT_FILTER_ENABLE and dataSource[AtlasLoot_CurrentBoss].Type == nil  then -- disable difficulty menu
@@ -621,6 +650,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 
 			if(toShow) then
 				IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2];
+				if ((dataID == "SearchResult") or (dataID == "WishList")) then
+					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
+				end
 
 				if string.sub(IDfound, 1, 1) == "s" then
 					isItem = false;
@@ -640,9 +672,16 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					if dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE] then
 						--Used if an item has more then 1 version with the same name eg Atiesh
 						IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5) .. " " .. dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE], ItemindexID) or dataSource[dataID][i][2];
+						if ((dataID == "SearchResult") or (dataID == "WishList")) then
+							IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
+						end
 					else	
 						--If something was found in itemID database show that if not show default table item
 						IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2];
+						if ((dataID == "SearchResult") or (dataID == "WishList")) then
+							IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
+						end
+
 					end
 
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(IDfound);
@@ -774,9 +813,24 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
                 else
                     itemButton.droprate = nil;
                 end
-                if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][8] then
+				if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][8] then
                     itemButton.sourcePage = dataSource[dataID][i][8];
-                end
+				elseif dataSource[dataID][i][8] ~= nil and dataSource[dataID][i][8]:match("=LT=") then
+					itemButton.sourcePage = string.sub(dataSource[dataID][i][8], 5);
+				else
+					itemButton.sourcePage = nil;
+				end
+				if dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH] then
+					itemButton.difficulty = dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH];
+				else
+					itemButton.difficulty = ItemindexID;
+					if dataSource[dataID].Type then
+						if string.find(dataSource[dataID].Type, "Raid") and ItemindexID == 4 then
+							itemButton.difficulty = 99;
+						end
+					end
+				end
+
 				itemButton.i = 1;
 				itemButton:Show();
                 
@@ -786,7 +840,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		end
 
 		if dataID ~= "FilterList" then
-		lastType = dataSource[dataID].Type
+			lastType = dataSource[dataID].Type
 		end
 
 		if SelectedTableTextSet then
@@ -837,7 +891,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 			AtlasLoot_BossName:SetText(AtlasLoot_TableNames[dataID][1]..affix);
         else
             AtlasLoot_BossName:SetText(boss);
-        end
+        end		
+
 		--Consult the button registry to determine what nav buttons are required
 		if dataID == "SearchResult" or dataID == "WishList" then
 			if wlPage < wlPageMax then
@@ -860,11 +915,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 			end
 			if tablebase.Back then
 				getglobal("AtlasLootItemsFrame_BACK"):Show();
-				getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;			
+				getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;
 			end
 		end
-		
-		
 	end
 
 	--For Alphamap and Atlas integration, show a 'close' button to hide the loot table and restore the map view
@@ -879,7 +932,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	if ATLASLOOT_FILTER_ENABLE == true and dataID ~= "FilterList" then
 		AtlasLoot_HideNoUsableItems()
 	end
-
 	if AtlasLoot.db.profile.ItemAutoQuery then AtlasLoot_QueryLootPage(); end
 end
 
@@ -973,8 +1025,8 @@ function AtlasLoot_GenerateAtlasMenu(dataID, pFrame)
         getglobal("AtlasLootItemsFrame_PREV"):Show();
         getglobal("AtlasLootItemsFrame_PREV").lootpage = tablebase.Prev;
     end
-    if tablebase.Back then
-        getglobal("AtlasLootItemsFrame_BACK"):Show();
+	if tablebase.Back then
+		getglobal("AtlasLootItemsFrame_BACK"):Show();
         getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;
     end
     
@@ -1065,6 +1117,10 @@ function AtlasLoot_NavButton_OnClick()
 			AtlasLoot_ShowItemsFrame("SearchResult", this.lootpage, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), AtlasLootItemsFrame.refresh[4]);
 		elseif strsub(this.lootpage, 1, 12) == "WishListPage" then
 			AtlasLoot_ShowItemsFrame("WishList", this.lootpage, AL["Wishlist"], AtlasLootItemsFrame.refresh[4]);
+		elseif AtlasLoot_Hold == true then
+			AtlasLoot_ShowItemsFrame(AtlasLoot_Lastboss, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
+			-- Lets AtlasLoot_Lastboss be updated after going back to main table
+			AtlasLoot_Hold = false;
 		else
 			AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
 		end
@@ -1327,8 +1383,7 @@ On the form of {Name, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
 function AL_FindId(name, difficulty)
 	if ItemIDsDatabase[name] ~= nil then
-		return ItemIDsDatabase[name][difficulty]
-	else
-		return nil;
+		return ItemIDsDatabase[name][difficulty], true
 	end
+	return nil, false;
 end

@@ -32,7 +32,7 @@ AtlasLoot_WishListDrop = AceLibrary("Dewdrop-2.0");
 AtlasLoot_WishList = nil;
 local currentPage = 1;
 local playerName = UnitName("player")
-local itemID, itemTexture, itemName, lootPage, sourcePage, lasttyp, xtyp, xarg2, xarg3
+local itemID, itemTexture, itemName, lootPage, sourcePage, lasttyp, xtyp, xarg2, xarg3, difficulty
 local lastWishListtyp, lastWishListarg2, lastWishListarg3
 local OptionsLoadet = false
 
@@ -110,7 +110,7 @@ function AtlasLoot_WishListAddDropClick(typ, arg2, arg3, arg4)
 				return;
 			end
 
-			table.insert(AtlasLootWishList["Own"][playerName][arg2], { 0, itemID, itemTexture, itemName, lootPage, "", "", sourcePage });
+			table.insert(AtlasLootWishList["Own"][playerName][arg2], { 0, itemID, itemTexture, itemName, lootPage, "", "", sourcePage, [AtlasLoot_Difficulty.DIF_SEARCH] = difficulty});
 
 			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..GREY..AL[" added to the WishList."]..WHITE.." ("..AtlasLootWishList["Own"][playerName][arg2]["info"][1]..")");
 			AtlasLoot_WishList = AtlasLoot_CategorizeWishList(AtlasLootWishList["Own"][playerName][arg2]);
@@ -122,7 +122,7 @@ function AtlasLoot_WishListAddDropClick(typ, arg2, arg3, arg4)
 				return;
 			end
 
-			table.insert(AtlasLootWishList["Own"][arg2][arg3], { 0, itemID, itemTexture, itemName, lootPage, "", "", sourcePage });
+			table.insert(AtlasLootWishList["Own"][arg2][arg3], { 0, itemID, itemTexture, itemName, lootPage, "", "", sourcePage, [AtlasLoot_Difficulty.DIF_SEARCH] = difficulty});
 
 			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..GREY..AL[" added to the WishList."]..WHITE.." ("..AtlasLootWishList["Own"][arg2][arg3]["info"][1].." - "..arg2..")");
 			AtlasLoot_WishList = AtlasLoot_CategorizeWishList(AtlasLootWishList["Own"][arg2][arg3]);
@@ -134,7 +134,7 @@ function AtlasLoot_WishListAddDropClick(typ, arg2, arg3, arg4)
 				return;
 			end
 
-			table.insert(AtlasLootWishList["Shared"][arg2][arg3], { 0, itemID, itemTexture, itemName, lootPage, "", "", sourcePage });
+			table.insert(AtlasLootWishList["Shared"][arg2][arg3], { 0, itemID, itemTexture, itemName, lootPage, "", "", sourcePage, [AtlasLoot_Difficulty.DIF_SEARCH] = difficulty});
 
 			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..GREY..AL[" added to the WishList."]..WHITE.." ("..AtlasLootWishList["Shared"][arg2][arg3]["info"][1].." - "..arg2..")");
 			AtlasLoot_WishList = AtlasLoot_CategorizeWishList(AtlasLootWishList["Shared"][arg2][arg3]);
@@ -148,8 +148,8 @@ end
 AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, button, show)
 Show the dropdownlist with the wishlists
 ]]	
-function AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, button, show)
-	itemID, itemTexture, itemName, lootPage, sourcePage = xitemID, xitemTexture, xitemName, xlootPage, xsourcePage
+function AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, button, show, xdifficulty)
+	itemID, itemTexture, itemName, lootPage, sourcePage, difficulty = xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, xdifficulty;
 	if AtlasLootWishList["Options"][playerName]["UseDefaultWishlist"] == false then
 				if AtlasLoot_WishListDrop:IsOpen(button) then
 					AtlasLoot_WishListDrop:Close(1);
@@ -499,40 +499,23 @@ function AtlasLoot_CategorizeWishList(wlTable)
 	for _, v in pairs(wlTable) do
 		if v[8] and v[8] ~= "" then
 			local dataID = strsplit("|", v[8]);
+			if v[AtlasLoot_Difficulty.DIF_SEARCH] then
+				local name =  AtlasLoot_GetWishListSubheading(dataID)
+				dataID = dataID..AtlasLoot_Difficulty.Search[v[AtlasLoot_Difficulty.DIF_SEARCH]];
+				if not subheadings[dataID] then
+					subheadings[dataID] = name;
+					if subheadings[dataID] then subheadings[dataID] = subheadings[dataID].." ("..AtlasLoot_Difficulty.Search[v[AtlasLoot_Difficulty.DIF_SEARCH]]..")" end
+				end
 			-- Build subheading table
-			if not subheadings[dataID] then
-				-- Heroic handling
-				local HeroicCheck=string.sub(dataID, string.len(dataID)-10, string.len(dataID));
-				local NonHeroicdataID=string.sub(dataID, 1, string.len(dataID)-6);
-				local BigraidCheck=string.sub(dataID, string.len(dataID)-4, string.len(dataID));
-				
-				if BigraidCheck == "25Man" or HeroicCheck == "25ManHEROIC" then
-					HeroicCheck=string.sub(dataID, string.len(dataID)-10, string.len(dataID));
-					NonHeroicdataID=string.sub(dataID, 1, string.len(dataID)-11);
-				else
-					HeroicCheck=string.sub(dataID, string.len(dataID)-5, string.len(dataID));
-					NonHeroicdataID=string.sub(dataID, 1, string.len(dataID)-6);
+			elseif not subheadings[dataID] then
+				subheadings[dataID] = AtlasLoot_GetWishListSubheading(dataID);
+				-- If search failed, replace ID like "Aldor2" to "Aldor1" and try again
+				if not subheadings[dataID] and string.find(dataID, "^%a+%d?$") then
+					subheadings[dataID] = AtlasLoot_GetWishListSubheading(strsub(dataID, 1, strlen(dataID) - 1).."1");
 				end
-
-				if HeroicCheck == "HEROIC" then
-					subheadings[dataID] = AtlasLoot_GetWishListSubheading(NonHeroicdataID);
-					if subheadings[dataID] then subheadings[dataID] = subheadings[dataID].." ("..AL["Heroic"]..")" end
-				elseif HeroicCheck == "25ManHEROIC" then
-					subheadings[dataID] = AtlasLoot_GetWishListSubheading(NonHeroicdataID);
-					if subheadings[dataID] then subheadings[dataID] = subheadings[dataID].." ("..AL["25 Man"].."-"..AL["Heroic"]..")" end
-				elseif strsub(dataID, strlen(dataID) - 4) == "25Man" then
-					subheadings[dataID] = AtlasLoot_GetWishListSubheading(strsub(dataID, 1, strlen(dataID) - 5));
-					if subheadings[dataID] then subheadings[dataID] = subheadings[dataID].." ("..AL["25 Man"]..")" end
-                else
-					subheadings[dataID] = AtlasLoot_GetWishListSubheading(dataID);
-					-- If search failed, replace ID like "Aldor2" to "Aldor1" and try again
-					if not subheadings[dataID] and string.find(dataID, "^%a+%d?$") then
-						subheadings[dataID] = AtlasLoot_GetWishListSubheading(strsub(dataID, 1, strlen(dataID) - 1).."1");
-					end
-				end
-				-- If still cant find it, mark it with Unknown
-				if not subheadings[dataID] then subheadings[dataID] = AL["Unknown"] end
 			end
+			-- If still cant find it, mark it with Unknown
+			if not subheadings[dataID] then subheadings[dataID] = AL["Unknown"] end			
 			-- Build category tables
 			if not categories[subheadings[dataID]] then categories[subheadings[dataID]] = {} end
 			table.insert(categories[subheadings[dataID]], v);

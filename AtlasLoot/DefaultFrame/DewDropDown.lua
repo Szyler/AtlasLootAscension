@@ -286,22 +286,22 @@ AtlasLoot_DewDropDown = {
 	},					
 
 	[4] = {
-		{ AL["Crafting"], "CRAFTINGMENU", "Table", "Submenu2Table" },
+		{ AL["Crafting"], "CRAFTINGMENU", "Table" },
 	},
 	[5] = {
-		{ AL["Sets/Collections"], "SETMENU", "Table", "Submenu2Table" },
+		{ AL["Sets/Collections"], "SETMENU", "Table" },
 	},
 	[6] = {
-		{ AL["PvP Rewards"], "PVPMENU", "Table", "Submenu2Table" },
+		{ AL["PvP Rewards"], "PVPMENU", "Table" },
 	},
 	[7] = {
-		{ AL["World Bosses"], "WorldBosses", "Submenu", "Submenu2Table" },
+		{ AL["World Bosses"], "WorldBosses", "Submenu" },
 	},
 	[8] = {
-		{ AL["Reputation Factions"], "REPMENU", "Table", "Submenu2Table" },
+		{ AL["Reputation Factions"], "REPMENU", "Table" },
 	},
 	[9] = {
-		{ AL["World Events"], "WORLDEVENTMENU", "Table", "Submenu2Table" },
+		{ AL["World Events"], "WORLDEVENTMENU", "Table" },
 	},
 	[10] = {					
 		["Ascension"] = {				

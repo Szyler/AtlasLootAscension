@@ -230,6 +230,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 24, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "9.65%"};
 		{ 25, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.53%"};
 		Prev = "AQ20Ayamiss";
+		Next = "AQ20Trash";
 		Type = "ClassicRaid";
 	};
 
@@ -253,6 +254,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 22, 20860, "", "=q2=Silver Scarab", "=ds=#e15#", "", "1.82%"};
 		{ 23, 20858, "", "=q2=Stone Scarab", "=ds=#e15#", "", "0.86%"};
 		{ 25, 21761, "", "=q1=Scarab Coffer Key", "=ds=#e9#", "", "7.27%"};
+		Prev = "AQ20Ossirian";
 		Type = "ClassicRaid";
 	};
 
@@ -410,8 +412,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 21625, "", "=q4=Scarab Brooch", "=ds=#s14#", "", "21.46%"};
 		{ 7, 22399, "", "=q4=Idol of Health", "=ds=#s16#, #w14#", "", "7.32%"};
 		{ 8, 21622, "", "=q4=Sharpened Silithid Femur", "=ds=#h3#, #w10#", "", "15.12%"};
-		{ 10, 20932, "", "=q4=Qiraji Bindings of Dominance", "=q1=#m1# =ds=#c8#, #c3#, #c7#, #c1#, #c4#", "", "100%"};
-		{ 11, 20928, "", "=q4=Qiraji Bindings of Command", "=q1=#m1# =ds=#c5#, #c6#, #c9#, #c2#", "", "100%"};
+		{ 10, 20932, "", "=q4=Qiraji Bindings of Dominance", "=ds=#tt2.5#", "", "100%"};
+		{ 11, 20928, "", "=q4=Qiraji Bindings of Command","=ds=#tt2.5#", "", "100%"};
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "3.19%"};
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
 		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
@@ -433,8 +435,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 21618, "", "=q4=Hive Defiler Wristguards", "=ds=#s8#, #a4#", "", "10.34%"};
 		{ 6, 21620, "", "=q4=Ring of the Martyr", "=ds=#s13#", "", "12.97%"};
 		{ 7, 21616, "", "=q4=Huhuran's Stinger", "=ds=#w2#", "", "5.71%"};
-		{ 9, 20932, "", "=q4=Qiraji Bindings of Dominance", "=q1=#m1# =ds=#c8#, #c3#, #c7#, #c1#, #c4#", "", "100%"};
-		{ 10, 20928, "", "=q4=Qiraji Bindings of Command", "=q1=#m1# =ds=#c5#, #c6#, #c9#, #c2#", "", "100%"};
+		{ 9, 20932, "", "=q4=Qiraji Bindings of Dominance", "=ds=#tt2.5#", "", "100%"};
+		{ 10, 20928, "", "=q4=Qiraji Bindings of Command","=ds=#tt2.5#", "", "100%"};
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.31%"};
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
 		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
@@ -463,19 +465,19 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 13, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
 		{ 14, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
 		{ 15, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
-		{ 16, 20926, "", "=q4=Vek'nilash's Circlet", "=q1=#m1# =ds=#c8#, #c3#, #c5#, #c9#", "", "100%"};
-		{ 17, 21604, "", "=q4=Bracelets of Royal Redemption", "=ds=#s8#, #a1#", "", "12.51%"};
-		{ 18, 21605, "", "=q4=Gloves of the Hidden Temple", "=ds=#s9#, #a2#", "", "15.45%"};
-		{ 19, 21609, "", "=q4=Regenerating Belt of Vek'nilash", "=ds=#s10#, #a2#", "", "13.35%"};
-		{ 20, 21607, "", "=q4=Grasp of the Fallen Emperor", "=ds=#s10#, #a3#", "", "2.72%"};
-		{ 21, 21606, "", "=q4=Belt of the Fallen Emperor", "=ds=#s10#, #a4#", "", "12.22%"};
-		{ 22, 21679, "", "=q4=Kalimdor's Revenge", "=ds=#h2#, #w10#", "", "9.25%"};
-		{ 23, 21608, "", "=q4=Amulet of Vek'nilash", "=ds=#s2#", "", "14.25%"};
-		{ 24, 20726, "", "=q3=Formula: Enchant Gloves - Threat", "=ds=#p4# (300)", "", "6.24%"};
-		{ 26, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.00%"};
-		{ 27, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 28, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 29, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
+		{ 16, 20930, "", "=q4=Diadem of the Desert Prince", "=ds=#tt2.5#", "", "100%"};
+		{ 16, 21604, "", "=q4=Bracelets of Royal Redemption", "=ds=#s8#, #a1#", "", "12.51%"};
+		{ 17, 21605, "", "=q4=Gloves of the Hidden Temple", "=ds=#s9#, #a2#", "", "15.45%"};
+		{ 18, 21609, "", "=q4=Regenerating Belt of Vek'nilash", "=ds=#s10#, #a2#", "", "13.35%"};
+		{ 29, 21607, "", "=q4=Grasp of the Fallen Emperor", "=ds=#s10#, #a3#", "", "2.72%"};
+		{ 20, 21606, "", "=q4=Belt of the Fallen Emperor", "=ds=#s10#, #a4#", "", "12.22%"};
+		{ 21, 21679, "", "=q4=Kalimdor's Revenge", "=ds=#h2#, #w10#", "", "9.25%"};
+		{ 22, 21608, "", "=q4=Amulet of Vek'nilash", "=ds=#s2#", "", "14.25%"};
+		{ 23, 20726, "", "=q3=Formula: Enchant Gloves - Threat", "=ds=#p4# (300)", "", "6.24%"};
+		{ 25, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.00%"};
+		{ 26, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 27, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 28, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
 		Prev = "AQ40Huhuran";
 		Next = "AQ40Ouro";
 		Type = "ClassicRaid";
@@ -488,8 +490,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 23570, "", "=q4=Jom Gabbar", "=ds=#s14#", "", "2.80%"};
 		{ 5, 23557, "", "=q4=Larvae of the Great Worm", "=ds=#w5#", "", "3.95%"};
 		{ 6, 21610, "", "=q4=Wormscale Blocker", "=ds=#w8#", "", "16.54%"};
-		{ 8, 20927, "", "=q4=Ouro's Intact Hide", "=q1=#m1# =ds=#c3#, #c5#, #c6#, #c9#", "", "100%"};
-		{ 9, 20931, "", "=q4=Skin of the Great Sandworm", "=q1=#m1# =ds=#c8#, #c7#, #c1#, #c2#, #c4#", "", "100%"};
+		{ 8, 20931, "", "=q4=Hardened Qiraj Chitin", "=ds=#tt2.5#", "", "100%"};
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.20%"};
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4# =ds=#w9#"};
 		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4# =ds=#w9#"};
@@ -518,18 +519,18 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 12, 21126, "", "=q4=Death's Sting", "=ds=#h1#, #w4#", "", "6.84%"};
 		{ 13, 21134, "", "=q4=Dark Edge of Insanity", "=ds=#h2#, #w1#", "", "5.93%"};
 		{ 14, 21839, "", "=q4=Scepter of the False Prophet", "=ds=#h3#, #w6#", "", "4.75%"};
-		{ 16, 20933, "", "=q4=Husk of the Old God", "=q1=#m1# =ds=#c8#, #c3#, #c1#, #c5#", "", "100%"};
-		{ 17, 20929, "", "=q4=Carapace of the Old God", "=q1=#m1# =ds=#c7#, #c6#, #c9#, #c2#, #c4#", "", "100%"};
-		{ 19, 21221, "", "=q4=Eye of C'Thun", "=ds=#m2#", "", "100%"};
-		{ 20, 21710, "", "=q4=Cloak of the Fallen God", "=q1=#m4#: =ds=#s4#"};
-		{ 21, 21712, "", "=q4=Amulet of the Fallen God", "=q1=#m4#: =ds=#s2#"};
-		{ 22, 21709, "", "=q4=Ring of the Fallen God", "=q1=#m4#: =ds=#s13#"};
-		{ 24, 22734, "", "=q1=Base of Atiesh", "=ds=#m3#"};
-		{ 25, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Druid)" },
-		{ 26, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Mage)" },
-		{ 27, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Priest)" },
-		{ 28, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Warlock)" },
+		{ 16, 20933, "", "=q4=Husk of the Old God", "=ds=#tt2.5#", "", "100%"};
+		{ 18, 21221, "", "=q4=Eye of C'Thun", "=ds=#m2#", "", "100%"};
+		{ 19, 21710, "", "=q4=Cloak of the Fallen God", "=q1=#m4#: =ds=#s4#"};
+		{ 20, 21712, "", "=q4=Amulet of the Fallen God", "=q1=#m4#: =ds=#s2#"};
+		{ 21, 21709, "", "=q4=Ring of the Fallen God", "=q1=#m4#: =ds=#s13#"};
+		{ 23, 22734, "", "=q1=Base of Atiesh", "=ds=#m3#"};
+		{ 24, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Druid)" },
+		{ 25, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Mage)" },
+		{ 26, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Priest)" },
+		{ 27, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Warlock)" },
 		Prev = "AQ40Ouro";
+		Next = "AQ40Trash1";
 		Type = "ClassicRaid";
 	};
 
@@ -547,6 +548,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 17, 21324, "", "=q3=Yellow Qiraji Resonating Crystal", "=ds=#e12#", "", "12.15%"};
 		{ 18, 21323, "", "=q3=Green Qiraji Resonating Crystal", "=ds=#e12#", "", "11.62%"};
 		{ 19, 21321, "", "=q3=Red Qiraji Resonating Crystal", "=ds=#e12#", "", "1.39%"};
+		Prev = "AQ40CThun";
 		Next = "AQ40Trash2";
 		Type = "ClassicRaid";
 	};
@@ -1446,10 +1448,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19147, "", "=q4=Ring of Spell Power", "=ds=#s13#", "", "2.23%"};
 		{ 10, 18878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "2.23%"};
 		{ 11, 17077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "1.60%"};
-		{ 16, 2522355, "", "=q4=Molten Bracers", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522362, "", "=q4=Molten Wristgaurds", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522369, "", "=q4=Molten Bindings", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 20, 17329, "", "=q1=Hand of Lucifron", "=ds=#m3#"};
+		{ 16, 2522362, "", "=q4=Molten Wristgaurds",  "=ds=#tt1#", "", "100%", "=LT=T1Bracers"};
+		{ 18, 17329, "", "=q1=Hand of Lucifron", "=ds=#m3#"};
 		Next = "MCMagmadar";
 		Type = "ClassicRaid";
 	};
@@ -1470,9 +1470,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 13, 18822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "5.68%"};
 		{ 14, 17073, "", "=q4=Earthshaker", "=ds=#h2#, #w6#", "", "16.75%"};
 		{ 15, 17069, "", "=q4=Striker's Mark", "=ds=#w2#", "", "16.37%"};
-		{ 16, 2522358, "", "=q4=Molten Legplates", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522359, "", "=q4=Molten Leggaurds", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522366, "", "=q4=Molten Leggings", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
+		{ 16, 2522359, "", "=q4=Molten Leggaurds", "=ds=#tt1#", "", "100%", "=LT=T1Legs"};
 		Prev = "MCLucifron";
 		Next = "MCGehennas";
 		Type = "ClassicRaid";
@@ -1489,10 +1487,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 19147, "", "=q4=Ring of Spell Power", "=ds=#s13#", "", "3.78%"};
 		{ 9, 18878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "3.79%"};
 		{ 10, 17077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "3.34%"};
-		{ 16, 2522352, "", "=q4=Molten Waistgaurd", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522364, "", "=q4=Molten Girdle", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522371, "", "=q4=Molten Belt", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 20, 17331, "", "=q1=Hand of Gehennas", "=ds=#m3#"};
+		{ 16, 2522364, "", "=q4=Molten Girdle", "=ds=#tt1#", "", "100%", "=LT=T1Gloves"};
+		{ 18, 17331, "", "=q1=Hand of Gehennas", "=ds=#m3#"};
 		Prev = "MCMagmadar";
 		Next = "MCGarr";
 		Type = "ClassicRaid";
@@ -1514,11 +1510,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 13, 18822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "4.09%"};
 		{ 14, 17105, "", "=q4=Aurastone Hammer", "=ds=#h3#, #w6#", "", "12.67%"};
 		{ 15, 17066, "", "=q4=Drillborer Disk", "=ds=#w8#", "", "11.85%"};
-		{ 16, 2522353, "", "=q4=Molten Helmet", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522360, "", "=q4=Molten Headpiece", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522367, "", "=q4=Molten Circlet", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 20, 18564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%"};
-		{ 21, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 16, 2522360, "", "=q4=Molten Headpiece", "=ds=#tt1#", "", "100%", "=LT=T1Helms"};
+		{ 18, 18564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%", [AtlasLoot_Difficulty.DUPLICATE] = "(Right)"};
+		{ 19, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 21, 17782, "", "=q5=Talisman of Binding Shard", "=ds=#s2#", "", ""};        
+		{ 22, 11879, "", "=q5=Medallion of Binding Shard", "=ds=#s2#", "", ""}; 
 		Prev = "MCGehennas";
 		Next = "MCShazzrah";
 		Type = "ClassicRaid";
@@ -1535,10 +1531,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 19147, "", "=q4=Ring of Spell Power", "=ds=#s13#", "", "1.99%"};
 		{ 9, 18878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "2.27%"};
 		{ 10, 17077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "3.32%"};
-		{ 16, 2522356, "", "=q4=Molten Gauntlets", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522363, "", "=q4=Molten Handgaurds", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522370, "", "=q4=Molten Gloves", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 20, 17332, "", "=q1=Hand of Shazzrah", "=ds=#m3#"};
+		{ 16, 2522363, "", "=q4=Molten Handgaurds", "=ds=#tt1#", "", "100%", "=LT=T1Belts"};
+		{ 18, 17332, "", "=q1=Hand of Shazzrah", "=ds=#m3#"};
 		Prev = "MCGarr";
 		Next = "MCGeddon";
 		Type = "ClassicRaid";
@@ -1557,11 +1551,9 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 18820, "", "=q4=Talisman of Ephemeral Power", "=ds=#s14#", "", "2.68%"};
 		{ 11, 19142, "", "=q4=Fire Runed Grimoire", "=ds=#s15#", "", "2.59%"};
 		{ 12, 18822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "2.70%"};
-		{ 16, 2522354, "", "=q4=Molten Pauldrons", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522361, "", "=q4=Molten Spaulders", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522368, "", "=q4=Molten Shoulderpads", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 20, 18563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%"};
-		{ 21, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 16, 2522361, "", "=q4=Molten Spaulders", "=ds=#tt1#", "", "100%", "=LT=T1Shoulders"};
+		{ 18, 18563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%", [AtlasLoot_Difficulty.DUPLICATE] = "(Left)"};
+		{ 19, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCShazzrah";
 		Next = "MCGolemagg";
 		Type = "ClassicRaid";
@@ -1582,11 +1574,9 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 12, 18822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "2.89%"};
 		{ 13, 18842, "", "=q4=Staff of Dominance", "=ds=#w9#", "", "18.95%"};
 		{ 14, 17072, "", "=q4=Blastershot Launcher", "=ds=#w5#", "", "17.83%"};
-		{ 16, 2522349, "", "=q4=Molten Breastplate", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522350, "", "=q4=Molten Tunic", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522351, "", "=q4=Molten Robe", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 20, 17203, "", "=q4=Sulfuron Ingot", "=ds=#m3#", "", "11.98%"};
-		{ 21, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
+		{ 16, 2522350, "", "=q4=Molten Tunic", "=ds=#tt1#", "", "100%", "=LT=T1Chests"};
+		{ 18, 17203, "", "=q4=Sulfuron Ingot", "=ds=#m3#", "", "11.98%"};
+		{ 19, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
 		Prev = "MCGeddon";
 		Next = "MCSulfuron";
 		Type = "ClassicRaid";
@@ -1604,10 +1594,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 18878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "2.53%"};
 		{ 10, 17074, "", "=q4=Shadowstrike", "=ds=#w7#", "", "23.50%"};
 		{ 11, 17077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "2.26%"};
-		{ 16, 2522357, "", "=q4=Molten Sabatons", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522365, "", "=q4=Molten Boots", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522372, "", "=q4=Molten Boots", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 21, 17330, "", "=q1=Hand of Sulfuron", "=ds=#m3#"};
+		{ 16, 2522365, "", "=q4=Molten Boots", "=ds=#tt1#", "", "100%", "=LT=T1Boots"};
+		{ 18, 17330, "", "=q1=Hand of Sulfuron", "=ds=#m3#"};
 		Prev = "MCGolemagg";
 		Next = "MCMajordomo";
 		Type = "ClassicRaid";
@@ -1651,14 +1639,12 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 12, 17104, "", "=q4=Spinal Reaper", "=ds=#h2#, #w1#", "", " 4.63%"};
 		{ 13, 17106, "", "=q4=Malistar's Defender", "=ds=#w8#", "", "13.88%"};
 		{ 15, 21110, "", "=q1=Draconic for Dummies", "=ds=#m3#", "", "100%"};
-		{ 16, 2522458, "", "=q4=Chromatic Legplates", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522459, "", "=q4=Chromatic Leggaurds", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522466, "", "=q4=Chromatic Leggings", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 20, 17204, "", "=q5=Eye of Sulfuras", "=ds=#m3#", "", "3.42%"};
-		{ 21, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
-		{ 23, 19017, "", "=q1=Essence of the Firelord", "=ds=#m3#", "", "0.46%"};
-		{ 24, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
-		{ 26, 102107, "", "=q4=Reins of the Magmatic Steed", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic};
+		{ 16, 2522459, "", "=q4=Chromatic Leggaurds", "=ds=#tt2#", "", "100%"};
+		{ 18, 17204, "", "=q5=Eye of Sulfuras", "=ds=#m3#", "", "3.42%"};
+		{ 19, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
+		{ 21, 19017, "", "=q1=Essence of the Firelord", "=ds=#m3#", "", "0.46%"};
+		{ 22, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 24, 102107, "", "=q4=Reins of the Magmatic Steed", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic};
 		Prev = "MCMajordomo";
 		Next = "MCTrashMobs";
 		Type = "ClassicRaid";
@@ -1712,9 +1698,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19397, "", "=q4=Ring of Blackrock", "=ds=#s13#", "", "6.67%"};
 		{ 10, 19357, "", "=q4=Herald of Woe", "=ds=#h2#, #w6#", "", "16.67%"};
 		{ 11, 19405, "", "=q4=Malfurion's Blessed Bulwark", "=ds=#s5#, #a2#", "", "16.67%"};
-		{ 16, 2522455, "", "=q4=Chromatic Bracers", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522462, "", "=q4=Chromatic Wristgaurds", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522469, "", "=q4=Chromatic Bindings", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
+		{ 16, 2522462, "", "=q4=Chromatic Wristgaurds", "=ds=#tt2#", "", "100%"};
 		Next = "BWLVaelastrasz";
 		Type = "ClassicRaid";
 	};
@@ -1729,9 +1713,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 19430, "", "=q4=Shroud of Pure Thought", "=ds=#s4#", "", "16.67%"};
 		{ 8, 19403, "", "=q4=Band of Forced Concentration", "=ds=#s13#", "", "16.67%"};
 		{ 9, 19367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
-		{ 16, 2522457, "", "=q4=Chromatic Waistgaurd", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522464, "", "=q4=Chromatic Girdle", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522471, "", "=q4=Chromatic Belt", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
+		{ 16, 2522464, "", "=q4=Chromatic Girdle", "=ds=#tt2#", "", "100%"};
 		Prev = "BWLRazorgore";
 		Next = "BWLLashlayer";
 		Type = "ClassicRaid";
@@ -1749,10 +1731,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19365, "", "=q4=Claw of the Black Drake", "=ds=#h3#, #w13#", "", "12.5%"};
 		{ 10, 14000, "", "=q4=Ring of Trinity Force", "=ds=#h3#, #w13#", "", "12.5%"};
 		{ 11, 19432, "", "=q4=Circle of Applied Force", "=ds=#s13#", "", "16.67%"};
-		{ 16, 2522458, "", "=q4=Chromatic Sabatons", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522465, "", "=q4=Chromatic Boots", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522472, "", "=q4=Chromatic Sandals", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 20, 20383, "", "=q1=Head of the Broodlord Lashlayer", "=ds=#m3#", "", "100%"};
+		{ 16, 2522465, "", "=q4=Chromatic Boots", "=ds=#tt2#", "", "100%"};
+		{ 18, 20383, "", "=q1=Head of the Broodlord Lashlayer", "=ds=#m3#", "", "100%"};
 		Prev = "BWLVaelastrasz";
 		Next = "BWLFiremaw";
 		Type = "ClassicRaid";
@@ -1773,9 +1753,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 12, 19402, "", "=q4=Legguards of the Fallen Crusader", "=ds=#s11#, #a4#", "", "12.5%"};
 		{ 13, 19397, "", "=q4=Ring of Blackrock", "=ds=#s13#", "", "6.67%"};
 		{ 14, 19395, "", "=q4=Rejuvenating Gem", "=ds=#s14#", "", "6.67%"};
-		{ 16, 2522456, "", "=q4=Chromatic Gauntlets", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522463, "", "=q4=Chromatic Girdle", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522470, "", "=q4=Chromatic Belt", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
+		{ 16, 2522463, "", "=q4=Chromatic Girdle", "=ds=#tt2#", "", "100%"};
 		Prev = "BWLLashlayer";
 		Next = "BWLEbonroc";
 		Type = "ClassicRaid";
@@ -1794,9 +1772,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 19353, "", "=q4=Drake Talon Cleaver", "=ds=#h2#, #w1#", "", "6.67%"};
 		{ 11, 19355, "", "=q4=Shadow Wing Focus Staff", "=ds=#w9#", "", "6.67%"};
 		{ 12, 19368, "", "=q4=Dragonbreath Hand Cannon", "=ds=#w5#", "", "16.67%"};
-		{ 16, 2522456, "", "=q4=Chromatic Gauntlets", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522463, "", "=q4=Chromatic Girdle", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522470, "", "=q4=Chromatic Belt", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
+		{ 16, 2522463, "", "=q4=Chromatic Girdle", "=ds=#tt2#", "", "100%"};
 		Prev = "BWLFiremaw";
 		Next = "BWLFlamegor";
 		Type = "ClassicRaid";
@@ -1815,9 +1791,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 19357, "", "=q4=Herald of Woe", "=ds=#h2#, #w6#", "", "16.67%"};
 		{ 11, 19355, "", "=q4=Shadow Wing Focus Staff", "=ds=#w9#", "", "6.67%"};
 		{ 12, 19367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
-		{ 16, 2522456, "", "=q4=Chromatic Gauntlets", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522463, "", "=q4=Chromatic Girdle", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522470, "", "=q4=Chromatic Belt", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
+		{ 16, 2522463, "", "=q4=Chromatic Girdle", "=ds=#tt2#", "", "100%"};
 		Prev = "BWLEbonroc";
 		Next = "BWLChromaggus";
 		Type = "ClassicRaid";
@@ -1837,9 +1811,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 12, 19352, "", "=q4=Chromatically Tempered Sword", "=ds=#h1#, #w10#", "", "10%"};
 		{ 13, 19349, "", "=q4=Elementium Reinforced Bulwark", "=ds=#w8#", "", "10%"};
 		{ 14, 19361, "", "=q4=Ashjre'thul, Crossbow of Smiting", "=ds=#w3#", "", "10%"};
-		{ 16, 2522454, "", "=q4=Chromatic Pauldrons", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522461, "", "=q4=Chromatic Spaulders", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522468, "", "=q4=Chromatic Shoulderpads", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
+		{ 16, 2522461, "", "=q4=Chromatic Spaulders", "=ds=#tt2#", "", "100%"};
 		Prev = "BWLFlamegor";
 		Next = "BWLNefarian";
 		Type = "ClassicRaid";
@@ -1859,14 +1831,12 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 11, 19360, "", "=q4=Lok'amir il Romathis", "=ds=#h3#, #w6#", "", "16.67%"};
 		{ 12, 19356, "", "=q4=Staff of the Shadow Flame", "=ds=#w9#", "", "16.67%%"};
 		{ 13, 14001, "", "=q4=Archimtiros' Ring of Armageddon", "=ds=#s13#", "", "16.67%%"};
-		{ 16, 2522449, "", "=q4=Chromatic Breastplate", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522450, "", "=q4=Chromatic Tunic", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522451, "", "=q4=Chromatic Robe", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 20, 19003, "", "=q4=Head of Nefarian", "=ds=#m2#", "", "100%"};
-		{ 21, 19383, "", "=q4=Master Dragonslayer's Medallion", "=q1=#m4#: =ds=#s2#"};
-		{ 22, 19384, "", "=q4=Master Dragonslayer's Ring", "=q1=#m4#: =ds=#s13#"};
-		{ 23, 19366, "", "=q4=Master Dragonslayer's Orb", "=q1=#m4#: =ds=#s15#"};
-		{ 25, 21138, "", "=q1=Red Scepter Shard", "=ds=#m3#", "", "100%"};
+		{ 16, 2522450, "", "=q4=Chromatic Tunic", "=ds=#tt2#", "", "100%"};
+		{ 18, 19003, "", "=q4=Head of Nefarian", "=ds=#m2#", "", "100%"};
+		{ 19, 19383, "", "=q4=Master Dragonslayer's Medallion", "=q1=#m4#: =ds=#s2#"};
+		{ 20, 19384, "", "=q4=Master Dragonslayer's Ring", "=q1=#m4#: =ds=#s13#"};
+		{ 21, 19366, "", "=q4=Master Dragonslayer's Orb", "=q1=#m4#: =ds=#s15#"};
+		{ 23, 21138, "", "=q1=Red Scepter Shard", "=ds=#m3#", "", "100%"};
 		Prev = "BWLChromaggus";
 		Next = "BWLTrashMobs";
 		Type = "ClassicRaid";
@@ -4287,252 +4257,221 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	-----------------
 
 	AtlasLoot_Data["NAXPatchwerk"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
-		{ 5, 22361, "", "=q4=Desecrated Spaulders", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
-		{ 6, 22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
-		{ 7, 0,"","","" },
-		{ 8, 22960, "", "=q4=Cloak of Suturing", "=ds=#s4#","", "20%" },
-		{ 9, 22815, "", "=q4=Severance", "=ds=#h2#, #w1#","", "20%" },
-		{ 10, 22820, "", "=q4=Wand of Fates", "=ds=#w12#","", "20%" },
-		{ 11, 22818, "", "=q4=The Plague Bearer", "=ds=#w8#","", "20%" },
-		{ 12, 22961, "", "=q4=Band of Reanimation", "=ds=#s13#","", "20%" },
+		{ 1, 22960, "", "=q4=Cloak of Suturing", "=ds=#s4#","", "20%" },
+		{ 2, 22815, "", "=q4=Severance", "=ds=#h2#, #w1#","", "20%" },
+		{ 3, 22820, "", "=q4=Wand of Fates", "=ds=#w12#","", "20%" },
+		{ 4, 22818, "", "=q4=The Plague Bearer", "=ds=#w8#","", "20%" },
+		{ 5, 22961, "", "=q4=Band of Reanimation", "=ds=#s13#","", "20%" },
+	--	{ 4, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
+		{ 16, 22361, "", "=q4=Desecrated Spaulders", "=ds=#tt3#","", "100%" },
+	--	{ 6, 22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+
 		Next = "NAXGrobbulus";
 		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["NAXGrobbulus"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","","33.33%" },
-		{ 5, 22361, "", "=q4=Desecrated Spaulders", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","","33.33%" },
-		{ 6, 22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","","33.33%" },
-		{ 7, 0,"","","" },
-		{ 8, 22968, "", "=q4=Glacial Mantle", "=ds=#s3#, #a1#", "", "20%" },
-		{ 9, 22967, "", "=q4=Icy Scale Spaulders", "=ds=#s3#, #a3#", "", "20%" },
-		{ 10, 22803, "", "=q4=Midnight Haze", "=ds=#h3#, #w4#", "", "20%" },
-		{ 11, 22988, "", "=q4=The End of Dreams", "=ds=#h3#, #w6#","","20%" },
-		{ 12, 22810, "", "=q4=Toxin Injector", "=ds=#w5#", "","20%" },
+		{ 1, 22968, "", "=q4=Glacial Mantle", "=ds=#s3#, #a1#", "", "20%" },
+		{ 2, 22967, "", "=q4=Icy Scale Spaulders", "=ds=#s3#, #a3#", "", "20%" },
+		{ 3, 22803, "", "=q4=Midnight Haze", "=ds=#h3#, #w4#", "", "20%" },
+		{ 4, 22988, "", "=q4=The End of Dreams", "=ds=#h3#, #w6#","","20%" },
+		{ 5, 22810, "", "=q4=Toxin Injector", "=ds=#w5#", "","20%" },
+		--{ 4, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","","33.33%" },
+		{ 16, 22361, "", "=q4=Desecrated Spaulders", "=ds=#tt3#","","100%" },
+		--{ 6, 22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","","33.33%" },
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXPatchwerk";
 		Next = "NAXGluth";
 		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["NAXGluth"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22983, "", "=q4=Rime Covered Mantle", "=ds=#s3#, #a1#", "", "20%" },
-		{ 5, 22813, "", "=q4=Claymore of Unholy Might", "=ds=#h2#, #w10#", "","20%" },
-		{ 6, 23075, "", "=q4=Death's Bargain", "=ds=#w8#", "","20%" },
-		{ 7, 22994, "", "=q4=Digested Hand of Power", "=ds=#s15#","","20%"},
-		{ 8, 22981, "", "=q4=Gluth's Missing Collar", "=ds=#s2#","","20%" },
-		{ 9, 0,"","","" },
-		{ 10, 0,"","","" },
-		{ 11, 0,"","","" },
-		{ 12, 0,"","","" },
-		{ 13, 0,"","","" },
-		{ 14, 0,"","","" },
-		{ 15, 0,"","","" },
-		{ 16, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%" },
-		{ 17, 22361, "", "=q4=Desecrated Spaulders", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
-		{ 18, 22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
-		{ 19, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%"  },
-		{ 20, 22362, "", "=q4=Desecrated Wristguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "8.33%"  },
-		{ 21, 22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#","", "8.33%"  },
-		{ 22, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","","8.33%" },
-		{ 23, 22363, "", "=q4=Desecrated Girdle", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
-		{ 24, 22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
-		{ 25, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%"  },
-		{ 26, 22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
-		{ 27, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
+		{ 1, 22983, "", "=q4=Rime Covered Mantle", "=ds=#s3#, #a1#", "", "20%" },
+		{ 2, 22813, "", "=q4=Claymore of Unholy Might", "=ds=#h2#, #w10#", "","20%" },
+		{ 3, 23075, "", "=q4=Death's Bargain", "=ds=#w8#", "","20%" },
+		{ 4, 22994, "", "=q4=Digested Hand of Power", "=ds=#s15#","","20%"},
+		{ 5, 22981, "", "=q4=Gluth's Missing Collar", "=ds=#s2#","","20%" },
+		--{ 16, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%" },
+		{ 16, 22361, "", "=q4=Desecrated Spaulders", "=ds=#tt3#","", "8.33%"  },
+		--{ 18, 22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
+		--{ 19, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%"  },
+		{ 17, 22362, "", "=q4=Desecrated Wristguards", "=ds=#tt3#","", "8.33%"  },
+		--{ 21, 22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#","", "8.33%"  },
+		--{ 22, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","","8.33%" },
+		{ 18, 22363, "", "=q4=Desecrated Girdle", "=ds=#tt3#","", "8.33%"  },
+		--{ 24, 22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
+		--{ 25, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%"  },
+		{ 19, 22365, "", "=q4=Desecrated Boots", "=ds=#tt3#","", "8.33%"  },
+		--{ 27, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
+		{ 21, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 22, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXGrobbulus";
 		Next = "NAXThaddius";
 		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["NAXThaddius"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22367, "", "=q4=Desecrated Circlet", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "66.67%"},
-		{ 5, 22360, "", "=q4=Desecrated Headpiece", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#" ,"", "66.67%"},
-		{ 6, 22353, "", "=q4=Desecrated Helmet", "=q1=#m1# =ds=#c6#, #c9#","", "66.67%" },
-		{ 7, 0,"","","" },
-		{ 8, 23070, "", "=q4=Leggings of Polarity", "=ds=#s11#, #a1#" ,"", "20%"},
-		{ 9, 23000, "", "=q4=Plated Abomination Ribcage", "=ds=#s5#, #a4#","", "20%" },
-		{ 10, 22808, "", "=q4=The Castigator", "=ds=#h1#, #w6#" ,"", "20%"},
-		{ 11, 22801, "", "=q4=Spire of Twilight", "=ds=#w9#" ,"", "20%"},
-		{ 12, 23001, "", "=q4=Eye of Diminution", "=ds=#s14#" ,"", "20%"},
+		{ 1, 23070, "", "=q4=Leggings of Polarity", "=ds=#s11#, #a1#" ,"", "20%"},
+		{ 2, 23000, "", "=q4=Plated Abomination Ribcage", "=ds=#s5#, #a4#","", "20%" },
+		{ 3, 22808, "", "=q4=The Castigator", "=ds=#h1#, #w6#" ,"", "20%"},
+		{ 4, 22801, "", "=q4=Spire of Twilight", "=ds=#w9#" ,"", "20%"},
+		{ 5, 23001, "", "=q4=Eye of Diminution", "=ds=#s14#" ,"", "20%"},
+		--{ 4, 22367, "", "=q4=Desecrated Circlet", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "66.67%"},
+		{ 16, 22360, "", "=q4=Desecrated Headpiece", "=ds=#tt3#" ,"", "100%"},
+		--{ 6, 22353, "", "=q4=Desecrated Helmet", "=q1=#m1# =ds=#c6#, #c9#","", "66.67%" },
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXGluth";
 		Next = "NAXAnubRekhan";
 		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["NAXAnubRekhan"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#", "","33.33%" },
-		{ 5, 22362, "", "=q4=Desecrated Wristguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "33.33%" },
-		{ 6, 22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#", "", "33.33%" },
-		{ 7, 0,"","","" },
-		{ 8, 22938, "", "=q4=Cryptfiend Silk Cloak", "=ds=#s4#", "","20%" },
-		{ 9, 22936, "", "=q4=Wristguards of Vengeance", "=ds=#s8#, #a4#","", "20%" },
-		{ 10, 22937, "", "=q4=Gem of Nerubis", "=ds=#s15#","", "20%" },
-		{ 11, 22939, "", "=q4=Band of Unanswered Prayers", "=ds=#s13#","", "20%" },
-		{ 12, 22935, "", "=q4=Touch of Frost", "=ds=#s2#", "", "20%" },
+		{ 1, 22938, "", "=q4=Cryptfiend Silk Cloak", "=ds=#s4#", "","20%" },
+		{ 2, 22936, "", "=q4=Wristguards of Vengeance", "=ds=#s8#, #a4#","", "20%" },
+		{ 3, 22937, "", "=q4=Gem of Nerubis", "=ds=#s15#","", "20%" },
+		{ 4, 22939, "", "=q4=Band of Unanswered Prayers", "=ds=#s13#","", "20%" },
+		{ 5, 22935, "", "=q4=Touch of Frost", "=ds=#s2#", "", "20%" },
+		--{ 4, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#", "","33.33%" },
+		{ 16, 22362, "", "=q4=Desecrated Wristguards", "=ds=#tt3#","", "100%" },
+		--{ 6, 22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#", "", "33.33%" },
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXThaddius";
 		Next = "NAXGrandWidowFearlina";
 		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["NAXGrandWidowFearlina"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
-		{ 5, 22362, "", "=q4=Desecrated Wristguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "33.33%" },
-		{ 6, 22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#","", "33.33%" },
-		{ 7, 0,"","","" },
-		{ 8, 22941, "", "=q4=Polar Shoulder Pads", "=ds=#s3#, #a2#","", "20%" },
-		{ 9, 22940, "", "=q4=Icebane Pauldrons", "=ds=#s3#, #a4#","", "20%" },
-		{ 10, 22806, "", "=q4=Widow's Remorse", "=ds=#h1#, #w10#","", "20%" },
-		{ 11, 22942, "", "=q4=The Widow's Embrace", "=ds=#h3#, #w6#","", "20%" },
-		{ 12, 22943, "", "=q4=Malice Stone Pendant", "=ds=#s2#","", "20%" },
+		{ 1, 22941, "", "=q4=Polar Shoulder Pads", "=ds=#s3#, #a2#","", "20%" },
+		{ 2, 22940, "", "=q4=Icebane Pauldrons", "=ds=#s3#, #a4#","", "20%" },
+		{ 3, 22806, "", "=q4=Widow's Remorse", "=ds=#h1#, #w10#","", "20%" },
+		{ 4, 22942, "", "=q4=The Widow's Embrace", "=ds=#h3#, #w6#","", "20%" },
+		{ 5, 22943, "", "=q4=Malice Stone Pendant", "=ds=#s2#","", "20%" },
+		--{ 4, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
+		{ 16, 22362, "", "=q4=Desecrated Wristguards", "=ds=#tt3#" ,"", "100%" },
+		--{ 6, 22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#","", "33.33%" },
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXAnubRekhan";
 		Next = "NAXMaexxna";
 		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["NAXMaexxna"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22371, "", "=q4=Desecrated Gloves", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "67.66%" },
-		{ 5, 22364, "", "=q4=Desecrated Handguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "67.66%" },
-		{ 6, 22357, "", "=q4=Desecrated Gauntlets", "=q1=#m1# =ds=#c9#, #c6#","", "67.66%" },
-		{ 7, 0,"","","" },
-		{ 8, 23220, "", "=q4=Crystal Webbed Robe", "=ds=#s5#, #a1#","", "20%" },
-		{ 9, 22804, "", "=q4=Maexxna's Fang", "=ds=#h1#, #w4#","", "20%" },
-		{ 10, 22807, "", "=q4=Wraith Blade", "=ds=#h3#, #w10#","", "20%" },
-		{ 11, 22947, "", "=q4=Pendant of Forgotten Names", "=ds=#s2#","", "20%" },
-		{ 12, 22954, "", "=q4=Kiss of the Spider", "=ds=#s14#","", "20%" },
+		{ 1, 23220, "", "=q4=Crystal Webbed Robe", "=ds=#s5#, #a1#","", "20%" },
+		{ 2, 22804, "", "=q4=Maexxna's Fang", "=ds=#h1#, #w4#","", "20%" },
+		{ 3, 22807, "", "=q4=Wraith Blade", "=ds=#h3#, #w10#","", "20%" },
+		{ 4, 22947, "", "=q4=Pendant of Forgotten Names", "=ds=#s2#","", "20%" },
+		{ 5, 22954, "", "=q4=Kiss of the Spider", "=ds=#s14#","", "20%" },
+		--{ 4, 22371, "", "=q4=Desecrated Gloves", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "67.66%" },
+		{ 16, 22364, "", "=q4=Desecrated Handguards", "=ds=#tt3#","", "100%" },
+		--{ 6, 22357, "", "=q4=Desecrated Gauntlets", "=q1=#m1# =ds=#c9#, #c6#","", "67.66%" },
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXGrandWidowFearlina";
 		Next = "NAXInstructorRAuvious";
 		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["NAXInstructorRAuvious"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#", "", "33.33%" },
-		{ 5, 22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
-		{ 6, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
-		{ 7, 0,"","","" },
-		{ 8, 23017, "", "=q4=Veil of Eclipse", "=ds=#s4#","", "16.67%" },
-		{ 9, 23219, "", "=q4=Girdle of the Mentor", "=ds=#s10#, #a4#","", "16.67%" },
-		{ 10, 23014, "", "=q4=Iblis, Blade of the Fallen Seraph", "=ds=#h1#, #w10#","", "16.67%" },
-		{ 11, 23009, "", "=q4=Wand of the Whispering Dead", "=ds=#w12#","", "16.67%" },
-		{ 12, 23004, "", "=q4=Idol of Longevity", "=ds=#s16#, #w14#","", "16.67%" },
-		{ 13, 23018, "", "=q4=Signet of the Fallen Defender", "=ds=#s13#","", "16.67%" },
+		{ 1, 23017, "", "=q4=Veil of Eclipse", "=ds=#s4#","", "16.67%" },
+		{ 2, 23219, "", "=q4=Girdle of the Mentor", "=ds=#s10#, #a4#","", "16.67%" },
+		{ 3, 23014, "", "=q4=Iblis, Blade of the Fallen Seraph", "=ds=#h1#, #w10#","", "16.67%" },
+		{ 4, 23009, "", "=q4=Wand of the Whispering Dead", "=ds=#w12#","", "16.67%" },
+		{ 5, 23004, "", "=q4=Idol of Longevity", "=ds=#s16#, #w14#","", "16.67%" },
+		{ 6, 23018, "", "=q4=Signet of the Fallen Defender", "=ds=#s13#","", "16.67%" },
+		--{ 4, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#", "", "33.33%" },
+		{ 16, 22365, "", "=q4=Desecrated Boots", "=ds=#tt3#" ,"", "100%" },
+		--{ 6, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXMaexxna";
 		Next = "NAXGothicderHarvester";
 		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["NAXGothicderHarvester"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
-		{ 5, 22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
-		{ 6, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
-		{ 7, 0,"","","" },
-		{ 8, 23032, "", "=q4=Glacial Headdress", "=ds=#s1#, #a1#","", "20%" },
-		{ 9, 23021, "", "=q4=The Soul Harvester's Bindings", "=ds=#s8#, #a1#","", "20%"  },
-		{ 10, 23020, "", "=q4=Polar Helmet", "=ds=#s1#, #a2#","", "20%"  },
-		{ 11, 23073, "", "=q4=Boots of Displacement", "=ds=#s12#, #a2#","", "20%"  },
-		{ 12, 23023, "", "=q4=Sadist's Collar", "=ds=#s2#","", "20%"  },
+		{ 1, 23032, "", "=q4=Glacial Headdress", "=ds=#s1#, #a1#","", "20%" },
+		{ 2, 23021, "", "=q4=The Soul Harvester's Bindings", "=ds=#s8#, #a1#","", "20%"  },
+		{ 3, 23020, "", "=q4=Polar Helmet", "=ds=#s1#, #a2#","", "20%"  },
+		{ 4, 23073, "", "=q4=Boots of Displacement", "=ds=#s12#, #a2#","", "20%"  },
+		{ 5, 23023, "", "=q4=Sadist's Collar", "=ds=#s2#","", "20%"  },
+		--{ 4, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
+		{ 16, 22365, "", "=q4=Desecrated Boots", "=ds=#tt3#" ,"", "100%" },
+		--{ 6, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXInstructorRAuvious";
 		Next = "NAXTheFourHorsemen";
 		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["NAXTheFourHorsemen"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%"  },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22351, "", "=q4=Desecrated Robe", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%"  },
-		{ 5, 22350, "", "=q4=Desecrated Tunic", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%"  },
-		{ 6, 22349, "", "=q4=Desecrated Breastplate", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%"  },
-		{ 7, 0,"","","" },
-		{ 8, 23071, "", "=q4=Leggings of Apocalypse", "=ds=#s11#, #a2#","", "16.67%"  },
-		{ 9, 22809, "", "=q4=Maul of the Redeemed Crusader", "=ds=#h2#, #w6#","", "16.67%"  },
-		{ 10, 22691, "", "=q4=Corrupted Ashbringer", "=ds=#h2#, #w10#","", "16.67%"  },
-		{ 11, 22811, "", "=q4=Soulstring", "=ds=#w2#","", "20%"  },
-		{ 12, 23025, "", "=q4=Seal of the Damned", "=ds=#s13#","", "16.67%"  },
-		{ 13, 23027, "", "=q4=Warmth of Forgiveness", "=ds=#s14#","", "16.67%"  },
+		{ 1, 23071, "", "=q4=Leggings of Apocalypse", "=ds=#s11#, #a2#","", "16.67%"  },
+		{ 2, 22809, "", "=q4=Maul of the Redeemed Crusader", "=ds=#h2#, #w6#","", "16.67%"  },
+		{ 3, 22691, "", "=q4=Corrupted Ashbringer", "=ds=#h2#, #w10#","", "16.67%"  },
+		{ 4, 22811, "", "=q4=Soulstring", "=ds=#w2#","", "20%"  },
+		{ 5, 23025, "", "=q4=Seal of the Damned", "=ds=#s13#","", "16.67%"  },
+		{ 6, 23027, "", "=q4=Warmth of Forgiveness", "=ds=#s14#","", "16.67%"  },
+		--{ 4, 22351, "", "=q4=Desecrated Robe", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%"  },
+		{ 16, 22350, "", "=q4=Desecrated Tunic", "=ds=#tt3#" ,"", "100%"  },
+		--{ 6, 22349, "", "=q4=Desecrated Breastplate", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%"  },
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXGothicderHarvester";
 		Next = "NAXNothderPlaguebringer";
 		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["NAXNothderPlaguebringer"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "33.33%" },
-		{ 5, 22363, "", "=q4=Desecrated Girdle", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
-		{ 6, 22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
-		{ 7, 0,"","","" },
-		{ 8, 23030, "", "=q4=Cloak of the Scourge", "=ds=#s4#","", "14.29%" },
-		{ 9, 22816, "", "=q4=Hatchet of Sundered Bone", "=ds=#h1#, #w1#","", "14.29%" },
-		{ 10, 23005, "", "=q4=Totem of Flowing Water", "=ds=#s16#, #w15#","", "14.29%" },
-		{ 11, 23006, "", "=q4=Libram of Light", "=ds=#s16#, #w16#","", "14.29%" },
-		{ 12, 23029, "", "=q4=Noth's Frigid Heart", "=ds=#s15#","", "14.29%" },
-		{ 13, 23031, "", "=q4=Band of the Inevitable", "=ds=#s13#","", "14.29%" },
-		{ 14, 23028, "", "=q4=Hailstone Band", "=ds=#s13#","", "14.29%" },
+		{ 1, 23030, "", "=q4=Cloak of the Scourge", "=ds=#s4#","", "14.29%" },
+		{ 2, 22816, "", "=q4=Hatchet of Sundered Bone", "=ds=#h1#, #w1#","", "14.29%" },
+		{ 3, 23005, "", "=q4=Totem of Flowing Water", "=ds=#s16#, #w15#","", "14.29%" },
+		{ 4, 23006, "", "=q4=Libram of Light", "=ds=#s16#, #w16#","", "14.29%" },
+		{ 5, 23029, "", "=q4=Noth's Frigid Heart", "=ds=#s15#","", "14.29%" },
+		{ 6, 23031, "", "=q4=Band of the Inevitable", "=ds=#s13#","", "14.29%" },
+		{ 7, 23028, "", "=q4=Hailstone Band", "=ds=#s13#","", "14.29%" },
+		--{ 4, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "33.33%" },
+		{ 16, 22363, "", "=q4=Desecrated Girdle", "=ds=#tt3#" ,"", "100%" },
+		--{ 6, 22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXTheFourHorsemen";
 		Next = "NAXHeiganderUnclean";
 		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["NAXHeiganderUnclean"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%"  },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "33.33%" },
-		{ 5, 22363, "", "=q4=Desecrated Girdle", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
-		{ 6, 22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
-		{ 7, 0,"","","" },
-		{ 8, 23035, "", "=q4=Preceptor's Hat", "=ds=#s1#, #a1#","", "20%" },
-		{ 9, 23033, "", "=q4=Icy Scale Coif", "=ds=#s1#, #a3#","", "20%" },
-		{ 10, 23019, "", "=q4=Icebane Helmet", "=ds=#s1#, #a4#","", "20%" },
-		{ 11, 23068, "", "=q4=Legplates of Carnage", "=ds=#s11#, #a4#","", "20%" },
-		{ 12, 23036, "", "=q4=Necklace of Necropsy", "=ds=#s2#","", "20%" },
+		{ 1, 23035, "", "=q4=Preceptor's Hat", "=ds=#s1#, #a1#","", "20%" },
+		{ 2, 23033, "", "=q4=Icy Scale Coif", "=ds=#s1#, #a3#","", "20%" },
+		{ 3, 23019, "", "=q4=Icebane Helmet", "=ds=#s1#, #a4#","", "20%" },
+		{ 4, 23068, "", "=q4=Legplates of Carnage", "=ds=#s11#, #a4#","", "20%" },
+		{ 5, 23036, "", "=q4=Necklace of Necropsy", "=ds=#s2#","", "20%" },
+		--{ 4, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "33.33%" },
+		{ 16, 22363, "", "=q4=Desecrated Girdle", "=ds=#tt3#" ,"", "100%" },
+		--{ 6, 22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXNothderPlaguebringer";
 		Next = "NAXLoatheb";
 		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["NAXLoatheb"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
-		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
-		{ 3, 0,"","","" },
-		{ 4, 22366, "", "=q4=Desecrated Leggings", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "66.67%" },
-		{ 5, 22359, "", "=q4=Desecrated Legguards", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#" ,"", "66.67%"},
-		{ 6, 22352, "", "=q4=Desecrated Legplates", "=q1=#m1# =ds=#c6#, #c9#","", "66.67%" },
-		{ 7, 0,"","","" },
-		{ 8, 23039, "", "=q4=The Eye of Nerub", "=ds=#w7#","", "20%" },
-		{ 9, 22800, "", "=q4=Brimstone Staff", "=ds=#w9#","", "20%" },
-		{ 10, 23037, "", "=q4=Ring of Spiritual Fervor", "=ds=#s13#","", "20%" },
-		{ 11, 23038, "", "=q4=Band of Unnatural Forces", "=ds=#s13#" ,"", "20%"},
-		{ 12, 23042, "", "=q4=Loatheb's Reflection", "=ds=#s14#","", "20%" },
+		{ 1, 23039, "", "=q4=The Eye of Nerub", "=ds=#w7#","", "20%" },
+		{ 2, 22800, "", "=q4=Brimstone Staff", "=ds=#w9#","", "20%" },
+		{ 3, 23037, "", "=q4=Ring of Spiritual Fervor", "=ds=#s13#","", "20%" },
+		{ 4, 23038, "", "=q4=Band of Unnatural Forces", "=ds=#s13#" ,"", "20%"},
+		{ 5, 23042, "", "=q4=Loatheb's Reflection", "=ds=#s14#","", "20%" },
+		--{ 4, 22366, "", "=q4=Desecrated Leggings", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "66.67%" },
+		{ 16, 22359, "", "=q4=Desecrated Legguards", "=ds=#tt3#" ,"", "100%"},
+		--{ 6, 22352, "", "=q4=Desecrated Legplates", "=q1=#m1# =ds=#c6#, #c9#","", "66.67%" },
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXHeiganderUnclean";
 		Next = "NAXSapphiron";
 		Type = "ClassicRaid";
@@ -4551,13 +4490,12 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 23046, "", "=q4=The Restrained Essence of Sapphiron", "=ds=#s14#","","18.18%"  },
 		{ 11, 23041, "", "=q4=Slayer's Crest", "=ds=#s14#","","18.18%"  },
 		{ 12, 19761,"","Fang of the Frost Wyrm","=ds=#h3#, #w13#" },
-		{ 13, 0,"","","" },
-		{ 14, 0,"","","" },
-		{ 15, 0,"","","" },
 		{ 16, 23545, "", "=q4=Power of the Scourge", "=ds=#s3# #e17#","","50%"  },
 		{ 17, 23547, "", "=q4=Resilience of the Scourge", "=ds=#s3# #e17#","","50%" },
 		{ 18, 23549, "", "=q4=Fortitude of the Scourge", "=ds=#s3# #e17#","","50%" },
 		{ 19, 23548, "", "=q4=Might of the Scourge", "=ds=#s3# #e17#" ,"","50%"},
+		{ 18, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 19, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		Prev = "NAXLoatheb";
 		Next = "NAXKelThuzad";
 		Type = "ClassicRaid";
@@ -4575,7 +4513,6 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 22819, "", "=q4=Shield of Condemnation", "=ds=#w8#" ,"","18.18%"},
 		{ 10, 23057, "", "=q4=Gem of Trapped Innocents", "=ds=#s2#" ,"","18.18%"},
 		{ 11, 23053, "", "=q4=Stormrage's Talisman of Seething", "=ds=#s2#","","18.18%" },
-		{ 12, 0,"","","" },
 		{ 13, 691119, "", "=q4=The Phylactery of Kel'Thuzad", "=ds=#m2#","", "100%" },
 		{ 14, 23207, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
 		{ 15, 23206, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
@@ -4588,7 +4525,6 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 22, 23065, "", "=q4=Ring of the Earthshatterer", "=ds=#s13# =q1=#m1# =ds=#c7#" ,"","22.22%"},
 		{ 23, 23063, "", "=q4=Plagueheart Ring", "=ds=#s13# =q1=#m1# =ds=#c8#" ,"","22.22%"},
 		{ 24, 23059, "", "=q4=Ring of the Dreadnaught", "=ds=#s13# =q1=#m1# =ds=#c9#" ,"","22.22%"},
-		{ 25, 0,"","","" },
 		{ 26, 22733, "", "=q1=Staff Head of Atiesh", "=ds=#m3#" },
 		{ 27, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Druid)" },
 		{ 28, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Mage)" },
@@ -4612,14 +4548,10 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 23221, "", "=q4=Misplaced Servo Arm", "=ds=#h1# #w6#" },
 		{ 11, 23238, "", "=q4=Stygian Buckler", "=ds=#w8#" },
 		{ 12, 23237, "", "=q4=Ring of the Eternal Flame", "=ds=#s13#" },
-		{ 13, 0,"","","" },
-		{ 14, 0,"","","" },
-		{ 15, 0,"","","" },
 		{ 16, 22376, "", "=q3=Wartorn Cloth Scrap", "=ds=#m3#" },
 		{ 17, 22373, "", "=q3=Wartorn Leather Scrap", "=ds=#m3#" },
 		{ 18, 22374, "", "=q3=Wartorn Chain Scrap", "=ds=#m3#" },
 		{ 19, 22375, "", "=q3=Wartorn Plate Scrap", "=ds=#m3#" },
-		{ 20, 0,"","","" },
 		{ 21, 22708, "", "=q1=Fate of Ramaladni", "=ds=#m3#" },
 		{ 22, 23055, "", "=q1=Word of Thawing", "=ds=#m20#" },
 		Prev = "NAXKelThuzad";
@@ -4642,14 +4574,12 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#" },
 		{ 12, 15410, "","=q3=Scale of Onyxia",	  "=ds=#e8#" },
 		{ 13, 17966, "", "=q2=Onyxia Hide Backpack", "=ds=#m14# #e1#","", "100%"},
-		{ 16, 2522449, "", "=q4=Chromatic Breastplate", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
-		{ 17, 2522450, "", "=q4=Chromatic Tunic", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
-		{ 18, 2522451, "", "=q4=Chromatic Robe", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 20, 18423, "", "=q4=Head of Onyxia","=ds=#m2#","", "100%" },
-		{ 21, 18404, "", "=q4=Onyxia Tooth Pendant", "=q1=#m4#: =ds=#s2#" },
-		{ 22, 18403, "", "=q4=Dragonslayer's Signet", "=q1=#m4#: =ds=#s13#" },
-		{ 23, 18406, "", "=q4=Onyxia Blood Talisman", "=q1=#m4#: =ds=#s14#" },
-		{ 25, 49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic };
+		{ 16, 2522460, "", "=q4=Chromatic Headpiece", "=ds=#tt2#", "", "100%"};
+		{ 18, 18423, "", "=q4=Head of Onyxia","=ds=#m2#","", "100%" },
+		{ 19, 18404, "", "=q4=Onyxia Tooth Pendant", "=q1=#m4#: =ds=#s2#" },
+		{ 20, 18403, "", "=q4=Dragonslayer's Signet", "=q1=#m4#: =ds=#s13#" },
+		{ 21, 18406, "", "=q4=Onyxia Blood Talisman", "=q1=#m4#: =ds=#s14#" },
+		{ 23, 49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic };
 		Type = "ClassicRaid";
 	};
 
@@ -5127,6 +5057,132 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 24, 10906, "", "=q4=Stompers of Wrath", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "16.84%"};
 		Next = "T3DPSWarrior";
 		Back = "T1T2T3SET";
+		Type = "ClassicRaid";
+	};
+
+	-- T1 Token Items
+
+	AtlasLoot_Data["T1Bracers"] = {
+		{ 1, 16830, "", "=q4=Cenarion Bracers", "=ds=#c1#", "", ""};
+		{ 2, 16850, "", "=q4=Giantstalker's Bracers", "=ds=#c2#", "", ""};
+		{ 3, 16799, "", "=q4=Arcanist Bindings", "=ds=#c3#", "", ""};
+		{ 4, 16857, "", "=q4=Lawbringer Bracers", "=ds=#c4#", "", ""};
+		{ 5, 16819, "", "=q4=Vambraces of Prophecy", "=ds=#c5#", "", ""};
+		{ 6, 16825, "", "=q4=Nightslayer Bracelets", "=ds=#c6#", "", ""};
+		{ 7, 16840, "", "=q4=Earthfury Bracers", "=ds=#c7#", "", ""};
+		{ 8, 16804, "", "=q4=Felheart Bracers", "=ds=#c8#", "", ""};
+		{ 9, 16861, "", "=q4=Bracers of Might", "=ds=#c9#", "", ""};
+		{ 10, 10483, "", "=q4=Wristguards of Might", "=ds=#c9#", "", ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+		
+	};
+
+	AtlasLoot_Data["T1Belts"] = {
+		{ 1, 16828, "", "=q4=Cenarion Belt", "=ds="..AL["Trash Mobs"], "", "0.16%"};
+		{ 2, 16851, "", "=q4=Giantstalker's Belt", "=ds="..AL["Trash Mobs"], "", "0.17%"};
+		{ 3, 16802, "", "=q4=Arcanist Belt", "=ds="..AL["Trash Mobs"], "", "0.16%"};
+		{ 4, 16858, "", "=q4=Lawbringer Belt", "=ds="..AL["Trash Mobs"], "", "0.10%"};
+		{ 5, 16817, "", "=q4=Girdle of Prophecy", "=ds="..AL["Trash Mobs"], "", "0.18%"};
+		{ 6, 16827, "", "=q4=Nightslayer Belt", "=ds="..AL["Trash Mobs"], "", "0.15%"};
+		{ 7, 16838, "", "=q4=Earthfury Belt", "=ds="..AL["Trash Mobs"], "", "0.07%"};
+		{ 8, 16806, "", "=q4=Felheart Belt", "=ds="..AL["Trash Mobs"], "", "0.19%"};
+		{ 9, 16864, "", "=q4=Belt of Might", "=ds="..AL["Trash Mobs"], "", "0.16%"};
+		{ 10, 10485, "", "=q4=Girdle of Might", "=ds="..AL["Trash Mobs"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+	};
+
+	AtlasLoot_Data["T1Gloves"] = {
+		{ 1, 16831, "", "=q4=Cenarion Gloves", "=ds="..BabbleBoss["Shazzrah"], "", "19.53%"};
+		{ 2, 16852, "", "=q4=Giantstalker's Gloves", "=ds="..BabbleBoss["Shazzrah"], "", "18.58%"};
+		{ 3, 16801, "", "=q4=Arcanist Gloves", "=ds="..BabbleBoss["Shazzrah"], "", "19.59%"};
+		{ 4, 16860, "", "=q4=Lawbringer Gauntlets", "=ds="..BabbleBoss["Gehennas"], "", "11.77%"};
+		{ 5, 16812, "", "=q4=Gloves of Prophecy", "=ds="..BabbleBoss["Gehennas"], "", "18.65%"};
+		{ 6, 16826, "", "=q4=Nightslayer Gloves", "=ds="..BabbleBoss["Gehennas"], "", "19.47%"};
+		{ 7, 16839, "", "=q4=Earthfury Gauntlets", "=ds="..BabbleBoss["Gehennas"], "", "7.38%"};
+		{ 8, 16805, "", "=q4=Felheart Gloves", "=ds="..BabbleBoss["Lucifron"], "", "14.89%"};
+		{ 9, 16863, "", "=q4=Gauntlets of Might", "=ds="..BabbleBoss["Lucifron"], "", "16.40%"};
+		{ 10, 10484, "", "=q4=Handguards of Might", "=ds="..BabbleBoss["Lucifron"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+	};
+
+
+	AtlasLoot_Data["T1Shoulders"] = {
+		{ 1, 16836, "", "=q4=Cenarion Spaulders", "=ds="..BabbleBoss["Baron Geddon"], "", "19.52%"};
+		{ 2, 16848, "", "=q4=Giantstalker's Epaulets", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "19.64%"};
+		{ 3, 16797, "", "=q4=Arcanist Mantle", "=ds="..BabbleBoss["Baron Geddon"], "", "19.92%"};
+		{ 4, 16856, "", "=q4=Lawbringer Spaulders", "=ds="..BabbleBoss["Baron Geddon"], "", "12.62%"};
+		{ 5, 16816, "", "=q4=Mantle of Prophecy", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "21.06%"};
+		{ 6, 16823, "", "=q4=Nightslayer Shoulder Pads", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "20.66%"};
+		{ 7, 16844, "", "=q4=Earthfury Epaulets", "=ds="..BabbleBoss["Baron Geddon"], "", "7.29%"};
+		{ 8, 16807, "", "=q4=Felheart Shoulder Pads", "=ds="..BabbleBoss["Baron Geddon"], "", "19.78%"};
+		{ 9, 16868, "", "=q4=Pauldrons of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "21.14%"};
+		{ 10, 10481, "", "=q4=Shoulderpads of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+	};
+
+	AtlasLoot_Data["T1Boots"] = {
+		{ 1, 16829, "", "=q4=Cenarion Boots", "=ds="..BabbleBoss["Lucifron"], "", "10.72%"};
+		{ 2, 16849, "", "=q4=Giantstalker's Boots", "=ds="..BabbleBoss["Gehennas"], "", "14.54%"};
+		{ 3, 16800, "", "=q4=Arcanist Boots", "=ds="..BabbleBoss["Lucifron"], "", "12.06%"};
+		{ 4, 16859, "", "=q4=Lawbringer Boots", "=ds="..BabbleBoss["Lucifron"], "", "7.20%"};
+		{ 5, 16811, "", "=q4=Boots of Prophecy", "=ds="..BabbleBoss["Shazzrah"], "", "14.90%"};
+		{ 6, 16824, "", "=q4=Nightslayer Boots", "=ds="..BabbleBoss["Shazzrah"], "", "15.58%"};
+		{ 7, 16837, "", "=q4=Earthfury Boots", "=ds="..BabbleBoss["Lucifron"], "", "4.16%"};
+		{ 8, 16803, "", "=q4=Felheart Slippers", "=ds="..BabbleBoss["Shazzrah"], "", "15.28%"};
+		{ 9, 16862, "", "=q4=Sabatons of Might", "=ds="..BabbleBoss["Gehennas"], "", "14.48%"};
+		{ 10, 10487, "", "=q4=Stompers of Might", "=ds="..BabbleBoss["Gehennas"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+
+	};
+
+	AtlasLoot_Data["T1Legs"] = {
+		{ 1, 16835, "", "=q4=Cenarion Leggings", "=ds="..BabbleBoss["Magmadar"], "", "12.90%"};
+		{ 2, 16847, "", "=q4=Giantstalker's Leggings", "=ds="..BabbleBoss["Magmadar"], "", "13.28%"};
+		{ 3, 16796, "", "=q4=Arcanist Leggings", "=ds="..BabbleBoss["Magmadar"], "", "14.57%"};
+		{ 4, 16855, "", "=q4=Lawbringer Legplates", "=ds="..BabbleBoss["Magmadar"], "", "8.54%"};
+		{ 5, 16814, "", "=q4=Pants of Prophecy", "=ds="..BabbleBoss["Magmadar"], "", "14.33%"};
+		{ 6, 16822, "", "=q4=Nightslayer Pants", "=ds="..BabbleBoss["Magmadar"], "", "13.83%"};
+		{ 7, 16843, "", "=q4=Earthfury Legguards", "=ds="..BabbleBoss["Magmadar"], "", "4.73%"};
+		{ 8, 16810, "", "=q4=Felheart Pants", "=ds="..BabbleBoss["Magmadar"], "", "13.75%"};
+		{ 9, 16867, "", "=q4=Legplates of Might", "=ds="..BabbleBoss["Magmadar"], "", "13.97%"};
+		{ 10, 10486, "", "=q4=Legguards of Might", "=ds="..BabbleBoss["Magmadar"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+	};
+
+	AtlasLoot_Data["T1Helms"] = {
+		{ 1, 16834, "", "=q4=Cenarion Helm", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 2, 16846, "", "=q4=Giantstalker's Helmet", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 3, 16795, "", "=q4=Arcanist Crown", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 4, 16795, "", "=q4=Arcanist Crown", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 5, 16854, "", "=q4=Lawbringer Helm", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 6, 16813, "", "=q4=Circlet of Prophecy", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 7, 16821, "", "=q4=Nightslayer Cover", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 8, 16842, "", "=q4=Earthfury Helmet", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 9, 16808, "", "=q4=Felheart Horns", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 10, 16866, "", "=q4=Helm of Might", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 11, 10480, "", "=q4=Faceguard of Might", "=ds="..BabbleBoss["Garr"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+	};
+
+	AtlasLoot_Data["T1Chests"] = {
+		{ 1, 16833, "", "=q4=Cenarion Vestments", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.21%"};
+		{ 2, 16845, "", "=q4=Giantstalker's Breastplate", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.83%"};
+		{ 3, 16798, "", "=q4=Arcanist Robes", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "16.51%"};
+		{ 4, 16853, "", "=q4=Lawbringer Chestguard", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "9.53%"};
+		{ 5, 16815, "", "=q4=Robes of Prophecy", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.65%"};
+		{ 6, 16820, "", "=q4=Nightslayer Chestpiece", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "16.76%"};
+		{ 7, 16841, "", "=q4=Earthfury Vestments", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "6.08%"};
+		{ 8, 16809, "", "=q4=Felheart Robes", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.66%"};
+		{ 9, 16865, "", "=q4=Breastplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.28%"};
+		{ 10, 10482, "", "=q4=Chesttplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], ""};
+		Back = AtlasLoot_Lastboss;
 		Type = "ClassicRaid";
 	};
 
