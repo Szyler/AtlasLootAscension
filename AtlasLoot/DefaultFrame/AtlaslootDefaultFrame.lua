@@ -45,7 +45,7 @@ function AtlasLoot_DewDropClick(tablename, text, tabletype)
     --Definition of where I want the loot table to be shown
     pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
     --If the button clicked was linked to a loot table
-    Hold = false;
+    AtlasLoot_Hold = false;
     if tabletype == "Table" then
         --Show the loot table
         AtlasLoot_ShowBossLoot(tablename, tablename, pFrame);
