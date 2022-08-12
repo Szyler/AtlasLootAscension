@@ -1034,3 +1034,43 @@ function AtlasLoot:FindId(id, difficulty)
 	end
 	return nil, false;
 end
+
+--[[
+Name        : AtlasLootFu
+Version     : 2.0
+Author      : Daviesh (oma_daviesh@hotmail.com)
+Website     : https://discord.gg/uYCE2X2FgA
+Description : Adds AtlasLoot to FuBar.
+]]
+
+--Invoke libraries
+local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+
+--Make an LDB object
+LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject("AtlasLoot", {
+    type = "launcher",
+    icon = "Interface\\Icons\\INV_Box_01",
+    OnClick = function()
+        if IsShiftKeyDown() then
+            AtlasLootOptions_Toggle();
+        else
+            if AtlasLootDefaultFrame:IsVisible() then
+                AtlasLootDefaultFrame:Hide();
+            else
+                AtlasLootDefaultFrame:Show();
+            end
+        end
+    end,
+})
+
+function AtlasLoot_OnBarButtonClick(button)
+    if IsShiftKeyDown() then
+        AtlasLootOptions_Toggle();
+    else
+        if AtlasLootDefaultFrame:IsVisible() then
+            AtlasLootDefaultFrame:Hide();
+        else
+            AtlasLootDefaultFrame:Show();
+        end
+    end
+end

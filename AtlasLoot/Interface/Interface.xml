@@ -1,0 +1,14 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+    <Script file="Menus\Mainmenu.lua"/>
+    <Script file="Menus\DungeonRaidMenus.lua"/>
+    <Script file="Menus\CraftingMenus.lua"/>
+    <Script file="Menus\PvPMenus.lua"/>
+    <Script file="Menus\SetMenus.lua"/>
+    <Script file="Menus\WorldEventMenus.lua"/>
+    <Script file="Menus\RepMenus.lua"/>
+
+    <Script file="AtlasLootFrame.lua" />
+    <Script file="AtlasLootFrameCreate.lua" />
+    <Script file="AtlasLootSearchFrameCreate.lua" />
+</Ui>

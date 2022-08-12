@@ -2,7 +2,7 @@
 ## Title: AtlasLoot Ascension Edition
 ## Notes: Shows the possible loot from the bosses
 ## Author: Original: Hegarol, Ascension: Skray/Szyler/Anch/Rvng
-## Version: v6.4.2
+## Version: v6.5.0
 ## X-eMail: manager@atlasloot.net
 ## X-Credits: Daviesh, Lag, Cellelach, Asurn, Pernicus and many others.
 ## X-Category: Map
@@ -31,11 +31,8 @@
 embeds.xml
 
 Locales\Locales.xml
-Add_Ons\Addons.xml
-
 Core\AtlasLoot.xml
-Menus\Menus.xml
 
-DefaultFrame\Frames.xml
+Interface\Interface.xml
 
 modules.xml

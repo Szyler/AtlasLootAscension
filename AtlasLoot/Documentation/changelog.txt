@@ -1,0 +1,96 @@
+v6.5.0 August 31, 2022
+- Reworked UI
+- Reworked Module/Expansion Selections
+- Implemented auto refresh when an item's data has been loaded
+- Searching continues to add to your results as you cache items and it meets your parameters
+- Fixed adding Searched items to your Wishlist
+- Fixed adding Spells (Professions) to your Wishlist
+- Clicking an item in your wishlist will take you to the items source page
+- Categories with more then one page can be scrolled with mouse wheel now
+
+V6.4.2 June 29, 2022
+- Added TBC High Risk Crafting patterns and items
+
+V6.4.1 June 23, 2022
+- Enabled difficulty for world epics
+
+V6.4.0 June 16, 2022
+- Added new system to handle Expansions will default to servers current active expansion
+- Updated most of the crafted tables to be sorted by expansion
+- Fixed Violet Eye Rings showing up wrong
+- Raid Tokens now have a (Click) beside them to remind or let ppl no that clicking will show the loot from that token
+
+V6.3.0 May 16, 2022
+- Enabled Mythic+ 11-20 for TBC dungeons
+- Fixed missing mana trinket from SSC
+
+V6.2.9 April 7, 2022
+- Enabled Mythic+ 1-10 for TBC dungeons
+- Fixed bug that caused some wishlist to break
+
+V6.2.8 March 31, 2022
+- Reworked Sets/Collections, PVP Rewards, World Bosses and Reputation pages to be sorted based on expansion. The default page selected for these pages will now change depending on what server you are currently on.
+- Enabled difficulty select for 60 world bosses. 
+
+V6.2.7a March 13, 2022
+- Actually fixed the Search functions
+
+V6.2.6 March 7, 2022
+- Added missing mana tombs yor.
+
+V6.2.5 February 24, 2022
+- Added Bloodforge menu to pvp gear
+- Fixed Doom Lord Kazzak / Doomwalker from loading properly 
+- New Feature clicking on a tier token in a bosses page will now send you to a page with what loot that token can give.
+
+V6.2.4 February 14, 2022
+- Fixed Shaman T5
+- Fixed Horde PvP Weapons (Page 2 and 4 of level 60 weapons)
+
+V6.2.3 February 1, 2022
+- Fixed Back Search not working
+
+V6.2.2 January 31, 2022
+- Added Mythic+ 31 to 40
+- Removed Old Raid Tokens
+- Added Difficulty Select to Atlas Integration
+- Fixed TK Neck Quest items
+
+V6.2.1 January 25, 2022
+- Fixed incorrect tags for a couple of the search filters
+- Reworked the search UI
+
+V6.2.0 January 17, 2022
+- Added Mythic+ 21 to 30
+- Reworked the search feature (Credits: @EricTBoneJackson )
+- Added an Advanced Search UI
+
+V6.1.2 December 22, 2021
+- Applied @Frieza changes:
+   Fixed some items not showing their Heroic and Ascended versions in TK.
+   Added Mmrgrg glm nuubs to SSC trash drop table, and Bottled Nethergron Extract to the Eye trash.
+   Fixed Kael Verdant Sphere Neck rewards.
+- Added Prev and Next options for AQ20 and AQ40 trash mob pages.
+- Fixed a couple duplicate name links for Heroic and Ascended difficulties.
+
+V6.1.1 November 19, 2021
+- Fixed Magtheridon weapon IDs
+- Added legendary necklace to Garr
+
+V6.1.0 November 2, 2021
+- Mythic+ sub-categories 1-10 and 11-20
+- Added the token drops to Vanilla Raids
+- Removed Mythic+ options from TBC dungeons as they seem to be a work in progress on Ascensions side.
+- Re-Added Ascended Magtheridon weapons
+
+V6.0.2 October 31, 2022
+- Fixed crafting tables
+- Fixed Wishlist
+- Corrected T3 sets with proper IDs
+- Fixed crafting items showing up in higher difficulties
+
+V6.0.0 October 30, 2022
+- Difficulty selection rewrite (Credits: Anch / Rvng)
+- Added Mythic+ 11-20
+- Added some missing items for Vanilla Raids (Heroic/Ascended)
+- Added option to swap boss and difficulty select drop down positions

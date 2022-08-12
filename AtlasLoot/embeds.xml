@@ -20,7 +20,7 @@
 <Include file="Libs\AceTimer-3.0\AceTimer-3.0.xml"/>
 <Include file="Libs\AceEvent-3.0\AceEvent-3.0.xml"/>
 
-<Include file="Libs\DewdropLib\embeds.xml"/>
+<Script file="Libs\AceLibrary\AceLibrary.lua" />
 <Script file="Libs\DewdropLib\Dewdrop-2.0\Dewdrop-2.0.lua"/>
 <!--@end-no-lib-strip@-->
 
