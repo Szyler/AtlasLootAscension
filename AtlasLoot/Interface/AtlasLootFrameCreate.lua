@@ -1,7 +1,7 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 
-    --Main AtlasLoot Frame
-    local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent);
+--Main AtlasLoot Frame
+local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent);
     mainframe:SetPoint("CENTER",0,0);
     mainframe:SetSize(880,690);
     mainframe:EnableMouse(true);
