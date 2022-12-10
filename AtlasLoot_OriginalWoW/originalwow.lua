@@ -4097,16 +4097,22 @@ AtlasLoot_Data["Onyxia60"] = {
 		{ 5, 17067, "", "=q4=Ancient Cornerstone Grimoire", "=ds=#s15#", "", "28.57%" },
 		{ 6, 17075, "", "=q4=Vis'kag the Bloodletter", "=ds=#h1#, #w10#", "", "28.57%" },
 		{ 7, 17068, "", "=q4=Deathbringer", "=ds=#h1#, #w1#", "", "28.57%" },
-		{ 9, 18705, "", "=q4=Mature Black Dragon Sinew", "=ds=#m3# =q1=#m1# =ds=#c2#", "", "100%" },
-		{ 10, 18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#" },
-		{ 12, 15410, "", "=q3=Scale of Onyxia", "=ds=#e8#" },
-		{ 13, 17966, "", "=q2=Onyxia Hide Backpack", "=ds=#m14# #e1#", "", "100%" },
+		{ 8, 17084, "", "=q4=Mace of the Dragon Knight", "=ds=#h2#, #w6#" },
+		{ 9, 18211, "", "=q4=Wand of the Noble", "=ds=#w12#" },
+		{ 10, 18216, "", "=q4=Neltharion's Badge", "=ds=#s14#" },
+		{ 11, 18215, "", "=q4=Insignia of the Dragon", "=ds=#s14#" },
+		{ 12, 18210, "", "=q4=Draconic Effigy", "=ds=#s2#" },
+		{ 13, 18212, "", "=q4=Band of Nyxondra", "=ds=#s13#" },
 		{ 16, 2522460, "", "=q4=Chromatic Headpiece", "=ds=#tt2#", "", "100%", "=TT=T2HEAD" };
 		{ 18, 18423, "", "=q4=Head of Onyxia", "=ds=#m2#", "", "100%" },
 		{ 19, 18404, "", "=q4=Onyxia Tooth Pendant", "=q1=#m4#: =ds=#s2#" },
 		{ 20, 18403, "", "=q4=Dragonslayer's Signet", "=q1=#m4#: =ds=#s13#" },
 		{ 21, 18406, "", "=q4=Onyxia Blood Talisman", "=q1=#m4#: =ds=#s14#" },
-		{ 23, 49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic };
+		{ 23, 18705, "", "=q4=Mature Black Dragon Sinew", "=ds=#m3# =q1=#m1# =ds=#c2#", "", "100%" },
+		{ 24, 18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#" },
+		{ 26, 15410, "", "=q3=Scale of Onyxia", "=ds=#e8#" },
+		{ 27, 17966, "", "=q2=Onyxia Hide Backpack", "=ds=#m14# #e1#", "", "100%" },
+		{ 29, 49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic };
 	};
 };
 
