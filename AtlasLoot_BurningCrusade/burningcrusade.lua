@@ -896,7 +896,8 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[08] = { itemID = 30866 }; --Blood-stained Pauldrons
 		[09] = { itemID = 30862 }; --Blessed Adamantite Bracers
 		[10] = { itemID = 30861 }; --Furious Shackles
-		[12] = { itemID = 32459 }; --Time-Phased Phylactery
+		[11] = { itemID = 12311 }; --Boneclad Girdle
+		[13] = { itemID = 32459 }; --Time-Phased Phylactery
 		[16] = { itemID = 30865 }; --Tracker's Blade
 		[17] = { itemID = 30872 }; --Chronicle of Dark Secrets
 		[18] = { itemID = 30891 }; --Black Featherlight Boots
@@ -917,6 +918,8 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[06] = { itemID = 30887 }; --Golden Links of Restoration
 		[07] = { itemID = 30880 }; --Quickstrider Moccasins
 		[08] = { itemID = 30878 }; --Glimmering Steel Mantle
+		[09] = { itemID = 12306 }; --Mantle of Glimmering Dreams
+		[10] = { itemID = 12307 }; --Dreadforge Pauldrons
 		[16] = { itemID = 30874 }; --The Unbreakable Will
 		[17] = { itemID = 30881 }; --Blade of Infamy
 		[18] = { itemID = 30883 }; --Pillar of Ferocity
@@ -933,12 +936,13 @@ AtlasLoot_Data["CoTHyjal"] = {
 		WebID = {17888,"npc"};
 		[01] = { itemID = 30889 }; --Kaz\'rogal\'s Hardened Heart"
 		[02] = { itemID = 30893 }; --Sun-touched Chain Leggings"
-		[03] = { itemID = 30894 }; --AtlasLoot.Colors.BLUE Suede Shoes"
-		[04] = { itemID = 30895 }; --Angelista\'s Sash"
-		[05] = { itemID = 30898 }; --Shady Dealer\'s Pantaloons"
-		[06] = { itemID = 30900 }; --Bow-stitched Leggings"
-		[07] = { itemID = 30915 }; --Belt of Seething Fury"
-		[08] = { itemID = 30918 }; --Hammer of Atonement"
+		[03] = { itemID = 30894 }; --Blue Suede Shoes"
+		[04] = { itemID = 12310 }; --Felstrider Boots
+		[05] = { itemID = 30895 }; --Angelista\'s Sash"
+		[06] = { itemID = 30898 }; --Shady Dealer\'s Pantaloons"
+		[07] = { itemID = 30900 }; --Bow-stitched Leggings"
+		[08] = { itemID = 30915 }; --Belt of Seething Fury"
+		[09] = { itemID = 30918 }; --Hammer of Atonement"
 		[16] = { itemID = 31092, lootTable = {"T6HAND","Token"} };
 		[18] = { itemID = 29434 }; --Badge of Justice
 		[19] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
@@ -953,6 +957,8 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[04] = { itemID = 30899 }; --Don Rodrigo\'s Poncho"
 		[05] = { itemID = 30901 }; --Boundless Agony"
 		[06] = { itemID = 30917 }; --Razorfury Mantle"
+		[07] = { itemID = 12308 }; --Infernal Stalker’s Hauberk
+		[08] = { itemID = 12309 }; --Plates of Eternal Fury
 		[16] = { itemID = 31098, lootTable = {"T6LEGS","Token"} }; --Leggings of the Forgotten Conqueror
 		[18] = { itemID = 29434 }; --Badge of Justice
 		[19] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
@@ -969,11 +975,14 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[05] = { itemID = 30904 }; --Savior's Grasp
 		[06] = { itemID = 30903 }; --Legguards of Endless Rage
 		[07] = { itemID = 30911 }; --Scepter of Purification
-		[09] = { itemID = 30910 }; --Tempest of Chaos
-		[10] = { itemID = 30902 }; --Cataclysm's Edge
-		[11] = { itemID = 30908 }; --Apostle of Argus
-		[12] = { itemID = 30909 }; --Antonidas's Aegis of Rapt Concentration
-		[13] = { itemID = 30906 }; --Bristleblitz Striker
+		[08] = { itemID = 30910 }; --Tempest of Chaos
+		[09] = { itemID = 30902 }; --Cataclysm's Edge
+		[10] = { itemID = 30908 }; --Apostle of Argus
+		[11] = { itemID = 30909 }; --Antonidas's Aegis of Rapt Concentration
+		[12] = { itemID = 30906 }; --Bristleblitz Striker
+		[13] = { itemID = 12387 }; --Signet of Shattered Valor
+		[14] = { itemID = 12386 }; --Ring of the Stormborn
+		[15] = { itemID = 12313 }; --The Defiler's Cudgel
 		[16] = { itemID = 31097, lootTable = {"T6HEAD","Token"} }; --Helm of the Forgotten Conqueror
 		[18] = { itemID = 450009, desc = AL["Quest Requirements"], contentsPreview = {{450009},{450010},{34334}}}, --The String of Time
 		[20] = { itemID = 29434 }; --Badge of Justice
