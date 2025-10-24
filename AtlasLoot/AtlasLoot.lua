@@ -46,6 +46,7 @@ AtlasLoot.DBDefaults = {
 			},
 			txtSize = 12,
 			showUnknownRecipeTooltip = true,
+			ItemLoadingSpeed = 1,
 		},
 	}
 }

@@ -124,7 +124,7 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
     self:CreateUpdateText()
     AtlasLootDbUpdate:Show()
 
-	local maxDuration = 4000/GetFramerate()
+	local maxDuration = (self.selectedProfile.ItemLoadingSpeed*500)/GetFramerate()
     local startTime = debugprofilestop()
 	firstID = firstID or 1
 	lastID = lastID or 10000000

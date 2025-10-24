@@ -166,7 +166,7 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name)
 		if not itemData then return end
 		if itemData.itemID then
 			self:ItemsLoading(-1)
-			local armorType, armorSubType, _, equipLoc = select(6,AtlasLoot:GetItemInfo(itemData.itemID))
+			local armorType, armorSubType, _, equipLoc = select(6,self:GetItemInfo(itemData.itemID, true))
 			if (armorType == "Armor" or armorType == "Weapon") then
 				sortItem(itemData, armorSubType, equipLoc, armorType)
 			end
@@ -175,7 +175,7 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name)
 
 	-- rate limit tied to half the current frame rate
 	self:ItemsLoading(#itemList)
-	local maxDuration = 500/GetFramerate()
+	local maxDuration = (self.selectedProfile.ItemLoadingSpeed*500)/GetFramerate()
 	local startTime = debugprofilestop()
 	local function continue()
 		startTime = debugprofilestop()

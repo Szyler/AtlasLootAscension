@@ -152,6 +152,23 @@ function AtlasLoot:InitializeOptionsFrame()
                             self.selectedProfile.LootBrowserScale = self.options.LootBrowserScale:GetValue()
                             self:UpdateLootBrowserScale()
                         end
+                    },
+                    {
+                        Type = "Slider",
+                        Name = "ItemLoadingSpeed",
+                        Lable = "Item Loading Speed",
+                        MinMax = {1, 20},
+                        Step = 1,
+                        Size = {240,16},
+                        OnShow = function() 
+                            self.options.ItemLoadingSpeed:SetValue(self.selectedProfile.ItemLoadingSpeed or 1) end,
+                        OnValueChanged = function()
+                            self.selectedProfile.ItemLoadingSpeed = self.options.ItemLoadingSpeed:GetValue()
+                        end,
+                        Tooltip = {
+                            "This controlls the speed that items load.",
+                            "Setting it higher will lower your frame rate while loading large loot tables"
+                        }
                     }
                 }
             },

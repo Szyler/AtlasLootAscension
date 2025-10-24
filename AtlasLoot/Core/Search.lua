@@ -721,7 +721,7 @@ function AtlasLoot:DoSearch(searchText)
     end
     -- rate limit tied to half the current frame rate
     self:ItemsLoading(#itemList)
-    local maxDuration = 500/GetFramerate()
+    local maxDuration = (self.selectedProfile.ItemLoadingSpeed*500)/GetFramerate()
     local startTime = debugprofilestop()
     local function continue()
         startTime = debugprofilestop()
