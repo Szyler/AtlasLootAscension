@@ -1,0 +1,51 @@
+name: Release WoW Addon
+
+on:
+  push:
+    tags:
+      - "*.*.*" # Trigger on tags like v1.2.3
+
+env:
+  ADDON_NAME: AtlasLoot
+  ZIP_FILE_NAME: AtlasLootAscension
+
+jobs:
+  release:
+    name: Create Release if New Version
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Prepare release zip
+        id: prepare_zip
+        run: |
+          version="${{ github.ref_name }}"
+          
+          # Use the cleaned version in the zip file name
+          zip_name="${{ env.ZIP_FILE_NAME }}-v${version}.zip"
+          echo "Preparing zip for $ADDON_NAME -> $zip_name"
+          
+          rsync -av --exclude='.git' --exclude='.github' --exclude='*.zip' AtlasLoot AtlasLoot_Cache AtlasLoot_BurningCrusade AtlasLoot_Crafting_OriginalWoW AtlasLoot_Crafting_TBC AtlasLoot_Crafting_Wrath AtlasLoot_OriginalWoW AtlasLoot_Vanity AtlasLoot_WorldEvents AtlasLoot_WrathoftheLichKing "./temp_build/"
+          
+          # Navigate into the temporary build directory to zip the addon folder
+          cd ./temp_build
+          zip -r "../${zip_name}" .
+          cd ..
+          
+          # Set the variables as outputs so they can be used by the next step
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+          echo "zip_name=${zip_name}" >> "$GITHUB_OUTPUT"
+          echo "✅ Created ${zip_name}"
+
+      - name: Create GitHub Release and Upload Zip
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.prepare_zip.outputs.version }}
+          name: ${{ env.ADDON_NAME }} ${{ steps.prepare_zip.outputs.version }}
+          files: |
+            ${{ steps.prepare_zip.outputs.zip_name }}
+
+
+
