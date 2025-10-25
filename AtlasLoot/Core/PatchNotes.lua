@@ -1,6 +1,11 @@
 
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local patchNotes = {
+    {"Version 7.6.6", "24th October, 2025"},
+    "Added missing Tier 1 sets",
+    "Added all the worldforged items (Sets/Collections Tab)",
+    "Added new options slider to set item loading speed",
+    "Bug fixs",
     {"Version 7.6.3", "27th September, 2025"},
     "Bug fix",
     {"Version 7.6.3", "26th August, 2025"},
