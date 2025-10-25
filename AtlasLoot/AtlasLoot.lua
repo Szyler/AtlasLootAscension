@@ -71,6 +71,7 @@ function AtlasLoot:OnInitialize()
 	self:SetupDB("AtlasLootFilterDB", LootFilterDefaultSettings)
 	self.db = self:SetupDB("AtlasLootDB", self.DBDefaults)
 	self.selectedProfile = self.db.settingsProfiles[self.db.profile.settingsProfile]
+	self.selectedProfile.ItemLoadingSpeed = self.selectedProfile.ItemLoadingSpeed or 1
 	self:InitializeSlashCommands()
 	--Sets the default loot tables for the current expansion enabled on the server.
 	local xpaclist = {"CLASSIC", "TBC", "WRATH"}
