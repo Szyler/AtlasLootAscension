@@ -17,24 +17,77 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        # Fetch tags to get the message and commit history
+        with:
+          fetch-depth: 0 
+
+      - name: Get Commit Log Since Previous Tag (Date-Based Fix) ✅
+        id: get_release_notes
+        run: |
+          CURRENT_TAG="${{ github.ref_name }}"
+          echo "Current Tag: $CURRENT_TAG"
+
+          # 1. List ALL tags, sort by tag creation date (newest first), and get the second entry.
+          # This should reliably be the tag immediately preceding the current one.
+          # The '--list' is often needed to force the sort.
+          PREVIOUS_TAG=$(git tag --sort=-taggerdate --list | head -n 1 | tail -n 1)
+          
+          # 2. Set fallback for the very first release
+          if [ -z "$PREVIOUS_TAG" ]; then
+            echo "⚠️ No previous tag found. Logging all commits."
+            PREVIOUS_TAG="$(git rev-list --max-parents=0 HEAD)" 
+          fi
+          echo "Previous Tag: $PREVIOUS_TAG"
+
+          # 3. Get the annotated tag message (optional)
+          # We use the current tag's message
+          TAG_MESSAGE=$(git tag -n99 --format="%(contents)" "$CURRENT_TAG" 2>/dev/null | head -n 1)
+
+          # 4. Generate the commit log between the two tags
+          # This uses the tag names found in steps 1 & 2.
+            COMMIT_LOG=$(git log "$PREVIOUS_TAG".."$CURRENT_TAG" \
+            --no-merges \
+            --pretty=format:"* **%s** (`%h`)")
+
+            # 5. Assemble the final release body (Tag Message + Commit Log)
+            {
+            echo "$TAG_MESSAGE"
+            echo ""
+            echo "---"
+            echo "### 📝 Changes Since $PREVIOUS_TAG"
+            echo ""
+            echo "$COMMIT_LOG"
+            } > RELEASE_BODY.md
+            
+            # Pass the file path as an output
+            echo "release_body_file=RELEASE_BODY.md" >> "$GITHUB_OUTPUT"
+            echo "✅ Generated RELEASE_BODY.md with commit log from $PREVIOUS_TAG"
+
 
       - name: Prepare release zip
         id: prepare_zip
         run: |
           version="${{ github.ref_name }}"
           
-          # Use the cleaned version in the zip file name
-          zip_name="${{ env.ZIP_FILE_NAME }}-v${version}.zip"
+          zip_name="${{ env.ZIP_FILE_NAME }}-${{ github.event_name == 'push' && 'v' || '' }}${version}.zip"
           echo "Preparing zip for $ADDON_NAME -> $zip_name"
           
-          rsync -av --exclude='.git' --exclude='.github' --exclude='*.zip' AtlasLoot AtlasLoot_Cache AtlasLoot_BurningCrusade AtlasLoot_Crafting_OriginalWoW AtlasLoot_Crafting_TBC AtlasLoot_Crafting_Wrath AtlasLoot_OriginalWoW AtlasLoot_Vanity AtlasLoot_WorldEvents AtlasLoot_WrathoftheLichKing "./temp_build/"
+          # Use rsync to copy only the necessary addon folders
+            rsync -av \
+            --exclude='.git*' \
+            --exclude='.github*' \
+            --exclude='*.zip' \
+            --include='*/' \
+            --include='*/**' \
+            --exclude='*' \
+            ./ ./temp_build/
           
           # Navigate into the temporary build directory to zip the addon folder
           cd ./temp_build
           zip -r "../${zip_name}" .
           cd ..
           
-          # Set the variables as outputs so they can be used by the next step
+          # Set the variables as outputs
           echo "version=${version}" >> "$GITHUB_OUTPUT"
           echo "zip_name=${zip_name}" >> "$GITHUB_OUTPUT"
           echo "✅ Created ${zip_name}"
@@ -46,6 +99,5 @@ jobs:
           name: ${{ env.ADDON_NAME }} ${{ steps.prepare_zip.outputs.version }}
           files: |
             ${{ steps.prepare_zip.outputs.zip_name }}
-
-
-
+          # Use the file created by the previous step as the release body
+          body_path: ${{ steps.get_release_notes.outputs.release_body_file }}
