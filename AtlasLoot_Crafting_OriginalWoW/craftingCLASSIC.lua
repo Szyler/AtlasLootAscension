@@ -2222,21 +2222,21 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 			{itemID = 10034, spellID = 12085 }, --Tuxedo Shirt
 			{itemID = 10055, spellID = 12080 }, --Pink Mageweave Shirt
 			{itemID = 10054, spellID = 12075 }, --Lavender Mageweave Shirt
-			{itemID = 10052, spellID = 12064 }, --AtlasLoot.Colors.ORANGE Martial Shirt
-			{itemID = 10056, spellID = 12061 }, --AtlasLoot.Colors.ORANGE Mageweave Shirt
+			{itemID = 10052, spellID = 12064 }, --Orange Martial Shirt
+			{itemID = 10056, spellID = 12061 }, --Orange Mageweave Shirt
 			{itemID = 4336, spellID = 3873 }, --Black Swashbuckler's Shirt
 			{itemID = 17723, spellID = 21945 }, --Green Holiday Shirt
 			{itemID = 4335, spellID = 3872 }, --Rich Purple Silk Shirt
 			{itemID = 6796, spellID = 8489 }, --Red Swashbuckler's Shirt
-			{itemID = 4334, spellID = 3871 }, --Formal AtlasLoot.Colors.WHITE Shirt
+			{itemID = 4334, spellID = 3871 }, --Formal White Shirt
 			{itemID = 6795, spellID = 8483 }, --White Swashbuckler's Shirt
 			{itemID = 4333, spellID = 3870 }, --Dark Silk Shirt
 			{itemID = 4332, spellID = 3869 }, --Bright Yellow Shirt
-			{itemID = 6384, spellID = 7892 }, --Stylish AtlasLoot.Colors.BLUE Shirt
-			{itemID = 6385, spellID = 7893 }, --Stylish AtlasLoot.Colors.GREEN Shirt
+			{itemID = 6384, spellID = 7892 }, --Stylish Blue Shirt
+			{itemID = 6385, spellID = 7893 }, --Stylish Green Shirt
 		},
 		{
-			{itemID = 4330, spellID = 3866 }, --Stylish AtlasLoot.Colors.RED Shirt
+			{itemID = 4330, spellID = 3866 }, --Stylish Red Shirt
 			{itemID = 2587, spellID = 2406 }, --Gray Woolen Shirt
 			{itemID = 2579, spellID = 2396 }, --Green Linen Shirt
 			{itemID = 2577, spellID = 2394 }, --Blue Linen Shirt
@@ -2249,21 +2249,21 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		Name = AL["High Risk"],
 		{
 			{ name = AL["Rare"], icon = "INV_Box_01"},
-			{itemID = 967817, spellID = 968500 }, --Wrist Wraps of Precision
-			{itemID = 967813, spellID = 968496 }, --Wrist Wraps of Might
-			{itemID = 967823, spellID = 968506 }, --Wrist Wraps of Glory
-			{itemID = 967815, spellID = 968498 }, --Wrist Wraps of Fury
-			{itemID = 967819, spellID = 968502 }, --Wrist Wraps of Efficiency
-			{itemID = 967821, spellID = 968504 }, --Wrist Wraps of Crushing
+			{itemID = 967215, spellID = 968061 }, --Chain Cloak Lining
+			{itemID = 967218, spellID = 968064 }, --Sustaining Cloak Lining
+			{itemID = 967221, spellID = 968067 }, --Flowing Cloak Lining
+			{itemID = 967224, spellID = 968070 }, --Rampager's Cloak Lining
+			{itemID = 967227, spellID = 968073 }, --Absorptive Cloak Lining
+			{itemID = 967230, spellID = 968076 }, --Nimble Cloak Lining
 		},
-		{
+--[[ 		{
 			{ name = AL["Epic"], icon = "INV_Box_01"},
-			{itemID = 967818, spellID = 968501 }, --Fitted Wrist Wraps of Precision
-			{itemID = 967814, spellID = 968497 }, --Fitted Wrist Wraps of Might
-			{itemID = 967824, spellID = 968507 }, --Fitted Wrist Wraps of Glory
-			{itemID = 967816, spellID = 968499 }, --Fitted Wrist Wraps of Fury
-			{itemID = 967820, spellID = 968503 }, --Fitted Wrist Wraps of Efficiency
-			{itemID = 967822, spellID = 968505 }, --Fitted Wrist Wraps of Crushing
-		},
+			{itemID = 967216, spellID = 968062 }, ----Mastercraft Chain Cloak Lining
+			{itemID = 967219, spellID = 968065 }, ----Mastercraft Sustaining Cloak Lining
+			{itemID = 967222, spellID = 968068 }, ----Mastercraft Flowing Cloak Lining
+			{itemID = 967225, spellID = 968071 }, ----Mastercraft Rampager's Cloak Lining
+			{itemID = 967228, spellID = 968074 }, ----Mastercraft Absorptive Cloak Lining
+			{itemID = 967231, spellID = 968077 }, ----Mastercraft Nimble Cloak Lining
+		}, ]]
 	},
 }

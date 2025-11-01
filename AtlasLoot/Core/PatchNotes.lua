@@ -1,6 +1,8 @@
 
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local patchNotes = {
+    {"Version 7.6.7", "1st November, 2025"},
+    "Updated highrisk tailoring recipes",
     {"Version 7.6.6", "24th October, 2025"},
     "Added missing Tier 1 sets",
     "Added all the worldforged items (Sets/Collections Tab)",
