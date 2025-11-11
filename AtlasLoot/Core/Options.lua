@@ -264,7 +264,7 @@ function AtlasLoot:OpenSettingQuickMenu(button)
     local menuList = {
         {
             {text = AL["Quick Settings"], isTitle = true},
-            {text = AL["News/Patch Notes"], tooltip = "Open the news/patch notes ui", func = function() self:OpenNewsFrame() end},
+            {text = AL["News/Patch Notes"], tooltip = "Open the news/patch notes ui", func = function() self:OpenNewsFrame("AtlasLoot") end},
             {text = AL["Learn vanity"], tooltip = "Learn all unknown vanity spells", func = function() self:LearnAllUnknownVanitySpells() end},
             {text = AL["Admin Menu"], isTitle = true, show = admin, divider = true},
             {text = AL["Update ItemId Database"], tooltip = "Updates the item id variations cache",func = function() self:UpdateItemIDsDatabase() end, show = admin},

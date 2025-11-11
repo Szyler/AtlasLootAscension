@@ -160,7 +160,7 @@ function AtlasLoot:SlashCommand(msg)
 	elseif cmd == "clearmerchantcache" and self.selectedProfile.isAdmin then
 		wipe(AtlasLootOtherIds)
 	elseif cmd == "news" then
-		self:OpenNewsFrame()
+		self:OpenNewsFrame("AtlasLoot")
 	elseif cmd == "getwishlist" then
 		self:GetWishListVanityItems(arg1)
 	elseif cmd == "getmerchant" and self.selectedProfile.isAdmin then

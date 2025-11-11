@@ -1,5 +1,5 @@
-local version, news, addonName, addonDB
-local MAJOR, MINOR = "NewsFrame-1.0", 3
+local version, news, addonDB
+local MAJOR, MINOR = "NewsFrame-1.0", 5
 local NewsFrame, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not NewsFrame then return end -- No Upgrade needed.
@@ -18,12 +18,11 @@ patchnotes = {
 }
 ]]
 function NewsFrame:InitializeNewsFrame(db, newsTable, addon)
-    addonName = addon
     addonDB = db
-    version = GetAddOnMetadata(addonName, "Version")
+    version = GetAddOnMetadata(addon, "Version")
     addonDB.AutoShowNews = addonDB.AutoShowNews or addonDB.AutoShowNews and addonDB.AutoShowNews ~= false and true
     if not addonDB.NewsVersion or addonDB.NewsVersion ~= version then
-        DEFAULT_CHAT_FRAME:AddMessage("|cFFFFFF00|Hspell:"..addonName..":NewsLink|h"..addonName.." has been updated|cff00ffff [Click:Open News]|h|r")
+        DEFAULT_CHAT_FRAME:AddMessage("|H"..string.lower(addon).."newsframe:|h|cFFFFFF00"..addon.." has been updated|cff00ffff [Click:Open News]|h|r")
         if addonDB.AutoShowNews then
             Timer.After(5, function() self:OpenNewsFrame() end)
         end
@@ -31,13 +30,8 @@ function NewsFrame:InitializeNewsFrame(db, newsTable, addon)
     addonDB.NewsVersion = version
     news = newsTable
 
-    hooksecurefunc("SetItemRef", function(link)
-        local linkType, addon, param1 = strsplit(":", link)
-        if linkType == "spell" and addon == addonName then
-            if param1 == "NewsLink" then
-                self:OpenNewsFrame()
-            end
-        end
+    LinkUtil:AddHandler(string.lower(addon).."newsframe", function(link)
+        NewsFrame:OpenNewsFrame(addon)
     end)
 end
 
@@ -50,9 +44,9 @@ end
 
 -- Creates News Frame
 local frameCreated
-local function createNewsFrame()
+local function createNewsFrame(addon)
     if frameCreated then return end
-    local mainframe = CreateFrame("FRAME", addonName.."NewsFrame", UIParent,"UIPanelDialogTemplate")
+    local mainframe = CreateFrame("FRAME", addon.."NewsFrame", UIParent,"UIPanelDialogTemplate")
     mainframe:SetSize(500,600)
     mainframe:SetPoint("CENTER",0,0)
     mainframe:EnableMouse(true)
@@ -63,7 +57,7 @@ local function createNewsFrame()
     mainframe.TitleText = mainframe:CreateFontString()
     mainframe.TitleText:SetFont("Fonts\\FRIZQT__.TTF", 12)
     mainframe.TitleText:SetFontObject(GameFontNormal)
-    mainframe.TitleText:SetText(addonName.." Version: "..version)
+    mainframe.TitleText:SetText(addon.." Version: "..version)
     mainframe.TitleText:SetPoint("TOP", 0, -9)
     mainframe.TitleText:SetShadowOffset(1,-1)
     mainframe:SetScript("OnShow", function()
@@ -71,7 +65,7 @@ local function createNewsFrame()
         mainframe.AutoShowNews:SetChecked(addonDB.AutoShowNews)
         end)
     mainframe:Hide()
-    mainframe.AutoShowNews = CreateFrame("CheckButton", addonName.."NewsFrameAutoShow", mainframe, "OptionsCheckButtonTemplate")
+    mainframe.AutoShowNews = CreateFrame("CheckButton", addon.."NewsFrameAutoShow", mainframe, "OptionsCheckButtonTemplate")
     mainframe.AutoShowNews:SetPoint("BOTTOMLEFT", 20, 15)
     mainframe.AutoShowNews.Text:SetText("Auto Open on New Changes" )
     mainframe.AutoShowNews:SetScript("OnClick", function() addonDB.AutoShowNews = not addonDB.AutoShowNews end)
@@ -83,7 +77,7 @@ local function createNewsFrame()
 
     local lastButton
     local function createLinkButton(link, linkName)
-        mainframe[linkName] = CreateFrame("Button", addonName.."NewsFrameDiscordCopyButton", mainframe)
+        mainframe[linkName] = CreateFrame("Button", addon.."NewsFrameDiscordCopyButton", mainframe)
         mainframe[linkName]:RegisterForClicks("AnyDown")
         mainframe[linkName]:SetScript("OnEnter", function(self)
             GameTooltip:ClearLines()
@@ -111,19 +105,19 @@ local function createNewsFrame()
 
     if #metaData > 0 then
         for _, linkData in pairs(metaData) do
-        local link = GetAddOnMetadata(addonName, linkData[1])
+        local link = GetAddOnMetadata(addon, linkData[1])
             if link then
                 createLinkButton(link, linkData[2])
             end
         end
     end
 
-    tinsert(UISpecialFrames, addonName.."NewsFrame")
+    tinsert(UISpecialFrames, addon.."NewsFrame")
     --ScrollFrame
     local ROW_HEIGHT = 25   -- How tall is each row?
     local MAX_ROWS = 20      -- How many rows can be shown at once?
 
-    local scrollFrame = CreateFrame("Frame", addonName.."NewsScrollFrame", mainframe)
+    local scrollFrame = CreateFrame("Frame", addon.."NewsScrollFrame", mainframe)
         scrollFrame:EnableMouse(true)
         scrollFrame:SetSize(mainframe:GetWidth()-40, ROW_HEIGHT * MAX_ROWS + 16)
         scrollFrame:SetPoint("TOP",0,-42)
@@ -153,7 +147,7 @@ local function createNewsFrame()
         end
     end
 
-    local scrollSlider = CreateFrame("ScrollFrame",addonName.."NewsFrameScroll",scrollFrame,"FauxScrollFrameTemplate")
+    local scrollSlider = CreateFrame("ScrollFrame",addon.."NewsFrameScroll",scrollFrame,"FauxScrollFrameTemplate")
     scrollSlider:SetPoint("TOPLEFT", 0, -8)
     scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8)
     scrollSlider:SetScript("OnVerticalScroll", function(self, offset)
@@ -180,9 +174,9 @@ local function createNewsFrame()
     frameCreated = true
 end
 
-function NewsFrame:OpenNewsFrame()
-    createNewsFrame()
-    _G[addonName.."NewsFrame"]:Show()
+function NewsFrame:OpenNewsFrame(addon)
+    createNewsFrame(addon)
+    _G[addon.."NewsFrame"]:Show()
 end
 
 -- ---------------------------------------------------------------------
