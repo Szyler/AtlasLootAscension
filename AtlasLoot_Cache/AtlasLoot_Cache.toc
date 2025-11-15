@@ -9,7 +9,7 @@
 ## X-Category: Map
 ## X-License: GPL v2
 ## X-Website: https://discord.gg/uYCE2X2FgA
-## SavedVariables: AtlasLootItemCache, AtlasLootOtherIds
+## SavedVariables: AtlasLootItemCache, AtlasLootOtherIds, AtlasLoot_Data_Cache
 
 AtlasLootCache.lua
 ItemIDsDatabaseFixes.lua

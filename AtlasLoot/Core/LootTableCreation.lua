@@ -61,8 +61,17 @@ end
 
 --Creates a sorted and consolidated loottable of all of an xpacs dungeon loot
 function AtlasLoot:CreateOnDemandLootTable(typeL, isDungeon, name)
-	-- Return and show loot table if its already been created
-	if AtlasLoot_OnDemand and AtlasLoot_OnDemand[typeL] then return self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1) end
+	if isDungeon then
+		-- Return and show loot table if its already been created
+		if AtlasLoot_OnDemand and AtlasLoot_OnDemand[typeL] then return self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1) end
+	else
+
+		if not AtlasLoot_Data_Cache or (AtlasLoot_Data_Cache and AtlasLoot_Data_Cache.Version and AtlasLoot.Version > AtlasLoot_Data_Cache.Version) then
+			AtlasLoot_Data_Cache = { Version = AtlasLoot.Version  }
+		elseif AtlasLoot_Data_Cache and AtlasLoot_Data_Cache[typeL] then
+			return self:ShowItemsFrame(typeL, "AtlasLoot_Data_Cache", 1)
+		end
+	end
 	-- Create ondemand loot table if it dosnt exist
 	if not AtlasLoot_OnDemand then AtlasLoot_OnDemand = {} end
 
@@ -87,14 +96,14 @@ function AtlasLoot:CreateOnDemandLootTable(typeL, isDungeon, name)
 			end
 		end
 		wipe(checkList)
-		self:PopulateOnDemandLootTable(itemList, typeL, name)
+		self:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 	else
-		self:PopulateOnDemandLootTable(_G[typeL], typeL, name)
+		self:PopulateOnDemandLootTable(_G[typeL], typeL, name, isDungeon)
 	end
 end
 
 
-function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name)
+function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 	-- Text Conversion
 	local equipSlot = {
 		INVTYPE_HEAD = BabbleInventory["Head"], INVTYPE_SHOULDER = BabbleInventory["Shoulder"], INVTYPE_CHEST = BabbleInventory["Chest"],
@@ -128,6 +137,9 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name)
 			self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1)
 			firstLoad = true
 		end
+		if not isDungeon then
+			AtlasLoot_Data_Cache[typeL] = AtlasLoot_OnDemand[typeL]
+		end
 	end
 
 	local unsorted = {}
@@ -140,7 +152,7 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name)
 		else
 			tinsert(unsorted[armorSubType]["Misc"], {item, armorType})
 		end
-		
+
 		AtlasLoot_OnDemand[typeL] = {Name = name, Type = typeL, filter = true }
 
 		for aType, v in pairs(unsorted) do
