@@ -201,7 +201,9 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 		if itemData.itemID then
 			self:ItemsLoading(-1)
 			local armorType, armorSubType, _, equipLoc = select(6,self:GetItemInfo(itemData.itemID, true))
-			sortItem(itemData, armorSubType, equipLoc, armorType)
+			if not isDungeon or armorType == "Armor" or armorType == "Weapon" then
+				sortItem(itemData, armorSubType, equipLoc, armorType)
+			end
 		end
 	end
 
