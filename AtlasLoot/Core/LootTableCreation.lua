@@ -59,15 +59,35 @@ function AtlasLoot:CreateToken(dataID)
 	self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 end
 
+local function checkForWorldforgedUpdate(typeL)
+	local currentNumber = 0
+	-- Check if cache exists and count items in it
+	if AtlasLoot_Data_Cache and AtlasLoot_Data_Cache[typeL] then
+		for _, t in ipairs(AtlasLoot_Data_Cache[typeL]) do
+			for _, side in ipairs(t) do
+				for _, v in ipairs(side) do
+					if type(v) == "table" and v.itemID then
+						currentNumber = currentNumber + 1
+					end
+				end
+			end
+		end
+	end
+	-- Check if the global list exists and compare item count
+	if _G[typeL] and #_G[typeL] ~= currentNumber then
+		return true
+	end
+end
+
 --Creates a sorted and consolidated loottable of all of an xpacs dungeon loot
 function AtlasLoot:CreateOnDemandLootTable(typeL, isDungeon, name)
 	if isDungeon then
 		-- Return and show loot table if its already been created
 		if AtlasLoot_OnDemand and AtlasLoot_OnDemand[typeL] then return self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1) end
 	else
-
-		if not AtlasLoot_Data_Cache or (AtlasLoot_Data_Cache and AtlasLoot_Data_Cache.Version and AtlasLoot.Version > AtlasLoot_Data_Cache.Version) then
-			AtlasLoot_Data_Cache = { Version = AtlasLoot.Version  }
+		-- Return and show loot table if its already been created and up to date
+		if not AtlasLoot_Data_Cache or checkForWorldforgedUpdate(typeL) then
+			AtlasLoot_Data_Cache = {}
 		elseif AtlasLoot_Data_Cache and AtlasLoot_Data_Cache[typeL] then
 			return self:ShowItemsFrame(typeL, "AtlasLoot_Data_Cache", 1)
 		end
@@ -149,8 +169,10 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 		if equipLoc and not unsorted[armorSubType][getEquip(equipLoc)] then unsorted[armorSubType][getEquip(equipLoc)] = {} end
 		if equipLoc then
 			tinsert(unsorted[armorSubType][getEquip(equipLoc)], {item, armorType})
-		else
+		elseif (armorType == "Armor" or armorType == "Weapon") then
 			tinsert(unsorted[armorSubType]["Misc"], {item, armorType})
+		else
+			tinsert(unsorted["Other"]["Other"], {item, armorType})
 		end
 
 		AtlasLoot_OnDemand[typeL] = {Name = name, Type = typeL, filter = true }
@@ -179,9 +201,7 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 		if itemData.itemID then
 			self:ItemsLoading(-1)
 			local armorType, armorSubType, _, equipLoc = select(6,self:GetItemInfo(itemData.itemID, true))
-			if (armorType == "Armor" or armorType == "Weapon") then
-				sortItem(itemData, armorSubType, equipLoc, armorType)
-			end
+			sortItem(itemData, armorSubType, equipLoc, armorType)
 		end
 	end
 
