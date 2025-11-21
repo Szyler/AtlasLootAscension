@@ -166,13 +166,13 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 	-- Creates type catagorys and then adds items to them
 	local function sortItem(item, armorSubType, equipLoc, armorType)
 		if not unsorted[armorSubType] then unsorted[armorSubType] = {} end
-		if not unsorted["Misc"] then unsorted["Misc"] = {Misc = {}} end
 		if equipLoc and not unsorted[armorSubType][getEquip(equipLoc)] then unsorted[armorSubType][getEquip(equipLoc)] = {} end
 		if equipLoc then
 			tinsert(unsorted[armorSubType][getEquip(equipLoc)], {item, armorType})
 		else
 			local type = armorType or "Misc"
 			local subType = armorSubType or "Misc"
+			if not unsorted[subType] then unsorted[subType] = {Misc = {}} end
 			tinsert(unsorted[subType]["Misc"], {item, type})
 		end
 
