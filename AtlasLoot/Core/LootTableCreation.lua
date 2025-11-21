@@ -172,7 +172,8 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 			tinsert(unsorted[armorSubType][getEquip(equipLoc)], {item, armorType})
 		else
 			local type = armorType or "Misc"
-			tinsert(unsorted[armorSubType]["Misc"], {item, type})
+			local subType = armorSubType or "Misc"
+			tinsert(unsorted[subType]["Misc"], {item, type})
 		end
 
 		AtlasLoot_OnDemand[typeL] = {Name = name, Type = typeL, filter = true }
