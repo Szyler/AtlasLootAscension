@@ -125,12 +125,15 @@ end
 
 function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 	-- Text Conversion
-	local equipSlot = {
-		INVTYPE_HEAD = BabbleInventory["Head"], INVTYPE_SHOULDER = BabbleInventory["Shoulder"], INVTYPE_CHEST = BabbleInventory["Chest"],
-		INVTYPE_WRIST = BabbleInventory["Wrist"], INVTYPE_HAND = BabbleInventory["Hands"], INVTYPE_WAIST = BabbleInventory["Waist"],
-		INVTYPE_LEGS = BabbleInventory["Legs"], INVTYPE_FEET = BabbleInventory["Feet"], INVTYPE_FINGER = BabbleInventory["Ring"],
-		INVTYPE_CLOAK = BabbleInventory["Back"], INVTYPE_NECK = BabbleInventory["Neck"], INVTYPE_WEAPONOFFHAND = BabbleInventory["Off Hand"],
-		INVTYPE_WEAPONMAINHAND = "Mainhand", INVTYPE_TRINKET = "Trinket", INVTYPE_HOLDABLE = "Caster Offhand"}
+	local function getEquipSlot(slot)
+		local equipSlots = {
+			INVTYPE_HEAD = BabbleInventory["Head"], INVTYPE_SHOULDER = BabbleInventory["Shoulder"], INVTYPE_CHEST = BabbleInventory["Chest"],
+			INVTYPE_WRIST = BabbleInventory["Wrist"], INVTYPE_HAND = BabbleInventory["Hands"], INVTYPE_WAIST = BabbleInventory["Waist"],
+			INVTYPE_LEGS = BabbleInventory["Legs"], INVTYPE_FEET = BabbleInventory["Feet"], INVTYPE_FINGER = BabbleInventory["Ring"],
+			INVTYPE_CLOAK = BabbleInventory["Back"], INVTYPE_NECK = BabbleInventory["Neck"], INVTYPE_WEAPONOFFHAND = BabbleInventory["Off Hand"],
+			INVTYPE_WEAPONMAINHAND = "Mainhand", INVTYPE_TRINKET = "Trinket", INVTYPE_HOLDABLE = "Caster Offhand"}
+		return equipSlots[slot] and " - "..equipSlots[slot] or nil
+	end
 
 	local function correctText(text)
 		text = gsub(text, "Cloth Armor %- Back", "Back")
@@ -172,7 +175,8 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 		else
 			local type = armorType or "Misc"
 			local subType = armorSubType or "Misc"
-			if not unsorted[subType] then unsorted[subType] = {Misc = {}} end
+			if not unsorted[subType] then unsorted[subType] = {} end
+			if not unsorted[subType]["Misc"] then unsorted[subType]["Misc"] = {} end
 			tinsert(unsorted[subType]["Misc"], {item, type})
 		end
 
@@ -181,7 +185,9 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 		for aType, v in pairs(unsorted) do
 			for eLoc, t in pairs(v) do
 				for i, items in ipairs(t) do
-					local name = equipSlot[getEquip(eLoc)] and aType.." "..items[2].." - "..equipSlot[getEquip(eLoc)] or aType
+					local slot = getEquipSlot(getEquip(eLoc))
+					print(slot, aType, items[2])
+					local name = slot and items[2] and aType.." "..items[2]..slot or aType or ""
 					if i == 1 then
 						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name), {}, {}})
 					end
