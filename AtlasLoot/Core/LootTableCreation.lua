@@ -186,7 +186,6 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 			for eLoc, t in pairs(v) do
 				for i, items in ipairs(t) do
 					local slot = getEquipSlot(getEquip(eLoc))
-					print(slot, aType, items[2])
 					local name = slot and items[2] and aType.." "..items[2]..slot or aType or ""
 					if i == 1 then
 						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name), {}, {}})
