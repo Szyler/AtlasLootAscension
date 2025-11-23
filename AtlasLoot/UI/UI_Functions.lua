@@ -15,8 +15,6 @@ AtlasLoot:DewdropModuleMenuOpen()
 --Called whenever the loot browser is shown and sets up buttons and loot tables
 function AtlasLoot:OnShow()
     --Definition of where I want the loot table to be shown
-    --Remove the selection of a loot table in Atlas
-    self.itemframe.activeBoss = nil
     --Set the item table to the loot table
     --Show the last displayed loot table
     local lastboss = self.db.profile.LastBoss[self.Expac]
@@ -38,7 +36,8 @@ end
 function AtlasLoot:ShowInstance()
     for _, v in pairs(self.ui.menus.collection) do
         for _, t in ipairs(v) do
-            if t[4] == BabbleZone[GetRealZoneText()] or (t[5] and t[5] == BabbleZone[GetRealZoneText()]) then
+            local zone = BabbleZone[GetRealZoneText()] or "noZone"
+            if t[4] == zone or (t[5] and t[5] == zone) then
                 self.currentTable = v.SubMenu
                 self.lastModule = v.Module
                 self:IsLootTableAvailable(self.lastModule)
