@@ -1,6 +1,8 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
+local collection = AtlasLoot.ui.menus.collection
 
-	AtlasLoot_SubMenus.PVPCLASSIC = {
+	collection.PVPCLASSIC = {
 		Module = "AtlasLootOriginalWoW",
 		{ "PVP Factions", "AVMisc", "Header"},
 		{ "", "AVMisc"},
@@ -23,7 +25,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 		{ "", "PVPWarrior"},
 	}
 
-	AtlasLoot_SubMenus.PVPTBC = {
+	collection.PVPTBC = {
 		Module = "AtlasLootBurningCrusade",
 		{ "PVP Factions", "PVPHellfire", "Header"},
 		{ "", "PVPHellfire"},
@@ -39,7 +41,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 		{ "", "Pvp70Season4"},
 	}
 
-	AtlasLoot_SubMenus.PVPWRATH = {
+	collection.PVPWRATH = {
 		Module = "AtlasLootWotLK",
 		{ "PVP Factions", "LakeWintergrasp", "Header"},
 		{ "", "LakeWintergrasp"},

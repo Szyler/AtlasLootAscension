@@ -441,7 +441,7 @@ end
 local function IgnoreTables(dataSource)
 	local cTable = {"CraftingCLASSIC", "CraftingTBC", "CraftingWRATH", "CollectionsAscensionCLASSIC", "CollectionsAscensionTBC", "CollectionsAscensionWRATH"}
 	for _, t in pairs(cTable) do
-		for _, crafting in  ipairs(AtlasLoot_SubMenus[t]) do
+		for _, crafting in  ipairs(AtlasLoot.ui.menus.collection[t]) do
 			if crafting[3] then
 				for _, ignore in pairs(crafting[3]) do
 					if dataSource == ignore[2] then return true end

@@ -1,8 +1,9 @@
 --Invoke all libraries
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
 --Dungeon and Raid Menus
-AtlasLoot_SubMenus["Dungeons and RaidsCLASSIC"] = {
+AtlasLoot.ui.menus.collection["Dungeons and RaidsCLASSIC"] = {
     Module = "AtlasLootOriginalWoW",
     SubMenu = "Dungeons and RaidsCLASSIC",
     { "Raids:", "OldKeys", "Header" },
@@ -46,7 +47,7 @@ AtlasLoot_SubMenus["Dungeons and RaidsCLASSIC"] = {
     { "", "FrozenReach", "", "Frozen Reach" },
 }
 
-AtlasLoot_SubMenus["Dungeons and RaidsTBC"] = {
+AtlasLoot.ui.menus.collection["Dungeons and RaidsTBC"] = {
     Module = "AtlasLootBurningCrusade",
     SubMenu = "Dungeons and RaidsTBC",
     { "Raids:", "BCKeys", "Header" },
@@ -85,7 +86,7 @@ AtlasLoot_SubMenus["Dungeons and RaidsTBC"] = {
     { "", "FrozenReachTBC", "", "Frozen Reach" },
 }
 
-AtlasLoot_SubMenus["Dungeons and RaidsWRATH"] = {
+AtlasLoot.ui.menus.collection["Dungeons and RaidsWRATH"] = {
     Module = "AtlasLootWotLK",
     SubMenu = "Dungeons and RaidsWRATH",
     { "Raids:", "WrathKeys", "Header" },

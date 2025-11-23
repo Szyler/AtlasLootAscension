@@ -36,7 +36,7 @@ end
 
 -- Show the Instance you are in
 function AtlasLoot:ShowInstance()
-    for _, v in pairs(AtlasLoot_SubMenus) do
+    for _, v in pairs(AtlasLoot.ui.menus.collection) do
         for _, t in ipairs(v) do
             if t[4] == BabbleZone[GetRealZoneText()] or (t[5] and t[5] == BabbleZone[GetRealZoneText()]) then
                 self.currentTable = v.SubMenu
@@ -72,14 +72,14 @@ function AtlasLoot:DewDropClick(tablename, text, tablenum)
     tablename = tablename .. self.Expac
     self.currentTable = tablename
     tablenum = tablenum or 1
-    self.lastModule = AtlasLoot_SubMenus[tablename].Module
+    self.lastModule = AtlasLoot.ui.menus.collection[tablename].Module
     self.ui.moduelMenuButton:SetText(text)
-    self:IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module)
+    self:IsLootTableAvailable(AtlasLoot.ui.menus.collection[tablename].Module)
         local lasttable = self.db.profile.savedState[self.currentTable]
         if lasttable then
             self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
         else
-            self:ShowItemsFrame(AtlasLoot_SubMenus[tablename][tablenum][2], "AtlasLoot_Data", tablenum)
+            self:ShowItemsFrame(AtlasLoot.ui.menus.collection[tablename][tablenum][2], "AtlasLoot_Data", tablenum)
         end
 end
 
@@ -114,8 +114,8 @@ function AtlasLoot:DewdropExpansionMenuClick(expansion, name)
     self.Expac = expansion
     if self.currentTable then
         self.currentTable = self:CleandataID(self.currentTable, 1) .. self.Expac
-        self:IsLootTableAvailable(AtlasLoot_SubMenus[self.currentTable].Module)
-        local tablename = AtlasLoot_SubMenus[self.currentTable][1][2]
+        self:IsLootTableAvailable(AtlasLoot.ui.menus.collection[self.currentTable].Module)
+        local tablename = AtlasLoot.ui.menus.collection[self.currentTable][1][2]
         local lasttable = self.db.profile.savedState[self.currentTable]
         if lasttable then
             self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
@@ -132,7 +132,7 @@ Adds expansion menu from expansion table in mainmenus.lua
 ]]
 function AtlasLoot:DewdropExpansionMenuOpen(btn)
     local menuList = {{{text = AL["Expansions"], isTitle = true}}}
-        for _,v in ipairs(AtlasLoot_ExpansionMenu) do
+        for _,v in ipairs(AtlasLoot.ui.menus.expansion) do
             if type(v) == "table" then
                 table.insert(menuList[1], {text = v[1], func = function() self:DewdropExpansionMenuClick(v[2], v[1]) end})
             end
@@ -173,7 +173,7 @@ Constructs the main category menu from a tiered table
 ]]
 function AtlasLoot:DewdropModuleMenuOpen()
     local menuList = {dividerLength = 40,{{text = AL["Modules"], isTitle = true}}}
-        for _, menu in ipairs(AtlasLoot_Modules) do
+        for _, menu in ipairs(AtlasLoot.ui.menus.modules) do
            table.insert(menuList[1], {text = menu[1], func = function() self:DewDropClick(menu[2], menu[1], menu[3]) end})
         end
     self:OpenDewdropMenu(self.ui.moduelMenuButton, menuList)

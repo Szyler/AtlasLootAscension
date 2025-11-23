@@ -1,6 +1,8 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
+local collection = AtlasLoot.ui.menus.collection
 
-AtlasLoot_SubMenus.WorldEventsCLASSIC = {
+collection.WorldEventsCLASSIC = {
 	Module = "AtlasLootWorldEvents",
 	{ "Seasonal", "BrewfestCLASSIC", "Header"},
 	{ "", "BrewfestCLASSIC"},
@@ -23,7 +25,7 @@ AtlasLoot_SubMenus.WorldEventsCLASSIC = {
 	{ "", "FishingExtravaganza"},
 }
 
-	AtlasLoot_SubMenus.WorldEventsTBC = {
+	collection.WorldEventsTBC = {
 		Module = "AtlasLootWorldEvents",
 		{ "Seasonal", "BrewfestTBC", "Header"},
 		{ "", "BrewfestTBC"},
@@ -48,7 +50,7 @@ AtlasLoot_SubMenus.WorldEventsCLASSIC = {
 		{ "", "EthereumPrison"},
 	}
 
-	AtlasLoot_SubMenus.WorldEventsWRATH = {
+	collection.WorldEventsWRATH = {
 		Module = "AtlasLootWorldEvents",
 		{ "Seasonal", "BrewfestWRATH", "Header"},
 		{ "", "BrewfestWRATH"},

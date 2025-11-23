@@ -521,8 +521,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local function filterCheck(find)
 		local mtype = { "Reputations", "WorldEvents", "PVP", "Collections", "Vanity"}
 		for _, t in pairs (mtype) do
-			if AtlasLoot_SubMenus[t..self.Expac] then
-				for _, v in ipairs (AtlasLoot_SubMenus[t..self.Expac]) do
+			if AtlasLoot.ui.menus.collection[t..self.Expac] then
+				for _, v in ipairs (AtlasLoot.ui.menus.collection[t..self.Expac]) do
 					if v[3] and type(v[3]) == "table" then
 						for _, sub in ipairs(v[3]) do
 							if find == sub[2] then

@@ -178,7 +178,7 @@ function AtlasLoot:LearnAllUnknownVanitySpells()
 			end
 		end
 	end
-	for _, group in pairs(AtlasLoot_SubMenus["CollectionsAscensionCLASSIC"]) do
+	for _, group in pairs(AtlasLoot.ui.menus.collection["CollectionsAscensionCLASSIC"]) do
 		if group[3] then
 			for _, subGroup in pairs(group[3]) do
 				parseCollection(subGroup[2])

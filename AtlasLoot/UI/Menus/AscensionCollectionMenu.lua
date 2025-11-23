@@ -1,6 +1,7 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-		AtlasLoot_SubMenus.CollectionsAscensionCLASSIC = {
+		AtlasLoot.ui.menus.collection.CollectionsAscensionCLASSIC = {
 			{ "", "VanityConvenience" },
 			{ "", "VanityStonesOfRetreat" },
 			{ "", "VanityHeirlooms" },
@@ -69,8 +70,8 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 			} },
 		}
 
-		AtlasLoot_SubMenus.CollectionsAscensionTBC = AtlasLoot_SubMenus.CollectionsAscensionCLASSIC
-		AtlasLoot_SubMenus.CollectionsAscensionWRATH = AtlasLoot_SubMenus.CollectionsAscensionCLASSIC
+		AtlasLoot.ui.menus.collection.CollectionsAscensionTBC = AtlasLoot.ui.menus.collection.CollectionsAscensionCLASSIC
+		AtlasLoot.ui.menus.collection.CollectionsAscensionWRATH = AtlasLoot.ui.menus.collection.CollectionsAscensionCLASSIC
 
 
 
