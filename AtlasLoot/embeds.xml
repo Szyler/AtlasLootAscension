@@ -16,6 +16,5 @@
 <Script file="AtlasLoot.lua"/>
 <Include file="Databases\Databases.xml"/>
 <Include file="Core\Core.xml"/>
-<Include file="Menus\Menus.xml"/>
 <Include file="DefaultFrame\Frames.xml"/>
 </Ui>
