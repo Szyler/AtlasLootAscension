@@ -1,7 +1,8 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
+local collection = AtlasLoot.ui.menus.collection
 
-	AtlasLoot.ui.menus.collection.CraftingCLASSIC = {
+	collection.CraftingCLASSIC = {
 		Module = "AtlasLootCraftingOriginalWoW",
 		{ "", "AlchemyCLASSIC"},
 		{ "", "SmithingCLASSIC"},
@@ -14,7 +15,7 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 		{ "", "FirstAidCLASSIC"},
 	};
 
-	AtlasLoot.ui.menus.collection.CraftingTBC = {
+	collection.CraftingTBC = {
 		Module = "AtlasLootCraftingBurningCrusade",
 		{ "", "AlchemyTBC"},
 		{ "", "SmithingTBC"},
@@ -28,7 +29,7 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 		{ "", "FirstAidTBC"},
 	};
 
-	AtlasLoot.ui.menus.collection.CraftingWRATH = {
+	collection.CraftingWRATH = {
 		Module = "AtlasLootCraftingWotLK",
 		{ "", "AlchemyWRATH"},
 		{ "", "SmithingWRATH"},
