@@ -278,7 +278,7 @@ function AtlasLoot:InitializeUI()
     self.ui.submenuButton.Lable:SetPoint("TOP",self.ui.submenuButton,"BOTTOM",0,42)
     self.ui.submenuButton.Lable:SetText("Select Category")
     self.ui.submenuButton.Lable:Show()
-    self.ui.submenuButton:SetScript("OnClick", function() self:DewdropSubMenuOpen(AtlasLoot.ui.menus.collection[self.currentTable]) end)
+    self.ui.submenuButton:SetScript("OnClick", function() self:DewdropSubMenuOpen(self.ui.menus.collection[self.currentTable]) end)
 
     --Moduel Menu Button
     self.ui.moduelMenuButton = CreateFrame("Button", nil, self.ui, "AtlasLootDropMenuTemplate")
