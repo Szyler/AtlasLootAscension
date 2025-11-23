@@ -18,4 +18,4 @@
 
 MapData.lua
 originalwow.lua
-localization.lua
+

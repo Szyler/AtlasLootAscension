@@ -16,4 +16,4 @@
 ## LoadOnDemand: 1
 
 craftingWRATH.lua
-localization.lua
+

@@ -16,4 +16,4 @@
 ## LoadOnDemand: 1
 
 craftingTBC.lua
-localization.lua
+

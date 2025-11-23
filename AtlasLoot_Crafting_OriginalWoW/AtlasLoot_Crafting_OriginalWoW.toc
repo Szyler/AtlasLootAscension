@@ -16,4 +16,4 @@
 ## LoadOnDemand: 1
 
 craftingCLASSIC.lua
-localization.lua
+

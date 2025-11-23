@@ -16,4 +16,4 @@
 ## LoadOnDemand: 1
 
 vanity.lua
-localization.lua
+

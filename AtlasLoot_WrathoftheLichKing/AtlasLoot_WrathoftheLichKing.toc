@@ -16,4 +16,4 @@
 
 MapData.lua
 wrathofthelichking.lua
-localization.lua
+
