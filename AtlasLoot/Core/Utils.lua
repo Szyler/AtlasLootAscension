@@ -198,7 +198,7 @@ AtlasLoot:PopoupItemFrame(item, data)
 Used to create a popup item frame for items like gem sacks to show what they contain
 ]] 
 function AtlasLoot:PopoupItemFrame(frame, data)
-	if not data then self.mainUI.itemPopupframe:Hide() return end
+	if not data then self.ui.itemPopupframe:Hide() return end
 	--hide the unused buttons
 	for i = 1, 15 do
 		local button = _G["AtlasLoot_PopupButton_"..i]
@@ -209,7 +209,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 	--creates a button only if one dosnt already exist re use old one if it does
 	local function createButton(num)
 		if _G["AtlasLoot_PopupButton_"..num] then return end
-		local button = CreateFrame("Button", "AtlasLoot_PopupButton_"..num, self.mainUI.itemPopupframe, "ItemButtonTemplate")
+		local button = CreateFrame("Button", "AtlasLoot_PopupButton_"..num, self.ui.itemPopupframe, "ItemButtonTemplate")
 		button:SetID(num)
 		button:SetSize(30,30)
 		button:EnableMouse()
@@ -217,7 +217,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 		button:SetScript("OnClick", function(btn, arg1) self:ItemOnClick(btn, arg1) end)
 		button:SetScript("OnEnter", function(btn)
 			self:ItemOnEnter(btn)
-			self.mainUI.itemPopupframe:Show()
+			self.ui.itemPopupframe:Show()
 		end)
 		button:SetScript("OnLeave", function(btn)
 			if not self.Dewdrop:IsOpen(_G["AtlasLoot_PopupButton_"..num]) then
@@ -226,7 +226,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 		end)
 
 		if num == 1 then
-			button:SetPoint("TOPLEFT", self.mainUI.itemPopupframe, 9, -8)
+			button:SetPoint("TOPLEFT", self.ui.itemPopupframe, 9, -8)
 		elseif num == 7 then
 			button:SetPoint("BOTTOM", "AtlasLoot_PopupButton_1", 0, -33)
 		elseif num == 13 then
@@ -271,21 +271,21 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 		numberBtns = i
 	end
 	if numberBtns < 6 then
-		self.mainUI.itemPopupframe:SetWidth((numberBtns*33)+16)
+		self.ui.itemPopupframe:SetWidth((numberBtns*33)+16)
 	else
-		self.mainUI.itemPopupframe:SetWidth(214)
+		self.ui.itemPopupframe:SetWidth(214)
 	end
 	if numberBtns > 6 then
-		self.mainUI.itemPopupframe:SetHeight(79)
+		self.ui.itemPopupframe:SetHeight(79)
 	elseif numberBtns > 12 then
-		self.mainUI.itemPopupframe:SetHeight(107)
+		self.ui.itemPopupframe:SetHeight(107)
 	else
-		self.mainUI.itemPopupframe:SetHeight(46)
+		self.ui.itemPopupframe:SetHeight(46)
 	end
-	self.mainUI.itemPopupframe:SetParent(frame)
-	self.mainUI.itemPopupframe:ClearAllPoints()
-	self.mainUI.itemPopupframe:SetPoint("TOPLEFT",frame,0,-25)
-	self.mainUI.itemPopupframe:Show()
+	self.ui.itemPopupframe:SetParent(frame)
+	self.ui.itemPopupframe:ClearAllPoints()
+	self.ui.itemPopupframe:SetPoint("TOPLEFT",frame,0,-25)
+	self.ui.itemPopupframe:Show()
 end
 
 

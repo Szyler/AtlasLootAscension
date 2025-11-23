@@ -145,7 +145,7 @@ function AtlasLoot:AdvancedSearchShow()
     self:ToggleNavigationButtonsVisibility()
 
     -- Hide the Filter Check-Box
-    self.mainUI.filterButton:Hide()
+    self.ui.filterButton:Hide()
 
     self.itemframe:Hide()
 

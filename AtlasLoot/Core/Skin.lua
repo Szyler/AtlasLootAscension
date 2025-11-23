@@ -4,11 +4,11 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 function AtlasLoot:InitializeSkins()
     self.CloseDefaults = {}
     local DF = self.CloseDefaults
-    DF[1], DF[2], DF[3], DF[4], DF[5] = self.mainUI.CloseButton:GetPoint()
+    DF[1], DF[2], DF[3], DF[4], DF[5] = self.ui.CloseButton:GetPoint()
 
     self.TitleDefaults = {}
     local TDF = self.TitleDefaults
-    TDF[1], TDF[2], TDF[3], TDF[4], TDF[5] = self.mainUI.TitleText:GetPoint()
+    TDF[1], TDF[2], TDF[3], TDF[4], TDF[5] = self.ui.TitleText:GetPoint()
 
     self.skinKeys = {
         {"Modern", AL["Modern"]},
@@ -110,56 +110,56 @@ function AtlasLoot:InitializeSkins()
             end
 
             local DF = self.CloseDefaults
-            self.mainUI.CloseButton:SetPoint(DF[1], DF[2], DF[3], DF[4]+skin.closebtn[1], DF[5]+skin.closebtn[2])
+            self.ui.CloseButton:SetPoint(DF[1], DF[2], DF[3], DF[4]+skin.closebtn[1], DF[5]+skin.closebtn[2])
 
             local TDF = self.TitleDefaults
-            self.mainUI.TitleText:SetPoint(TDF[1], TDF[2], TDF[3], TDF[4]+skin.title[1], TDF[5]+skin.title[2])
+            self.ui.TitleText:SetPoint(TDF[1], TDF[2], TDF[3], TDF[4]+skin.title[1], TDF[5]+skin.title[2])
 
             if type(skin.btTex) == "table" then
                 local color = skin.btTex
-                self.mainUI.searchbox.Left:SetTexture(color[1],color[2],color[3],color[4])
-                self.mainUI.searchbox.Right:SetTexture(color[1],color[2],color[3],color[4])
-                self.mainUI.searchbox.Middle:SetTexture(color[1],color[2],color[3],color[4])
+                self.ui.searchbox.Left:SetTexture(color[1],color[2],color[3],color[4])
+                self.ui.searchbox.Right:SetTexture(color[1],color[2],color[3],color[4])
+                self.ui.searchbox.Middle:SetTexture(color[1],color[2],color[3],color[4])
             else
-                self.mainUI.searchbox.Left:SetTexture("")
-                self.mainUI.searchbox.Right:SetTexture("")
-                self.mainUI.searchbox.Middle:SetTexture("")
-                self.mainUI.searchbox.Left:SetAtlas("common-search-border-left")
-                self.mainUI.searchbox.Right:SetAtlas("common-search-border-right")
-                self.mainUI.searchbox.Middle:SetAtlas("common-search-border-middle")
+                self.ui.searchbox.Left:SetTexture("")
+                self.ui.searchbox.Right:SetTexture("")
+                self.ui.searchbox.Middle:SetTexture("")
+                self.ui.searchbox.Left:SetAtlas("common-search-border-left")
+                self.ui.searchbox.Right:SetAtlas("common-search-border-right")
+                self.ui.searchbox.Middle:SetAtlas("common-search-border-middle")
             end
 
-            self.mainUI.searchbox.Left:SetHeight(skin.searchH)
-            self.mainUI.searchbox.Right:SetHeight(skin.searchH)
-            self.mainUI.searchbox.Middle:SetHeight(skin.searchH)
-            self.mainUI.searchButton:ClearAllPoints()
-            self.mainUI.searchButton:SetPoint("LEFT",self.mainUI.searchbox,"RIGHT",skin.searchP[1],skin.searchP[2])
+            self.ui.searchbox.Left:SetHeight(skin.searchH)
+            self.ui.searchbox.Right:SetHeight(skin.searchH)
+            self.ui.searchbox.Middle:SetHeight(skin.searchH)
+            self.ui.searchButton:ClearAllPoints()
+            self.ui.searchButton:SetPoint("LEFT",self.ui.searchbox,"RIGHT",skin.searchP[1],skin.searchP[2])
 
             local frame = {"RightEdge","LeftEdge","BottomEdge","TopEdge","BottomRightCorner","BottomLeftCorner","TopRightCorner","TopLeftCorner"}
             if skin.showFrame then
                 for _, frame in ipairs(frame) do
-                    self.mainUI.NineSlice[frame]:Show()
+                    self.ui.NineSlice[frame]:Show()
                 end
-                self.mainUI.portrait:Show()
-                self.mainUI.Bg:Show()
-                self.mainUI.TitleBg:Show()
-                self.mainUI.TopTileStreaks:Show()
-                self.mainUI:SetBackdrop(nil)
+                self.ui.portrait:Show()
+                self.ui.Bg:Show()
+                self.ui.TitleBg:Show()
+                self.ui.TopTileStreaks:Show()
+                self.ui:SetBackdrop(nil)
             else
                 for _, frame in ipairs(frame) do
-                    self.mainUI.NineSlice[frame]:Hide()
+                    self.ui.NineSlice[frame]:Hide()
                 end
-                self.mainUI.portrait:Hide()
-                self.mainUI.Bg:Hide()
-                self.mainUI.TitleBg:Hide()
-                self.mainUI.TopTileStreaks:Hide()
-                self.mainUI:SetBackdrop({
+                self.ui.portrait:Hide()
+                self.ui.Bg:Hide()
+                self.ui.TitleBg:Hide()
+                self.ui.TopTileStreaks:Hide()
+                self.ui:SetBackdrop({
                     bgFile = skin.DefaultFrame.bg, tile = skin.DefaultFrame.tile, tileSize = 16,
                     edgeFile = skin.DefaultFrame.edge, edgeSize = skin.edgeSize,
                     insets = { left = skin.insets[1], right = skin.insets[2], top = skin.insets[3], bottom = skin.insets[4] },
                 })
-                self.mainUI:SetBackdropColor(skin.DefaultFrame.bgColor[1], skin.DefaultFrame.bgColor[2], skin.DefaultFrame.bgColor[3], skin.DefaultFrame.bgColor[4])
-                self.mainUI:SetBackdropBorderColor(skin.DefaultFrame.edgeColor[1], skin.DefaultFrame.edgeColor[2], skin.DefaultFrame.edgeColor[3], skin.DefaultFrame.edgeColor[4])
+                self.ui:SetBackdropColor(skin.DefaultFrame.bgColor[1], skin.DefaultFrame.bgColor[2], skin.DefaultFrame.bgColor[3], skin.DefaultFrame.bgColor[4])
+                self.ui:SetBackdropBorderColor(skin.DefaultFrame.edgeColor[1], skin.DefaultFrame.edgeColor[2], skin.DefaultFrame.edgeColor[3], skin.DefaultFrame.edgeColor[4])
             end
 
             local function ReTextureButtons(button)

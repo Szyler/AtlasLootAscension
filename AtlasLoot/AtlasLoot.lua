@@ -105,10 +105,10 @@ function AtlasLoot:OnEnable()
 end
 
 function AtlasLoot:Reset(data)
-    self.mainUI:Hide()
+    self.ui:Hide()
     if data == "frames" then
-		self.mainUI:ClearAllPoints()
-		self.mainUI:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
+		self.ui:ClearAllPoints()
+		self.ui:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
         self.selectedProfile.LootBrowserScale = 1.0
         self:UpdateLootBrowserScale()
     elseif data == "quicklooks" then
@@ -118,8 +118,8 @@ function AtlasLoot:Reset(data)
 		self:WishlistSetup()
         AtlasLootCharDB["SearchResult"] = {}
     elseif data == "all" then
-		self.mainUI:ClearAllPoints()
-		self.mainUI:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
+		self.ui:ClearAllPoints()
+		self.ui:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
         self.selectedProfile.LootBrowserScale = 1.0
         self:UpdateLootBrowserScale()
         AtlasLootCharDB.QuickLooks = {}
@@ -169,7 +169,7 @@ function AtlasLoot:SlashCommand(msg)
 		self.selectedProfile.isAdmin = not self.selectedProfile.isAdmin
 		DEFAULT_CHAT_FRAME:AddMessage(self.selectedProfile.isAdmin and AL["AtlasLoot Admin mode is now enabled"] or AL["AtlasLoot Admin is mode now disabled"])
 	else
-		self.mainUI:Show()
+		self.ui:Show()
 	end
 end
 

@@ -27,7 +27,7 @@ function AtlasLoot:OnShow()
         self.lastModule = lastboss[4]
         self.moduleName = lastboss[6]
         self:IsLootTableAvailable(lastboss[4])
-        self.mainUI.moduelMenuButton:SetText(self.moduleName)
+        self.ui.moduelMenuButton:SetText(self.moduleName)
         self:ShowItemsFrame(lastboss[1], "AtlasLoot_Data", lastboss[3])
     else
         self:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1)
@@ -68,12 +68,12 @@ function AtlasLoot:DewDropClick(tablename, text, tablenum)
     self.filterEnable = false
     self.backEnabled = false
     self.moduleName = text
-    self.mainUI.filterButton:SetChecked(false)
+    self.ui.filterButton:SetChecked(false)
     tablename = tablename .. self.Expac
     self.currentTable = tablename
     tablenum = tablenum or 1
     self.lastModule = AtlasLoot_SubMenus[tablename].Module
-    self.mainUI.moduelMenuButton:SetText(text)
+    self.ui.moduelMenuButton:SetText(text)
     self:IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module)
         local lasttable = self.db.profile.savedState[self.currentTable]
         if lasttable then
@@ -164,7 +164,7 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                 end
             end
         end
-    self:OpenDewdropMenu(self.mainUI.submenuButton, menuList)
+    self:OpenDewdropMenu(self.ui.submenuButton, menuList)
 end
 
 --[[
@@ -176,19 +176,19 @@ function AtlasLoot:DewdropModuleMenuOpen()
         for _, menu in ipairs(AtlasLoot_Modules) do
            table.insert(menuList[1], {text = menu[1], func = function() self:DewDropClick(menu[2], menu[1], menu[3]) end})
         end
-    self:OpenDewdropMenu(self.mainUI.moduelMenuButton, menuList)
+    self:OpenDewdropMenu(self.ui.moduelMenuButton, menuList)
 end
 
 function AtlasLoot:UpdateLootBrowserScale()
-	self.mainUI:SetScale(self.selectedProfile.LootBrowserScale)
+	self.ui:SetScale(self.selectedProfile.LootBrowserScale)
 end
 
 function AtlasLoot:FavoritesOnLeave()
         GameTooltip:Hide()
         if not GetMouseFocus() then return end
         local focus = GetMouseFocus():GetName()
-        if focus ~= "AtlasLoot_FavoritesPopupFrame" and focus ~= self.mainUI.favoritesButton and focus ~= "AtlasLootDefaultFrame_Preset1" and focus ~= "AtlasLootDefaultFrame_Preset2" and focus ~= "AtlasLootDefaultFrame_Preset3" and focus ~= "AtlasLootDefaultFrame_Preset4"  then
-            self.mainUI.favoritesPopupFrame:Hide()
+        if focus ~= "AtlasLoot_FavoritesPopupFrame" and focus ~= self.ui.favoritesButton and focus ~= "AtlasLootDefaultFrame_Preset1" and focus ~= "AtlasLootDefaultFrame_Preset2" and focus ~= "AtlasLootDefaultFrame_Preset3" and focus ~= "AtlasLootDefaultFrame_Preset4"  then
+            self.ui.favoritesPopupFrame:Hide()
         end
     end
 

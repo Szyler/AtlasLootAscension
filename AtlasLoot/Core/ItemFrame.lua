@@ -6,9 +6,9 @@ local itemHighlightGreen = "Interface\\AddOns\\AtlasLoot\\Images\\knownGreen"
 function AtlasLoot:InitializeItemFrame()
 
 	----------------------------------- Item Loot Panel -------------------------------------------
-	self.itemframe = CreateFrame("Frame", nil, self.mainUI.lootBackground)
+	self.itemframe = CreateFrame("Frame", nil, self.ui.lootBackground)
 	self.itemframe:SetSize(765,510)
-	self.itemframe:SetPoint("TOPLEFT", self.mainUI.lootBackground, "TOPLEFT", 2, -2)
+	self.itemframe:SetPoint("TOPLEFT", self.ui.lootBackground, "TOPLEFT", 2, -2)
 	self.itemframe.Label = self.itemframe:CreateFontString(nil,"OVERLAY","GameFontHighlightLarge")
 	self.itemframe.Label:SetPoint("TOP", self.itemframe, "TOP")
 	self.itemframe.Label:SetSize(512,30)
@@ -101,11 +101,11 @@ function AtlasLoot:InitializeItemFrame()
 	end)
 	self.itemframe.scrollBar:HookScript("OnMouseWheel", function(frame,delta)
 		if self.itemframe.scrollBar.totalItems > 30 then return end
-        if self.mainUI.nextbutton:IsVisible() and delta == -1 then
-            self.mainUI.nextbutton:Click()
+        if self.ui.nextbutton:IsVisible() and delta == -1 then
+            self.ui.nextbutton:Click()
         end
-        if self.mainUI.prevbutton:IsVisible() and delta == 1 then
-            self.mainUI.prevbutton:Click()
+        if self.ui.prevbutton:IsVisible() and delta == 1 then
+            self.ui.prevbutton:Click()
         end
     end)
 
@@ -408,12 +408,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	self.searchPanel:Hide()
 
 	--Hide Map and reshow lootbackground
-	self.mainUI.mapFrame:Hide()
-    self.mainUI.lootBackground:Show()
+	self.ui.mapFrame:Hide()
+    self.ui.lootBackground:Show()
 	self.itemframe:Show()
 
 	-- Hide the Filter Check-Box
-	self.mainUI.filterButton:Hide()
+	self.ui.filterButton:Hide()
 
 	-- Hide the map header lable
 	Atlasloot_HeaderLabel:Hide()
@@ -421,7 +421,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	if not dataSource[dataID] then return end
 	-- Enable map button if there is a map for this table.
 	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID] and dataSource[dataID].Map then
-		self.mainUI.mapButton:Enable()
+		self.ui.mapButton:Enable()
 		-- Stops map reseting to default while still in the same raid/instance table
 		if self.itemframe.refresh == nil or dataID ~= self.itemframe.refresh[1] then
 			self.MapNum = 1
@@ -429,8 +429,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			self:SetMapButtonText(self.CurrentMap)
 		end
 	else
-		self.mainUI.mapButton:Disable()
-		self.mainUI.mapButton:SetText("No Map")
+		self.ui.mapButton:Disable()
+		self.ui.mapButton:SetText("No Map")
 	end
 
 	if dataSource_backup ~= "AtlasLoot_CurrentWishList" then
@@ -481,7 +481,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	--For stopping the subtable from changing if its a token table
 	if dataSource[dataID].NoSubt == nil then
 		local text = dataSource[dataID].DisplayName or dataSource[dataID].Name 
-		self.mainUI.submenuButton:SetText(text)
+		self.ui.submenuButton:SetText(text)
 		self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
 	end
 
@@ -507,7 +507,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	if dataID == "SearchResult" then
 		self.itemframe.refreshSearch = {dataID, dataSource_backup, tablenum}
-	elseif not self.mainUI.backbutton:IsVisible() then
+	elseif not self.ui.backbutton:IsVisible() then
 		self.itemframe.refreshSearch = nil
 	end
 
@@ -539,19 +539,19 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	-- Show the Filter Check-Box
 	if filterCheck(dataID) ~= true or dataSource[dataID].vanity or dataSource[dataID].filter then
-		self.mainUI.filterButton:Show()
+		self.ui.filterButton:Show()
 	end
 
 	--Hide navigation buttons by default, only show what we need
 	self:ToggleNavigationButtonsVisibility()
-	self.mainUI.nextbutton:SetParent(self.itemframe)
-	self.mainUI.prevbutton:SetParent(self.itemframe)
-	self.mainUI.nextbutton:ClearAllPoints()
-	self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.itemframe, "BOTTOMRIGHT",-30,5)
-	self.mainUI.prevbutton:ClearAllPoints()
-	self.mainUI.prevbutton:SetPoint("BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",5,5)
+	self.ui.nextbutton:SetParent(self.itemframe)
+	self.ui.prevbutton:SetParent(self.itemframe)
+	self.ui.nextbutton:ClearAllPoints()
+	self.ui.nextbutton:SetPoint("BOTTOMRIGHT", self.itemframe, "BOTTOMRIGHT",-30,5)
+	self.ui.prevbutton:ClearAllPoints()
+	self.ui.prevbutton:SetPoint("BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",5,5)
 	self:ToogleWishListButtons()
-	self.mainUI.learnSpellbtn:Hide()
+	self.ui.learnSpellbtn:Hide()
 
 	-- Show Wishlist buttons when a wishlist in showing
 	if dataSource_backup == "AtlasLoot_CurrentWishList" then
@@ -559,25 +559,25 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	if dataSource[dataID].vanity then
-		self.mainUI.learnSpellbtn:Show()
+		self.ui.learnSpellbtn:Show()
 	end
 
 	local tablebase = {dataID, dataSource_backup}
 
 	if self.itemframe.refresh and self.itemframe.refreshOri and tablenum ~= #_G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]] and dataSource_backup ~= "AtlasLoot_TokenData" and dataID ~= "SearchResult" or tablenum ~= #_G[self.itemframe.refresh[2]][self.itemframe.refresh[1]] and dataID == "SearchResult" then
-		self.mainUI.nextbutton:Show()
-		self.mainUI.nextbutton.tablenum = tablenum + 1
-		self.mainUI.nextbutton.tablebase = tablebase
+		self.ui.nextbutton:Show()
+		self.ui.nextbutton.tablenum = tablenum + 1
+		self.ui.nextbutton.tablebase = tablebase
 	end
 
 	if tablenum ~= 1 and dataSource_backup ~= "AtlasLoot_TokenData" then
-		self.mainUI.prevbutton:Show()
-		self.mainUI.prevbutton.tablenum = tablenum - 1
-		self.mainUI.prevbutton.tablebase = tablebase
+		self.ui.prevbutton:Show()
+		self.ui.prevbutton.tablenum = tablenum - 1
+		self.ui.prevbutton.tablebase = tablebase
 	end
 
 	if dataSource[dataID].Back or self.backEnabled then
-		self.mainUI.backbutton:Show()
+		self.ui.backbutton:Show()
 	else
 		self.itemframe.refreshBack = {dataID, dataSource_backup, tablenum}
 	end
@@ -610,7 +610,7 @@ AtlasLoot:NavButton_OnClick:
 Called when <-, -> are pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot:NavButton_OnClick(btn)
-	if self.mainUI.mapFrame:IsVisible() then
+	if self.ui.mapFrame:IsVisible() then
 		self:MapSelect(btn.mapID, btn.mapNum)
 	else
 		local tablenum, dataID, dataSource = btn.tablenum, btn.tablebase[1], btn.tablebase[2]

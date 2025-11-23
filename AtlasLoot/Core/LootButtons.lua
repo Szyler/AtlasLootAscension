@@ -148,7 +148,7 @@ function AtlasLoot:ItemOnLeave(frame)
        ShoppingTooltip2:Hide()
        ShoppingTooltip1:Hide()
     end
-    if self.mainUI.itemPopupframe and self.mainUI.itemPopupframe:IsVisible() then self.mainUI.itemPopupframe:Hide() end
+    if self.ui.itemPopupframe and self.ui.itemPopupframe:IsVisible() then self.ui.itemPopupframe:Hide() end
 end
 
 --------------------------------------------------------------------------------
@@ -206,10 +206,10 @@ function AtlasLoot:ItemOnClick(item, button)
             self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
         elseif button == "LeftButton" and itemID and AtlasLoot_ExtraData[itemID] then
             self:PopoupItemFrame(item, _G["AtlasLoot_ExtraData"][itemID] )
-            self.mainUI.itemPopupframe:Show()
+            self.ui.itemPopupframe:Show()
         elseif button == "LeftButton" and item.contentsPreview then
             self:PopoupItemFrame(item, item.contentsPreview )
-            self.mainUI.itemPopupframe:Show()
+            self.ui.itemPopupframe:Show()
         end
     else
         local recipeData = self:GetRecipeData(spellID, "spell")
@@ -243,7 +243,7 @@ function AtlasLoot:ItemOnClick(item, button)
             self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
         elseif button == "LeftButton" and recipeData then
             self:PopoupItemFrame(item, recipeData)
-            self.mainUI.itemPopupframe:Show()
+            self.ui.itemPopupframe:Show()
         end
     end
 end
@@ -297,7 +297,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
     local notWishlist = notWishlist and nil
     local wList = AtlasLootWishList.Options[playerName].DefaultWishList
     local isCollectionItem = itemID and C_VanityCollection.IsCollectionItemOwned(itemID)
-    if not self.mainUI.itemPopupframe or self.mainUI.itemPopupframe and not self.mainUI.itemPopupframe:IsVisible()  then
+    if not self.ui.itemPopupframe or self.ui.itemPopupframe and not self.ui.itemPopupframe:IsVisible()  then
         wishList = {
             {
                     {text = AL["Wishlists"], isTitle = true, divider = true},

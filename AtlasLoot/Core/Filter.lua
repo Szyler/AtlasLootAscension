@@ -133,7 +133,7 @@ end
 function AtlasLoot:FilterEnableButton(frame, btnclick)
 	if btnclick == "RightButton" then
 		self:FilterMenuOpen(frame)
-		self.mainUI.filterButton:SetChecked(not self.mainUI.filterButton:GetChecked())
+		self.ui.filterButton:SetChecked(not self.ui.filterButton:GetChecked())
 	else
 		if self.filterEnable then
 			self.filterEnable = false

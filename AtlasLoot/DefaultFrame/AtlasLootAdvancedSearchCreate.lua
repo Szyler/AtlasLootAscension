@@ -5,8 +5,8 @@ local MAX_ARGUMENTS = 6
 
 function AtlasLoot:CreateAdvancedSearchFrame()
     --Create Main Search Panel
-    self.searchPanel = CreateFrame("FRAME", "AtlasLootDefaultFrame_AdvancedSearchPanel", self.mainUI.lootBackground, nil)
-    self.searchPanel:SetPoint("TOPLEFT", self.mainUI.lootBackground, "TOPLEFT", 2, -2)
+    self.searchPanel = CreateFrame("FRAME", "AtlasLootDefaultFrame_AdvancedSearchPanel", self.ui.lootBackground, nil)
+    self.searchPanel:SetPoint("TOPLEFT", self.ui.lootBackground, "TOPLEFT", 2, -2)
     self.searchPanel:SetSize(510, 510)
     self.searchPanel.closebtn = CreateFrame("Button", "AtlasLootDefaultFrame_AdvancedSearchPanel_CloseButton", self.searchPanel, "UIPanelCloseButton")
     self.searchPanel.closebtn:SetPoint("TOPRIGHT", self.searchPanel, "TOPRIGHT", -10, -10)
