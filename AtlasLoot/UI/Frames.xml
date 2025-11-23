@@ -105,7 +105,7 @@
 		</Scripts>
     </Frame>
 
-    <Include file="Menus\Menus.xml"/>
+    <Script file="Menus.lua"/>
     <Script file="UI.lua"/>
     <Script file="UI_Functions.lua"/>
     <Script file="Search_UI.lua"/>

@@ -519,7 +519,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	-- Checks dataID with submenus to stop filter button loading on certain tables
 	local function filterCheck(find)
-		local mtype = { "Reputations", "WorldEvents", "PVP", "Collections", "Vanity"}
+		local mtype = { "Factions", "WorldEvents", "PVP", "Collections", "Vanity"}
 		for _, t in pairs (mtype) do
 			if AtlasLoot.ui.menus.collection[t..self.Expac] then
 				for _, v in ipairs (AtlasLoot.ui.menus.collection[t..self.Expac]) do

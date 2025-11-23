@@ -36,7 +36,7 @@ end
 
 -- Show the Instance you are in
 function AtlasLoot:ShowInstance()
-    for _, v in pairs(AtlasLoot.ui.menus.collection) do
+    for _, v in pairs(self.ui.menus.collection) do
         for _, t in ipairs(v) do
             if t[4] == BabbleZone[GetRealZoneText()] or (t[5] and t[5] == BabbleZone[GetRealZoneText()]) then
                 self.currentTable = v.SubMenu

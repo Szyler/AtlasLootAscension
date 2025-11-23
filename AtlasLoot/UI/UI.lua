@@ -10,6 +10,8 @@ local backDrop = {
 function AtlasLoot:InitializeUI()
     --Main AtlasLoot Frame
     self.ui = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent, "PortraitFrameTemplate")
+    self:InitializeMenus()
+    
     self.ui:SetPoint("CENTER",0,0)
     self.ui:SetSize(1105,640)
     self.ui:EnableMouse(true)
@@ -241,7 +243,7 @@ function AtlasLoot:InitializeUI()
     self.ui.expansionMenuButton = CreateFrame("Button", "AtlasLootDefaultFrame_ExpansionMenu", self.ui, "AtlasLootDropMenuTemplate");
     self.ui.expansionMenuButton:SetSize(185,25);
     self.ui.expansionMenuButton:SetPoint("LEFT", "AtlasLootDefaultFrame_SubMenu", "RIGHT",5,0);
-    self.ui.expansionMenuButton:SetText(AtlasLoot.ui.menus.expansion[GetAccountExpansionLevel()+1][1]);
+    self.ui.expansionMenuButton:SetText(self.ui.menus.expansion[GetAccountExpansionLevel()+1][1]);
     self.ui.expansionMenuButton.Lable:SetText("Select Expansion")
     self.ui.expansionMenuButton.Lable:Show()
     self.ui.expansionMenuButton:SetScript("OnClick", function(button) self:DewdropExpansionMenuOpen(button) end)
@@ -769,7 +771,6 @@ self.ui.lootTableScrollFrame.rows = rows2
     self.ui.itemPopupframe:Hide()
 
     self:FrameOpaqueToogle()
-    self.ui.menus = {}
 end
 
 function AtlasLoot:FrameOpaqueToogle()
