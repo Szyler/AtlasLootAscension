@@ -38,7 +38,8 @@ end
 function AtlasLoot:ShowInstance()
     for _, v in pairs(AtlasLoot_SubMenus) do
         for _, t in ipairs(v) do
-            if t[4] == BabbleZone[GetRealZoneText()] or (t[5] and t[5] == BabbleZone[GetRealZoneText()]) then
+            local zone = BabbleZone[GetRealZoneText()] or "noZone"
+            if t[4] == zone or (t[5] and t[5] == zone) then
                 self.currentTable = v.SubMenu
                 self.lastModule = v.Module
                 self:IsLootTableAvailable(self.lastModule)
