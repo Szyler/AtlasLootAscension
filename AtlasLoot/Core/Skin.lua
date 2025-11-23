@@ -132,8 +132,6 @@ function AtlasLoot:InitializeSkins()
             self.searchPanel.searchbox.Left:SetHeight(skin.searchH)
             self.searchPanel.searchbox.Right:SetHeight(skin.searchH)
             self.searchPanel.searchbox.Middle:SetHeight(skin.searchH)
-            self.ui.searchButton:ClearAllPoints()
-            self.ui.searchButton:SetPoint("LEFT",self.searchPanel.searchbox,"RIGHT",skin.searchP[1],skin.searchP[2])
 
             local frame = {"RightEdge","LeftEdge","BottomEdge","TopEdge","BottomRightCorner","BottomLeftCorner","TopRightCorner","TopLeftCorner"}
             if skin.showFrame then
