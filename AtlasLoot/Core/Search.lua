@@ -270,8 +270,8 @@ SLASH_ATLASLOOTSEARCH2 = "/als"
 SlashCmdList["ATLASLOOTSEARCH"] = function(search, editBox)
     self.ui:Show()
     if search and search ~= '' then
-        AtlasLootDefaultFrameSearchBox:SetText(search)
-        AtlasLootDefaultFrameSearchButton:Click()
+        AtlasLootSearchBox:SetText(search)
+        AtlasLootSearchButton:Click()
     end
 end
 

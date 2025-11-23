@@ -472,8 +472,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	-- Moves the difficulty scrollslider if the difficulty has changed
 	if dataSource[dataID].Type and difType and #self.Difficulties[dataSource[dataID].Type] > 5 and typeNumber > 5 then
-		local min, max = AtlasLootDefaultFrameScrollScrollBar:GetMinMaxValues()
-		AtlasLootDefaultFrameScrollScrollBar:SetValue(typeNumber * (max / #self.Difficulties[dataSource[dataID].Type]))
+		local min, max = AtlasLootScrollScrollBar:GetMinMaxValues()
+		AtlasLootScrollScrollBar:SetValue(typeNumber * (max / #self.Difficulties[dataSource[dataID].Type]))
 	end
 
 	--For stopping the subtable from changing if its a token table
@@ -613,8 +613,8 @@ function AtlasLoot:NavButton_OnClick(btn)
 	else
 		local tablenum, dataID, dataSource = btn.tablenum, btn.tablebase[1], btn.tablebase[2]
 		if #_G[dataSource][dataID] > 26 then
-			local min, max = AtlasLootDefaultFrameSubTableScrollScrollBar:GetMinMaxValues()
-			AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(tablenum * (max / #_G[dataSource][dataID]))
+			local min, max = AtlasLootSubTableScrollScrollBar:GetMinMaxValues()
+			AtlasLootSubTableScrollScrollBar:SetValue(tablenum * (max / #_G[dataSource][dataID]))
 		end
 		self:ShowItemsFrame(dataID, dataSource, tablenum)
 	end

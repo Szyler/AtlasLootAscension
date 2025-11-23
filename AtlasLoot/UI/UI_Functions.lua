@@ -109,7 +109,7 @@ Called when a button in DewdropExpansionMenuClick is clicked
 ]]
 function AtlasLoot:DewdropExpansionMenuClick(expansion, name)
     self.backEnabled = false
-    AtlasLootDefaultFrame_ExpansionMenu:SetText(name)
+    AtlasLoot_ExpansionMenu:SetText(name)
     self.Expac = expansion
     if self.currentTable then
         self.currentTable = self:CleandataID(self.currentTable, 1) .. self.Expac
@@ -186,7 +186,7 @@ function AtlasLoot:FavoritesOnLeave()
         GameTooltip:Hide()
         if not GetMouseFocus() then return end
         local focus = GetMouseFocus():GetName()
-        if focus ~= "AtlasLoot_FavoritesPopupFrame" and focus ~= self.ui.favoritesButton and focus ~= "AtlasLootDefaultFrame_Preset1" and focus ~= "AtlasLootDefaultFrame_Preset2" and focus ~= "AtlasLootDefaultFrame_Preset3" and focus ~= "AtlasLootDefaultFrame_Preset4"  then
+        if focus ~= "AtlasLoot_FavoritesPopupFrame" and focus ~= self.ui.favoritesButton and focus ~= "AtlasLoot_Preset1" and focus ~= "AtlasLoot_Preset2" and focus ~= "AtlasLoot_Preset3" and focus ~= "AtlasLoot_Preset4"  then
             self.ui.favoritesPopupFrame:Hide()
         end
     end

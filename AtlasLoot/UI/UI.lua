@@ -10,7 +10,7 @@ local backDrop = {
 function AtlasLoot:InitializeUI()
 
     --Main AtlasLoot Frame
-    self.ui = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent, "PortraitFrameTemplate")
+    self.ui = CreateFrame("FRAME", "AtlasLoot", UIParent, "PortraitFrameTemplate")
     self:InitializeMenus()
 
     self.ui:SetPoint("CENTER",0,0)
@@ -40,7 +40,7 @@ function AtlasLoot:InitializeUI()
     self:UpdateLootBrowserScale()
 
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
-	table.insert(UISpecialFrames, "AtlasLootDefaultFrame")
+	table.insert(UISpecialFrames, "AtlasLoot")
 
     self.ui.tabList = {
         {
@@ -271,7 +271,7 @@ function AtlasLoot:InitializeUI()
 
 ------------------------------------ Main menu buttons ---------------------------------------
     --SubMenu Button
-    self.ui.submenuButton = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", self.ui, "AtlasLootDropMenuTemplate")
+    self.ui.submenuButton = CreateFrame("Button", "AtlasLoot_SubMenu", self.ui, "AtlasLootDropMenuTemplate")
     self.ui.submenuButton:SetSize(275,25)
     self.ui.submenuButton:SetPoint("TOP", self.ui.tabs.Loot,"TOP",56,30)
     self.ui.submenuButton.Lable = self.ui.submenuButton:CreateFontString(nil, "OVERLAY","GameFontNormal")
@@ -306,9 +306,9 @@ function AtlasLoot:InitializeUI()
     self.ui.optionsCogButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
     --Expansion Menu Button
-    self.ui.expansionMenuButton = CreateFrame("Button", "AtlasLootDefaultFrame_ExpansionMenu", self.ui, "AtlasLootDropMenuTemplate");
+    self.ui.expansionMenuButton = CreateFrame("Button", "AtlasLoot_ExpansionMenu", self.ui, "AtlasLootDropMenuTemplate");
     self.ui.expansionMenuButton:SetSize(185,25);
-    self.ui.expansionMenuButton:SetPoint("LEFT", "AtlasLootDefaultFrame_SubMenu", "RIGHT",5,0);
+    self.ui.expansionMenuButton:SetPoint("LEFT", "AtlasLoot_SubMenu", "RIGHT",5,0);
     self.ui.expansionMenuButton:SetText(self.ui.menus.expansion[GetAccountExpansionLevel()+1][1]);
     self.ui.expansionMenuButton.Lable:SetText("Select Expansion")
     self.ui.expansionMenuButton.Lable:Show()
@@ -332,7 +332,7 @@ function AtlasLoot:InitializeUI()
     end)
 
     -- Load Current Instance Button
-    self.ui.currentInstanceButton = CreateFrame("Button","AtlasLootDefaultFrame_LoadInstanceButton", self.ui,"AtlasLootDropMenuTemplate")
+    self.ui.currentInstanceButton = CreateFrame("Button","AtlasLoot_LoadInstanceButton", self.ui,"AtlasLootDropMenuTemplate")
     self.ui.currentInstanceButton:SetSize(107,25)
     self.ui.currentInstanceButton.Icon:Hide()
     self.ui.currentInstanceButton.Text:SetJustifyH("CENTER")
@@ -352,7 +352,7 @@ function AtlasLoot:InitializeUI()
     self.ui.favoritesPopupFrame:EnableMouse()
     self.ui.favoritesPopupFrame:SetScript("OnLeave", function()
         local focus = GetMouseFocus():GetName()
-        if focus ~= "AtlasLootDefaultFrame_Preset1" and focus ~= "AtlasLootDefaultFrame_Preset2" and focus ~= "AtlasLootDefaultFrame_Preset3" and focus ~= "AtlasLootDefaultFrame_Preset4" then
+        if focus ~= "AtlasLoot_Preset1" and focus ~= "AtlasLoot_Preset2" and focus ~= "AtlasLoot_Preset3" and focus ~= "AtlasLoot_Preset4" then
             self.ui.favoritesPopupFrame:Hide()
         end
     end)
@@ -362,7 +362,7 @@ function AtlasLoot:InitializeUI()
 
     --Favorites Buttons
     for i=1, 4 do
-        local preset = CreateFrame("Button", "AtlasLootDefaultFrame_Preset"..i, self.ui.favoritesPopupFrame, "AtlasLootFavoritesButtonTemplate")
+        local preset = CreateFrame("Button", "AtlasLoot_Preset"..i, self.ui.favoritesPopupFrame, "AtlasLootFavoritesButtonTemplate")
         local tex = AtlasUtil:GetAtlasInfo("services-number-"..i)
             preset.tex:SetTexture(tex.filename)
             preset.tex:SetTexCoord(tex.leftTexCoord, tex.rightTexCoord, tex.topTexCoord, tex.bottomTexCoord)
@@ -443,7 +443,7 @@ function self:ScrollFrameUpdate(hide,wishlist)
     end
 end
 
-    self.ui.difficultyScrollFrame.scrollSlider = CreateFrame("ScrollFrame","AtlasLootDefaultFrameScroll", self.ui.difficultyScrollFrame, "FauxScrollFrameTemplate")
+    self.ui.difficultyScrollFrame.scrollSlider = CreateFrame("ScrollFrame","AtlasLootScroll", self.ui.difficultyScrollFrame, "FauxScrollFrameTemplate")
     self.ui.difficultyScrollFrame.scrollSlider:SetPoint("TOPLEFT", 0, -8)
     self.ui.difficultyScrollFrame.scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8)
     self.ui.difficultyScrollFrame.scrollSlider:SetScript("OnVerticalScroll", function(scroll, offset)
@@ -564,7 +564,7 @@ end)
         end
     end
 
-    self.ui.tabs.Loot.TableScrollFrame.scrollSlider = CreateFrame("ScrollFrame","AtlasLootDefaultFrameSubTableScroll",Atlasloot_SubTableFrame,"FauxScrollFrameTemplate")
+    self.ui.tabs.Loot.TableScrollFrame.scrollSlider = CreateFrame("ScrollFrame","AtlasLootSubTableScroll",Atlasloot_SubTableFrame,"FauxScrollFrameTemplate")
     self.ui.tabs.Loot.TableScrollFrame.scrollSlider:SetPoint("TOPLEFT", 0, -8)
     self.ui.tabs.Loot.TableScrollFrame.scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8)
     self.ui.tabs.Loot.TableScrollFrame.scrollSlider:SetScript("OnVerticalScroll", function(slider, offset)
