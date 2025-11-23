@@ -136,11 +136,6 @@ function AtlasLoot:AdvancedSearchSetup()
 end
 
 function AtlasLoot:AdvancedSearchShow()
-    if self.searchPanel:IsVisible() then
-        self:AdvancedSearchClose()
-        return
-    end
-
     -- Hide all elements that could be in the AtlasTable
     self:ToggleNavigationButtonsVisibility()
 

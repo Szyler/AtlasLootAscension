@@ -6,9 +6,9 @@ local itemHighlightGreen = "Interface\\AddOns\\AtlasLoot\\Images\\knownGreen"
 function AtlasLoot:InitializeItemFrame()
 
 	----------------------------------- Item Loot Panel -------------------------------------------
-	self.itemframe = CreateFrame("Frame", nil, self.ui.lootBackground)
+	self.itemframe = CreateFrame("Frame", nil, self.ui.tabs.Loot)
 	self.itemframe:SetSize(765,510)
-	self.itemframe:SetPoint("TOPLEFT", self.ui.lootBackground, "TOPLEFT", 2, -2)
+	self.itemframe:SetPoint("TOPLEFT", self.ui.tabs.Loot, "TOPLEFT", 2, -2)
 	self.itemframe.Label = self.itemframe:CreateFontString(nil,"OVERLAY","GameFontHighlightLarge")
 	self.itemframe.Label:SetPoint("TOP", self.itemframe, "TOP")
 	self.itemframe.Label:SetSize(512,30)
@@ -408,29 +408,27 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	self.searchPanel:Hide()
 
 	--Hide Map and reshow lootbackground
-	self.ui.mapFrame:Hide()
-    self.ui.lootBackground:Show()
+	self.ui.tabs.Map:Hide()
+    self.ui.tabs.Loot:Show()
 	self.itemframe:Show()
 
 	-- Hide the Filter Check-Box
 	self.ui.filterButton:Hide()
 
 	-- Hide the map header lable
-	Atlasloot_HeaderLabel:Hide()
+	self.ui.difficultyScrollFrame.Lable:Hide()
 	local dataSource = _G[dataSource_backup] or AtlasLoot_Data
 	if not dataSource[dataID] then return end
 	-- Enable map button if there is a map for this table.
 	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID] and dataSource[dataID].Map then
-		self.ui.mapButton:Enable()
+		self.ui.tabs.Map.tabButton:Enable()
 		-- Stops map reseting to default while still in the same raid/instance table
 		if self.itemframe.refresh == nil or dataID ~= self.itemframe.refresh[1] then
 			self.MapNum = 1
 			self.CurrentMap = dataSource[dataID].Map
-			self:SetMapButtonText(self.CurrentMap)
 		end
 	else
-		self.ui.mapButton:Disable()
-		self.ui.mapButton:SetText("No Map")
+		self.ui.tabs.Map.tabButton:Disable()
 	end
 
 	if dataSource_backup ~= "AtlasLoot_CurrentWishList" then
@@ -610,7 +608,7 @@ AtlasLoot:NavButton_OnClick:
 Called when <-, -> are pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot:NavButton_OnClick(btn)
-	if self.ui.mapFrame:IsVisible() then
+	if self.ui.tabs.Map:IsVisible() then
 		self:MapSelect(btn.mapID, btn.mapNum)
 	else
 		local tablenum, dataID, dataSource = btn.tablenum, btn.tablebase[1], btn.tablebase[2]

@@ -8,10 +8,11 @@ local backDrop = {
     }
 
 function AtlasLoot:InitializeUI()
+
     --Main AtlasLoot Frame
     self.ui = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent, "PortraitFrameTemplate")
     self:InitializeMenus()
-    
+
     self.ui:SetPoint("CENTER",0,0)
     self.ui:SetSize(1105,640)
     self.ui:EnableMouse(true)
@@ -28,7 +29,7 @@ function AtlasLoot:InitializeUI()
     end)
     self.ui:SetScript("OnMouseDown", function()
         self.Dewdrop:Close()
-        self.ui.searchbox:ClearFocus()
+        self.searchPanel.searchbox:ClearFocus()
     end)
     self.ui:SetScript("OnHide", function()
         self.Dewdrop:Close()
@@ -41,23 +42,88 @@ function AtlasLoot:InitializeUI()
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
 	table.insert(UISpecialFrames, "AtlasLootDefaultFrame")
 
+    self.ui.tabList = {
+        {
+            name = "Loot",
+            atlas = "vignettelootelite",
+            onClick = function(...) self:OnShow(...) end,
+        },
+        {
+            name = "Wishlist",
+            atlas = "poi-workorders",
+            onClick = function(button, btnclick)self:WishListButton(button,true,btnclick) end
+        },
+        {
+            name = "Search",
+            atlas = "communities-icon-searchmagnifyingglass",
+            onClick = function(...) self:AdvancedSearchShow(...) end,
+        },
+        {
+            name = "Map",
+            atlas = "poi-islands-table",
+            onClick = function(...) self:MapButtonClick(...) end,
+    },
+    }
+    self.ui.tabs = {}
+
+    local lastTab
+    local function addTab(tab)
+        local newTab = CreateFrame("Frame", "AtlasLoot_"..tab.name, self.ui)
+        newTab:SetPoint("CENTER")
+        newTab:SetSize(self.ui:GetWidth()-10,self.ui:GetHeight()-10)
+        newTab:Hide()
+        newTab.tabButton = CreateFrame("CheckButton", "AtlasLoot_"..tab.name.."Button", self.ui, "AtlasLootTabTemplate")
+        local point = not lastTab and {"BOTTOMLEFT", 5, -30} or {"LEFT", lastTab.tabButton, "RIGHT", 10, 0}
+        newTab.tabButton:SetPoint(unpack(point))
+        newTab.tabButton:RegisterForClicks("AnyDown")
+        newTab.tabButton:SetWidth(125)
+        newTab.tabButton.Text:SetText(tab.name)
+        newTab.name = tab.name
+
+        if tab.icon then
+            newTab.tabButton.Icon:SetIcon(tab.icon)
+        elseif tab.atlas then
+            newTab.tabButton.Icon:Hide()
+            newTab.tabButton.IconAtlas = newTab.tabButton:CreateTexture(nil, "ARTWORK")
+            newTab.tabButton.IconAtlas:SetPoint("LEFT", 10, 2)
+            newTab.tabButton.IconAtlas:SetSize(20,20)
+            newTab.tabButton.IconAtlas:SetAtlas(tab.atlas)
+        end
+
+        newTab:SetScript("OnShow", function()
+            self:SetUITab(tab.name)
+            
+        end)
+
+        newTab.tabButton:SetScript("OnClick", function(button, buttonClick)
+            self:SetUITab(tab.name)
+            if tab.onClick then tab.onClick(button, buttonClick) end
+        end)
+
+        self.ui.tabs[tab.name] = newTab
+        lastTab = newTab
+    end
+
+    for _, tab in ipairs(self.ui.tabList) do
+        addTab(tab)
+    end
+    self:SetUITab(self.ui.tabList[1].name)
+
     --Loot Background
-    self.ui.lootBackground = CreateFrame("Frame", "AtlasLoot_LootBackground", self.ui, "AtlasLootFrameTemplate")
-    self.ui.lootBackground:SetSize(770,515)
-    self.ui.lootBackground:SetPoint("TOPLEFT", self.ui, "TOPLEFT",30,-86)
-    self.ui.lootBackground:EnableMouse()
-    self.ui.lootBackground:EnableMouseWheel()
-    self.ui.lootBackground:SetScript("OnMouseDown",function(button, buttonClick)
+    self.ui.tabs.Loot:SetSize(770,515)
+    self.ui.tabs.Loot:SetPoint("TOPLEFT", self.ui, "TOPLEFT",30,-86)
+    self.ui.tabs.Loot:EnableMouse()
+    self.ui.tabs.Loot:EnableMouseWheel()
+    self.ui.tabs.Loot:SetScript("OnMouseDown",function(button, buttonClick)
         if self.ui.backbutton:IsVisible() and buttonClick == "RightButton" then
             self:BackButton_OnClick()
         elseif self.searchPanel:IsVisible() and buttonClick == "RightButton" then
             self:AdvancedSearchClose()
         end
         self.Dewdrop:Close()
-        self.ui.searchbox:ClearFocus()
     end)
-    self.ui.lootBackground:SetBackdrop(backDrop)
-    self.ui.lootBackground:SetScript("OnMouseWheel", function(frame,delta)
+    self.ui.tabs.Loot:SetBackdrop(backDrop)
+    self.ui.tabs.Loot:SetScript("OnMouseWheel", function(frame,delta)
         if self.ui.nextbutton:IsVisible() and delta == -1 then
             self.ui.nextbutton:Click()
         end
@@ -65,10 +131,10 @@ function AtlasLoot:InitializeUI()
             self.ui.prevbutton:Click()
         end
     end)
-    self.ui.lootBackground.Back = self.ui.lootBackground:CreateTexture("AtlasLootItemsFrame_LootBack", "BACKGROUND")
-    self.ui.lootBackground.Back:SetAllPoints()
-    self.ui.lootBackground.Back:SetSize(730,475)
-    self.ui.lootBackground.Back:SetPoint("CENTER",self.ui.lootBackground)
+    self.ui.tabs.Loot.Back = self.ui.tabs.Loot:CreateTexture("AtlasLootItemsFrame_LootBack", "BACKGROUND")
+    self.ui.tabs.Loot.Back:SetAllPoints()
+    self.ui.tabs.Loot.Back:SetSize(730,475)
+    self.ui.tabs.Loot.Back:SetPoint("CENTER",self.ui.tabs.Loot)
 
     ----------------------------------- Item Loot Panel -------------------------------------------
     ---
@@ -207,7 +273,7 @@ function AtlasLoot:InitializeUI()
     --SubMenu Button
     self.ui.submenuButton = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", self.ui, "AtlasLootDropMenuTemplate")
     self.ui.submenuButton:SetSize(275,25)
-    self.ui.submenuButton:SetPoint("TOP", self.ui.lootBackground,"TOP",56,30)
+    self.ui.submenuButton:SetPoint("TOP", self.ui.tabs.Loot,"TOP",56,30)
     self.ui.submenuButton.Lable = self.ui.submenuButton:CreateFontString(nil, "OVERLAY","GameFontNormal")
     self.ui.submenuButton.Lable:SetPoint("TOP",self.ui.submenuButton,"BOTTOM",0,42)
     self.ui.submenuButton.Lable:SetText("Select Category")
@@ -249,87 +315,12 @@ function AtlasLoot:InitializeUI()
     self.ui.expansionMenuButton:SetScript("OnClick", function(button) self:DewdropExpansionMenuOpen(button) end)
 
 ---------------------------------------- Buttons Under the loot and subtable frames -------------------------------------------
-    --Search Edit Box
-    self.ui.searchbox = CreateFrame("EditBox", "AtlasLootDefaultFrameSearchBox", self.ui, "SearchBoxTemplate")
-    self.ui.searchbox:SetSize(190,25)
-    self.ui.searchbox:SetPoint("BOTTOMLEFT", self.ui, "BOTTOMLEFT", 35, 10.5)
-    self.ui.searchbox:SetScript("OnEnterPressed", function(frame)
-        self:Search(frame:GetText())
-        frame:ClearFocus()
-    end)
-    self.ui.searchbox:SetScript("OnTextChanged", function(frame)
-		if frame:HasFocus() then
-			SearchBoxTemplate_OnTextChanged(frame)
-		end
-    end)
-
-   --Search Button
-    self.ui.searchButton = CreateFrame("Button","AtlasLootDefaultFrameSearchButton",self.ui,"AtlasLootDropMenuTemplate")
-    self.ui.searchButton:SetSize(69,25)
-    self.ui.searchButton:SetPoint("LEFT",self.ui.searchbox,"RIGHT",2,-1)
-    self.ui.searchButton:SetText(AL["Search"])
-    self.ui.searchButton:RegisterForClicks("AnyDown")
-    self.ui.searchButton:SetScript("OnClick", function(button, buttonClick)
-        if buttonClick == "LeftButton" then
-           self:Search(self.ui.searchbox:GetText())
-           self.ui.searchbox:ClearFocus()
-        else
-           self:ShowSearchOptions(button)
-        end
-    end)
-    self.ui.searchButton:SetScript("OnEnter", function(button)
-        self:SetGameTooltip(button,"Left click to search\nRight click to select what modules to search in")
-    end)
-    self.ui.searchButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
-
-   --Last Result Button
-    self.ui.lastResultButton = CreateFrame("Button","AtlasLootDefaultFrameLastResultButton",self.ui.searchbox,"AtlasLootDropMenuTemplate")
-    self.ui.lastResultButton:SetSize(80,25)
-    self.ui.lastResultButton.Icon:Hide()
-    self.ui.lastResultButton.Text:SetJustifyH("CENTER")
-    self.ui.lastResultButton.Text:ClearAllPoints()
-    self.ui.lastResultButton.Text:SetPoint("CENTER")
-    self.ui.lastResultButton:SetPoint("LEFT", self.ui.searchButton, "RIGHT", 2, 0)
-    self.ui.lastResultButton:SetText(AL["Last Result"])
-    self.ui.lastResultButton:SetScript("OnClick", function() self:ShowSearchResult() end)
-    self.ui.lastResultButton:SetScript("OnEnter", function(button) self:SetGameTooltip(button, "Open Last Search Result") end)
-    self.ui.lastResultButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
-
-    -- Advanced Search Button
-    self.ui.advancedSearchButton = CreateFrame("Button","AtlasLootDefaultFrameAdvancedSearchButton", self.ui,"AtlasLootDropMenuTemplate")
-    self.ui.advancedSearchButton:SetSize(80,25)
-    self.ui.advancedSearchButton.Icon:Hide()
-    self.ui.advancedSearchButton.Text:SetJustifyH("CENTER")
-    self.ui.advancedSearchButton.Text:ClearAllPoints()
-    self.ui.advancedSearchButton.Text:SetPoint("CENTER")
-    self.ui.advancedSearchButton:SetPoint("LEFT",self.ui.lastResultButton,"RIGHT",2)
-    self.ui.advancedSearchButton:SetText("Advanced")
-    self.ui.advancedSearchButton:SetScript("OnClick", function()
-        self:AdvancedSearchShow()
-        self.ui.searchbox:ClearFocus()
-    end)
-    self.ui.advancedSearchButton:SetScript("OnEnter", function(button)
-        self:SetGameTooltip(button,"Advanced Search")
-    end)
-    self.ui.advancedSearchButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
-
-    --Wish List Button
-    self.ui.wishlistButton = CreateFrame("Button", "AtlasLootDefaultFrameWishListButton", self.ui, "AtlasLootDropMenuTemplate")
-    self.ui.wishlistButton:SetPoint("LEFT", "AtlasLootDefaultFrameAdvancedSearchButton", "RIGHT", 2, 0)
-    self.ui.wishlistButton:SetSize(80,25)
-    self.ui.wishlistButton:RegisterForClicks("LeftButtonDown","RightButtonDown")
-    self.ui.wishlistButton:SetScript("OnClick", function(button, btnclick)self:WishListButton(button,true,btnclick) end)
-    self.ui.wishlistButton:SetText(AL["Wishlist"])
-    self.ui.wishlistButton:SetScript("OnEnter", function(button)
-        self:SetGameTooltip(button,"Right Click For Menu")
-    end)
-    self.ui.wishlistButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
-
+    -- Favorites Button
     self.ui.favoritesButton = CreateFrame("Button", "AtlasLoot_Favorites", self.ui, "AtlasLootDropMenuTemplate")
-    self.ui.favoritesButton:SetPoint("LEFT", "AtlasLootDefaultFrameWishListButton", "RIGHT", 2, 0)
+    self.ui.favoritesButton:SetPoint("BOTTOMLEFT", self.ui, "BOTTOMLEFT", 35, 10.5)
     self.ui.favoritesButton:SetText("Favorites")
     self.ui.favoritesButton:SetSize(150,25)
-    self.ui.favoritesButton:SetScript("OnEnter", function(button)     
+    self.ui.favoritesButton:SetScript("OnEnter", function(button)
         self:SetGameTooltip(button,"Left click open a favorite\nAlt + Right click to set favorite")
         self.ui.favoritesPopupFrame:Show()
     end)
@@ -393,7 +384,7 @@ function AtlasLoot:InitializeUI()
     self.ui.difficultyScrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS + 16)
     self.ui.difficultyScrollFrame:SetPoint("TOPRIGHT",self.ui,-30,-55.5)
     self.ui.difficultyScrollFrame:SetBackdrop(backDrop)
-    self.ui.difficultyScrollFrame.Lable = self.ui.difficultyScrollFrame:CreateFontString("Atlasloot_HeaderLabel", "OVERLAY","GameFontNormal")
+    self.ui.difficultyScrollFrame.Lable = self.ui.difficultyScrollFrame:CreateFontString(nil, "OVERLAY","GameFontNormal")
     self.ui.difficultyScrollFrame.Lable:SetPoint("TOPLEFT",self.ui.difficultyScrollFrame,10,-10)
     self.ui.difficultyScrollFrame.Lable:SetJustifyH("LEFT")
     self.ui.difficultyScrollFrame.Lable:SetFont("GameFontNormal", 24)
@@ -505,17 +496,17 @@ self.ui.difficultyScrollFrame.rows = rows
 local MAX_ROWS2 = 26      -- How many rows can be shown at once?
 
 --------------------Subtable Frame--------------------
-    self.ui.lootTableScrollFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", self.ui, "AtlasLootFrameTemplate")
-    self.ui.lootTableScrollFrame:EnableMouse(true)
-    self.ui.lootTableScrollFrame:EnableMouseWheel(true)
-    self.ui.lootTableScrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS2 + 23)
-    self.ui.lootTableScrollFrame:SetPoint("BOTTOMLEFT","Atlasloot_Difficulty_ScrollFrame",0,-449.5)
-    self.ui.lootTableScrollFrame:SetBackdrop(backDrop)
-    self.ui.lootTableScrollFrame.Back = self.ui.lootTableScrollFrame:CreateTexture("Atlasloot_SubTableFrame_Back", "BACKGROUND")
-    self.ui.lootTableScrollFrame.Back:SetAllPoints()
-    self.ui.lootTableScrollFrame.Back:SetSize(255, ROW_HEIGHT * MAX_ROWS2 + 13)
-    self.ui.lootTableScrollFrame.Back:SetPoint("CENTER",self.ui.lootTableScrollFrame)
-    self.ui.lootTableScrollFrame:SetScript("OnMouseWheel", function(frame,delta)
+    self.ui.tabs.Loot.TableScrollFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", self.ui, "AtlasLootFrameTemplate")
+    self.ui.tabs.Loot.TableScrollFrame:EnableMouse(true)
+    self.ui.tabs.Loot.TableScrollFrame:EnableMouseWheel(true)
+    self.ui.tabs.Loot.TableScrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS2 + 23)
+    self.ui.tabs.Loot.TableScrollFrame:SetPoint("BOTTOMLEFT","Atlasloot_Difficulty_ScrollFrame",0,-449.5)
+    self.ui.tabs.Loot.TableScrollFrame:SetBackdrop(backDrop)
+    self.ui.tabs.Loot.TableScrollFrame.Back = self.ui.tabs.Loot.TableScrollFrame:CreateTexture("Atlasloot_SubTableFrame_Back", "BACKGROUND")
+    self.ui.tabs.Loot.TableScrollFrame.Back:SetAllPoints()
+    self.ui.tabs.Loot.TableScrollFrame.Back:SetSize(255, ROW_HEIGHT * MAX_ROWS2 + 13)
+    self.ui.tabs.Loot.TableScrollFrame.Back:SetPoint("CENTER",self.ui.tabs.Loot.TableScrollFrame)
+    self.ui.tabs.Loot.TableScrollFrame:SetScript("OnMouseWheel", function(frame,delta)
         if self.ui.nextbutton:IsVisible() and delta == -1 then
             self.ui.nextbutton:Click()
         end
@@ -527,17 +518,17 @@ end)
     function self:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
         local maxValue = #_G[dataSource][tablename]
         if dataSource == "AtlasLoot_MapData" then maxValue = #_G[dataSource][tablename][tablenum] end
-        self.ui.lootTableScrollFrame.tablename = tablename
-        self.ui.lootTableScrollFrame.dataSource = dataSource
-        self.ui.lootTableScrollFrame.tablenum = tablenum
-        FauxScrollFrame_Update(self.ui.lootTableScrollFrame.scrollSlider, maxValue, MAX_ROWS2, ROW_HEIGHT)
-        local offset = FauxScrollFrame_GetOffset(self.ui.lootTableScrollFrame.scrollSlider)
+        self.ui.tabs.Loot.TableScrollFrame.tablename = tablename
+        self.ui.tabs.Loot.TableScrollFrame.dataSource = dataSource
+        self.ui.tabs.Loot.TableScrollFrame.tablenum = tablenum
+        FauxScrollFrame_Update(self.ui.tabs.Loot.TableScrollFrame.scrollSlider, maxValue, MAX_ROWS2, ROW_HEIGHT)
+        local offset = FauxScrollFrame_GetOffset(self.ui.tabs.Loot.TableScrollFrame.scrollSlider)
         for i = 1, MAX_ROWS2 do
             local value = i + offset
-            self.ui.lootTableScrollFrame.rows[i]:SetChecked(false)
-            self.ui.lootTableScrollFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+            self.ui.tabs.Loot.TableScrollFrame.rows[i]:SetChecked(false)
+            self.ui.tabs.Loot.TableScrollFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
             if value <= maxValue and (_G[dataSource][tablename][value] or _G[dataSource][tablename][tablenum][value]) and tablename ~= "SearchMENU" then
-                local row = self.ui.lootTableScrollFrame.rows[i]
+                local row = self.ui.tabs.Loot.TableScrollFrame.rows[i]
                     row.dataSource = dataSource
                     row.tablename = tablename
                     row.tablenum = value
@@ -568,17 +559,17 @@ end)
                 end
                 row:Show()
             else
-                self.ui.lootTableScrollFrame.rows[i]:Hide()
+                self.ui.tabs.Loot.TableScrollFrame.rows[i]:Hide()
             end
         end
     end
 
-    self.ui.lootTableScrollFrame.scrollSlider = CreateFrame("ScrollFrame","AtlasLootDefaultFrameSubTableScroll",Atlasloot_SubTableFrame,"FauxScrollFrameTemplate")
-    self.ui.lootTableScrollFrame.scrollSlider:SetPoint("TOPLEFT", 0, -8)
-    self.ui.lootTableScrollFrame.scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8)
-    self.ui.lootTableScrollFrame.scrollSlider:SetScript("OnVerticalScroll", function(slider, offset)
+    self.ui.tabs.Loot.TableScrollFrame.scrollSlider = CreateFrame("ScrollFrame","AtlasLootDefaultFrameSubTableScroll",Atlasloot_SubTableFrame,"FauxScrollFrameTemplate")
+    self.ui.tabs.Loot.TableScrollFrame.scrollSlider:SetPoint("TOPLEFT", 0, -8)
+    self.ui.tabs.Loot.TableScrollFrame.scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8)
+    self.ui.tabs.Loot.TableScrollFrame.scrollSlider:SetScript("OnVerticalScroll", function(slider, offset)
         slider.offset = math.floor(offset / ROW_HEIGHT + 0.5)
-            self:SubTableScrollFrameUpdate(self.ui.lootTableScrollFrame.tablename, self.ui.lootTableScrollFrame.dataSource, self.ui.lootTableScrollFrame.tablenum)
+            self:SubTableScrollFrameUpdate(self.ui.tabs.Loot.TableScrollFrame.tablename, self.ui.tabs.Loot.TableScrollFrame.dataSource, self.ui.tabs.Loot.TableScrollFrame.tablenum)
     end)
 
 local rows2 = setmetatable({}, { __index = function(t, i)
@@ -604,41 +595,41 @@ local rows2 = setmetatable({}, { __index = function(t, i)
         end
     end)
     if i == 1 then
-        row:SetPoint("TOPLEFT", self.ui.lootTableScrollFrame, 8, -8)
+        row:SetPoint("TOPLEFT", self.ui.tabs.Loot.TableScrollFrame, 8, -8)
     else
-        row:SetPoint("TOPLEFT", self.ui.lootTableScrollFrame.rows[i-1], "BOTTOMLEFT")
+        row:SetPoint("TOPLEFT", self.ui.tabs.Loot.TableScrollFrame.rows[i-1], "BOTTOMLEFT")
     end
 
     rawset(t, i, row)
     return row
 end })
 
-self.ui.lootTableScrollFrame.rows = rows2
+self.ui.tabs.Loot.TableScrollFrame.rows = rows2
 
 --------------------------------- Map Frame and buttons -----------------------------------------------
 
     --AtlasLoot Maps
-    self.ui.mapFrame = CreateFrame("Frame", "AtlasLootDefaultFrame_Map", self.ui)
-    self.ui.mapFrame:SetSize(770,513)
-    self.ui.mapFrame:SetPoint("TOPLEFT", self.ui, "TOPLEFT",30,-86)
-    self.ui.mapFrame:SetFrameStrata("HIGH")
-    self.ui.mapFrame:Hide()
-    self.ui.mapFrame:EnableMouse()
-    self.ui.mapFrame:SetScript("OnMouseDown", function(button, buttonClick)
+    self.ui.tabs.Map:SetSize(770,513)
+    self.ui.tabs.Map:SetPoint("TOPLEFT", self.ui, "TOPLEFT",30,-86)
+    self.ui.tabs.Map:SetFrameStrata("HIGH")
+    self.ui.tabs.Map:Hide()
+    self.ui.tabs.Map:EnableMouse()
+    self.ui.tabs.Map:SetScript("OnMouseDown", function(button, buttonClick)
         if buttonClick == "RightButton" then
             self:MapOnShow()
         elseif buttonClick == "LeftButton" then
             --print(self:GetCursorCords())
         end
     end)
+    self.ui.tabs.Map:SetScript("OnShow", function() self:MapOnShow() end)
 
-    self.ui.mapFrame:EnableMouseWheel(true)
-    self.ui.mapFrame.cursorCords = self.ui.mapFrame:CreateFontString(nil,"ARTWORK","GameFontNormal")
-    self.ui.mapFrame.cursorCords:SetPoint("TOPRIGHT", self.ui.mapFrame, -10, 0)
-    self.ui.mapFrame.cursorCords:Show()
-    self.ui.mapFrame.cursorCords:SetSize(150, 25)
-    self.ui.mapFrame.cursorCords:SetJustifyH("RIGHT")
-    self.ui.mapFrame:SetScript("OnMouseWheel", function(button,delta)
+    self.ui.tabs.Map:EnableMouseWheel(true)
+    self.ui.tabs.Map.cursorCords = self.ui.tabs.Map:CreateFontString(nil,"ARTWORK","GameFontNormal")
+    self.ui.tabs.Map.cursorCords:SetPoint("TOPRIGHT", self.ui.tabs.Map, -10, 0)
+    self.ui.tabs.Map.cursorCords:Show()
+    self.ui.tabs.Map.cursorCords:SetSize(150, 25)
+    self.ui.tabs.Map.cursorCords:SetJustifyH("RIGHT")
+    self.ui.tabs.Map:SetScript("OnMouseWheel", function(button,delta)
         if self.ui.nextbutton:IsVisible() and delta == -1 then
             self.ui.nextbutton:Click()
         end
@@ -647,76 +638,53 @@ self.ui.lootTableScrollFrame.rows = rows2
         end
     end)
 
-    self.ui.mapFrame:SetScript("OnShow", function() self.ui.mapFrame.cursorCords:SetText(self.Colors.WHITE.."Cursor: ---") end)
-    self.ui.mapFrame:SetScript("OnEnter", function() self.showCords = true self:MapOnEnter() end)
-    self.ui.mapFrame:SetScript("OnUpdate", function() self:MapOnEnter() end)
-    self.ui.mapFrame:SetScript("OnLeave", function()
+    self.ui.tabs.Map:SetScript("OnShow", function() self.ui.tabs.Map.cursorCords:SetText(self.Colors.WHITE.."Cursor: ---") end)
+    self.ui.tabs.Map:SetScript("OnEnter", function() self.showCords = true self:MapOnEnter() end)
+    self.ui.tabs.Map:SetScript("OnUpdate", function() self:MapOnEnter() end)
+    self.ui.tabs.Map:SetScript("OnLeave", function()
         self.showCords = false
-        self.ui.mapFrame.cursorCords:SetText(self.Colors.WHITE.."Cursor: ---")
+        self.ui.tabs.Map.cursorCords:SetText(self.Colors.WHITE.."Cursor: ---")
     end)
 
     for i=1, 12 do
-        self.ui.mapFrame["tile"..i] = self.ui.mapFrame:CreateTexture("AtlasLoot_MapDetailTile"..i, "BACKGROUND")
-        self.ui.mapFrame["tile"..i]:SetSize(196,196)
-        self.ui.mapFrame["tile"..i]:Show()
+        self.ui.tabs.Map["tile"..i] = self.ui.tabs.Map:CreateTexture("AtlasLoot_MapDetailTile"..i, "BACKGROUND")
+        self.ui.tabs.Map["tile"..i]:SetSize(196,196)
+        self.ui.tabs.Map["tile"..i]:Show()
     end
 
-    self.ui.mapFrame.tile1:SetPoint("TOPLEFT", self.ui.mapFrame)
-    self.ui.mapFrame.tile2:SetPoint("TOPLEFT", self.ui.mapFrame.tile1,"TOPRIGHT")
-    self.ui.mapFrame.tile3:SetPoint("TOPLEFT", self.ui.mapFrame.tile2,"TOPRIGHT")
-    self.ui.mapFrame.tile4:SetPoint("TOPLEFT", self.ui.mapFrame.tile3,"TOPRIGHT")
-    self.ui.mapFrame.tile5:SetPoint("TOPLEFT", self.ui.mapFrame.tile1,"BOTTOMLEFT")
-    self.ui.mapFrame.tile6:SetPoint("TOPLEFT", self.ui.mapFrame.tile5,"TOPRIGHT")
-    self.ui.mapFrame.tile7:SetPoint("TOPLEFT", self.ui.mapFrame.tile6,"TOPRIGHT")
-    self.ui.mapFrame.tile8:SetPoint("TOPLEFT", self.ui.mapFrame.tile7,"TOPRIGHT")
-    self.ui.mapFrame.tile9:SetPoint("TOPLEFT", self.ui.mapFrame.tile5,"BOTTOMLEFT")
-    self.ui.mapFrame.tile10:SetPoint("TOPLEFT", self.ui.mapFrame.tile9,"TOPRIGHT")
-    self.ui.mapFrame.tile11:SetPoint("TOPLEFT", self.ui.mapFrame.tile10,"TOPRIGHT")
-    self.ui.mapFrame.tile12:SetPoint("TOPLEFT", self.ui.mapFrame.tile11,"TOPRIGHT")
+    self.ui.tabs.Map.tile1:SetPoint("TOPLEFT", self.ui.tabs.Map)
+    self.ui.tabs.Map.tile2:SetPoint("TOPLEFT", self.ui.tabs.Map.tile1,"TOPRIGHT")
+    self.ui.tabs.Map.tile3:SetPoint("TOPLEFT", self.ui.tabs.Map.tile2,"TOPRIGHT")
+    self.ui.tabs.Map.tile4:SetPoint("TOPLEFT", self.ui.tabs.Map.tile3,"TOPRIGHT")
+    self.ui.tabs.Map.tile5:SetPoint("TOPLEFT", self.ui.tabs.Map.tile1,"BOTTOMLEFT")
+    self.ui.tabs.Map.tile6:SetPoint("TOPLEFT", self.ui.tabs.Map.tile5,"TOPRIGHT")
+    self.ui.tabs.Map.tile7:SetPoint("TOPLEFT", self.ui.tabs.Map.tile6,"TOPRIGHT")
+    self.ui.tabs.Map.tile8:SetPoint("TOPLEFT", self.ui.tabs.Map.tile7,"TOPRIGHT")
+    self.ui.tabs.Map.tile9:SetPoint("TOPLEFT", self.ui.tabs.Map.tile5,"BOTTOMLEFT")
+    self.ui.tabs.Map.tile10:SetPoint("TOPLEFT", self.ui.tabs.Map.tile9,"TOPRIGHT")
+    self.ui.tabs.Map.tile11:SetPoint("TOPLEFT", self.ui.tabs.Map.tile10,"TOPRIGHT")
+    self.ui.tabs.Map.tile12:SetPoint("TOPLEFT", self.ui.tabs.Map.tile11,"TOPRIGHT")
 
-    self.ui.mapFrame.playerPin = CreateFrame("Button", "AtlasLoot_PlayerMapPin", self.ui.mapFrame)
-    self.ui.mapFrame.playerPin:SetSize(35,35)
-    self.ui.mapFrame.playerPin:SetFrameStrata("HIGH")
-    self.ui.mapFrame.playerPin.texture = self.ui.mapFrame.playerPin:CreateTexture(nil, "ARTWORK")
-    self.ui.mapFrame.playerPin.texture:SetTexture("Interface\\Minimap\\MinimapArrow")
-    self.ui.mapFrame.playerPin.texture:SetSize(35,35)
-    self.ui.mapFrame.playerPin.texture:SetPoint("CENTER",0,0)
-    self.ui.mapFrame.playerPin:SetScript("OnEnter", function(button)
+    self.ui.tabs.Map.playerPin = CreateFrame("Button", "AtlasLoot_PlayerMapPin", self.ui.tabs.Map)
+    self.ui.tabs.Map.playerPin:SetSize(35,35)
+    self.ui.tabs.Map.playerPin:SetFrameStrata("HIGH")
+    self.ui.tabs.Map.playerPin.texture = self.ui.tabs.Map.playerPin:CreateTexture(nil, "ARTWORK")
+    self.ui.tabs.Map.playerPin.texture:SetTexture("Interface\\Minimap\\MinimapArrow")
+    self.ui.tabs.Map.playerPin.texture:SetSize(35,35)
+    self.ui.tabs.Map.playerPin.texture:SetPoint("CENTER",0,0)
+    self.ui.tabs.Map.playerPin:SetScript("OnEnter", function(button)
         self:SetGameTooltip(button,"You are here")
     end)
-    self.ui.mapFrame.playerPin:SetScript("OnLeave", function()
+    self.ui.tabs.Map.playerPin:SetScript("OnLeave", function()
         GameTooltip:Hide()
     end)
-    self.ui.mapFrame.playerPin:Hide()
+    self.ui.tabs.Map.playerPin:Hide()
 
-    -- Map Button
-    self.ui.mapButton = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", self.ui, "AtlasLootDropMenuTemplate")
-    self.ui.mapButton:SetSize(265,25)
-    self.ui.mapButton:SetPoint("LEFT",AtlasLootDefaultFrame_LoadInstanceButton,"RIGHT",10.5,0)
-    self.ui.mapButton:SetText("No Map")
-    self.ui.mapButton:RegisterForClicks("AnyDown")
-    self.ui.mapButton:SetScript("OnClick", function(button, buttonClick)
-        if buttonClick == "LeftButton" then
-            self:MapOnShow(button.CurrentMap, button.MapNum or 1)
-        else
-            self:MapMenuOpen(button)
-        end
-    end)
-    self.ui.mapButton:SetScript("OnEnter", function(button)
-        self:SetGameTooltip(button,"Open Map")
-    end)
-    self.ui.mapButton:SetScript("OnLeave", function()
-        GameTooltip:Hide()
-    end)
-    self.ui.mapButton.mapButtonIcon = self.ui.mapButton:CreateTexture("ARTWORK")
-    self.ui.mapButton.mapButtonIcon:SetSize(19,19)
-    self.ui.mapButton.mapButtonIcon:SetAtlas("poi-islands-table")
-    self.ui.mapButton.mapButtonIcon:SetPoint("RIGHT",self.ui.mapButton, -20, -1)
-
+------------------------- Item Popup Frame and loading icon ------------------------------
     -- item data loading icon animation
-    self.ui.streamIcon = CreateFrame("Frame", "AtlasLoot_ItemsLoading", self.ui.lootBackground)
+    self.ui.streamIcon = CreateFrame("Frame", "AtlasLoot_ItemsLoading", self.ui.tabs.Loot)
     self.ui.streamIcon:ClearAllPoints()
-    self.ui.streamIcon:SetPoint("TOPRIGHT", self.ui.lootBackground, "TOPRIGHT", -25, 0)
+    self.ui.streamIcon:SetPoint("TOPRIGHT", self.ui.tabs.Loot, "TOPRIGHT", -25, 0)
     self.ui.streamIcon:SetSize(48, 48)
     self.ui.streamIcon.tooltip = "Searching..."
     self.ui.streamIcon:EnableMouse(true)
@@ -771,11 +739,4 @@ self.ui.lootTableScrollFrame.rows = rows2
     self.ui.itemPopupframe:Hide()
 
     self:FrameOpaqueToogle()
-end
-
-function AtlasLoot:FrameOpaqueToogle()
-    local texture = self.selectedProfile.Opaque and 1 or 0.05
-    self.ui.lootTableScrollFrame.Back:SetTexture(0, 0, 0, texture)
-    self.ui.difficultyScrollFrame.Back:SetTexture(0, 0, 0, texture)
-    self.ui.lootBackground.Back:SetTexture(0, 0, 0, texture)
 end

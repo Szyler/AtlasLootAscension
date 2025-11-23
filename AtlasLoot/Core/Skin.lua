@@ -117,23 +117,23 @@ function AtlasLoot:InitializeSkins()
 
             if type(skin.btTex) == "table" then
                 local color = skin.btTex
-                self.ui.searchbox.Left:SetTexture(color[1],color[2],color[3],color[4])
-                self.ui.searchbox.Right:SetTexture(color[1],color[2],color[3],color[4])
-                self.ui.searchbox.Middle:SetTexture(color[1],color[2],color[3],color[4])
+                self.searchPanel.searchbox.Left:SetTexture(color[1],color[2],color[3],color[4])
+                self.searchPanel.searchbox.Right:SetTexture(color[1],color[2],color[3],color[4])
+                self.searchPanel.searchbox.Middle:SetTexture(color[1],color[2],color[3],color[4])
             else
-                self.ui.searchbox.Left:SetTexture("")
-                self.ui.searchbox.Right:SetTexture("")
-                self.ui.searchbox.Middle:SetTexture("")
-                self.ui.searchbox.Left:SetAtlas("common-search-border-left")
-                self.ui.searchbox.Right:SetAtlas("common-search-border-right")
-                self.ui.searchbox.Middle:SetAtlas("common-search-border-middle")
+                self.searchPanel.searchbox.Left:SetTexture("")
+                self.searchPanel.searchbox.Right:SetTexture("")
+                self.searchPanel.searchbox.Middle:SetTexture("")
+                self.searchPanel.searchbox.Left:SetAtlas("common-search-border-left")
+                self.searchPanel.searchbox.Right:SetAtlas("common-search-border-right")
+                self.searchPanel.searchbox.Middle:SetAtlas("common-search-border-middle")
             end
 
-            self.ui.searchbox.Left:SetHeight(skin.searchH)
-            self.ui.searchbox.Right:SetHeight(skin.searchH)
-            self.ui.searchbox.Middle:SetHeight(skin.searchH)
+            self.searchPanel.searchbox.Left:SetHeight(skin.searchH)
+            self.searchPanel.searchbox.Right:SetHeight(skin.searchH)
+            self.searchPanel.searchbox.Middle:SetHeight(skin.searchH)
             self.ui.searchButton:ClearAllPoints()
-            self.ui.searchButton:SetPoint("LEFT",self.ui.searchbox,"RIGHT",skin.searchP[1],skin.searchP[2])
+            self.ui.searchButton:SetPoint("LEFT",self.searchPanel.searchbox,"RIGHT",skin.searchP[1],skin.searchP[2])
 
             local frame = {"RightEdge","LeftEdge","BottomEdge","TopEdge","BottomRightCorner","BottomLeftCorner","TopRightCorner","TopLeftCorner"}
             if skin.showFrame then

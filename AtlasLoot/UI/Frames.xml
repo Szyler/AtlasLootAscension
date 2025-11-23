@@ -105,6 +105,40 @@
 		</Scripts>
     </Frame>
 
+    <CheckButton name="AtlasLootTabTemplate" motionScriptsWhileDisabled="true" frameStrata="DIALOG" inherits="TabSystemTabTemplate" virtual="true">
+        <Frames>
+            <Frame name="$parentIcon" parentKey="Icon" inherits="BorderIconTemplate">
+                <Size x="16" y="16"/>
+                <Anchors>
+                    <Anchor point="LEFT" x="10" y="2" />
+                </Anchors>
+            </Frame>
+        </Frames>
+
+        <Scripts>
+            <OnLoad>
+                
+            </OnLoad>
+        </Scripts>
+
+        <ButtonText parentKey="Text">
+            <Size x="0" y="32"/>
+            <Anchors>
+                <Anchor point="CENTER" x="5" y="2"/>
+            </Anchors>
+        </ButtonText>
+
+        <PushedTextOffset x="0" y="-1"/>
+    </CheckButton>
+
+    <Frame name="AtlasLootTapTemplate" virtual="true">
+        <Scripts>
+			<OnLoad> 
+                tinsert(ATLASLOOT.skin.frames, self)
+        	</OnLoad>
+		</Scripts>
+    </Frame>
+
     <Script file="Menus.lua"/>
     <Script file="UI.lua"/>
     <Script file="UI_Functions.lua"/>

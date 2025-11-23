@@ -214,3 +214,21 @@ function AtlasLoot:FavoritesOnClick(button, buttonClick)
         end
     end
 end
+
+function AtlasLoot:SetUITab(name)
+    for _, tab in pairs(self.ui.tabs) do
+        if tab.name ~= name then
+            tab.tabButton:SetChecked(false)
+            tab.tabButton:UpdateButton()
+        end
+    end
+    self.ui.tabs[name].tabButton:SetChecked(true)
+    self.ui.tabs[name].tabButton:UpdateButton()
+end
+
+function AtlasLoot:FrameOpaqueToogle()
+    local texture = self.selectedProfile.Opaque and 1 or 0.05
+    self.ui.tabs.Loot.TableScrollFrame.Back:SetTexture(0, 0, 0, texture)
+    self.ui.difficultyScrollFrame.Back:SetTexture(0, 0, 0, texture)
+    self.ui.tabs.Loot.Back:SetTexture(0, 0, 0, texture)
+end

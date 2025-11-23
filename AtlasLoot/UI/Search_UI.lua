@@ -5,8 +5,8 @@ local MAX_ARGUMENTS = 6
 
 function AtlasLoot:CreateAdvancedSearchFrame()
     --Create Main Search Panel
-    self.searchPanel = CreateFrame("FRAME", "AtlasLootDefaultFrame_AdvancedSearchPanel", self.ui.lootBackground, nil)
-    self.searchPanel:SetPoint("TOPLEFT", self.ui.lootBackground, "TOPLEFT", 2, -2)
+    self.searchPanel = CreateFrame("FRAME", "AtlasLootDefaultFrame_AdvancedSearchPanel", self.ui.tabs.Loot, nil)
+    self.searchPanel:SetPoint("TOPLEFT", self.ui.tabs.Loot, "TOPLEFT", 2, -2)
     self.searchPanel:SetSize(510, 510)
     self.searchPanel.closebtn = CreateFrame("Button", "AtlasLootDefaultFrame_AdvancedSearchPanel_CloseButton", self.searchPanel, "UIPanelCloseButton")
     self.searchPanel.closebtn:SetPoint("TOPRIGHT", self.searchPanel, "TOPRIGHT", -10, -10)
@@ -19,21 +19,19 @@ function AtlasLoot:CreateAdvancedSearchFrame()
     self.searchPanel.closebtn:SetScript("OnClick", function() AtlasLoot:AdvancedSearchClose() end)
     self.searchPanel.closebtn:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end)
 
-    --Create search/name box
-    self.searchPanel.searchbox = CreateFrame("EditBox", "AtlasLootDefaultFrame_AdvancedSearchPanel_SearchBox", self.searchPanel, "InputBoxTemplate")
-    self.searchPanel.searchbox:SetSize(265, 35)
+    --Search Edit Box
+    self.searchPanel.searchbox = CreateFrame("EditBox", "AtlasLoot_SearchBox", self.searchPanel, "SearchBoxTemplate")
+    self.searchPanel.searchbox:SetSize(190,25)
     self.searchPanel.searchbox:SetPoint("TOPLEFT", self.searchPanel, "TOPLEFT", 30, -55)
-    self.searchPanel.searchbox:SetMaxLetters(100)
-    self.searchPanel.searchbox:SetAutoFocus(false)
-    self.searchPanel.searchbox:SetTextInsets(0, 8, 0, 0)
-    self.searchPanel.searchbox.title = self.searchPanel.searchbox:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    self.searchPanel.searchbox.title:SetText("Name: ")
-    self.searchPanel.searchbox.title:SetPoint("TOPLEFT", self.searchPanel.searchbox, "TOPLEFT", -3, 8)
-    self.searchPanel.searchbox:SetScript("OnEnterPressed", function(editbox)
-        self:AdvancedSearch(editbox:GetText())
-        editbox:ClearFocus()
+    self.searchPanel.searchbox:SetScript("OnEnterPressed", function(frame)
+        self:AdvancedSearch(frame:GetText())
+        frame:ClearFocus()
     end)
-    self.searchPanel.searchbox:SetScript("OnShow", function(frame) frame:SetFrameLevel( (frame:GetParent()):GetFrameLevel() + 1 ) end)
+    self.searchPanel.searchbox:SetScript("OnTextChanged", function(frame)
+		if frame:HasFocus() then
+			SearchBoxTemplate_OnTextChanged(frame)
+		end
+    end)
 
     --Create quality button
     self.searchPanel.searchCategory = CreateFrame("Button", "AtlasLootDefaultFrame_AdvancedSearchPanel_CategoryButton", self.searchPanel, "OptionsButtonTemplate")
