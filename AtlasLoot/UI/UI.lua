@@ -14,7 +14,7 @@ function AtlasLoot:InitializeUI()
     self:InitializeMenus()
 
     self.ui:SetPoint("CENTER",0,0)
-    self.ui:SetSize(1105,640)
+    self.ui:SetSize(1105,630)
     self.ui:EnableMouse(true)
     self.ui:SetMovable(true)
     self.ui.portrait:SetPortraitTexture("Interface\\Icons\\INV_Box_01")
@@ -314,67 +314,6 @@ function AtlasLoot:InitializeUI()
     self.ui.expansionMenuButton.Lable:Show()
     self.ui.expansionMenuButton:SetScript("OnClick", function(button) self:DewdropExpansionMenuOpen(button) end)
 
----------------------------------------- Buttons Under the loot and subtable frames -------------------------------------------
-    -- Favorites Button
-    self.ui.favoritesButton = CreateFrame("Button", "AtlasLoot_Favorites", self.ui, "AtlasLootDropMenuTemplate")
-    self.ui.favoritesButton:SetPoint("BOTTOMLEFT", self.ui, "BOTTOMLEFT", 35, 10.5)
-    self.ui.favoritesButton:SetText("Favorites")
-    self.ui.favoritesButton:SetSize(150,25)
-    self.ui.favoritesButton:SetScript("OnEnter", function(button)
-        self:SetGameTooltip(button,"Left click open a favorite\nAlt + Right click to set favorite")
-        self.ui.favoritesPopupFrame:Show()
-    end)
-    self.ui.favoritesButton:SetScript("OnLeave", function()
-        GameTooltip:Hide()
-        if GetMouseFocus():GetName() ~= "AtlasLoot_FavoritesPopupFrame" then
-            self.ui.favoritesPopupFrame:Hide()
-        end
-    end)
-
-    -- Load Current Instance Button
-    self.ui.currentInstanceButton = CreateFrame("Button","AtlasLoot_LoadInstanceButton", self.ui,"AtlasLootDropMenuTemplate")
-    self.ui.currentInstanceButton:SetSize(107,25)
-    self.ui.currentInstanceButton.Icon:Hide()
-    self.ui.currentInstanceButton.Text:SetJustifyH("CENTER")
-    self.ui.currentInstanceButton.Text:ClearAllPoints()
-    self.ui.currentInstanceButton.Text:SetPoint("CENTER")
-    self.ui.currentInstanceButton:SetPoint("LEFT", self.ui.favoritesButton, "RIGHT", 2, 0)
-    self.ui.currentInstanceButton:SetScript("OnClick", function() self:ShowInstance() end)
-    self.ui.currentInstanceButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
-    self.ui.currentInstanceButton:SetScript("OnEnter", function(button)
-        self:SetGameTooltip(button,"Goto current instances lootpage")
-    end)
-    self.ui.currentInstanceButton:SetText("Current Instance")
-
-    --Favorites Popup Frame
-    self.ui.favoritesPopupFrame = CreateFrame("Frame", "AtlasLoot_FavoritesPopupFrame", self.ui.favoritesButton, "AtlasLootFrameTemplate")
-    self.ui.favoritesPopupFrame:SetBackdrop(backDrop)
-    self.ui.favoritesPopupFrame:EnableMouse()
-    self.ui.favoritesPopupFrame:SetScript("OnLeave", function()
-        local focus = GetMouseFocus():GetName()
-        if focus ~= "AtlasLoot_Preset1" and focus ~= "AtlasLoot_Preset2" and focus ~= "AtlasLoot_Preset3" and focus ~= "AtlasLoot_Preset4" then
-            self.ui.favoritesPopupFrame:Hide()
-        end
-    end)
-    self.ui.favoritesPopupFrame:SetPoint("BOTTOMLEFT",0,-37)
-    self.ui.favoritesPopupFrame:SetSize(150, 40)
-    self.ui.favoritesPopupFrame:Hide()
-
-    --Favorites Buttons
-    for i=1, 4 do
-        local preset = CreateFrame("Button", "AtlasLoot_Preset"..i, self.ui.favoritesPopupFrame, "AtlasLootFavoritesButtonTemplate")
-        local tex = AtlasUtil:GetAtlasInfo("services-number-"..i)
-            preset.tex:SetTexture(tex.filename)
-            preset.tex:SetTexCoord(tex.leftTexCoord, tex.rightTexCoord, tex.topTexCoord, tex.bottomTexCoord)
-        if i == 1 then
-            preset:SetPoint("LEFT", self.ui.favoritesPopupFrame, 8, 0)
-        else
-            preset:SetPoint("LEFT", self.ui.favoritesPopupFrame["preset"..(i-1)], "RIGHT", 3, 0)
-        end
-        preset.num = i
-        self.ui.favoritesPopupFrame["preset"..i] = preset
-    end
-
 ---------------------  Diffcuility ScrollFrame ----------------------------------
     local ROW_HEIGHT = 16   -- How tall is each row?
     local MAX_ROWS = 5      -- How many rows can be shown at once?
@@ -493,14 +432,14 @@ local rows = setmetatable({}, { __index = function(t, i)
 end })
 
 self.ui.difficultyScrollFrame.rows = rows
-local MAX_ROWS2 = 26      -- How many rows can be shown at once?
+local MAX_ROWS2 = 24      -- How many rows can be shown at once?
 
 --------------------Subtable Frame--------------------
     self.ui.tabs.Loot.TableScrollFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", self.ui, "AtlasLootFrameTemplate")
     self.ui.tabs.Loot.TableScrollFrame:EnableMouse(true)
     self.ui.tabs.Loot.TableScrollFrame:EnableMouseWheel(true)
     self.ui.tabs.Loot.TableScrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS2 + 23)
-    self.ui.tabs.Loot.TableScrollFrame:SetPoint("BOTTOMLEFT","Atlasloot_Difficulty_ScrollFrame",0,-449.5)
+    self.ui.tabs.Loot.TableScrollFrame:SetPoint("TOP","Atlasloot_Difficulty_ScrollFrame","BOTTOM",0,-5.5)
     self.ui.tabs.Loot.TableScrollFrame:SetBackdrop(backDrop)
     self.ui.tabs.Loot.TableScrollFrame.Back = self.ui.tabs.Loot.TableScrollFrame:CreateTexture("Atlasloot_SubTableFrame_Back", "BACKGROUND")
     self.ui.tabs.Loot.TableScrollFrame.Back:SetAllPoints()
@@ -605,6 +544,67 @@ local rows2 = setmetatable({}, { __index = function(t, i)
 end })
 
 self.ui.tabs.Loot.TableScrollFrame.rows = rows2
+
+---------------------------------------- Buttons Under the subtable frame -------------------------------------------
+    -- Favorites Button
+    self.ui.favoritesButton = CreateFrame("Button", "AtlasLoot_Favorites", self.ui, "AtlasLootDropMenuTemplate")
+    self.ui.favoritesButton:SetPoint("TOPLEFT",self.ui.tabs.Loot.TableScrollFrame,"BOTTOMLEFT",0,-6)
+    self.ui.favoritesButton:SetText("Favorites")
+    self.ui.favoritesButton:SetSize(150,30)
+    self.ui.favoritesButton:SetScript("OnEnter", function(button)
+        self:SetGameTooltip(button,"Left click open a favorite\nAlt + Right click to set favorite")
+        self.ui.favoritesPopupFrame:Show()
+    end)
+    self.ui.favoritesButton:SetScript("OnLeave", function()
+        GameTooltip:Hide()
+        if GetMouseFocus():GetName() ~= "AtlasLoot_FavoritesPopupFrame" then
+            self.ui.favoritesPopupFrame:Hide()
+        end
+    end)
+
+    -- Load Current Instance Button
+    self.ui.currentInstanceButton = CreateFrame("Button","AtlasLoot_LoadInstanceButton", self.ui,"AtlasLootDropMenuTemplate")
+    self.ui.currentInstanceButton:SetSize(113,30)
+    self.ui.currentInstanceButton.Icon:Hide()
+    self.ui.currentInstanceButton.Text:SetJustifyH("CENTER")
+    self.ui.currentInstanceButton.Text:ClearAllPoints()
+    self.ui.currentInstanceButton.Text:SetPoint("CENTER")
+    self.ui.currentInstanceButton:SetPoint("LEFT", self.ui.favoritesButton, "RIGHT", 2, 0)
+    self.ui.currentInstanceButton:SetScript("OnClick", function() self:ShowInstance() end)
+    self.ui.currentInstanceButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
+    self.ui.currentInstanceButton:SetScript("OnEnter", function(button)
+        self:SetGameTooltip(button,"Goto current instances lootpage")
+    end)
+    self.ui.currentInstanceButton:SetText("Current Instance")
+
+    --Favorites Popup Frame
+    self.ui.favoritesPopupFrame = CreateFrame("Frame", "AtlasLoot_FavoritesPopupFrame", self.ui.favoritesButton, "AtlasLootFrameTemplate")
+    self.ui.favoritesPopupFrame:SetBackdrop(backDrop)
+    self.ui.favoritesPopupFrame:EnableMouse()
+    self.ui.favoritesPopupFrame:SetScript("OnLeave", function()
+        local focus = GetMouseFocus():GetName()
+        if focus ~= "AtlasLoot_Preset1" and focus ~= "AtlasLoot_Preset2" and focus ~= "AtlasLoot_Preset3" and focus ~= "AtlasLoot_Preset4" then
+            self.ui.favoritesPopupFrame:Hide()
+        end
+    end)
+    self.ui.favoritesPopupFrame:SetPoint("BOTTOMLEFT",0,-37)
+    self.ui.favoritesPopupFrame:SetSize(150, 40)
+    self.ui.favoritesPopupFrame:Hide()
+
+    --Favorites Buttons
+    for i=1, 4 do
+        local preset = CreateFrame("Button", "AtlasLoot_Preset"..i, self.ui.favoritesPopupFrame, "AtlasLootFavoritesButtonTemplate")
+        local tex = AtlasUtil:GetAtlasInfo("services-number-"..i)
+            preset.tex:SetTexture(tex.filename)
+            preset.tex:SetTexCoord(tex.leftTexCoord, tex.rightTexCoord, tex.topTexCoord, tex.bottomTexCoord)
+        if i == 1 then
+            preset:SetPoint("LEFT", self.ui.favoritesPopupFrame, 8, 0)
+        else
+            preset:SetPoint("LEFT", self.ui.favoritesPopupFrame["preset"..(i-1)], "RIGHT", 3, 0)
+        end
+        preset.num = i
+        self.ui.favoritesPopupFrame["preset"..i] = preset
+    end
 
 --------------------------------- Map Frame and buttons -----------------------------------------------
 
