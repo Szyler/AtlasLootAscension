@@ -54,15 +54,16 @@ function AtlasLoot:InitializeUI()
             onClick = function(button, btnclick)self:WishListButton(button,true,btnclick) end
         },
         {
+            name = "Map",
+            atlas = "poi-islands-table",
+            onClick = function(...) self:MapButtonClick(...) end,
+        },
+        {
             name = "Search",
             atlas = "communities-icon-searchmagnifyingglass",
             onClick = function(...) self:AdvancedSearchShow(...) end,
         },
-        {
-            name = "Map",
-            atlas = "poi-islands-table",
-            onClick = function(...) self:MapButtonClick(...) end,
-    },
+
     }
     self.ui.tabs = {}
 
