@@ -205,7 +205,7 @@ function AtlasLoot:InitializeUI()
     self.ui.wishlistOptionsButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", self.itemframe, "OptionsButtonTemplate")
     self.ui.wishlistOptionsButton:SetPoint("BOTTOM", self.itemframe, "BOTTOM",-50,5)
     self.ui.wishlistOptionsButton:SetText(AL["Options"])
-    self.ui.wishlistOptionsButton:SetScript("OnClick", function(button) self:WishListOptionsOpen() end)
+    self.ui.wishlistOptionsButton:SetScript("OnClick", function(button) self:WishListOptionsOpen(button) end)
 
         -- Wishlist Item Lock button
     self.ui.wishlistLockButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", self.itemframe, "OptionsButtonTemplate")

@@ -375,7 +375,7 @@ end
 AtlasLoot:WishListOptionsOpen:
 Constructs the wishlist options category menu.
 ]]
-function AtlasLoot:WishListOptionsOpen()
+function AtlasLoot:WishListOptionsOpen(button)
 	local menuList = {
 		{
 			{text = AL["Add Wishlist"], func = function() self:AddWishList() end},
@@ -387,7 +387,7 @@ function AtlasLoot:WishListOptionsOpen()
 			{text = AL["Settings"], value = "Settings", hasArrow = true},
 		},{}}
 	menuList[2] = wishListSettings()
-	self:OpenDewdropMenu(self.mainUI.wishlistOptionsButton, menuList)
+	self:OpenDewdropMenu(button, menuList)
 end
 
 -- **********************************************************************
