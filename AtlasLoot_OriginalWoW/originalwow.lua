@@ -10647,6 +10647,8 @@ AtlasLoot_Data["Cenarion"] = {
 			{ itemID = 1519870 }, -- Amulet of the Third War
 			{ itemID = 1519869 }, -- Arcane Infused Staff
 			{ itemID = 1519868 }, -- Qiraji Shell	
+			{ itemID = 856001 }, -- Sentinel Guardian Vestments
+			{ itemID = 856002 }, -- Blessed Branch of the Cenarion Circle
 			{ itemID = 22766}, --Plans: Ironvine Breastplate
 			{ itemID = 22219}, --Plans: Jagged Obsidian Shield
 			{ itemID = 22771}, --Pattern: Bramblewood Helm
@@ -10655,6 +10657,7 @@ AtlasLoot_Data["Cenarion"] = {
 			{ itemID = 22683}, --Pattern: Gaea's Embrace
 			{ itemID = 22312}, --Pattern: Satchel of Cenarius
 			{ itemID = 22774}, --Pattern: Sylvan Vest
+			{ itemID = 46514}, -- Formula: Enchant Bracers - Lesser Expertise
 		},
 		{
 			{ icon = "INV_QirajIdol_Amber", name = color.WHITE..AL["Token Hand-Ins"] },
@@ -10672,6 +10675,11 @@ AtlasLoot_Data["Cenarion"] = {
 			{ itemID = 1519863 }, -- Cenarion Clubber
 			{ itemID = 1519864 }, -- Polished Qiraji Halberd
 			{ itemID = 1519866 }, -- Cloak of the Shifting Sands
+			{ itemID = 1519808 }, -- Sentinel Vambraces
+			{ itemID = 856000 }, -- Cowl of the Inside Circle
+			{ itemID = 1312121 }, -- Corroded Qiraji Wraps
+			{ itemID = 1519807 }, -- Cenarion Infantry Helmet
+			{ itemID = 1519809 }, -- Qiraji Tracker Vestments
 			{ itemID = 22221}, --Plans: Obsidian Mail Tunic
 			{ itemID = 20382}, --Pattern: Dreamscale Breastplate
 		},
