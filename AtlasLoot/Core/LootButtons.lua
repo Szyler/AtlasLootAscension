@@ -310,15 +310,15 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                     {text = AL["Vanity Collection"], isTitle = true, showOnCondition = isCollectionItem},
                     {text = AL["Learn/Recive Vanity Item"], func = function() RequestDeliverVanityCollectionItem(itemID) end, showOnCondition = isCollectionItem}
             },{}}
-
+            
         table.insert(wishList[2], {text = AL["OwnWishlists"], isTitle = true, show = "OwnWishlists"})
-        for i,v in pairs(AtlasLootWishList["Own"]) do  
+        for i,v in pairs(AtlasLootWishList.Own) do
             if type(v) == "table" then
                 table.insert(wishList[2],{text = v.Name, func = function() self:AddItemToWishList("Own", i, data) end, show = "OwnWishlists"})
             end
         end
         table.insert(wishList[2], {text = AL["SharedWishlists"], isTitle = true, show = "SharedWishlists"})
-        for i,v in pairs(AtlasLootWishList["Shared"]) do
+        for i,v in pairs(AtlasLootWishList.Shared) do
             if type(v) == "table" then
                 table.insert(wishList[2],{text = v.Name,func = function() self:AddItemToWishList("Shared", i, data) end, show = "SharedWishlists"})
             end

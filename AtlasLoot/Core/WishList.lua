@@ -208,6 +208,47 @@ function AtlasLoot:WishListButton(btn, show, buttonclick)
 	end
 end
 
+local function wishListSettings()
+	local allowShare = AtlasLootWishList.Options[playerName].AllowShareWishlist or false	
+	local settings = {
+	{isRadio = true, text = AL["Mark items in loot tables"], checked = AtlasLootWishList.Options[playerName].Mark or false, show = "Settings",
+		func = function()
+			if AtlasLootWishList.Options[playerName].Mark then
+				AtlasLootWishList.Options[playerName].Mark = false
+			else
+				AtlasLootWishList.Options[playerName].Mark = true
+			end
+		end
+	},
+	{isRadio = true, text = AL["Mark items from own Wishlist"], checked = AtlasLootWishList.Options[playerName].markInTable == "own" and true or false, show = "Settings",
+	func = function() 
+			if AtlasLootWishList.Options[playerName].markInTable == "own" then
+				AtlasLootWishList.Options[playerName].markInTable = "all"
+			else
+				AtlasLootWishList.Options[playerName].markInTable = "own"
+			end
+		end
+	},
+	{isRadio = true, text = AL["Mark items from all Wishlists"], checked = AtlasLootWishList.Options[playerName].markInTable == "all" and true or false, show = "Settings",
+	func = function()
+			if AtlasLootWishList.Options[playerName].markInTable == "own" then
+				AtlasLootWishList.Options[playerName].markInTable = "all"
+			else
+				AtlasLootWishList.Options[playerName].markInTable = "own"
+			end
+		end
+	},
+	
+	{isRadio = true, text = AL["Enable Wishlist Sharing"], checked = allowShare, show = "Settings",
+	func = function() allowShare = not allowShare end},
+	{isRadio = true, text = AL["Auto reject in combat"], checked = AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat or false, show = "Settings",
+	func = function() AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat = not AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat end},
+	{isRadio = true, text = AL["Auto Sort WishLists"], checked = AtlasLootWishList.Options[playerName].AutoSortWishlist or false, show = "Settings",
+	func = function() AtlasLootWishList.Options[playerName].AutoSortWishlist = not AtlasLootWishList.Options[playerName].AutoSortWishlist end},
+	}
+	return settings
+
+end
 --[[
 AtlasLoot:ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, button, show)
 Show the dropdownlist with the wishlists
@@ -225,50 +266,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 				{text = AL["Settings"], value = "Settings", hasArrow = true},
 			},
 			{}}
-				for k,v in pairs(AtlasLootWishList.Own) do
-					if type(v) == "table" then
-						table.insert(menuList[2],{text = v.Name,	func = function() self:AddItemToWishList("Own", k, "", show) end, show = "OwnWishlists"})
-					end
-				end
-				for k,v in pairs(AtlasLootWishList.Shared) do
-					if type(v) == "table" then
-						table.insert(menuList[2],{text = v.Name, func = function() self:AddItemToWishList("Own", k, "", show) end, show = "SharedWishlists"})	
-					end
-				end
-				table.insert(menuList[2],{isRadio = true, text = AL["Mark items in loot tables"], checked = AtlasLootWishList.Options[playerName].Mark or false, show = "Settings",
-					func = function()
-						if AtlasLootWishList.Options[playerName].Mark then
-							AtlasLootWishList.Options[playerName].Mark = false
-						else
-							AtlasLootWishList.Options[playerName].Mark = true
-						end
-					end
-				})
-				table.insert(menuList[2],{isRadio = true, text = AL["Mark items from own Wishlist"], checked = AtlasLootWishList.Options[playerName].markInTable == "own" and true or false, show = "Settings",
-				func = function() 
-						if AtlasLootWishList.Options[playerName].markInTable == "own" then
-							AtlasLootWishList.Options[playerName].markInTable = "all"
-						else
-							AtlasLootWishList.Options[playerName].markInTable = "own"
-						end
-					end
-				})
-				table.insert(menuList[2],{isRadio = true, text = AL["Mark items from all Wishlists"], checked = AtlasLootWishList.Options[playerName].markInTable == "all" and true or false, show = "Settings",
-				func = function()
-						if AtlasLootWishList.Options[playerName].markInTable == "own" then
-							AtlasLootWishList.Options[playerName].markInTable = "all"
-						else
-							AtlasLootWishList.Options[playerName].markInTable = "own"
-						end
-					end
-				})
-				local allowShare = AtlasLootWishList.Options[playerName]["AllowShareWishlist"] or false
-				table.insert(menuList[2],{isRadio = true, text = AL["Enable Wishlist Sharing"], checked = allowShare, show = "Settings",
-				func = function() allowShare = not allowShare end})
-				table.insert(menuList[2],{isRadio = true, text = AL["Auto reject in combat"], checked = AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat or false, show = "Settings",
-				func = function() AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat = not AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat end})
-				table.insert(menuList[2],{isRadio = true, text = AL["Auto Sort WishLists"], checked = AtlasLootWishList.Options[playerName].AutoSortWishlist or false, show = "Settings",
-				func = function() AtlasLootWishList.Options[playerName].AutoSortWishlist = not AtlasLootWishList.Options[playerName].AutoSortWishlist end})
+		menuList[2] = wishListSettings()
 	self:OpenDewdropMenu(btn, menuList)
 	end
 end
@@ -387,41 +385,9 @@ function AtlasLoot:WishListOptionsOpen()
 			{text = AL["Make Wishlist Default"], func = function() self:SetDefaultWishList() end, showOnCondition = self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList.Show.ListType == "Own"},
 			{text = AL["Delete Wishlist"], func = function() self:DeleteWishList() end},
 			{text = AL["Settings"], value = "Settings", hasArrow = true},
-		},
-		{
-			{isRadio = true, text = AL["Mark items in loot tables"], checked = AtlasLootWishList.Options[playerName].Mark, show = "Settings",
-				func = function()
-					if AtlasLootWishList.Options[playerName].Mark then
-						AtlasLootWishList.Options[playerName].Mark = false
-					else
-						AtlasLootWishList.Options[playerName].Mark = true
-					end
-				end
-			},
-			isRadio = true, text = AL["Mark items from own Wishlist"], checked = AtlasLootWishList.Options[playerName].markInTable == "own" and true or false, show = "Settings",
-			func = function()
-					if AtlasLootWishList.Options[playerName].markInTable == "own" then
-						AtlasLootWishList.Options[playerName].markInTable = "all"
-					else
-						AtlasLootWishList.Options[playerName].markInTable = "own"
-					end
-			 	end
-			},
-			{isRadio = true, text = AL["Mark items from all Wishlists"], checked = AtlasLootWishList.Options[playerName].markInTable == "all" and true or false, show = "Settings",
-			func = function()
-					if AtlasLootWishList.Options[playerName].markInTable == "own" then
-						AtlasLootWishList.Options[playerName].markInTable = "all"
-					else
-						AtlasLootWishList.Options[playerName].markInTable = "own"
-					end
-			 	end
-			},
-			{isRadio = true, text = AL["Enable Wishlist Sharing"], checked = allowShare, show = "Settings",
-			func = function() allowShare = not allowShare end},
-			{isRadio = true, text = AL["Auto reject in combat"], checked = allowShare, func = function() AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat = not AtlasLootWishList.Options[playerName]["AllowShareWishlistInCombat"] end, show = "Settings"},
-			{isRadio = true, text = AL["Auto Sort WishLists"], checked = AtlasLootWishList.Options[playerName].AutoSortWishlist, func = function() AtlasLootWishList.Options[playerName].AutoSortWishlist = not AtlasLootWishList.Options[playerName].AutoSortWishlist end, show = "Settings"}
-		}
-	self:OpenDewdropMenu(self.ui.wishlistOptionsButton, menuList)
+		},{}}
+	menuList[2] = wishListSettings()
+	self:OpenDewdropMenu(self.mainUI.wishlistOptionsButton, menuList)
 end
 
 -- **********************************************************************
