@@ -10465,6 +10465,9 @@ AtlasLoot_Data["Argent"] = {
 			{ itemID = 1519867 }, -- Arcanist's Cloak
 			{ itemID = 1519883 }, -- Batleather Armbands
 			{ itemID = 1519884 }, -- Spaulders of Dusk
+			{ itemID = 856004 }, -- Breakthrough Charging Pauldrons
+			{ itemID = 856005 }, -- Purging Blessed Blade
+			{ itemID = 1519810 }, -- Hallowed Gauntlets
 			{ itemID = 18171}, --Arcane Mantle of the Dawn
 			{ itemID = 18169}, --Flame Mantle of the Dawn
 			{ itemID = 18170}, --Frost Mantle of the Dawn
@@ -10506,6 +10509,9 @@ AtlasLoot_Data["Argent"] = {
 			{ itemID = 1519882 }, -- Darkened Leather Woolies
 			{ itemID = 1519881 }, -- Stompers of the Argent Dawn
 			{ itemID = 1519865 }, -- Purified Necklace of the Damned
+			{ itemID = 856003 }, -- The Light's Hope
+			{ itemID = 1519800 }, -- Light's Hope Arbalest
+			{ itemID = 1519811 }, -- Argent Dawn Blessed Breastplate
 			{ itemID = 18182}, --Chromatic Mantle of the Dawn
 		},
 	},
@@ -10647,6 +10653,8 @@ AtlasLoot_Data["Cenarion"] = {
 			{ itemID = 1519870 }, -- Amulet of the Third War
 			{ itemID = 1519869 }, -- Arcane Infused Staff
 			{ itemID = 1519868 }, -- Qiraji Shell	
+			{ itemID = 856001 }, -- Sentinel Guardian Vestments
+			{ itemID = 856002 }, -- Blessed Branch of the Cenarion Circle
 			{ itemID = 22766}, --Plans: Ironvine Breastplate
 			{ itemID = 22219}, --Plans: Jagged Obsidian Shield
 			{ itemID = 22771}, --Pattern: Bramblewood Helm
@@ -10655,6 +10663,7 @@ AtlasLoot_Data["Cenarion"] = {
 			{ itemID = 22683}, --Pattern: Gaea's Embrace
 			{ itemID = 22312}, --Pattern: Satchel of Cenarius
 			{ itemID = 22774}, --Pattern: Sylvan Vest
+			{ itemID = 46514}, -- Formula: Enchant Bracers - Lesser Expertise
 		},
 		{
 			{ icon = "INV_QirajIdol_Amber", name = color.WHITE..AL["Token Hand-Ins"] },
@@ -10672,6 +10681,11 @@ AtlasLoot_Data["Cenarion"] = {
 			{ itemID = 1519863 }, -- Cenarion Clubber
 			{ itemID = 1519864 }, -- Polished Qiraji Halberd
 			{ itemID = 1519866 }, -- Cloak of the Shifting Sands
+			{ itemID = 1519808 }, -- Sentinel Vambraces
+			{ itemID = 856000 }, -- Cowl of the Inside Circle
+			{ itemID = 1312121 }, -- Corroded Qiraji Wraps
+			{ itemID = 1519807 }, -- Cenarion Infantry Helmet
+			{ itemID = 1519809 }, -- Qiraji Tracker Vestments
 			{ itemID = 22221}, --Plans: Obsidian Mail Tunic
 			{ itemID = 20382}, --Pattern: Dreamscale Breastplate
 		},
@@ -10804,14 +10818,22 @@ AtlasLoot_Data["Thorium"] = {
 AtlasLoot_Data["Timbermaw"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = BabbleFaction["Timbermaw Hold"],
-	{
+    {
+		Name = BabbleFaction["Timbermaw Hold"],
+		WebID = {576,"faction"},
+		{
+			{ itemID = 16768 }, -- Furbold Medicine Pouch
+			{ itemID = 16769 }, -- Furbolg Medicine Totem
+		},
+	},
+    {
 		Name = BabbleFaction["Friendly"],
 		WebID = {576,"faction"},
 		{
-			{ itemID = 13484}, --Recipe: Transmute Earth to Water
-			{ itemID = 22392}, --Formula: Enchant 2H Weapon - Agility
-			{ itemID = 20254}, --Pattern: Warbear Woolies
-			{ itemID = 20253}, --Pattern: Warbear Harness
+			{ itemID = 20254 }, -- Pattern: Warbear Woolies
+			{ itemID = 13484 }, -- Recipe: Transmute Earth to Water
+			{ itemID = 20253 }, -- Pattern: Warbear Harness
+			{ itemID = 20253 }, -- Formula: Enchant 2H Weapon - Agility
 		},
 	},
 	{
@@ -10819,37 +10841,44 @@ AtlasLoot_Data["Timbermaw"] = {
 		WebID = {576,"faction"},
 		{
 			{ itemID = 1519894 }, -- Timbermaw Root
-			{ itemID = 16768}, --Furbolg Medicine Pouch
-			{ itemID = 16769}, --Furbolg Medicine Totem
 		},
 		{
-			{ itemID = 19202}, --Plans: Heavy Timbermaw Belt
-			{ itemID = 19445}, --Formula: Enchant Weapon - Agility
-			{ itemID = 19326}, --Pattern: Might of the Timbermaw
-			{ itemID = 19215}, --Pattern: Wisdom of the Timbermaw
+			{ itemID = 19215 }, -- Pattern: Wisdom of the Timbermaw
+			{ itemID = 19326 }, -- Pattern: Might of the Timbermaw
+			{ itemID = 19202 }, -- Plans: Heavy Timbermaw Belt
+			{ itemID = 19445 }, -- Formula: Enchant Weapon - Agility
 		},
 	},
 	{
 		Name = BabbleFaction["Revered"],
 		WebID = {576,"faction"},
 		{
-			{ itemID = 1519895 }, -- Timbermaw Talisman
+			{ itemID = 856010 }, -- Handcrafted Beast Cleaver
+			{ itemID = 856012 }, -- Resounding Earth Hood
+			{ itemID = 856013 }, -- Hunting Hatchet
+			{ itemID = 856014 }, -- Enchanted Pawpads
+			{ itemID = 1519802 }, -- Timbermaw Fur Cloak
 			{ itemID = 1519893 }, -- Ring of Mending
+			{ itemID = 1519895 }, -- Timbermaw Talisman
 		},
 		{
-			{ itemID = 19204}, --Plans: Heavy Timbermaw Boots
-			{ itemID = 19327}, --Pattern: Timbermaw Brawlers
-			{ itemID = 19218}, --Pattern: Mantle of the Timbermaw
+			{ itemID = 19218 }, -- Pattern: Mantle of the Timbermaw
+			{ itemID = 19204 }, -- Plans: Heavy Timbermaw Boots
+			{ itemID = 46520 }, -- Formula: Enchant Cloak - Lesser Spell Penetration
 		},
 	},
 	{
 		Name = BabbleFaction["Exalted"],
 		WebID = {576,"faction"},
 		{
-			{ itemID = 1519892 }, -- The \"Prized\" Possesion
-			{ itemID = 1519891 }, -- Timbermaw Shanker
+			{ itemID = 21326 }, -- Defender of the Timbermaw
+			{ itemID = 856009 }, -- Ursine Woodstaff
+			{ itemID = 856011 }, -- Combed Furline Handwraps
+			{ itemID = 1519801 }, -- Timbermaw Tracker's Belt
+			{ itemID = 1519803 }, -- Fur Lined Leggings
 			{ itemID = 1519890 }, -- Timbermaw Spellblade
-			{ itemID = 21326}, --Defender of the Timbermaw 
+			{ itemID = 1519891 }, -- Timbermaw Shanker
+			{ itemID = 1519892 }, -- The "Prized" Possession
 		},
 	},
 }
