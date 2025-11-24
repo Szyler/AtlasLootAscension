@@ -10804,14 +10804,22 @@ AtlasLoot_Data["Thorium"] = {
 AtlasLoot_Data["Timbermaw"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = BabbleFaction["Timbermaw Hold"],
-	{
+    {
+		Name = BabbleFaction["Timbermaw Hold"],
+		WebID = {576,"faction"},
+		{
+			{ itemID = 16768 }, -- Furbold Medicine Pouch
+			{ itemID = 16769 }, -- Furbolg Medicine Totem
+		},
+	},
+    {
 		Name = BabbleFaction["Friendly"],
 		WebID = {576,"faction"},
 		{
-			{ itemID = 13484}, --Recipe: Transmute Earth to Water
-			{ itemID = 22392}, --Formula: Enchant 2H Weapon - Agility
-			{ itemID = 20254}, --Pattern: Warbear Woolies
-			{ itemID = 20253}, --Pattern: Warbear Harness
+			{ itemID = 20254 }, -- Pattern: Warbear Woolies
+			{ itemID = 13484 }, -- Recipe: Transmute Earth to Water
+			{ itemID = 20253 }, -- Pattern: Warbear Harness
+			{ itemID = 20253 }, -- Formula: Enchant 2H Weapon - Agility
 		},
 	},
 	{
@@ -10819,37 +10827,44 @@ AtlasLoot_Data["Timbermaw"] = {
 		WebID = {576,"faction"},
 		{
 			{ itemID = 1519894 }, -- Timbermaw Root
-			{ itemID = 16768}, --Furbolg Medicine Pouch
-			{ itemID = 16769}, --Furbolg Medicine Totem
 		},
 		{
-			{ itemID = 19202}, --Plans: Heavy Timbermaw Belt
-			{ itemID = 19445}, --Formula: Enchant Weapon - Agility
-			{ itemID = 19326}, --Pattern: Might of the Timbermaw
-			{ itemID = 19215}, --Pattern: Wisdom of the Timbermaw
+			{ itemID = 19215 }, -- Pattern: Wisdom of the Timbermaw
+			{ itemID = 19326 }, -- Pattern: Might of the Timbermaw
+			{ itemID = 19202 }, -- Plans: Heavy Timbermaw Belt
+			{ itemID = 19445 }, -- Formula: Enchant Weapon - Agility
 		},
 	},
 	{
 		Name = BabbleFaction["Revered"],
 		WebID = {576,"faction"},
 		{
-			{ itemID = 1519895 }, -- Timbermaw Talisman
+			{ itemID = 856010 }, -- Handcrafted Beast Cleaver
+			{ itemID = 856012 }, -- Resounding Earth Hood
+			{ itemID = 856013 }, -- Hunting Hatchet
+			{ itemID = 856014 }, -- Enchanted Pawpads
+			{ itemID = 1519802 }, -- Timbermaw Fur Cloak
 			{ itemID = 1519893 }, -- Ring of Mending
+			{ itemID = 1519895 }, -- Timbermaw Talisman
 		},
 		{
-			{ itemID = 19204}, --Plans: Heavy Timbermaw Boots
-			{ itemID = 19327}, --Pattern: Timbermaw Brawlers
-			{ itemID = 19218}, --Pattern: Mantle of the Timbermaw
+			{ itemID = 19218 }, -- Pattern: Mantle of the Timbermaw
+			{ itemID = 19204 }, -- Plans: Heavy Timbermaw Boots
+			{ itemID = 46520 }, -- Formula: Enchant Cloak - Lesser Spell Penetration
 		},
 	},
 	{
 		Name = BabbleFaction["Exalted"],
 		WebID = {576,"faction"},
 		{
-			{ itemID = 1519892 }, -- The \"Prized\" Possesion
-			{ itemID = 1519891 }, -- Timbermaw Shanker
+			{ itemID = 21326 }, -- Defender of the Timbermaw
+			{ itemID = 856009 }, -- Ursine Woodstaff
+			{ itemID = 856011 }, -- Combed Furline Handwraps
+			{ itemID = 1519801 }, -- Timbermaw Tracker's Belt
+			{ itemID = 1519803 }, -- Fur Lined Leggings
 			{ itemID = 1519890 }, -- Timbermaw Spellblade
-			{ itemID = 21326}, --Defender of the Timbermaw 
+			{ itemID = 1519891 }, -- Timbermaw Shanker
+			{ itemID = 1519892 }, -- The "Prized" Possession
 		},
 	},
 }
