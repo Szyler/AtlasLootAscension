@@ -10465,6 +10465,9 @@ AtlasLoot_Data["Argent"] = {
 			{ itemID = 1519867 }, -- Arcanist's Cloak
 			{ itemID = 1519883 }, -- Batleather Armbands
 			{ itemID = 1519884 }, -- Spaulders of Dusk
+			{ itemID = 856004 }, -- Breakthrough Charging Pauldrons
+			{ itemID = 856005 }, -- Purging Blessed Blade
+			{ itemID = 1519810 }, -- Hallowed Gauntlets
 			{ itemID = 18171}, --Arcane Mantle of the Dawn
 			{ itemID = 18169}, --Flame Mantle of the Dawn
 			{ itemID = 18170}, --Frost Mantle of the Dawn
@@ -10506,6 +10509,9 @@ AtlasLoot_Data["Argent"] = {
 			{ itemID = 1519882 }, -- Darkened Leather Woolies
 			{ itemID = 1519881 }, -- Stompers of the Argent Dawn
 			{ itemID = 1519865 }, -- Purified Necklace of the Damned
+			{ itemID = 856003 }, -- The Light's Hope
+			{ itemID = 1519800 }, -- Light's Hope Arbalest
+			{ itemID = 1519811 }, -- Argent Dawn Blessed Breastplate
 			{ itemID = 18182}, --Chromatic Mantle of the Dawn
 		},
 	},
