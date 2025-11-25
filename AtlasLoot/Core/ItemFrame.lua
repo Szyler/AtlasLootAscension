@@ -407,6 +407,13 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	--Hide search for normal loot tables
 	if dataID ~= "SearchResult"  then
 		self.ui.tabs.Search:Hide()
+		self.ui.tabs.Loot.TableScrollFrame:Show()
+        self.ui.currentInstanceButton:Show()
+        self.ui.favoritesButton:Show()
+	else
+		self.ui.tabs.Loot.TableScrollFrame:Hide()
+        self.ui.currentInstanceButton:Hide()
+        self.ui.favoritesButton:Hide()
 	end
 
 	--Hide Map and reshow lootbackground
