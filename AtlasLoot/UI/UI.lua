@@ -29,7 +29,7 @@ function AtlasLoot:InitializeUI()
     end)
     self.ui:SetScript("OnMouseDown", function()
         self.Dewdrop:Close()
-        self.searchPanel.searchbox:ClearFocus()
+        self.ui.tabs.Search.searchbox:ClearFocus()
     end)
     self.ui:SetScript("OnHide", function()
         self.Dewdrop:Close()
@@ -118,7 +118,7 @@ function AtlasLoot:InitializeUI()
     self.ui.tabs.Loot:SetScript("OnMouseDown",function(button, buttonClick)
         if self.ui.backbutton:IsVisible() and buttonClick == "RightButton" then
             self:BackButton_OnClick()
-        elseif self.searchPanel:IsVisible() and buttonClick == "RightButton" then
+        elseif self.ui.tabs.Search:IsVisible() and buttonClick == "RightButton" then
             self:AdvancedSearchClose()
         end
         self.Dewdrop:Close()
@@ -416,7 +416,7 @@ local rows = setmetatable({}, { __index = function(t, i)
             self:ScrollFrameUpdate(nil,self.ui.difficultyScrollFrame.wishList)
         else
             self.ItemindexID = row.itemIndex
-            if not self.searchPanel:IsVisible() then
+            if not self.ui.tabs.Search:IsVisible() then
                 self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
             end
             self:ScrollFrameUpdate()

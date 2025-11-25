@@ -11,6 +11,7 @@ AtlasLootWishList = {}
 AtlasLoot_CurrentWishList = {selected = 1}
 
 function AtlasLoot:ShowWishList(listNum)
+	self.ui.tabs.Loot.TableScrollFrame:Show()
 	local listType = (AtlasLoot_CurrentWishList.selected == 2 and "Shared") or "Own"
 	AtlasLoot_CurrentWishList.Show = {Name = "WishLists", wishList = true, ListType = listType}
 	for _, list in ipairs(AtlasLootWishList[listType]) do

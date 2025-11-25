@@ -114,24 +114,24 @@ function AtlasLoot:InitializeSkins()
 
             local TDF = self.TitleDefaults
             self.ui.TitleText:SetPoint(TDF[1], TDF[2], TDF[3], TDF[4]+skin.title[1], TDF[5]+skin.title[2])
-
+            
             if type(skin.btTex) == "table" then
                 local color = skin.btTex
-                self.searchPanel.searchbox.Left:SetTexture(color[1],color[2],color[3],color[4])
-                self.searchPanel.searchbox.Right:SetTexture(color[1],color[2],color[3],color[4])
-                self.searchPanel.searchbox.Middle:SetTexture(color[1],color[2],color[3],color[4])
+                self.ui.tabs.Search.searchbox.Left:SetTexture(color[1],color[2],color[3],color[4])
+                self.ui.tabs.Search.searchbox.Right:SetTexture(color[1],color[2],color[3],color[4])
+                self.ui.tabs.Search.searchbox.Middle:SetTexture(color[1],color[2],color[3],color[4])
             else
-                self.searchPanel.searchbox.Left:SetTexture("")
-                self.searchPanel.searchbox.Right:SetTexture("")
-                self.searchPanel.searchbox.Middle:SetTexture("")
-                self.searchPanel.searchbox.Left:SetAtlas("common-search-border-left")
-                self.searchPanel.searchbox.Right:SetAtlas("common-search-border-right")
-                self.searchPanel.searchbox.Middle:SetAtlas("common-search-border-middle")
+                self.ui.tabs.Search.searchbox.Left:SetTexture("")
+                self.ui.tabs.Search.searchbox.Right:SetTexture("")
+                self.ui.tabs.Search.searchbox.Middle:SetTexture("")
+                self.ui.tabs.Search.searchbox.Left:SetAtlas("common-search-border-left")
+                self.ui.tabs.Search.searchbox.Right:SetAtlas("common-search-border-right")
+                self.ui.tabs.Search.searchbox.Middle:SetAtlas("common-search-border-middle")
             end
 
-            self.searchPanel.searchbox.Left:SetHeight(skin.searchH)
-            self.searchPanel.searchbox.Right:SetHeight(skin.searchH)
-            self.searchPanel.searchbox.Middle:SetHeight(skin.searchH)
+            self.ui.tabs.Search.searchbox.Left:SetHeight(skin.searchH)
+            self.ui.tabs.Search.searchbox.Right:SetHeight(skin.searchH)
+            self.ui.tabs.Search.searchbox.Middle:SetHeight(skin.searchH)
 
             local frame = {"RightEdge","LeftEdge","BottomEdge","TopEdge","BottomRightCorner","BottomLeftCorner","TopRightCorner","TopLeftCorner"}
             if skin.showFrame then

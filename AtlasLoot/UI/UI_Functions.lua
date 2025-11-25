@@ -17,6 +17,9 @@ function AtlasLoot:OnShow()
     --Definition of where I want the loot table to be shown
     --Set the item table to the loot table
     --Show the last displayed loot table
+    self.ui.currentInstanceButton:Show()
+    self.ui.favoritesButton:Show()
+    self.ui.tabs.Loot.TableScrollFrame:Show()
     local lastboss = self.db.profile.LastBoss[self.Expac]
     if self.selectedProfile.AutoCurrentInstance and self:ShowInstance() then
         return

@@ -404,8 +404,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
         return
 	end
 
-	--Hide Advanced search if it is up and reshow Querybutton
-	self.searchPanel:Hide()
+	--Hide search for normal loot tables
+	if dataID ~= "SearchResult"  then
+		self.ui.tabs.Search:Hide()
+	end
 
 	--Hide Map and reshow lootbackground
 	self.ui.tabs.Map:Hide()
