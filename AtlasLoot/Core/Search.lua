@@ -968,9 +968,6 @@ function AtlasLoot:InitializeSearch()
         self.CurrentType = "Search"
         self:ShowSearchResult()
         self:ScrollFrameUpdate()
-        self.ui.tabs.Loot.TableScrollFrame:Hide()
-        self.ui.currentInstanceButton:Hide()
-        self.ui.favoritesButton:Hide()
     end
 
     function self:AdvancedSearchClose()
@@ -995,10 +992,8 @@ function AtlasLoot:InitializeSearch()
             self:RemoveArgumentContainer()
         end
 
-        local expansionLevels = {60, 70, 80}
-
-        searchPanel.levelmin:SetText(expansionLevels[GetAccountExpansionLevel() + 1] - 5)
-        searchPanel.levelmax:SetText(expansionLevels[GetAccountExpansionLevel() + 1])
+        searchPanel.levelmin:SetText("")
+        searchPanel.levelmax:SetText("")
         searchPanel.ilevelmin:SetText("")
         searchPanel.ilevelmax:SetText("")
 
