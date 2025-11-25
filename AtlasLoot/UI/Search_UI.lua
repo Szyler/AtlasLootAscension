@@ -101,7 +101,7 @@ function AtlasLoot:CreateAdvancedSearchFrame()
 
     searchPanel.useleveltick = CreateFrame("CheckButton", "AtlasLoot_Search_LevelToggle", searchPanel, "ChatConfigCheckButtonTemplate")
     searchPanel.useleveltick:SetSize(20, 20)
-    searchPanel.useleveltick:SetPoint("TOPLEFT", searchPanel.levelmin, "BOTTOMLEFT", 0, -5)
+    searchPanel.useleveltick:SetPoint("TOPLEFT", searchPanel.levelmin, "BOTTOMLEFT", -5, -5)
     searchPanel.useleveltick.title = searchPanel.useleveltick:CreateFontString(nil, "ARTWORK", "GameFontNormal")
     searchPanel.useleveltick.title:SetText("Use Current Lv")
     searchPanel.useleveltick.title:SetPoint("LEFT", searchPanel.useleveltick, "RIGHT", 10, 0)

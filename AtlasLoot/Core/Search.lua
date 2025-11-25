@@ -960,6 +960,7 @@ function AtlasLoot:InitializeSearch()
     function self:AdvancedSearchShow()
         -- Hide all elements that could be in the AtlasTable
         self:ToggleNavigationButtonsVisibility()
+        self.ui.tabs.currentTab = "Search"
 
         -- Hide the Filter Check-Box
         self.ui.filterButton:Hide()

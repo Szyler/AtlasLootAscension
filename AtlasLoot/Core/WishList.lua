@@ -194,8 +194,9 @@ Main panel wishlist button
  ]]
 function AtlasLoot:WishListButton(btn, show, buttonclick)
 	if buttonclick == "RightButton" then
-		self:ShowWishListDropDown(btn, show, "Enable")
+		self:WishListOptionsOpen(btn)
 	elseif buttonclick == "LeftButton" then
+		self.ui.tabs.currentTab = "Wishlist"
 		if AtlasLootWishList.Own[1] then
 			local listNum = AtlasLootWishList.Options[playerName].DefaultWishList
 			if not AtlasLootWishList[listNum[1]][listNum[3]] then listNum[3] = 1 end
@@ -246,27 +247,6 @@ local function wishListSettings()
 	}
 	return settings
 
-end
---[[
-AtlasLoot:ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, button, show)
-Show the dropdownlist with the wishlists
-]]
-function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
-	if AtlasLootWishList.Options[playerName].UseDefaultWishlist == true and panelButton ~= "Enable" then
-		self:AddItemToWishList("Own", AtlasLootWishList.Options[playerName].DefaultWishList[3])
-		return
-	else
-		local menuList = {
-			{
-				{text = AL["Own Wishlists"], "value", "OwnWishlists", "hasArrow", true},
-				{text = AL["Shared Wishlists"], "value", "SharedWishlists", "hasArrow", true},
-				{text = AL["Add Wishlist"], func = function() self:AddWishList() end},
-				{text = AL["Settings"], value = "Settings", hasArrow = true},
-			},
-			{}}
-		menuList[2] = wishListSettings()
-	self:OpenDewdropMenu(btn, menuList)
-	end
 end
 
 --[[
@@ -374,18 +354,18 @@ AtlasLoot:WishListOptionsOpen:
 Constructs the wishlist options category menu.
 ]]
 function AtlasLoot:WishListOptionsOpen(button)
-	local menuList = {
-		{
+	local menuList = {{
 			{text = AL["Add Wishlist"], func = function() self:AddWishList() end},
-			{text = AL["Edit Wishlist"], func = function() self:EditWishList() end},
-			{text = AL["Sort Wishlist"], func = function() self:SortWishList(true,self.ui.tabs.Loot.TableScrollFrame.tablenum) end},
+			{text = AL["Edit Wishlist"], func = function() self:EditWishList() end, showOnCondition = self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList"},
+			{text = AL["Sort Wishlist"], func = function() self:SortWishList(true,self.ui.tabs.Loot.TableScrollFrame.tablenum) end,  showOnCondition = self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList"},
 			{text = AL["Copy Wishlist To Own"], func = function() self:CloneSharedWishList() end, showOnCondition = self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList.Show.ListType == "Shared"},
 			{text = AL["Make Wishlist Default"], func = function() self:SetDefaultWishList() end, showOnCondition = self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList.Show.ListType == "Own"},
-			{text = AL["Delete Wishlist"], func = function() self:DeleteWishList() end},
-			{text = AL["Settings"], value = "Settings", hasArrow = true},
-		},{}}
+			{text = AL["Delete Wishlist"], func = function() self:DeleteWishList() end,  showOnCondition = self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList"},
+			{text = AL["Settings"], value = "Settings", hasArrow = true}
+	}}
+
 	menuList[2] = wishListSettings()
-	self:OpenDewdropMenu(button, menuList)
+	self:OpenDewdropMenu(button, menuList, otherOptions, settingsOption)
 end
 
 -- **********************************************************************

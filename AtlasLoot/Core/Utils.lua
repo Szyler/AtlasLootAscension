@@ -609,9 +609,10 @@ function AtlasLoot:GetTooltipItemInfo(link, bag, slot)
     return binds
 end
 
-function AtlasLoot:SetGameTooltip(button, text)
+function AtlasLoot:SetGameTooltip(button, text, bottom)
+	local anchor = bottom or "ANCHOR_TOPLEFT"
 	GameTooltip:ClearLines()
-	GameTooltip:SetOwner(button, "ANCHOR_TOPLEFT")
+	GameTooltip:SetOwner(button, anchor)
 	if type(text) == "table" then
 		for _, textLine in pairs(text) do
 			GameTooltip:AddLine(textLine)

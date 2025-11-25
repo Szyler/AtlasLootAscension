@@ -51,12 +51,20 @@ function AtlasLoot:InitializeUI()
         {
             name = "Wishlist",
             atlas = "poi-workorders",
-            onClick = function(button, btnclick)self:WishListButton(button,true,btnclick) end
+            onClick = function(button, btnclick)self:WishListButton(button,true,btnclick) end,
+            onEnter = function(button)
+                self:SetGameTooltip(button,AL["Right Click to view options"], "ANCHOR_BOTTOMRIGHT")
+            end,
+            onLeave = function() GameTooltip:Hide() end,
         },
         {
             name = "Map",
             atlas = "poi-islands-table",
             onClick = function(...) self:MapButtonClick(...) end,
+            onEnter = function(button)
+                self:SetGameTooltip(button,AL["Right Click to select the map"], "ANCHOR_BOTTOMRIGHT")
+            end,
+            onLeave = function() GameTooltip:Hide() end,
         },
         {
             name = "Search",
@@ -92,13 +100,17 @@ function AtlasLoot:InitializeUI()
         end
 
         newTab:SetScript("OnShow", function()
-            self:SetUITab(tab.name)
-            
+            self:SetUITab()
         end)
-
+        newTab.tabButton:SetScript("OnEnter", function(...)
+            if tab.onEnter then tab.onEnter(...) end
+        end)
+        newTab.tabButton:SetScript("OnLeave", function(...)
+            if tab.onLeave then tab.onLeave(...) end
+        end)
         newTab.tabButton:SetScript("OnClick", function(button, buttonClick)
-            self:SetUITab(tab.name)
             if tab.onClick then tab.onClick(button, buttonClick) end
+            self:SetUITab()
         end)
 
         self.ui.tabs[tab.name] = newTab
@@ -108,7 +120,9 @@ function AtlasLoot:InitializeUI()
     for _, tab in ipairs(self.ui.tabList) do
         addTab(tab)
     end
-    self:SetUITab(self.ui.tabList[1].name)
+
+    self.ui.tabs.currentTab = self.ui.tabList[1].name
+    self:SetUITab()
 
     --Loot Background
     self.ui.tabs.Loot:SetSize(770,515)
@@ -201,20 +215,13 @@ function AtlasLoot:InitializeUI()
     self.ui.learnSpellbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
     --------------------------------------- Wish list buttons ---------------------------------------
-
-    -- Wishlist Options button
-    self.ui.wishlistOptionsButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", self.itemframe, "OptionsButtonTemplate")
-    self.ui.wishlistOptionsButton:SetPoint("BOTTOM", self.itemframe, "BOTTOM",-50,5)
-    self.ui.wishlistOptionsButton:SetText(AL["Options"])
-    self.ui.wishlistOptionsButton:SetScript("OnClick", function(button) self:WishListOptionsOpen(button) end)
-
-        -- Wishlist Item Lock button
+    -- Wishlist Item Lock button
     self.ui.wishlistLockButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", self.itemframe)
-    self.ui.wishlistLockButton:SetSize(50,50)
-    self.ui.wishlistLockButton:SetPoint("BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",15,15)
+    self.ui.wishlistLockButton:SetSize(55,55)
+    self.ui.wishlistLockButton:SetPoint("BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",35,0)
     self.ui.wishlistLockButton.IconAtlas = self.ui.wishlistLockButton:CreateTexture(nil, "ARTWORK")
-    self.ui.wishlistLockButton.IconAtlas:SetPoint("LEFT", 10, 2)
-    self.ui.wishlistLockButton.IconAtlas:SetSize(30,30)
+    self.ui.wishlistLockButton.IconAtlas:SetPoint("CENTER", 0, 0)
+    self.ui.wishlistLockButton.IconAtlas:SetSize(35,35)
     self.ui.wishlistLockButton.IconAtlas:SetAtlas("spell-list-locked")
     self.ui.wishlistLockButton:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
     self.ui.wishlistLockButton:SetScript("OnClick", function(button) self:WishListItemLockStateClick() end)
@@ -236,15 +243,36 @@ function AtlasLoot:InitializeUI()
 	end
 
     -- Wishlist Share button
-    self.ui.wishlistShareButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", self.itemframe, "OptionsButtonTemplate")
-    self.ui.wishlistShareButton:SetPoint("BOTTOM", self.ui.wishlistOptionsButton, "BOTTOM",100,0)
-    self.ui.wishlistShareButton:SetText(AL["Share"])
-    self.ui.wishlistShareButton:SetScript("OnClick", function(button) self:ShareMenu(button) end)
+    self.ui.wishlistShareButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", self.itemframe)
+    self.ui.wishlistShareButton:SetPoint("LEFT", self.ui.wishlistLockButton, "RIGHT",-15,-1.1)
+    self.ui.wishlistShareButton:SetSize(100,50)
+    self.ui.wishlistShareButton.IconAtlas = self.ui.wishlistShareButton:CreateTexture(nil, "ARTWORK")
+    self.ui.wishlistShareButton.IconAtlas:SetPoint("CENTER", 0, 0)
+    self.ui.wishlistShareButton.IconAtlas:SetSize(66,35)
+    self.ui.wishlistShareButton.IconAtlas:SetAtlas("communities-create-button-wow-up")
+    self.ui.wishlistShareButton:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
+        self.ui.wishlistShareButton:SetScript("OnEnter", function(button)
+        self:SetGameTooltip(button,AL["Share wishlist"])
+    end)
+    self.ui.wishlistShareButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
+    self.ui.wishlistShareButton:SetScript("OnMouseDown", function(button)
+        button.IconAtlas:SetAtlas("communities-create-button-wow-down")
+        self:ShareMenu(button)
+    end)
+    self.ui.wishlistShareButton:SetScript("OnMouseUp", function(button)
+        button.IconAtlas:SetAtlas("communities-create-button-wow-up")
+    end)
 
     -- Wishlist Share button
-    self.ui.wishlistLearnVanityButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Vanity_Learn", self.itemframe, "OptionsButtonTemplate")
-    self.ui.wishlistLearnVanityButton:SetPoint("BOTTOM", self.ui.wishlistShareButton, "BOTTOM",100,0)
+    self.ui.wishlistLearnVanityButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Vanity_Learn", self.itemframe)
+    self.ui.wishlistLearnVanityButton:SetPoint("LEFT", self.ui.wishlistShareButton, "RIGHT",-15,0)
     self.ui.wishlistLearnVanityButton:SetText("Get Items")
+    self.ui.wishlistLearnVanityButton:SetSize(55,55)
+    self.ui.wishlistLearnVanityButton.IconAtlas = self.ui.wishlistLearnVanityButton:CreateTexture(nil, "ARTWORK")
+    self.ui.wishlistLearnVanityButton.IconAtlas:SetPoint("CENTER", 0, 0)
+    self.ui.wishlistLearnVanityButton.IconAtlas:SetSize(35,35)
+    self.ui.wishlistLearnVanityButton.IconAtlas:SetAtlas("bonusloot-chest")
+    self.ui.wishlistLearnVanityButton:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
     self.ui.wishlistLearnVanityButton:SetScript("OnClick", function() self:BatchRequestVanity(self.vanityItems, true) end)
     self.ui.wishlistLearnVanityButton:SetScript("OnEnter", function(button)
         self:SetGameTooltip(button,AL["Learn/Recive all the vanity items on this page"])
@@ -262,12 +290,10 @@ function AtlasLoot:InitializeUI()
 
     function self:ToogleWishListButtons(show)
         if show then
-            self.ui.wishlistOptionsButton:Show()
             self.ui.wishlistLearnVanityButton:Show()
             self.ui.wishlistShareButton:Show()
             self.ui.wishlistLockButton:Show()
         else
-            self.ui.wishlistOptionsButton:Hide()
             self.ui.wishlistLearnVanityButton:Hide()
             self.ui.wishlistShareButton:Hide()
             self.ui.wishlistLockButton:Hide()

@@ -17,9 +17,7 @@ function AtlasLoot:OnShow()
     --Definition of where I want the loot table to be shown
     --Set the item table to the loot table
     --Show the last displayed loot table
-    self.ui.currentInstanceButton:Show()
-    self.ui.favoritesButton:Show()
-    self.ui.tabs.Loot.TableScrollFrame:Show()
+    self.ui.tabs.currentTab = "Loot"
     local lastboss = self.db.profile.LastBoss[self.Expac]
     if self.selectedProfile.AutoCurrentInstance and self:ShowInstance() then
         return
@@ -217,15 +215,18 @@ function AtlasLoot:FavoritesOnClick(button, buttonClick)
     end
 end
 
-function AtlasLoot:SetUITab(name)
+function AtlasLoot:SetUITab()
     for _, tab in pairs(self.ui.tabs) do
-        if tab.name ~= name then
-            tab.tabButton:SetChecked(false)
-            tab.tabButton:UpdateButton()
+        if type(tab) ~= "string" then
+            if tab.name == self.ui.tabs.currentTab then
+                self.ui.tabs[self.ui.tabs.currentTab].tabButton:SetChecked(true)
+                self.ui.tabs[self.ui.tabs.currentTab].tabButton:UpdateButton()
+            else
+                tab.tabButton:SetChecked(false)
+                tab.tabButton:UpdateButton()
+            end
         end
     end
-    self.ui.tabs[name].tabButton:SetChecked(true)
-    self.ui.tabs[name].tabButton:UpdateButton()
 end
 
 function AtlasLoot:FrameOpaqueToogle()

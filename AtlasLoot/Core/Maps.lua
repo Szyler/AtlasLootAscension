@@ -225,6 +225,7 @@ end
 
 function AtlasLoot:MapButtonClick(button, buttonClick)
     if buttonClick == "LeftButton" then
+        self.ui.tabs.currentTab = "Map"
         self:MapOnShow(self.CurrentMap, self.MapNum or 1)
     else
         self:MapMenuOpen(button)
