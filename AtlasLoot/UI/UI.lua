@@ -209,20 +209,25 @@ function AtlasLoot:InitializeUI()
     self.ui.wishlistOptionsButton:SetScript("OnClick", function(button) self:WishListOptionsOpen(button) end)
 
         -- Wishlist Item Lock button
-    self.ui.wishlistLockButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", self.itemframe, "OptionsButtonTemplate")
-    self.ui.wishlistLockButton:SetPoint("BOTTOM", self.ui.wishlistOptionsButton, "BOTTOM",-100,0)
+    self.ui.wishlistLockButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", self.itemframe)
+    self.ui.wishlistLockButton:SetSize(50,50)
+    self.ui.wishlistLockButton:SetPoint("BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",15,15)
+    self.ui.wishlistLockButton.IconAtlas = self.ui.wishlistLockButton:CreateTexture(nil, "ARTWORK")
+    self.ui.wishlistLockButton.IconAtlas:SetPoint("LEFT", 10, 2)
+    self.ui.wishlistLockButton.IconAtlas:SetSize(30,30)
+    self.ui.wishlistLockButton.IconAtlas:SetAtlas("spell-list-locked")
+    self.ui.wishlistLockButton:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
     self.ui.wishlistLockButton:SetScript("OnClick", function(button) self:WishListItemLockStateClick() end)
     self.ui.wishlistLockButton:SetScript("OnEnter", function(button)
         local text = {
-            "Toggle Item Moving/Divider Removel",
+            "Toggle Item Lock",
+            "When unlocked",
             "Left Click to move item up",
             "Right Click to move item down",
-            "Alt + Left Click to add a Custom Header",
         }
         self:SetGameTooltip(button, text)
     end)
     self.ui.wishlistLockButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
-    self.ui.wishlistLockButton:SetText("Locked")
     -- Is wishlist item disabled on load or not
 	if AtlasLootWishList.Options[UnitName("player")].AutoSortWishlist then
 		self.ui.wishlistLockButton:Disable()

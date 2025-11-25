@@ -36,13 +36,10 @@ AtlasLoot.wishListLockState = "Locked"
 function AtlasLoot:WishListItemLockStateClick()
 	    if self.wishListLockState == "Locked" then
             self.wishListLockState = "Unlocked"
-            self.ui.wishlistLockButton:SetText("Unlocked")
-		elseif self.wishListLockState == "Unlocked" then
-            self.wishListLockState = "Divider"
-            self.ui.wishlistLockButton:SetText("Delete Divider")
+            self.ui.wishlistLockButton.IconAtlas:SetAtlas("spell-list-unlocked")
 		else
 			self.wishListLockState = "Locked"
-            self.ui.wishlistLockButton:SetText("Locked")
+            self.ui.wishlistLockButton.IconAtlas:SetAtlas("spell-list-locked")
         end
         self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 end
