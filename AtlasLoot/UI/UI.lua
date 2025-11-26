@@ -49,15 +49,6 @@ function AtlasLoot:InitializeUI()
             onClick = function(...) self:OnShow(...) end,
         },
         {
-            name = "Wishlist",
-            atlas = "poi-workorders",
-            onClick = function(button, btnclick)self:WishListButton(button,true,btnclick) end,
-            onEnter = function(button)
-                self:SetGameTooltip(button,AL["Right Click to view options"], "ANCHOR_BOTTOMRIGHT")
-            end,
-            onLeave = function() GameTooltip:Hide() end,
-        },
-        {
             name = "Map",
             atlas = "poi-islands-table",
             onClick = function(...) self:MapButtonClick(...) end,
@@ -67,12 +58,22 @@ function AtlasLoot:InitializeUI()
             onLeave = function() GameTooltip:Hide() end,
         },
         {
+            name = "Wishlist",
+            atlas = "poi-workorders",
+            onClick = function(button, btnclick)self:WishListButton(button,true,btnclick) end,
+            onEnter = function(button)
+                self:SetGameTooltip(button,AL["Right Click to view options"], "ANCHOR_BOTTOMRIGHT")
+            end,
+            onLeave = function() GameTooltip:Hide() end,
+        },
+
+        {
             name = "Search",
             atlas = "communities-icon-searchmagnifyingglass",
             onClick = function(...) self:AdvancedSearchShow(...) end,
         },
-
     }
+
     self.ui.tabs = {}
 
     local lastTab
