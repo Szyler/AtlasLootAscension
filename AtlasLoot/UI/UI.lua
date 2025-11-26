@@ -70,7 +70,7 @@ function AtlasLoot:InitializeUI()
         {
             name = "Search",
             atlas = "communities-icon-searchmagnifyingglass",
-            onClick = function(...) self:AdvancedSearchShow(...) end,
+            onClick = function(...) self:SearchShow(...) end,
         },
     }
 
@@ -133,8 +133,6 @@ function AtlasLoot:InitializeUI()
     self.ui.tabs.Loot:SetScript("OnMouseDown",function(button, buttonClick)
         if self.ui.backbutton:IsVisible() and buttonClick == "RightButton" then
             self:BackButton_OnClick()
-        elseif self.ui.tabs.Search:IsVisible() and buttonClick == "RightButton" then
-            self:AdvancedSearchClose()
         end
         self.Dewdrop:Close()
     end)

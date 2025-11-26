@@ -743,43 +743,6 @@ function AtlasLoot:ShowSearchResult()
     self:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1)
 end
 
-function AtlasLoot:Search(text)
-    if not text then
-        return
-    end
-    text = strtrim(text)
-    if text == "" then
-        return
-    end
-
-    if self.selectedProfile.SearchAscensionDB then
-        return OpenAscensionDBURL("?search="..text)
-    end
-
-    -- Decide if we need load all modules or just specified ones
-    local allDisabled = true
-    if allDisabled then
-        for _, module in pairs(self.selectedProfile.SearchOn) do
-            if module and module[1] or self.selectedProfile.SearchAscensionVanity then
-                allDisabled = false
-                break
-            end
-        end
-    end
-    if allDisabled then
-        DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED .. AL["AtlasLoot"] .. ": " .. self.Colors.WHITE .. AL["You don't have any module selected to search on. Right click search to select modules the more selected the longer it will take to search"])
-        return
-    end
-
-    for _, cat in pairs(self.selectedProfile.SearchOn) do
-        if type(cat) == "table" and cat[1] and not IsAddOnLoaded(cat[2]) then
-            LoadAddOn(cat[2])
-        end
-    end
-
-    self:DoSearch(text)
-end
-
 function AtlasLoot:ShowSearchOptions(button, point)
     if self.Dewdrop:IsOpen(button) then
         self.Dewdrop:Close(1)
@@ -946,18 +909,18 @@ function AtlasLoot:InitializeSearch()
     }
 
     function self:SearchSetup()
-        self:AdvancedSearchRegister(searchPanel.equipbtn, searchMenus.Equip)
+        self:SearchRegister(searchPanel.equipbtn, searchMenus.Equip)
 
         for i = 1, MAX_ARGUMENTS do
-            self:AdvancedSearchArgumentRegister(searchPanel.main[i], i, searchArguments.Stats)
-            self:AdvancedSearchArgumentRegister(searchPanel.sub[i], i, searchArguments.Operators)
+            self:SearchArgumentRegister(searchPanel.main[i], i, searchArguments.Stats)
+            self:SearchArgumentRegister(searchPanel.sub[i], i, searchArguments.Operators)
         end
 
         -- Reset Search options to defualt
-        self:AdvancedSearchReset()
+        self:SearchReset()
     end
 
-    function self:AdvancedSearchShow()
+    function self:SearchShow()
         -- Hide all elements that could be in the AtlasTable
         self:ToggleNavigationButtonsVisibility()
         self.ui.tabs.currentTab = "Search"
@@ -971,15 +934,7 @@ function AtlasLoot:InitializeSearch()
         self:ScrollFrameUpdate()
     end
 
-    function self:AdvancedSearchClose()
-        searchPanel:Hide()
-        self.itemframe:Show()
-        self:ItemFrameRefresh()
-        self.ui.currentInstanceButton:Show()
-        self.ui.favoritesButton:Show()
-    end
-
-    function self:AdvancedSearchReset()
+    function self:SearchReset()
         searchOptions = {
             ["equip"] = "",
             ["type"] = "",
@@ -1056,7 +1011,7 @@ function AtlasLoot:InitializeSearch()
         ["difficulty"] = "Select Difficulty"
     }
 
-    function self:AdvancedSearchMenuClick(Object, VariableToSet, VariableValue, ChildMenu, ChildMenuRegister)
+    function self:SearchMenuClick(Object, VariableToSet, VariableValue, ChildMenu, ChildMenuRegister)
         -- Setups child menus and sets search options to default
         if (ChildMenu ~= nil) then
             if (ChildMenuRegister == "Disable") then
@@ -1074,7 +1029,7 @@ function AtlasLoot:InitializeSearch()
                     return
                 end
             else
-                self:AdvancedSearchRegister(frameMenuList[ChildMenu][1], searchMenus[ChildMenuRegister])
+                self:SearchRegister(frameMenuList[ChildMenu][1], searchMenus[ChildMenuRegister])
                 searchOptions[frameMenuList[ChildMenu][3]] = frameMenuList[ChildMenu][4]
                 frameMenuList[ChildMenu][1]:Enable()
                 frameMenuList[ChildMenu][1]:SetText(frameMenuList[ChildMenu][2])
@@ -1093,7 +1048,7 @@ function AtlasLoot:InitializeSearch()
         Object[1]:SetText(Object[2])
     end
 
-    function self:AdvancedSearchRegister(DropDownObject, MenuOption)
+    function self:SearchRegister(DropDownObject, MenuOption)
         self.Dewdrop:Register(DropDownObject, 'point', function(parent)
             return "TOP", "BOTTOM"
         end, 'children', function(level, value)
@@ -1105,7 +1060,7 @@ function AtlasLoot:InitializeSearch()
                             if v[1][1] ~= "" then
                                 self.Dewdrop:AddLine("text", v[1][1], "textR", 1, "textG", 0.82, "textB", 0,
                                 "func", function()
-                                    self:AdvancedSearchMenuClick({DropDownObject, v[1][1]}, v[1][2], v[1][3], v[1][4], v[1][5])
+                                    self:SearchMenuClick({DropDownObject, v[1][1]}, v[1][2], v[1][3], v[1][4], v[1][5])
                                 end,
                                 "notCheckable", true, "closeWhenClicked", true)
                             end
@@ -1128,7 +1083,7 @@ function AtlasLoot:InitializeSearch()
                     for k, v in ipairs(value) do
                         self.Dewdrop:AddLine("text", v[1], "textR", 1, "textG", 0.82, "textB", 0,
                         "func", function()
-                            self:AdvancedSearchMenuClick({DropDownObject, v[1]}, v[2], v[3], v[4], v[5])
+                            self:SearchMenuClick({DropDownObject, v[1]}, v[2], v[3], v[4], v[5])
                         end,
                         "notCheckable", true, "closeWhenClicked", true)
                     end
@@ -1137,7 +1092,7 @@ function AtlasLoot:InitializeSearch()
         end, "dontHook", true)
     end
 
-    function self:AdvancedSearchArgumentClick(Object, VariableToSet, VariableValue, IsOperator)
+    function self:SearchArgumentClick(Object, VariableToSet, VariableValue, IsOperator)
         VariableToSet = tonumber(VariableToSet)
         if IsOperator and VariableValue == "reset" then
             searchOptions["arg" .. VariableToSet .. "op"] = ""
@@ -1180,7 +1135,7 @@ function AtlasLoot:InitializeSearch()
         end
     end
 
-    function self:AdvancedSearchArgumentRegister(DropDownObject, ArgumentCount, ArgumentMenu)
+    function self:SearchArgumentRegister(DropDownObject, ArgumentCount, ArgumentMenu)
         self.Dewdrop:Register(DropDownObject, 'point', function(parent)
             return "TOP", "BOTTOM"
         end, 'children', function(level, value)
@@ -1193,12 +1148,12 @@ function AtlasLoot:InitializeSearch()
                             if v[1][3] == "Submenu" then
                                 self.Dewdrop:AddLine("text", v[1][1], "textR", 1, "textG", 0.82, "textB", 0,
                                 "func", function() 
-                                    self:AdvancedSearchArgumentClick({DropDownObject, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
+                                    self:SearchArgumentClick({DropDownObject, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
                                     end,
                                     "notCheckable", true)
                             elseif v[1][1] ~= "" then
                                 self.Dewdrop:AddLine("text", v[1][1], "textR", 1, "textG", 0.82, "textB", 0,
-                                "func", function() self:AdvancedSearchArgumentClick({DropDownObject, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
+                                "func", function() self:SearchArgumentClick({DropDownObject, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
                                 end,
                                 "notCheckable", true)
                             end
@@ -1226,17 +1181,17 @@ function AtlasLoot:InitializeSearch()
                                 -- If an entry to show a submenu
                                 if v[4] == "Header" then
                                     self.Dewdrop:AddLine("text", v[1], "textR", 0.2, "textG", 0.82, "textB", 0.5, "func", function()
-                                        self:AdvancedSearchArgumentClick({DropDownObject, v[1]}, ArgumentCount, v[2], v[3])
+                                        self:SearchArgumentClick({DropDownObject, v[1]}, ArgumentCount, v[2], v[3])
                                         end,
                                         "notCheckable", true)
                                 elseif v[3] == "Submenu" then
                                     self.Dewdrop:AddLine("text", v[1], "textR", 1, "textG", 0.82, "textB", 0, "func", function()
-                                        self:AdvancedSearchArgumentClick({DropDownObject, v[1]}, ArgumentCount, v[2], v[3])
+                                        self:SearchArgumentClick({DropDownObject, v[1]}, ArgumentCount, v[2], v[3])
                                         end,
                                         "notCheckable", true)
                                 else
                                     self.Dewdrop:AddLine("text", v[1], "textR", 1, "textG", 0.82, "textB", 0, "notCheckable", true, "func",
-                                    function() self:AdvancedSearchArgumentClick({DropDownObject, v[1]}, ArgumentCount, v[2], v[3]) end )
+                                    function() self:SearchArgumentClick({DropDownObject, v[1]}, ArgumentCount, v[2], v[3]) end )
                                 end
                             end
                         end
@@ -1249,87 +1204,110 @@ function AtlasLoot:InitializeSearch()
         end, "dontHook", true)
     end
 
-    function self:AdvancedSearch(Text)
-        if not Text then
+    function AtlasLoot:Search(searchString)
+
+            if not searchString then return end
+
+            searchString = strtrim(searchString)
+
+            local function AppendSearchString(toAppend, str)
+                if toAppend ~= "" then
+                    toAppend = toAppend .. "&" .. str
+                    return toAppend
+                end
+
+                return str
+            end
+
+            local function GetTextByName(name)
+                if searchPanel[name] then
+                    return searchPanel[name]:GetText()
+                end
+
+                return nil
+            end
+
+            local function FixRangedSlot(subType)
+                if (subType == "wand" or subType == "gun" or subType == "crossbow") then
+                    return "rangedright"
+                elseif subType == "thrown" then
+                    return "thrown"
+                end
+                return "ranged"
+            end
+
+            if searchOptions.equip ~= "" then
+                if searchOptions.equip == "ranged" and searchOptions.type ~= "" then
+                    searchOptions.equip = FixRangedSlot(searchOptions.type)
+                end
+                searchString = AppendSearchString(searchString, "slot=" .. searchOptions.equip)
+            end
+
+            if searchOptions.type ~= "" and searchOptions.type then
+                searchString = AppendSearchString(searchString, "type=" .. searchOptions.type)
+            end
+
+            if searchOptions.difficulty ~= "" and searchOptions.difficulty ~= 2 then
+                searchString = AppendSearchString(searchString, "dif=" .. searchOptions.difficulty)
+            end
+
+            if(not searchPanel.useleveltick:GetChecked()) then
+                if (GetTextByName("levelmin") and GetTextByName("levelmin") ~= "") then
+                    searchString = AppendSearchString(searchString, "minlvl>=" .. GetTextByName("levelmin"))
+                end
+
+                if (GetTextByName("levelmax") and GetTextByName("levelmax") ~= "") then
+                    searchString = AppendSearchString(searchString, "minlvl<=" .. GetTextByName("levelmax"))
+                end
+            else
+                searchString = AppendSearchString(searchString, "minlvl>=" .. UnitLevel("player"))
+                searchString = AppendSearchString(searchString, "minlvl<=" .. UnitLevel("player"))
+            end
+
+            if (GetTextByName("ilevelmin") and GetTextByName("ilevelmin") ~= "") then
+                searchString = AppendSearchString(searchString, "ilvl>=" .. GetTextByName("ilevelmin"))
+            end
+
+            if (GetTextByName("ilevelmax") and GetTextByName("ilevelmax") ~= "") then
+                searchString = AppendSearchString(searchString, "ilvl<=" .. GetTextByName("ilevelmax"))
+            end
+
+            for i = 1, ACTIVE_ARGUMENT, 1 do
+                if searchOptions["arg" .. i] ~= "" then
+                    local arg = searchPanel.value[i]:GetText()
+                    if searchOptions["arg" .. i .. "op"] == "" then
+                        searchOptions["arg" .. i .. "op"] = ">"
+                        arg = "0"
+                    end
+                    searchString = AppendSearchString(searchString, searchOptions["arg" .. i] .. searchOptions["arg" .. i .. "op"] .. arg)
+                end
+            end
+
+        if self.selectedProfile.SearchAscensionDB then
+            return OpenAscensionDBURL("?search="..searchString)
+        end
+
+        -- Decide if we need load all modules or just specified ones
+        local allDisabled = true
+        if allDisabled then
+            for _, module in pairs(self.selectedProfile.SearchOn) do
+                if module and module[1] or self.selectedProfile.SearchAscensionVanity then
+                    allDisabled = false
+                    break
+                end
+            end
+        end
+        if allDisabled then
+            DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED .. AL["AtlasLoot"] .. ": " .. self.Colors.WHITE .. AL["You don't have any module selected to search on. Right click search to select modules the more selected the longer it will take to search"])
             return
         end
-        Text = strtrim(Text)
-        local advSearchString = Text or ""
 
-        local function AppendSearchString(toAppend, str)
-            if toAppend ~= "" then
-                toAppend = toAppend .. "&" .. str
-                return toAppend
-            end
-
-            return str
-        end
-
-        local function GetTextByName(name)
-            if searchPanel[name] then
-                return searchPanel[name]:GetText()
-            end
-
-            return nil
-        end
-
-        local function FixRangedSlot(subType)
-            if (subType == "wand" or subType == "gun" or subType == "crossbow") then
-                return "rangedright"
-            elseif subType == "thrown" then
-                return "thrown"
-            end
-            return "ranged"
-        end
-
-        if searchOptions.equip ~= "" then
-            if searchOptions.equip == "ranged" and searchOptions.type ~= "" then
-                searchOptions.equip = FixRangedSlot(searchOptions.type)
-            end
-            advSearchString = AppendSearchString(advSearchString, "slot=" .. searchOptions.equip)
-        end
-
-        if searchOptions.type ~= "" and searchOptions.type then
-            advSearchString = AppendSearchString(advSearchString, "type=" .. searchOptions.type)
-        end
-
-        if searchOptions.difficulty ~= "" and searchOptions.difficulty ~= 2 then
-            advSearchString = AppendSearchString(advSearchString, "dif=" .. searchOptions.difficulty)
-        end
-
-        if(not searchPanel.useleveltick:GetChecked()) then
-            if (GetTextByName("levelmin") and GetTextByName("levelmin") ~= "") then
-                advSearchString = AppendSearchString(advSearchString, "minlvl>=" .. GetTextByName("levelmin"))
-            end
-
-            if (GetTextByName("levelmax") and GetTextByName("levelmax") ~= "") then
-                advSearchString = AppendSearchString(advSearchString, "minlvl<=" .. GetTextByName("levelmax"))
-            end
-        else
-            advSearchString = AppendSearchString(advSearchString, "minlvl>=" .. UnitLevel("player"))
-            advSearchString = AppendSearchString(advSearchString, "minlvl<=" .. UnitLevel("player"))
-        end
-
-        if (GetTextByName("ilevelmin") and GetTextByName("ilevelmin") ~= "") then
-            advSearchString = AppendSearchString(advSearchString, "ilvl>=" .. GetTextByName("ilevelmin"))
-        end
-
-        if (GetTextByName("ilevelmax") and GetTextByName("ilevelmax") ~= "") then
-            advSearchString = AppendSearchString(advSearchString, "ilvl<=" .. GetTextByName("ilevelmax"))
-        end
-
-        for i = 1, ACTIVE_ARGUMENT, 1 do
-            if searchOptions["arg" .. i] ~= "" then
-                local arg = searchPanel.value[i]:GetText()
-                if searchOptions["arg" .. i .. "op"] == "" then
-                    searchOptions["arg" .. i .. "op"] = ">"
-                    arg = "0"
-                end
-                advSearchString = AppendSearchString(advSearchString, searchOptions["arg" .. i] .. searchOptions["arg" .. i .. "op"] .. arg)
+        for _, cat in pairs(self.selectedProfile.SearchOn) do
+            if type(cat) == "table" and cat[1] and not IsAddOnLoaded(cat[2]) then
+                LoadAddOn(cat[2])
             end
         end
 
-        self:Search(string.lower(advSearchString))
+        self:DoSearch(searchString)
     end
-
 end

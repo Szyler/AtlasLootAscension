@@ -8,7 +8,7 @@ local backDrop = {
         insets = { left = 4, right = 4, top = 4, bottom = 4 },
     }
 
-function AtlasLoot:CreateAdvancedSearchFrame()
+function AtlasLoot:CreateSearchFrame()
     --Create Main Search Panel
     local searchPanel = self.ui.tabs.Search
     searchPanel:SetPoint("TOPLEFT", self.ui.difficultyScrollFrame, "BOTTOMLEFT", 0, -2)
@@ -25,7 +25,7 @@ function AtlasLoot:CreateAdvancedSearchFrame()
     searchPanel.searchbox:SetSize(230,25)
     searchPanel.searchbox:SetPoint("TOP", searchPanel, "TOP", 0, -15)
     searchPanel.searchbox:SetScript("OnEnterPressed", function(frame)
-        self:AdvancedSearch(frame:GetText())
+        self:Search(frame:GetText())
         frame:ClearFocus()
     end)
     searchPanel.searchbox:SetScript("OnTextChanged", function(frame)
@@ -175,7 +175,7 @@ function AtlasLoot:CreateAdvancedSearchFrame()
         self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 )
     end)
     searchPanel.searchbtn:SetScript("OnClick", function()
-        AtlasLoot:AdvancedSearch(searchPanel.searchbox:GetText())
+        AtlasLoot:Search(searchPanel.searchbox:GetText())
         searchPanel.searchbox:ClearFocus()
     end)
 
