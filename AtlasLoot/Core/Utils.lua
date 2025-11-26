@@ -456,7 +456,7 @@ function AtlasLoot:CreateItemSourceList(overRide)
 	if overRide then elseif not self.selectedProfile.showdropLocationTooltips then return end
 	if overRide or not AtlasLootDB.ItemSources or (AtlasLootDB.ItemSources.Version and AtlasLootDB.ItemSources.Version ~= self.Version) then
 		self:LoadAllModules()
-		AtlasLootDB.ItemSources = {Version = AtlasLoot.Version, List = {}}
+		AtlasLootDB.ItemSources = {Version = self.Version, List = {}}
 		local list = AtlasLootDB.ItemSources.List
 			for dataSource, instance in pairs(AtlasLoot_Data) do
 				for _, boss in pairs(instance) do
