@@ -743,47 +743,37 @@ function AtlasLoot:ShowSearchResult()
     self:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1)
 end
 
-function AtlasLoot:ShowSearchOptions(button, point)
-    if self.Dewdrop:IsOpen(button) then
-        self.Dewdrop:Close(1)
-    else
-        local setOptions = function()
-            self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize, "text", self.Colors.WHITE.."Search Categories", "isTitle", true, "notCheckable", true)
-            for expac, cat in pairs(searchCategories) do
-                self.Dewdrop:AddLine( "text", self.Colors.YELLOW..cat.Name, "isTitle", true, "notCheckable", true, 'textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize )
-                    for _, data in ipairs(cat) do
-                        self.selectedProfile.SearchOn[data[2]] = self.selectedProfile.SearchOn[data[2]] or {false, data[3]}
-                        self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,
-                        'isRadio', true,
-                        "text", data[1],
-                        "checked", self.selectedProfile.SearchOn[data[2]] and self.selectedProfile.SearchOn[data[2]][1],
-                        "func", function()
-                        self.selectedProfile.SearchOn[data[2]][1] = not self.selectedProfile.SearchOn[data[2]][1]
-                        end)
-                    end
+function AtlasLoot:ShowSearchOptions(button)
+    local menuList = {{
+			{text = AL["Search Categories"], func = function() self:AddWishList() end, isTitle = true},
+	}}
+
+    for _, cat in pairs(searchCategories) do
+            table.insert(menuList[1], {text = cat.Name, isTitle = true})
+            for _, data in ipairs(cat) do
+                self.selectedProfile.SearchOn[data[2]] = self.selectedProfile.SearchOn[data[2]] or {false, data[3]}
+                table.insert(menuList[1],
+                {isRadio = true, text = data[1], checked = self.selectedProfile.SearchOn[data[2]] and self.selectedProfile.SearchOn[data[2]][1],
+                func = function() self.selectedProfile.SearchOn[data[2]][1] = not self.selectedProfile.SearchOn[data[2]][1]
+                end})
             end
-            self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize, "text", AL["Search options"], "isTitle", true, "notCheckable", true)
-            self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize, "text", AL["Ascension Vanity Collection"], 'isRadio', true, "checked", self.selectedProfile.SearchAscensionVanity, "tooltipTitle", AL["Ascension Vanity Collection"], "tooltipText",
-            AL["If checked, AtlasLoot will search Ascension Vanity Collection"], "func", function()
-            self.selectedProfile.SearchAscensionVanity = not self.selectedProfile.SearchAscensionVanity
-            end)
-            self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize, "text", AL["Partial matching"], 'isRadio', true, "checked", self.selectedProfile.PartialMatching, "tooltipTitle", AL["Partial matching"], "tooltipText",
-                AL["If checked, AtlasLoot search item names for a partial match."], "func", function()
-                self.selectedProfile.PartialMatching = not self.selectedProfile.PartialMatching
-            end)
-            self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize, "text", AL["Search AscensionDB"], 'isRadio', true, "checked", self.selectedProfile.SearchAscensionDB, "tooltipTitle", AL["Partial matching"], "tooltipText",
-                AL["If checked, AtlasLoot will open a browser window and search AscensionDB"], "func", function()
-                self.selectedProfile.SearchAscensionDB = not self.selectedProfile.SearchAscensionDB
-            end)
-        end
-        self.Dewdrop:Open(button, 'point', function(parent)
-            if point then
-                return point[1] , point[2]
-            else
-                return "BOTTOMLEFT", "BOTTOMRIGHT"
-            end
-        end, "children", setOptions)
     end
+
+    local searchOptionsItems = {{
+        { text = AL["Search options"], isTitle = true },
+        { text = AL["Ascension Vanity Collection"], isRadio = true, checked = self.selectedProfile.SearchAscensionVanity,
+          tooltip = AL["If checked, AtlasLoot will search Ascension Vanity Collection"],
+          func = function() self.selectedProfile.SearchAscensionVanity = not self.selectedProfile.SearchAscensionVanity end },
+        { text = AL["Partial matching"], isRadio = true, checked = self.selectedProfile.PartialMatching,
+          tooltip = AL["If checked, AtlasLoot search item names for a partial match."],
+          func = function() self.selectedProfile.PartialMatching = not self.selectedProfile.PartialMatching end },
+        { text = AL["Search AscensionDB"], isRadio = true, checked = self.selectedProfile.SearchAscensionDB,
+          tooltip = AL["If checked, AtlasLoot will open a browser window and search AscensionDB"],
+          func = function() self.selectedProfile.SearchAscensionDB = not self.selectedProfile.SearchAscensionDB end 
+        },
+    }}
+
+    self:OpenDewdropMenu(button, menuList, searchOptionsItems)
 end
 
 local MAX_ARGUMENTS = 6
