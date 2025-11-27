@@ -223,7 +223,7 @@ function AtlasLoot:MapMenuOpen(frame)
     self:OpenDewdropMenu(frame, zones, menuList)
 end
 
-function AtlasLoot:MapButtonClick(button, buttonClick)
+function AtlasLoot:ShowMapTab(button, buttonClick)
     if buttonClick == "LeftButton" then
         self.ui.tabs.currentTab = "Map"
         self:MapOnShow(self.CurrentMap, self.MapNum or 1)

@@ -3,7 +3,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 --[[
 Functions:
-AtlasLoot:OnShow()
+AtlasLoot:ShowLootTab()
 AtlasLoot:DewDropClick(tablename, text, tabletype, tabletype2)
 AtlasLoot:DewDropSubMenuClick(tablename)
 AtlasLoot:DewdropExpansionMenuClick(tablename, text)
@@ -13,7 +13,7 @@ AtlasLoot:DewdropModuleMenuOpen()
 ]]
 
 --Called whenever the loot browser is shown and sets up buttons and loot tables
-function AtlasLoot:OnShow()
+function AtlasLoot:ShowLootTab()
     --Definition of where I want the loot table to be shown
     --Set the item table to the loot table
     --Show the last displayed loot table
@@ -227,6 +227,11 @@ function AtlasLoot:SetUITab()
             end
         end
     end
+end
+
+function AtlasLoot:ShowTab(tabName)
+    if not self.ui.tabs[tabName] then return end
+    self.ui.tabs[tabName]:onClick()
 end
 
 function AtlasLoot:FrameOpaqueToogle()

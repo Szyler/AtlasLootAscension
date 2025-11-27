@@ -24,9 +24,7 @@ function AtlasLoot:InitializeUI()
     self.ui:EnableKeyboard(true)
     self.ui:SetToplevel(true)
     self.ui:Hide()
-    self.ui:SetScript("OnShow", function()
-        self:OnShow()
-    end)
+    self.ui:SetScript("OnShow", function() self:ShowTab(self.ui.tabs.currentTab) end)
     self.ui:SetScript("OnMouseDown", function()
         self.Dewdrop:Close()
         self.ui.tabs.Search.searchbox:ClearFocus()
@@ -46,12 +44,12 @@ function AtlasLoot:InitializeUI()
         {
             name = "Loot",
             atlas = "vignettelootelite",
-            onClick = function(...) self:OnShow(...) end,
+            onClick = function(...) self:ShowLootTab(...) end,
         },
         {
             name = "Map",
             atlas = "poi-islands-table",
-            onClick = function(...) self:MapButtonClick(...) end,
+            onClick = function(...) self:ShowMapTab(...) end,
             onEnter = function(button)
                 self:SetGameTooltip(button,AL["Right Click to select the map"], "ANCHOR_BOTTOMRIGHT")
             end,
@@ -60,7 +58,7 @@ function AtlasLoot:InitializeUI()
         {
             name = "Wishlist",
             atlas = "poi-workorders",
-            onClick = function(button, btnclick)self:WishListButton(button,true,btnclick) end,
+            onClick = function(button, btnclick)self:ShowWishListTab(button,true,btnclick) end,
             onEnter = function(button)
                 self:SetGameTooltip(button,AL["Right Click to view options"], "ANCHOR_BOTTOMRIGHT")
             end,
@@ -70,7 +68,7 @@ function AtlasLoot:InitializeUI()
         {
             name = "Search",
             atlas = "communities-icon-searchmagnifyingglass",
-            onClick = function(...) self:SearchShow(...) end,
+            onClick = function(...) self:ShowSearchTab(...) end,
         },
     }
 
@@ -110,9 +108,10 @@ function AtlasLoot:InitializeUI()
             if tab.onLeave then tab.onLeave(...) end
         end)
         newTab.tabButton:SetScript("OnClick", function(button, buttonClick)
-            if tab.onClick then tab.onClick(button, buttonClick) end
+            newTab.onClick(button, buttonClick)
             self:SetUITab()
         end)
+        if tab.onClick then newTab.onClick = function(...) tab.onClick(...) end end
 
         self.ui.tabs[tab.name] = newTab
         lastTab = newTab

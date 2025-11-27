@@ -910,7 +910,7 @@ function AtlasLoot:InitializeSearch()
         self:SearchReset()
     end
 
-    function self:SearchShow()
+    function self:ShowSearchTab()
         -- Hide all elements that could be in the AtlasTable
         self:ToggleNavigationButtonsVisibility()
         self.ui.tabs.currentTab = "Search"

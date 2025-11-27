@@ -189,10 +189,10 @@ function AtlasLoot:ShareWishList()
 end
 
 --[[ 
-AtlasLoot:WishListButton
+AtlasLoot:ShowWishListTab
 Main panel wishlist button
  ]]
-function AtlasLoot:WishListButton(btn, show, buttonclick)
+function AtlasLoot:ShowWishListTab(btn, show, buttonclick)
 	if buttonclick == "RightButton" then
 		self:WishListOptionsOpen(btn)
 	elseif buttonclick == "LeftButton" then
