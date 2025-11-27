@@ -429,13 +429,21 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local dataSource = _G[dataSource_backup] or AtlasLoot_Data
 	if not dataSource[dataID] then return end
 	-- Enable map button if there is a map for this table.
-	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID] and dataSource[dataID].Map then
-		self.ui.tabs.Map.tabButton:Enable()
+	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" then
+		if dataSource[dataID] and dataSource[dataID].Map then
 		-- Stops map reseting to default while still in the same raid/instance table
-		if self.itemframe.refresh == nil or dataID ~= self.itemframe.refresh[1] then
-			self.MapNum = 1
-			self.CurrentMap = dataSource[dataID].Map
+			if self.itemframe.refresh == nil or dataID ~= self.itemframe.refresh[1] then
+				self.MapNum = 1
+				self.CurrentMap = dataSource[dataID].Map
+			end
+		else
+			self.CurrentMap = nil
+			self.MapNum = nil
 		end
+	end
+
+	if self.CurrentMap then
+		self.ui.tabs.Map.tabButton:Enable()
 	else
 		self.ui.tabs.Map.tabButton:Disable()
 	end
