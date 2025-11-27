@@ -224,10 +224,10 @@ function AtlasLoot:MapMenuOpen(frame)
 end
 
 function AtlasLoot:ShowMapTab(button, buttonClick)
-    if buttonClick == "LeftButton" then
+    if buttonClick == "RightButton" then
+        self:MapMenuOpen(button)
+    else
         self.ui.tabs.currentTab = "Map"
         self:MapOnShow(self.CurrentMap, self.MapNum or 1)
-    else
-        self:MapMenuOpen(button)
     end
 end

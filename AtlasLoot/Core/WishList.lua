@@ -192,9 +192,9 @@ end
 AtlasLoot:ShowWishListTab
 Main panel wishlist button
  ]]
-function AtlasLoot:ShowWishListTab(btn, show, buttonclick)
+function AtlasLoot:ShowWishListTab(button, buttonclick, show)
 	if buttonclick == "RightButton" then
-		self:WishListOptionsOpen(btn)
+		self:WishListOptionsOpen(button)
 	elseif buttonclick == "LeftButton" then
 		self.ui.tabs.currentTab = "Wishlist"
 		if AtlasLootWishList.Own[1] then

@@ -58,13 +58,12 @@ function AtlasLoot:InitializeUI()
         {
             name = "Wishlist",
             atlas = "poi-workorders",
-            onClick = function(button, btnclick)self:ShowWishListTab(button,true,btnclick) end,
+            onClick = function(button, buttonClick)self:ShowWishListTab(button,buttonClick,true) end,
             onEnter = function(button)
                 self:SetGameTooltip(button,AL["Right Click to view options"], "ANCHOR_BOTTOMRIGHT")
             end,
             onLeave = function() GameTooltip:Hide() end,
         },
-
         {
             name = "Search",
             atlas = "communities-icon-searchmagnifyingglass",
@@ -111,8 +110,8 @@ function AtlasLoot:InitializeUI()
             newTab.onClick(button, buttonClick)
             self:SetUITab()
         end)
-        if tab.onClick then newTab.onClick = function(...) tab.onClick(...) end end
 
+        if tab.onClick then newTab.onClick = tab.onClick end
         self.ui.tabs[tab.name] = newTab
         lastTab = newTab
     end
