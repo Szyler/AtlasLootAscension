@@ -121,7 +121,8 @@ AtlasLoot.Difficulties = {
     },
     ClassicCrafting = {
         {AL["Normal"], 3 },
-        Max = 3
+        {AL["Superior"], 4 },
+        Max = 4
     },
     BCCrafting = {
         {AL["Normal"], 3 },
@@ -152,6 +153,7 @@ AtlasLoot.Difficulties = {
     [AL["Heroic Bloodforged"]] = 2,
     Normal = 3,
     Heroic = 4,
+    Superior = 4,
     Mythic = 5,
     Ascended = 6,
     MythicPlus = {

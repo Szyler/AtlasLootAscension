@@ -3,6 +3,7 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local difficultys = {
 	{"Heroic Bloodforged", 2},
 	{"Bloodforged", 1},
+	{"Superior", 4},
 	{"Heroic", 4},
 	{"Ascended", 6}
 }
@@ -82,6 +83,7 @@ function AtlasLoot:GetSourceList()
 	self:IsLootTableAvailable("AtlasLootOriginalWoW")
 	self:IsLootTableAvailable("AtlasLootBurningCrusade")
 	self:IsLootTableAvailable("AtlasLootWotLK")
+	self:IsLootTableAvailable("AtlasLoot_Crafting_OriginalWoW")
     for _, data in pairs(AtlasLoot_Data) do
 		if data.Type then
 			for _, t in ipairs(data) do
