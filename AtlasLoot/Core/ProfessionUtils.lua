@@ -1,5 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 
 local playerName = UnitName("player")
 local realmName = GetRealmName()
@@ -189,16 +189,16 @@ function AtlasLoot:GetRecipeSource(spellID)
 	-- extra information on where to find the recipe
 	-- trainer learnt
 	local trainer = cData["Trainer"][spellID]
-	if trainer then tinsert(data, {AL["Source"]..": "..self.Colors.WHITE..trainer}) end
+	if trainer then tinsert(data, {"Source"..": "..self.Colors.WHITE..trainer}) end
 	-- aquire type
 	local aquireType = cData["AquireType"][spellID]
 	if aquireType then
-		tinsert(data, {AL["Source"]..": "..self.Colors.WHITE..cData[aquireType[1]][aquireType[2]][1]})
+		tinsert(data, {"Source"..": "..self.Colors.WHITE..cData[aquireType[1]][aquireType[2]][1]})
 	end
 	-- vendor recipe
 	local vendor = cData["Vendor"][spellID]
 	if vendor then
-		tinsert(data, {AL["Source"]..": "..self.Colors.WHITE..AL["Vendor"]})
+		tinsert(data, {"Source"..": "..self.Colors.WHITE.."Vendor"})
 		for _,v in pairs(vendor) do
 			local vendor = AtlasLoot_CraftingData["VendorList"][v]
 			tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5]})
@@ -207,7 +207,7 @@ function AtlasLoot:GetRecipeSource(spellID)
 	-- vendor recipe
 	local recipeRepVendor = cData["RecipeRepVendor"][spellID]
 	if recipeRepVendor then
-		tinsert(data, {AL["Source"]..": "..self.Colors.WHITE..AL["Vendor"]})
+		tinsert(data, {"Source"..": "..self.Colors.WHITE.."Vendor"})
 		local vendor = AtlasLoot_CraftingData["VendorList"][spellID]
 		for	i = 3, 6 do
 			if vendor and vendor[i] then
@@ -218,7 +218,7 @@ function AtlasLoot:GetRecipeSource(spellID)
 	--limited vendor recipes
 	local limitedVendor = cData["LimitedVendor"][spellID]
 	if limitedVendor then
-		tinsert(data, {AL["Source"]..": "..self.Colors.WHITE..AL["Limited Stock"]})
+		tinsert(data, {"Source"..": "..self.Colors.WHITE.."Limited Stock"})
 		local sort = {}
 		local limited = false
 		for i,v in pairs(limitedVendor) do
@@ -238,7 +238,7 @@ function AtlasLoot:GetRecipeSource(spellID)
 	--mob drop
 	local mobDrop = cData["MobDrop"][spellID]
 	if mobDrop then
-		tinsert(data, {AL["Source"]..": "..self.Colors.WHITE..AL["Mob Drop"]})
+		tinsert(data, {"Source"..": "..self.Colors.WHITE.."Mob Drop"})
 		for _,v in pairs(mobDrop) do
 			local mob = AtlasLoot_CraftingData["MobList"][v]
 			local cords = nil
@@ -251,7 +251,7 @@ function AtlasLoot:GetRecipeSource(spellID)
 	-- World Drop
 	local worldDrop = cData["WorldDrop"][spellID]
 	if worldDrop then
-		tinsert(data, {AL["Source"]..": "..self.Colors.WHITE..AL["World Drop"]})
+		tinsert(data, {"Source"..": "..self.Colors.WHITE.."World Drop"})
 		local text = worldDrop[1]
 		if worldDrop[2] then
 			text = text.." / "..worldDrop[2]
@@ -261,7 +261,7 @@ function AtlasLoot:GetRecipeSource(spellID)
 	--quest
 	local questDrop = cData["QuestDrop"][spellID]
 	if questDrop then
-		tinsert(data, {AL["Source"]..": "..self.Colors.WHITE..AL["Quest"]})
+		tinsert(data, {"Source"..": "..self.Colors.WHITE.."Quest"})
 		for _,v in pairs(questDrop) do
 			local quest = AtlasLoot_CraftingData["QuestList"][v]
 			tinsert(data, {quest[1],  quest[2], cords = {quest[3], quest[4]}, fac = quest[5]})
@@ -270,25 +270,25 @@ function AtlasLoot:GetRecipeSource(spellID)
 	--rep vendor
 	local repVendor = cData["RepVendor"][spellID]
 	if repVendor then
-		tinsert(data, {AL["Source"]..": "..self.Colors.WHITE..AL["Reputation Vendor"]})
+		tinsert(data, {"Source"..": "..self.Colors.WHITE.."Reputation Vendor"})
 		local line1, line2
 		local list = {}
 		for i,v in pairs(repVendor) do
 			 if type(v) == "table" then
 				 for i,v in pairs(v) do
 					 if i == 1 then
-						 line1 = AL["Faction"]..": "..self.Colors.WHITE..v
+						 line1 = "Faction"..": "..self.Colors.WHITE..v
 					 elseif i == 2 then
-						 line2 = AL["Required Reputation"]..": "..self.Colors.WHITE..v
+						 line2 = "Required Reputation"..": "..self.Colors.WHITE..v
 					 else
 						 tinsert(list,AtlasLoot_CraftingData["VendorList"][v])
 					 end
 				 end
 			 else
 				 if i == 1 then
-					 line1 = AL["Faction"]..": "..self.Colors.WHITE..v
+					 line1 = "Faction"..": "..self.Colors.WHITE..v
 				 elseif i == 2 then
-					 line2 = AL["Required Reputation"]..": "..self.Colors.WHITE..v
+					 line2 = "Required Reputation"..": "..self.Colors.WHITE..v
 				 else
 					 tinsert(list,AtlasLoot_CraftingData["VendorList"][v])
 				 end

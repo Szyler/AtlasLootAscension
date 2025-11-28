@@ -1,10 +1,10 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local color = AtlasLoot.Colors
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
-local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
-local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
-local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
+
+
+
+
+
 
 -- Index
 --- Dungeons & Raids
@@ -114,18 +114,18 @@ AtlasLoot_Data["WrathKeys"] = {
 
 AtlasLoot_Data["UtgardeKeep"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Utgarde Keep"],
+	Name = "Utgarde Keep",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Prince Keleseth"],
+		Name = "Prince Keleseth",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35572 }, --Reinforced Velvet Helm
 			{ itemID = 35571 }, --Dragon Stabler's Gauntlets
 			{ itemID = 35570 }, --Keleseth's Blade of Evocation
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37180 }, --Battlemap Hide Helm
 			{ itemID = 37178 }, --Strategist's Belt
@@ -134,15 +134,15 @@ AtlasLoot_Data["UtgardeKeep"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Skarvald the Constructor"],
+		Name = "Skarvald the Constructor",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35575 }, --Skarvald's Dragonskin Habergeon
 			{ itemID = 35574 }, --Chestplate of the Northern Lights
 			{ itemID = 35573 }, --Arm Blade of Augelmir
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37183 }, --Bindings of the Tunneler
 			{ itemID = 37184 }, --Dalronn's Jerkin
@@ -151,16 +151,16 @@ AtlasLoot_Data["UtgardeKeep"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ingvar the Plunderer"],
+		Name = "Ingvar the Plunderer",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35577 }, --Holistic Patchwork Breeches
 			{ itemID = 35578 }, --Overlaid Chain Spaulders
 			{ itemID = 35576 }, --Ingvar's Monolithic Cleaver
 			{ itemID = 33330 }, --Ingvar's Head
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37194 }, --Sharp-Barbed Leather Belt
 			{ itemID = 37193 }, --Staggering Legplates
@@ -175,14 +175,14 @@ AtlasLoot_Data["UtgardeKeep"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35580 }, --Skein Woven Mantle
 			{ itemID = 35579 }, --Vrykul Shackles
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 37197 }, --Tattered Castle Drape
 			{ itemID = 37196 }, --Runecaster's Mantle
 		},
@@ -195,18 +195,18 @@ AtlasLoot_Data["UtgardeKeep"] = {
 
 AtlasLoot_Data["TheNexus"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["The Nexus"],
+	Name = "The Nexus",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Grand Magus Telestra"],
+		Name = "Grand Magus Telestra",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35602 }, --Chiseled Stalagmite Pauldrons
 			{ itemID = 35603 }, --Greaves of the color.BLUE Flight
 			{ itemID = 35601 }, --Drakonid Arm Blade
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37153 }, --Gloves of the Crystal Gardener
 			{ itemID = 37155 }, --Frozen Forest Kilt
@@ -215,15 +215,15 @@ AtlasLoot_Data["TheNexus"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Anomalus"],
+		Name = "Anomalus",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35599 }, --Gauntlets of Serpent Scales
 			{ itemID = 35600 }, --Cleated Ice Boots
 			{ itemID = 35598 }, --Tome of the Lore Keepers
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37149 }, --Helm of Anomalus
 			{ itemID = 37144 }, --Hauberk of the Arcane Wraith
@@ -232,16 +232,16 @@ AtlasLoot_Data["TheNexus"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ormorok the Tree-Shaper"],
+		Name = "Ormorok the Tree-Shaper",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35605 }, --Belt of Draconic Runes
 			{ itemID = 35604 }, --Insulating Bindings
 			{ itemID = 35617 }, --Wand of Shimmering Scales
 			{ itemID = 21524 }, --color.RED Winter Hat
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37139 }, --Spaulders of the Careless Thief
 			{ itemID = 37138 }, --Bands of Channeled Energy
@@ -251,7 +251,7 @@ AtlasLoot_Data["TheNexus"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Commander Kolurg"],
+		Name = "Commander Kolurg",
 		{
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37728 }, --Cloak of the Enemy
@@ -261,15 +261,15 @@ AtlasLoot_Data["TheNexus"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Keristrasza"],
+		Name = "Keristrasza",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35596 }, --Attuned Crystalline Boots
 			{ itemID = 35595 }, --Glacier Sharpened Vileblade
 			{ itemID = 35597 }, --Band of Glittering Permafrost
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37172 }, --Gloves of Glistening Runes
 			{ itemID = 37170 }, --Interwoven Scale Bracers
@@ -291,18 +291,18 @@ AtlasLoot_Data["TheNexus"] = {
 
 AtlasLoot_Data["AzjolNerub"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Azjol-Nerub"],
+	Name = "Azjol-Nerub",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Krik'thir the Gatewatcher"],
+		Name = "Krik'thir the Gatewatcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35657 }, --Exquisite Spider-Silk Footwraps
 			{ itemID = 35656 }, --Aura Focused Gauntlets
 			{ itemID = 35655 }, --Cobweb Machete
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37218 }, --Stone-Worn Footwraps
 			{ itemID = 37219 }, --Custodian's Chestpiece
@@ -311,15 +311,15 @@ AtlasLoot_Data["AzjolNerub"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Hadronox"],
+		Name = "Hadronox",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35660 }, --Spinneret Epaulets
 			{ itemID = 35659 }, --Treads of Aspiring Heights
 			{ itemID = 35658 }, --Life-Staff of the Web Lair
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37222 }, --Egg Sac Robes
 			{ itemID = 37230 }, --Grotto Mist Gloves
@@ -328,16 +328,16 @@ AtlasLoot_Data["AzjolNerub"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Anub'arak"],
+		Name = "Anub'arak",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35663 }, --Charmed Silken Cord
 			{ itemID = 35662 }, --Wing Cover Girdle
 			{ itemID = 35661 }, --Signet of Arachnathid Command
 			{ itemID = 43411 }, --Anub'arak's Broken Husk
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37242 }, --Sash of the Servant
 			{ itemID = 37240 }, --Flamebeard's Bracers
@@ -352,9 +352,9 @@ AtlasLoot_Data["AzjolNerub"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 37243 }, --Treasure Seeker's Belt
 			{ itemID = 37625 }, --Web Winder Gloves
 			{ itemID = 37624 }, --Stained-Glass Shard Ring
@@ -368,18 +368,18 @@ AtlasLoot_Data["AzjolNerub"] = {
 
 AtlasLoot_Data["Ahnkahet"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Ahn'kahet: The Old Kingdom"],
+	Name = "Ahn'kahet: The Old Kingdom",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Elder Nadox"],
+		Name = "Elder Nadox",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35607 }, --Ahn'kahar Handwraps
 			{ itemID = 35608 }, --Crawler-Emblem Belt
 			{ itemID = 35606 }, --Blade of Nadox
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37594 }, --Elder Headpiece
 			{ itemID = 37593 }, --Sprinting Shoulderpads
@@ -388,15 +388,15 @@ AtlasLoot_Data["Ahnkahet"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Prince Taldaram"],
+		Name = "Prince Taldaram",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35611 }, --Gloves of the Blood Prince
 			{ itemID = 35610 }, --Slasher's Amulet
 			{ itemID = 35609 }, --Talisman of Scourge Command
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37613 }, --Flame Sphere Bindings
 			{ itemID = 37614 }, --Gauntlets of the Plundering Geist
@@ -405,7 +405,7 @@ AtlasLoot_Data["Ahnkahet"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Amanitar"] .. " (" .. AL["Heroic"] .. ")",
+		Name = "Amanitar" .. " (" .. "Heroic" .. ")",
 		{
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 43287 }, --Silken Bridge Handwraps
@@ -415,16 +415,16 @@ AtlasLoot_Data["Ahnkahet"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Jedoga Shadowseeker"],
+		Name = "Jedoga Shadowseeker",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 43278 }, --Cloak of the Darkcaster
 			{ itemID = 43279 }, --Battlechest of the Twilight Cult
 			{ itemID = 43277 }, --Jedoga's Greatring
 			{ itemID = 21524 }, --color.RED Winter Hat
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 43283 }, --Subterranean Waterfall Shroud
 			{ itemID = 43280 }, --Faceguard of the Hammer Clan
@@ -434,15 +434,15 @@ AtlasLoot_Data["Ahnkahet"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Herald Volazj"],
+		Name = "Herald Volazj",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35612 }, --Mantle of Echoing Bats
 			{ itemID = 35613 }, --Pyramid Embossed Belt
 			{ itemID = 35614 }, --Volazj's Sabatons
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37622 }, --Skirt of the Old Kingdom
 			{ itemID = 37623 }, --Fiery Obelisk Handguards
@@ -457,14 +457,14 @@ AtlasLoot_Data["Ahnkahet"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35616 }, --Spored Tendrils Spaulders
 			{ itemID = 35615 }, --Glowworm Cavern Bindings
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 37625 }, --Web Winder Gloves
 			{ itemID = 37624 }, --Stained-Glass Shard Ring
 		},
@@ -477,18 +477,18 @@ AtlasLoot_Data["Ahnkahet"] = {
 
 AtlasLoot_Data["DrakTharonKeep"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Drak'Tharon Keep"],
+	Name = "Drak'Tharon Keep",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Trollgore"],
+		Name = "Trollgore",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35620 }, --Berserker's Horns
 			{ itemID = 35619 }, --Infection Resistant Legguards
 			{ itemID = 35618 }, --Troll Butcherer
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37715 }, --Cowl of the Dire Troll
 			{ itemID = 37714 }, --Batrider's Cord
@@ -497,15 +497,15 @@ AtlasLoot_Data["DrakTharonKeep"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Novos the Summoner"],
+		Name = "Novos the Summoner",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35632 }, --Robes of Novos
 			{ itemID = 35631 }, --Crystal Pendant of Warding
 			{ itemID = 35630 }, --Summoner's Stone Gavel
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37722 }, --Breastplate of Undeath
 			{ itemID = 37718 }, --Temple Crystal Fragment
@@ -513,15 +513,15 @@ AtlasLoot_Data["DrakTharonKeep"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["King Dred"],
+		Name = "King Dred",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35635 }, --Stable Master's Breeches
 			{ itemID = 35634 }, --Scabrous-Hide Helm
 			{ itemID = 35633 }, --Staff of the Great Reptile
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37725 }, --Savage Wound Wrap
 			{ itemID = 37724 }, --Handler's Arm Strap
@@ -530,15 +530,15 @@ AtlasLoot_Data["DrakTharonKeep"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Prophet Tharon'ja"],
+		Name = "The Prophet Tharon'ja",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35638 }, --Helmet of Living Flesh
 			{ itemID = 35637 }, --Muradin's Lost Greaves
 			{ itemID = 35636 }, --Tharon'ja's Aegis
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37798 }, --Overlook Handguards
 			{ itemID = 37791 }, --Leggings of the Winged Serpent
@@ -553,15 +553,15 @@ AtlasLoot_Data["DrakTharonKeep"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35641 }, --Scytheclaw Boots
 			{ itemID = 35640 }, --Darkweb Bindings
 			{ itemID = 35639 }, --Brighthelm of Guarding
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 37799 }, --Reanimator's Cloak
 			{ itemID = 37800 }, --Aviary Guardsman's Hauberk
 			{ itemID = 37801 }, --Waistguard of the Risen Knight
@@ -575,17 +575,17 @@ AtlasLoot_Data["DrakTharonKeep"] = {
 
 AtlasLoot_Data["TheVioletHold"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["The Violet Hold"],
+	Name = "The Violet Hold",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Erekem"],
+		Name = "Erekem",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 43363 }, --Screeching Cape
 			{ itemID = 43375 }, --Trousers of the Arakkoa
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 43406 }, --Cloak of the Gushing Wound
 			{ itemID = 43405 }, --Sabatons of Erekem
@@ -593,14 +593,14 @@ AtlasLoot_Data["TheVioletHold"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Zuramat the Obliterator"],
+		Name = "Zuramat the Obliterator",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 43353 }, --Void Sentry Legplates
 			{ itemID = 43358 }, --Pendant of Shadow Beams
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 43403 }, --Shroud of Darkness
 			{ itemID = 43402 }, --The Obliterator Greaves
@@ -608,14 +608,14 @@ AtlasLoot_Data["TheVioletHold"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Xevozz"],
+		Name = "Xevozz",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35644 }, --Xevozz's Belt
 			{ itemID = 35642 }, --Riot Shield
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37867 }, --Footwraps of Teleportation
 			{ itemID = 37868 }, --Girdle of the Ethereal
@@ -623,14 +623,14 @@ AtlasLoot_Data["TheVioletHold"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ichoron"],
+		Name = "Ichoron",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35647 }, --Handguards of Rapid Pursuit
 			{ itemID = 35643 }, --Spaulders of Ichoron
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 43401 }, --Water-Drenched Robe
 			{ itemID = 37862 }, --Gauntlets of the Water Revenant
@@ -638,14 +638,14 @@ AtlasLoot_Data["TheVioletHold"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Moragg"],
+		Name = "Moragg",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 43387 }, --Shoulderplates of the Beholder
 			{ itemID = 43382 }, --Band of Eyes
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 43410 }, --Moragg's Chestguard
 			{ itemID = 43408 }, --Solitare of Reflecting Beams
@@ -653,14 +653,14 @@ AtlasLoot_Data["TheVioletHold"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lavanthor"],
+		Name = "Lavanthor",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35646 }, --Lava Burn Gloves
 			{ itemID = 35645 }, --Prison Warden's Shotgun
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37870 }, --Twin-Headed Boots
 			{ itemID = 37872 }, --Lavanthor's Talisman
@@ -668,15 +668,15 @@ AtlasLoot_Data["TheVioletHold"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Cyanigosa"],
+		Name = "Cyanigosa",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35650 }, --Boots of the Portal Guardian
 			{ itemID = 35651 }, --Plate Claws of the Dragon
 			{ itemID = 35649 }, --Jailer's Baton
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37884 }, --Azure Cloth Bindings
 			{ itemID = 37886 }, --Handgrips of the Savage Emissary
@@ -691,15 +691,15 @@ AtlasLoot_Data["TheVioletHold"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35654 }, --Bindings of the Bastille
 			{ itemID = 35653 }, --Dungeon Girdle
 			{ itemID = 35652 }, --Incessant Torch
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 35654 }, --Bindings of the Bastille
 			{ itemID = 37890 }, --Chain Gang Legguards
 			{ itemID = 37891 }, --Cast Iron Shackles
@@ -716,18 +716,18 @@ AtlasLoot_Data["TheVioletHold"] = {
 
 AtlasLoot_Data["Gundrak"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Gundrak"],
+	Name = "Gundrak",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Slad'ran"],
+		Name = "Slad'ran",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35584 }, --Embroidered Gown of Zul'drak
 			{ itemID = 35585 }, --Cannibal's Legguards
 			{ itemID = 35583 }, --Witch Doctor's Wildstaff
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37629 }, --Slithering Slippers
 			{ itemID = 37628 }, --Slad'ran's Coiled Cord
@@ -736,15 +736,15 @@ AtlasLoot_Data["Gundrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Drakkari Colossus"],
+		Name = "Drakkari Colossus",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35591 }, --Shoulderguards of the Ice Troll
 			{ itemID = 35592 }, --Hauberk of Totemic Mastery
 			{ itemID = 35590 }, --Drakkari Hunting Bow
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37637 }, --Living Mojo Belt
 			{ itemID = 37636 }, --Helm of Cheated Fate
@@ -753,15 +753,15 @@ AtlasLoot_Data["Gundrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Moorabi"],
+		Name = "Moorabi",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35588 }, --Forlorn Breastplate of War
 			{ itemID = 35589 }, --Arcane Focal Signet
 			{ itemID = 35587 }, --Frozen Scepter of Necromancy
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37630 }, --Shroud of Moorabi
 			{ itemID = 37633 }, --Ground Tremor Helm
@@ -770,7 +770,7 @@ AtlasLoot_Data["Gundrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Eck the Ferocious"] .. " (" .. AL["Heroic"] .. ")",
+		Name = "Eck the Ferocious" .. " (" .. "Heroic" .. ")",
 		{
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 43313 }, --Leggings of the Ruins Dweller
@@ -780,15 +780,15 @@ AtlasLoot_Data["Gundrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gal'darah"],
+		Name = "Gal'darah",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 43305 }, --Shroud of Akali
 			{ itemID = 43309 }, --Amulet of the Stampede
 			{ itemID = 43306 }, --Gal'darah's Signet
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37643 }, --Sash of Blood Removal
 			{ itemID = 37644 }, --Gored Hide Legguards
@@ -802,14 +802,14 @@ AtlasLoot_Data["Gundrak"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35594 }, --Snowmelt Silken Cinch
 			{ itemID = 35593 }, --Steel Bear Trap Bracers
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 37647 }, --Cloak of Bloodied Waters
 			{ itemID = 37648 }, --Belt of Tasseled Lanterns
 			{ itemID = 37646 }, --Burning Skull Pendant
@@ -823,18 +823,18 @@ AtlasLoot_Data["Gundrak"] = {
 
 AtlasLoot_Data["HallsofStone"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Halls of Stone"],
+	Name = "Halls of Stone",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Maiden of Grief"],
+		Name = "Maiden of Grief",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 38614 }, --Embrace of Sorrow
 			{ itemID = 38613 }, --Chain of Fiery Orbs
 			{ itemID = 38611 }, --Ringlet of Repose
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 38616 }, --Maiden's Girdle
 			{ itemID = 38615 }, --Lightning-Charged Gloves
@@ -843,15 +843,15 @@ AtlasLoot_Data["HallsofStone"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Krystallus"],
+		Name = "Krystallus",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35673 }, --Leggings of Burning Gleam
 			{ itemID = 35672 }, --Hollow Geode Helm
 			{ itemID = 35670 }, --Brann's Lost Mining Helmet
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37652 }, --Spaulders of Krystallus
 			{ itemID = 37650 }, --Shardling Legguards
@@ -859,15 +859,15 @@ AtlasLoot_Data["HallsofStone"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Tribunal of Ages"],
+		Name = "The Tribunal of Ages",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35677 }, --Cosmos Vestments
 			{ itemID = 35676 }, --Constellation Leggings
 			{ itemID = 35675 }, --Linked Armor of the Sphere
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37655 }, --Mantle of the Tribunal
 			{ itemID = 37656 }, --Raging Construct Bands
@@ -876,15 +876,15 @@ AtlasLoot_Data["HallsofStone"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Sjonnir The Ironshaper"],
+		Name = "Sjonnir The Ironshaper",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35679 }, --Static Cowl
 			{ itemID = 35678 }, --Ironshaper's Legplates
 			{ itemID = 35680 }, --Amulet of Wills
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37669 }, --Leggings of the Stone Halls
 			{ itemID = 37668 }, --Bands of the Stoneforge
@@ -899,15 +899,15 @@ AtlasLoot_Data["HallsofStone"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 35682 }, --Rune Giant Bindings
 			{ itemID = 35683 }, --Palladium Ring
 			{ itemID = 35681 }, --Unrelenting Blade
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 37673 }, --Dark Runic Mantle
 			{ itemID = 37672 }, --Patina-Coated Breastplate
 			{ itemID = 37671 }, --Refined Ore Gloves
@@ -921,19 +921,19 @@ AtlasLoot_Data["HallsofStone"] = {
 
 AtlasLoot_Data["HallsofLightning"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Halls of Lightning"],
+	Name = "Halls of Lightning",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["General Bjarngrim"],
+		Name = "General Bjarngrim",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 36982 }, --Mantle of Electrical Charges
 			{ itemID = 36979 }, --Bjarngrim Family Signet
 			{ itemID = 36980 }, --Hewn Sparring Quarterstaff
 			{ itemID = 36981 }, --Hardened Vrykul Throwing Axe
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37825 }, --Traditionally Dyed Handguards
 			{ itemID = 37818 }, --Patroller's War-Kilt
@@ -942,16 +942,16 @@ AtlasLoot_Data["HallsofLightning"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Volkhan"],
+		Name = "Volkhan",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 36983 }, --Cape of Seething Steam
 			{ itemID = 36985 }, --Volkhan's Hood
 			{ itemID = 36986 }, --Kilt of Molten Golems
 			{ itemID = 36984 }, --Eternally Folded Blade
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37840 }, --Shroud of Reverberation
 			{ itemID = 37843 }, --Giant-Hair Woven Gloves
@@ -960,16 +960,16 @@ AtlasLoot_Data["HallsofLightning"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ionar"],
+		Name = "Ionar",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 39536 }, --Thundercloud Grasps
 			{ itemID = 39657 }, --Tornado Cuffs
 			{ itemID = 39534 }, --Pauldrons of the Lightning Revenant
 			{ itemID = 39535 }, --Ionar's Girdle
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37846 }, --Charged-Bolt Grips
 			{ itemID = 37845 }, --Cord of Swirling Winds
@@ -978,9 +978,9 @@ AtlasLoot_Data["HallsofLightning"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Loken"],
+		Name = "Loken",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 36991 }, --Raiments of the Titans
 			{ itemID = 36996 }, --Hood of the Furtive Assassin
 			{ itemID = 36992 }, --Leather-Braced Chain Leggings
@@ -993,7 +993,7 @@ AtlasLoot_Data["HallsofLightning"] = {
 			{ itemID = 43151 }, --Loken's Tongue
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37854 }, --Woven Bracae Leggings
 			{ itemID = 37853 }, --Advanced Tooled-Leather Bands
@@ -1008,15 +1008,15 @@ AtlasLoot_Data["HallsofLightning"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 36997 }, --Sash of the Hardened Watcher
 			{ itemID = 37000 }, --Storming Vortex Bracers
 			{ itemID = 36999 }, --Boots of the Terrestrial Guardian
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 37858 }, --Awakened Handguards
 			{ itemID = 37857 }, --Helm of the Lightning Halls
 			{ itemID = 37856 }, --Librarian's Paper Cutter
@@ -1030,20 +1030,20 @@ AtlasLoot_Data["HallsofLightning"] = {
 
 AtlasLoot_Data["CoTStratholme"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Caverns of Time"] .. ": " .. BabbleZone["The Culling of Stratholme"],
-	DisplayName = BabbleZone["The Culling of Stratholme"],
+	Name = "Caverns of Time" .. ": " .. "The Culling of Stratholme",
+	DisplayName = "The Culling of Stratholme",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Meathook"],
+		Name = "Meathook",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 37083 }, --Kilt of Sewn Flesh
 			{ itemID = 37082 }, --Slaughterhouse Sabatons
 			{ itemID = 37079 }, --Enchanted Wire Stitching
 			{ itemID = 37081 }, --Meathook's Slicer
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37680 }, --Belt of Unified Souls
 			{ itemID = 37678 }, --Bile-Cured Gloves
@@ -1052,16 +1052,16 @@ AtlasLoot_Data["CoTStratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Salramm the Fleshcrafter"],
+		Name = "Salramm the Fleshcrafter",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 37084 }, --Flowing Cloak of Command
 			{ itemID = 37095 }, --Waistband of the Thuzadin
 			{ itemID = 37088 }, --Spiked Metal Cilice
 			{ itemID = 37086 }, --Tome of Salramm
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37684 }, --Forgotten Shadow Hood
 			{ itemID = 37682 }, --Bindings of Dark Will
@@ -1070,16 +1070,16 @@ AtlasLoot_Data["CoTStratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Chrono-Lord Epoch"],
+		Name = "Chrono-Lord Epoch",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 37106 }, --Ouroboros Belt
 			{ itemID = 37105 }, --Treads of Altered History
 			{ itemID = 37096 }, --Necklace of the Chrono-Lord
 			{ itemID = 37099 }, --Sempiternal Staff
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37687 }, --Gloves of Distorted Time
 			{ itemID = 37686 }, --Cracked Epoch Grasps
@@ -1088,16 +1088,16 @@ AtlasLoot_Data["CoTStratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Infinite Corruptor"] .. " (" .. AL["Heroic"] .. ")",
+		Name = "Infinite Corruptor" .. " (" .. "Heroic" .. ")",
 		{
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 43951 }, --Reins of the Bronze Drake
 		},
 	},
 	{
-		Name = BabbleBoss["Mal'Ganis"],
+		Name = "Mal'Ganis",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 37113 }, --Demonic Fabric Bands
 			{ itemID = 37114 }, --Gloves of Northern Lordaeron
 			{ itemID = 37110 }, --Gauntlets of Dark Conversion
@@ -1108,7 +1108,7 @@ AtlasLoot_Data["CoTStratholme"] = {
 			{ itemID = 37107 }, --Leeka's Shield
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37696 }, --Plague-Infected Bracers
 			{ itemID = 37695 }, --Legguards of Nature's Power
@@ -1123,7 +1123,7 @@ AtlasLoot_Data["CoTStratholme"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 37117 }, --King's Square Bracers
 			{ itemID = 37116 }, --Epaulets of Market Row
@@ -1138,19 +1138,19 @@ AtlasLoot_Data["CoTStratholme"] = {
 
 AtlasLoot_Data["UtgardePinnacle"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Utgarde Pinnacle"],
+	Name = "Utgarde Pinnacle",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Skadi the Ruthless"],
+		Name = "Skadi the Ruthless",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 37043 }, --Tear-Linked Gauntlets
 			{ itemID = 37040 }, --Svala's Bloodied Shackles
 			{ itemID = 37037 }, --Ritualistic Athame
 			{ itemID = 37038 }, --Brazier Igniter
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37370 }, --Cuffs of the Trussed Hall
 			{ itemID = 37369 }, --Sorrowgrave's Breeches
@@ -1159,16 +1159,16 @@ AtlasLoot_Data["UtgardePinnacle"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["King Ymiron"],
+		Name = "King Ymiron",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 37048 }, --Shroud of Resurrection
 			{ itemID = 37052 }, --Reanimated Armor
 			{ itemID = 37051 }, --Seal of Valgarde
 			{ itemID = 37050 }, --Trophy Gatherer
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37374 }, --Ravenous Leggings of the Furbolg
 			{ itemID = 37373 }, --Massive Spaulders of the Jormungar
@@ -1177,16 +1177,16 @@ AtlasLoot_Data["UtgardePinnacle"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Svala Sorrowgrave"],
+		Name = "Svala Sorrowgrave",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 37055 }, --Silken Amice of the Ymirjar
 			{ itemID = 37057 }, --Drake Rider's Tunic
 			{ itemID = 37056 }, --Harpooner's Striders
 			{ itemID = 37053 }, --Amulet of Deflected Blows
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 44151 }, --Reins of the color.BLUE Proto-Drake
 			{ itemID = 37389 }, --Crenelation Leggings
@@ -1196,9 +1196,9 @@ AtlasLoot_Data["UtgardePinnacle"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gortok Palehoof"],
+		Name = "Gortok Palehoof",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 37067 }, --Ceremonial Pyre Mantle
 			{ itemID = 37062 }, --Crown of Forgotten Kings
 			{ itemID = 37066 }, --Ancient Royal Legguards
@@ -1210,7 +1210,7 @@ AtlasLoot_Data["UtgardePinnacle"] = {
 			{ itemID = 41797 }, --Design: Austere Earthsiege Diamond
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37408 }, --Girdle of Bane
 			{ itemID = 37409 }, --Gilt-Edged Leather Gauntlets
@@ -1225,15 +1225,15 @@ AtlasLoot_Data["UtgardePinnacle"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 37070 }, --Tundra Wolf Boots
 			{ itemID = 37069 }, --Dragonflayer Seer's Bindings
 			{ itemID = 37068 }, --Berserker's Sabatons
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 37587 }, --Ymirjar Physician's Robe
 			{ itemID = 37590 }, --Bands of Fading Light
 			{ itemID = 37410 }, --Tracker's Balanced Knives
@@ -1247,19 +1247,19 @@ AtlasLoot_Data["UtgardePinnacle"] = {
 
 AtlasLoot_Data["TheOculus"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["The Oculus"],
+	Name = "The Oculus",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Drakos the Interrogator"],
+		Name = "Drakos the Interrogator",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 36945 }, --Verdisa's Cuffs of Dreaming
 			{ itemID = 36946 }, --Runic Cage Chestpiece
 			{ itemID = 36943 }, --Timeless Beads of Eternos
 			{ itemID = 36944 }, --Lifeblade of Belgaristrasz
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37258 }, --Drakewing Raiments
 			{ itemID = 37256 }, --Scaled Armor of Drakos
@@ -1268,16 +1268,16 @@ AtlasLoot_Data["TheOculus"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Mage-Lord Urom"],
+		Name = "Mage-Lord Urom",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 36947 }, --Centrifuge Core Cloak
 			{ itemID = 36949 }, --Gloves of the Azure-Lord
 			{ itemID = 36948 }, --Horned Helm of Varos
 			{ itemID = 36950 }, --Wing Commander's Breastplate
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37261 }, --Gloves of Radiant Light
 			{ itemID = 37262 }, --Azure Ringmail Leggings
@@ -1286,9 +1286,9 @@ AtlasLoot_Data["TheOculus"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Varos Cloudstrider"],
+		Name = "Varos Cloudstrider",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 36954 }, --The Conjurer's Slippers
 			{ itemID = 36951 }, --Sidestepping Handguards
 			{ itemID = 36953 }, --Spaulders of Skillful Maneuvers
@@ -1296,7 +1296,7 @@ AtlasLoot_Data["TheOculus"] = {
 			{ itemID = 21525 }, --color.GREEN Winter Hat
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37289 }, --Sash of Phantasmal Images
 			{ itemID = 37288 }, --Catalytic Bands
@@ -1306,9 +1306,9 @@ AtlasLoot_Data["TheOculus"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ley-Guardian Eregos"],
+		Name = "Ley-Guardian Eregos",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 36973 }, --Vestments of the Scholar
 			{ itemID = 36971 }, --Headguard of Westrift
 			{ itemID = 36969 }, --Helm of the Ley-Guardian
@@ -1320,7 +1320,7 @@ AtlasLoot_Data["TheOculus"] = {
 			{ itemID = 41798 }, --Design: Bracing Earthsiege Diamond
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 37361 }, --Cuffs of Winged Levitation
 			{ itemID = 37363 }, --Gauntlets of Dragon Wrath
@@ -1331,19 +1331,19 @@ AtlasLoot_Data["TheOculus"] = {
 			{ itemID = 37293 }, --Mask of the Watcher
 			{ itemID = 37292 }, --Ley-Guardian's Legguards
 			{ itemID = 43102 }, --Frozen Orb
-			{ itemID = 52676, "=ds=" .. AL["Random Heroic Reward"] }, --Cache of the Ley-Guardian
+			{ itemID = 52676, "=ds=" .. "Random Heroic Reward" }, --Cache of the Ley-Guardian
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 36978 }, --Ley-Whelphide Belt
 			{ itemID = 36977 }, --Bindings of the Construct
 			{ itemID = 36976 }, --Ring-Lord's Leggings
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 37366 }, --Drake-Champion's Bracers
 			{ itemID = 37365 }, --Bands of the Sky Ring
 			{ itemID = 37290 }, --Dragon Prow Amulet
@@ -1358,12 +1358,12 @@ AtlasLoot_Data["TheOculus"] = {
 
 AtlasLoot_Data["ForgeofSouls"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["The Forge of Souls"],
+	Name = "The Forge of Souls",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Bronjahm"],
+		Name = "Bronjahm",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 49788 }, --Cold Sweat Grips
 			{ itemID = 49785 }, --Bewildering Shoulderpads
 			{ itemID = 49786 }, --Robes of the Cheating Heart
@@ -1374,7 +1374,7 @@ AtlasLoot_Data["ForgeofSouls"] = {
 			{ itemID = 50316 }, --Papa's Brand New Bag
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 50193 }, --Very Fashionable Shoulders
 			{ itemID = 50197 }, --Eyes of Bewilderment
 			{ itemID = 50194 }, --Weeping Gauntlets
@@ -1386,7 +1386,7 @@ AtlasLoot_Data["ForgeofSouls"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Devourer of Souls"],
+		Name = "Devourer of Souls",
 		{
 			{ itemID = 49792 }, --Accursed Crawling Cape
 			{ itemID = 49796 }, --Essence of Anger
@@ -1405,7 +1405,7 @@ AtlasLoot_Data["ForgeofSouls"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Devourer of Souls"],
+		Name = "Devourer of Souls",
 		{
 			{ itemID = 50213 }, --Mord'rethar Robes
 			{ itemID = 50206 }, --Frayed Scoundrel's Cap
@@ -1431,12 +1431,12 @@ AtlasLoot_Data["ForgeofSouls"] = {
 
 AtlasLoot_Data["PitofSaron"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Pit of Saron"],
+	Name = "Pit of Saron",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Forgemaster Garfrost"],
+		Name = "Forgemaster Garfrost",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 49805 }, --Ice-Steeped Sandals
 			{ itemID = 49806 }, --Flayer's Black Belt
 			{ itemID = 49804 }, --Polished Mirror Helm
@@ -1445,7 +1445,7 @@ AtlasLoot_Data["PitofSaron"] = {
 			{ itemID = 49801 }, --Unspeakable Secret
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 50233 }, --Spurned Val'kyr Shoulderguards
 			{ itemID = 50234 }, --Shoulderplates of Frozen Blood
 			{ itemID = 50230 }, --Malykriss Vambraces
@@ -1455,9 +1455,9 @@ AtlasLoot_Data["PitofSaron"] = {
 		},
 	},
 	{
-		Name = AL["Krick and Ick"],
+		Name = "Krick and Ick",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 49809 }, --Wristguards of Subterranean Moss
 			{ itemID = 49810 }, --Scabrous Zombie Leather Belt
 			{ itemID = 49811 }, --Black Dragonskin Breeches
@@ -1466,7 +1466,7 @@ AtlasLoot_Data["PitofSaron"] = {
 			{ itemID = 49807 }, --Krick's Beetle Stabber
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 50266 }, --Ancient Polar Bear Hide
 			{ itemID = 50263 }, --Braid of Salt and Fire
 			{ itemID = 50264 }, --Chewed Leather Wristguards
@@ -1476,7 +1476,7 @@ AtlasLoot_Data["PitofSaron"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Scourgelord Tyrannus"],
+		Name = "Scourgelord Tyrannus",
 		{
 			{ itemID = 49823 }, --Cloak of the Fallen Cardinal
 			{ itemID = 49825 }, --Palebone Robes
@@ -1495,7 +1495,7 @@ AtlasLoot_Data["PitofSaron"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Scourgelord Tyrannus"],
+		Name = "Scourgelord Tyrannus",
 		{
 			{ itemID = 50286 }, --Prelate's Snowshoes
 			{ itemID = 50269 }, --Fleshwerk Leggings
@@ -1521,12 +1521,12 @@ AtlasLoot_Data["PitofSaron"] = {
 
 AtlasLoot_Data["HallsofReflection"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Halls of Reflection"],
+	Name = "Halls of Reflection",
 	Type = "WrathDungeon",
 	{
-		Name = BabbleBoss["Falric"],
+		Name = "Falric",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 49832 }, --Eerie Runeblade Polisher
 			{ itemID = 49828 }, --Marwyn's Macabre Fingertips
 			{ itemID = 49830 }, --Fallen Sentry's Hood
@@ -1535,7 +1535,7 @@ AtlasLoot_Data["HallsofReflection"] = {
 			{ itemID = 49827 }, --Ghoulslicer
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 50292 }, --Bracer of Worn Molars
 			{ itemID = 50293 }, --Spaulders of Black Betrayal
 			{ itemID = 50295 }, --Spiked Toestompers
@@ -1545,9 +1545,9 @@ AtlasLoot_Data["HallsofReflection"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Marwyn"],
+		Name = "Marwyn",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 49834 }, --Frayed Abomination Stitching Shoulders
 			{ itemID = 49838 }, --Carpal Tunnelers
 			{ itemID = 49837 }, --Mitts of Burning Hail
@@ -1556,7 +1556,7 @@ AtlasLoot_Data["HallsofReflection"] = {
 			{ itemID = 49835 }, --Splintered Door of the Citadel
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 50298 }, --Sightless Crown of Ulmaas
 			{ itemID = 50299 }, --Suspiciously Soft Gloves
 			{ itemID = 50300 }, --Choking Hauberk
@@ -1566,7 +1566,7 @@ AtlasLoot_Data["HallsofReflection"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Lich King"],
+		Name = "The Lich King",
 		{
 			{ itemID = 49842 }, --Tapestry of the Frozen Throne
 			{ itemID = 49849 }, --Tattered Glacial-Woven Hood
@@ -1585,7 +1585,7 @@ AtlasLoot_Data["HallsofReflection"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Lich King"],
+		Name = "The Lich King",
 		{
 			{ itemID = 50314 }, --Strip of Remorse
 			{ itemID = 50312 }, --Chestguard of Broken Branches
@@ -1604,16 +1604,16 @@ AtlasLoot_Data["HallsofReflection"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 49854 }, --Mantle of Tattered Feathers
 			{ itemID = 49855 }, --Plated Grips of Korth'azz
 			{ itemID = 49853 }, --Titanium Links of Lore
 			{ itemID = 49852 }, --Coffin Nail
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 50318 }, --Ghostly Wristwraps
 			{ itemID = 50315 }, --Seven-Fingered Claws
 			{ itemID = 50319 }, --Unsharpened Ice Razor
@@ -1637,12 +1637,12 @@ AtlasLoot_Data["HallsofReflection"] = {
 
 AtlasLoot_Data["TrialoftheChampion"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Trial of the Champion"],
+	Name = "Trial of the Champion",
 	Type = "WrathDungeon",
 	{
-		Name = AL["Faction Champions"],
+		Name = "Faction Champions",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 47173 }, --Bindings of the Wicked
 			{ itemID = 47170 }, --Belt of Fierce Competition
 			{ itemID = 47174 }, --Binding of the Tranquil Glade
@@ -1651,7 +1651,7 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 			{ itemID = 47171 }, --Legguards of Abandoned Fealty
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 47249 }, --Leggings of the Snowy Bramble
 			{ itemID = 47248 }, --Treads of Dismal Fortune
@@ -1663,9 +1663,9 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Argent Confessor Paletress"],
+		Name = "Argent Confessor Paletress",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 47181 }, --Belt of the Churning Blaze
 			{ itemID = 47218 }, --The Confessor's Binding
 			{ itemID = 47185 }, --Leggings of the Haggard Apprentice
@@ -1680,7 +1680,7 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 			{ itemID = 47214 }, --Banner of Victory
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 47498 }, --Gloves of Dismal Fortune
 			{ itemID = 47496 }, --Armbands of the Wary Lookout
@@ -1698,9 +1698,9 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Eadric the Pure"],
+		Name = "Eadric the Pure",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Normal Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Normal Mode" },
 			{ itemID = 47181 }, --Belt of the Churning Blaze
 			{ itemID = 47185 }, --Leggings of the Haggard Apprentice
 			{ itemID = 47210 }, --Mantle of Gnarled Overgrowth
@@ -1715,7 +1715,7 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 			{ itemID = 47213 }, --Abyssal Rune
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Heroic Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Heroic Mode" },
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 47501 }, --Kurisu's Indecision
 			{ itemID = 47496 }, --Armbands of the Wary Lookout
@@ -1733,7 +1733,7 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Black Knight"],
+		Name = "The Black Knight",
 		{
 			{ itemID = 47232 }, --Drape of the Undefeated
 			{ itemID = 47226 }, --Mantle of Inconsolable Fear
@@ -1752,7 +1752,7 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Black Knight"] .. " (" .. AL["Heroic"] .. ")",
+		Name = "The Black Knight" .. " (" .. "Heroic" .. ")",
 		{
 			{ itemID = 47241 }, --Emblem of Triumph
 			{ itemID = 47564 }, --Gaze of the Unknown
@@ -1782,20 +1782,20 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 
 AtlasLoot_Data["VaultofArchavon"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Vault of Archavon"],
+	Name = "Vault of Archavon",
 	Type = "WrathRaid",
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 39492 }, --Heroes' Frostfire Robe
 			{ itemID = 39495 }, --Heroes' Frostfire Gloves
 			{ itemID = 39493 }, --Heroes' Frostfire Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 39515 }, --Heroes' Robe of Faith
 			{ itemID = 39519 }, --Heroes' Gloves of Faith
 			{ itemID = 39517 }, --Heroes' Leggings of Faith
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 39523 }, --Heroes' Raiments of Faith
 			{ itemID = 39530 }, --Heroes' Handwraps of Faith
 			{ itemID = 39528 }, --Heroes' Pants of Faith
@@ -1805,28 +1805,28 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41950 }, --Hateful Gladiator's Silk Raiment
 			{ itemID = 41969 }, --Hateful Gladiator's Silk Handguards
 			{ itemID = 41957 }, --Hateful Gladiator's Silk Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 41857 }, --Hateful Gladiator's Mooncloth Robe
 			{ itemID = 41872 }, --Hateful Gladiator's Mooncloth Gloves
 			{ itemID = 41862 }, --Hateful Gladiator's Mooncloth Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 41919 }, --Hateful Gladiator's Satin Robe
 			{ itemID = 41938 }, --Hateful Gladiator's Satin Gloves
 			{ itemID = 41925 }, --Hateful Gladiator's Satin Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
 			{ itemID = 39497 }, --Heroes' Plagueheart Robe
 			{ itemID = 39500 }, --Heroes' Plagueheart Gloves
 			{ itemID = 39498 }, --Heroes' Plagueheart Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 39547 }, --Heroes' Dreamwalker Vestments
 			{ itemID = 39544 }, --Heroes' Dreamwalker Gloves
 			{ itemID = 39546 }, --Heroes' Dreamwalker Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 39554 }, --Heroes' Dreamwalker Raiments
 			{ itemID = 39557 }, --Heroes' Dreamwalker Handgrips
 			{ itemID = 39555 }, --Heroes' Dreamwalker Legguards
@@ -1836,20 +1836,20 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 42001 }, --Hateful Gladiator's Felweave Raiment
 			{ itemID = 42015 }, --Hateful Gladiator's Felweave Handguards
 			{ itemID = 42003 }, --Hateful Gladiator's Felweave Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 41314 }, --Hateful Gladiator's Wyrmhide Robes
 			{ itemID = 41291 }, --Hateful Gladiator's Wyrmhide Gloves
 			{ itemID = 41302 }, --Hateful Gladiator's Wyrmhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 41659 }, --Hateful Gladiator's Dragonhide Robes
 			{ itemID = 41771 }, --Hateful Gladiator's Dragonhide Gloves
 			{ itemID = 41665 }, --Hateful Gladiator's Dragonhide Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 39538 }, --Heroes' Dreamwalker Robe
 			{ itemID = 39543 }, --Heroes' Dreamwalker Handguards
 			{ itemID = 39539 }, --Heroes' Dreamwalker Leggings
@@ -1863,7 +1863,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 39580 }, --Heroes' Crypstalker Legguards
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41308 }, --Hateful Gladiator's Kodohide Robes
 			{ itemID = 41284 }, --Hateful Gladiator's Kodohide Gloves
 			{ itemID = 41296 }, --Hateful Gladiator's Kodohide Legguards
@@ -1878,94 +1878,94 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 39592 }, --Heroes' Earthshatter Hauberk
 			{ itemID = 39593 }, --Heroes' Earthshatter Gloves
 			{ itemID = 39595 }, --Heroes' Earthshatter Kilt
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 39597 }, --Heroes' Earthshatter Chestguard
 			{ itemID = 39601 }, --Heroes' Earthshatter Grips
 			{ itemID = 39603 }, --Heroes' Earthshatter War-Kilt
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 39588 }, --Heroes' Earthshatter Tunic
 			{ itemID = 39591 }, --Heroes' Earthshatter Handguards
 			{ itemID = 39589 }, --Heroes' Earthshatter Legguards
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 40989 }, --Hateful Gladiator's Mail Armor
 			{ itemID = 41005 }, --Hateful Gladiator's Mail Gauntlets
 			{ itemID = 41031 }, --Hateful Gladiator's Mail Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 41079 }, --Hateful Gladiator's Linked Armor
 			{ itemID = 41135 }, --Hateful Gladiator's Linked Gauntlets
 			{ itemID = 41162 }, --Hateful Gladiator's Linked Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 40988 }, --Hateful Gladiator's Ringmail Armor
 			{ itemID = 40999 }, --Hateful Gladiator's Ringmail Gauntlets
 			{ itemID = 41025 }, --Hateful Gladiator's Ringmail Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 39617 }, --Heroes' Scourgeborne Battleplate
 			{ itemID = 39618 }, --Heroes' Scourgeborne Gauntlets
 			{ itemID = 39620 }, --Heroes' Scourgeborne Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["Tanking"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "Tanking" },
 			{ itemID = 39623 }, --Heroes' Scourgeborne Chestguard
 			{ itemID = 39624 }, --Heroes' Scourgeborne Handguards
 			{ itemID = 39626 }, --Heroes' Scourgeborne Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 39629 }, --Heroes' Redemption Tunic
 			{ itemID = 39632 }, --Heroes' Redemption Gloves
 			{ itemID = 39630 }, --Heroes' Redemption Greaves
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40781 }, --Hateful Gladiator's Dreadplate Chestpiece
 			{ itemID = 40803 }, --Hateful Gladiator's Dreadplate Gauntlets
 			{ itemID = 40841 }, --Hateful Gladiator's Dreadplate Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 40904 }, --Hateful Gladiator's Ornamented Chestguard
 			{ itemID = 40925 }, --Hateful Gladiator's Ornamented Gloves
 			{ itemID = 40937 }, --Hateful Gladiator's Ornamented Legplates
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 39633 }, --Heroes' Redemption Chestpiece
 			{ itemID = 39634 }, --Heroes' Redemption Gauntlets
 			{ itemID = 39636 }, --Heroes' Redemption Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Protection" },
 			{ itemID = 39638 }, --Heroes' Redemption Breastplate
 			{ itemID = 39639 }, --Heroes' Redemption Handguards
 			{ itemID = 39641 }, --Heroes' Redemption Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 39606 }, --Heroes' Dreadnaught Battleplate
 			{ itemID = 39609 }, --Heroes' Dreadnaught Gauntlets
 			{ itemID = 39607 }, --Heroes' Dreadnaught Legplates
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 40782 }, --Hateful Gladiator's Scaled Chestpiece
 			{ itemID = 40802 }, --Hateful Gladiator's Scaled Gauntlets
 			{ itemID = 40842 }, --Hateful Gladiator's Scaled Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40783 }, --Hateful Gladiator's Plate Chestpiece
 			{ itemID = 40801 }, --Hateful Gladiator's Plate Gauntlets
 			{ itemID = 40840 }, --Hateful Gladiator's Plate Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "Protection" },
 			{ itemID = 39611 }, --Heroes' Dreadnaught Breastplate
 			{ itemID = 39622 }, --Heroes' Dreadnaught Handguards
 			{ itemID = 39612 }, --Heroes' Dreadnaught Legguards
@@ -1975,17 +1975,17 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 40418 }, --Valorous Frostfire Robe
 			{ itemID = 40415 }, --Valorous Frostfire Gloves
 			{ itemID = 40417 }, --Valorous Frostfire Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 40449 }, --Valorous Robe of Faith
 			{ itemID = 40445 }, --Valorous Gloves of Faith
 			{ itemID = 40448 }, --Valorous Leggings of Faith
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 40458 }, --Valorous Raiments of Faith
 			{ itemID = 40454 }, --Valorous Handwraps of Faith
 			{ itemID = 40457 }, --Valorous Pants of Faith
@@ -1995,28 +1995,28 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41951 }, --Deadly Gladiator's Silk Raiment
 			{ itemID = 41970 }, --Deadly Gladiator's Silk Handguards
 			{ itemID = 41958 }, --Deadly Gladiator's Silk Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 41858 }, --Deadly Gladiator's Mooncloth Robe
 			{ itemID = 41873 }, --Deadly Gladiator's Mooncloth Gloves
 			{ itemID = 41863 }, --Deadly Gladiator's Mooncloth Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 41920 }, --Deadly Gladiator's Satin Robe
 			{ itemID = 41939 }, --Deadly Gladiator's Satin Gloves
 			{ itemID = 41926 }, --Deadly Gladiator's Satin Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
 			{ itemID = 40423 }, --Valorous Plagueheart Robe
 			{ itemID = 40420 }, --Valorous Plagueheart Gloves
 			{ itemID = 40422 }, --Valorous Plagueheart Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 40469 }, --Valorous Dreamwalker Vestments
 			{ itemID = 40466 }, --Valorous Dreamwalker Gloves
 			{ itemID = 40468 }, --Valorous Dreamwalker Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 40471 }, --Valorous Dreamwalker Raiments
 			{ itemID = 40472 }, --Valorous Dreamwalker Handgrips
 			{ itemID = 40493 }, --Valorous Dreamwalker Legguards
@@ -2026,20 +2026,20 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41997 }, --Deadly Gladiator's Felweave Raiment
 			{ itemID = 42016 }, --Deadly Gladiator's Felweave Handguards
 			{ itemID = 42004 }, --Deadly Gladiator's Felweave Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 41315 }, --Deadly Gladiator's Wyrmhide Robes
 			{ itemID = 41292 }, --Deadly Gladiator's Wyrmhide Gloves
 			{ itemID = 41303 }, --Deadly Gladiator's Wyrmhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 41660 }, --Deadly Gladiator's Dragonhide Robes
 			{ itemID = 41772 }, --Deadly Gladiator's Dragonhide Gloves
 			{ itemID = 41666 }, --Deadly Gladiator's Dragonhide Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 40463 }, --Valorous Dreamwalker Robe
 			{ itemID = 40460 }, --Valorous Dreamwalker Handguards
 			{ itemID = 40462 }, --Valorous Dreamwalker Leggings
@@ -2053,7 +2053,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 40506 }, --Valorous Crypstalker Legguards
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41309 }, --Deadly Gladiator's Kodohide Robes
 			{ itemID = 41286 }, --Deadly Gladiator's Kodohide Gloves
 			{ itemID = 41297 }, --Deadly Gladiator's Kodohide Legguards
@@ -2068,94 +2068,94 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 40514 }, --Valorous Earthshatter Hauberk
 			{ itemID = 40515 }, --Valorous Earthshatter Gloves
 			{ itemID = 40517 }, --Valorous Earthshatter Kilt
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 40523 }, --Valorous Earthshatter Chestguard
 			{ itemID = 40520 }, --Valorous Earthshatter Grips
 			{ itemID = 40522 }, --Valorous Earthshatter War-Kilt
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 40508 }, --Valorous Earthshatter Tunic
 			{ itemID = 40509 }, --Valorous Earthshatter Handguards
 			{ itemID = 40512 }, --Valorous Earthshatter Legguards
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 40991 }, --Deadly Gladiator's Mail Armor
 			{ itemID = 41006 }, --Deadly Gladiator's Mail Gauntlets
 			{ itemID = 41032 }, --Deadly Gladiator's Mail Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 41080 }, --Deadly Gladiator's Linked Armor
 			{ itemID = 41136 }, --Deadly Gladiator's Linked Gauntlets
 			{ itemID = 41198 }, --Deadly Gladiator's Linked Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 40990 }, --Deadly Gladiator's Ringmail Armor
 			{ itemID = 41000 }, --Deadly Gladiator's Ringmail Gauntlets
 			{ itemID = 41026 }, --Deadly Gladiator's Ringmail Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40550 }, --Valorous Scourgeborne Battleplate
 			{ itemID = 40552 }, --Valorous Scourgeborne Gauntlets
 			{ itemID = 40556 }, --Valorous Scourgeborne Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["Tanking"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "Tanking" },
 			{ itemID = 40559 }, --Valorous Scourgeborne Chestguard
 			{ itemID = 40563 }, --Valorous Scourgeborne Handguards
 			{ itemID = 40567 }, --Valorous Scourgeborne Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 40569 }, --Valorous Redemption Tunic
 			{ itemID = 40570 }, --Valorous Redemption Gloves
 			{ itemID = 40572 }, --Valorous Redemption Greaves
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40784 }, --Deadly Gladiator's Dreadplate Chestpiece
 			{ itemID = 40806 }, --Deadly Gladiator's Dreadplate Gauntlets
 			{ itemID = 40845 }, --Deadly Gladiator's Dreadplate Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 40905 }, --Deadly Gladiator's Ornamented Chestguard
 			{ itemID = 40926 }, --Deadly Gladiator's Ornamented Gloves
 			{ itemID = 40938 }, --Deadly Gladiator's Ornamented Legplates
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 40574 }, --Valorous Redemption Chestpiece
 			{ itemID = 40575 }, --Valorous Redemption Gauntlets
 			{ itemID = 40577 }, --Valorous Redemption Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Protection" },
 			{ itemID = 40579 }, --Valorous Redemption Breastplate
 			{ itemID = 40580 }, --Valorous Redemption Handguards
 			{ itemID = 40583 }, --Valorous Redemption Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40525 }, --Valorous Dreadnaught Battleplate
 			{ itemID = 40527 }, --Valorous Dreadnaught Gauntlets
 			{ itemID = 40529 }, --Valorous Dreadnaught Legplates
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 40785 }, --Deadly Gladiator's Scaled Chestpiece
 			{ itemID = 40805 }, --Deadly Gladiator's Scaled Gauntlets
 			{ itemID = 40846 }, --Deadly Gladiator's Scaled Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40786 }, --Deadly Gladiator's Plate Chestpiece
 			{ itemID = 40804 }, --Deadly Gladiator's Plate Gauntlets
 			{ itemID = 40844 }, --Deadly Gladiator's Plate Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Archavon the Stone Watcher"],
+		Name = "Archavon the Stone Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "Protection" },
 			{ itemID = 40544 }, --Valorous Dreadnaught Breastplate
 			{ itemID = 40545 }, --Valorous Dreadnaught Handguards
 			{ itemID = 40547 }, --Valorous Dreadnaught Legguards
@@ -2165,15 +2165,15 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 46131 }, --Valorous Kirin'dor Gauntlets
 			{ itemID = 45367 }, --Valorous Kirin'dor Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 45387 }, --Valorous Gloves of Sanctification
 			{ itemID = 45388 }, --Valorous Leggings of Sanctification
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 45392 }, --Valorous Handwraps of Sanctification
 			{ itemID = 45394 }, --Valorous Pants of Sanctification
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -2184,10 +2184,10 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 41970 }, --Deadly Gladiator's Silk Handguards
 			{ itemID = 41958 }, --Deadly Gladiator's Silk Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 41873 }, --Deadly Gladiator's Mooncloth Gloves
 			{ itemID = 41863 }, --Deadly Gladiator's Mooncloth Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 41939 }, --Deadly Gladiator's Satin Gloves
 			{ itemID = 41926 }, --Deadly Gladiator's Satin Leggings
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -2196,15 +2196,15 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 45351 }, --Valorous Nightsong Gloves
 			{ itemID = 45353 }, --Valorous Nightsong Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 45355 }, --Valorous Nightsong Handgrips
 			{ itemID = 45357 }, --Valorous Nightsong Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 45345 }, --Valorous Nightsong Handguards
 			{ itemID = 45347 }, --Valorous Nightsong Leggings
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -2212,13 +2212,13 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 45399 }, --Valorous Terrorblade Legplates
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 41292 }, --Deadly Gladiator's Wyrmhide Gloves
 			{ itemID = 41303 }, --Deadly Gladiator's Wyrmhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 41772 }, --Deadly Gladiator's Dragonhide Gloves
 			{ itemID = 41666 }, --Deadly Gladiator's Dragonhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41286 }, --Deadly Gladiator's Kodohide Gloves
 			{ itemID = 41297 }, --Deadly Gladiator's Kodohide Legguards
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -2227,18 +2227,18 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 45360 }, --Valorous Scourgestalker Handguards
 			{ itemID = 45362 }, --Valorous Scourgestalker Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 45406 }, --Valorous Worldbreaker Gloves
 			{ itemID = 45409 }, --Valorous Worldbreaker Kilt
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 45414 }, --Valorous Worldbreaker Grips
 			{ itemID = 45416 }, --Valorous Worldbreaker War-Kilt
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 45401 }, --Valorous Worldbreaker Handguards
 			{ itemID = 45403 }, --Valorous Worldbreaker Legguards
 		},
@@ -2246,68 +2246,68 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 41142 }, --Deadly Gladiator's Chain Gauntlets
 			{ itemID = 41204 }, --Deadly Gladiator's Chain Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 41006 }, --Deadly Gladiator's Mail Gauntlets
 			{ itemID = 41032 }, --Deadly Gladiator's Mail Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 41136 }, --Deadly Gladiator's Linked Gauntlets
 			{ itemID = 41198 }, --Deadly Gladiator's Linked Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41000 }, --Deadly Gladiator's Ringmail Gauntlets
 			{ itemID = 41026 }, --Deadly Gladiator's Ringmail Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 45341 }, --Valorous Darkruned Gauntlets
 			{ itemID = 45343 }, --Valorous Darkruned Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["Tanking"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "Tanking" },
 			{ itemID = 45337 }, --Valorous Darkruned Handguards
 			{ itemID = 45338 }, --Valorous Darkruned Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 45370 }, --Valorous Aegis Gloves
 			{ itemID = 45371 }, --Valorous Aegis Greaves
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 45376 }, --Valorous Aegis Gauntlets
 			{ itemID = 45379 }, --Valorous Aegis Legplates
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40806 }, --Deadly Gladiator's Dreadplate Gauntlets
 			{ itemID = 40845 }, --Deadly Gladiator's Dreadplate Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 40926 }, --Deadly Gladiator's Ornamented Gloves
 			{ itemID = 40938 }, --Deadly Gladiator's Ornamented Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 40805 }, --Deadly Gladiator's Scaled Gauntlets
 			{ itemID = 40846 }, --Deadly Gladiator's Scaled Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Protection" },
 			{ itemID = 45383 }, --Valorous Aegis Handguards
 			{ itemID = 45384 }, --Valorous Aegis Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 45430 }, --Valorous Siegebreaker Gauntlets
 			{ itemID = 45432 }, --Valorous Siegebreaker Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "Protection" },
 			{ itemID = 45426 }, --Valorous Siegebreaker Handguards
 			{ itemID = 45427 }, --Valorous Siegebreaker Legguards
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40804 }, --Deadly Gladiator's Plate Gauntlets
 			{ itemID = 40844 }, --Deadly Gladiator's Plate Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Cloth"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Cloth" },
 			{ itemID = 41908 }, --Deadly Gladiator's Cuffs of Dominance
 			{ itemID = 41897 }, --Deadly Gladiator's Cord of Dominance
 			{ itemID = 41902 }, --Deadly Gladiator's Treads of Dominance
@@ -2316,7 +2316,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41884 }, --Deadly Gladiator's Treads of Salvation
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Leather"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Leather" },
 			{ itemID = 41639 }, --Deadly Gladiator's Armwraps of Dominance
 			{ itemID = 41629 }, --Deadly Gladiator's Belt of Dominance
 			{ itemID = 41634 }, --Deadly Gladiator's Boots of Dominance
@@ -2329,9 +2329,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Mail"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Mail" },
 			{ itemID = 41064 }, --Deadly Gladiator's Wristguards of Dominance
 			{ itemID = 41069 }, --Deadly Gladiator's Waistguard of Dominance
 			{ itemID = 41074 }, --Deadly Gladiator's Sabatons of Dominance
@@ -2343,7 +2343,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41229 }, --Deadly Gladiator's Sabatons of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Plate"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Plate" },
 			{ itemID = 40982 }, --Deadly Gladiator's Bracers of Salvation
 			{ itemID = 40974 }, --Deadly Gladiator's Girdle of Salvation
 			{ itemID = 40975 }, --Deadly Gladiator's Greaves of Salvation
@@ -2353,9 +2353,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Back"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Back" },
 			{ itemID = 42064 }, --Deadly Gladiator's Cloak of Ascendancy
 			{ itemID = 42066 }, --Deadly Gladiator's Cloak of Deliverance
 			{ itemID = 42062 }, --Deadly Gladiator's Cloak of Dominance
@@ -2368,7 +2368,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 44083 }, --Reins of the Grand Black War Mammoth
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Neck" },
 			{ itemID = 42030 }, --Deadly Gladiator's Pendant of Ascendancy
 			{ itemID = 42032 }, --Deadly Gladiator's Pendant of Deliverance
 			{ itemID = 42029 }, --Deadly Gladiator's Pendant of Dominance
@@ -2376,21 +2376,21 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 42031 }, --Deadly Gladiator's Pendant of Subjugation
 			{ itemID = 42027 }, --Deadly Gladiator's Pendant of Triumph
 			{ itemID = 42028 }, --Deadly Gladiator's Pendant of Victory
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Ring"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Ring" },
 			{ itemID = 42114 }, --Deadly Gladiator's Band of Ascendancy
 			{ itemID = 42115 }, --Deadly Gladiator's Band of Victory
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 46132 }, --Conqueror's Kirin'dor Gauntlets
 			{ itemID = 46133 }, --Conqueror's Kirin'dor Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 46188 }, --Conqueror's Gloves of Sanctification
 			{ itemID = 46195 }, --Conqueror's Leggings of Sanctification
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 46163 }, --Conqueror's Handwraps of Sanctification
 			{ itemID = 46170 }, --Conqueror's Pants of Sanctification
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -2401,10 +2401,10 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 41971 }, --Furious Gladiator's Silk Handguards
 			{ itemID = 41959 }, --Furious Gladiator's Silk Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 41874 }, --Furious Gladiator's Mooncloth Gloves
 			{ itemID = 41864 }, --Furious Gladiator's Mooncloth Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 41940 }, --Furious Gladiator's Satin Gloves
 			{ itemID = 41927 }, --Furious Gladiator's Satin Leggings
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -2413,15 +2413,15 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 46189 }, --Conqueror's Nightsong Gloves
 			{ itemID = 46192 }, --Conqueror's Nightsong Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 46158 }, --Conqueror's Nightsong Handgrips
 			{ itemID = 46160 }, --Conqueror's Nightsong Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 46183 }, --Conqueror's Nightsong Handguards
 			{ itemID = 46185 }, --Conqueror's Nightsong Leggings
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -2429,13 +2429,13 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 46126 }, --Conqueror's Terrorblade Legplates
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 41293 }, --Furious Gladiator's Wyrmhide Gloves
 			{ itemID = 41304 }, --Furious Gladiator's Wyrmhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 41773 }, --Furious Gladiator's Dragonhide Gloves
 			{ itemID = 41667 }, --Furious Gladiator's Dragonhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41287 }, --Furious Gladiator's Kodohide Gloves
 			{ itemID = 41298 }, --Furious Gladiator's Kodohide Legguards
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -2444,18 +2444,18 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 46142 }, --Conqueror's Scourgestalker Handguards
 			{ itemID = 46144 }, --Conqueror's Scourgestalker Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 46207 }, --Conqueror's Worldbreaker Gloves
 			{ itemID = 46210 }, --Conqueror's Worldbreaker Kilt
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 46200 }, --Conqueror's Worldbreaker Grips
 			{ itemID = 46208 }, --Conqueror's Worldbreaker War-Kilt
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 46199 }, --Conqueror's Worldbreaker Handguards
 			{ itemID = 46202 }, --Conqueror's Worldbreaker Legguards
 		},
@@ -2463,68 +2463,68 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 41143 }, --Furious Gladiator's Chain Gauntlets
 			{ itemID = 41205 }, --Furious Gladiator's Chain Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 41007 }, --Furious Gladiator's Mail Gauntlets
 			{ itemID = 41033 }, --Furious Gladiator's Mail Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 41137 }, --Furious Gladiator's Linked Gauntlets
 			{ itemID = 41199 }, --Furious Gladiator's Linked Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41001 }, --Furious Gladiator's Ringmail Gauntlets
 			{ itemID = 41027 }, --Furious Gladiator's Ringmail Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 46113 }, --Conqueror's Darkruned Gauntlets
 			{ itemID = 46116 }, --Conqueror's Darkruned Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["Tanking"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "Tanking" },
 			{ itemID = 46119 }, --Conqueror's Darkruned Handguards
 			{ itemID = 46121 }, --Conqueror's Darkruned Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 46179 }, --Conqueror's Aegis Gloves
 			{ itemID = 46181 }, --Conqueror's Aegis Greaves
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 46155 }, --Conqueror's Aegis Gauntlets
 			{ itemID = 46153 }, --Conqueror's Aegis Legplates
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40809 }, --Furious Gladiator's Dreadplate Gauntlets
 			{ itemID = 40848 }, --Furious Gladiator's Dreadplate Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 40927 }, --Furious Gladiator's Ornamented Gloves
 			{ itemID = 40939 }, --Furious Gladiator's Ornamented Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 40808 }, --Furious Gladiator's Scaled Gauntlets
 			{ itemID = 40849 }, --Furious Gladiator's Scaled Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Protection" },
 			{ itemID = 46174 }, --Conqueror's Aegis Handguards
 			{ itemID = 46176 }, --Conqueror's Aegis Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 46148 }, --Conqueror's Siegebreaker Gauntlets
 			{ itemID = 46150 }, --Conqueror's Siegebreaker Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "Protection" },
 			{ itemID = 46164 }, --Conqueror's Siegebreaker Handguards
 			{ itemID = 46169 }, --Conqueror's Siegebreaker Legguards
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40807 }, --Furious Gladiator's Plate Gauntlets
 			{ itemID = 40847 }, --Furious Gladiator's Plate Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Cloth"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Cloth" },
 			{ itemID = 41909 }, --Furious Gladiator's Cuffs of Dominance
 			{ itemID = 41898 }, --Furious Gladiator's Cord of Dominance
 			{ itemID = 41903 }, --Furious Gladiator's Slippers of Dominance
@@ -2533,7 +2533,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41885 }, --Furious Gladiator's Slippers of Salvation
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Leather"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Leather" },
 			{ itemID = 41640 }, --Furious Gladiator's Armwraps of Dominance
 			{ itemID = 41630 }, --Furious Gladiator's Belt of Dominance
 			{ itemID = 41635 }, --Furious Gladiator's Boots of Dominance
@@ -2546,9 +2546,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Mail"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Mail" },
 			{ itemID = 41065 }, --Furious Gladiator's Wristguards of Dominance
 			{ itemID = 41070 }, --Furious Gladiator's Waistguard of Dominance
 			{ itemID = 41075 }, --Furious Gladiator's Sabatons of Dominance
@@ -2560,7 +2560,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41230 }, --Furious Gladiator's Sabatons of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Plate"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Plate" },
 			{ itemID = 40983 }, --Furious Gladiator's Bracers of Salvation
 			{ itemID = 40976 }, --Furious Gladiator's Girdle of Salvation
 			{ itemID = 40977 }, --Furious Gladiator's Greaves of Salvation
@@ -2570,9 +2570,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Emalon the Storm Watcher"],
+		Name = "Emalon the Storm Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Back"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Back" },
 			{ itemID = 42071 }, --Furious Gladiator's Cloak of Ascendancy
 			{ itemID = 42073 }, --Furious Gladiator's Cloak of Deliverance
 			{ itemID = 42069 }, --Furious Gladiator's Cloak of Dominance
@@ -2585,7 +2585,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 44083 }, --Reins of the Grand Black War Mammoth
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Neck" },
 			{ itemID = 42037 }, --Furious Gladiator's Pendant of Ascendancy
 			{ itemID = 42039 }, --Furious Gladiator's Pendant of Deliverance
 			{ itemID = 42036 }, --Furious Gladiator's Pendant of Dominance
@@ -2594,21 +2594,21 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 46373 }, --Furious Gladiator's Pendant of Sundering
 			{ itemID = 42034 }, --Furious Gladiator's Pendant of Triumph
 			{ itemID = 42035 }, --Furious Gladiator's Pendant of Victory
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Ring"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Ring" },
 			{ itemID = 42116 }, --Furious Gladiator's Band of Dominance
 			{ itemID = 42117 }, --Furious Gladiator's Band of Triumph
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 47752 }, --Khadgar's Gauntlets of Conquest
 			{ itemID = 47750 }, --Khadgar's Leggings of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 47982 }, --Velen's Gloves of Conquest
 			{ itemID = 47980 }, --Velen's Leggings of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 48072 }, --Velen's Handwraps of Conquest
 			{ itemID = 48074 }, --Velen's Pants of Conquest
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -2619,10 +2619,10 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 41971 }, --Furious Gladiator's Silk Handguards
 			{ itemID = 41959 }, --Furious Gladiator's Silk Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 41874 }, --Furious Gladiator's Mooncloth Gloves
 			{ itemID = 41864 }, --Furious Gladiator's Mooncloth Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 41940 }, --Furious Gladiator's Satin Gloves
 			{ itemID = 41927 }, --Furious Gladiator's Satin Leggings
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -2631,15 +2631,15 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 48162 }, --Stormrage's Gloves of Conquest
 			{ itemID = 48160 }, --Stormrage's Trousers of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 48213 }, --Stormrage's Handgrips of Conquest
 			{ itemID = 48215 }, --Stormrage's Legguards of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 48132 }, --Stormrage's Handguards of Conquest
 			{ itemID = 48130 }, --Stormrage's Leggings of Conquest
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -2647,13 +2647,13 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 48220 }, --VanCleef's Legplates of Conquest
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 41293 }, --Furious Gladiator's Wyrmhide Gloves
 			{ itemID = 41304 }, --Furious Gladiator's Wyrmhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 41773 }, --Furious Gladiator's Dragonhide Gloves
 			{ itemID = 41667 }, --Furious Gladiator's Dragonhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41287 }, --Furious Gladiator's Kodohide Gloves
 			{ itemID = 41298 }, --Furious Gladiator's Kodohide Legguards
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -2662,18 +2662,18 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 48254 }, --Windrunner's Handguards of Conquest
 			{ itemID = 48252 }, --Windrunner's Legguards of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 48312 }, --Nobundo's Gloves of Conquest
 			{ itemID = 48314 }, --Nobundo's Kilt of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 48342 }, --Nobundo's Grips of Conquest
 			{ itemID = 48344 }, --Nobundo's War-Kilt of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 48284 }, --Nobundo's Handguards of Conquest
 			{ itemID = 48282 }, --Nobundo's Legguards of Conquest
 		},
@@ -2681,68 +2681,68 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 41143 }, --Furious Gladiator's Chain Gauntlets
 			{ itemID = 41205 }, --Furious Gladiator's Chain Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 41007 }, --Furious Gladiator's Mail Gauntlets
 			{ itemID = 41033 }, --Furious Gladiator's Mail Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 41137 }, --Furious Gladiator's Linked Gauntlets
 			{ itemID = 41199 }, --Furious Gladiator's Linked Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41001 }, --Furious Gladiator's Ringmail Gauntlets
 			{ itemID = 41027 }, --Furious Gladiator's Ringmail Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 48480 }, --Thassarian's Gauntlets of Conquest
 			{ itemID = 48476 }, --Thassarian's Legplates of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["Tanking"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "Tanking" },
 			{ itemID = 48537 }, --Thassarian's Handguards of Conquest
 			{ itemID = 48533 }, --Thassarian's Legguards of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 48574 }, --Turalyon's Gloves of Conquest
 			{ itemID = 48568 }, --Turalyon's Greaves of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 48603 }, --Turalyon's Gauntlets of Conquest
 			{ itemID = 48605 }, --Turalyon's Legplates of Conquest
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40809 }, --Furious Gladiator's Dreadplate Gauntlets
 			{ itemID = 40848 }, --Furious Gladiator's Dreadplate Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 40927 }, --Furious Gladiator's Ornamented Gloves
 			{ itemID = 40939 }, --Furious Gladiator's Ornamented Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 40808 }, --Furious Gladiator's Scaled Gauntlets
 			{ itemID = 40849 }, --Furious Gladiator's Scaled Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Protection" },
 			{ itemID = 48633 }, --Turalyon's Handguards of Conquest
 			{ itemID = 48635 }, --Turalyon's Legguards of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 48375 }, --Wrynn's Gauntlets of Conquest
 			{ itemID = 48373 }, --Wrynn's Legplates of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "Protection" },
 			{ itemID = 48449 }, --Wrynn's Handguards of Conquest
 			{ itemID = 48445 }, --Wrynn's Legguards of Conquest
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40807 }, --Furious Gladiator's Plate Gauntlets
 			{ itemID = 40847 }, --Furious Gladiator's Plate Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Cloth"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Cloth" },
 			{ itemID = 41909 }, --Furious Gladiator's Cuffs of Dominance
 			{ itemID = 41898 }, --Furious Gladiator's Cord of Dominance
 			{ itemID = 41903 }, --Furious Gladiator's Slippers of Dominance
@@ -2751,7 +2751,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41885 }, --Furious Gladiator's Slippers of Salvation
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Leather"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Leather" },
 			{ itemID = 41640 }, --Furious Gladiator's Armwraps of Dominance
 			{ itemID = 41630 }, --Furious Gladiator's Belt of Dominance
 			{ itemID = 41635 }, --Furious Gladiator's Boots of Dominance
@@ -2764,9 +2764,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Mail"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Mail" },
 			{ itemID = 41065 }, --Furious Gladiator's Wristguards of Dominance
 			{ itemID = 41070 }, --Furious Gladiator's Waistguard of Dominance
 			{ itemID = 41075 }, --Furious Gladiator's Sabatons of Dominance
@@ -2778,7 +2778,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41230 }, --Furious Gladiator's Sabatons of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Plate"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Plate" },
 			{ itemID = 40983 }, --Furious Gladiator's Bracers of Salvation
 			{ itemID = 40976 }, --Furious Gladiator's Girdle of Salvation
 			{ itemID = 40977 }, --Furious Gladiator's Greaves of Salvation
@@ -2788,9 +2788,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Back"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Back" },
 			{ itemID = 42071 }, --Furious Gladiator's Cloak of Ascendancy
 			{ itemID = 42073 }, --Furious Gladiator's Cloak of Deliverance
 			{ itemID = 42069 }, --Furious Gladiator's Cloak of Dominance
@@ -2803,7 +2803,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 44083 }, --Reins of the Grand Black War Mammoth
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Neck" },
 			{ itemID = 42037 }, --Furious Gladiator's Pendant of Ascendancy
 			{ itemID = 42039 }, --Furious Gladiator's Pendant of Deliverance
 			{ itemID = 42036 }, --Furious Gladiator's Pendant of Dominance
@@ -2812,21 +2812,21 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 46373 }, --Furious Gladiator's Pendant of Sundering
 			{ itemID = 42034 }, --Furious Gladiator's Pendant of Triumph
 			{ itemID = 42035 }, --Furious Gladiator's Pendant of Victory
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Ring"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Ring" },
 			{ itemID = 42116 }, --Furious Gladiator's Band of Dominance
 			{ itemID = 42117 }, --Furious Gladiator's Band of Triumph
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 47753 }, --Khadgar's Gauntlets of Triumph
 			{ itemID = 47755 }, --Khadgar's Leggings of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 47983 }, --Velen's Gloves of Triumph
 			{ itemID = 47985 }, --Velen's Leggings of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 48077 }, --Velen's Handwraps of Triumph
 			{ itemID = 48079 }, --Velen's Pants of Triumph
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -2837,10 +2837,10 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 41972 }, --Relentless Gladiator's Silk Handguards
 			{ itemID = 41960 }, --Relentless Gladiator's Silk Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 41875 }, --Relentless Gladiator's Mooncloth Gloves
 			{ itemID = 41865 }, --Relentless Gladiator's Mooncloth Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 41941 }, --Relentless Gladiator's Satin Gloves
 			{ itemID = 41928 }, --Relentless Gladiator's Satin Leggings
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -2849,15 +2849,15 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 48163 }, --Stormrage's Gloves of Triumph
 			{ itemID = 48165 }, --Stormrage's Trousers of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 48212 }, --Stormrage's Handgrips of Triumph
 			{ itemID = 48210 }, --Stormrage's Legguards of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 48133 }, --Stormrage's Handguards of Triumph
 			{ itemID = 48135 }, --Stormrage's Leggings of Triumph
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -2865,13 +2865,13 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 48226 }, --VanCleef's Legplates of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 41294 }, --Relentless Gladiator's Wyrmhide Gloves
 			{ itemID = 41305 }, --Relentless Gladiator's Wyrmhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 41774 }, --Relentless Gladiator's Dragonhide Gloves
 			{ itemID = 41668 }, --Relentless Gladiator's Dragonhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41288 }, --Relentless Gladiator's Kodohide Gloves
 			{ itemID = 41299 }, --Relentless Gladiator's Kodohide Legguards
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -2880,18 +2880,18 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 48256 }, --Windrunner's Handguards of Triumph
 			{ itemID = 48258 }, --Windrunner's Legguards of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 48317 }, --Nobundo's Gloves of Triumph
 			{ itemID = 48319 }, --Nobundo's Kilt of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 48347 }, --Nobundo's Grips of Triumph
 			{ itemID = 48349 }, --Nobundo's War-Kilt of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 48286 }, --Nobundo's Handguards of Triumph
 			{ itemID = 48288 }, --Nobundo's Legguards of Triumph
 		},
@@ -2899,68 +2899,68 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 41144 }, --Relentless Gladiator's Chain Gauntlets
 			{ itemID = 41206 }, --Relentless Gladiator's Chain Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 41008 }, --Relentless Gladiator's Mail Gauntlets
 			{ itemID = 41034 }, --Relentless Gladiator's Mail Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 41138 }, --Relentless Gladiator's Linked Gauntlets
 			{ itemID = 41200 }, --Relentless Gladiator's Linked Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41002 }, --Relentless Gladiator's Ringmail Gauntlets
 			{ itemID = 41028 }, --Relentless Gladiator's Ringmail Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 48482 }, --Thassarian's Gauntlets of Triumph
 			{ itemID = 48484 }, --Thassarian's Legplates of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["Tanking"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "Tanking" },
 			{ itemID = 48539 }, --Thassarian's Handguards of Triumph
 			{ itemID = 48541 }, --Thassarian's Legguards of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 48576 }, --Turalyon's Gloves of Triumph
 			{ itemID = 48578 }, --Turalyon's Greaves of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 48608 }, --Turalyon's Gauntlets of Triumph
 			{ itemID = 48610 }, --Turalyon's Legplates of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40811 }, --Relentless Gladiator's Dreadplate Gauntlets
 			{ itemID = 40851 }, --Relentless Gladiator's Dreadplate Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 40928 }, --Relentless Gladiator's Ornamented Gloves
 			{ itemID = 40940 }, --Relentless Gladiator's Ornamented Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 40812 }, --Relentless Gladiator's Scaled Gauntlets
 			{ itemID = 40852 }, --Relentless Gladiator's Scaled Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Protection" },
 			{ itemID = 48640 }, --Turalyon's Handguards of Triumph
 			{ itemID = 48638 }, --Turalyon's Legguards of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 48377 }, --Wrynn's Gauntlets of Triumph
 			{ itemID = 48379 }, --Wrynn's Legplates of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "Protection" },
 			{ itemID = 48452 }, --Wrynn's Handguards of Triumph
 			{ itemID = 48446 }, --Wrynn's Legguards of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40810 }, --Relentless Gladiator's Plate Gauntlets
 			{ itemID = 40850 }, --Relentless Gladiator's Plate Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Cloth"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Cloth" },
 			{ itemID = 41910 }, --Relentless Gladiator's Cuffs of Dominance
 			{ itemID = 41899 }, --Relentless Gladiator's Cord of Dominance
 			{ itemID = 41904 }, --Relentless Gladiator's Treads of Dominance
@@ -2972,7 +2972,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 49183 }, --Relentless Gladiator's Treads of Alacrity
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Leather"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Leather" },
 			{ itemID = 41641 }, --Relentless Gladiator's Armwraps of Dominance
 			{ itemID = 41631 }, --Relentless Gladiator's Belt of Dominance
 			{ itemID = 41636 }, --Relentless Gladiator's Boots of Dominance
@@ -2985,9 +2985,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Mail"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Mail" },
 			{ itemID = 41066 }, --Relentless Gladiator's Wristguards of Dominance
 			{ itemID = 41071 }, --Relentless Gladiator's Waistguard of Dominance
 			{ itemID = 41076 }, --Relentless Gladiator's Sabatons of Dominance
@@ -2999,7 +2999,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41231 }, --Relentless Gladiator's Sabatons of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Plate"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Plate" },
 			{ itemID = 40984 }, --Relentless Gladiator's Bracers of Salvation
 			{ itemID = 40978 }, --Relentless Gladiator's Girdle of Salvation
 			{ itemID = 40979 }, --Relentless Gladiator's Greaves of Salvation
@@ -3009,9 +3009,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Back"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Back" },
 			{ itemID = 42078 }, --Relentless Gladiator's Cloak of Ascendancy
 			{ itemID = 42080 }, --Relentless Gladiator's Cloak of Deliverance
 			{ itemID = 42076 }, --Relentless Gladiator's Cloak of Dominance
@@ -3024,7 +3024,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 44083 }, --Reins of the Grand Black War Mammoth
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Neck" },
 			{ itemID = 42044 }, --Relentless Gladiator's Pendant of Ascendancy
 			{ itemID = 42046 }, --Relentless Gladiator's Pendant of Deliverance
 			{ itemID = 42043 }, --Relentless Gladiator's Pendant of Dominance
@@ -3033,21 +3033,21 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 46374 }, --Relentless Gladiator's Pendant of Sundering
 			{ itemID = 42041 }, --Relentless Gladiator's Pendant of Triumph
 			{ itemID = 42042 }, --Relentless Gladiator's Pendant of Victory
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Ring"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Ring" },
 			{ itemID = 42118 }, --Relentless Gladiator's Band of Ascendancy
 			{ itemID = 42119 }, --Relentless Gladiator's Band of Victory
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 47773 }, --Sunstrider's Gauntlets of Conquest
 			{ itemID = 47775 }, --Sunstrider's Leggings of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 48067 }, --Zabra's Gloves of Conquest
 			{ itemID = 48069 }, --Zabra's Leggings of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 48097 }, --Zabra's Handwraps of Conquest
 			{ itemID = 48099 }, --Zabra's Pants of Conquest
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -3058,10 +3058,10 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 41971 }, --Furious Gladiator's Silk Handguards
 			{ itemID = 41959 }, --Furious Gladiator's Silk Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 41874 }, --Furious Gladiator's Mooncloth Gloves
 			{ itemID = 41864 }, --Furious Gladiator's Mooncloth Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 41940 }, --Furious Gladiator's Satin Gloves
 			{ itemID = 41927 }, --Furious Gladiator's Satin Leggings
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -3070,15 +3070,15 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 48183 }, --Runetotem's Gloves of Conquest
 			{ itemID = 48185 }, --Runetotem's Trousers of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 48192 }, --Runetotem's Handgrips of Conquest
 			{ itemID = 48190 }, --Runetotem's Legguards of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 48153 }, --Runetotem's Handguards of Conquest
 			{ itemID = 48155 }, --Runetotem's Leggings of Conquest
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -3086,13 +3086,13 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 48246 }, --Garona's Legplates of Conquest
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 41293 }, --Furious Gladiator's Wyrmhide Gloves
 			{ itemID = 41304 }, --Furious Gladiator's Wyrmhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 41773 }, --Furious Gladiator's Dragonhide Gloves
 			{ itemID = 41667 }, --Furious Gladiator's Dragonhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41287 }, --Furious Gladiator's Kodohide Gloves
 			{ itemID = 41298 }, --Furious Gladiator's Kodohide Legguards
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -3101,18 +3101,18 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 48276 }, --Windrunner's Handguards of Conquest
 			{ itemID = 48278 }, --Windrunner's Legguards of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 48337 }, --Thrall's Gloves of Conquest
 			{ itemID = 48339 }, --Thrall's Kilt of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 48367 }, --Thrall's Grips of Conquest
 			{ itemID = 48369 }, --Thrall's War-Kilt of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 48296 }, --Thrall's Handguards of Conquest
 			{ itemID = 48298 }, --Thrall's Legguards of Conquest
 		},
@@ -3120,68 +3120,68 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 41143 }, --Furious Gladiator's Chain Gauntlets
 			{ itemID = 41205 }, --Furious Gladiator's Chain Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 41007 }, --Furious Gladiator's Mail Gauntlets
 			{ itemID = 41033 }, --Furious Gladiator's Mail Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 41137 }, --Furious Gladiator's Linked Gauntlets
 			{ itemID = 41199 }, --Furious Gladiator's Linked Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41001 }, --Furious Gladiator's Ringmail Gauntlets
 			{ itemID = 41027 }, --Furious Gladiator's Ringmail Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 48502 }, --Koltira's Gauntlets of Conquest
 			{ itemID = 48504 }, --Koltira's Legplates of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["Tanking"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "Tanking" },
 			{ itemID = 48559 }, --Koltira's Handguards of Conquest
 			{ itemID = 48561 }, --Koltira's Legguards of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 48598 }, --Liadrin's Gloves of Conquest
 			{ itemID = 48596 }, --Liadrin's Greaves of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 48630 }, --Liadrin's Gauntlets of Conquest
 			{ itemID = 48628 }, --Liadrin's Legplates of Conquest
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40809 }, --Furious Gladiator's Dreadplate Gauntlets
 			{ itemID = 40848 }, --Furious Gladiator's Dreadplate Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 40927 }, --Furious Gladiator's Ornamented Gloves
 			{ itemID = 40939 }, --Furious Gladiator's Ornamented Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 40808 }, --Furious Gladiator's Scaled Gauntlets
 			{ itemID = 40849 }, --Furious Gladiator's Scaled Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Protection" },
 			{ itemID = 48653 }, --Liadrin's Handguards of Conquest
 			{ itemID = 48655 }, --Liadrin's Legguards of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 48387 }, --Hellscream's Gauntlets of Conquest
 			{ itemID = 48389 }, --Hellscream's Legplates of Conquest
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "Protection" },
 			{ itemID = 48457 }, --Hellscream's Handguards of Conquest
 			{ itemID = 48459 }, --Hellscream's Legguards of Conquest
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40807 }, --Furious Gladiator's Plate Gauntlets
 			{ itemID = 40847 }, --Furious Gladiator's Plate Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Cloth"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Cloth" },
 			{ itemID = 41909 }, --Furious Gladiator's Cuffs of Dominance
 			{ itemID = 41898 }, --Furious Gladiator's Cord of Dominance
 			{ itemID = 41903 }, --Furious Gladiator's Slippers of Dominance
@@ -3190,7 +3190,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41885 }, --Furious Gladiator's Slippers of Salvation
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Leather"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Leather" },
 			{ itemID = 41640 }, --Furious Gladiator's Armwraps of Dominance
 			{ itemID = 41630 }, --Furious Gladiator's Belt of Dominance
 			{ itemID = 41635 }, --Furious Gladiator's Boots of Dominance
@@ -3203,9 +3203,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Mail"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Mail" },
 			{ itemID = 41065 }, --Furious Gladiator's Wristguards of Dominance
 			{ itemID = 41070 }, --Furious Gladiator's Waistguard of Dominance
 			{ itemID = 41075 }, --Furious Gladiator's Sabatons of Dominance
@@ -3217,7 +3217,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41230 }, --Furious Gladiator's Sabatons of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Plate"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Plate" },
 			{ itemID = 40983 }, --Furious Gladiator's Bracers of Salvation
 			{ itemID = 40976 }, --Furious Gladiator's Girdle of Salvation
 			{ itemID = 40977 }, --Furious Gladiator's Greaves of Salvation
@@ -3227,9 +3227,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Back"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Back" },
 			{ itemID = 42071 }, --Furious Gladiator's Cloak of Ascendancy
 			{ itemID = 42073 }, --Furious Gladiator's Cloak of Deliverance
 			{ itemID = 42069 }, --Furious Gladiator's Cloak of Dominance
@@ -3242,7 +3242,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 44083 }, --Reins of the Grand Black War Mammoth
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Neck" },
 			{ itemID = 42037 }, --Furious Gladiator's Pendant of Ascendancy
 			{ itemID = 42039 }, --Furious Gladiator's Pendant of Deliverance
 			{ itemID = 42036 }, --Furious Gladiator's Pendant of Dominance
@@ -3251,21 +3251,21 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 46373 }, --Furious Gladiator's Pendant of Sundering
 			{ itemID = 42034 }, --Furious Gladiator's Pendant of Triumph
 			{ itemID = 42035 }, --Furious Gladiator's Pendant of Victory
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Ring"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Ring" },
 			{ itemID = 42116 }, --Furious Gladiator's Band of Dominance
 			{ itemID = 42117 }, --Furious Gladiator's Band of Triumph
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 47772 }, --Sunstrider's Gauntlets of Triumph
 			{ itemID = 47770 }, --Sunstrider's Leggings of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 48066 }, --Zabra's Gloves of Triumph
 			{ itemID = 48064 }, --Zabra's Leggings of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 48096 }, --Zabra's Handwraps of Triumph
 			{ itemID = 48094 }, --Zabra's Pants of Triumph
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -3276,10 +3276,10 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 41972 }, --Relentless Gladiator's Silk Handguards
 			{ itemID = 41960 }, --Relentless Gladiator's Silk Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 41875 }, --Relentless Gladiator's Mooncloth Gloves
 			{ itemID = 41865 }, --Relentless Gladiator's Mooncloth Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 41941 }, --Relentless Gladiator's Satin Gloves
 			{ itemID = 41928 }, --Relentless Gladiator's Satin Leggings
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -3288,15 +3288,15 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 48182 }, --Runetotem's Gloves of Triumph
 			{ itemID = 48180 }, --Runetotem's Trousers of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 48193 }, --Runetotem's Handgrips of Triumph
 			{ itemID = 48195 }, --Runetotem's Legguards of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 48152 }, --Runetotem's Handguards of Triumph
 			{ itemID = 48150 }, --Runetotem's Leggings of Triumph
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -3304,13 +3304,13 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 48239 }, --Garona's Legplates of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 41294 }, --Relentless Gladiator's Wyrmhide Gloves
 			{ itemID = 41305 }, --Relentless Gladiator's Wyrmhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 41774 }, --Relentless Gladiator's Dragonhide Gloves
 			{ itemID = 41668 }, --Relentless Gladiator's Dragonhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41288 }, --Relentless Gladiator's Kodohide Gloves
 			{ itemID = 41299 }, --Relentless Gladiator's Kodohide Legguards
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -3319,18 +3319,18 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 48273 }, --Windrunner's Handguards of Triumph
 			{ itemID = 48271 }, --Windrunner's Legguards of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 48334 }, --Thrall's Gloves of Triumph
 			{ itemID = 48332 }, --Thrall's Kilt of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 48364 }, --Thrall's Grips of Triumph
 			{ itemID = 48362 }, --Thrall's War-Kilt of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 48301 }, --Thrall's Handguards of Triumph
 			{ itemID = 48303 }, --Thrall's Legguards of Triumph
 		},
@@ -3338,68 +3338,68 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 41144 }, --Relentless Gladiator's Chain Gauntlets
 			{ itemID = 41206 }, --Relentless Gladiator's Chain Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 41008 }, --Relentless Gladiator's Mail Gauntlets
 			{ itemID = 41034 }, --Relentless Gladiator's Mail Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 41138 }, --Relentless Gladiator's Linked Gauntlets
 			{ itemID = 41200 }, --Relentless Gladiator's Linked Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41002 }, --Relentless Gladiator's Ringmail Gauntlets
 			{ itemID = 41028 }, --Relentless Gladiator's Ringmail Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 48499 }, --Koltira's Gauntlets of Triumph
 			{ itemID = 48497 }, --Koltira's Legplates of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["Tanking"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "Tanking" },
 			{ itemID = 48556 }, --Koltira's Handguards of Triumph
 			{ itemID = 48554 }, --Koltira's Legguards of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 48593 }, --Liadrin's Gloves of Triumph
 			{ itemID = 48591 }, --Liadrin's Greaves of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 48625 }, --Liadrin's Gauntlets of Triumph
 			{ itemID = 48623 }, --Liadrin's Legplates of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40811 }, --Relentless Gladiator's Dreadplate Gauntlets
 			{ itemID = 40851 }, --Relentless Gladiator's Dreadplate Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 40928 }, --Relentless Gladiator's Ornamented Gloves
 			{ itemID = 40940 }, --Relentless Gladiator's Ornamented Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 40812 }, --Relentless Gladiator's Scaled Gauntlets
 			{ itemID = 40852 }, --Relentless Gladiator's Scaled Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Protection" },
 			{ itemID = 48658 }, --Liadrin's Handguards of Triumph
 			{ itemID = 48660 }, --Liadrin's Legguards of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 48392 }, --Hellscream's Gauntlets of Triumph
 			{ itemID = 48394 }, --Hellscream's Legplates of Triumph
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "Protection" },
 			{ itemID = 48462 }, --Hellscream's Handguards of Triumph
 			{ itemID = 48464 }, --Hellscream's Legguards of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40810 }, --Relentless Gladiator's Plate Gauntlets
 			{ itemID = 40850 }, --Relentless Gladiator's Plate Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Cloth"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Cloth" },
 			{ itemID = 41910 }, --Relentless Gladiator's Cuffs of Dominance
 			{ itemID = 41899, "=ds=#s19#" }, --Relentless Gladiator's Cord of Dominance
 			{ itemID = 41904 }, --Relentless Gladiator's Treads of Dominance
@@ -3411,7 +3411,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 49183 }, --Relentless Gladiator's Treads of Alacrity
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Leather"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Leather" },
 			{ itemID = 41641 }, --Relentless Gladiator's Armwraps of Dominance
 			{ itemID = 41631 }, --Relentless Gladiator's Belt of Dominance
 			{ itemID = 41636 }, --Relentless Gladiator's Boots of Dominance
@@ -3424,9 +3424,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Mail"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Mail" },
 			{ itemID = 41066 }, --Relentless Gladiator's Wristguards of Dominance
 			{ itemID = 41071 }, --Relentless Gladiator's Waistguard of Dominance
 			{ itemID = 41076 }, --Relentless Gladiator's Sabatons of Dominance
@@ -3438,7 +3438,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41231 }, --Relentless Gladiator's Sabatons of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Plate"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Plate" },
 			{ itemID = 40984 }, --Relentless Gladiator's Bracers of Salvation
 			{ itemID = 40978 }, --Relentless Gladiator's Girdle of Salvation
 			{ itemID = 40979 }, --Relentless Gladiator's Greaves of Salvation
@@ -3448,9 +3448,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Koralon the Flame Watcher"],
+		Name = "Koralon the Flame Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Back"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Back" },
 			{ itemID = 42078 }, --Relentless Gladiator's Cloak of Ascendancy
 			{ itemID = 42080 }, --Relentless Gladiator's Cloak of Deliverance
 			{ itemID = 42076 }, --Relentless Gladiator's Cloak of Dominance
@@ -3463,7 +3463,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 44083 }, --Reins of the Grand Black War Mammoth
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Neck" },
 			{ itemID = 42044 }, --Relentless Gladiator's Pendant of Ascendancy
 			{ itemID = 42046 }, --Relentless Gladiator's Pendant of Deliverance
 			{ itemID = 42043 }, --Relentless Gladiator's Pendant of Dominance
@@ -3472,21 +3472,21 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 46374 }, --Relentless Gladiator's Pendant of Sundering
 			{ itemID = 42041 }, --Relentless Gladiator's Pendant of Triumph
 			{ itemID = 42042 }, --Relentless Gladiator's Pendant of Victory
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Ring"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Ring" },
 			{ itemID = 42118 }, --Relentless Gladiator's Band of Ascendancy
 			{ itemID = 42119 }, --Relentless Gladiator's Band of Victory
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 50275 }, --Bloodmage Gloves
 			{ itemID = 50277 }, --Bloodmage Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 50766 }, --Crimson Acolyte Gloves
 			{ itemID = 50769 }, --Crimson Acolyte Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 50391 }, --Crimson Acolyte Handwraps
 			{ itemID = 50393 }, --Crimson Acolyte Pants
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -3497,10 +3497,10 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 41972 }, --Relentless Gladiator's Silk Handguards
 			{ itemID = 41960 }, --Relentless Gladiator's Silk Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 41875 }, --Relentless Gladiator's Mooncloth Gloves
 			{ itemID = 41865 }, --Relentless Gladiator's Mooncloth Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 41941 }, --Relentless Gladiator's Satin Gloves
 			{ itemID = 41928 }, --Relentless Gladiator's Satin Leggings
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -3509,15 +3509,15 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 50822 }, --Lasherweave's Gloves
 			{ itemID = 50820 }, --Lasherweave's Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 50827 }, --Lasherweave's Handgrips
 			{ itemID = 50825 }, --Lasherweave's Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 50107 }, --Lasherweave's Gauntlets
 			{ itemID = 50109 }, --Lasherweave's Legplates
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -3525,13 +3525,13 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 50090 }, --Shadowblade Legplates
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 41294 }, --Relentless Gladiator's Wyrmhide Gloves
 			{ itemID = 41305 }, --Relentless Gladiator's Wyrmhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 41774 }, --Relentless Gladiator's Dragonhide Gloves
 			{ itemID = 41668 }, --Relentless Gladiator's Dragonhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41288 }, --Relentless Gladiator's Kodohide Gloves
 			{ itemID = 41299 }, --Relentless Gladiator's Kodohide Legguards
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -3540,18 +3540,18 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 50114 }, --Ahn'Kahar Blood Hunter's Handguards
 			{ itemID = 50116 }, --Ahn'Kahar Blood Hunter's Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 50842 }, --Frost Witch's Gloves
 			{ itemID = 50844 }, --Frost Witch's Kilt
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 50831 }, --Frost Witch's Grips
 			{ itemID = 50833 }, --Frost Witch's War-Kilt
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 50836 }, --Frost Witch's Handguards
 			{ itemID = 50838 }, --Frost Witch's Legguards
 		},
@@ -3559,68 +3559,68 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 41144 }, --Relentless Gladiator's Chain Gauntlets
 			{ itemID = 41206 }, --Relentless Gladiator's Chain Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 41008 }, --Relentless Gladiator's Mail Gauntlets
 			{ itemID = 41034 }, --Relentless Gladiator's Mail Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 41138 }, --Relentless Gladiator's Linked Gauntlets
 			{ itemID = 41200 }, --Relentless Gladiator's Linked Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 41002 }, --Relentless Gladiator's Ringmail Gauntlets
 			{ itemID = 41028 }, --Relentless Gladiator's Ringmail Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 50095 }, --Scourgelord Gauntlets
 			{ itemID = 50097 }, --Scourgelord Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["Tanking"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "Tanking" },
 			{ itemID = 50856 }, --Scourgelord Handguards
 			{ itemID = 50854 }, --Scourgelord Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 50868 }, --Lightsworn Gloves
 			{ itemID = 50866 }, --Lightsworn Greaves
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 50327 }, --Lightsworn Gauntlets
 			{ itemID = 50325 }, --Lightsworn Legplates
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40811 }, --Relentless Gladiator's Dreadplate Gauntlets
 			{ itemID = 40851 }, --Relentless Gladiator's Dreadplate Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 40928 }, --Relentless Gladiator's Ornamented Gloves
 			{ itemID = 40940 }, --Relentless Gladiator's Ornamented Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 40812 }, --Relentless Gladiator's Scaled Gauntlets
 			{ itemID = 40852 }, --Relentless Gladiator's Scaled Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Protection" },
 			{ itemID = 50863 }, --Lightsworn Handguards
 			{ itemID = 50861 }, --Lightsworn Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 50079 }, --Ymirjar Lord's Gauntlets
 			{ itemID = 50081 }, --Ymirjar Lord's Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "Protection" },
 			{ itemID = 50849 }, --Ymirjar Lord's Handguards
 			{ itemID = 50847 }, --Ymirjar Lord's Legguards
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 40810 }, --Relentless Gladiator's Plate Gauntlets
 			{ itemID = 40850 }, --Relentless Gladiator's Plate Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Cloth"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Cloth" },
 			{ itemID = 41910 }, --Relentless Gladiator's Cuffs of Dominance
 			{ itemID = 41899 }, --Relentless Gladiator's Cord of Dominance
 			{ itemID = 41904 }, --Relentless Gladiator's Treads of Dominance
@@ -3632,7 +3632,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 49183 }, --Relentless Gladiator's Treads of Alacrity
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Leather"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Leather" },
 			{ itemID = 41641 }, --Relentless Gladiator's Armwraps of Dominance
 			{ itemID = 41631 }, --Relentless Gladiator's Belt of Dominance
 			{ itemID = 41636 }, --Relentless Gladiator's Boots of Dominance
@@ -3645,9 +3645,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Mail"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Mail" },
 			{ itemID = 41066 }, --Relentless Gladiator's Wristguards of Dominance
 			{ itemID = 41071 }, --Relentless Gladiator's Waistguard of Dominance
 			{ itemID = 41076 }, --Relentless Gladiator's Sabatons of Dominance
@@ -3659,7 +3659,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 41231 }, --Relentless Gladiator's Sabatons of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Plate"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Plate" },
 			{ itemID = 40984 }, --Relentless Gladiator's Bracers of Salvation
 			{ itemID = 40978 }, --Relentless Gladiator's Girdle of Salvation
 			{ itemID = 40979 }, --Relentless Gladiator's Greaves of Salvation
@@ -3669,9 +3669,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Back"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Back" },
 			{ itemID = 42078 }, --Relentless Gladiator's Cloak of Ascendancy
 			{ itemID = 42080 }, --Relentless Gladiator's Cloak of Deliverance
 			{ itemID = 42076 }, --Relentless Gladiator's Cloak of Dominance
@@ -3684,7 +3684,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 44083 }, --Reins of the Grand Black War Mammoth
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Neck" },
 			{ itemID = 42044 }, --Relentless Gladiator's Pendant of Ascendancy
 			{ itemID = 42046 }, --Relentless Gladiator's Pendant of Deliverance
 			{ itemID = 42043 }, --Relentless Gladiator's Pendant of Dominance
@@ -3693,21 +3693,21 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 46374 }, --Relentless Gladiator's Pendant of Sundering
 			{ itemID = 42041 }, --Relentless Gladiator's Pendant of Triumph
 			{ itemID = 42042 }, --Relentless Gladiator's Pendant of Victory
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Ring"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Ring" },
 			{ itemID = 42118 }, --Relentless Gladiator's Band of Ascendancy
 			{ itemID = 42119 }, --Relentless Gladiator's Band of Victory
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 51159 }, --Sanctified Bloodmage Gloves
 			{ itemID = 51157 }, --Sanctified Bloodmage Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 51179 }, --Sanctified Crimson Acolyte Gloves
 			{ itemID = 51177 }, --Sanctified Crimson Acolyte Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 51183 }, --Sanctified Crimson Acolyte Handwraps
 			{ itemID = 51181 }, --Sanctified Crimson Acolyte Pants
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -3718,10 +3718,10 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["MAGE"] },
 			{ itemID = 51464 }, --Wrathful Gladiator's Silk Handguards
 			{ itemID = 51466 }, --Wrathful Gladiator's Silk Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Holy" },
 			{ itemID = 51483 }, --Wrathful Gladiator's Mooncloth Gloves
 			{ itemID = 51485 }, --Wrathful Gladiator's Mooncloth Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. AL["Shadow"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PRIEST"], desc = "=q5=" .. "Shadow" },
 			{ itemID = 51488 }, --Wrathful Gladiator's Satin Gloves
 			{ itemID = 51490 }, --Wrathful Gladiator's Satin Leggings
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"] },
@@ -3730,15 +3730,15 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 51148 }, --Sanctified Lasherweave's Gloves
 			{ itemID = 51146 }, --Sanctified Lasherweave's Trousers
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 51144 }, --Sanctified Lasherweave's Handgrips
 			{ itemID = 51142 }, --Sanctified Lasherweave's Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 51138 }, --Sanctified Lasherweave's Gauntlets
 			{ itemID = 51136 }, --Sanctified Lasherweave's Legplates
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -3746,13 +3746,13 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 51186 }, --Sanctified Shadowblade Legplates
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Balance"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Balance" },
 			{ itemID = 51434 }, --Wrathful Gladiator's Wyrmhide Gloves
 			{ itemID = 51436 }, --Wrathful Gladiator's Wyrmhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Feral"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Feral" },
 			{ itemID = 51426 }, --Wrathful Gladiator's Dragonhide Gloves
 			{ itemID = 51428 }, --Wrathful Gladiator's Dragonhide Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DRUID"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 51420 }, --Wrathful Gladiator's Kodohide Gloves
 			{ itemID = 51422 }, --Wrathful Gladiator's Kodohide Legguards
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["ROGUE"] },
@@ -3761,18 +3761,18 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 51154 }, --Sanctified Ahn'Kahar Blood Hunter's Handguards
 			{ itemID = 51152 }, --Sanctified Ahn'Kahar Blood Hunter's Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 51201 }, --Sanctified Frost Witch's Gloves
 			{ itemID = 51203 }, --Sanctified Frost Witch's Kilt
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 51196 }, --Sanctified Frost Witch's Grips
 			{ itemID = 51198 }, --Sanctified Frost Witch's War-Kilt
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 51191 }, --Sanctified Frost Witch's Handguards
 			{ itemID = 51193 }, --Sanctified Frost Witch's Legguards
 		},
@@ -3780,68 +3780,68 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["HUNTER"] },
 			{ itemID = 51459 }, --Wrathful Gladiator's Chain Gauntlets
 			{ itemID = 51461 }, --Wrathful Gladiator's Chain Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Elemental"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Elemental" },
 			{ itemID = 51510 }, --Wrathful Gladiator's Mail Gauntlets
 			{ itemID = 51512 }, --Wrathful Gladiator's Mail Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Enhancement"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Enhancement" },
 			{ itemID = 51504 }, --Wrathful Gladiator's Linked Gauntlets
 			{ itemID = 51506 }, --Wrathful Gladiator's Linked Leggings
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. AL["Restoration"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], desc = "=q5=" .. "Restoration" },
 			{ itemID = 51498 }, --Wrathful Gladiator's Ringmail Gauntlets
 			{ itemID = 51500 }, --Wrathful Gladiator's Ringmail Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 51128 }, --Sanctified Scourgelord Gauntlets
 			{ itemID = 51126 }, --Sanctified Scourgelord Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["Tanking"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "Tanking" },
 			{ itemID = 51132 }, --Sanctified Scourgelord Handguards
 			{ itemID = 51131 }, --Sanctified Scourgelord Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 51169 }, --Sanctified Lightsworn Gloves
 			{ itemID = 51168 }, --Sanctified Lightsworn Greaves
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 51163 }, --Sanctified Lightsworn Gauntlets
 			{ itemID = 51161 }, --Sanctified Lightsworn Legplates
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], desc = "=q5=" .. "DPS" },
 			{ itemID = 51414 }, --Wrathful Gladiator's Dreadplate Gauntlets
 			{ itemID = 51416 }, --Wrathful Gladiator's Dreadplate Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Holy"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Holy" },
 			{ itemID = 51469 }, --Wrathful Gladiator's Ornamented Gloves
 			{ itemID = 51471 }, --Wrathful Gladiator's Ornamented Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Retribution"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Retribution" },
 			{ itemID = 51475 }, --Wrathful Gladiator's Scaled Gauntlets
 			{ itemID = 51477 }, --Wrathful Gladiator's Scaled Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["PALADIN"], desc = "=q5=" .. "Protection" },
 			{ itemID = 51172 }, --Sanctified Lightsworn Handguards
 			{ itemID = 51171 }, --Sanctified Lightsworn Legguards
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 51213 }, --Ymirjar Lord's Gauntlets
 			{ itemID = 51211 }, --Ymirjar Lord's Legplates
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["Protection"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "Protection" },
 			{ itemID = 51217 }, --Ymirjar Lord's Handguards
 			{ itemID = 51216 }, --Ymirjar Lord's Legguards
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. AL["DPS"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], desc = "=q5=" .. "DPS" },
 			{ itemID = 51542 }, --Wrathful Gladiator's Plate Gauntlets
 			{ itemID = 51544 }, --Wrathful Gladiator's Plate Legguards
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Cloth"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Cloth" },
 			{ itemID = 51329 }, --Wrathful Gladiator's Cuffs of Dominance
 			{ itemID = 51327 }, --Wrathful Gladiator's Cord of Dominance
 			{ itemID = 51328 }, --Wrathful Gladiator's Treads of Dominance
@@ -3853,7 +3853,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 51338 }, --Wrathful Gladiator's Treads of Alacrity
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Leather"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Leather" },
 			{ itemID = 51345 }, --Wrathful Gladiator's Armwraps of Dominance
 			{ itemID = 51343 }, --Wrathful Gladiator's Belt of Dominance
 			{ itemID = 51344 }, --Wrathful Gladiator's Boots of Dominance
@@ -3866,9 +3866,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Mail"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Mail" },
 			{ itemID = 51376 }, --Wrathful Gladiator's Wristguards of Dominance
 			{ itemID = 51374 }, --Wrathful Gladiator's Waistguard of Dominance
 			{ itemID = 51375 }, --Wrathful Gladiator's Sabatons of Dominance
@@ -3880,7 +3880,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 51351 }, --Wrathful Gladiator's Sabatons of Triumph
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Plate"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Plate" },
 			{ itemID = 51361 }, --Wrathful Gladiator's Bracers of Salvation
 			{ itemID = 51359 }, --Wrathful Gladiator's Girdle of Salvation
 			{ itemID = 51360 }, --Wrathful Gladiator's Greaves of Salvation
@@ -3890,9 +3890,9 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Toravon the Ice Watcher"],
+		Name = "Toravon the Ice Watcher",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Back"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Back" },
 			{ itemID = 51334 }, --Wrathful Gladiator's Cloak of Ascendancy
 			{ itemID = 51348 }, --Wrathful Gladiator's Cloak of Deliverance
 			{ itemID = 51330 }, --Wrathful Gladiator's Cloak of Dominance
@@ -3905,7 +3905,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 44083 }, --Reins of the Grand Black War Mammoth
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Neck" },
 			{ itemID = 51335 }, --Wrathful Gladiator's Pendant of Ascendancy
 			{ itemID = 51349 }, --Wrathful Gladiator's Pendant of Deliverance
 			{ itemID = 51331 }, --Wrathful Gladiator's Pendant of Dominance
@@ -3914,7 +3914,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 			{ itemID = 51353 }, --Wrathful Gladiator's Pendant of Sundering
 			{ itemID = 51355 }, --Wrathful Gladiator's Pendant of Triumph
 			{ itemID = 51357 }, --Wrathful Gladiator's Pendant of Victory
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Ring"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "PvP Non-Set Epics", desc = "=q5=" .. "Ring" },
 			{ itemID = 51336 }, --Wrathful Gladiator's Band of Dominance
 			{ itemID = 51358 }, --Wrathful Gladiator's Band of Triumph
 		},
@@ -3931,10 +3931,10 @@ AtlasLoot_Data["VaultofArchavon"] = {
 
 AtlasLoot_Data["Naxxramas80"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Naxxramas"],
+	Name = "Naxxramas",
 	Type = "WrathRaid",
 	{
-		Name = BabbleBoss["Patchwerk"],
+		Name = "Patchwerk",
 		{
 			{ itemID = 39272 }, --Drape of Surgery
 			{ itemID = 39273 }, --Sullen Cloth Boots
@@ -3948,7 +3948,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Patchwerk"],
+		Name = "Patchwerk",
 		{
 			{ itemID = 40271 }, --Sash of Solitude
 			{ itemID = 40269 }, --Boots of Persuasion
@@ -3978,7 +3978,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Grobbulus"],
+		Name = "Grobbulus",
 		{
 			{ itemID = 39284 }, --Miasma Mantle
 			{ itemID = 39285 }, --Handgrips of Turmoil
@@ -3993,7 +3993,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Grobbulus"],
+		Name = "Grobbulus",
 		{
 			{ itemID = 40250 }, --Aged Winter Cloak
 			{ itemID = 40254 }, --Cloak of Averted Crisis
@@ -4025,7 +4025,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gluth"],
+		Name = "Gluth",
 		{
 			{ itemID = 39272 }, --Drape of Surgery
 			{ itemID = 39284 }, --Miasma Mantle
@@ -4055,7 +4055,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gluth"],
+		Name = "Gluth",
 		{
 			{ itemID = 40622 }, --Spaulders of the Lost Conqueror
 			{ itemID = 40623 }, --Spaulders of the Lost Protector
@@ -4069,7 +4069,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gluth"],
+		Name = "Gluth",
 		{
 			{ itemID = 40247 }, --Cowl of Innocent Delight
 			{ itemID = 40289 }, --Sympathetic Amice
@@ -4105,7 +4105,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gluth"],
+		Name = "Gluth",
 		{
 			{ itemID = 40281 }, --Twilight Mist
 			{ itemID = 39714 }, --Webbed Death
@@ -4130,7 +4130,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Thaddius"],
+		Name = "Thaddius",
 		{
 			{ itemID = 39295 }, --Cowl of Sheet Lightning
 			{ itemID = 39294 }, --Arc-Scorched Helmet
@@ -4145,7 +4145,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Thaddius"],
+		Name = "Thaddius",
 		{
 			{ itemID = 40303 }, --Wraps of the Persecuted
 			{ itemID = 40301 }, --Cincture of Polarity
@@ -4165,7 +4165,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Anub'Rekhan"],
+		Name = "Anub'Rekhan",
 		{
 			{ itemID = 39192 }, --Gloves of Dark Gestures
 			{ itemID = 39190 }, --Agonal Sash
@@ -4180,7 +4180,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Anub'Rekhan"],
+		Name = "Anub'Rekhan",
 		{
 			{ itemID = 39719 }, --Mantle of the Locusts
 			{ itemID = 39721 }, --Sash of the Parlor
@@ -4210,7 +4210,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Grand Widow Faerlina"],
+		Name = "Grand Widow Faerlina",
 		{
 			{ itemID = 39216 }, --Sash of Mortal Desire
 			{ itemID = 39215 }, --Boots of the Follower
@@ -4225,7 +4225,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Grand Widow Faerlina"],
+		Name = "Grand Widow Faerlina",
 		{
 			{ itemID = 39732 }, --Faerlina's Madness
 			{ itemID = 39731 }, --Punctilious Bindings
@@ -4256,7 +4256,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Maexxna"],
+		Name = "Maexxna",
 		{
 			{ itemID = 39225 }, --Cloak of Armed Strife
 			{ itemID = 39230 }, --Spaulders of the Monstrosity
@@ -4271,7 +4271,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Maexxna"],
+		Name = "Maexxna",
 		{
 			{ itemID = 40250, desc = "-q4-Aged Winter Cloak" },
 			{ itemID = 40254 }, --Cloak of Averted Crisis
@@ -4302,7 +4302,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Instructor Razuvious"],
+		Name = "Instructor Razuvious",
 		{
 			{ itemID = 39297 }, --Cloak of Darkening
 			{ itemID = 39310 }, --Mantle of the Extensive Mind
@@ -4317,7 +4317,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Instructor Razuvious"],
+		Name = "Instructor Razuvious",
 		{
 			{ itemID = 40325 }, --Bindings of the Expansive Mind
 			{ itemID = 40326 }, --Boots of Forlorn Wishes
@@ -4347,7 +4347,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gothik the Harvester"],
+		Name = "Gothik the Harvester",
 		{
 			{ itemID = 39390 }, --Resurgent Phantom Bindings
 			{ itemID = 39386 }, --Tunic of Dislocation
@@ -4362,7 +4362,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gothik the Harvester"],
+		Name = "Gothik the Harvester",
 		{
 			{ itemID = 40250, desc = "-q4-Aged Winter Cloak" },
 			{ itemID = 40254 }, --Cloak of Averted Crisis
@@ -4393,7 +4393,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Four Horsemen"],
+		Name = "The Four Horsemen",
 		{
 			{ itemID = 39396 }, --Gown of Blaumeux
 			{ itemID = 39397 }, --Pauldrons of Havoc
@@ -4408,7 +4408,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Four Horsemen"],
+		Name = "The Four Horsemen",
 		{
 			{ itemID = 40349 }, --Gloves of Peaceful Death
 			{ itemID = 40344 }, --Helm of the Grave
@@ -4427,7 +4427,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Noth the Plaguebringer"],
+		Name = "Noth the Plaguebringer",
 		{
 			{ itemID = 39241 }, --Dark Shroud of the Scourge
 			{ itemID = 39242 }, --Robes of Hoarse Breaths
@@ -4442,7 +4442,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Noth the Plaguebringer"],
+		Name = "Noth the Plaguebringer",
 		{
 			{ itemID = 40602 }, --Robes of Mutation
 			{ itemID = 40198 }, --Bands of Impurity
@@ -4472,7 +4472,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Heigan the Unclean"],
+		Name = "Heigan the Unclean",
 		{
 			{ itemID = 39252 }, --Preceptor's Bindings
 			{ itemID = 39254 }, --Saltarello Shoes
@@ -4487,7 +4487,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Heigan the Unclean"],
+		Name = "Heigan the Unclean",
 		{
 			{ itemID = 40250 }, --Aged Winter Cloak
 			{ itemID = 40254 }, --Cloak of Averted Crisis
@@ -4518,7 +4518,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Loatheb"],
+		Name = "Loatheb",
 		{
 			{ itemID = 39259 }, --Fungi-Stained Coverings
 			{ itemID = 39260 }, --Helm of the Corrupted Mind
@@ -4533,7 +4533,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Loatheb"],
+		Name = "Loatheb",
 		{
 			{ itemID = 40247 }, --Cowl of Innocent Delight
 			{ itemID = 40246 }, --Boots of Impetuous Ideals
@@ -4553,7 +4553,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Sapphiron"],
+		Name = "Sapphiron",
 		{
 			{ itemID = 39415 }, --Shroud of the Citadel
 			{ itemID = 39404 }, --Cloak of Mastery
@@ -4570,7 +4570,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Sapphiron"],
+		Name = "Sapphiron",
 		{
 			{ itemID = 40381 }, --Sympathy
 			{ itemID = 40380 }, --Gloves of Grandeur
@@ -4599,7 +4599,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Kel'Thuzad"],
+		Name = "Kel'Thuzad",
 		{
 			{ itemID = 39425 }, --Cloak of the Dying
 			{ itemID = 39421 }, --Gem of Imprisoned Vassals
@@ -4619,7 +4619,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Kel'Thuzad"],
+		Name = "Kel'Thuzad",
 		{
 			{ itemID = 40405 }, --Cape of the Unworthy Wizard
 			{ itemID = 40403 }, --Drape of the Deadly Foe
@@ -4644,7 +4644,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 39467 }, --Minion Bracers
 			{ itemID = 39472 }, --Chain of Latent Energies
@@ -4655,7 +4655,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 40410 }, --Shadow of the Ghoul
 			{ itemID = 40409 }, --Boots of the Escaped Captive
@@ -4674,10 +4674,10 @@ AtlasLoot_Data["Naxxramas80"] = {
 
 AtlasLoot_Data["Sartharion"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["The Obsidian Sanctum"],
+	Name = "The Obsidian Sanctum",
 	Type = "WrathRaid",
 	{
-		Name = BabbleBoss["Sartharion"],
+		Name = "Sartharion",
 		{
 			{ itemID = 40428 }, --Titan's Outlook
 			{ itemID = 40427 }, --Circle of Arcane Streams
@@ -4687,7 +4687,7 @@ AtlasLoot_Data["Sartharion"] = {
 			{ itemID = 40429 }, --Crimson Steel
 			{ itemID = 43345 }, --Dragon Hide Bag
 			{ itemID = 43347 }, --Satchel of Spoils
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["One Drake Left"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Bonus Loot", desc = "=q5=" .. "One Drake Left" },
 			{ itemID = 43988 }, --Gale-Proof Cloak
 			{ itemID = 43990 }, --Blade-Scarred Tunic
 			{ itemID = 43991 }, --Legguards of Composure
@@ -4698,18 +4698,18 @@ AtlasLoot_Data["Sartharion"] = {
 			{ itemID = 40613 }, --Gloves of the Lost Conqueror
 			{ itemID = 40614 }, --Gloves of the Lost Protector
 			{ itemID = 40615 }, --Gloves of the Lost Vanquisher
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["Two Drakes Left"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Bonus Loot", desc = "=q5=" .. "Two Drakes Left" },
 			{ itemID = 43995 }, --Enamored Cowl
 			{ itemID = 43998 }, --Chestguard of Flagrant Prowess
 			{ itemID = 43996 }, --Sabatons of Firmament
 			{ itemID = 43994 }, --Belabored Legplates
 			{ itemID = 43993 }, --Greatring of Collision
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["Three Drakes Left"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Bonus Loot", desc = "=q5=" .. "Three Drakes Left" },
 			{ itemID = 43986 }, --Reins of the Black Drake
 		},
 	},
 	{
-		Name = BabbleBoss["Sartharion"],
+		Name = "Sartharion",
 		{
 			{ itemID = 40437 }, --Concealment Shoulderpads
 			{ itemID = 40439 }, --Mantle of the Eternal Sentinel
@@ -4728,18 +4728,18 @@ AtlasLoot_Data["Sartharion"] = {
 			{ itemID = 40630 }, --Gauntlets of the Lost Vanquisher
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["One Drake Left"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Bonus Loot", desc = "=q5=" .. "One Drake Left" },
 			{ itemID = 44002 }, --The Sanctum's Flowing Vestments
 			{ itemID = 44003 }, --Upstanding Spaulders
 			{ itemID = 44004 }, --Bountiful Gauntlets
 			{ itemID = 44000 }, --Dragonstorm Breastplate
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["Two Drakes Left"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Bonus Loot", desc = "=q5=" .. "Two Drakes Left" },
 			{ itemID = 44005 }, --Pennant Cloak
 			{ itemID = 44008 }, --Unsullied Cuffs
 			{ itemID = 44007 }, --Headpiece of Reconciliation
 			{ itemID = 44011 }, --Leggings of the Honored
 			{ itemID = 44006 }, --Obsidian Greathelm
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["Three Drakes Left"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Bonus Loot", desc = "=q5=" .. "Three Drakes Left" },
 			{ itemID = 43954 }, --Reins of the Twilight Drake
 		},
 	},
@@ -4750,10 +4750,10 @@ AtlasLoot_Data["Sartharion"] = {
 
 AtlasLoot_Data["Malygos"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["The Eye of Eternity"],
+	Name = "The Eye of Eternity",
 	Type = "WrathRaid",
 	{
-		Name = BabbleBoss["Malygos"],
+		Name = "Malygos",
 		{
 			{ itemID = 40526 }, --Gown of the Spell-Weaver
 			{ itemID = 40519 }, --Footsteps of Malygos
@@ -4777,7 +4777,7 @@ AtlasLoot_Data["Malygos"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Malygos"],
+		Name = "Malygos",
 		{
 			{ itemID = 40562 }, --Hood of Rationality
 			{ itemID = 40555 }, --Mantle of Dissemination
@@ -4817,10 +4817,10 @@ AtlasLoot_Data["Malygos"] = {
 
 AtlasLoot_Data["Ulduar"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Ulduar"],
+	Name = "Ulduar",
 	Type = "WrathRaid",
 	{
-		Name = BabbleBoss["Flame Leviathan"],
+		Name = "Flame Leviathan",
 		{
 			{ itemID = 45289 }, --Lifespark Visage
 			{ itemID = 45291 }, --Combustion Bracers
@@ -4834,7 +4834,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45282 }, --Ironsoul
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45293 }, --Handguards of Potent Cures
 			{ itemID = 45300 }, --Mantle of Fiery Vengeance
 			{ itemID = 45295 }, --Gilded Steel Legplates
@@ -4843,7 +4843,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Flame Leviathan"],
+		Name = "Flame Leviathan",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -4864,7 +4864,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45114 }, --Steamcaller's Totem
 			{ itemID = 45110 }, --Titanguard
 			{ itemID = 45086 }, --Rising Sun
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45135 }, --Boots of Fiery Resolution
 			{ itemID = 45136 }, --Shoulderpads of Dormant Energies
 			{ itemID = 45134 }, --Plated Leggings of Ruination
@@ -4873,7 +4873,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Razorscale"],
+		Name = "Razorscale",
 		{
 			{ itemID = 45306 }, --Binding of the Dragon Matriarch
 			{ itemID = 45302 }, --Treads of the Invader
@@ -4888,7 +4888,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Razorscale"],
+		Name = "Razorscale",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -4912,7 +4912,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ignis the Furnace Master"],
+		Name = "Ignis the Furnace Master",
 		{
 			{ itemID = 45317 }, --Shawl of the Caretaker
 			{ itemID = 45318 }, --Drape of Fuming Anger
@@ -4927,7 +4927,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ignis the Furnace Master"],
+		Name = "Ignis the Furnace Master",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -4951,7 +4951,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["XT-002 Deconstructor"],
+		Name = "XT-002 Deconstructor",
 		{
 			{ itemID = 45694 }, --Conductive Cord
 			{ itemID = 45677 }, --Treacherous Shoulderpads
@@ -4965,7 +4965,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45682 }, --Pulsing Spellshield
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45869 }, --Fluxing Energy Coils
 			{ itemID = 45867 }, --Breastplate of the Stoneshaper
 			{ itemID = 45871 }, --Seal of Ulduar
@@ -4974,7 +4974,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["XT-002 Deconstructor"],
+		Name = "XT-002 Deconstructor",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -4995,7 +4995,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45246 }, --Golem-Shard Sticker
 			{ itemID = 45256 }, --Twisted Visage
 			{ itemID = 45257 }, --Quartz Crystal Wand
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45446 }, --Grasps of Reason
 			{ itemID = 45444 }, --Gloves of the Steady Hand
 			{ itemID = 45445 }, --Breastplate of the Devoted
@@ -5004,7 +5004,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Iron Council"],
+		Name = "The Iron Council",
 		{
 			{ itemID = 45322 }, --Cloak of the Iron Council
 			{ itemID = 45423 }, --Runetouch Handwraps
@@ -5018,7 +5018,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45331 }, --Rune-Etched Nightblade
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45455 }, --Belt of the Crystal Tree
 			{ itemID = 45447 }, --Watchful Eye
 			{ itemID = 45456 }, --Loop of the Agile
@@ -5028,7 +5028,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Iron Council"],
+		Name = "The Iron Council",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -5049,7 +5049,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45235 }, --Radiant Seal
 			{ itemID = 45233 }, --Rune Edge
 			{ itemID = 45234 }, --Rapture
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45242 }, --Drape of Mortal Downfall
 			{ itemID = 45245 }, --Shoulderpads of the Intruder
 			{ itemID = 45244 }, --Greaves of Swift Vengeance
@@ -5060,7 +5060,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Kologarn"],
+		Name = "Kologarn",
 		{
 			{ itemID = 45704 }, --Shawl of the Shattered Giant
 			{ itemID = 45701 }, --Greaves of the Earthbinder
@@ -5075,7 +5075,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Kologarn"],
+		Name = "Kologarn",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -5099,7 +5099,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Algalon the Observer"],
+		Name = "Algalon the Observer",
 		{
 			{ itemID = 46042 }, --Drape of the Messenger
 			{ itemID = 46045 }, --Pulsar Gloves
@@ -5126,7 +5126,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Algalon the Observer"],
+		Name = "Algalon the Observer",
 		{
 			{ itemID = 45665 }, --Pharos Gloves
 			{ itemID = 45619 }, --Starwatcher's Binding
@@ -5154,7 +5154,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Auriaya"],
+		Name = "Auriaya",
 		{
 			{ itemID = 45832 }, --Mantle of the Preserver
 			{ itemID = 45865 }, --Raiments of the Corrupted
@@ -5169,7 +5169,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Auriaya"],
+		Name = "Auriaya",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -5193,7 +5193,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Hodir"],
+		Name = "Hodir",
 		{
 			{ itemID = 45873 }, --Winter's Frigid Embrace
 			{ itemID = 45464 }, --Cowl of Icy Breaths
@@ -5205,7 +5205,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45652 }, --Leggings of the Wayward Vanquisher
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45888 }, --Bitter Cold Armguards
 			{ itemID = 45876 }, --Shiver
 			{ itemID = 45886 }, --Icecore Staff
@@ -5215,7 +5215,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Hodir"],
+		Name = "Hodir",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -5229,7 +5229,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45634 }, --Breastplate of the Wayward Vanquisher
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45461 }, --Drape of Icy Intent
 			{ itemID = 45462 }, --Gloves of the Frozen Glade
 			{ itemID = 45460 }, --Bindings of Winter Gale
@@ -5240,7 +5240,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Thorim"],
+		Name = "Thorim",
 		{
 			{ itemID = 45893 }, --Guise of the Midgard Serpent
 			{ itemID = 45927 }, --Handwraps of Resonance
@@ -5252,7 +5252,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45661 }, --Spaulders of the Wayward Vanquisher
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45928 }, --Gauntlets of the Thunder God
 			{ itemID = 45933 }, --Pendant of the Shallow Grave
 			{ itemID = 45931 }, --Mjolnir Runestone
@@ -5262,7 +5262,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Thorim"],
+		Name = "Thorim",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -5276,7 +5276,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45640 }, --Crown of the Wayward Vanquisher
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45473 }, --Embrace of the Gladiator
 			{ itemID = 45474 }, --Pauldrons of the Combatant
 			{ itemID = 45472 }, --Warhelm of the Champion
@@ -5287,7 +5287,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Freya"],
+		Name = "Freya",
 		{
 			{ itemID = 45940 }, --Tunic of the Limber Stalker
 			{ itemID = 45941 }, --Chestguard of the Lasher
@@ -5300,7 +5300,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 46110 }, --Alchemist's Cache
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45943 }, --Gloves of Whispering Winds
 			{ itemID = 45945 }, --Seed of Budding Carnage
 			{ itemID = 45946 }, --Fire Orchid Signet
@@ -5310,7 +5310,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Freya"],
+		Name = "Freya",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -5325,7 +5325,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 46110 }, --Alchemist's Cache
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45486 }, --Drape of the Sullen Goddess
 			{ itemID = 45488 }, --Leggings of the Enslaved Idol
 			{ itemID = 45487 }, --Handguards of Revitalization
@@ -5336,7 +5336,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Mimiron"],
+		Name = "Mimiron",
 		{
 			{ itemID = 45973 }, --Stylish Power Cape
 			{ itemID = 45976 }, --Static Charge Handwraps
@@ -5348,7 +5348,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45649 }, --Helm of the Wayward Vanquisher
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45993 }, --Mimiron's Flight Goggles
 			{ itemID = 45989 }, --Tempered Mercury Greaves
 			{ itemID = 45982 }, --Fused Alloy Legplates
@@ -5358,7 +5358,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Mimiron"],
+		Name = "Mimiron",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -5372,7 +5372,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45643 }, --Gauntlets of the Wayward Vanquisher
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45496 }, --Titanskin Cloak
 			{ itemID = 45497 }, --Crown of Luminescence
 			{ itemID = 45663 }, --Armbands of Bedlam
@@ -5383,7 +5383,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["General Vezax"],
+		Name = "General Vezax",
 		{
 			{ itemID = 46014 }, --Saronite Animus Cloak
 			{ itemID = 46013 }, --Underworld Mantle
@@ -5398,7 +5398,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45996 }, --Hoperender
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 46032 }, --Drape of the Faceless General
 			{ itemID = 46034 }, --Leggings of Profound Darkness
 			{ itemID = 46036 }, --Void Sabre
@@ -5407,7 +5407,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["General Vezax"],
+		Name = "General Vezax",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -5428,7 +5428,7 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45145 }, --Libram of the Sacred Shield
 			{ itemID = 45498 }, --Lotrafen, Spear of the Damned
 			{ itemID = 45511 }, --Scepter of Lost Souls
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45520 }, --Handwraps of the Vigilant
 			{ itemID = 45519 }, --Vestments of the Blind Denizen
 			{ itemID = 45517 }, --Pendulum of Infinity
@@ -5437,7 +5437,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Yogg-Saron"],
+		Name = "Yogg-Saron",
 		{
 			{ itemID = 46030 }, --Treads of the Dragon Council
 			{ itemID = 46019 }, --Leggings of the Insatiable
@@ -5454,18 +5454,18 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45637 }, --Chestguard of the Wayward Vanquisher
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 46068 }, --Amice of Inconceivable Horror
 			{ itemID = 46095 }, --Soul-Devouring Cinch
 			{ itemID = 46096 }, --Signet of Soft Lament
 			{ itemID = 46097 }, --Caress of Insanity
 			{ itemID = 46067 }, --Hammer of Crushing Whispers
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["Alone in the Darkness"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Bonus Loot", desc = "=q5=" .. "Alone in the Darkness" },
 			{ itemID = 46312 }, --Vanquished Clutches of Yogg-Saron
 		},
 	},
 	{
-		Name = BabbleBoss["Yogg-Saron"],
+		Name = "Yogg-Saron",
 		{
 			{ itemID = 45038 }, --Fragment of Val'anyr
 			{ itemID = 46017 }, --Val'anyr, Hammer of Ancient Kings
@@ -5484,18 +5484,18 @@ AtlasLoot_Data["Ulduar"] = {
 			{ itemID = 45656 }, --Mantle of the Wayward Conqueror
 			{ itemID = 45657 }, --Mantle of the Wayward Protector
 			{ itemID = 45658 }, --Mantle of the Wayward Vanquisher
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Hard Mode"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Hard Mode" },
 			{ itemID = 45537 }, --Treads of the False Oracle
 			{ itemID = 45536 }, --Legguards of Cunning Deception
 			{ itemID = 45534 }, --Seal of the Betrayed King
 			{ itemID = 45535 }, --Show of Faith
 			{ itemID = 45533 }, --Dark Edge of Depravity
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["Alone in the Darkness"] },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Bonus Loot", desc = "=q5=" .. "Alone in the Darkness" },
 			{ itemID = 45693 }, --Mimiron's Head
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 46341 }, --Drape of the Spellweaver
 			{ itemID = 46347 }, --Cloak of the Dormant Blaze
@@ -5511,7 +5511,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 45541 }, --Shroud of Alteration
 			{ itemID = 45549 }, --Grips of Chaos
@@ -5528,7 +5528,7 @@ AtlasLoot_Data["Ulduar"] = {
 		},
 	},
 	{
-		Name = AL["Ulduar Formula/Patterns/Plans"],
+		Name = "Ulduar Formula/Patterns/Plans",
 		{
 			{ itemID = 45089 }, --Plans: Battlelord's Plate Boots
 			{ itemID = 45088 }, --Plans: Belt of the Titans
@@ -5561,10 +5561,10 @@ AtlasLoot_Data["Ulduar"] = {
 
 AtlasLoot_Data["TrialoftheCrusader"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Trial of the Crusader"],
+	Name = "Trial of the Crusader",
 	Type = "WrathRaid",
 	{
-		Name = BabbleBoss["The Beasts of Northrend"],
+		Name = "The Beasts of Northrend",
 		{
 			{ itemID = 47617 }, --Icehowl Cinch
 			{ itemID = 47613 }, --Shoulderpads of the Glacial Wilds
@@ -5583,7 +5583,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Beasts of Northrend"],
+		Name = "The Beasts of Northrend",
 		{
 			{ itemID = 47855 }, --Icehowl Binding
 			{ itemID = 47857 }, --Pauldrons of the Glacial Wilds
@@ -5602,7 +5602,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Beasts of Northrend"],
+		Name = "The Beasts of Northrend",
 		{
 			{ itemID = 46970 }, --Drape of the Untamed Predator
 			{ itemID = 46976 }, --Shawl of the Refreshing Winds
@@ -5625,7 +5625,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Beasts of Northrend"],
+		Name = "The Beasts of Northrend",
 		{
 			{ itemID = 47257 }, --Cloak of the Untamed Predator
 			{ itemID = 47256 }, --Drape of the Refreshing Winds
@@ -5648,7 +5648,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Jaraxxus"],
+		Name = "Lord Jaraxxus",
 		{
 			{ itemID = 47663 }, --Felspark Bindings
 			{ itemID = 47620 }, --Leggings of the Demonic Messenger
@@ -5668,7 +5668,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Jaraxxus"],
+		Name = "Lord Jaraxxus",
 		{
 			{ itemID = 47861 }, --Felspark Bracers
 			{ itemID = 47865 }, --Legwraps of the Demonic Messenger
@@ -5688,7 +5688,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Jaraxxus"],
+		Name = "Lord Jaraxxus",
 		{
 			{ itemID = 47042 }, --Pride of the Eredar
 			{ itemID = 47051 }, --Leggings of the Soothing Touch
@@ -5711,7 +5711,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Jaraxxus"],
+		Name = "Lord Jaraxxus",
 		{
 			{ itemID = 47275 }, --Pride of the Demon Lord
 			{ itemID = 47274 }, --Pants of the Soothing Touch
@@ -5734,7 +5734,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = AL["Faction Champions"],
+		Name = "Faction Champions",
 		{
 			{ itemID = 47721 }, --Sandals of the Silver Magus
 			{ itemID = 47719 }, --Gloves of the Silver Assassin
@@ -5751,7 +5751,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = AL["Faction Champions"],
+		Name = "Faction Champions",
 		{
 			{ itemID = 47873 }, --Sunreaver Magus' Sandals
 			{ itemID = 47878 }, --Sunreaver Assassin's Gloves
@@ -5768,7 +5768,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = AL["Faction Champions"],
+		Name = "Faction Champions",
 		{
 			{ itemID = 47089 }, --Cloak of Displacement
 			{ itemID = 47081 }, --Cord of Biting Cold
@@ -5791,7 +5791,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = AL["Faction Champions"],
+		Name = "Faction Champions",
 		{
 			{ itemID = 47291 }, --Shroud of Displacement
 			{ itemID = 47286 }, --Belt of Biting Cold
@@ -5814,7 +5814,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Twin Val'kyr"],
+		Name = "The Twin Val'kyr",
 		{
 			{ itemID = 47745 }, --Gloves of Looming Shadow
 			{ itemID = 49231 }, --Boots of the Grieving Soul
@@ -5834,7 +5834,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Twin Val'kyr"],
+		Name = "The Twin Val'kyr",
 		{
 			{ itemID = 47889 }, --Looming Shadow Wraps
 			{ itemID = 49232 }, --Sandals of the Grieving Soul
@@ -5854,7 +5854,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Twin Val'kyr"],
+		Name = "The Twin Val'kyr",
 		{
 			{ itemID = 47126 }, --Skyweaver Robes
 			{ itemID = 47141 }, --Bindings of Dark Essence
@@ -5877,7 +5877,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Twin Val'kyr"],
+		Name = "The Twin Val'kyr",
 		{
 			{ itemID = 47301 }, --Skyweaver Vestments
 			{ itemID = 47306 }, --Dark Essence Bindings
@@ -5900,7 +5900,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Anub'arak"],
+		Name = "Anub'arak",
 		{
 			{ itemID = 47838 }, --Vestments of the Sleepless
 			{ itemID = 47837 }, --Cinch of the Undying
@@ -5925,7 +5925,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Anub'arak"],
+		Name = "Anub'arak",
 		{
 			{ itemID = 47906 }, --Robes of the Sleepless
 			{ itemID = 47909 }, --Belt of the Eternal
@@ -5950,7 +5950,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Anub'arak"],
+		Name = "Anub'arak",
 		{
 			{ itemID = 47225 }, --Maiden's Favor
 			{ itemID = 47183 }, --Strength of the Nerub
@@ -5978,7 +5978,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Anub'arak"],
+		Name = "Anub'arak",
 		{
 			{ itemID = 47328 }, --Maiden's Adoration
 			{ itemID = 47320 }, --Might of the Nerub
@@ -6006,7 +6006,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = AL["Trial of the Crusader Patterns/Plans"],
+		Name = "Trial of the Crusader Patterns/Plans",
 		{
 			{ itemID = 47622 }, --Plans: Breastplate of the color.WHITE Knight
 			{ itemID = 47623 }, --Plans: Saronite Swordbreakers
@@ -6032,7 +6032,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 		},
 	},
 	{
-		Name = AL["Trial of the Crusader Patterns/Plans"],
+		Name = "Trial of the Crusader Patterns/Plans",
 		{
 			{ itemID = 47640 }, --Plans: Breastplate of the color.WHITE Knight
 			{ itemID = 47641 }, --Plans: Saronite Swordbreakers
@@ -6065,10 +6065,10 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 
 AtlasLoot_Data["Onyxia80"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Onyxia's Lair"],
+	Name = "Onyxia's Lair",
 	Type = "WrathRaid",
 	{
-		Name = BabbleBoss["Onyxia"],
+		Name = "Onyxia",
 		{
 			{ itemID = 49307 }, --Fluttering Sapphiron Drape
 			{ itemID = 49316 }, --Circlet of Transcendence
@@ -6100,7 +6100,7 @@ AtlasLoot_Data["Onyxia80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Onyxia"],
+		Name = "Onyxia",
 		{
 			{ itemID = 49304 }, --Sharpened Fang of the Mystics
 			{ itemID = 49437 }, --Rusted Gutgore Ripper
@@ -6124,7 +6124,7 @@ AtlasLoot_Data["Onyxia80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Onyxia"],
+		Name = "Onyxia",
 		{
 			{ itemID = 49491 }, --Flowing Sapphiron Drape
 			{ itemID = 49482 }, --Aurora of Transcendence
@@ -6156,7 +6156,7 @@ AtlasLoot_Data["Onyxia80"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Onyxia"],
+		Name = "Onyxia",
 		{
 			{ itemID = 49494 }, --Honed Fang of the Mystics
 			{ itemID = 49465 }, --Tarnished Gutgore Ripper
@@ -6191,10 +6191,10 @@ AtlasLoot_Data["Onyxia80"] = {
 
 AtlasLoot_Data["IcecrownCitadel"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["Icecrown Citadel"],
+	Name = "Icecrown Citadel",
 	Type = "WrathRaid",
 	{
-		Name = BabbleBoss["Lord Marrowgar"],
+		Name = "Lord Marrowgar",
 		{
 			{ itemID = 50764 }, --Shawl of Nerubian Silk
 			{ itemID = 50773 }, --Cord of the Patronizing Practitioner
@@ -6213,7 +6213,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Marrowgar"],
+		Name = "Lord Marrowgar",
 		{
 			{ itemID = 49978 }, --Crushing Coldwraith Belt
 			{ itemID = 49979 }, --Handguards of Winter's Respite
@@ -6237,7 +6237,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lady Deathwhisper"],
+		Name = "Lady Deathwhisper",
 		{
 			{ itemID = 50785 }, --Bracers of Dark Blessings
 			{ itemID = 50782 }, --Sister's Handshrouds
@@ -6256,7 +6256,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lady Deathwhisper"],
+		Name = "Lady Deathwhisper",
 		{
 			{ itemID = 49991 }, --Shoulders of Mercy Killing
 			{ itemID = 49994 }, --The Lady's Brittle Bracers
@@ -6280,7 +6280,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Icecrown Gunship Battle"],
+		Name = "Icecrown Gunship Battle",
 		{
 			{ itemID = 50791 }, --Saronite Gargoyle Cloak
 			{ itemID = 50795 }, --Cord of Dark Suffering
@@ -6299,7 +6299,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Icecrown Gunship Battle"],
+		Name = "Icecrown Gunship Battle",
 		{
 			{ itemID = 49998 }, --Shadowvault Slayer's Cloak
 			{ itemID = 50006 }, --Corp'rethar Ceremonial Crown
@@ -6323,7 +6323,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Deathbringer Saurfang"],
+		Name = "Deathbringer Saurfang",
 		{
 			{ itemID = 50807 }, --Thaumaturge's Crackling Cowl
 			{ itemID = 50804 }, --Icecrown Spire Sandals
@@ -6342,7 +6342,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Deathbringer Saurfang"],
+		Name = "Deathbringer Saurfang",
 		{
 			{ itemID = 50014 }, --Greatcloak of the Turned Champion
 			{ itemID = 50333 }, --Toskk's Maximized Wristguards
@@ -6359,7 +6359,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Festergut"],
+		Name = "Festergut",
 		{
 			{ itemID = 50859 }, --Cloak of Many Skins
 			{ itemID = 50988 }, --Bloodstained Surgeon's Shoulderguards
@@ -6378,7 +6378,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Festergut"],
+		Name = "Festergut",
 		{
 			{ itemID = 50063 }, --Lingering Illness
 			{ itemID = 50056 }, --Plaguebringer's Stained Pants
@@ -6404,7 +6404,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Rotface"],
+		Name = "Rotface",
 		{
 			{ itemID = 51007 }, --Ether-Soaked Bracers
 			{ itemID = 51005 }, --Gloves of Broken Fingers
@@ -6423,7 +6423,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Rotface"],
+		Name = "Rotface",
 		{
 			{ itemID = 50019 }, --Winding Sheet
 			{ itemID = 50032 }, --Death Surgeon's Sleeves
@@ -6448,7 +6448,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Professor Putricide"],
+		Name = "Professor Putricide",
 		{
 			{ itemID = 51020 }, --Shoulders of Ruinous Senility
 			{ itemID = 51017 }, --Cauterized Cord
@@ -6467,7 +6467,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Professor Putricide"],
+		Name = "Professor Putricide",
 		{
 			{ itemID = 50067 }, --Astrylian's Sutured Cinch
 			{ itemID = 50069 }, --Professor's Bloodied Smock
@@ -6484,7 +6484,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Blood Prince Council"],
+		Name = "Blood Prince Council",
 		{
 			{ itemID = 51382 }, --Heartsick Mender's Cape
 			{ itemID = 51379 }, --Bloodsoul Raiment
@@ -6503,7 +6503,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Blood Prince Council"],
+		Name = "Blood Prince Council",
 		{
 			{ itemID = 50074 }, --Royal Crimson Cloak
 			{ itemID = 50172 }, --Sanguine Silk Robes
@@ -6527,7 +6527,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Blood-Queen Lana'thel"],
+		Name = "Blood-Queen Lana'thel",
 		{
 			{ itemID = 51554 }, --Cowl of Malefic Repose
 			{ itemID = 51552 }, --Shoulderpads of the Searing Kiss
@@ -6546,7 +6546,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Blood-Queen Lana'thel"],
+		Name = "Blood-Queen Lana'thel",
 		{
 			{ itemID = 50182 }, --Blood Queen's Crimson Choker
 			{ itemID = 50180 }, --Lana'thel's Chain of Flagellation
@@ -6564,7 +6564,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Valithria Dreamwalker"],
+		Name = "Valithria Dreamwalker",
 		{
 			{ itemID = 51584 }, --Lich Wrappings
 			{ itemID = 51777 }, --Leggings of the Refracted Mind
@@ -6583,7 +6583,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Valithria Dreamwalker"],
+		Name = "Valithria Dreamwalker",
 		{
 			{ itemID = 50205 }, --Frostbinder's Shredded Cape
 			{ itemID = 50418 }, --Robe of the Waking Nightmare
@@ -6607,7 +6607,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Sindragosa"],
+		Name = "Sindragosa",
 		{
 			{ itemID = 51790 }, --Robes of Azure Downfall
 			{ itemID = 51783 }, --Vambraces of the Frost Wyrm Queen
@@ -6627,7 +6627,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Sindragosa"],
+		Name = "Sindragosa",
 		{
 			{ itemID = 50421 }, --Sindragosa's Cruel Claw
 			{ itemID = 50424 }, --Memory of Malygos
@@ -6645,7 +6645,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Lich King"],
+		Name = "The Lich King",
 		{
 			{ itemID = 51801 }, --Pugius, Fist of Defiance
 			{ itemID = 51803 }, --Tel'thas, Dagger of the Blood King
@@ -6659,7 +6659,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Lich King"],
+		Name = "The Lich King",
 		{
 			{ itemID = 50426 }, --Heaven's Fall, Kryss of a Thousand Lies
 			{ itemID = 50427 }, --Bloodsurge, Kel'Thuzad's Blade of Agony
@@ -6680,7 +6680,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 50449 }, --Stiffened Corpse Shoulderpads
 			{ itemID = 50450 }, --Leggings of Dubious Charms
@@ -6699,10 +6699,10 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 
 AtlasLoot_Data["Halion"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleZone["The Ruby Sanctum"],
+	Name = "The Ruby Sanctum",
 	Type = "WrathRaid",
 	{
-		Name = BabbleBoss["Halion"],
+		Name = "Halion",
 		{
 			{ itemID = 53115 }, --Abduction's Cover
 			{ itemID = 53118 }, --Misbegotten Belt
@@ -6721,7 +6721,7 @@ AtlasLoot_Data["Halion"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Halion"],
+		Name = "Halion",
 		{
 			{ itemID = 53489 }, --Cloak of Burning Dusk
 			{ itemID = 53486 }, --Bracers of Fiery Night
@@ -6744,7 +6744,7 @@ AtlasLoot_Data["Halion"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Halion"],
+		Name = "Halion",
 		{
 			{ itemID = 54556 }, --Abduction's Cover
 			{ itemID = 54562 }, --Misbegotten Belt
@@ -6763,7 +6763,7 @@ AtlasLoot_Data["Halion"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Halion"],
+		Name = "Halion",
 		{
 			{ itemID = 54583 }, --Cloak of Burning Dusk
 			{ itemID = 54582 }, --Bracers of Fiery Night
@@ -6796,9 +6796,9 @@ AtlasLoot_Data["Halion"] = {
 
 AtlasLoot_Data["AllianceVanguard"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleFaction["Alliance Vanguard"],
+	Name = "Alliance Vanguard",
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		{
 			{ itemID = 38459 }, --Orb of the Eastern Kingdoms
 			{ itemID = 38465 }, --Vanguard Soldier's Dagger
@@ -6810,7 +6810,7 @@ AtlasLoot_Data["AllianceVanguard"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		{
 			{ itemID = 44503 }, --Schematic: Mekgineer's Chopper
 			{ itemID = 44937 }, --Plans: Titanium Plating
@@ -6824,15 +6824,15 @@ AtlasLoot_Data["AllianceVanguard"] = {
 
 AtlasLoot_Data["ArgentCrusade"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleFaction["Argent Crusade"],
+	Name = "Argent Crusade",
 	{
-		Name = BabbleFaction["Friendly"],
+		Name = "Friendly",
 		{
 			{ itemID = 43154 }, --Tabard of the Argent Crusade
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		{
 			{ itemID = 44216 }, --Cloak of Holy Extermination
 			{ itemID = 44240 }, --Special Issue Legplates
@@ -6841,7 +6841,7 @@ AtlasLoot_Data["ArgentCrusade"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		{
 			{ itemID = 44248 }, --Battle Mender's Helm
 			{ itemID = 44247 }, --Fang-Deflecting Faceguard
@@ -6853,7 +6853,7 @@ AtlasLoot_Data["ArgentCrusade"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		{
 			{ itemID = 44297 }, --Boots of the Neverending Path
 			{ itemID = 44295 }, --Polished Regimental Hauberk
@@ -6870,9 +6870,9 @@ AtlasLoot_Data["ArgentCrusade"] = {
 
 AtlasLoot_Data["FrenzyheartTribe"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleFaction["Frenzyheart Tribe"],
+	Name = "Frenzyheart Tribe",
 	{
-		Name = BabbleFaction["Friendly"],
+		Name = "Friendly",
 		{
 			{ itemID = 41561 }, --Design: Reckless Huge Citrine
 			{ itemID = 44064 }, --Nepeta Leaf
@@ -6880,7 +6880,7 @@ AtlasLoot_Data["FrenzyheartTribe"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		{
 			{ itemID = 44719 }, --Frenzyheart Brew
 			{ itemID = 39671 }, --Resurgent Healing Potion
@@ -6890,7 +6890,7 @@ AtlasLoot_Data["FrenzyheartTribe"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		{
 			{ itemID = 44116 }, --Muddied Crimson Gloves
 			{ itemID = 44117 }, --Azure Strappy Pants
@@ -6904,7 +6904,7 @@ AtlasLoot_Data["FrenzyheartTribe"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		{
 			{ itemID = 44073 }, --Frenzyheart Insignia of Fury
 		},
@@ -6917,9 +6917,9 @@ AtlasLoot_Data["FrenzyheartTribe"] = {
 
 AtlasLoot_Data["HordeExpedition"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleFaction["Horde Expedition"],
+	Name = "Horde Expedition",
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		{
 			{ itemID = 38458 }, --Darkspear Orb
 			{ itemID = 38461 }, --Warsong Shanker
@@ -6931,7 +6931,7 @@ AtlasLoot_Data["HordeExpedition"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		{
 			{ itemID = 44502 }, --Schematic: Mechano-hog
 			{ itemID = 44938 }, --Plans: Titanium Plating
@@ -6946,15 +6946,15 @@ AtlasLoot_Data["HordeExpedition"] = {
 
 AtlasLoot_Data["KirinTor"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleFaction["Kirin Tor"],
+	Name = "Kirin Tor",
 	{
-		Name = BabbleFaction["Friendly"],
+		Name = "Friendly",
 		{
 			{ itemID = 43157 }, --Tabard of the Kirin Tor
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		{
 			{ itemID = 44167 }, --Shroud of Dedicated Research
 			{ itemID = 44170 }, --Helm of the Majestic Stag
@@ -6964,7 +6964,7 @@ AtlasLoot_Data["KirinTor"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		{
 			{ itemID = 44179 }, --Mind-Expanding Leggings
 			{ itemID = 44176 }, --Girdle of the Warrior Magi
@@ -6974,7 +6974,7 @@ AtlasLoot_Data["KirinTor"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		{
 			{ itemID = 44180 }, --Robes of Crackling Flame
 			{ itemID = 44181 }, --Ghostflicker Waistband
@@ -6992,16 +6992,16 @@ AtlasLoot_Data["KirinTor"] = {
 
 AtlasLoot_Data["KnightsoftheEbonBlade"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleFaction["Knights of the Ebon Blade"],
+	Name = "Knights of the Ebon Blade",
 	{
-		Name = BabbleFaction["Friendly"],
+		Name = "Friendly",
 		{
 			{ itemID = 41562 }, --Design: Deadly Huge Citrine
 			{ itemID = 43155 }, --Tabard of the Ebon Blade
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		{
 			{ itemID = 44242 }, --Dark Soldier Cape
 			{ itemID = 44243 }, --Toxin-Tempered Sabatons
@@ -7011,7 +7011,7 @@ AtlasLoot_Data["KnightsoftheEbonBlade"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		{
 			{ itemID = 44256 }, --Sterile Flesh-Handling Gloves
 			{ itemID = 44258 }, --Wound-Binder's Wristguards
@@ -7024,7 +7024,7 @@ AtlasLoot_Data["KnightsoftheEbonBlade"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		{
 			{ itemID = 44302 }, --Belt of Dark Mending
 			{ itemID = 44303 }, --Darkheart Chestguard
@@ -7041,16 +7041,16 @@ AtlasLoot_Data["KnightsoftheEbonBlade"] = {
 
 AtlasLoot_Data["TheKaluak"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleFaction["The Kalu'ak"],
+	Name = "The Kalu'ak",
 	{
-		Name = BabbleFaction["Friendly"],
+		Name = "Friendly",
 		{
 			{ itemID = 41568 }, --Design: Seer's Dark Jade
 			{ itemID = 44049 }, --Freshly-Speared Emperor Salmon
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		{
 			{ itemID = 44061 }, --Pigment-Stained Robes
 			{ itemID = 44062 }, --Turtle-Minders Robe
@@ -7065,7 +7065,7 @@ AtlasLoot_Data["TheKaluak"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		{
 			{ itemID = 44051 }, --Traditional Flensing Knife
 			{ itemID = 44052 }, --Totemic Purification Rod
@@ -7075,7 +7075,7 @@ AtlasLoot_Data["TheKaluak"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		{
 			{ itemID = 44050 }, --Mastercraft Kalu'ak Fishing Pole
 			{ itemID = 44723 }, --Nurtured Penguin Egg
@@ -7089,19 +7089,19 @@ AtlasLoot_Data["TheKaluak"] = {
 
 AtlasLoot_Data["TheOracles"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleFaction["The Oracles"],
+	Name = "The Oracles",
 	{
-		Name = BabbleFaction["Friendly"],
+		Name = "Friendly",
 		{
 			{ itemID = 41567 }, --Design: Vivid Dark Jade
 			{ itemID = 44065 }, --Oracle Secret Solution
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		{
 			{ itemID = 44071 }, --Slow-Roasted Eel
-			{ icon = "INV_Egg_02", name = color.WHITE.. AL["Cracked Egg"] },
+			{ icon = "INV_Egg_02", name = color.WHITE.. "Cracked Egg" },
 			{ itemID = 44707 }, --Reins of the color.GREEN Proto-Drake
 			{ itemID = 39898 }, --Cobra Hatchling
 			{ itemID = 44721 }, --Proto-Drake Whelp
@@ -7111,7 +7111,7 @@ AtlasLoot_Data["TheOracles"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		{
 			{ itemID = 44104 }, --Fishy Cinch
 			{ itemID = 44106 }, --Glitterscale Wrap
@@ -7125,7 +7125,7 @@ AtlasLoot_Data["TheOracles"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		{
 			{ itemID = 44074 }, --Oracle Talisman of Ablution
 		},
@@ -7139,9 +7139,9 @@ AtlasLoot_Data["TheOracles"] = {
 
 AtlasLoot_Data["TheSonsofHodir"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleFaction["The Sons of Hodir"],
+	Name = "The Sons of Hodir",
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		{
 			{ itemID = 44190 }, --Spaulders of Frozen Knives
 			{ itemID = 44189 }, --Giant Ring Belt
@@ -7154,7 +7154,7 @@ AtlasLoot_Data["TheSonsofHodir"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		{
 			{ itemID = 43958 }, --Reins of the Ice Mammoth
 			{ itemID = 44080 }, --Reins of the Ice Mammoth
@@ -7165,7 +7165,7 @@ AtlasLoot_Data["TheSonsofHodir"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		{
 			{ itemID = 43961 }, --Reins of the Grand Ice Mammoth
 			{ itemID = 44086 }, --Reins of the Grand Ice Mammoth
@@ -7185,9 +7185,9 @@ AtlasLoot_Data["TheSonsofHodir"] = {
 
 AtlasLoot_Data["WinterfinRetreat"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleFaction["Winterfin Retreat"],
+	Name = "Winterfin Retreat",
 	{
-		Name = BabbleFaction["Winterfin Retreat"],
+		Name = "Winterfin Retreat",
 		{
 			{ itemID = 36784, "100 #winterfinclam#" }, --Siren's Tear
 			{ itemID = 37462, "30 #winterfinclam#" }, --Sea King's Crown
@@ -7209,15 +7209,15 @@ AtlasLoot_Data["WinterfinRetreat"] = {
 
 AtlasLoot_Data["TheWyrmrestAccord"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleFaction["The Wyrmrest Accord"],
+	Name = "The Wyrmrest Accord",
 	{
-		Name = BabbleFaction["Friendly"],
+		Name = "Friendly",
 		{
 			{ itemID = 43156 }, --Tabard of the Wyrmrest Accord
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		{
 			{ itemID = 44188 }, --Cloak of Peaceful Resolutions
 			{ itemID = 44196 }, --Sash of the Wizened Wyrm
@@ -7227,7 +7227,7 @@ AtlasLoot_Data["TheWyrmrestAccord"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		{
 			{ itemID = 44200 }, --Ancestral Sinew Wristguards
 			{ itemID = 44198 }, --Breastplate of the Solemn Council
@@ -7238,7 +7238,7 @@ AtlasLoot_Data["TheWyrmrestAccord"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		{
 			{ itemID = 44202 }, --Sandals of Crimson Fury
 			{ itemID = 44203 }, --Dragonfriend Bracers
@@ -7256,7 +7256,7 @@ AtlasLoot_Data["TheWyrmrestAccord"] = {
 
 AtlasLoot_Data["AshenVerdict"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = BabbleFaction["The Ashen Verdict"],
+	Name = "The Ashen Verdict",
 	{
 		Name = "Rings",
 		{
@@ -7285,7 +7285,7 @@ AtlasLoot_Data["AshenVerdict"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		{
 			{ itemID = 49974 }, --Plans: Boots of Kingly Upheaval
 			{ itemID = 49972 }, --Plans: Hellfrozen Bonegrinders
@@ -7301,7 +7301,7 @@ AtlasLoot_Data["AshenVerdict"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		{
 			{ itemID = 49971 }, --Plans: Legplates of Painful Death
 			{ itemID = 49973 }, --Plans: Pillars of Might
@@ -7328,15 +7328,15 @@ AtlasLoot_Data["ArenaDeathKnightWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"],
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Gladiator's Desecration"] },
-			{ itemID = 51415, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Dreadplate Helm
-			{ itemID = 51418, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Dreadplate Shoulders
-			{ itemID = 51413, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Dreadplate Chestpiece
-			{ itemID = 51414, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Dreadplate Gauntlets
-			{ itemID = 51416, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Dreadplate Legguards
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Gladiator's Desecration"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Gladiator's Desecration" },
+			{ itemID = 51415, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Dreadplate Helm
+			{ itemID = 51418, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Dreadplate Shoulders
+			{ itemID = 51413, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Dreadplate Chestpiece
+			{ itemID = 51414, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Dreadplate Gauntlets
+			{ itemID = 51416, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Dreadplate Legguards
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Gladiator's Desecration" },
 			{ itemID = 40830, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Dreadplate Helm
 			{ itemID = 40871, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Dreadplate Shoulders
 			{ itemID = 40791, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Dreadplate Chestpiece
@@ -7344,13 +7344,13 @@ AtlasLoot_Data["ArenaDeathKnightWRATH"] = {
 			{ itemID = 40851, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Dreadplate Legguards
 		},
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Gladiator's Desecration"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Gladiator's Desecration" },
 			{ itemID = 40827, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Dreadplate Helm
 			{ itemID = 40868, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Dreadplate Shoulders
 			{ itemID = 40787, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Dreadplate Chestpiece
 			{ itemID = 40809, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Dreadplate Gauntlets
 			{ itemID = 40848, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Dreadplate Legguards
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Gladiator's Desecration"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Gladiator's Desecration" },
 			{ itemID = 40824, "58 #eofconquest#" }, --Deadly Gladiator's Dreadplate Helm
 			{ itemID = 40863, "46 #eofconquest#" }, --Deadly Gladiator's Dreadplate Shoulders
 			{ itemID = 40784, "58 #eofconquest#" }, --Deadly Gladiator's Dreadplate Chestpiece
@@ -7359,15 +7359,15 @@ AtlasLoot_Data["ArenaDeathKnightWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Gladiator's Desecration"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Gladiator's Desecration" },
 			{ itemID = 40820, "45 #eofvalor#" }, --Hateful Gladiator's Dreadplate Helm
 			{ itemID = 40860, "30 #eofvalor#" }, --Hateful Gladiator's Dreadplate Shoulders
 			{ itemID = 40781, "45 #eofvalor#" }, --Hateful Gladiator's Dreadplate Chestpiece
 			{ itemID = 40803, "30 #eofvalor#" }, --Hateful Gladiator's Dreadplate Gauntlets
 			{ itemID = 40841, "45 #eofvalor#" }, --Hateful Gladiator's Dreadplate Legguards
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Gladiator's Desecration"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Gladiator's Desecration" },
 			{ itemID = 40817, "45 #eofheroism#" }, --Savage Gladiator's Dreadplate Helm
 			{ itemID = 40857, "30 #eofheroism#" }, --Savage Gladiator's Dreadplate Shoulders
 			{ itemID = 40779, "45 #eofheroism#" }, --Savage Gladiator's Dreadplate Chestpiece
@@ -7381,15 +7381,15 @@ AtlasLoot_Data["ArenaDruidWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = LOCALIZED_CLASS_NAMES_MALE["DRUID"],
 	{
-		Name = AL["Balance"] .. " Page 1",
+		Name = "Balance" .. " Page 1",
 		{
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Gladiator's Wildhide"] },
-			{ itemID = 51435, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Wyrmhide Helm
-			{ itemID = 51438, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Wyrmhide Spaulders
-			{ itemID = 51433, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Wyrmhide Robes
-			{ itemID = 51434, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Wyrmhide Gloves
-			{ itemID = 51436, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Wyrmhide Legguards
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Gladiator's Wildhide"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Gladiator's Wildhide" },
+			{ itemID = 51435, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Wyrmhide Helm
+			{ itemID = 51438, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Wyrmhide Spaulders
+			{ itemID = 51433, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Wyrmhide Robes
+			{ itemID = 51434, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Wyrmhide Gloves
+			{ itemID = 51436, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Wyrmhide Legguards
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Gladiator's Wildhide" },
 			{ itemID = 41328, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Wyrmhide Helm
 			{ itemID = 41282, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Wyrmhide Spaulders
 			{ itemID = 41317, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Wyrmhide Robes
@@ -7397,13 +7397,13 @@ AtlasLoot_Data["ArenaDruidWRATH"] = {
 			{ itemID = 41305, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Wyrmhide Legguards
 		},
 		{
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Gladiator's Wildhide"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Gladiator's Wildhide" },
 			{ itemID = 41327, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Wyrmhide Helm
 			{ itemID = 41281, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Wyrmhide Spaulders
 			{ itemID = 41316, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Wyrmhide Robes
 			{ itemID = 41293, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Wyrmhide Gloves
 			{ itemID = 41304, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Wyrmhide Legguards
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Gladiator's Wildhide"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Gladiator's Wildhide" },
 			{ itemID = 41326, "58 #eofconquest#" }, --Deadly Gladiator's Wyrmhide Helm
 			{ itemID = 41280, "46 #eofconquest#" }, --Deadly Gladiator's Wyrmhide Spaulders
 			{ itemID = 41315, "58 #eofconquest#" }, --Deadly Gladiator's Wyrmhide Robes
@@ -7412,15 +7412,15 @@ AtlasLoot_Data["ArenaDruidWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Balance"] .. " Page 2",
+		Name = "Balance" .. " Page 2",
 		{
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Gladiator's Wildhide"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Gladiator's Wildhide" },
 			{ itemID = 41325, "45 #eofvalor#" }, --Hateful Gladiator's Wyrmhide Helm
 			{ itemID = 41279, "30 #eofvalor#" }, --Hateful Gladiator's Wyrmhide Spaulders
 			{ itemID = 41314, "45 #eofvalor#" }, --Hateful Gladiator's Wyrmhide Robes
 			{ itemID = 41291, "30 #eofvalor#" }, --Hateful Gladiator's Wyrmhide Gloves
 			{ itemID = 41302, "45 #eofvalor#" }, --Hateful Gladiator's Wyrmhide Legguards
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Gladiator's Wildhide"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Gladiator's Wildhide" },
 			{ itemID = 41324, "45 #eofheroism#" }, --Savage Gladiator's Wyrmhide Helm
 			{ itemID = 41278, "30 #eofheroism#" }, --Savage Gladiator's Wyrmhide Spaulders
 			{ itemID = 41313, "45 #eofheroism#" }, --Savage Gladiator's Wyrmhide Robes
@@ -7429,15 +7429,15 @@ AtlasLoot_Data["ArenaDruidWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Feral"] .. " Page 1",
+		Name = "Feral" .. " Page 1",
 		{
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Gladiator's Sanctuary"] },
-			{ itemID = 51427, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Dragonhide Helm
-			{ itemID = 51430, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Dragonhide Spaulders
-			{ itemID = 51425, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Dragonhide Robes
-			{ itemID = 51426, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Dragonhide Gloves
-			{ itemID = 51428, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Dragonhide Legguards
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Gladiator's Sanctuary"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Gladiator's Sanctuary" },
+			{ itemID = 51427, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Dragonhide Helm
+			{ itemID = 51430, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Dragonhide Spaulders
+			{ itemID = 51425, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Dragonhide Robes
+			{ itemID = 51426, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Dragonhide Gloves
+			{ itemID = 51428, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Dragonhide Legguards
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Gladiator's Sanctuary" },
 			{ itemID = 41679, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Dragonhide Helm
 			{ itemID = 41716, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Dragonhide Spaulders
 			{ itemID = 41662, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Dragonhide Robes
@@ -7445,13 +7445,13 @@ AtlasLoot_Data["ArenaDruidWRATH"] = {
 			{ itemID = 41668, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Dragonhide Legguards
 		},
 		{
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Gladiator's Sanctuary"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Gladiator's Sanctuary" },
 			{ itemID = 41678, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Dragonhide Helm
 			{ itemID = 41715, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Dragonhide Spaulders
 			{ itemID = 41661, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Dragonhide Robes
 			{ itemID = 41773, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Dragonhide Gloves
 			{ itemID = 41667, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Dragonhide Legguards
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Gladiator's Sanctuary"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Gladiator's Sanctuary" },
 			{ itemID = 41677, "58 #eofconquest#" }, --Deadly Gladiator's Dragonhide Helm
 			{ itemID = 41714, "46 #eofconquest#" }, --Deadly Gladiator's Dragonhide Spaulders
 			{ itemID = 41660, "58 #eofconquest#" }, --Deadly Gladiator's Dragonhide Robes
@@ -7460,15 +7460,15 @@ AtlasLoot_Data["ArenaDruidWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Feral"] .. " Page 2",
+		Name = "Feral" .. " Page 2",
 		{
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Gladiator's Sanctuary"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Gladiator's Sanctuary" },
 			{ itemID = 41676, "45 #eofvalor#" }, --Hateful Gladiator's Dragonhide Helm
 			{ itemID = 41713, "30 #eofvalor#" }, --Hateful Gladiator's Dragonhide Spaulders
 			{ itemID = 41659, "45 #eofvalor#" }, --Hateful Gladiator's Dragonhide Robes
 			{ itemID = 41771, "30 #eofvalor#" }, --Hateful Gladiator's Dragonhide Gloves
 			{ itemID = 41665, "45 #eofvalor#" }, --Hateful Gladiator's Dragonhide Legguards
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Gladiator's Sanctuary"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Gladiator's Sanctuary" },
 			{ itemID = 41675, "45 #eofheroism#" }, --Savage Gladiator's Dragonhide Helm
 			{ itemID = 41712, "30 #eofheroism#" }, --Savage Gladiator's Dragonhide Spaulders
 			{ itemID = 41658, "45 #eofheroism#" }, --Savage Gladiator's Dragonhide Robes
@@ -7477,15 +7477,15 @@ AtlasLoot_Data["ArenaDruidWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Restoration"] .. " Page 1",
+		Name = "Restoration" .. " Page 1",
 		{
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Gladiator's Refuge"] },
-			{ itemID = 51421, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Kodohide Helm
-			{ itemID = 51424, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Kodohide Spaulders
-			{ itemID = 51419, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Kodohide Robes
-			{ itemID = 51420, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Kodohide Gloves
-			{ itemID = 51422, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Kodohide Legguards
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Gladiator's Refuge"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Gladiator's Refuge" },
+			{ itemID = 51421, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Kodohide Helm
+			{ itemID = 51424, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Kodohide Spaulders
+			{ itemID = 51419, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Kodohide Robes
+			{ itemID = 51420, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Kodohide Gloves
+			{ itemID = 51422, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Kodohide Legguards
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Gladiator's Refuge" },
 			{ itemID = 41322, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Kodohide Helm
 			{ itemID = 41276, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Kodohide Spaulders
 			{ itemID = 41311, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Kodohide Robes
@@ -7493,13 +7493,13 @@ AtlasLoot_Data["ArenaDruidWRATH"] = {
 			{ itemID = 41299, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Kodohide Legguards
 		},
 		{
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Gladiator's Refuge"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Gladiator's Refuge" },
 			{ itemID = 41321, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Kodohide Helm
 			{ itemID = 41275, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Kodohide Spaulders
 			{ itemID = 41310, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Kodohide Robes
 			{ itemID = 41287, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Kodohide Gloves
 			{ itemID = 41298, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Kodohide Legguards
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Gladiator's Refuge"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Gladiator's Refuge" },
 			{ itemID = 41320, "58 #eofconquest#" }, --Deadly Gladiator's Kodohide Helm
 			{ itemID = 41274, "46 #eofconquest#" }, --Deadly Gladiator's Kodohide Spaulders
 			{ itemID = 41309, "58 #eofconquest#" }, --Deadly Gladiator's Kodohide Robes
@@ -7508,15 +7508,15 @@ AtlasLoot_Data["ArenaDruidWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Restoration"] .. " Page 2",
+		Name = "Restoration" .. " Page 2",
 		{
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Gladiator's Refuge"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Gladiator's Refuge" },
 			{ itemID = 41319, "45 #eofvalor#" }, --Hateful Gladiator's Kodohide Helm
 			{ itemID = 41273, "30 #eofvalor#" }, --Hateful Gladiator's Kodohide Spaulders
 			{ itemID = 41308, "45 #eofvalor#" }, --Hateful Gladiator's Kodohide Robes
 			{ itemID = 41284, "30 #eofvalor#" }, --Hateful Gladiator's Kodohide Gloves
 			{ itemID = 41296, "45 #eofvalor#" }, --Hateful Gladiator's Kodohide Legguards
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Gladiator's Refuge"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Gladiator's Refuge" },
 			{ itemID = 41269, "45 #eofheroism#" }, --Savage Gladiator's Kodohide Helm
 			{ itemID = 41271, "30 #eofheroism#" }, --Savage Gladiator's Kodohide Spaulders
 			{ itemID = 41272, "45 #eofheroism#" }, --Savage Gladiator's Kodohide Robes
@@ -7530,15 +7530,15 @@ AtlasLoot_Data["ArenaHunterWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Gladiator's Pursuit"] },
-			{ itemID = 51460, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Chain Helm
-			{ itemID = 51462, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Chain Spaulders
-			{ itemID = 51458, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Chain Armor
-			{ itemID = 51459, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Chain Gauntlets
-			{ itemID = 51461, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Chain Leggings
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Gladiator's Pursuit"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Gladiator's Pursuit" },
+			{ itemID = 51460, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Chain Helm
+			{ itemID = 51462, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Chain Spaulders
+			{ itemID = 51458, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Chain Armor
+			{ itemID = 51459, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Chain Gauntlets
+			{ itemID = 51461, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Chain Leggings
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Gladiator's Pursuit" },
 			{ itemID = 41158, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Chain Helm
 			{ itemID = 41218, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Chain Spaulders
 			{ itemID = 41088, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Chain Armor
@@ -7546,13 +7546,13 @@ AtlasLoot_Data["ArenaHunterWRATH"] = {
 			{ itemID = 41206, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Chain Leggings
 		},
 		{
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Gladiator's Pursuit"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Gladiator's Pursuit" },
 			{ itemID = 41157, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Chain Helm
 			{ itemID = 41217, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Chain Spaulders
 			{ itemID = 41087, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Chain Armor
 			{ itemID = 41143, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Chain Gauntlets
 			{ itemID = 41205, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Chain Leggings
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Gladiator's Pursuit"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Gladiator's Pursuit" },
 			{ itemID = 41156, "58 #eofconquest#" }, --Deadly Gladiator's Chain Helm
 			{ itemID = 41216, "46 #eofconquest#" }, --Deadly Gladiator's Chain Spaulders
 			{ itemID = 41086, "58 #eofconquest#" }, --Deadly Gladiator's Chain Armor
@@ -7561,15 +7561,15 @@ AtlasLoot_Data["ArenaHunterWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Gladiator's Pursuit"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Gladiator's Pursuit" },
 			{ itemID = 41155, "45 #eofvalor#" }, --Hateful Gladiator's Chain Helm
 			{ itemID = 41215, "30 #eofvalor#" }, --Hateful Gladiator's Chain Spaulders
 			{ itemID = 41085, "45 #eofvalor#" }, --Hateful Gladiator's Chain Armor
 			{ itemID = 41141, "30 #eofvalor#" }, --Hateful Gladiator's Chain Gauntlets
 			{ itemID = 41203, "45 #eofvalor#" }, --Hateful Gladiator's Chain Leggings
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Gladiator's Pursuit"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Gladiator's Pursuit" },
 			{ itemID = 41154, "45 #eofheroism#" }, --Savage Gladiator's Chain Helm
 			{ itemID = 41214, "30 #eofheroism#" }, --Savage Gladiator's Chain Spaulders
 			{ itemID = 41084, "45 #eofheroism#" }, --Savage Gladiator's Chain Armor
@@ -7583,15 +7583,15 @@ AtlasLoot_Data["ArenaMageWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Gladiator's Regalia"] },
-			{ itemID = 51465, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Silk Cowl
-			{ itemID = 51467, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Silk Amice
-			{ itemID = 51463, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Silk Raiment
-			{ itemID = 51464, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Silk Handguards
-			{ itemID = 51466, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Silk Trousers
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Gladiator's Regalia"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Gladiator's Regalia" },
+			{ itemID = 51465, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Silk Cowl
+			{ itemID = 51467, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Silk Amice
+			{ itemID = 51463, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Silk Raiment
+			{ itemID = 51464, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Silk Handguards
+			{ itemID = 51466, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Silk Trousers
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Gladiator's Regalia" },
 			{ itemID = 41947, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Silk Cowl
 			{ itemID = 41966, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Silk Amice
 			{ itemID = 41954, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Silk Raiment
@@ -7599,13 +7599,13 @@ AtlasLoot_Data["ArenaMageWRATH"] = {
 			{ itemID = 41960, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Silk Trousers
 		},
 		{
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Gladiator's Regalia"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Gladiator's Regalia" },
 			{ itemID = 41946, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Silk Cowl
 			{ itemID = 41965, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Silk Amice
 			{ itemID = 41953, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Silk Raiment
 			{ itemID = 41971, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Silk Handguards
 			{ itemID = 41959, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Silk Trousers
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Gladiator's Regalia"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Gladiator's Regalia" },
 			{ itemID = 41945, "58 #eofconquest#" }, --Deadly Gladiator's Silk Cowl
 			{ itemID = 41964, "46 #eofconquest#" }, --Deadly Gladiator's Silk Amice
 			{ itemID = 41951, "58 #eofconquest#" }, --Deadly Gladiator's Silk Raiment
@@ -7614,15 +7614,15 @@ AtlasLoot_Data["ArenaMageWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Gladiator's Regalia"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Gladiator's Regalia" },
 			{ itemID = 41944, "45 #eofvalor#" }, --Hateful Gladiator's Silk Cowl
 			{ itemID = 41963, "30 #eofvalor#" }, --Hateful Gladiator's Silk Amice
 			{ itemID = 41950, "45 #eofvalor#" }, --Hateful Gladiator's Silk Raiment
 			{ itemID = 41969, "30 #eofvalor#" }, --Hateful Gladiator's Silk Handguards
 			{ itemID = 41957, "45 #eofvalor#" }, --Hateful Gladiator's Silk Trousers
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Gladiator's Regalia"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Gladiator's Regalia" },
 			{ itemID = 41943, "45 #eofheroism#" }, --Savage Gladiator's Silk Cowl
 			{ itemID = 41962, "30 #eofheroism#" }, --Savage Gladiator's Silk Amice
 			{ itemID = 41949, "45 #eofheroism#" }, --Savage Gladiator's Silk Raiment
@@ -7636,15 +7636,15 @@ AtlasLoot_Data["ArenaPaladinWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"],
 	{
-		Name = AL["Retribution"] .. AL["Page 1"],
+		Name = "Retribution" .. "Page 1",
 		{
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Gladiator's Vindication"] },
-			{ itemID = 51476, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Scaled Helm
-			{ itemID = 51479, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Scaled Shoulders
-			{ itemID = 51474, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Scaled Chestpiece
-			{ itemID = 51475, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Scaled Gauntlets
-			{ itemID = 51477, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Scaled Legguards
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Gladiator's Vindication"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Gladiator's Vindication" },
+			{ itemID = 51476, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Scaled Helm
+			{ itemID = 51479, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Scaled Shoulders
+			{ itemID = 51474, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Scaled Chestpiece
+			{ itemID = 51475, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Scaled Gauntlets
+			{ itemID = 51477, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Scaled Legguards
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Gladiator's Vindication" },
 			{ itemID = 40831, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Scaled Helm
 			{ itemID = 40872, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Scaled Shoulders
 			{ itemID = 40792, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Scaled Chestpiece
@@ -7652,13 +7652,13 @@ AtlasLoot_Data["ArenaPaladinWRATH"] = {
 			{ itemID = 40852, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Scaled Legguards
 		},
 		{
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Gladiator's Vindication"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Gladiator's Vindication" },
 			{ itemID = 40828, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Scaled Helm
 			{ itemID = 40869, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Scaled Shoulders
 			{ itemID = 40788, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Scaled Chestpiece
 			{ itemID = 40808, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Scaled Gauntlets
 			{ itemID = 40849, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Scaled Legguards
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Gladiator's Vindication"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Gladiator's Vindication" },
 			{ itemID = 40825, "58 #eofconquest#" }, --Deadly Gladiator's Scaled Helm
 			{ itemID = 40864, "46 #eofconquest#" }, --Deadly Gladiator's Scaled Shoulders
 			{ itemID = 40785, "58 #eofconquest#" }, --Deadly Gladiator's Scaled Chestpiece
@@ -7667,15 +7667,15 @@ AtlasLoot_Data["ArenaPaladinWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Retribution"] .. AL["Page 2"],
+		Name = "Retribution" .. "Page 2",
 		{
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Gladiator's Vindication"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Gladiator's Vindication" },
 			{ itemID = 40821, "45 #eofvalor#" }, --Hateful Gladiator's Scaled Helm
 			{ itemID = 40861, "30 #eofvalor#" }, --Hateful Gladiator's Scaled Shoulders
 			{ itemID = 40782, "45 #eofvalor#" }, --Hateful Gladiator's Scaled Chestpiece
 			{ itemID = 40802, "30 #eofvalor#" }, --Hateful Gladiator's Scaled Gauntlets
 			{ itemID = 40842, "45 #eofvalor#" }, --Hateful Gladiator's Scaled Legguards
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Gladiator's Vindication"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Gladiator's Vindication" },
 			{ itemID = 40818, "45 #eofheroism#" }, --Savage Gladiator's Scaled Helm
 			{ itemID = 40858, "30 #eofheroism#" }, --Savage Gladiator's Scaled Shoulders
 			{ itemID = 40780, "45 #eofheroism#" }, --Savage Gladiator's Scaled Chestpiece
@@ -7684,15 +7684,15 @@ AtlasLoot_Data["ArenaPaladinWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Holy"] .. AL["Page 1"],
+		Name = "Holy" .. "Page 1",
 		{
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Gladiator's Redemption"] },
-			{ itemID = 51470, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Ornamented Headcover
-			{ itemID = 51473, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Ornamented Spaulders
-			{ itemID = 51468, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Ornamented Chestguard
-			{ itemID = 51469, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Ornamented Gloves
-			{ itemID = 51471, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Ornamented Legplates
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Gladiator's Redemption"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Gladiator's Redemption" },
+			{ itemID = 51470, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Ornamented Headcover
+			{ itemID = 51473, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Ornamented Spaulders
+			{ itemID = 51468, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Ornamented Chestguard
+			{ itemID = 51469, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Ornamented Gloves
+			{ itemID = 51471, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Ornamented Legplates
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Gladiator's Redemption" },
 			{ itemID = 40934, --Relentless Gladiator's Ornamented Headcover
 			"13200 #faction# 770 #arena# / 95 #eoffrost#" },
 			{ itemID = 40964, --Relentless Gladiator's Ornamented Spaulders
@@ -7704,13 +7704,13 @@ AtlasLoot_Data["ArenaPaladinWRATH"] = {
 			"13200 #faction# 770 #arena# / 95 #eoffrost#" },
 		},
 		{
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Gladiator's Redemption"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Gladiator's Redemption" },
 			{ itemID = 40933, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Ornamented Headcover
 			{ itemID = 40963, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Ornamented Spaulders
 			{ itemID = 40907, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Ornamented Chestguard
 			{ itemID = 40927, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Ornamented Gloves
 			{ itemID = 40939, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Ornamented Legplates
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Gladiator's Redemption"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Gladiator's Redemption" },
 			{ itemID = 40932, "58 #eofconquest#" }, --Deadly Gladiator's Ornamented Headcover
 			{ itemID = 40962, "46 #eofconquest#" }, --Deadly Gladiator's Ornamented Spaulders
 			{ itemID = 40905, "58 #eofconquest#" }, --Deadly Gladiator's Ornamented Chestguard
@@ -7719,15 +7719,15 @@ AtlasLoot_Data["ArenaPaladinWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Holy"] .. AL["Page 2"],
+		Name = "Holy" .. "Page 2",
 		{
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Gladiator's Redemption"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Gladiator's Redemption" },
 			{ itemID = 40931, "45 #eofvalor#" }, --Hateful Gladiator's Ornamented Headcover
 			{ itemID = 40961, "30 #eofvalor#" }, --Hateful Gladiator's Ornamented Spaulders
 			{ itemID = 40904, "45 #eofvalor#" }, --Hateful Gladiator's Ornamented Gloves
 			{ itemID = 40925, "30 #eofvalor#" }, --Hateful Gladiator's Ornamented Chestguard
 			{ itemID = 40937, "45 #eofvalor#" }, --Hateful Gladiator's Ornamented Legplates
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Gladiator's Redemption"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Gladiator's Redemption" },
 			{ itemID = 40930, "45 #eofheroism#" }, --Savage Gladiator's Ornamented Headcover
 			{ itemID = 40960, "30 #eofheroism#" }, --Savage Gladiator's Ornamented Spaulders
 			{ itemID = 40898, "45 #eofheroism#" }, --Savage Gladiator's Ornamented Chestguard
@@ -7741,15 +7741,15 @@ AtlasLoot_Data["ArenaPriestWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
 	{
-		Name = AL["Shadow"] .. AL["Page 1"],
+		Name = "Shadow" .. "Page 1",
 		{
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Gladiator's Raiment"] },
-			{ itemID = 51489, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Satin Hood
-			{ itemID = 51491, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Satin Mantle
-			{ itemID = 51487, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Satin Robe
-			{ itemID = 51488, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Satin Gloves
-			{ itemID = 51490, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Satin Leggings
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Gladiator's Raiment"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Gladiator's Raiment" },
+			{ itemID = 51489, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Satin Hood
+			{ itemID = 51491, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Satin Mantle
+			{ itemID = 51487, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Satin Robe
+			{ itemID = 51488, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Satin Gloves
+			{ itemID = 51490, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Satin Leggings
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Gladiator's Raiment" },
 			{ itemID = 41916, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Satin Hood
 			{ itemID = 41935, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Satin Mantle
 			{ itemID = 41922, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Satin Robe
@@ -7757,13 +7757,13 @@ AtlasLoot_Data["ArenaPriestWRATH"] = {
 			{ itemID = 41928, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Satin Leggings
 		},
 		{
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Gladiator's Raiment"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Gladiator's Raiment" },
 			{ itemID = 41915, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Satin Hood
 			{ itemID = 41934, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Satin Mantle
 			{ itemID = 41921, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Satin Robe
 			{ itemID = 41940, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Satin Gloves
 			{ itemID = 41927, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Satin Leggings
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Gladiator's Raiment"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Gladiator's Raiment" },
 			{ itemID = 41914, "58 #eofconquest#" }, --Deadly Gladiator's Satin Hood
 			{ itemID = 41933, "46 #eofconquest#" }, --Deadly Gladiator's Satin Mantle
 			{ itemID = 41920, "58 #eofconquest#" }, --Deadly Gladiator's Satin Robe
@@ -7772,15 +7772,15 @@ AtlasLoot_Data["ArenaPriestWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Shadow"] .. AL["Page 2"],
+		Name = "Shadow" .. "Page 2",
 		{
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Gladiator's Raiment"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Gladiator's Raiment" },
 			{ itemID = 41913, "45 #eofvalor#" }, --Hateful Gladiator's Satin Hood
 			{ itemID = 41931, "30 #eofvalor#" }, --Hateful Gladiator's Satin Mantle
 			{ itemID = 41919, "45 #eofvalor#" }, --Hateful Gladiator's Satin Robe
 			{ itemID = 41938, "30 #eofvalor#" }, --Hateful Gladiator's Satin Gloves
 			{ itemID = 41925, "45 #eofvalor#" }, --Hateful Gladiator's Satin Leggings
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Gladiator's Raiment"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Gladiator's Raiment" },
 			{ itemID = 41912, "45 #eofheroism#" }, --Savage Gladiator's Satin Hood
 			{ itemID = 41930, "30 #eofheroism#" }, --Savage Gladiator's Satin Mantle
 			{ itemID = 41918, "45 #eofheroism#" }, --Savage Gladiator's Satin Robe
@@ -7789,15 +7789,15 @@ AtlasLoot_Data["ArenaPriestWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Holy"] .. AL["Page 1"],
+		Name = "Holy" .. "Page 1",
 		{
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Gladiator's Investiture"] },
-			{ itemID = 51484, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Mooncloth Hood
-			{ itemID = 51486, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Mooncloth Mantle
-			{ itemID = 51482, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Mooncloth Robe
-			{ itemID = 51483, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Mooncloth Gloves
-			{ itemID = 51485, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Mooncloth Leggings
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Gladiator's Investiture"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Gladiator's Investiture" },
+			{ itemID = 51484, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Mooncloth Hood
+			{ itemID = 51486, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Mooncloth Mantle
+			{ itemID = 51482, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Mooncloth Robe
+			{ itemID = 51483, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Mooncloth Gloves
+			{ itemID = 51485, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Mooncloth Leggings
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Gladiator's Investiture" },
 			{ itemID = 41855, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Mooncloth Hood
 			{ itemID = 41870, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Mooncloth Mantle
 			{ itemID = 41860, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Mooncloth Robe
@@ -7805,13 +7805,13 @@ AtlasLoot_Data["ArenaPriestWRATH"] = {
 			{ itemID = 41865, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Mooncloth Leggings
 		},
 		{
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Gladiator's Investiture"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Gladiator's Investiture" },
 			{ itemID = 41854, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Mooncloth Hood
 			{ itemID = 41869, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Mooncloth Mantle
 			{ itemID = 41859, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Mooncloth Robe
 			{ itemID = 41874, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Mooncloth Gloves
 			{ itemID = 41864, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Mooncloth Leggings
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Gladiator's Investiture"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Gladiator's Investiture" },
 			{ itemID = 41853, "58 #eofconquest#" }, --Deadly Gladiator's Mooncloth Hood
 			{ itemID = 41868, "46 #eofconquest#" }, --Deadly Gladiator's Mooncloth Mantle
 			{ itemID = 41858, "58 #eofconquest#" }, --Deadly Gladiator's Mooncloth Robe
@@ -7820,15 +7820,15 @@ AtlasLoot_Data["ArenaPriestWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Holy"] .. AL["Page 2"],
+		Name = "Holy" .. "Page 2",
 		{
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Gladiator's Investiture"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Gladiator's Investiture" },
 			{ itemID = 41852, "45 #eofvalor#" }, --Hateful Gladiator's Mooncloth Hood
 			{ itemID = 41867, "30 #eofvalor#" }, --Hateful Gladiator's Mooncloth Mantle
 			{ itemID = 41857, "45 #eofvalor#" }, --Hateful Gladiator's Mooncloth Robe
 			{ itemID = 41872, "30 #eofvalor#" }, --Hateful Gladiator's Mooncloth Gloves
 			{ itemID = 41862, "45 #eofvalor#" }, --Hateful Gladiator's Mooncloth Leggings
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Gladiator's Investiture"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Gladiator's Investiture" },
 			{ itemID = 41848, "45 #eofheroism#" }, --Savage Gladiator's Mooncloth Hood
 			{ itemID = 41850, "30 #eofheroism#" }, --Savage Gladiator's Mooncloth Mantle
 			{ itemID = 41851, "45 #eofheroism#" }, --Savage Gladiator's Mooncloth Robe
@@ -7843,15 +7843,15 @@ AtlasLoot_Data["ArenaRogueWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Gladiator's Vestments"] },
-			{ itemID = 51494, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Leather Helm
-			{ itemID = 51496, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Leather Spaulders
-			{ itemID = 51492, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Leather Tunic
-			{ itemID = 51493, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Leather Gloves
-			{ itemID = 51495, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Leather Legguards
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Gladiator's Vestments"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."Gladiator's Vestments" },
+			{ itemID = 51494, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Leather Helm
+			{ itemID = 51496, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Leather Spaulders
+			{ itemID = 51492, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Leather Tunic
+			{ itemID = 51493, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Leather Gloves
+			{ itemID = 51495, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Leather Legguards
+			{ icon = "Ability_BackStab", name = "=q6=".."Gladiator's Vestments" },
 			{ itemID = 41673, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Leather Helm
 			{ itemID = 41684, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Leather Spaulders
 			{ itemID = 41651, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Leather Tunic
@@ -7859,13 +7859,13 @@ AtlasLoot_Data["ArenaRogueWRATH"] = {
 			{ itemID = 41656, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Leather Legguards
 		},
 		{
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Gladiator's Vestments"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."Gladiator's Vestments" },
 			{ itemID = 41672, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Leather Helm
 			{ itemID = 41683, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Leather Spaulders
 			{ itemID = 41650, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Leather Tunic
 			{ itemID = 41767, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Leather Gloves
 			{ itemID = 41655, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Leather Legguards
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Gladiator's Vestments"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."Gladiator's Vestments" },
 			{ itemID = 41671, "58 #eofconquest#" }, --Deadly Gladiator's Leather Helm
 			{ itemID = 41682, "46 #eofconquest#" }, --Deadly Gladiator's Leather Spaulders
 			{ itemID = 41649, "58 #eofconquest#" }, --Deadly Gladiator's Leather Tunic
@@ -7874,15 +7874,15 @@ AtlasLoot_Data["ArenaRogueWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Gladiator's Vestments"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."Gladiator's Vestments" },
 			{ itemID = 41670, "45 #eofvalor#" }, --Hateful Gladiator's Leather Helm
 			{ itemID = 41681, "30 #eofvalor#" }, --Hateful Gladiator's Leather Spaulders
 			{ itemID = 41648, "45 #eofvalor#" }, --Hateful Gladiator's Leather Tunic
 			{ itemID = 41765, "30 #eofvalor#" }, --Hateful Gladiator's Leather Gloves
 			{ itemID = 41653, "45 #eofvalor#" }, --Hateful Gladiator's Leather Legguards
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Gladiator's Vestments"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."Gladiator's Vestments" },
 			{ itemID = 41644, "45 #eofheroism#" }, --Savage Gladiator's Leather Helm
 			{ itemID = 41646, "30 #eofheroism#" }, --Savage Gladiator's Leather Spaulders
 			{ itemID = 41647, "45 #eofheroism#" }, --Savage Gladiator's Leather Tunic
@@ -7896,15 +7896,15 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"],
 	{
-		Name = AL["Elemental"] .. AL["Page 1"],
+		Name = "Elemental" .. "Page 1",
 		{
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Gladiator's Thunderfist"] },
-			{ itemID = 51511, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Mail Helm
-			{ itemID = 51514, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Mail Spaulders
-			{ itemID = 51509, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Mail Armor
-			{ itemID = 51510, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Mail Gauntlets
-			{ itemID = 51512, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Mail Leggings
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Gladiator's Thunderfist"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Gladiator's Thunderfist" },
+			{ itemID = 51511, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Mail Helm
+			{ itemID = 51514, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Mail Spaulders
+			{ itemID = 51509, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Mail Armor
+			{ itemID = 51510, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Mail Gauntlets
+			{ itemID = 51512, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Mail Leggings
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Gladiator's Thunderfist" },
 			{ itemID = 41020, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Mail Helm
 			{ itemID = 41045, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Mail Spaulders
 			{ itemID = 40995, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Mail Armor
@@ -7912,13 +7912,13 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 			{ itemID = 41034, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Mail Leggings
 		},
 		{
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Gladiator's Thunderfist"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Gladiator's Thunderfist" },
 			{ itemID = 41019, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Mail Helm
 			{ itemID = 41044, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Mail Spaulders
 			{ itemID = 40993, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Mail Armor
 			{ itemID = 41007, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Mail Gauntlets
 			{ itemID = 41033, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Mail Leggings
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Gladiator's Thunderfist"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Gladiator's Thunderfist" },
 			{ itemID = 41018, "58 #eofconquest#" }, --Deadly Gladiator's Mail Helm
 			{ itemID = 41043, "46 #eofconquest#" }, --Deadly Gladiator's Mail Spaulders
 			{ itemID = 40991, "58 #eofconquest#" }, --Deadly Gladiator's Mail Armor
@@ -7927,15 +7927,15 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Elemental"] .. AL["Page 2"],
+		Name = "Elemental" .. "Page 2",
 		{
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Gladiator's Thunderfist"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Gladiator's Thunderfist" },
 			{ itemID = 41017, "45 #eofvalor#" }, --Hateful Gladiator's Mail Helm
 			{ itemID = 41042, "30 #eofvalor#" }, --Hateful Gladiator's Mail Spaulders
 			{ itemID = 40989, "45 #eofvalor#" }, --Hateful Gladiator's Mail Armor
 			{ itemID = 41005, "30 #eofvalor#" }, --Hateful Gladiator's Mail Gauntlets
 			{ itemID = 41031, "45 #eofvalor#" }, --Hateful Gladiator's Mail Leggings
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Gladiator's Thunderfist"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Gladiator's Thunderfist" },
 			{ itemID = 41016, "45 #eofheroism#" }, --Savage Gladiator's Mail Helm
 			{ itemID = 41041, "30 #eofheroism#" }, --Savage Gladiator's Mail Spaulders
 			{ itemID = 40987, "45 #eofheroism#" }, --Savage Gladiator's Mail Armor
@@ -7944,15 +7944,15 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Enhancement"] .. AL["Page 1"],
+		Name = "Enhancement" .. "Page 1",
 		{
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Gladiator's Earthshaker"] },
-			{ itemID = 51505, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Linked Helm
-			{ itemID = 51508, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Linked Spaulders
-			{ itemID = 51503, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Linked Armor
-			{ itemID = 51504, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Linked Gauntlets
-			{ itemID = 51506, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Linked Leggings
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Gladiator's Earthshaker"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Gladiator's Earthshaker" },
+			{ itemID = 51505, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Linked Helm
+			{ itemID = 51508, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Linked Spaulders
+			{ itemID = 51503, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Linked Armor
+			{ itemID = 51504, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Linked Gauntlets
+			{ itemID = 51506, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Linked Leggings
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Gladiator's Earthshaker" },
 			{ itemID = 41152, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Linked Helm
 			{ itemID = 41212, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Linked Spaulders
 			{ itemID = 41082, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Linked Armor
@@ -7960,13 +7960,13 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 			{ itemID = 41200, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Linked Leggings
 		},
 		{
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Gladiator's Earthshaker"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Gladiator's Earthshaker" },
 			{ itemID = 41151, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Linked Helm
 			{ itemID = 41211, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Linked Spaulders
 			{ itemID = 41081, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Linked Armor
 			{ itemID = 41137, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Linked Gauntlets
 			{ itemID = 41199, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Linked Leggings
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Gladiator's Earthshaker"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Gladiator's Earthshaker" },
 			{ itemID = 41150, "58 #eofconquest#" }, --Deadly Gladiator's Linked Helm
 			{ itemID = 41210, "46 #eofconquest#" }, --Deadly Gladiator's Linked Spaulders
 			{ itemID = 41080, "58 #eofconquest#" }, --Deadly Gladiator's Linked Armor
@@ -7975,15 +7975,15 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Enhancement"] .. AL["Page 2"],
+		Name = "Enhancement" .. "Page 2",
 		{
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Gladiator's Earthshaker"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Gladiator's Earthshaker" },
 			{ itemID = 41149, "45 #eofvalor#" }, --Hateful Gladiator's Linked Helm
 			{ itemID = 41209, "30 #eofvalor#" }, --Hateful Gladiator's Linked Spaulders
 			{ itemID = 41079, "45 #eofvalor#" }, --Hateful Gladiator's Linked Armor
 			{ itemID = 41135, "30 #eofvalor#" }, --Hateful Gladiator's Linked Gauntlets
 			{ itemID = 41162, "45 #eofvalor#" }, --Hateful Gladiator's Linked Leggings
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Gladiator's Earthshaker"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Gladiator's Earthshaker" },
 			{ itemID = 41148, "45 #eofheroism#" }, --Savage Gladiator's Linked Helm
 			{ itemID = 41208, "30 #eofheroism#" }, --Savage Gladiator's Linked Spaulders
 			{ itemID = 41078, "45 #eofheroism#" }, --Savage Gladiator's Linked Armor
@@ -7992,15 +7992,15 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Restoration"] .. AL["Page 1"],
+		Name = "Restoration" .. "Page 1",
 		{
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Gladiator's Wartide"] },
-			{ itemID = 51499, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Ringmail Helm
-			{ itemID = 51502, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Ringmail Spaulders
-			{ itemID = 51497, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Ringmail Armor
-			{ itemID = 51498, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Ringmail Gauntlets
-			{ itemID = 51500, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Ringmail Leggings
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Gladiator's Wartide"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Gladiator's Wartide" },
+			{ itemID = 51499, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Ringmail Helm
+			{ itemID = 51502, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Ringmail Spaulders
+			{ itemID = 51497, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Ringmail Armor
+			{ itemID = 51498, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Ringmail Gauntlets
+			{ itemID = 51500, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Ringmail Leggings
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Gladiator's Wartide" },
 			{ itemID = 41014, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Ringmail Helm
 			{ itemID = 41039, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Ringmail Spaulders
 			{ itemID = 40994, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Ringmail Armor
@@ -8008,13 +8008,13 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 			{ itemID = 41028, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Ringmail Leggings
 		},
 		{
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Gladiator's Wartide"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Gladiator's Wartide" },
 			{ itemID = 41013, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Ringmail Helm
 			{ itemID = 41038, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Ringmail Spaulders
 			{ itemID = 40992, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Ringmail Armor
 			{ itemID = 41001, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Ringmail Gauntlets
 			{ itemID = 41027, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Ringmail Leggings
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Gladiator's Wartide"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Gladiator's Wartide" },
 			{ itemID = 41012, "58 #eofconquest#" }, --Deadly Gladiator's Ringmail Helm
 			{ itemID = 41037, "46 #eofconquest#" }, --Deadly Gladiator's Ringmail Spaulders
 			{ itemID = 40990, "58 #eofconquest#" }, --Deadly Gladiator's Ringmail Armor
@@ -8023,15 +8023,15 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Restoration"] .. AL["Page 2"],
+		Name = "Restoration" .. "Page 2",
 		{
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Gladiator's Wartide"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Gladiator's Wartide" },
 			{ itemID = 41011, "45 #eofvalor#" }, --Hateful Gladiator's Ringmail Helm
 			{ itemID = 41036, "30 #eofvalor#" }, --Hateful Gladiator's Ringmail Spaulders
 			{ itemID = 40988, "45 #eofvalor#" }, --Hateful Gladiator's Ringmail Armor
 			{ itemID = 40999, "30 #eofvalor#" }, --Hateful Gladiator's Ringmail Gauntlets
 			{ itemID = 41025, "45 #eofvalor#" }, --Hateful Gladiator's Ringmail Leggings
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Gladiator's Wartide"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Gladiator's Wartide" },
 			{ itemID = 41010, "45 #eofheroism#" }, --Savage Gladiator's Ringmail Helm
 			{ itemID = 41024, "30 #eofheroism#" }, --Savage Gladiator's Ringmail Spaulders
 			{ itemID = 40986, "45 #eofheroism#" }, --Savage Gladiator's Ringmail Armor
@@ -8046,15 +8046,15 @@ AtlasLoot_Data["ArenaWarlockWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Felshroud"] },
-			{ itemID = 51538, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Felweave Cowl
-			{ itemID = 51540, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Felweave Amice
-			{ itemID = 51536, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Felweave Raiment
-			{ itemID = 51537, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Felweave Handguards
-			{ itemID = 51539, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Felweave Trousers
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Felshroud"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Gladiator's Felshroud" },
+			{ itemID = 51538, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Felweave Cowl
+			{ itemID = 51540, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Felweave Amice
+			{ itemID = 51536, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Felweave Raiment
+			{ itemID = 51537, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Felweave Handguards
+			{ itemID = 51539, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Felweave Trousers
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Gladiator's Felshroud" },
 			{ itemID = 41994, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Felweave Cowl
 			{ itemID = 42012, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Felweave Amice
 			{ itemID = 41999, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Felweave Raiment
@@ -8062,13 +8062,13 @@ AtlasLoot_Data["ArenaWarlockWRATH"] = {
 			{ itemID = 42006, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Felweave Trousers
 		},
 		{
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Felshroud"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Gladiator's Felshroud" },
 			{ itemID = 41993, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Felweave Cowl
 			{ itemID = 42011, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Felweave Amice
 			{ itemID = 41998, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Felweave Raiment
 			{ itemID = 42017, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Felweave Handguards
 			{ itemID = 42005, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Felweave Trousers
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Felshroud"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Gladiator's Felshroud" },
 			{ itemID = 41992, "58 #eofconquest#" }, --Deadly Gladiator's Felweave Cowl
 			{ itemID = 42010, "46 #eofconquest#" }, --Deadly Gladiator's Felweave Amice
 			{ itemID = 41997, "58 #eofconquest#" }, --Deadly Gladiator's Felweave Raiment
@@ -8078,15 +8078,15 @@ AtlasLoot_Data["ArenaWarlockWRATH"] = {
 
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Felshroud"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Gladiator's Felshroud" },
 			{ itemID = 41991, "45 #eofvalor#" }, --Hateful Gladiator's Felweave Cowl
 			{ itemID = 42009, "30 #eofvalor#" }, --Hateful Gladiator's Felweave Amice
 			{ itemID = 42001, "45 #eofvalor#" }, --Hateful Gladiator's Felweave Raiment
 			{ itemID = 42015, "30 #eofvalor#" }, --Hateful Gladiator's Felweave Handguards
 			{ itemID = 42003, "45 #eofvalor#" }, --Hateful Gladiator's Felweave Trousers
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Felshroud"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Gladiator's Felshroud" },
 			{ itemID = 41990, "45 #eofheroism#" }, --Savage Gladiator's Felweave Cowl
 			{ itemID = 42008, "30 #eofheroism#" }, --Savage Gladiator's Felweave Amice
 			{ itemID = 41996, "45 #eofheroism#" }, --Savage Gladiator's Felweave Raiment
@@ -8100,15 +8100,15 @@ AtlasLoot_Data["ArenaWarriorWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"],
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Gladiator's Battlegear"] },
-			{ itemID = 51543, "2370 #arena# "..AL["Rating:"].." 1950" }, --Wrathful Gladiator's Plate Helm
-			{ itemID = 51545, "1930 #arena# "..AL["Rating:"].." 2000" }, --Wrathful Gladiator's Plate Shoulders
-			{ itemID = 51541, "2370 #arena# "..AL["Rating:"].." 1600" }, --Wrathful Gladiator's Plate Chestpiece
-			{ itemID = 51542, "1430 #arena# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Plate Gauntlets
-			{ itemID = 51544, "2370 #arena# "..AL["Rating:"].." 1500" }, --Wrathful Gladiator's Plate Legguards
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Gladiator's Battlegear"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Gladiator's Battlegear" },
+			{ itemID = 51543, "2370 #arena# ".."Rating:".." 1950" }, --Wrathful Gladiator's Plate Helm
+			{ itemID = 51545, "1930 #arena# ".."Rating:".." 2000" }, --Wrathful Gladiator's Plate Shoulders
+			{ itemID = 51541, "2370 #arena# ".."Rating:".." 1600" }, --Wrathful Gladiator's Plate Chestpiece
+			{ itemID = 51542, "1430 #arena# ".."Rating:".." 1400" }, --Wrathful Gladiator's Plate Gauntlets
+			{ itemID = 51544, "2370 #arena# ".."Rating:".." 1500" }, --Wrathful Gladiator's Plate Legguards
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Gladiator's Battlegear" },
 			{ itemID = 40829, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Plate Helm
 			{ itemID = 40870, "10550 #faction# 600 #arena# / 60 #eoffrost#" }, --Relentless Gladiator's Plate Shoulders
 			{ itemID = 40790, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Plate Chestpiece
@@ -8116,13 +8116,13 @@ AtlasLoot_Data["ArenaWarriorWRATH"] = {
 			{ itemID = 40850, "13200 #faction# 770 #arena# / 95 #eoffrost#" }, --Relentless Gladiator's Plate Legguards
 		},
 		{
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Gladiator's Battlegear"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Gladiator's Battlegear" },
 			{ itemID = 40826, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Plate Helm
 			{ itemID = 40866, "34700 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Plate Shoulders
 			{ itemID = 40789, "54500 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Plate Chestpiece
 			{ itemID = 40807, "43400 #faction# / 50 #eoftriumph#" }, --Furious Gladiator's Plate Gauntlets
 			{ itemID = 40847, "34700 #faction# / 75 #eoftriumph#" }, --Furious Gladiator's Plate Legguards
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Gladiator's Battlegear"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Gladiator's Battlegear" },
 			{ itemID = 40823, "58 #eofconquest#" }, --Deadly Gladiator's Plate Helm
 			{ itemID = 40862, "46 #eofconquest#" }, --Deadly Gladiator's Plate Shoulders
 			{ itemID = 40786, "58 #eofconquest#" }, --Deadly Gladiator's Plate Chestpiece
@@ -8131,15 +8131,15 @@ AtlasLoot_Data["ArenaWarriorWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Gladiator's Battlegear"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Gladiator's Battlegear" },
 			{ itemID = 40819, "45 #eofvalor#" }, --Hateful Gladiator's Plate Helm
 			{ itemID = 40859, "30 #eofvalor#" }, --Hateful Gladiator's Plate Shoulders
 			{ itemID = 40783, "45 #eofvalor#" }, --Hateful Gladiator's Plate Chestpiece
 			{ itemID = 40801, "30 #eofvalor#" }, --Hateful Gladiator's Plate Gauntlets
 			{ itemID = 40840, "45 #eofvalor#" }, --Hateful Gladiator's Plate Legguards
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Gladiator's Battlegear"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Gladiator's Battlegear" },
 			{ itemID = 40816, "45 #eofheroism#" }, --Savage Gladiator's Plate Helm
 			{ itemID = 40856, "30 #eofheroism#" }, --Savage Gladiator's Plate Shoulders
 			{ itemID = 40778, "45 #eofheroism#" }, --Savage Gladiator's Plate Chestpiece
@@ -8154,9 +8154,9 @@ AtlasLoot_Data["ArenaWarriorWRATH"] = {
 
 AtlasLoot_Data["PvP80NonSet"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = AL["PvP Non-Set Epics"],
+	Name = "PvP Non-Set Epics",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 	{
 			{ itemID = 51334, "52200 #faction#" }, --Wrathful Gladiator's Cloak of Ascendancy
 		{ itemID = 51348, "52200 #faction#" }, --Wrathful Gladiator's Cloak of Deliverance
@@ -8187,7 +8187,7 @@ AtlasLoot_Data["PvP80NonSet"] = {
 	},
 },
 {
-	Name = AL["Page 2"],
+	Name = "Page 2",
 	{
 			{ itemID = 42078, "26100 #faction#" }, --Relentless Gladiator's Cloak of Ascendancy
 		{ itemID = 42080, "26100 #faction#" }, --Relentless Gladiator's Cloak of Deliverance
@@ -8214,14 +8214,14 @@ AtlasLoot_Data["PvP80NonSet"] = {
 	Name = "Cloth",
 	{
 			{ itemID = 51329, "43400 #faction#" }, --Wrathful Gladiator's Cuffs of Dominance
-		{ itemID = 51327, "68200 #faction# "..AL["Rating:"].." 1300" }, --Wrathful Gladiator's Cord of Dominance
-		{ itemID = 51328, "68200 #faction# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Treads of Dominance
+		{ itemID = 51327, "68200 #faction# ".."Rating:".." 1300" }, --Wrathful Gladiator's Cord of Dominance
+		{ itemID = 51328, "68200 #faction# ".."Rating:".." 1400" }, --Wrathful Gladiator's Treads of Dominance
 		{ itemID = 51367, "43400 #faction#" }, --Wrathful Gladiator's Cuffs of Salvation
-		{ itemID = 51365, "68200 #faction# "..AL["Rating:"].." 1300" }, --Wrathful Gladiator's Cord of Salvation
-		{ itemID = 51366, "68200 #faction# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Treads of Salvation
+		{ itemID = 51365, "68200 #faction# ".."Rating:".." 1300" }, --Wrathful Gladiator's Cord of Salvation
+		{ itemID = 51366, "68200 #faction# ".."Rating:".." 1400" }, --Wrathful Gladiator's Treads of Salvation
 		{ itemID = 51339, "43400 #faction#" }, --Wrathful Gladiator's Cuffs of Alacrity
-		{ itemID = 51337, "68200 #faction# "..AL["Rating:"].." 1300" }, --Wrathful Gladiator's Cord of Alacrity
-		{ itemID = 51338, "68200 #faction# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Treads of Alacrity
+		{ itemID = 51337, "68200 #faction# ".."Rating:".." 1300" }, --Wrathful Gladiator's Cord of Alacrity
+		{ itemID = 51338, "68200 #faction# ".."Rating:".." 1400" }, --Wrathful Gladiator's Treads of Alacrity
 	},
 		{
 			{ itemID = 41910, "21700 #faction#" }, --Relentless Gladiator's Cuffs of Dominance
@@ -8239,14 +8239,14 @@ AtlasLoot_Data["PvP80NonSet"] = {
 	Name = "Leather",
 	{
 			{ itemID = 51345, "43400 #faction#" }, --Wrathful Gladiator's Armwraps of Dominance
-		{ itemID = 51343, "68200 #faction# "..AL["Rating:"].." 1300" }, --Wrathful Gladiator's Belt of Dominance
-		{ itemID = 51344, "68200 #faction# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Boots of Dominance
+		{ itemID = 51343, "68200 #faction# ".."Rating:".." 1300" }, --Wrathful Gladiator's Belt of Dominance
+		{ itemID = 51344, "68200 #faction# ".."Rating:".." 1400" }, --Wrathful Gladiator's Boots of Dominance
 		{ itemID = 51342, "43400 #faction#" }, --Wrathful Gladiator's Armwraps of Salvation
-		{ itemID = 51340, "68200 #faction# "..AL["Rating:"].." 1300" }, --Wrathful Gladiator's Belt of Salvation
-		{ itemID = 51341, "68200 #faction# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Boots of Salvation
+		{ itemID = 51340, "68200 #faction# ".."Rating:".." 1300" }, --Wrathful Gladiator's Belt of Salvation
+		{ itemID = 51341, "68200 #faction# ".."Rating:".." 1400" }, --Wrathful Gladiator's Boots of Salvation
 		{ itemID = 51370, "43400 #faction#" }, --Wrathful Gladiator's Armwraps of Triumph
-		{ itemID = 51368, "68200 #faction# "..AL["Rating:"].." 1300" }, --Wrathful Gladiator's Belt of Triumph
-		{ itemID = 51369, "68200 #faction# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Boots of Triumph
+		{ itemID = 51368, "68200 #faction# ".."Rating:".." 1300" }, --Wrathful Gladiator's Belt of Triumph
+		{ itemID = 51369, "68200 #faction# ".."Rating:".." 1400" }, --Wrathful Gladiator's Boots of Triumph
 	},
 		{
 			{ itemID = 41641, "21700 #faction#" }, --Relentless Gladiator's Armwraps of Dominance
@@ -8264,14 +8264,14 @@ AtlasLoot_Data["PvP80NonSet"] = {
 	Name = "Mail",
 	{
 			{ itemID = 51376, "43400 #faction#" }, --Wrathful Gladiator's Wristguards of Dominance
-		{ itemID = 51374, "68200 #faction# "..AL["Rating:"].." 1300" }, --Wrathful Gladiator's Waistguard of Dominance
-		{ itemID = 51375, "68200 #faction# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Sabatons of Dominance
+		{ itemID = 51374, "68200 #faction# ".."Rating:".." 1300" }, --Wrathful Gladiator's Waistguard of Dominance
+		{ itemID = 51375, "68200 #faction# ".."Rating:".." 1400" }, --Wrathful Gladiator's Sabatons of Dominance
 		{ itemID = 51373, "43400 #faction#" }, --Wrathful Gladiator's Wristguards of Salvation
-		{ itemID = 51371, "68200 #faction# "..AL["Rating:"].." 1300" }, --Wrathful Gladiator's Waistguard of Salvation
-		{ itemID = 51372, "68200 #faction# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Sabatons of Salvation
+		{ itemID = 51371, "68200 #faction# ".."Rating:".." 1300" }, --Wrathful Gladiator's Waistguard of Salvation
+		{ itemID = 51372, "68200 #faction# ".."Rating:".." 1400" }, --Wrathful Gladiator's Sabatons of Salvation
 		{ itemID = 51352, "43400 #faction#" }, --Wrathful Gladiator's Wristguards of Triumph
-		{ itemID = 51350, "68200 #faction# "..AL["Rating:"].." 1300" }, --Wrathful Gladiator's Waistguard of Triumph
-		{ itemID = 51351, "68200 #faction# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Sabatons of Triumph
+		{ itemID = 51350, "68200 #faction# ".."Rating:".." 1300" }, --Wrathful Gladiator's Waistguard of Triumph
+		{ itemID = 51351, "68200 #faction# ".."Rating:".." 1400" }, --Wrathful Gladiator's Sabatons of Triumph
 	},
 		{
 			{ itemID = 41066, "21700 #faction#" }, --Relentless Gladiator's Wristguards of Dominance
@@ -8289,11 +8289,11 @@ AtlasLoot_Data["PvP80NonSet"] = {
 	Name = "Plate",
 	{
 			{ itemID = 51361, "43400 #faction#" }, --Wrathful Gladiator's Bracers of Salvation
-		{ itemID = 51359, "68200 #faction# "..AL["Rating:"].." 1300" }, --Wrathful Gladiator's Girdle of Salvation
-		{ itemID = 51360, "68200 #faction# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Greaves of Salvation
+		{ itemID = 51359, "68200 #faction# ".."Rating:".." 1300" }, --Wrathful Gladiator's Girdle of Salvation
+		{ itemID = 51360, "68200 #faction# ".."Rating:".." 1400" }, --Wrathful Gladiator's Greaves of Salvation
 		{ itemID = 51364, "43400 #faction#" }, --Wrathful Gladiator's Bracers of Triumph
-		{ itemID = 51362, "68200 #faction# "..AL["Rating:"].." 1300" }, --Wrathful Gladiator's Girdle of Triumph
-		{ itemID = 51363, "68200 #faction# "..AL["Rating:"].." 1400" }, --Wrathful Gladiator's Greaves of Triumph
+		{ itemID = 51362, "68200 #faction# ".."Rating:".." 1300" }, --Wrathful Gladiator's Girdle of Triumph
+		{ itemID = 51363, "68200 #faction# ".."Rating:".." 1400" }, --Wrathful Gladiator's Greaves of Triumph
 	},
 		{
 			{ itemID = 40984, "21700 #faction#" }, --Relentless Gladiator's Bracers of Salvation
@@ -8311,96 +8311,96 @@ AtlasLoot_Data["PvP80NonSet"] = {
 ------------------------------------
 AtlasLoot_Data["WeaponsWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = "Arena " .. AL["Weapons"],
+	Name = "Arena " .. "Weapons",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["Low Level"] },
-			{ itemID = 51523,"38500 #faction# 1090 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Right Ripper
-			{ itemID = 51530,"16500 #faction# 450 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Left Render
-			{ itemID = 51443,"15000 #faction# 1100 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Left Ripper
-			{ itemID = 51406,"38500 #faction# 1300 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Blade of Alacrity
-			{ itemID = 51397,"38500 #faction# 1300 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Spellblade
-			{ itemID = 51517, "38500 #faction# 1090 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Shanker
-			{ itemID = 51527, "16500 #faction# 450 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Mutilator
-			{ itemID = 51441, "16500 #faction# 450 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Shiv
-			{ itemID = 51521, "38500 #faction# 1090 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Slicer
-			{ itemID = 51447,"16500 #faction# 450 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Quickblade
-			{ itemID = 51392,"55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Greatsword
-			{ itemID = 51515, "38500 #faction# 1090 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Cleaver
-			{ itemID = 51525, "16500 #faction# 450 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Chopper
-			{ itemID = 51439, "16500 #faction# 450 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Hacker
+			{ icon = "INV_Box_01", name = color.WHITE.. "Low Level" },
+			{ itemID = 51523,"38500 #faction# 1090 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Right Ripper
+			{ itemID = 51530,"16500 #faction# 450 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Left Render
+			{ itemID = 51443,"15000 #faction# 1100 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Left Ripper
+			{ itemID = 51406,"38500 #faction# 1300 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Blade of Alacrity
+			{ itemID = 51397,"38500 #faction# 1300 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Spellblade
+			{ itemID = 51517, "38500 #faction# 1090 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Shanker
+			{ itemID = 51527, "16500 #faction# 450 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Mutilator
+			{ itemID = 51441, "16500 #faction# 450 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Shiv
+			{ itemID = 51521, "38500 #faction# 1090 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Slicer
+			{ itemID = 51447,"16500 #faction# 450 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Quickblade
+			{ itemID = 51392,"55000 #faction# 1540 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Greatsword
+			{ itemID = 51515, "38500 #faction# 1090 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Cleaver
+			{ itemID = 51525, "16500 #faction# 450 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Chopper
+			{ itemID = 51439, "16500 #faction# 450 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Hacker
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["High Level"] },
-			{ itemID = 51524, "3300 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Grasp
-			{ itemID = 51529, "1370 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Left Claw
-			{ itemID = 51444, "1370 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Left Razor
-			{ itemID = 51398, "3950 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Blade of Celerity
-			{ itemID = 51399, "3950 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Mageblade
-			{ itemID = 51518, "3300 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Spike
-			{ itemID = 51442, "1370 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Dirk
-			{ itemID = 51528, "1370 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Eviscerator
-			{ itemID = 51522, "3300 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Longblade
-			{ itemID = 51448, "1370 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Swiftblade
-			{ itemID = 51393, "4670 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Claymore
-			{ itemID = 51516, "3300 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Handaxe
-			{ itemID = 51440, "1370 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Dicer
-			{ itemID = 51526, "1370 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Splitter
+			{ icon = "INV_Box_01", name = color.WHITE.. "High Level" },
+			{ itemID = 51524, "3300 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Grasp
+			{ itemID = 51529, "1370 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Left Claw
+			{ itemID = 51444, "1370 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Left Razor
+			{ itemID = 51398, "3950 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Blade of Celerity
+			{ itemID = 51399, "3950 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Mageblade
+			{ itemID = 51518, "3300 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Spike
+			{ itemID = 51442, "1370 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Dirk
+			{ itemID = 51528, "1370 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Eviscerator
+			{ itemID = 51522, "3300 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Longblade
+			{ itemID = 51448, "1370 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Swiftblade
+			{ itemID = 51393, "4670 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Claymore
+			{ itemID = 51516, "3300 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Handaxe
+			{ itemID = 51440, "1370 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Dicer
+			{ itemID = 51526, "1370 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Splitter
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["Low Level"] },
-			{ itemID = 51388, "55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Decapitator
-			{ itemID = 51453, "38500 #faction# 1300 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Gavel
-			{ itemID = 51519, "38500 #faction# 1090 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Pummeler
-			{ itemID = 51445, "16500 #faction# 450 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Bonecracker
-			{ itemID = 51390, "55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Bonegrinder
-			{ itemID = 51480, "55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Pike
-			{ itemID = 51404, "55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Battle Staff
-			{ itemID = 51456, "55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Energy Staff
-			{ itemID = 51402, "55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Focus Staff
-			{ itemID = 51431, "55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Staff
-			{ itemID = 51400, "55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's War Staff
-			{ itemID = 51394, "55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Longbow
-			{ itemID = 51411, "55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Heavy Crossbow
-			{ itemID = 51449, "55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Rifle
+			{ icon = "INV_Box_01", name = color.WHITE.. "Low Level" },
+			{ itemID = 51388, "55000 #faction# 1540 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Decapitator
+			{ itemID = 51453, "38500 #faction# 1300 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Gavel
+			{ itemID = 51519, "38500 #faction# 1090 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Pummeler
+			{ itemID = 51445, "16500 #faction# 450 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Bonecracker
+			{ itemID = 51390, "55000 #faction# 1540 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Bonegrinder
+			{ itemID = 51480, "55000 #faction# 1540 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Pike
+			{ itemID = 51404, "55000 #faction# 1540 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Battle Staff
+			{ itemID = 51456, "55000 #faction# 1540 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Energy Staff
+			{ itemID = 51402, "55000 #faction# 1540 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Focus Staff
+			{ itemID = 51431, "55000 #faction# 1540 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Staff
+			{ itemID = 51400, "55000 #faction# 1540 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's War Staff
+			{ itemID = 51394, "55000 #faction# 1540 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Longbow
+			{ itemID = 51411, "55000 #faction# 1540 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Heavy Crossbow
+			{ itemID = 51449, "55000 #faction# 1540 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Rifle
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. AL["High Level"] },
-			{ itemID = 51389, "4670 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Sunderer
-			{ itemID = 51454, "3950 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Salvation
-			{ itemID = 51520, "3300 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Truncheon
-			{ itemID = 51446, "1370 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Punisher
-			{ itemID = 51391, "4670 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Crusher
-			{ itemID = 51481, "4670 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Halberd
-			{ itemID = 51403, "4670 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Acute Staff
-			{ itemID = 51401, "4670 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Combat Staff
-			{ itemID = 51432, "4670 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Greatstaff
-			{ itemID = 51457, "4670 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Light Staff
-			{ itemID = 51405, "4670 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Skirmish Staff
-			{ itemID = 51395, "4670 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Recurve
-			{ itemID = 51412, "4670 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Repeater
-			{ itemID = 51450, "4670 #arena# "..AL["Rating:"].." 2200" }, --Wrathful Gladiator's Shotgun
+			{ icon = "INV_Box_01", name = color.WHITE.. "High Level" },
+			{ itemID = 51389, "4670 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Sunderer
+			{ itemID = 51454, "3950 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Salvation
+			{ itemID = 51520, "3300 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Truncheon
+			{ itemID = 51446, "1370 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Punisher
+			{ itemID = 51391, "4670 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Crusher
+			{ itemID = 51481, "4670 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Halberd
+			{ itemID = 51403, "4670 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Acute Staff
+			{ itemID = 51401, "4670 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Combat Staff
+			{ itemID = 51432, "4670 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Greatstaff
+			{ itemID = 51457, "4670 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Light Staff
+			{ itemID = 51405, "4670 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Skirmish Staff
+			{ itemID = 51395, "4670 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Recurve
+			{ itemID = 51412, "4670 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Repeater
+			{ itemID = 51450, "4670 #arena# ".."Rating:".." 2200" }, --Wrathful Gladiator's Shotgun
 		},
 	},
 	{
-		Name = AL["Page 3"],
+		Name = "Page 3",
 		{
-			{ itemID = 51452, "350 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Barrier
-			{ itemID = 51455, "350 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Redoubt
-			{ itemID = 51533, "350 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Shield Wall
-			{ itemID = 51535, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's War Edge
-			{ itemID = 51532, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Baton of Light
-			{ itemID = 51531, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Piercing Touch
-			{ itemID = 51410, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Touch of Defeat
-			{ itemID = 51451, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Wand of Alacrity
-			{ itemID = 51407, "350 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Compendium
-			{ itemID = 51396, "350 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Endgame
-			{ itemID = 51408, "350 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Grimoire
-			{ itemID = 51409, "350 #arena# "..AL["Rating:"].." 1800" }, --Wrathful Gladiator's Reprieve
+			{ itemID = 51452, "350 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Barrier
+			{ itemID = 51455, "350 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Redoubt
+			{ itemID = 51533, "350 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Shield Wall
+			{ itemID = 51535, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's War Edge
+			{ itemID = 51532, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Baton of Light
+			{ itemID = 51531, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Piercing Touch
+			{ itemID = 51410, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Touch of Defeat
+			{ itemID = 51451, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Wand of Alacrity
+			{ itemID = 51407, "350 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Compendium
+			{ itemID = 51396, "350 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Endgame
+			{ itemID = 51408, "350 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Grimoire
+			{ itemID = 51409, "350 #arena# ".."Rating:".." 1800" }, --Wrathful Gladiator's Reprieve
 		},
 	},
 }
@@ -8413,45 +8413,45 @@ AtlasLoot_Data["PVPidolWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = "Idols/Librams/Sigils/Totems",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. BabbleInventory["Idols"] },
-			{ itemID = 51429, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Idol of Resolve
-			{ itemID = 51437, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Idol of Steadfastness
-			{ itemID = 51423, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Idol of Tenacity
-			{ itemID = 42591, "6400 #faction# 350 #arena# "..AL["Rating:"].." 700" }, --Relentless Gladiator's Idol of Resolve
-			{ itemID = 42585, "6400 #faction# 350 #arena# "..AL["Rating:"].." 700" }, --Relentless Gladiator's Idol of Steadfastness
-			{ itemID = 42580, "6400 #faction# 350 #arena# "..AL["Rating:"].." 700" }, --Relentless Gladiator's Idol of Tenacity
+			{ icon = "INV_Box_01", name = color.WHITE.. "Idols" },
+			{ itemID = 51429, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Idol of Resolve
+			{ itemID = 51437, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Idol of Steadfastness
+			{ itemID = 51423, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Idol of Tenacity
+			{ itemID = 42591, "6400 #faction# 350 #arena# ".."Rating:".." 700" }, --Relentless Gladiator's Idol of Resolve
+			{ itemID = 42585, "6400 #faction# 350 #arena# ".."Rating:".." 700" }, --Relentless Gladiator's Idol of Steadfastness
+			{ itemID = 42580, "6400 #faction# 350 #arena# ".."Rating:".." 700" }, --Relentless Gladiator's Idol of Tenacity
 			{ itemID = 42589, "12000 #faction#" }, --Furious Gladiator's Idol of Resolve
 			{ itemID = 42584, "12000 #faction#" }, --Furious Gladiator's Idol of Steadfastness
 			{ itemID = 42579, "12000 #faction#" }, --Furious Gladiator's Idol of Tenacity
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. BabbleInventory["Librams"] },
-			{ itemID = 51478, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Libram of Fortitude
-			{ itemID = 51472, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Libram of Justice
-			{ itemID = 42854, "6400 #faction# 350 #arena# "..AL["Rating:"].." 700" }, --Relentless Gladiator's Libram of Fortitude
-			{ itemID = 42616, "6400 #faction# 350 #arena# "..AL["Rating:"].." 700" }, --Relentless Gladiator's Libram of Justice
+			{ icon = "INV_Box_01", name = color.WHITE.. "Librams" },
+			{ itemID = 51478, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Libram of Fortitude
+			{ itemID = 51472, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Libram of Justice
+			{ itemID = 42854, "6400 #faction# 350 #arena# ".."Rating:".." 700" }, --Relentless Gladiator's Libram of Fortitude
+			{ itemID = 42616, "6400 #faction# 350 #arena# ".."Rating:".." 700" }, --Relentless Gladiator's Libram of Justice
 			{ itemID = 42853, "12000 #faction#" }, --Furious Gladiator's Libram of Fortitude
 			{ itemID = 42615, "12000 #faction#" }, --Furious Gladiator's Libram of Justice
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. BabbleInventory["Sigils"] },
-			{ itemID = 51417, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Sigil of Strife
-			{ itemID = 42622, "6400 #faction# 350 #arena# "..AL["Rating:"].." 700" }, --Relentless Gladiator's Sigil of Strife
+			{ icon = "INV_Box_01", name = color.WHITE.. "Sigils" },
+			{ itemID = 51417, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Sigil of Strife
+			{ itemID = 42622, "6400 #faction# 350 #arena# ".."Rating:".." 700" }, --Relentless Gladiator's Sigil of Strife
 			{ itemID = 42621, "12000 #faction#" }, --Furious Gladiator's Sigil of Strife
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. BabbleInventory["Totems"] },
-			{ itemID = 51507, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Totem of Indomitability
-			{ itemID = 51513, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Totem of Survival
-			{ itemID = 51501, "1260 #arena# "..AL["Rating:"].." 1700" }, --Wrathful Gladiator's Totem of the Third Wind
-			{ itemID = 42609, "6400 #faction# 350 #arena# "..AL["Rating:"].." 700" }, --Relentless Gladiator's Totem of Indomitability
-			{ itemID = 42604, "6400 #faction# 350 #arena# "..AL["Rating:"].." 700" }, --Relentless Gladiator's Totem of Survival
-			{ itemID = 42599, "6400 #faction# 350 #arena# "..AL["Rating:"].." 700" }, --Relentless Gladiator's Totem of the Third Wind
+			{ icon = "INV_Box_01", name = color.WHITE.. "Totems" },
+			{ itemID = 51507, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Totem of Indomitability
+			{ itemID = 51513, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Totem of Survival
+			{ itemID = 51501, "1260 #arena# ".."Rating:".." 1700" }, --Wrathful Gladiator's Totem of the Third Wind
+			{ itemID = 42609, "6400 #faction# 350 #arena# ".."Rating:".." 700" }, --Relentless Gladiator's Totem of Indomitability
+			{ itemID = 42604, "6400 #faction# 350 #arena# ".."Rating:".." 700" }, --Relentless Gladiator's Totem of Survival
+			{ itemID = 42599, "6400 #faction# 350 #arena# ".."Rating:".." 700" }, --Relentless Gladiator's Totem of the Third Wind
 			{ itemID = 42608, "12000 #faction#" }, --Furious Gladiator's Totem of Indomitability
 			{ itemID = 42603, "12000 #faction#" }, --Furious Gladiator's Totem of Survival
 		},
@@ -8463,11 +8463,11 @@ AtlasLoot_Data["PVPidolWRATH"] = {
 
 AtlasLoot_Data["PvP80Misc"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = AL["PvP Misc"],
+	Name = "PvP Misc",
 	{
-		Name = AL["PvP Misc"],
+		Name = "PvP Misc",
 		{
-			{ itemID = 51534, "550 #arena# "..AL["Rating:"].." 2300" }, --Wrathful Gladiator's Tabard
+			{ itemID = 51534, "550 #arena# ".."Rating:".." 2300" }, --Wrathful Gladiator's Tabard
 			{ itemID = 44957, price = "10000 #faction#" }, --Greater Inscription of the Gladiator
 			{ itemID = 45706, "100 #arena#" }, --Commendation of Bravery
 			{ itemID = 36931, "10000 #faction#" }, --Ametrine
@@ -8502,7 +8502,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = "Wintergrasp",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
 			{ itemID = 51570, "25 #wintergraspmark#" }, --Titan-Forged Cloak of Ascendancy
 			{ itemID = 51571, "25 #wintergraspmark#" }, --Titan-Forged Cloak of Victory
@@ -8527,7 +8527,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 			{ itemID = 44910, "40 #wintergraspmark#" }, --Titan-Forged Hood of Dominance
 			{ itemID = 51573, "40 #wintergraspmark#" }, --Titan-Forged Shoulderpads of Domination
 			{ itemID = 46065, "40 #wintergraspmark#" }, --Titan-Forged Raiment of Dominance
@@ -8545,7 +8545,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 			{ itemID = 44900, "15 #wintergraspmark#" }, --Titan-Forged Slippers of Salvation
 	},
 	{
-		Name = AL["Page 3"],
+		Name = "Page 3",
 		{
 			{ itemID = 44907, "40 #wintergraspmark#" }, --Titan-Forged Leather Helm of Dominance
 			{ itemID = 51574, "40 #wintergraspmark#" }, --Titan-Forged Leather Spaulders of Dominance
@@ -8573,7 +8573,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 		},
 	},
 	{
-		Name = AL["Page 4"],
+		Name = "Page 4",
 		{
 			{ itemID = 44904, "40 #wintergraspmark#" }, --Titan-Forged Mail Helm of Dominance
 			{ itemID = 51578, "40 #wintergraspmark#" }, --Titan-Forged Shoulders of Dominance
@@ -8601,7 +8601,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 		},
 	},
 	{
-		Name = AL["Page 5"],
+		Name = "Page 5",
 		{
 			{ itemID = 44901, "40 #wintergraspmark#" }, --Titan-Forged Plate Headcover of Salvation
 			{ itemID = 51581, "40 #wintergraspmark#" }, --Titan-Forged Shoulderplates of Salvation
@@ -8622,7 +8622,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 		},
 	},
 	{
-		Name = AL["Page 6"],
+		Name = "Page 6",
 		{
 			{ itemID = 44066, "20 #wintergrasp#" }, --Kharmaa's Grace
 			{ itemID = 44081, "15 #wintergrasp#" }, --Enigmatic Starflare Diamond
@@ -8657,7 +8657,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 		},
 	},
 	{
-		Name = AL["Page 7"],
+		Name = "Page 7",
 		{
 			{ itemID = 44107, price = "200 #wintergrasp#" }, --Exquisite Sunderseer Mantle
 			{ itemID = 44103, price = "200 #wintergrasp#" }, --Exceptional Stormshroud Shoulders
@@ -8732,324 +8732,324 @@ AtlasLoot_Data["T7"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " DPS",
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Scourgeborne Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39619, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Scourgeborne Helmet
-			{ itemID = 39621, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Scourgeborne Shoulderplates
-			{ itemID = 39617, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Scourgeborne Battleplate
-			{ itemID = 39618, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Scourgeborne Gauntlets
-			{ itemID = 39620, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Scourgeborne Legplates
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Scourgeborne Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40554, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Scourgeborne Helmet
-			{ itemID = 40557, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Scourgeborne Shoulderplates
-			{ itemID = 40550, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Scourgeborne Battleplate
-			{ itemID = 40552, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Scourgeborne Gauntlets
-			{ itemID = 40556, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Scourgeborne Legplates
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Scourgeborne Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39619, "=ds=" .. "Kel'Thuzad" }, --Heroes' Scourgeborne Helmet
+			{ itemID = 39621, "=ds=" .. "Loatheb" }, --Heroes' Scourgeborne Shoulderplates
+			{ itemID = 39617, "=ds=" .. "The Four Horsemen" }, --Heroes' Scourgeborne Battleplate
+			{ itemID = 39618, "=ds=" .. "Sartharion" }, --Heroes' Scourgeborne Gauntlets
+			{ itemID = 39620, "=ds=" .. "Thaddius" }, --Heroes' Scourgeborne Legplates
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Scourgeborne Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40554, "=ds=" .. "Kel'Thuzad" }, --Valorous Scourgeborne Helmet
+			{ itemID = 40557, "=ds=" .. "Loatheb" }, --Valorous Scourgeborne Shoulderplates
+			{ itemID = 40550, "=ds=" .. "The Four Horsemen" }, --Valorous Scourgeborne Battleplate
+			{ itemID = 40552, "=ds=" .. "Sartharion" }, --Valorous Scourgeborne Gauntlets
+			{ itemID = 40556, "=ds=" .. "Thaddius" }, --Valorous Scourgeborne Legplates
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " TANK",
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Scourgeborne Plate"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39625, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Scourgeborne Faceguard
-			{ itemID = 39627, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Scourgeborne Pauldrons
-			{ itemID = 39623, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Scourgeborne Chestguard
-			{ itemID = 39624, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Scourgeborne Handguards
-			{ itemID = 39626, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Scourgeborne Legguards
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Scourgeborne Plate"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40565, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Scourgeborne Faceguard
-			{ itemID = 40568, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Scourgeborne Pauldrons
-			{ itemID = 40559, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Scourgeborne Chestguard
-			{ itemID = 40563, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Scourgeborne Handguards
-			{ itemID = 40567, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Scourgeborne Legguards
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Scourgeborne Plate", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39625, "=ds=" .. "Kel'Thuzad" }, --Heroes' Scourgeborne Faceguard
+			{ itemID = 39627, "=ds=" .. "Loatheb" }, --Heroes' Scourgeborne Pauldrons
+			{ itemID = 39623, "=ds=" .. "The Four Horsemen" }, --Heroes' Scourgeborne Chestguard
+			{ itemID = 39624, "=ds=" .. "Sartharion" }, --Heroes' Scourgeborne Handguards
+			{ itemID = 39626, "=ds=" .. "Thaddius" }, --Heroes' Scourgeborne Legguards
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Scourgeborne Plate", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40565, "=ds=" .. "Kel'Thuzad" }, --Valorous Scourgeborne Faceguard
+			{ itemID = 40568, "=ds=" .. "Loatheb" }, --Valorous Scourgeborne Pauldrons
+			{ itemID = 40559, "=ds=" .. "The Four Horsemen" }, --Valorous Scourgeborne Chestguard
+			{ itemID = 40563, "=ds=" .. "Sartharion" }, --Valorous Scourgeborne Handguards
+			{ itemID = 40567, "=ds=" .. "Thaddius" }, --Valorous Scourgeborne Legguards
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Feral"],
+		Name = "Druid" .. " - " .. "Feral",
 		{
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Dreamwalker Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39553, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Dreamwalker Headguard
-			{ itemID = 39556, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Dreamwalker Shoulderpads
-			{ itemID = 39554, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Dreamwalker Raiments
-			{ itemID = 39557, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Dreamwalker Handgrips
-			{ itemID = 39555, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Dreamwalker Legguards
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Dreamwalker Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40473, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Dreamwalker Headguard
-			{ itemID = 40494, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Dreamwalker Shoulderpads
-			{ itemID = 40471, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Dreamwalker Raiments
-			{ itemID = 40472, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Dreamwalker Handgrips
-			{ itemID = 40493, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Dreamwalker Legguards
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Dreamwalker Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39553, "=ds=" .. "Kel'Thuzad" }, --Heroes' Dreamwalker Headguard
+			{ itemID = 39556, "=ds=" .. "Loatheb" }, --Heroes' Dreamwalker Shoulderpads
+			{ itemID = 39554, "=ds=" .. "The Four Horsemen" }, --Heroes' Dreamwalker Raiments
+			{ itemID = 39557, "=ds=" .. "Sartharion" }, --Heroes' Dreamwalker Handgrips
+			{ itemID = 39555, "=ds=" .. "Thaddius" }, --Heroes' Dreamwalker Legguards
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Dreamwalker Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40473, "=ds=" .. "Kel'Thuzad" }, --Valorous Dreamwalker Headguard
+			{ itemID = 40494, "=ds=" .. "Loatheb" }, --Valorous Dreamwalker Shoulderpads
+			{ itemID = 40471, "=ds=" .. "The Four Horsemen" }, --Valorous Dreamwalker Raiments
+			{ itemID = 40472, "=ds=" .. "Sartharion" }, --Valorous Dreamwalker Handgrips
+			{ itemID = 40493, "=ds=" .. "Thaddius" }, --Valorous Dreamwalker Legguards
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Restoration"],
+		Name = "Druid" .. " - " .. "Restoration",
 		{
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Dreamwalker Regalia"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39531, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Dreamwalker Headpiece
-			{ itemID = 39542, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Dreamwalker Spaulders
-			{ itemID = 39538, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Dreamwalker Robe
-			{ itemID = 39543, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Dreamwalker Handguards
-			{ itemID = 39539, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Dreamwalker Leggings
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Dreamwalker Regalia"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40461, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Dreamwalker Headpiece
-			{ itemID = 40465, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Dreamwalker Spaulders
-			{ itemID = 40463, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Dreamwalker Robe
-			{ itemID = 40460, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Dreamwalker Handguards
-			{ itemID = 40462, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Dreamwalker Leggings
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Dreamwalker Regalia", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39531, "=ds=" .. "Kel'Thuzad" }, --Heroes' Dreamwalker Headpiece
+			{ itemID = 39542, "=ds=" .. "Loatheb" }, --Heroes' Dreamwalker Spaulders
+			{ itemID = 39538, "=ds=" .. "The Four Horsemen" }, --Heroes' Dreamwalker Robe
+			{ itemID = 39543, "=ds=" .. "Sartharion" }, --Heroes' Dreamwalker Handguards
+			{ itemID = 39539, "=ds=" .. "Thaddius" }, --Heroes' Dreamwalker Leggings
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Dreamwalker Regalia", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40461, "=ds=" .. "Kel'Thuzad" }, --Valorous Dreamwalker Headpiece
+			{ itemID = 40465, "=ds=" .. "Loatheb" }, --Valorous Dreamwalker Spaulders
+			{ itemID = 40463, "=ds=" .. "The Four Horsemen" }, --Valorous Dreamwalker Robe
+			{ itemID = 40460, "=ds=" .. "Sartharion" }, --Valorous Dreamwalker Handguards
+			{ itemID = 40462, "=ds=" .. "Thaddius" }, --Valorous Dreamwalker Leggings
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Balance"],
+		Name = "Druid" .. " - " .. "Balance",
 		{
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Dreamwalker Garb"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39545, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Dreamwalker Cover
-			{ itemID = 39548, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Dreamwalker Mantle
-			{ itemID = 39547, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Dreamwalker Vestments
-			{ itemID = 39544, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Dreamwalker Gloves
-			{ itemID = 39546, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Dreamwalker Trousers
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Dreamwalker Garb"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40467, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Dreamwalker Cover
-			{ itemID = 40470, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Dreamwalker Mantle
-			{ itemID = 40469, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Dreamwalker Vestments
-			{ itemID = 40466, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Dreamwalker Gloves
-			{ itemID = 40468, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Dreamwalker Trousers
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Dreamwalker Garb", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39545, "=ds=" .. "Kel'Thuzad" }, --Heroes' Dreamwalker Cover
+			{ itemID = 39548, "=ds=" .. "Loatheb" }, --Heroes' Dreamwalker Mantle
+			{ itemID = 39547, "=ds=" .. "The Four Horsemen" }, --Heroes' Dreamwalker Vestments
+			{ itemID = 39544, "=ds=" .. "Sartharion" }, --Heroes' Dreamwalker Gloves
+			{ itemID = 39546, "=ds=" .. "Thaddius" }, --Heroes' Dreamwalker Trousers
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Dreamwalker Garb", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40467, "=ds=" .. "Kel'Thuzad" }, --Valorous Dreamwalker Cover
+			{ itemID = 40470, "=ds=" .. "Loatheb" }, --Valorous Dreamwalker Mantle
+			{ itemID = 40469, "=ds=" .. "The Four Horsemen" }, --Valorous Dreamwalker Vestments
+			{ itemID = 40466, "=ds=" .. "Sartharion" }, --Valorous Dreamwalker Gloves
+			{ itemID = 40468, "=ds=" .. "Thaddius" }, --Valorous Dreamwalker Trousers
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Cryptstalker Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39578, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Cryptstalker Headpiece
-			{ itemID = 39581, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Cryptstalker Spaulders
-			{ itemID = 39579, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Cryptstalker Tunic
-			{ itemID = 39582, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Cryptstalker Handguards
-			{ itemID = 39580, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Cryptstalker Legguards
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Cryptstalker Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40505, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Crypstalker Headpiece
-			{ itemID = 40507, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Crypstalker Spaulders
-			{ itemID = 40503, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Crypstalker Tunic
-			{ itemID = 40504, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Crypstalker Handguards
-			{ itemID = 40506, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Crypstalker Legguards
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Cryptstalker Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39578, "=ds=" .. "Kel'Thuzad" }, --Heroes' Cryptstalker Headpiece
+			{ itemID = 39581, "=ds=" .. "Loatheb" }, --Heroes' Cryptstalker Spaulders
+			{ itemID = 39579, "=ds=" .. "The Four Horsemen" }, --Heroes' Cryptstalker Tunic
+			{ itemID = 39582, "=ds=" .. "Sartharion" }, --Heroes' Cryptstalker Handguards
+			{ itemID = 39580, "=ds=" .. "Thaddius" }, --Heroes' Cryptstalker Legguards
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Cryptstalker Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40505, "=ds=" .. "Kel'Thuzad" }, --Valorous Crypstalker Headpiece
+			{ itemID = 40507, "=ds=" .. "Loatheb" }, --Valorous Crypstalker Spaulders
+			{ itemID = 40503, "=ds=" .. "The Four Horsemen" }, --Valorous Crypstalker Tunic
+			{ itemID = 40504, "=ds=" .. "Sartharion" }, --Valorous Crypstalker Handguards
+			{ itemID = 40506, "=ds=" .. "Thaddius" }, --Valorous Crypstalker Legguards
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Frostfire Garb"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39491, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Frostfire Circlet
-			{ itemID = 39494, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Frostfire Shoulderpads
-			{ itemID = 39492, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Frostfire Robe
-			{ itemID = 39495, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Frostfire Gloves
-			{ itemID = 39493, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Frostfire Leggings
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Frostfire Garb"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40416, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Frostfire Circlet
-			{ itemID = 40419, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Frostfire Shoulderpads
-			{ itemID = 40418, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Frostfire Robe
-			{ itemID = 40415, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Frostfire Gloves
-			{ itemID = 40417, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Frostfire Leggings
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Frostfire Garb", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39491, "=ds=" .. "Kel'Thuzad" }, --Heroes' Frostfire Circlet
+			{ itemID = 39494, "=ds=" .. "Loatheb" }, --Heroes' Frostfire Shoulderpads
+			{ itemID = 39492, "=ds=" .. "The Four Horsemen" }, --Heroes' Frostfire Robe
+			{ itemID = 39495, "=ds=" .. "Sartharion" }, --Heroes' Frostfire Gloves
+			{ itemID = 39493, "=ds=" .. "Thaddius" }, --Heroes' Frostfire Leggings
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Frostfire Garb", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40416, "=ds=" .. "Kel'Thuzad" }, --Valorous Frostfire Circlet
+			{ itemID = 40419, "=ds=" .. "Loatheb" }, --Valorous Frostfire Shoulderpads
+			{ itemID = 40418, "=ds=" .. "The Four Horsemen" }, --Valorous Frostfire Robe
+			{ itemID = 40415, "=ds=" .. "Sartharion" }, --Valorous Frostfire Gloves
+			{ itemID = 40417, "=ds=" .. "Thaddius" }, --Valorous Frostfire Leggings
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Holy"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Holy",
 		{
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Redemption Regalia"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39628, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Redemption Headpiece
-			{ itemID = 39631, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Redemption Spaulders
-			{ itemID = 39629, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Redemption Tunic
-			{ itemID = 39632, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Redemption Gloves
-			{ itemID = 39630, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Redemption Greaves
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Redemption Regalia"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40571, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Redemption Headpiece
-			{ itemID = 40573, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Redemption Spaulders
-			{ itemID = 40569, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Redemption Tunic
-			{ itemID = 40570, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Redemption Gloves
-			{ itemID = 40572, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Redemption Greaves
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Redemption Regalia", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39628, "=ds=" .. "Kel'Thuzad" }, --Heroes' Redemption Headpiece
+			{ itemID = 39631, "=ds=" .. "Loatheb" }, --Heroes' Redemption Spaulders
+			{ itemID = 39629, "=ds=" .. "The Four Horsemen" }, --Heroes' Redemption Tunic
+			{ itemID = 39632, "=ds=" .. "Sartharion" }, --Heroes' Redemption Gloves
+			{ itemID = 39630, "=ds=" .. "Thaddius" }, --Heroes' Redemption Greaves
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Redemption Regalia", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40571, "=ds=" .. "Kel'Thuzad" }, --Valorous Redemption Headpiece
+			{ itemID = 40573, "=ds=" .. "Loatheb" }, --Valorous Redemption Spaulders
+			{ itemID = 40569, "=ds=" .. "The Four Horsemen" }, --Valorous Redemption Tunic
+			{ itemID = 40570, "=ds=" .. "Sartharion" }, --Valorous Redemption Gloves
+			{ itemID = 40572, "=ds=" .. "Thaddius" }, --Valorous Redemption Greaves
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Retribution"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Retribution",
 		{
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Redemption Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39635, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Redemption Helm
-			{ itemID = 39637, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Redemption Shoulderplates
-			{ itemID = 39633, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Redemption Chestpiece
-			{ itemID = 39634, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Redemption Gauntlets
-			{ itemID = 39636, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Redemption Legplates
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Redemption Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40576, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Redemption Helm
-			{ itemID = 40578, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Redemption Shoulderplates
-			{ itemID = 40574, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Redemption Chestpiece
-			{ itemID = 40575, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Redemption Gauntlets
-			{ itemID = 40577, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Redemption Legplates
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Redemption Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39635, "=ds=" .. "Kel'Thuzad" }, --Heroes' Redemption Helm
+			{ itemID = 39637, "=ds=" .. "Loatheb" }, --Heroes' Redemption Shoulderplates
+			{ itemID = 39633, "=ds=" .. "The Four Horsemen" }, --Heroes' Redemption Chestpiece
+			{ itemID = 39634, "=ds=" .. "Sartharion" }, --Heroes' Redemption Gauntlets
+			{ itemID = 39636, "=ds=" .. "Thaddius" }, --Heroes' Redemption Legplates
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Redemption Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40576, "=ds=" .. "Kel'Thuzad" }, --Valorous Redemption Helm
+			{ itemID = 40578, "=ds=" .. "Loatheb" }, --Valorous Redemption Shoulderplates
+			{ itemID = 40574, "=ds=" .. "The Four Horsemen" }, --Valorous Redemption Chestpiece
+			{ itemID = 40575, "=ds=" .. "Sartharion" }, --Valorous Redemption Gauntlets
+			{ itemID = 40577, "=ds=" .. "Thaddius" }, --Valorous Redemption Legplates
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Protection"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Protection",
 		{
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Redemption Plate"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39640, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Redemption Faceguard
-			{ itemID = 39642, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Redemption Shouldergards
-			{ itemID = 39638, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Redemption Breastplate
-			{ itemID = 39639, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Redemption Handguards
-			{ itemID = 39641, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Redemption Legguards
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Redemption Plate"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40581, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Redemption Faceguard
-			{ itemID = 40584, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Redemption Shouldergards
-			{ itemID = 40579, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Redemption Breastplate
-			{ itemID = 40580, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Redemption Handguards
-			{ itemID = 40583, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Redemption Legguards
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Redemption Plate", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39640, "=ds=" .. "Kel'Thuzad" }, --Heroes' Redemption Faceguard
+			{ itemID = 39642, "=ds=" .. "Loatheb" }, --Heroes' Redemption Shouldergards
+			{ itemID = 39638, "=ds=" .. "The Four Horsemen" }, --Heroes' Redemption Breastplate
+			{ itemID = 39639, "=ds=" .. "Sartharion" }, --Heroes' Redemption Handguards
+			{ itemID = 39641, "=ds=" .. "Thaddius" }, --Heroes' Redemption Legguards
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Redemption Plate", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40581, "=ds=" .. "Kel'Thuzad" }, --Valorous Redemption Faceguard
+			{ itemID = 40584, "=ds=" .. "Loatheb" }, --Valorous Redemption Shouldergards
+			{ itemID = 40579, "=ds=" .. "The Four Horsemen" }, --Valorous Redemption Breastplate
+			{ itemID = 40580, "=ds=" .. "Sartharion" }, --Valorous Redemption Handguards
+			{ itemID = 40583, "=ds=" .. "Thaddius" }, --Valorous Redemption Legguards
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. AL["Shadow"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. "Shadow",
 		{
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Garb of Faith"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39521, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Circlet of Faith
-			{ itemID = 39529, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Mantle of Faith
-			{ itemID = 39523, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Raiments of Faith
-			{ itemID = 39530, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Handwraps of Faith
-			{ itemID = 39528, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Pants of Faith
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Garb of Faith"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40456, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Circlet of Faith
-			{ itemID = 40459, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Mantle of Faith
-			{ itemID = 40458, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Raiments of Faith
-			{ itemID = 40454, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Handwraps of Faith
-			{ itemID = 40457, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Pants of Faith
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Garb of Faith", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39521, "=ds=" .. "Kel'Thuzad" }, --Heroes' Circlet of Faith
+			{ itemID = 39529, "=ds=" .. "Loatheb" }, --Heroes' Mantle of Faith
+			{ itemID = 39523, "=ds=" .. "The Four Horsemen" }, --Heroes' Raiments of Faith
+			{ itemID = 39530, "=ds=" .. "Sartharion" }, --Heroes' Handwraps of Faith
+			{ itemID = 39528, "=ds=" .. "Thaddius" }, --Heroes' Pants of Faith
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Garb of Faith", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40456, "=ds=" .. "Kel'Thuzad" }, --Valorous Circlet of Faith
+			{ itemID = 40459, "=ds=" .. "Loatheb" }, --Valorous Mantle of Faith
+			{ itemID = 40458, "=ds=" .. "The Four Horsemen" }, --Valorous Raiments of Faith
+			{ itemID = 40454, "=ds=" .. "Sartharion" }, --Valorous Handwraps of Faith
+			{ itemID = 40457, "=ds=" .. "Thaddius" }, --Valorous Pants of Faith
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. AL["Holy"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. "Holy",
 		{
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Regalia of Faith"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39514, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Crown of Faith
-			{ itemID = 39518, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Shoulderpads of Faith
-			{ itemID = 39515, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Robe of Faith
-			{ itemID = 39519, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Gloves of Faith
-			{ itemID = 39517, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Leggings of Faith
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Regalia of Faith"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40447, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Crown of Faith
-			{ itemID = 40450, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Shoulderpads of Faith
-			{ itemID = 40449, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Robe of Faith
-			{ itemID = 40445, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Gloves of Faith
-			{ itemID = 40448, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Leggings of Faith
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Regalia of Faith", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39514, "=ds=" .. "Kel'Thuzad" }, --Heroes' Crown of Faith
+			{ itemID = 39518, "=ds=" .. "Loatheb" }, --Heroes' Shoulderpads of Faith
+			{ itemID = 39515, "=ds=" .. "The Four Horsemen" }, --Heroes' Robe of Faith
+			{ itemID = 39519, "=ds=" .. "Sartharion" }, --Heroes' Gloves of Faith
+			{ itemID = 39517, "=ds=" .. "Thaddius" }, --Heroes' Leggings of Faith
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Regalia of Faith", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40447, "=ds=" .. "Kel'Thuzad" }, --Valorous Crown of Faith
+			{ itemID = 40450, "=ds=" .. "Loatheb" }, --Valorous Shoulderpads of Faith
+			{ itemID = 40449, "=ds=" .. "The Four Horsemen" }, --Valorous Robe of Faith
+			{ itemID = 40445, "=ds=" .. "Sartharion" }, --Valorous Gloves of Faith
+			{ itemID = 40448, "=ds=" .. "Thaddius" }, --Valorous Leggings of Faith
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Bonescythe Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39561, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Bonescythe Helmet
-			{ itemID = 39565, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Bonescythe Pauldrons
-			{ itemID = 39558, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Bonescythe Breastplate
-			{ itemID = 39560, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Bonescythe Gauntlets
-			{ itemID = 39564, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Bonescythe Legplates
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Bonescythe Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40499, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Bonescythe Helmet
-			{ itemID = 40502, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Bonescythe Pauldrons
-			{ itemID = 40495, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Bonescythe Breastplate
-			{ itemID = 40496, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Bonescythe Gauntlets
-			{ itemID = 40500, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Bonescythe Legplates
+			{ icon = "Ability_BackStab", name = "=q6=".."Bonescythe Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39561, "=ds=" .. "Kel'Thuzad" }, --Heroes' Bonescythe Helmet
+			{ itemID = 39565, "=ds=" .. "Loatheb" }, --Heroes' Bonescythe Pauldrons
+			{ itemID = 39558, "=ds=" .. "The Four Horsemen" }, --Heroes' Bonescythe Breastplate
+			{ itemID = 39560, "=ds=" .. "Sartharion" }, --Heroes' Bonescythe Gauntlets
+			{ itemID = 39564, "=ds=" .. "Thaddius" }, --Heroes' Bonescythe Legplates
+			{ icon = "Ability_BackStab", name = "=q6=".."Bonescythe Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40499, "=ds=" .. "Kel'Thuzad" }, --Valorous Bonescythe Helmet
+			{ itemID = 40502, "=ds=" .. "Loatheb" }, --Valorous Bonescythe Pauldrons
+			{ itemID = 40495, "=ds=" .. "The Four Horsemen" }, --Valorous Bonescythe Breastplate
+			{ itemID = 40496, "=ds=" .. "Sartharion" }, --Valorous Bonescythe Gauntlets
+			{ itemID = 40500, "=ds=" .. "Thaddius" }, --Valorous Bonescythe Legplates
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Restoration"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Restoration",
 		{
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Earthshatter Regalia"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39583, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Earthshatter Headpiece
-			{ itemID = 39590, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Earthshatter Spaulders
-			{ itemID = 39588, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Earthshatter Tunic
-			{ itemID = 39591, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Earthshatter Handguards
-			{ itemID = 39589, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Earthshatter Legguards
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Earthshatter Regalia"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40510, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Earthshatter Headpiece
-			{ itemID = 40513, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Earthshatter Spaulders
-			{ itemID = 40508, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Earthshatter Tunic
-			{ itemID = 40509, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Earthshatter Handguards
-			{ itemID = 40512, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Earthshatter Legguards
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Earthshatter Regalia", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39583, "=ds=" .. "Kel'Thuzad" }, --Heroes' Earthshatter Headpiece
+			{ itemID = 39590, "=ds=" .. "Loatheb" }, --Heroes' Earthshatter Spaulders
+			{ itemID = 39588, "=ds=" .. "The Four Horsemen" }, --Heroes' Earthshatter Tunic
+			{ itemID = 39591, "=ds=" .. "Sartharion" }, --Heroes' Earthshatter Handguards
+			{ itemID = 39589, "=ds=" .. "Thaddius" }, --Heroes' Earthshatter Legguards
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Earthshatter Regalia", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40510, "=ds=" .. "Kel'Thuzad" }, --Valorous Earthshatter Headpiece
+			{ itemID = 40513, "=ds=" .. "Loatheb" }, --Valorous Earthshatter Spaulders
+			{ itemID = 40508, "=ds=" .. "The Four Horsemen" }, --Valorous Earthshatter Tunic
+			{ itemID = 40509, "=ds=" .. "Sartharion" }, --Valorous Earthshatter Handguards
+			{ itemID = 40512, "=ds=" .. "Thaddius" }, --Valorous Earthshatter Legguards
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Enhancement"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Enhancement",
 		{
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Earthshatter Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39602, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Earthshatter Faceguard
-			{ itemID = 39604, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Earthshatter Shoulderguards
-			{ itemID = 39597, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Earthshatter Chestguard
-			{ itemID = 39601, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Earthshatter Grips
-			{ itemID = 39603, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Earthshatter War-Kilt
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Earthshatter Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40521, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Earthshatter Faceguard
-			{ itemID = 40524, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Earthshatter Shoulderguards
-			{ itemID = 40523, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Earthshatter Chestguard
-			{ itemID = 40520, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Earthshatter Grips
-			{ itemID = 40522, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Earthshatter War-Kilt
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Earthshatter Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39602, "=ds=" .. "Kel'Thuzad" }, --Heroes' Earthshatter Faceguard
+			{ itemID = 39604, "=ds=" .. "Loatheb" }, --Heroes' Earthshatter Shoulderguards
+			{ itemID = 39597, "=ds=" .. "The Four Horsemen" }, --Heroes' Earthshatter Chestguard
+			{ itemID = 39601, "=ds=" .. "Sartharion" }, --Heroes' Earthshatter Grips
+			{ itemID = 39603, "=ds=" .. "Thaddius" }, --Heroes' Earthshatter War-Kilt
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Earthshatter Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40521, "=ds=" .. "Kel'Thuzad" }, --Valorous Earthshatter Faceguard
+			{ itemID = 40524, "=ds=" .. "Loatheb" }, --Valorous Earthshatter Shoulderguards
+			{ itemID = 40523, "=ds=" .. "The Four Horsemen" }, --Valorous Earthshatter Chestguard
+			{ itemID = 40520, "=ds=" .. "Sartharion" }, --Valorous Earthshatter Grips
+			{ itemID = 40522, "=ds=" .. "Thaddius" }, --Valorous Earthshatter War-Kilt
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Elemental"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Elemental",
 		{
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Earthshatter Garb"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39594, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Earthshatter Helm
-			{ itemID = 39596, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Earthshatter Shoulderpads
-			{ itemID = 39592, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Earthshatter Hauberk
-			{ itemID = 39593, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Earthshatter Gloves
-			{ itemID = 39595, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Earthshatter Kilt
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Earthshatter Garb"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40516, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Earthshatter Helm
-			{ itemID = 40518, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Earthshatter Shoulderpads
-			{ itemID = 40514, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Earthshatter Hauberk
-			{ itemID = 40515, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Earthshatter Gloves
-			{ itemID = 40517, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Earthshatter Kilt
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Earthshatter Garb", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39594, "=ds=" .. "Kel'Thuzad" }, --Heroes' Earthshatter Helm
+			{ itemID = 39596, "=ds=" .. "Loatheb" }, --Heroes' Earthshatter Shoulderpads
+			{ itemID = 39592, "=ds=" .. "The Four Horsemen" }, --Heroes' Earthshatter Hauberk
+			{ itemID = 39593, "=ds=" .. "Sartharion" }, --Heroes' Earthshatter Gloves
+			{ itemID = 39595, "=ds=" .. "Thaddius" }, --Heroes' Earthshatter Kilt
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Earthshatter Garb", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40516, "=ds=" .. "Kel'Thuzad" }, --Valorous Earthshatter Helm
+			{ itemID = 40518, "=ds=" .. "Loatheb" }, --Valorous Earthshatter Shoulderpads
+			{ itemID = 40514, "=ds=" .. "The Four Horsemen" }, --Valorous Earthshatter Hauberk
+			{ itemID = 40515, "=ds=" .. "Sartharion" }, --Valorous Earthshatter Gloves
+			{ itemID = 40517, "=ds=" .. "Thaddius" }, --Valorous Earthshatter Kilt
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Plagueheart Garb"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39496, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Plagueheart Circlet
-			{ itemID = 39499, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Plagueheart Shoulderpads
-			{ itemID = 39497, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Plagueheart Robe
-			{ itemID = 39500, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Plagueheart Gloves
-			{ itemID = 39498, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Plagueheart Leggings
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Plagueheart Garb"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40421, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Plagueheart Circlet
-			{ itemID = 40424, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Plagueheart Shoulderpads
-			{ itemID = 40423, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Plagueheart Robe
-			{ itemID = 40420, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Plagueheart Gloves
-			{ itemID = 40422, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Plagueheart Leggings
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Plagueheart Garb", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39496, "=ds=" .. "Kel'Thuzad" }, --Heroes' Plagueheart Circlet
+			{ itemID = 39499, "=ds=" .. "Loatheb" }, --Heroes' Plagueheart Shoulderpads
+			{ itemID = 39497, "=ds=" .. "The Four Horsemen" }, --Heroes' Plagueheart Robe
+			{ itemID = 39500, "=ds=" .. "Sartharion" }, --Heroes' Plagueheart Gloves
+			{ itemID = 39498, "=ds=" .. "Thaddius" }, --Heroes' Plagueheart Leggings
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Plagueheart Garb", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40421, "=ds=" .. "Kel'Thuzad" }, --Valorous Plagueheart Circlet
+			{ itemID = 40424, "=ds=" .. "Loatheb" }, --Valorous Plagueheart Shoulderpads
+			{ itemID = 40423, "=ds=" .. "The Four Horsemen" }, --Valorous Plagueheart Robe
+			{ itemID = 40420, "=ds=" .. "Sartharion" }, --Valorous Plagueheart Gloves
+			{ itemID = 40422, "=ds=" .. "Thaddius" }, --Valorous Plagueheart Leggings
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. AL["Fury"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. "Fury",
 		{
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Dreadnaught Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39605, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Dreadnaught Helmet
-			{ itemID = 39608, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Dreadnaught Shoulderplates
-			{ itemID = 39606, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Dreadnaught Battleplate
-			{ itemID = 39609, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Dreadnaught Gauntlets
-			{ itemID = 39607, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Dreadnaught Legplates
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Dreadnaught Battlegear"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40528, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Dreadnaught Helmet
-			{ itemID = 40530, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Dreadnaught Shoulderplates
-			{ itemID = 40525, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Dreadnaught Battleplate
-			{ itemID = 40527, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Dreadnaught Gauntlets
-			{ itemID = 40529, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Dreadnaught Legplates
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Dreadnaught Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39605, "=ds=" .. "Kel'Thuzad" }, --Heroes' Dreadnaught Helmet
+			{ itemID = 39608, "=ds=" .. "Loatheb" }, --Heroes' Dreadnaught Shoulderplates
+			{ itemID = 39606, "=ds=" .. "The Four Horsemen" }, --Heroes' Dreadnaught Battleplate
+			{ itemID = 39609, "=ds=" .. "Sartharion" }, --Heroes' Dreadnaught Gauntlets
+			{ itemID = 39607, "=ds=" .. "Thaddius" }, --Heroes' Dreadnaught Legplates
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Dreadnaught Battlegear", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40528, "=ds=" .. "Kel'Thuzad" }, --Valorous Dreadnaught Helmet
+			{ itemID = 40530, "=ds=" .. "Loatheb" }, --Valorous Dreadnaught Shoulderplates
+			{ itemID = 40525, "=ds=" .. "The Four Horsemen" }, --Valorous Dreadnaught Battleplate
+			{ itemID = 40527, "=ds=" .. "Sartharion" }, --Valorous Dreadnaught Gauntlets
+			{ itemID = 40529, "=ds=" .. "Thaddius" }, --Valorous Dreadnaught Legplates
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. AL["Protection"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. "Protection",
 		{
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Dreadnaught Plate"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 39610, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Heroes' Dreadnaught Greathelm
-			{ itemID = 39613, "=ds=" .. BabbleBoss["Loatheb"] }, --Heroes' Dreadnaught Pauldrons
-			{ itemID = 39611, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Heroes' Dreadnaught Breastplate
-			{ itemID = 39622, "=ds=" .. BabbleBoss["Sartharion"] }, --Heroes' Dreadnaught Handguards
-			{ itemID = 39612, "=ds=" .. BabbleBoss["Thaddius"] }, --Heroes' Dreadnaught Legguards
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Dreadnaught Plate"], desc = "=q5=" .. AL["Tier 7"] .. " (" .. AL["25 Man"] .. ")" },
-			{ itemID = 40546, "=ds=" .. BabbleBoss["Kel'Thuzad"] }, --Valorous Dreadnaught Greathelm
-			{ itemID = 40548, "=ds=" .. BabbleBoss["Loatheb"] }, --Valorous Dreadnaught Pauldrons
-			{ itemID = 40544, "=ds=" .. BabbleBoss["The Four Horsemen"] }, --Valorous Dreadnaught Breastplate
-			{ itemID = 40545, "=ds=" .. BabbleBoss["Sartharion"] }, --Valorous Dreadnaught Handguards
-			{ itemID = 40547, "=ds=" .. BabbleBoss["Thaddius"] }, --Valorous Dreadnaught Legguards
+			{ icon = "INV_Shield_05", name = "=q6=".."Dreadnaught Plate", desc = "=q5=" .. "Tier 7" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 39610, "=ds=" .. "Kel'Thuzad" }, --Heroes' Dreadnaught Greathelm
+			{ itemID = 39613, "=ds=" .. "Loatheb" }, --Heroes' Dreadnaught Pauldrons
+			{ itemID = 39611, "=ds=" .. "The Four Horsemen" }, --Heroes' Dreadnaught Breastplate
+			{ itemID = 39622, "=ds=" .. "Sartharion" }, --Heroes' Dreadnaught Handguards
+			{ itemID = 39612, "=ds=" .. "Thaddius" }, --Heroes' Dreadnaught Legguards
+			{ icon = "INV_Shield_05", name = "=q6=".."Dreadnaught Plate", desc = "=q5=" .. "Tier 7" .. " (" .. "25 Man" .. ")" },
+			{ itemID = 40546, "=ds=" .. "Kel'Thuzad" }, --Valorous Dreadnaught Greathelm
+			{ itemID = 40548, "=ds=" .. "Loatheb" }, --Valorous Dreadnaught Pauldrons
+			{ itemID = 40544, "=ds=" .. "The Four Horsemen" }, --Valorous Dreadnaught Breastplate
+			{ itemID = 40545, "=ds=" .. "Sartharion" }, --Valorous Dreadnaught Handguards
+			{ itemID = 40547, "=ds=" .. "Thaddius" }, --Valorous Dreadnaught Legguards
 		},
 	},
 }
@@ -9066,323 +9066,323 @@ AtlasLoot_Data["T8"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " DPS",
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Darkruned Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45342, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Darkruned Helmet
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Darkruned Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45342, "=ds=" .. "Mimiron" }, --Valorous Darkruned Helmet
 			{ itemID = 45344, "=ds=" .. BabbleBoss.Thorim }, --Valorous Darkruned Shoulderplates
-			{ itemID = 45340, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Darkruned Battleplate
+			{ itemID = 45340, "=ds=" .. "Yogg-Saron" }, --Valorous Darkruned Battleplate
 			{ itemID = 45341, "=ds=" .. BabbleBoss.Freya }, --Valorous Darkruned Gauntlets
 			{ itemID = 45343, "=ds=" .. BabbleBoss.Hodir }, --Valorous Darkruned Legplates
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Darkruned Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Darkruned Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46115, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Darkruned Helmet
-			{ itemID = 46117, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Darkruned Shoulderplates
+			{ itemID = 46117, "=ds=" .. "Yogg-Saron" }, --Conqueror's Darkruned Shoulderplates
 			{ itemID = 46111, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Darkruned Battleplate
-			{ itemID = 46113, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Darkruned Gauntlets
+			{ itemID = 46113, "=ds=" .. "Mimiron" }, --Conqueror's Darkruned Gauntlets
 			{ itemID = 46116, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Darkruned Legplates
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " TANK",
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Darkruned Plate"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45336, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Darkruned Faceguard
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Darkruned Plate", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45336, "=ds=" .. "Mimiron" }, --Valorous Darkruned Faceguard
 			{ itemID = 45339, "=ds=" .. BabbleBoss.Thorim }, --Valorous Darkruned Pauldrons
-			{ itemID = 45335, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Darkruned Chestguard
+			{ itemID = 45335, "=ds=" .. "Yogg-Saron" }, --Valorous Darkruned Chestguard
 			{ itemID = 45337, "=ds=" .. BabbleBoss.Freya }, --Valorous Darkruned Handguards
 			{ itemID = 45338, "=ds=" .. BabbleBoss.Hodir }, --Valorous Darkruned Legguards
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Darkruned Plate"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Darkruned Plate", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46120, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Darkruned Faceguard
-			{ itemID = 46122, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Darkruned Pauldrons
+			{ itemID = 46122, "=ds=" .. "Yogg-Saron" }, --Conqueror's Darkruned Pauldrons
 			{ itemID = 46118, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Darkruned Chestguard
-			{ itemID = 46119, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Darkruned Handguards
+			{ itemID = 46119, "=ds=" .. "Mimiron" }, --Conqueror's Darkruned Handguards
 			{ itemID = 46121, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Darkruned Legguards
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Feral"],
+		Name = "Druid" .. " - " .. "Feral",
 		{
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Nightsong Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45356, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Nightsong Headguard
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Nightsong Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45356, "=ds=" .. "Mimiron" }, --Valorous Nightsong Headguard
 			{ itemID = 45359, "=ds=" .. BabbleBoss.Thorim }, --Valorous Nightsong Shoulderpads
-			{ itemID = 45358, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Nightsong Raiments
+			{ itemID = 45358, "=ds=" .. "Yogg-Saron" }, --Valorous Nightsong Raiments
 			{ itemID = 45355, "=ds=" .. BabbleBoss.Freya }, --Valorous Nightsong Handgrips
 			{ itemID = 45357, "=ds=" .. BabbleBoss.Hodir }, --Valorous Nightsong Legguards
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Nightsong Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Nightsong Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46161, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Nightsong Headguard
-			{ itemID = 46157, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Nightsong Shoulderpads
+			{ itemID = 46157, "=ds=" .. "Yogg-Saron" }, --Conqueror's Nightsong Shoulderpads
 			{ itemID = 46159, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Nightsong Raiments
-			{ itemID = 46158, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Nightsong Handgrips
+			{ itemID = 46158, "=ds=" .. "Mimiron" }, --Conqueror's Nightsong Handgrips
 			{ itemID = 46160, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Nightsong Legguards
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Restoration"],
+		Name = "Druid" .. " - " .. "Restoration",
 		{
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Nightsong Regalia"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45346, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Nightsong Headpiece
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Nightsong Regalia", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45346, "=ds=" .. "Mimiron" }, --Valorous Nightsong Headpiece
 			{ itemID = 45349, "=ds=" .. BabbleBoss.Thorim }, --Valorous Nightsong Spaulders
-			{ itemID = 45348, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Nightsong Robe
+			{ itemID = 45348, "=ds=" .. "Yogg-Saron" }, --Valorous Nightsong Robe
 			{ itemID = 45345, "=ds=" .. BabbleBoss.Freya }, --Valorous Nightsong Handguards
 			{ itemID = 45347, "=ds=" .. BabbleBoss.Hodir }, --Valorous Nightsong Leggings
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Nightsong Regalia"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Nightsong Regalia", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46184, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Nightsong Headpiece
-			{ itemID = 46187, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Nightsong Spaulders
+			{ itemID = 46187, "=ds=" .. "Yogg-Saron" }, --Conqueror's Nightsong Spaulders
 			{ itemID = 46186, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Nightsong Robe
-			{ itemID = 46183, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Nightsong Handguards
+			{ itemID = 46183, "=ds=" .. "Mimiron" }, --Conqueror's Nightsong Handguards
 			{ itemID = 46185, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Nightsong Leggings
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Balance"],
+		Name = "Druid" .. " - " .. "Balance",
 		{
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Nightsong Garb"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 46313, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Nightsong Cover
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Nightsong Garb", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 46313, "=ds=" .. "Mimiron" }, --Valorous Nightsong Cover
 			{ itemID = 45352, "=ds=" .. BabbleBoss.Thorim }, --Valorous Nightsong Mantle
-			{ itemID = 45354, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Nightsong Vestments
+			{ itemID = 45354, "=ds=" .. "Yogg-Saron" }, --Valorous Nightsong Vestments
 			{ itemID = 45351, "=ds=" .. BabbleBoss.Freya }, --Valorous Nightsong Gloves
 			{ itemID = 45353, "=ds=" .. BabbleBoss.Hodir }, --Valorous Nightsong Trousers
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Nightsong Garb"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Nightsong Garb", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46191, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Nightsong Cover
-			{ itemID = 46196, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Nightsong Mantle
+			{ itemID = 46196, "=ds=" .. "Yogg-Saron" }, --Conqueror's Nightsong Mantle
 			{ itemID = 46194, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Nightsong Vestments
-			{ itemID = 46189, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Nightsong Gloves
+			{ itemID = 46189, "=ds=" .. "Mimiron" }, --Conqueror's Nightsong Gloves
 			{ itemID = 46192, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Nightsong Trousers
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Scourgestalker Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45361, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Scourgestalker Headpiece
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Scourgestalker Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45361, "=ds=" .. "Mimiron" }, --Valorous Scourgestalker Headpiece
 			{ itemID = 45363, "=ds=" .. BabbleBoss.Thorim }, --Valorous Scourgestalker Spaulders
-			{ itemID = 45364, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Scourgestalker Tunic
+			{ itemID = 45364, "=ds=" .. "Yogg-Saron" }, --Valorous Scourgestalker Tunic
 			{ itemID = 45360, "=ds=" .. BabbleBoss.Freya }, --Valorous Scourgestalker Handguards
 			{ itemID = 45362, "=ds=" .. BabbleBoss.Hodir }, --Valorous Scourgestalker Legguards
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Scourgestalker Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Scourgestalker Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46143, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Scourgestalker Headpiece
-			{ itemID = 46145, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Scourgestalker Spaulders
+			{ itemID = 46145, "=ds=" .. "Yogg-Saron" }, --Conqueror's Scourgestalker Spaulders
 			{ itemID = 46141, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Scourgestalker Tunic
-			{ itemID = 46142, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Scourgestalker Handguards
+			{ itemID = 46142, "=ds=" .. "Mimiron" }, --Conqueror's Scourgestalker Handguards
 			{ itemID = 46144, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Scourgestalker Legguards
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Kirin Tor Garb"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45365, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Kirin Tor Hood
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Kirin Tor Garb", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45365, "=ds=" .. "Mimiron" }, --Valorous Kirin Tor Hood
 			{ itemID = 45369, "=ds=" .. BabbleBoss.Thorim }, --Valorous Kirin Tor Shoulderpads
-			{ itemID = 45368, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Kirin Tor Tunic
+			{ itemID = 45368, "=ds=" .. "Yogg-Saron" }, --Valorous Kirin Tor Tunic
 			{ itemID = 46131, "=ds=" .. BabbleBoss.Freya }, --Valorous Kirin Tor Gauntlets
 			{ itemID = 45367, "=ds=" .. BabbleBoss.Hodir }, --Valorous Kirin Tor Leggings
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Kirin Tor Garb"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Kirin Tor Garb", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46129, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Kirin Tor Hood
-			{ itemID = 46134, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Kirin Tor Shoulderpads
+			{ itemID = 46134, "=ds=" .. "Yogg-Saron" }, --Conqueror's Kirin Tor Shoulderpads
 			{ itemID = 46130, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Kirin Tor Tunic
-			{ itemID = 46132, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Kirin Tor Gauntlets
+			{ itemID = 46132, "=ds=" .. "Mimiron" }, --Conqueror's Kirin Tor Gauntlets
 			{ itemID = 46133, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Kirin Tor Leggings
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Holy"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Holy",
 		{
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Aegis Regalia"], desc = "=q5=(" .. AL["10 Man"] .. ")" },
-			{ itemID = 45372, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Aegis Headpiece
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Aegis Regalia", desc = "=q5=(" .. "10 Man" .. ")" },
+			{ itemID = 45372, "=ds=" .. "Mimiron" }, --Valorous Aegis Headpiece
 			{ itemID = 45373, "=ds=" .. BabbleBoss.Thorim }, --Valorous Aegis Spaulders
-			{ itemID = 45374, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Aegis Tunic
+			{ itemID = 45374, "=ds=" .. "Yogg-Saron" }, --Valorous Aegis Tunic
 			{ itemID = 45370, "=ds=" .. BabbleBoss.Freya }, --Valorous Aegis Gloves
 			{ itemID = 45371, "=ds=" .. BabbleBoss.Hodir }, --Valorous Aegis Greaves
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Aegis Regalia"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Aegis Regalia", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46180, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Aegis Headpiece
-			{ itemID = 46182, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Aegis Spaulders
+			{ itemID = 46182, "=ds=" .. "Yogg-Saron" }, --Conqueror's Aegis Spaulders
 			{ itemID = 46178, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Aegis Tunic
-			{ itemID = 46179, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Aegis Gloves
+			{ itemID = 46179, "=ds=" .. "Mimiron" }, --Conqueror's Aegis Gloves
 			{ itemID = 46181, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Aegis Greaves
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Retribution"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Retribution",
 		{
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Aegis Battlegear"], desc = "=q5=(" .. AL["10 Man"] .. ")" },
-			{ itemID = 45377, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Aegis Helm
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Aegis Battlegear", desc = "=q5=(" .. "10 Man" .. ")" },
+			{ itemID = 45377, "=ds=" .. "Mimiron" }, --Valorous Aegis Helm
 			{ itemID = 45380, "=ds=" .. BabbleBoss.Thorim }, --Valorous Aegis Shoulderplates
-			{ itemID = 45375, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Aegis Battleplate
+			{ itemID = 45375, "=ds=" .. "Yogg-Saron" }, --Valorous Aegis Battleplate
 			{ itemID = 45376, "=ds=" .. BabbleBoss.Freya }, --Valorous Aegis Gauntlets
 			{ itemID = 45379, "=ds=" .. BabbleBoss.Hodir }, --Valorous Aegis Legplates
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Aegis Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Aegis Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46156, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Aegis Helm
-			{ itemID = 46152, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Aegis Shoulderplates
+			{ itemID = 46152, "=ds=" .. "Yogg-Saron" }, --Conqueror's Aegis Shoulderplates
 			{ itemID = 46154, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Aegis Battleplate
-			{ itemID = 46155, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Aegis Gauntlets
+			{ itemID = 46155, "=ds=" .. "Mimiron" }, --Conqueror's Aegis Gauntlets
 			{ itemID = 46153, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Aegis Legplates
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Protection"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Protection",
 		{
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Aegis Plate"], desc = "=q5=(" .. AL["10 Man"] .. ")" },
-			{ itemID = 45382, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Aegis Faceguard
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Aegis Plate", desc = "=q5=(" .. "10 Man" .. ")" },
+			{ itemID = 45382, "=ds=" .. "Mimiron" }, --Valorous Aegis Faceguard
 			{ itemID = 45385, "=ds=" .. BabbleBoss.Thorim }, --Valorous Aegis Shouldergards
-			{ itemID = 45381, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Aegis Breastplate
+			{ itemID = 45381, "=ds=" .. "Yogg-Saron" }, --Valorous Aegis Breastplate
 			{ itemID = 45383, "=ds=" .. BabbleBoss.Freya }, --Valorous Aegis Handguards
 			{ itemID = 45384, "=ds=" .. BabbleBoss.Hodir }, --Valorous Aegis Legguards
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Aegis Plate"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Aegis Plate", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46175, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Aegis Faceguard
-			{ itemID = 46177, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Aegis Shouldergards
+			{ itemID = 46177, "=ds=" .. "Yogg-Saron" }, --Conqueror's Aegis Shouldergards
 			{ itemID = 46173, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Aegis Breastplate
-			{ itemID = 46174, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Aegis Handguards
+			{ itemID = 46174, "=ds=" .. "Mimiron" }, --Conqueror's Aegis Handguards
 			{ itemID = 46176, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Aegis Legguards
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. AL["Shadow"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. "Shadow",
 		{
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Sanctification Garb"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45391, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Circlet of Sanctification
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Sanctification Garb", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45391, "=ds=" .. "Mimiron" }, --Valorous Circlet of Sanctification
 			{ itemID = 45393, "=ds=" .. BabbleBoss.Thorim }, --Valorous Mantle of Sanctification
-			{ itemID = 45395, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Raiments of Sanctification
+			{ itemID = 45395, "=ds=" .. "Yogg-Saron" }, --Valorous Raiments of Sanctification
 			{ itemID = 45392, "=ds=" .. BabbleBoss.Freya }, --Valorous Handwraps of Sanctification
 			{ itemID = 45394, "=ds=" .. BabbleBoss.Hodir }, --Valorous Pants of Sanctification
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Sanctification Garb"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Sanctification Garb", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46172, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Circlet of Sanctification
-			{ itemID = 46165, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Mantle of Sanctification
+			{ itemID = 46165, "=ds=" .. "Yogg-Saron" }, --Conqueror's Mantle of Sanctification
 			{ itemID = 46168, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Raiments of Sanctification
-			{ itemID = 46163, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Handwraps of Sanctification
+			{ itemID = 46163, "=ds=" .. "Mimiron" }, --Conqueror's Handwraps of Sanctification
 			{ itemID = 46170, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Pants of Sanctification
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. AL["Holy"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. "Holy",
 		{
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Sanctification Regalia"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45386, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Cowl of Sanctification
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Sanctification Regalia", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45386, "=ds=" .. "Mimiron" }, --Valorous Cowl of Sanctification
 			{ itemID = 45390, "=ds=" .. BabbleBoss.Thorim }, --Valorous Shoulderpads of Sanctification
-			{ itemID = 45389, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Robe of Sanctification
+			{ itemID = 45389, "=ds=" .. "Yogg-Saron" }, --Valorous Robe of Sanctification
 			{ itemID = 45387, "=ds=" .. BabbleBoss.Freya }, --Valorous Gloves of Sanctification
 			{ itemID = 45388, "=ds=" .. BabbleBoss.Hodir }, --Valorous Leggings of Sanctification
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Sanctification Regalia"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Sanctification Regalia", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46197, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Cowl of Sanctification
-			{ itemID = 46190, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Shoulderpads of Sanctification
+			{ itemID = 46190, "=ds=" .. "Yogg-Saron" }, --Conqueror's Shoulderpads of Sanctification
 			{ itemID = 46193, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Robe of Sanctification
-			{ itemID = 46188, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Gloves of Sanctification
+			{ itemID = 46188, "=ds=" .. "Mimiron" }, --Conqueror's Gloves of Sanctification
 			{ itemID = 46195, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Leggings of Sanctification
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Terrorblade Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45398, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Terrorblade Helmet
+			{ icon = "Ability_BackStab", name = "=q6=".."Terrorblade Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45398, "=ds=" .. "Mimiron" }, --Valorous Terrorblade Helmet
 			{ itemID = 45400, "=ds=" .. BabbleBoss.Thorim }, --Valorous Terrorblade Pauldrons
-			{ itemID = 45396, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Terrorblade Breastplate
+			{ itemID = 45396, "=ds=" .. "Yogg-Saron" }, --Valorous Terrorblade Breastplate
 			{ itemID = 45397, "=ds=" .. BabbleBoss.Freya }, --Valorous Terrorblade Gauntlets
 			{ itemID = 45399, "=ds=" .. BabbleBoss.Hodir }, --Valorous Terrorblade Legplates
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Terrorblade Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Ability_BackStab", name = "=q6=".."Terrorblade Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46125, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Terrorblade Helmet
-			{ itemID = 46127, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Terrorblade Pauldrons
+			{ itemID = 46127, "=ds=" .. "Yogg-Saron" }, --Conqueror's Terrorblade Pauldrons
 			{ itemID = 46123, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Terrorblade Breastplate
-			{ itemID = 46124, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Terrorblade Gauntlets
+			{ itemID = 46124, "=ds=" .. "Mimiron" }, --Conqueror's Terrorblade Gauntlets
 			{ itemID = 46126, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Terrorblade Legplates
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Restoration"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Restoration",
 		{
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Worldbreaker Regalia"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45402, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Worldbreaker Headpiece
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Worldbreaker Regalia", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45402, "=ds=" .. "Mimiron" }, --Valorous Worldbreaker Headpiece
 			{ itemID = 45404, "=ds=" .. BabbleBoss.Thorim }, --Valorous Worldbreaker Spaulders
-			{ itemID = 45405, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Worldbreaker Tunic
+			{ itemID = 45405, "=ds=" .. "Yogg-Saron" }, --Valorous Worldbreaker Tunic
 			{ itemID = 45401, "=ds=" .. BabbleBoss.Freya }, --Valorous Worldbreaker Handguards
 			{ itemID = 45403, "=ds=" .. BabbleBoss.Hodir }, --Valorous Worldbreaker Legguards
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Worldbreaker Regalia"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Worldbreaker Regalia", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46201, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Worldbreaker Headpiece
-			{ itemID = 46204, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Worldbreaker Spaulders
+			{ itemID = 46204, "=ds=" .. "Yogg-Saron" }, --Conqueror's Worldbreaker Spaulders
 			{ itemID = 46198, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Worldbreaker Tunic
-			{ itemID = 46199, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Worldbreaker Handguards
+			{ itemID = 46199, "=ds=" .. "Mimiron" }, --Conqueror's Worldbreaker Handguards
 			{ itemID = 46202, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Worldbreaker Legguards
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Enhancement"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Enhancement",
 		{
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Worldbreaker Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45412, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Worldbreaker Faceguard
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Worldbreaker Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45412, "=ds=" .. "Mimiron" }, --Valorous Worldbreaker Faceguard
 			{ itemID = 45415, "=ds=" .. BabbleBoss.Thorim }, --Valorous Worldbreaker Shoulderguards
-			{ itemID = 45413, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Worldbreaker Chestguard
+			{ itemID = 45413, "=ds=" .. "Yogg-Saron" }, --Valorous Worldbreaker Chestguard
 			{ itemID = 45414, "=ds=" .. BabbleBoss.Freya }, --Valorous Worldbreaker Grips
 			{ itemID = 45416, "=ds=" .. BabbleBoss.Hodir }, --Valorous Worldbreaker War-Kilt
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Worldbreaker Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Worldbreaker Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46212, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Worldbreaker Faceguard
-			{ itemID = 46203, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Worldbreaker Shoulderguards
+			{ itemID = 46203, "=ds=" .. "Yogg-Saron" }, --Conqueror's Worldbreaker Shoulderguards
 			{ itemID = 46205, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Worldbreaker Chestguard
-			{ itemID = 46200, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Worldbreaker Grips
+			{ itemID = 46200, "=ds=" .. "Mimiron" }, --Conqueror's Worldbreaker Grips
 			{ itemID = 46208, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Worldbreaker War-Kilt
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Elemental"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Elemental",
 		{
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Worldbreaker Garb"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45408, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Worldbreaker Helm
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Worldbreaker Garb", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45408, "=ds=" .. "Mimiron" }, --Valorous Worldbreaker Helm
 			{ itemID = 45410, "=ds=" .. BabbleBoss.Thorim }, --Valorous Worldbreaker Shoulderpads
-			{ itemID = 45411, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Worldbreaker Hauberk
+			{ itemID = 45411, "=ds=" .. "Yogg-Saron" }, --Valorous Worldbreaker Hauberk
 			{ itemID = 45406, "=ds=" .. BabbleBoss.Freya }, --Valorous Worldbreaker Gloves
 			{ itemID = 45409, "=ds=" .. BabbleBoss.Hodir }, --Valorous Worldbreaker Kilt
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Worldbreaker Garb"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Worldbreaker Garb", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46209, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Worldbreaker Helm
-			{ itemID = 46211, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Worldbreaker Shoulderpads
+			{ itemID = 46211, "=ds=" .. "Yogg-Saron" }, --Conqueror's Worldbreaker Shoulderpads
 			{ itemID = 46206, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Worldbreaker Hauberk
-			{ itemID = 46207, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Worldbreaker Gloves
+			{ itemID = 46207, "=ds=" .. "Mimiron" }, --Conqueror's Worldbreaker Gloves
 			{ itemID = 46210, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Worldbreaker Kilt
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Deathbringer Garb"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45417, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Deathbringer Hood
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Deathbringer Garb", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45417, "=ds=" .. "Mimiron" }, --Valorous Deathbringer Hood
 			{ itemID = 45422, "=ds=" .. BabbleBoss.Thorim }, --Valorous Deathbringer Shoulderpads
-			{ itemID = 45421, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Deathbringer Robe
+			{ itemID = 45421, "=ds=" .. "Yogg-Saron" }, --Valorous Deathbringer Robe
 			{ itemID = 45419, "=ds=" .. BabbleBoss.Freya }, --Valorous Deathbringer Gloves
 			{ itemID = 45420, "=ds=" .. BabbleBoss.Hodir }, --Valorous Deathbringer Leggings
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Deathbringer Garb"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Deathbringer Garb", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46140, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Deathbringer Hood
-			{ itemID = 46136, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Deathbringer Shoulderpads
+			{ itemID = 46136, "=ds=" .. "Yogg-Saron" }, --Conqueror's Deathbringer Shoulderpads
 			{ itemID = 46137, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Deathbringer Robe
-			{ itemID = 46135, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Deathbringer Gloves
+			{ itemID = 46135, "=ds=" .. "Mimiron" }, --Conqueror's Deathbringer Gloves
 			{ itemID = 46139, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Deathbringer Leggings
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. AL["Fury"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. "Fury",
 		{
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Siegebreaker Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45431, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Siegebreaker Helmet
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Siegebreaker Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45431, "=ds=" .. "Mimiron" }, --Valorous Siegebreaker Helmet
 			{ itemID = 45433, "=ds=" .. BabbleBoss.Thorim }, --Valorous Siegebreaker Shoulderplates
-			{ itemID = 45429, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Siegebreaker Battleplate
+			{ itemID = 45429, "=ds=" .. "Yogg-Saron" }, --Valorous Siegebreaker Battleplate
 			{ itemID = 45430, "=ds=" .. BabbleBoss.Freya }, --Valorous Siegebreaker Gauntlets
 			{ itemID = 45432, "=ds=" .. BabbleBoss.Hodir }, --Valorous Siegebreaker Legplates
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Siegebreaker Battlegear"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Siegebreaker Battlegear", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46151, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Siegebreaker Helmet
-			{ itemID = 46149, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Siegebreaker Shoulderplates
+			{ itemID = 46149, "=ds=" .. "Yogg-Saron" }, --Conqueror's Siegebreaker Shoulderplates
 			{ itemID = 46146, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Siegebreaker Battleplate
-			{ itemID = 46148, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Siegebreaker Gauntlets
+			{ itemID = 46148, "=ds=" .. "Mimiron" }, --Conqueror's Siegebreaker Gauntlets
 			{ itemID = 46150, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Siegebreaker Legplates
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. AL["Protection"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. "Protection",
 		{
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Siegebreaker Plate"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["10 Man"] .. ")" },
-			{ itemID = 45425, "=ds=" .. BabbleBoss["Mimiron"] }, --Valorous Siegebreaker Greathelm
+			{ icon = "INV_Shield_05", name = "=q6=".."Siegebreaker Plate", desc = "=q5=" .. "Tier 8" .. " (" .. "10 Man" .. ")" },
+			{ itemID = 45425, "=ds=" .. "Mimiron" }, --Valorous Siegebreaker Greathelm
 			{ itemID = 45428, "=ds=" .. BabbleBoss.Thorim }, --Valorous Siegebreaker Pauldrons
-			{ itemID = 45424, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Valorous Siegebreaker Breastplate
+			{ itemID = 45424, "=ds=" .. "Yogg-Saron" }, --Valorous Siegebreaker Breastplate
 			{ itemID = 45426, "=ds=" .. BabbleBoss.Freya }, --Valorous Siegebreaker Handguards
 			{ itemID = 45427, "=ds=" .. BabbleBoss.Hodir }, --Valorous Siegebreaker Legguards
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Siegebreaker Plate"], desc = "=q5=" .. AL["Tier 8"] .. " (" .. AL["25 Man"] .. ")" },
+			{ icon = "INV_Shield_05", name = "=q6=".."Siegebreaker Plate", desc = "=q5=" .. "Tier 8" .. " (" .. "25 Man" .. ")" },
 			{ itemID = 46166, "=ds=" .. BabbleBoss.Thorim }, --Conqueror's Siegebreaker Greathelm
-			{ itemID = 46167, "=ds=" .. BabbleBoss["Yogg-Saron"] }, --Conqueror's Siegebreaker Pauldrons
+			{ itemID = 46167, "=ds=" .. "Yogg-Saron" }, --Conqueror's Siegebreaker Pauldrons
 			{ itemID = 46162, "=ds=" .. BabbleBoss.Hodir }, --Conqueror's Siegebreaker Breastplate
-			{ itemID = 46164, "=ds=" .. BabbleBoss["Mimiron"] }, --Conqueror's Siegebreaker Handguards
+			{ itemID = 46164, "=ds=" .. "Mimiron" }, --Conqueror's Siegebreaker Handguards
 			{ itemID = 46169, "=ds=" .. BabbleBoss.Freya }, --Conqueror's Siegebreaker Legguards
 		},
 	},
@@ -9397,13 +9397,13 @@ AtlasLoot_Data["T9"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " DPS",
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Thassarian's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Thassarian's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48472, price = "50 #eoftriumph#" }, --Thassarian's Helmet of Conquest
 			{ itemID = 48478, price = "30 #eoftriumph#" }, --Thassarian's Shoulderplates of Conquest
 			{ itemID = 48474, price = "50 #eoftriumph#" }, --Thassarian's Battleplate of Conquest
 			{ itemID = 48480, price = "30 #eoftriumph#" }, --Thassarian's Gauntlets of Conquest
 			{ itemID = 48476, price = "50 #eoftriumph#" }, --Thassarian's Legplates of Conquest
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Thassarian's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Thassarian's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48483, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thassarian's Helmet of Triumph
 			{ itemID = 48485, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Thassarian's Shoulderplates of Triumph
 			{ itemID = 48481, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thassarian's Battleplate of Triumph
@@ -9411,7 +9411,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48484, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thassarian's Legplates of Triumph
 		},
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Thassarian's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Thassarian's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48488 }, --Thassarian's Helmet of Triumph
 			{ itemID = 48486 }, --Thassarian's Shoulderplates of Triumph
 			{ itemID = 48490 }, --Thassarian's Battleplate of Triumph
@@ -9422,13 +9422,13 @@ AtlasLoot_Data["T9"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " DPS",
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Koltira's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Koltira's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48503, price = "50 #eoftriumph#" }, --Koltira's Helmet of Conquest
 			{ itemID = 48505, price = "30 #eoftriumph#" }, --Koltira's Shoulderplates of Conquest
 			{ itemID = 48501, price = "50 #eoftriumph#" }, --Koltira's Battleplate of Conquest
 			{ itemID = 48502, price = "30 #eoftriumph#" }, --Koltira's Gauntlets of Conquest
 			{ itemID = 48504, price = "50 #eoftriumph#" }, --Koltira's Legplates of Conquest
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Koltira's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Koltira's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48498, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Koltira's Helmet of Triumph
 			{ itemID = 48496, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Koltira's Shoulderplates of Triumph
 			{ itemID = 48500, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Koltira's Battleplate of Triumph
@@ -9436,7 +9436,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48497, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Koltira's Legplates of Triumph
 		},
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Koltira's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Koltira's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48493 }, --Koltira's Helmet of Triumph
 			{ itemID = 48495 }, --Koltira's Shoulderplates of Triumph
 			{ itemID = 48491 }, --Koltira's Battleplate of Triumph
@@ -9447,13 +9447,13 @@ AtlasLoot_Data["T9"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " TANK",
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Thassarian's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Thassarian's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48529, price = "50 #eoftriumph#" }, --Thassarian's Faceguard of Conquest
 			{ itemID = 48535, price = "30 #eoftriumph#" }, --Thassarian's Pauldrons of Conquest
 			{ itemID = 48531, price = "50 #eoftriumph#" }, --Thassarian's Chestguard of Conquest
 			{ itemID = 48537, price = "30 #eoftriumph#" }, --Thassarian's Handguards of Conquest
 			{ itemID = 48533, price = "50 #eoftriumph#" }, --Thassarian's Legguards of Conquest
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Thassarian's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Thassarian's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48540, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thassarian's Faceguard of Triumph
 			{ itemID = 48542, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Thassarian's Pauldrons of Triumph
 			{ itemID = 48538, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thassarian's Chestguard of Triumph
@@ -9461,7 +9461,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48541, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thassarian's Legguards of Triumph
 		},
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Thassarian's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Thassarian's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48545 }, --Thassarian's Faceguard of Triumph
 			{ itemID = 48543 }, --Thassarian's Pauldrons of Triumph
 			{ itemID = 48547 }, --Thassarian's Chestguard of Triumph
@@ -9472,13 +9472,13 @@ AtlasLoot_Data["T9"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " TANK",
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Koltira's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Koltira's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48560, price = "50 #eoftriumph#" }, --Koltira's Faceguard of Conquest
 			{ itemID = 48562, price = "30 #eoftriumph#" }, --Koltira's Pauldrons of Conquest
 			{ itemID = 48558, price = "50 #eoftriumph#" }, --Koltira's Chestguard of Conquest
 			{ itemID = 48559, price = "30 #eoftriumph#" }, --Koltira's Handguards of Conquest
 			{ itemID = 48561, price = "50 #eoftriumph#" }, --Koltira's Legguards of Conquest
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Koltira's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Koltira's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48555, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Koltira's Faceguard of Triumph
 			{ itemID = 48553, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Koltira's Pauldrons of Triumph
 			{ itemID = 48557, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Koltira's Chestguard of Triumph
@@ -9486,7 +9486,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48554, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Koltira's Legguards of Triumph
 		},
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Koltira's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Koltira's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48550 }, --Koltira's Faceguard of Triumph
 			{ itemID = 48552 }, --Koltira's Pauldrons of Triumph
 			{ itemID = 48548 }, --Koltira's Chestguard of Triumph
@@ -9495,15 +9495,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Restoration"],
+		Name = "Druid" .. " - " .. "Restoration",
 		{
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Malfurion's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Malfurion's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48102, price = "50 #eoftriumph#" }, --Malfurion's Headpiece of Conquest
 			{ itemID = 48131, price = "30 #eoftriumph#" }, --Malfurion's Spaulders of Conquest
 			{ itemID = 48129, price = "50 #eoftriumph#" }, --Malfurion's Robe of Conquest
 			{ itemID = 48132, price = "30 #eoftriumph#" }, --Malfurion's Handguards of Conquest
 			{ itemID = 48130, price = "50 #eoftriumph#" }, --Malfurion's Leggings of Conquest
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Malfurion's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Malfurion's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48134, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Malfurion's Headpiece of Triumph
 			{ itemID = 48137, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Malfurion's Spaulders of Triumph
 			{ itemID = 48136, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Malfurion's Robe of Triumph
@@ -9511,7 +9511,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48135, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Malfurion's Leggings of Triumph
 		},
 		{
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Malfurion's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Malfurion's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48141 }, --Malfurion's Headpiece of Triumph
 			{ itemID = 48138 }, --Malfurion's Spaulders of Triumph
 			{ itemID = 48139 }, --Malfurion's Robe of Triumph
@@ -9520,15 +9520,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Restoration"],
+		Name = "Druid" .. " - " .. "Restoration",
 		{
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Runetotem's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Runetotem's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48154, price = "50 #eoftriumph#" }, --Runetotem's Headpiece of Conquest
 			{ itemID = 48157, price = "30 #eoftriumph#" }, --Runetotem's Spaulders of Conquest
 			{ itemID = 48156, price = "50 #eoftriumph#" }, --Runetotem's Robe of Conquest
 			{ itemID = 48153, price = "30 #eoftriumph#" }, --Runetotem's Handguards of Conquest
 			{ itemID = 48155, price = "50 #eoftriumph#" }, --Runetotem's Leggings of Conquest
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Runetotem's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Runetotem's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48151, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Runetotem's Headpiece of Triumph
 			{ itemID = 48148, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Runetotem's Spaulders of Triumph
 			{ itemID = 48149, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Runetotem's Robe of Triumph
@@ -9536,7 +9536,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48150, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Runetotem's Leggings of Triumph
 		},
 		{
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Runetotem's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Runetotem's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48144 }, --Runetotem's Headpiece of Triumph
 			{ itemID = 48147 }, --Runetotem's Spaulders of Triumph
 			{ itemID = 48146 }, --Runetotem's Robe of Triumph
@@ -9545,15 +9545,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Feral"],
+		Name = "Druid" .. " - " .. "Feral",
 		{
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Malfurion's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Malfurion's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48214, price = "50 #eoftriumph#" }, --Malfurion's Headguard of Conquest
 			{ itemID = 48217, price = "30 #eoftriumph#" }, --Malfurion's Shoulderpads of Conquest
 			{ itemID = 48216, price = "50 #eoftriumph#" }, --Malfurion's Raiments of Conquest
 			{ itemID = 48213, price = "30 #eoftriumph#" }, --Malfurion's Handgrips of Conquest
 			{ itemID = 48215, price = "50 #eoftriumph#" }, --Malfurion's Legguards of Conquest
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Malfurion's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Malfurion's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48211, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Malfurion's Headguard of Triumph
 			{ itemID = 48208, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Malfurion's Shoulderpads of Triumph
 			{ itemID = 48209, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Malfurion's Raiments of Triumph
@@ -9561,7 +9561,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48210, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Malfurion's Legguards of Triumph
 		},
 		{
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Malfurion's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Malfurion's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48204 }, --Malfurion's Headguard of Triumph
 			{ itemID = 48207 }, --Malfurion's Shoulderpads of Triumph
 			{ itemID = 48206 }, --Malfurion's Raiments of Triumph
@@ -9570,15 +9570,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Feral"],
+		Name = "Druid" .. " - " .. "Feral",
 		{
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Runetotem's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Runetotem's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48188, price = "50 #eoftriumph#" }, --Runetotem's Headguard of Conquest
 			{ itemID = 48191, price = "30 #eoftriumph#" }, --Runetotem's Shoulderpads of Conquest
 			{ itemID = 48189, price = "50 #eoftriumph#" }, --Runetotem's Raiments of Conquest
 			{ itemID = 48192, price = "30 #eoftriumph#" }, --Runetotem's Handgrips of Conquest
 			{ itemID = 48190, price = "50 #eoftriumph#" }, --Runetotem's Legguards of Conquest
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Runetotem's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Runetotem's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48194, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Runetotem's Headguard of Triumph
 			{ itemID = 48197, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Runetotem's Shoulderpads of Triumph
 			{ itemID = 48196, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Runetotem's Raiments of Triumph
@@ -9586,7 +9586,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48195, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Runetotem's Legguards of Triumph
 		},
 		{
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Runetotem's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Runetotem's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48201 }, --Runetotem's Headguard of Triumph
 			{ itemID = 48198 }, --Runetotem's Shoulderpads of Triumph
 			{ itemID = 48199 }, --Runetotem's Raiments of Triumph
@@ -9595,15 +9595,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Balance"],
+		Name = "Druid" .. " - " .. "Balance",
 		{
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Malfurion's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Malfurion's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48158, price = "50 #eoftriumph#" }, --Malfurion's Cover of Conquest
 			{ itemID = 48161, price = "30 #eoftriumph#" }, --Malfurion's Mantle of Conquest
 			{ itemID = 48159, price = "50 #eoftriumph#" }, --Malfurion's Vestments of Conquest
 			{ itemID = 48162, price = "30 #eoftriumph#" }, --Malfurion's Gloves of Conquest
 			{ itemID = 48160, price = "50 #eoftriumph#" }, --Malfurion's Trousers of Conquest
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Malfurion's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Malfurion's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48164, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Malfurion's Cover of Triumph
 			{ itemID = 48167, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Malfurion's Mantle of Triumph
 			{ itemID = 48166, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Malfurion's Vestments of Triumph
@@ -9611,7 +9611,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48165, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Malfurion's Trousers of Triumph
 		},
 		{
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Malfurion's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Malfurion's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48171 }, --Malfurion's Cover of Triumph
 			{ itemID = 48168 }, --Malfurion's Mantle of Triumph
 			{ itemID = 48169 }, --Malfurion's Vestments of Triumph
@@ -9620,15 +9620,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Balance"],
+		Name = "Druid" .. " - " .. "Balance",
 		{
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Runetotem's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Runetotem's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48184, price = "50 #eoftriumph#" }, --Runetotem's Cover of Conquest
 			{ itemID = 48187, price = "30 #eoftriumph#" }, --Runetotem's Mantle of Conquest
 			{ itemID = 48186, price = "50 #eoftriumph#" }, --Runetotem's Vestments of Conquest
 			{ itemID = 48183, price = "30 #eoftriumph#" }, --Runetotem's Gloves of Conquest
 			{ itemID = 48185, price = "50 #eoftriumph#" }, --Runetotem's Trousers of Conquest
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Runetotem's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Runetotem's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48181, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Runetotem's Cover of Triumph
 			{ itemID = 48178, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Runetotem's Mantle of Triumph
 			{ itemID = 48179, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Runetotem's Vestments of Triumph
@@ -9636,7 +9636,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48180, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Runetotem's Trousers of Triumph
 		},
 		{
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Runetotem's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Runetotem's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48174 }, --Runetotem's Cover of Triumph
 			{ itemID = 48177 }, --Runetotem's Mantle of Triumph
 			{ itemID = 48176 }, --Runetotem's Vestments of Triumph
@@ -9647,13 +9647,13 @@ AtlasLoot_Data["T9"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Windrunner's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Windrunner's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48250, price = "50 #eoftriumph#" }, --Windrunner's Headpiece of Conquest
 			{ itemID = 48253, price = "30 #eoftriumph#" }, --Windrunner's Spaulders of Conquest
 			{ itemID = 48251, price = "50 #eoftriumph#" }, --Windrunner's Tunic of Conquest
 			{ itemID = 48254, price = "30 #eoftriumph#" }, --Windrunner's Handguards of Conquest
 			{ itemID = 48252, price = "50 #eoftriumph#" }, --Windrunner's Legguards of Conquest
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Windrunner's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Windrunner's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48257, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Windrunner's Headpiece of Triumph
 			{ itemID = 48259, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Windrunner's Spaulders of Triumph
 			{ itemID = 48255, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Windrunner's Tunic of Triumph
@@ -9661,7 +9661,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48258, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Windrunner's Legguards of Triumph
 		},
 		{
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Windrunner's Pursuit"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Windrunner's Pursuit", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48262 }, --Windrunner's Headpiece of Triumph
 			{ itemID = 48260 }, --Windrunner's Spaulders of Triumph
 			{ itemID = 48264 }, --Windrunner's Tunic of Triumph
@@ -9672,13 +9672,13 @@ AtlasLoot_Data["T9"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Windrunner's Pursuit"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Windrunner's Pursuit", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48277, price = "50 #eoftriumph#" }, --Windrunner's Headpiece of Conquest
 			{ itemID = 48279, price = "30 #eoftriumph#" }, --Windrunner's Spaulders of Conquest
 			{ itemID = 48275, price = "50 #eoftriumph#" }, --Windrunner's Tunic of Conquest
 			{ itemID = 48276, price = "30 #eoftriumph#" }, --Windrunner's Handguards of Conquest
 			{ itemID = 48278, price = "50 #eoftriumph#" }, --Windrunner's Legguards of Conquest
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Windrunner's Pursuit"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Windrunner's Pursuit", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48272, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Windrunner's Headpiece of Triumph
 			{ itemID = 48270, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Windrunner's Spaulders of Triumph
 			{ itemID = 48274, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Windrunner's Tunic of Triumph
@@ -9686,7 +9686,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48271, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Windrunner's Legguards of Triumph
 		},
 		{
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Windrunner's Pursuit"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Windrunner's Pursuit", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48267 }, --Windrunner's Headpiece of Triumph
 			{ itemID = 48269 }, --Windrunner's Spaulders of Triumph
 			{ itemID = 48265 }, --Windrunner's Tunic of Triumph
@@ -9697,13 +9697,13 @@ AtlasLoot_Data["T9"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Khadgar's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Khadgar's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47748, price = "50 #eoftriumph#" }, --Khadgar's Hood of Conquest
 			{ itemID = 47751, price = "30 #eoftriumph#" }, --Khadgar's Shoulderpads of Conquest
 			{ itemID = 47749, price = "50 #eoftriumph#" }, --Khadgar's Robe of Conquest
 			{ itemID = 47752, price = "30 #eoftriumph#" }, --Khadgar's Gauntlets of Conquest
 			{ itemID = 47750, price = "50 #eoftriumph#" }, --Khadgar's Leggings of Conquest
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Khadgar's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Khadgar's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47754, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Khadgar's Hood of Triumph
 			{ itemID = 47757, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Khadgar's Shoulderpads of Triumph
 			{ itemID = 47756, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Khadgar's Robe of Triumph
@@ -9711,7 +9711,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 47755, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Khadgar's Leggings of Triumph
 		},
 		{
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Khadgar's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Khadgar's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47761 }, --Khadgar's Hood of Triumph
 			{ itemID = 47758 }, --Khadgar's Shoulderpads of Triumph
 			{ itemID = 47759 }, --Khadgar's Robe of Triumph
@@ -9722,13 +9722,13 @@ AtlasLoot_Data["T9"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Sunstrider's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Sunstrider's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47774, price = "50 #eoftriumph#" }, --Sunstrider's Hood of Conquest
 			{ itemID = 47777, price = "30 #eoftriumph#" }, --Sunstrider's Shoulderpads of Conquest
 			{ itemID = 47776, price = "50 #eoftriumph#" }, --Sunstrider's Robe of Conquest
 			{ itemID = 47773, price = "30 #eoftriumph#" }, --Sunstrider's Gauntlets of Conquest
 			{ itemID = 47775, price = "50 #eoftriumph#" }, --Sunstrider's Leggings of Conquest
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Sunstrider's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Sunstrider's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47771, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Sunstrider's Hood of Triumph
 			{ itemID = 47768, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Sunstrider's Shoulderpads of Triumph
 			{ itemID = 47769, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Sunstrider's Robe of Triumph
@@ -9736,7 +9736,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 47770, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Sunstrider's Leggings of Triumph
 		},
 		{
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Sunstrider's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Sunstrider's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47764 }, --Sunstrider's Hood of Triumph
 			{ itemID = 47767 }, --Sunstrider's Shoulderpads of Triumph
 			{ itemID = 47766 }, --Sunstrider's Robe of Triumph
@@ -9745,15 +9745,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Holy"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Holy",
 		{
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Turalyon's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Turalyon's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48564, price = "50 #eoftriumph#" }, --Turalyon's Headpiece of Conquest
 			{ itemID = 48572, price = "30 #eoftriumph#" }, --Turalyon's Spaulders of Conquest
 			{ itemID = 48566, price = "50 #eoftriumph#" }, --Turalyon's Tunic of Conquest
 			{ itemID = 48574, price = "30 #eoftriumph#" }, --Turalyon's Gloves of Conquest
 			{ itemID = 48568, price = "50 #eoftriumph#" }, --Turalyon's Greaves of Conquest
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Turalyon's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Turalyon's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48577, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Turalyon's Headpiece of Triumph
 			{ itemID = 48579, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Turalyon's Spaulders of Triumph
 			{ itemID = 48575, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Turalyon's Tunic of Triumph
@@ -9761,7 +9761,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48578, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Turalyon's Greaves of Triumph
 		},
 		{
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Turalyon's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Turalyon's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48582 }, --Turalyon's Headpiece of Triumph
 			{ itemID = 48580 }, --Turalyon's Spaulders of Triumph
 			{ itemID = 48584 }, --Turalyon's Tunic of Triumph
@@ -9770,15 +9770,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Holy"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Holy",
 		{
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Liadrin's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Liadrin's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48597, price = "50 #eoftriumph#" }, --Liadrin's Headpiece of Conquest
 			{ itemID = 48595, price = "30 #eoftriumph#" }, --Liadrin's Spaulders of Conquest
 			{ itemID = 48599, price = "50 #eoftriumph#" }, --Liadrin's Tunic of Conquest
 			{ itemID = 48598, price = "30 #eoftriumph#" }, --Liadrin's Gloves of Conquest
 			{ itemID = 48596, price = "50 #eoftriumph#" }, --Liadrin's Greaves of Conquest
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Liadrin's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Liadrin's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48592, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Liadrin's Headpiece of Triumph
 			{ itemID = 48590, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Liadrin's Spaulders of Triumph
 			{ itemID = 48594, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Liadrin's Tunic of Triumph
@@ -9786,7 +9786,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48591, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Liadrin's Greaves of Triumph
 		},
 		{
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Liadrin's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Liadrin's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48587 }, --Liadrin's Headpiece of Triumph
 			{ itemID = 48585 }, --Liadrin's Spaulders of Triumph
 			{ itemID = 48589 }, --Liadrin's Tunic of Triumph
@@ -9795,15 +9795,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Retribution"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Retribution",
 		{
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Turalyon's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Turalyon's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48604, price = "50 #eoftriumph#" }, --Turalyon's Helm of Conquest
 			{ itemID = 48606, price = "30 #eoftriumph#" }, --Turalyon's Shoulderplates of Conquest
 			{ itemID = 48602, price = "50 #eoftriumph#" }, --Turalyon's Battleplate of Conquest
 			{ itemID = 48603, price = "30 #eoftriumph#" }, --Turalyon's Gauntlets of Conquest
 			{ itemID = 48605, price = "50 #eoftriumph#" }, --Turalyon's Legplates of Conquest
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Turalyon's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Turalyon's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48609, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Turalyon's Helm of Triumph
 			{ itemID = 48611, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Turalyon's Shoulderplates of Triumph
 			{ itemID = 48607, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Turalyon's Battleplate of Triumph
@@ -9811,7 +9811,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48610, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Turalyon's Legplates of Triumph
 		},
 		{
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Turalyon's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Turalyon's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48614 }, --Turalyon's Helm of Triumph
 			{ itemID = 48612 }, --Turalyon's Shoulderplates of Triumph
 			{ itemID = 48616 }, --Turalyon's Battleplate of Triumph
@@ -9820,15 +9820,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Retribution"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Retribution",
 		{
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Liadrin's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Liadrin's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48629, price = "50 #eoftriumph#" }, --Liadrin's Helm of Conquest
 			{ itemID = 48627, price = "30 #eoftriumph#" }, --Liadrin's Shoulderplates of Conquest
 			{ itemID = 48631, price = "50 #eoftriumph#" }, --Liadrin's Battleplate of Conquest
 			{ itemID = 48630, price = "30 #eoftriumph#" }, --Liadrin's Gauntlets of Conquest
 			{ itemID = 48628, price = "50 #eoftriumph#" }, --Liadrin's Legplates of Conquest
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Liadrin's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Liadrin's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48624, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Liadrin's Helm of Triumph
 			{ itemID = 48622, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Liadrin's Shoulderplates of Triumph
 			{ itemID = 48626, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Liadrin's Battleplate of Triumph
@@ -9836,7 +9836,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48623, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Liadrin's Legplates of Triumph
 		},
 		{
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Liadrin's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Liadrin's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48619 }, --Liadrin's Helm of Triumph
 			{ itemID = 48621 }, --Liadrin's Shoulderplates of Triumph
 			{ itemID = 48617 }, --Liadrin's Battleplate of Triumph
@@ -9845,15 +9845,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Protection"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Protection",
 		{
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Turalyon's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Turalyon's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48634, price = "50 #eoftriumph#" }, --Turalyon's Faceguard of Conquest
 			{ itemID = 48636, price = "30 #eoftriumph#" }, --Turalyon's Shoulderguards of Conquest
 			{ itemID = 48632, price = "50 #eoftriumph#" }, --Turalyon's Breastplate of Conquest
 			{ itemID = 48633, price = "30 #eoftriumph#" }, --Turalyon's Handguards of Conquest
 			{ itemID = 48635, price = "50 #eoftriumph#" }, --Turalyon's Legguards of Conquest
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Turalyon's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Turalyon's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48639, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Turalyon's Faceguard of Triumph
 			{ itemID = 48637, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Turalyon's Shoulderguards of Triumph
 			{ itemID = 48641, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Turalyon's Breastplate of Triumph
@@ -9861,7 +9861,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48638, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Turalyon's Legguards of Triumph
 		},
 		{
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Turalyon's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Turalyon's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48644 }, --Turalyon's Faceguard of Triumph
 			{ itemID = 48646 }, --Turalyon's Shoulderguards of Triumph
 			{ itemID = 48642 }, --Turalyon's Breastplate of Triumph
@@ -9870,15 +9870,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Protection"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Protection",
 		{
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Liadrin's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Liadrin's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48654, price = "50 #eoftriumph#" }, --Liadrin's Faceguard of Conquest
 			{ itemID = 48656, price = "30 #eoftriumph#" }, --Liadrin's Shoulderguards of Conquest
 			{ itemID = 48652, price = "50 #eoftriumph#" }, --Liadrin's Breastplate of Conquest
 			{ itemID = 48653, price = "30 #eoftriumph#" }, --Liadrin's Handguards of Conquest
 			{ itemID = 48655, price = "50 #eoftriumph#" }, --Liadrin's Legguards of Conquest
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Liadrin's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Liadrin's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48659, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Liadrin's Faceguard of Triumph
 			{ itemID = 48661, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Liadrin's Shoulderguards of Triumph
 			{ itemID = 48657, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Liadrin's Breastplate of Triumph
@@ -9886,7 +9886,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48660, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Liadrin's Legguards of Triumph
 		},
 		{
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Liadrin's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Liadrin's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48649 }, --Liadrin's Faceguard of Triumph
 			{ itemID = 48647 }, --Liadrin's Shoulderguards of Triumph
 			{ itemID = 48651 }, --Liadrin's Breastplate of Triumph
@@ -9895,15 +9895,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. AL["Shadow"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. "Shadow",
 		{
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Velen's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Velen's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48073, price = "50 #eoftriumph#" }, --Velen's Circlet of Conquest
 			{ itemID = 48076, price = "30 #eoftriumph#" }, --Velen's Mantle of Conquest
 			{ itemID = 48075, price = "50 #eoftriumph#" }, --Velen's Raiments of Conquest
 			{ itemID = 48072, price = "30 #eoftriumph#" }, --Velen's Handwraps of Conquest
 			{ itemID = 48074, price = "50 #eoftriumph#" }, --Velen's Pants of Conquest
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Velen's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Velen's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48078, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Velen's Circlet of Triumph
 			{ itemID = 48081, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Velen's Mantle of Triumph
 			{ itemID = 48080, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Velen's Raiments of Triumph
@@ -9911,7 +9911,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48079, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Velen's Pants of Triumph
 		},
 		{
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Velen's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Velen's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48085 }, --Velen's Circlet of Triumph
 			{ itemID = 48082 }, --Velen's Mantle of Triumph
 			{ itemID = 48083 }, --Velen's Raiments of Triumph
@@ -9920,15 +9920,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. AL["Shadow"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. "Shadow",
 		{
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Zabra's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Zabra's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48098, price = "50 #eoftriumph#" }, --Zabra's Circlet of Conquest
 			{ itemID = 48101, price = "30 #eoftriumph#" }, --Zabra's Mantle of Conquest
 			{ itemID = 48100, price = "50 #eoftriumph#" }, --Zabra's Raiments of Conquest
 			{ itemID = 48097, price = "30 #eoftriumph#" }, --Zabra's Handwraps of Conquest
 			{ itemID = 48099, price = "50 #eoftriumph#" }, --Zabra's Pants of Conquest
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Zabra's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Zabra's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48095, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Zabra's Circlet of Triumph
 			{ itemID = 48092, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Zabra's Mantle of Triumph
 			{ itemID = 48093, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Zabra's Raiments of Triumph
@@ -9936,7 +9936,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48094, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Zabra's Pants of Triumph
 		},
 		{
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Zabra's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Zabra's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48088 }, --Zabra's Circlet of Triumph
 			{ itemID = 48091 }, --Zabra's Mantle of Triumph
 			{ itemID = 48090 }, --Zabra's Raiments of Triumph
@@ -9945,15 +9945,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. AL["Holy"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. "Holy",
 		{
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Velen's Raiment"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Velen's Raiment", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47914, price = "50 #eoftriumph#" }, --Velen's Cowl of Conquest
 			{ itemID = 47981, price = "30 #eoftriumph#" }, --Velen's Shoulderpads of Conquest
 			{ itemID = 47936, price = "50 #eoftriumph#" }, --Velen's Robe of Conquest
 			{ itemID = 47982, price = "30 #eoftriumph#" }, --Velen's Gloves of Conquest
 			{ itemID = 47980, price = "50 #eoftriumph#" }, --Velen's Leggings of Conquest
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Velen's Raiment"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Velen's Raiment", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47984, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Velen's Cowl of Triumph
 			{ itemID = 47987, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Velen's Shoulderpads of Triumph
 			{ itemID = 47986, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Velen's Robe of Triumph
@@ -9961,7 +9961,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 47985, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Velen's Leggings of Triumph
 		},
 		{
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Velen's Raiment"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Velen's Raiment", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48035 }, --Velen's Cowl of Triumph
 			{ itemID = 48029 }, --Velen's Shoulderpads of Triumph
 			{ itemID = 48031 }, --Velen's Robe of Triumph
@@ -9970,15 +9970,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. AL["Holy"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. "Holy",
 		{
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Zabra's Raiment"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Zabra's Raiment", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48068, price = "50 #eoftriumph#" }, --Zabra's Cowl of Conquest
 			{ itemID = 48071, price = "30 #eoftriumph#" }, --Zabra's Shoulderpads of Conquest
 			{ itemID = 48070, price = "50 #eoftriumph#" }, --Zabra's Robe of Conquest
 			{ itemID = 48067, price = "30 #eoftriumph#" }, --Zabra's Gloves of Conquest
 			{ itemID = 48069, price = "50 #eoftriumph#" }, --Zabra's Leggings of Conquest
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Zabra's Raiment"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Zabra's Raiment", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48065, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Zabra's Cowl of Triumph
 			{ itemID = 48062, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Zabra's Shoulderpads of Triumph
 			{ itemID = 48063, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Zabra's Robe of Triumph
@@ -9986,7 +9986,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48064, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Zabra's Leggings of Triumph
 		},
 		{
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Zabra's Raiment"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Zabra's Raiment", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48058 }, --Zabra's Cowl of Triumph
 			{ itemID = 48061 }, --Zabra's Shoulderpads of Triumph
 			{ itemID = 48060 }, --Zabra's Robe of Triumph
@@ -9997,13 +9997,13 @@ AtlasLoot_Data["T9"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{
-			{ icon = "Ability_BackStab", name = "=q6="..AL["VanCleef's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."VanCleef's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48218, price = "50 #eoftriumph#" }, --VanCleef's Helmet of Conquest
 			{ itemID = 48221, price = "30 #eoftriumph#" }, --VanCleef's Pauldrons of Conquest
 			{ itemID = 48219, price = "50 #eoftriumph#" }, --VanCleef's Breastplate of Conquest
 			{ itemID = 48222, price = "30 #eoftriumph#" }, --VanCleef's Gauntlets of Conquest
 			{ itemID = 48220, price = "50 #eoftriumph#" }, --VanCleef's Legplates of Conquest
-			{ icon = "Ability_BackStab", name = "=q6="..AL["VanCleef's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."VanCleef's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48225, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --VanCleef's Helmet of Triumph
 			{ itemID = 48227, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --VanCleef's Pauldrons of Triumph
 			{ itemID = 48223, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --VanCleef's Breastplate of Triumph
@@ -10011,7 +10011,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48226, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --VanCleef's Legplates of Triumph
 		},
 		{
-			{ icon = "Ability_BackStab", name = "=q6="..AL["VanCleef's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."VanCleef's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48230 }, --VanCleef's Helmet of Triumph
 			{ itemID = 48228 }, --VanCleef's Pauldrons of Triumph
 			{ itemID = 48232 }, --VanCleef's Breastplate of Triumph
@@ -10022,13 +10022,13 @@ AtlasLoot_Data["T9"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Garona's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."Garona's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48245, price = "50 #eoftriumph#" }, --Garona's Helmet of Conquest
 			{ itemID = 48247, price = "30 #eoftriumph#" }, --Garona's Pauldrons of Conquest
 			{ itemID = 48243, price = "50 #eoftriumph#" }, --Garona's Breastplate of Conquest
 			{ itemID = 48244, price = "30 #eoftriumph#" }, --Garona's Gauntlets of Conquest
 			{ itemID = 48246, price = "50 #eoftriumph#" }, --Garona's Legplates of Conquest
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Garona's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."Garona's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48240, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Garona's Helmet of Triumph
 			{ itemID = 48238, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Garona's Pauldrons of Triumph
 			{ itemID = 48242, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Garona's Breastplate of Triumph
@@ -10036,7 +10036,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48239, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Garona's Legplates of Triumph
 		},
 		{
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Garona's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."Garona's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48235 }, --Garona's Helmet of Triumph
 			{ itemID = 48237 }, --Garona's Pauldrons of Triumph
 			{ itemID = 48233 }, --Garona's Breastplate of Triumph
@@ -10045,15 +10045,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Elemental"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Elemental",
 		{
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Nobundo's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Nobundo's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48313, price = "50 #eoftriumph#" }, --Nobundo's Helm of Conquest
 			{ itemID = 48315, price = "30 #eoftriumph#" }, --Nobundo's Shoulderpads of Conquest
 			{ itemID = 48310, price = "50 #eoftriumph#" }, --Nobundo's Hauberk of Conquest
 			{ itemID = 48312, price = "30 #eoftriumph#" }, --Nobundo's Gloves of Conquest
 			{ itemID = 48314, price = "50 #eoftriumph#" }, --Nobundo's Kilt of Conquest
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Nobundo's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Nobundo's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48318, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Nobundo's Helm of Triumph
 			{ itemID = 48320, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Nobundo's Shoulderpads of Triumph
 			{ itemID = 48316, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Nobundo's Hauberk of Triumph
@@ -10061,7 +10061,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48319, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Nobundo's Kilt of Triumph
 		},
 		{
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Nobundo's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Nobundo's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48323 }, --Nobundo's Helm of Triumph
 			{ itemID = 48321 }, --Nobundo's Shoulderpads of Triumph
 			{ itemID = 48325 }, --Nobundo's Hauberk of Triumph
@@ -10070,15 +10070,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Elemental"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Elemental",
 		{
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Thrall's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Thrall's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48338, price = "50 #eoftriumph#" }, --Thrall's Helm of Conquest
 			{ itemID = 48340, price = "30 #eoftriumph#" }, --Thrall's Shoulderpads of Conquest
 			{ itemID = 48336, price = "50 #eoftriumph#" }, --Thrall's Hauberk of Conquest
 			{ itemID = 48337, price = "30 #eoftriumph#" }, --Thrall's Gloves of Conquest
 			{ itemID = 48339, price = "50 #eoftriumph#" }, --Thrall's Kilt of Conquest
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Thrall's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Thrall's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48333, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thrall's Helm of Triumph
 			{ itemID = 48331, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Thrall's Shoulderpads of Triumph
 			{ itemID = 48335, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thrall's Hauberk of Triumph
@@ -10086,7 +10086,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48332, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thrall's Kilt of Triumph
 		},
 		{
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Thrall's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Thrall's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48328 }, --Thrall's Helm of Triumph
 			{ itemID = 48330 }, --Thrall's Shoulderpads of Triumph
 			{ itemID = 48326 }, --Thrall's Hauberk of Triumph
@@ -10095,15 +10095,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Enhancement"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Enhancement",
 		{
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Nobundo's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Nobundo's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48343, price = "50 #eoftriumph#" }, --Nobundo's Faceguard of Conquest
 			{ itemID = 48345, price = "30 #eoftriumph#" }, --Nobundo's Shoulderguards of Conquest
 			{ itemID = 48341, price = "50 #eoftriumph#" }, --Nobundo's Chestguard of Conquest
 			{ itemID = 48342, price = "30 #eoftriumph#" }, --Nobundo's Grips of Conquest
 			{ itemID = 48344, price = "50 #eoftriumph#" }, --Nobundo's War-Kilt of Conquest
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Nobundo's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Nobundo's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48348, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Nobundo's Faceguard of Triumph
 			{ itemID = 48350, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Nobundo's Shoulderguards of Triumph
 			{ itemID = 48346, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Nobundo's Chestguard of Triumph
@@ -10111,7 +10111,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48349, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Nobundo's War-Kilt of Triumph
 		},
 		{
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Nobundo's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Nobundo's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48353 }, --Nobundo's Faceguard of Triumph
 			{ itemID = 48351 }, --Nobundo's Shoulderguards of Triumph
 			{ itemID = 48355 }, --Nobundo's Chestguard of Triumph
@@ -10120,15 +10120,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Enhancement"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Enhancement",
 		{
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Thrall's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Thrall's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48368, price = "50 #eoftriumph#" }, --Thrall's Faceguard of Conquest
 			{ itemID = 48370, price = "30 #eoftriumph#" }, --Thrall's Shoulderguards of Conquest
 			{ itemID = 48366, price = "50 #eoftriumph#" }, --Thrall's Chestguard of Conquest
 			{ itemID = 48367, price = "30 #eoftriumph#" }, --Thrall's Grips of Conquest
 			{ itemID = 48369, price = "50 #eoftriumph#" }, --Thrall's War-Kilt of Conquest
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Thrall's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Thrall's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48363, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thrall's Faceguard of Triumph
 			{ itemID = 48361, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Thrall's Shoulderguards of Triumph
 			{ itemID = 48365, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thrall's Chestguard of Triumph
@@ -10136,7 +10136,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48362, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thrall's War-Kilt of Triumph
 		},
 		{
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Thrall's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Thrall's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48358 }, --Thrall's Faceguard of Triumph
 			{ itemID = 48360 }, --Thrall's Shoulderguards of Triumph
 			{ itemID = 48356 }, --Thrall's Chestguard of Triumph
@@ -10145,15 +10145,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Restoration"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Restoration",
 		{
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Nobundo's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Nobundo's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48280, price = "50 #eoftriumph#" }, --Nobundo's Headpiece of Conquest
 			{ itemID = 48283, price = "30 #eoftriumph#" }, --Nobundo's Spaulders of Conquest
 			{ itemID = 48281, price = "50 #eoftriumph#" }, --Nobundo's Tunic of Conquest
 			{ itemID = 48284, price = "30 #eoftriumph#" }, --Nobundo's Handguards of Conquest
 			{ itemID = 48282, price = "50 #eoftriumph#" }, --Nobundo's Legguards of Conquest
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Nobundo's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Nobundo's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48287, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Nobundo's Headpiece of Triumph
 			{ itemID = 48289, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Nobundo's Spaulders of Triumph
 			{ itemID = 48285, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Nobundo's Tunic of Triumph
@@ -10161,7 +10161,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48288, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Nobundo's Legguards of Triumph
 		},
 		{
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Nobundo's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Nobundo's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48292 }, --Nobundo's Headpiece of Triumph
 			{ itemID = 48290 }, --Nobundo's Spaulders of Triumph
 			{ itemID = 48294 }, --Nobundo's Tunic of Triumph
@@ -10170,15 +10170,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Restoration"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Restoration",
 		{
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Thrall's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Thrall's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48297, price = "50 #eoftriumph#" }, --Thrall's Headpiece of Conquest
 			{ itemID = 48299, price = "30 #eoftriumph#" }, --Thrall's Spaulders of Conquest
 			{ itemID = 48295, price = "50 #eoftriumph#" }, --Thrall's Tunic of Conquest
 			{ itemID = 48296, price = "30 #eoftriumph#" }, --Thrall's Handguards of Conquest
 			{ itemID = 48298, price = "50 #eoftriumph#" }, --Thrall's Legguards of Conquest
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Thrall's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Thrall's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48302, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thrall's Headpiece of Triumph
 			{ itemID = 48304, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Thrall's Spaulders of Triumph
 			{ itemID = 48300, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thrall's Tunic of Triumph
@@ -10186,7 +10186,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48303, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Thrall's Legguards of Triumph
 		},
 		{
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Thrall's Garb"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Thrall's Garb", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48307 }, --Thrall's Headpiece of Triumph
 			{ itemID = 48309 }, --Thrall's Spaulders of Triumph
 			{ itemID = 48305 }, --Thrall's Tunic of Triumph
@@ -10197,13 +10197,13 @@ AtlasLoot_Data["T9"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Kel'Thuzad's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Kel'Thuzad's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47784, price = "50 #eoftriumph#" }, --Kel'Thuzad's Hood of Conquest
 			{ itemID = 47787, price = "30 #eoftriumph#" }, --Kel'Thuzad's Shoulderpads of Conquest
 			{ itemID = 47786, price = "50 #eoftriumph#" }, --Kel'Thuzad's Robe of Conquest
 			{ itemID = 47783, price = "30 #eoftriumph#" }, --Kel'Thuzad's Gloves of Conquest
 			{ itemID = 47785, price = "50 #eoftriumph#" }, --Kel'Thuzad's Leggings of Conquest
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Kel'Thuzad's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Kel'Thuzad's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47778, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Kel'Thuzad's Hood of Triumph
 			{ itemID = 47781, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Kel'Thuzad's Shoulderpads of Triumph
 			{ itemID = 47779, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Kel'Thuzad's Robe of Triumph
@@ -10211,7 +10211,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 47780, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Kel'Thuzad's Leggings of Triumph
 		},
 		{
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Kel'Thuzad's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Kel'Thuzad's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47789 }, --Kel'Thuzad's Hood of Triumph
 			{ itemID = 47792 }, --Kel'Thuzad's Shoulderpads of Triumph
 			{ itemID = 47791 }, --Kel'Thuzad's Robe of Triumph
@@ -10222,13 +10222,13 @@ AtlasLoot_Data["T9"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gul'dan's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Gul'dan's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47801, price = "50 #eoftriumph#" }, --Gul'dan's Hood of Conquest
 			{ itemID = 47798, price = "30 #eoftriumph#" }, --Gul'dan's Shoulderpads of Conquest
 			{ itemID = 47799, price = "50 #eoftriumph#" }, --Gul'dan's Robe of Conquest
 			{ itemID = 47802, price = "30 #eoftriumph#" }, --Gul'dan's Gloves of Conquest
 			{ itemID = 47800, price = "50 #eoftriumph#" }, --Gul'dan's Leggings of Conquest
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gul'dan's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Gul'dan's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47804, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Gul'dan's Hood of Triumph
 			{ itemID = 47807, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Gul'dan's Shoulderpads of Triumph
 			{ itemID = 47806, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Gul'dan's Robe of Triumph
@@ -10236,7 +10236,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 47805, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Gul'dan's Leggings of Triumph
 		},
 		{
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gul'dan's Regalia"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Gul'dan's Regalia", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 47796 }, --Gul'dan's Hood of Triumph
 			{ itemID = 47793 }, --Gul'dan's Shoulderpads of Triumph
 			{ itemID = 47794 }, --Gul'dan's Robe of Triumph
@@ -10245,15 +10245,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. AL["Fury"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. "Fury",
 		{
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Wrynn's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Wrynn's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48371, price = "50 #eoftriumph#" }, --Wrynn's Helmet of Conquest
 			{ itemID = 48374, price = "30 #eoftriumph#" }, --Wrynn's Shoulderplates of Conquest
 			{ itemID = 48372, price = "50 #eoftriumph#" }, --Wrynn's Battleplate of Conquest
 			{ itemID = 48375, price = "30 #eoftriumph#" }, --Wrynn's Gauntlets of Conquest
 			{ itemID = 48373, price = "50 #eoftriumph#" }, --Wrynn's Legplates of Conquest
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Wrynn's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Wrynn's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48378, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Wrynn's Helmet of Triumph
 			{ itemID = 48380, price = "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Wrynn's Shoulderplates of Triumph
 			{ itemID = 48376, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Wrynn's Battleplate of Triumph
@@ -10261,7 +10261,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48379, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Wrynn's Legplates of Triumph
 		},
 		{
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Wrynn's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Wrynn's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48383 }, --Wrynn's Helmet of Triumph
 			{ itemID = 48381 }, --Wrynn's Shoulderplates of Triumph
 			{ itemID = 48385 }, --Wrynn's Battleplate of Triumph
@@ -10270,15 +10270,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. AL["Fury"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. "Fury",
 		{
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Hellscream's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Hellscream's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48388, price = "50 #eoftriumph#" }, --Hellscream's Helmet of Conquest
 			{ itemID = 48390, price = "30 #eoftriumph#" }, --Hellscream's Shoulderplates of Conquest
 			{ itemID = 48386, price = "50 #eoftriumph#" }, --Hellscream's Battleplate of Conquest
 			{ itemID = 48387, price = "30 #eoftriumph#" }, --Hellscream's Gauntlets of Conquest
 			{ itemID = 48389, price = "50 #eoftriumph#" }, --Hellscream's Legplates of Conquest
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Hellscream's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Hellscream's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48393, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Hellscream's Helmet of Triumph
 			{ itemID = 48395, --Hellscream's Shoulderplates of Triumph
 			"45 #eoftriumph# 1 #trophyofthecrusade#" },
@@ -10287,7 +10287,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48394, price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Hellscream's Legplates of Triumph
 		},
 		{
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Hellscream's Battlegear"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Hellscream's Battlegear", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48398 }, --Hellscream's Helmet of Triumph
 			{ itemID = 48400 }, --Hellscream's Shoulderplates of Triumph
 			{ itemID = 48396 }, --Hellscream's Battleplate of Triumph
@@ -10296,15 +10296,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. AL["Protection"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. "Protection",
 		{
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Wrynn's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "INV_Shield_05", name = "=q6=".."Wrynn's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48429, price = "50 #eoftriumph#" }, --Wrynn's Greathelm of Conquest
 			{ itemID = 48448, price = "30 #eoftriumph#" }, --Wrynn's Pauldrons of Conquest
 			{ itemID = 48436, price = "50 #eoftriumph#" }, --Wrynn's Breastplate of Conquest
 			{ itemID = 48449, price = "30 #eoftriumph#" }, --Wrynn's Handguards of Conquest
 			{ itemID = 48445, price = "50 #eoftriumph#" }, --Wrynn's Legguards of Conquest
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Wrynn's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "INV_Shield_05", name = "=q6=".."Wrynn's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48430,  price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Wrynn's Greathelm of Triumph
 			{ itemID = 48454, price =  "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Wrynn's Pauldrons of Triumph
 			{ itemID = 48450, price =  "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Wrynn's Breastplate of Triumph
@@ -10312,7 +10312,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48446, price =  "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Wrynn's Legguards of Triumph
 		},
 		{
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Wrynn's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "INV_Shield_05", name = "=q6=".."Wrynn's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48433 }, --Wrynn's Greathelm of Triumph
 			{ itemID = 48455 }, --Wrynn's Pauldrons of Triumph
 			{ itemID = 48451 }, --Wrynn's Breastplate of Triumph
@@ -10321,15 +10321,15 @@ AtlasLoot_Data["T9"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. AL["Protection"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. "Protection",
 		{
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Hellscream's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "INV_Shield_05", name = "=q6=".."Hellscream's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48458, price = "50 #eoftriumph#" }, --Hellscream's Greathelm of Conquest
 			{ itemID = 48460, price = "30 #eoftriumph#" }, --Hellscream's Pauldrons of Conquest
 			{ itemID = 48456, price = "50 #eoftriumph#" }, --Hellscream's Breastplate of Conquest
 			{ itemID = 48457, price = "30 #eoftriumph#" }, --Hellscream's Handguards of Conquest
 			{ itemID = 48459, price = "50 #eoftriumph#" }, --Hellscream's Legguards of Conquest
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Hellscream's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "INV_Shield_05", name = "=q6=".."Hellscream's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48463,  price = "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Hellscream's Greathelm of Triumph
 			{ itemID = 48465, price =  "45 #eoftriumph# 1 #trophyofthecrusade#" }, --Hellscream's Pauldrons of Triumph
 			{ itemID = 48461, price =  "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Hellscream's Breastplate of Triumph
@@ -10337,7 +10337,7 @@ AtlasLoot_Data["T9"] = {
 			{ itemID = 48464, price =  "75 #eoftriumph# 1 #trophyofthecrusade#" }, --Hellscream's Legguards of Triumph
 		},
 		{
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Hellscream's Plate"], desc = "=q5=" .. AL["Tier 9"] },
+			{ icon = "INV_Shield_05", name = "=q6=".."Hellscream's Plate", desc = "=q5=" .. "Tier 9" },
 			{ itemID = 48468 }, --Hellscream's Greathelm of Triumph
 			{ itemID = 48470 }, --Hellscream's Pauldrons of Triumph
 			{ itemID = 48466 }, --Hellscream's Breastplate of Triumph
@@ -10357,13 +10357,13 @@ AtlasLoot_Data["T10"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " DPS",
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Scourgelord's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Scourgelord's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50096, price = "95 #eoffrost#" }, --Scourgelord Helmet
 			{ itemID = 50098, price = "60 #eoffrost#" }, --Scourgelord Shoulderplates
 			{ itemID = 50094, price = "95 #eoffrost#" }, --Scourgelord Battleplate
 			{ itemID = 50095, price = "60 #eoffrost#" }, --Scourgelord Gauntlets
 			{ itemID = 50097, price = "95 #eoffrost#" }, --Scourgelord Legplates
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Scourgelord's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Scourgelord's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51127 }, --Sanctified Scourgelord Helmet
 			{ itemID = 51125 }, --Sanctified Scourgelord Shoulderplates
 			{ itemID = 51129 }, --Sanctified Scourgelord Battleplate
@@ -10371,7 +10371,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51126 }, --Sanctified Scourgelord Legplates
 		},
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Scourgelord's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Scourgelord's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51312 }, --Sanctified Scourgelord Helmet
 			{ itemID = 51314 }, --Sanctified Scourgelord Shoulderplates
 			{ itemID = 51310 }, --Sanctified Scourgelord Battleplate
@@ -10382,13 +10382,13 @@ AtlasLoot_Data["T10"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " TANK",
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Scourgelord's Plate"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Scourgelord's Plate", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50855, price = "95 #eoffrost#" }, --Scourgelord Faceguard
 			{ itemID = 50853, price = "60 #eoffrost#" }, --Scourgelord Pauldrons
 			{ itemID = 50857, price = "95 #eoffrost#" }, --Scourgelord Chestguard
 			{ itemID = 50856, price = "60 #eoffrost#" }, --Scourgelord Handguards
 			{ itemID = 50854, price = "95 #eoffrost#" }, --Scourgelord Legguards
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Scourgelord's Plate"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Scourgelord's Plate", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51133 }, --Sanctified Scourgelord Faceguard
 			{ itemID = 51130 }, --Sanctified Scourgelord Pauldrons
 			{ itemID = 51134 }, --Sanctified Scourgelord Chestguard
@@ -10396,7 +10396,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51131 }, --Sanctified Scourgelord Legguards
 		},
 		{
-			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Scourgelord's Plate"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Deathknight_DeathStrike", name = "=q6=".."Scourgelord's Plate", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51306 }, --Sanctified Scourgelord Faceguard
 			{ itemID = 51309 }, --Sanctified Scourgelord Pauldrons
 			{ itemID = 51305 }, --Sanctified Scourgelord Chestguard
@@ -10405,15 +10405,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Restoration"],
+		Name = "Druid" .. " - " .. "Restoration",
 		{
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Lasherweave's Garb"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Lasherweave's Garb", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50108, price = "95 #eoffrost#" }, --Lasherweave's Helmet  
 			{ itemID = 50113, price = "60 #eoffrost#" }, --Lasherweave's Pauldrons
 			{ itemID = 50106, price = "95 #eoffrost#" }, --Lasherweave's Robes
 			{ itemID = 50107, price = "60 #eoffrost#" }, --Lasherweave's Gauntlets
 			{ itemID = 50109, price = "95 #eoffrost#" }, --Lasherweave's Legplates
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Lasherweave's Garb"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Lasherweave's Garb", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51137 }, --Sanctified Lasherweave's Helmet
 			{ itemID = 51135 }, --Sanctified Lasherweave's Pauldrons
 			{ itemID = 51139 }, --Sanctified Lasherweave's Robes
@@ -10421,7 +10421,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51136 }, --Sanctified Lasherweave's Legplates
 		},
 		{
-			{ icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Lasherweave's Garb"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Nature_Regeneration", name = "=q6=".."Lasherweave's Garb", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51302 }, --Sanctified Lasherweave's Helmet
 			{ itemID = 51304 }, --Sanctified Lasherweave's Pauldrons
 			{ itemID = 51300 }, --Sanctified Lasherweave's Robes
@@ -10430,15 +10430,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Feral"],
+		Name = "Druid" .. " - " .. "Feral",
 		{
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Lasherweave's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Lasherweave's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50826, price = "95 #eoffrost#" }, --Lasherweave's Headguard
 			{ itemID = 50824, price = "60 #eoffrost#" }, --Lasherweave's Shoulderpads
 			{ itemID = 50828, price = "95 #eoffrost#" }, --Lasherweave's Raiment
 			{ itemID = 50827, price = "60 #eoffrost#" }, --Lasherweave's Handgrips
 			{ itemID = 50825, price = "95 #eoffrost#" }, --Lasherweave's Legguards
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Lasherweave's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Lasherweave's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51143 }, --Sanctified Lasherweave's Headguard
 			{ itemID = 51140 }, --Sanctified Lasherweave's Shoulderpads
 			{ itemID = 51141 }, --Sanctified Lasherweave's Raiment
@@ -10446,7 +10446,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51142 }, --Sanctified Lasherweave's Legguards
 		},
 		{
-			{ icon = "Ability_Druid_Maul", name = "=q6="..AL["Lasherweave's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Ability_Druid_Maul", name = "=q6=".."Lasherweave's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51296 }, --Sanctified Lasherweave's Headguard
 			{ itemID = 51299 }, --Sanctified Lasherweave's Shoulderpads
 			{ itemID = 51298 }, --Sanctified Lasherweave's Raiment
@@ -10455,15 +10455,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = "Druid" .. " - " .. AL["Balance"],
+		Name = "Druid" .. " - " .. "Balance",
 		{
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Lasherweave's Regalia"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Lasherweave's Regalia", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50821, price = "95 #eoffrost#" }, --Lasherweave's Cover
 			{ itemID = 50819, price = "60 #eoffrost#" }, --Lasherweave's Mantle
 			{ itemID = 50823, price = "95 #eoffrost#" }, --Lasherweave's Vestment
 			{ itemID = 50822, price = "60 #eoffrost#" }, --Lasherweave's Gloves
 			{ itemID = 50820, price = "95 #eoffrost#" }, --Lasherweave's Trousers
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Lasherweave's Regalia"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Lasherweave's Regalia", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51149 }, --Sanctified Lasherweave's Cover
 			{ itemID = 51147 }, --Sanctified Lasherweave's Mantle
 			{ itemID = 51145 }, --Sanctified Lasherweave's Vestment
@@ -10471,7 +10471,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51146 }, --Sanctified Lasherweave's Trousers
 		},
 		{
-			{ icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Lasherweave's Regalia"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Nature_InsectSwarm", name = "=q6=".."Lasherweave's Regalia", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51290, "=ds=" }, --Sanctified Lasherweave's Cover
 			{ itemID = 51292, "=ds=" }, --Sanctified Lasherweave's Mantle
 			{ itemID = 51294, "=ds=" }, --Sanctified Lasherweave's Vestment
@@ -10482,13 +10482,13 @@ AtlasLoot_Data["T10"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Ahn'Kahar Blood Hunter's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Ahn'Kahar Blood Hunter's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50115, price = "95 #eoffrost#" }, --Ahn'Kahar Blood Hunter's Headpiece
 			{ itemID = 50117, price = "60 #eoffrost#" }, --Ahn'Kahar Blood Hunter's Spaulders
 			{ itemID = 50118, price = "95 #eoffrost#" }, --Ahn'Kahar Blood Hunter's Tunic
 			{ itemID = 50114, price = "60 #eoffrost#" }, --Ahn'Kahar Blood Hunter's Handguards
 			{ itemID = 50116, price = "95 #eoffrost#" }, --Ahn'Kahar Blood Hunter's Legguards
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Ahn'Kahar Blood Hunter's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Ahn'Kahar Blood Hunter's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51153 }, --Sanctified Ahn'Kahar Blood Hunter's Headpiece
 			{ itemID = 51151 }, --Sanctified Ahn'Kahar Blood Hunter's Spaulders
 			{ itemID = 51150 }, --Sanctified Ahn'Kahar Blood Hunter's Tunic
@@ -10496,7 +10496,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51152 }, --Sanctified Ahn'Kahar Blood Hunter's Legguards
 		},
 		{
-			{ icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Ahn'Kahar Blood Hunter's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Ability_Hunter_RunningShot", name = "=q6=".."Ahn'Kahar Blood Hunter's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51286 }, --Sanctified Ahn'Kahar Blood Hunter's Headpiece
 			{ itemID = 51288 }, --Sanctified Ahn'Kahar Blood Hunter's Spaulders
 			{ itemID = 51289 }, --Sanctified Ahn'Kahar Blood Hunter's Tunic
@@ -10507,13 +10507,13 @@ AtlasLoot_Data["T10"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Bloodmage's Regalia"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Bloodmage's Regalia", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50276, price = "95 #eoffrost#" }, --Bloodmage Hood
 			{ itemID = 50279, price = "60 #eoffrost#" }, --Bloodmage Shoulderpads
 			{ itemID = 50278, price = "95 #eoffrost#" }, --Bloodmage Robe
 			{ itemID = 50275, price = "60 #eoffrost#" }, --Bloodmage Gloves
 			{ itemID = 50277, price = "95 #eoffrost#" }, --Bloodmage Leggings
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Bloodmage's Regalia"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Bloodmage's Regalia", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51158 }, --Sanctified Bloodmage Hood
 			{ itemID = 51155 }, --Sanctified Bloodmage Shoulderpads
 			{ itemID = 51156 }, --Sanctified Bloodmage Robe
@@ -10521,7 +10521,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51157 }, --Sanctified Bloodmage Leggings
 		},
 		{
-			{ icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Bloodmage's Regalia"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Frost_IceStorm", name = "=q6=".."Bloodmage's Regalia", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51281 }, --Sanctified Bloodmage Hood
 			{ itemID = 51284 }, --Sanctified Bloodmage Shoulderpads
 			{ itemID = 51283 }, --Sanctified Bloodmage Robe
@@ -10530,15 +10530,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Holy"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Holy",
 		{
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Lightsworn Garb"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Lightsworn Garb", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50867, price = "95 #eoffrost#" }, --Lightsworn Headpiece
 			{ itemID = 50865, price = "60 #eoffrost#" }, --Lightsworn Spaulders
 			{ itemID = 50869, price = "95 #eoffrost#" }, --Lightsworn Tunic
 			{ itemID = 50868, price = "60 #eoffrost#" }, --Lightsworn Gloves
 			{ itemID = 50866, price = "95 #eoffrost#" }, --Lightsworn Greaves
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Lightsworn Garb"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Lightsworn Garb", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51167 }, --Sanctified Lightsworn Headpiece
 			{ itemID = 51166 }, --Sanctified Lightsworn Spaulders
 			{ itemID = 51165 }, --Sanctified Lightsworn Tunic
@@ -10546,7 +10546,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51168 }, --Sanctified Lightsworn Greaves
 		},
 		{
-			{ icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Lightsworn Garb"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Holy_HolyBolt", name = "=q6=".."Lightsworn Garb", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51272 }, --Sanctified Lightsworn Headpiece
 			{ itemID = 51273 }, --Sanctified Lightsworn Spaulders
 			{ itemID = 51274 }, --Sanctified Lightsworn Tunic
@@ -10555,15 +10555,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Retribution"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Retribution",
 		{
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Lightsworn Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Lightsworn Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50326, price = "95 #eoffrost#" }, --Lightsworn Helmet
 			{ itemID = 50324, price = "60 #eoffrost#" }, --Lightsworn Shoulderplates
 			{ itemID = 50328, price = "95 #eoffrost#" }, --Lightsworn Battleplate
 			{ itemID = 50327, price = "60 #eoffrost#" }, --Lightsworn Gauntlets
 			{ itemID = 50325, price = "95 #eoffrost#" }, --Lightsworn Legplates
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Lightsworn Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Lightsworn Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51162 }, --Sanctified Lightsworn Helmet
 			{ itemID = 51160 }, --Sanctified Lightsworn Shoulderplates
 			{ itemID = 51164 }, --Sanctified Lightsworn Battleplate
@@ -10571,7 +10571,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51161 }, --Sanctified Lightsworn Legplates
 		},
 		{
-			{ icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Lightsworn Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Holy_AuraOfLight", name = "=q6=".."Lightsworn Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51277 }, --Sanctified Lightsworn Helmet
 			{ itemID = 51279 }, --Sanctified Lightsworn Shoulderplates
 			{ itemID = 51275 }, --Sanctified Lightsworn Battleplate
@@ -10580,15 +10580,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. AL["Protection"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - " .. "Protection",
 		{
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Lightsworn Plate"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Lightsworn Plate", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50862, price = "95 #eoffrost#" }, --Lightsworn Faceguard
 			{ itemID = 50860, price = "60 #eoffrost#" }, --Lightsworn Shoulderguards
 			{ itemID = 50864, price = "95 #eoffrost#" }, --Lightsworn Chestguard
 			{ itemID = 50863, price = "60 #eoffrost#" }, --Lightsworn Handguards
 			{ itemID = 50861, price = "95 #eoffrost#" }, --Lightsworn Legguards
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Lightsworn Plate"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Lightsworn Plate", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51173 }, --Sanctified Lightsworn Faceguard
 			{ itemID = 51170 }, --Sanctified Lightsworn Shoulderguards
 			{ itemID = 51174 }, --Sanctified Lightsworn Chestguard
@@ -10596,7 +10596,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51171 }, --Sanctified Lightsworn Legguards
 		},
 		{
-			{ icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Lightsworn Plate"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Holy_SealOfMight", name = "=q6=".."Lightsworn Plate", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51266 }, --Sanctified Lightsworn Faceguard
 			{ itemID = 51269 }, --Sanctified Lightsworn Shoulderguards
 			{ itemID = 51265 }, --Sanctified Lightsworn Chestguard
@@ -10605,15 +10605,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. AL["Shadow"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. "Shadow",
 		{
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Crimson Acolyte's Regalia"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Crimson Acolyte's Regalia", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50392, price = "95 #eoffrost#" }, --Crimson Acolyte Cowl
 			{ itemID = 50396, price = "60 #eoffrost#" }, --Crimson Acolyte Mantle
 			{ itemID = 50394, price = "95 #eoffrost#" }, --Crimson Acolyte Raiments
 			{ itemID = 50391, price = "60 #eoffrost#" }, --Crimson Acolyte Handwraps
 			{ itemID = 50393, price = "95 #eoffrost#" }, --Crimson Acolyte Pants
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Crimson Acolyte's Regalia"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Crimson Acolyte's Regalia", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51184 }, --Sanctified Crimson Acolyte Cowl
 			{ itemID = 51182 }, --Sanctified Crimson Acolyte Mantle
 			{ itemID = 51180 }, --Sanctified Crimson Acolyte Raiments
@@ -10621,7 +10621,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51181 }, --Sanctified Crimson Acolyte Pants
 		},
 		{
-			{ icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Crimson Acolyte's Regalia"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Shadow_AntiShadow", name = "=q6=".."Crimson Acolyte's Regalia", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51255 }, --Sanctified Crimson Acolyte Cowl
 			{ itemID = 51257 }, --Sanctified Crimson Acolyte Mantle
 			{ itemID = 51259 }, --Sanctified Crimson Acolyte Raiments
@@ -10630,15 +10630,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. AL["Holy"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - " .. "Holy",
 		{
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Crimson Acolyte's Raiment"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Crimson Acolyte's Raiment", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50765, price = "95 #eoffrost#" }, --Crimson Acolyte Hood
 			{ itemID = 50767, price = "60 #eoffrost#" }, --Crimson Acolyte Shoulderpads
 			{ itemID = 50768, price = "95 #eoffrost#" }, --Crimson Acolyte Robe
 			{ itemID = 50766, price = "60 #eoffrost#" }, --Crimson Acolyte Gloves
 			{ itemID = 50769, price = "95 #eoffrost#" }, --Crimson Acolyte Leggings
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Crimson Acolyte's Raiment"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Crimson Acolyte's Raiment", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51178 }, --Sanctified Crimson Acolyte Hood
 			{ itemID = 51175 }, --Sanctified Crimson Acolyte Shoulderpads
 			{ itemID = 51176 }, --Sanctified Crimson Acolyte Robe
@@ -10646,7 +10646,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51177 }, --Sanctified Crimson Acolyte Leggings
 		},
 		{
-			{ icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Crimson Acolyte's Raiment"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Holy_PowerWordShield", name = "=q6=".."Crimson Acolyte's Raiment", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51261 }, --Sanctified Crimson Acolyte Hood
 			{ itemID = 51264 }, --Sanctified Crimson Acolyte Shoulderpads
 			{ itemID = 51263 }, --Sanctified Crimson Acolyte Robe
@@ -10657,13 +10657,13 @@ AtlasLoot_Data["T10"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Shadowblade's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."Shadowblade's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50089, price = "95 #eoffrost#" }, --Shadowblade Helmet
 			{ itemID = 50105, price = "60 #eoffrost#" }, --Shadowblade Pauldrons
 			{ itemID = 50087, price = "95 #eoffrost#" }, --Shadowblade Breastplate
 			{ itemID = 50088, price = "60 #eoffrost#" }, --Shadowblade Gauntlets
 			{ itemID = 50090, price = "95 #eoffrost#" }, --Shadowblade Legplates
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Shadowblade's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."Shadowblade's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51187 }, --Sanctified Shadowblade Helmet
 			{ itemID = 51185 }, --Sanctified Shadowblade Pauldrons
 			{ itemID = 51189 }, --Sanctified Shadowblade Breastplate
@@ -10671,7 +10671,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51186 }, --Sanctified Shadowblade Legplates
 		},
 		{
-			{ icon = "Ability_BackStab", name = "=q6="..AL["Shadowblade's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Ability_BackStab", name = "=q6=".."Shadowblade's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51252 }, --Sanctified Shadowblade Helmet
 			{ itemID = 51254 }, --Sanctified Shadowblade Pauldrons
 			{ itemID = 51250 }, --Sanctified Shadowblade Breastplate
@@ -10680,15 +10680,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Elemental"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Elemental",
 		{
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Frost Witch's Regalia"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Frost Witch's Regalia", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50843, price = "95 #eoffrost#" }, --Frost Witch's Helm
 			{ itemID = 50845, price = "60 #eoffrost#" }, --Frost Witch's Shoulderpads
 			{ itemID = 50841, price = "95 #eoffrost#" }, --Frost Witch's Hauberk
 			{ itemID = 50842, price = "60 #eoffrost#" }, --Frost Witch's Gloves
 			{ itemID = 50844, price = "95 #eoffrost#" }, --Frost Witch's Kilt
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Frost Witch's Regalia"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Frost Witch's Regalia", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51202 }, --Sanctified Frost Witch's Helm
 			{ itemID = 51204 }, --Sanctified Frost Witch's Shoulderpads
 			{ itemID = 51200 }, --Sanctified Frost Witch's Hauberk
@@ -10696,7 +10696,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51203 }, --Sanctified Frost Witch's Kilt
 		},
 		{
-			{ icon = "Spell_Nature_Lightning", name = "=q6="..AL["Frost Witch's Regalia"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Nature_Lightning", name = "=q6=".."Frost Witch's Regalia", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51237 }, --Sanctified Frost Witch's Helm
 			{ itemID = 51235 }, --Sanctified Frost Witch's Shoulderpads
 			{ itemID = 51239 }, --Sanctified Frost Witch's Hauberk
@@ -10705,15 +10705,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Enhancement"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Enhancement",
 		{
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Frost Witch's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Frost Witch's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50832, price = "95 #eoffrost#" }, --Frost Witch's Faceguard
 			{ itemID = 50834, price = "60 #eoffrost#" }, --Frost Witch's Shoulderguards
 			{ itemID = 50830, price = "95 #eoffrost#" }, --Frost Witch's Chestguard
 			{ itemID = 50831, price = "60 #eoffrost#" }, --Frost Witch's Grips
 			{ itemID = 50833, price = "95 #eoffrost#" }, --Frost Witch's War-Kilt
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Frost Witch's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Frost Witch's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51197 }, --Sanctified Frost Witch's Faceguard
 			{ itemID = 51199 }, --Sanctified Frost Witch's Shoulderguards
 			{ itemID = 51195 }, --Sanctified Frost Witch's Chestguard
@@ -10721,7 +10721,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51198 }, --Sanctified Frost Witch's War-Kilt
 		},
 		{
-			{ icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Frost Witch's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_FireResistanceTotem_01", name = "=q6=".."Frost Witch's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51242 }, --Sanctified Frost Witch's Faceguard
 			{ itemID = 51240 }, --Sanctified Frost Witch's Shoulderguards
 			{ itemID = 51244 }, --Sanctified Frost Witch's Chestguard
@@ -10730,15 +10730,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. AL["Restoration"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - " .. "Restoration",
 		{
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Frost Witch's Garb"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Frost Witch's Garb", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50837, price = "95 #eoffrost#" }, --Frost Witch's Headpiece
 			{ itemID = 50839, price = "60 #eoffrost#" }, --Frost Witch's Spaulders
 			{ itemID = 50835, price = "95 #eoffrost#" }, --Frost Witch's Tunic
 			{ itemID = 50836, price = "60 #eoffrost#" }, --Frost Witch's Handguards
 			{ itemID = 50838, price = "95 #eoffrost#" }, --Frost Witch's Legguards
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Frost Witch's Garb"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Frost Witch's Garb", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51192 }, --Sanctified Frost Witch's Headpiece
 			{ itemID = 51194 }, --Sanctified Frost Witch's Spaulders
 			{ itemID = 51190 }, --Sanctified Frost Witch's Tunic
@@ -10746,7 +10746,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51193 }, --Sanctified Frost Witch's Legguards
 		},
 		{
-			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Frost Witch's Garb"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Nature_HealingWaveGreater", name = "=q6=".."Frost Witch's Garb", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51247 }, --Sanctified Frost Witch's Headpiece
 			{ itemID = 51245 }, --Sanctified Frost Witch's Spaulders
 			{ itemID = 51249 }, --Sanctified Frost Witch's Tunic
@@ -10757,13 +10757,13 @@ AtlasLoot_Data["T10"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Dark Coven's Garb"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Dark Coven's Garb", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50241, price = "95 #eoffrost#" }, --Dark Coven Hood
 			{ itemID = 50244, price = "60 #eoffrost#" }, --Dark Coven Shoulderpads
 			{ itemID = 50243, price = "95 #eoffrost#" }, --Dark Coven Robe
 			{ itemID = 50240, price = "60 #eoffrost#" }, --Dark Coven Gloves
 			{ itemID = 50242, price = "95 #eoffrost#" }, --Dark Coven Leggings
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Dark Coven's Garb"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Dark Coven's Garb", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51208 }, --Sanctified Dark Coven Hood
 			{ itemID = 51205 }, --Sanctified Dark Coven Shoulderpads
 			{ itemID = 51206 }, --Sanctified Dark Coven Robe
@@ -10771,7 +10771,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51207 }, --Sanctified Dark Coven Leggings
 		},
 		{
-			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Dark Coven's Garb"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Spell_Shadow_CurseOfTounges", name = "=q6=".."Dark Coven's Garb", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51231 }, --Sanctified Dark Coven Hood
 			{ itemID = 51234 }, --Sanctified Dark Coven Shoulderpads
 			{ itemID = 51233 }, --Sanctified Dark Coven Robe
@@ -10780,15 +10780,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. AL["Fury"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. "Fury",
 		{
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Ymirjar Lord's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Ymirjar Lord's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50080, price = "95 #eoffrost#" }, --Ymirjar Lord's Helmet
 			{ itemID = 50082, price = "60 #eoffrost#" }, --Ymirjar Lord's Shoulderplates
 			{ itemID = 50078, price = "95 #eoffrost#" }, --Ymirjar Lord's Battleplate
 			{ itemID = 50079, price = "60 #eoffrost#" }, --Ymirjar Lord's Gauntlets
 			{ itemID = 50081, price = "95 #eoffrost#" }, --Ymirjar Lord's Legplates
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Ymirjar Lord's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Ymirjar Lord's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51212 }, --Ymirjar Lord's Helmet
 			{ itemID = 51210 }, --Ymirjar Lord's Shoulderplates
 			{ itemID = 51214 }, --Ymirjar Lord's Battleplate
@@ -10796,7 +10796,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51211 }, --Ymirjar Lord's Legplates
 		},
 		{
-			{ icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Ymirjar Lord's Battlegear"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "Ability_Warrior_BattleShout", name = "=q6=".."Ymirjar Lord's Battlegear", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51227 }, --Ymirjar Lord's Helmet
 			{ itemID = 51229 }, --Ymirjar Lord's Shoulderplates
 			{ itemID = 51225 }, --Ymirjar Lord's Battleplate
@@ -10805,15 +10805,15 @@ AtlasLoot_Data["T10"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. AL["Protection"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - " .. "Protection",
 		{
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Ymirjar Lord's Plate"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "INV_Shield_05", name = "=q6=".."Ymirjar Lord's Plate", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 50848, price = "95 #eoffrost#" }, --Ymirjar Lord's Greathelm
 			{ itemID = 50846, price = "60 #eoffrost#" }, --Ymirjar Lord's Pauldrons
 			{ itemID = 50850, price = "95 #eoffrost#" }, --Ymirjar Lord's Breastplate
 			{ itemID = 50849, price = "60 #eoffrost#" }, --Ymirjar Lord's Handguards
 			{ itemID = 50847, price = "95 #eoffrost#" }, --Ymirjar Lord's Legguards
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Ymirjar Lord's Plate"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "INV_Shield_05", name = "=q6=".."Ymirjar Lord's Plate", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51218 }, --Ymirjar Lord's Greathelm
 			{ itemID = 51215 }, --Ymirjar Lord's Pauldrons
 			{ itemID = 51219 }, --Ymirjar Lord's Breastplate
@@ -10821,7 +10821,7 @@ AtlasLoot_Data["T10"] = {
 			{ itemID = 51216 }, --Ymirjar Lord's Legguards
 		},
 		{
-			{ icon = "INV_Shield_05", name = "=q6="..AL["Ymirjar Lord's Plate"], desc = "=q5=" .. AL["Tier 10"] },
+			{ icon = "INV_Shield_05", name = "=q6=".."Ymirjar Lord's Plate", desc = "=q5=" .. "Tier 10" },
 			{ itemID = 51221 }, --Ymirjar Lord's Greathelm
 			{ itemID = 51224 }, --Ymirjar Lord's Pauldrons
 			{ itemID = 51220 }, --Ymirjar Lord's Breastplate
@@ -10837,10 +10837,10 @@ AtlasLoot_Data["T10"] = {
 
 AtlasLoot_Data["Legendaries"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = AL["Legendary Items"],
+	Name = "Legendary Items",
 	Type = "WrathRaid",
 	{
-		Name = AL["Legendary Items"],
+		Name = "Legendary Items",
 		{
 			{ itemID = 34334 }, --Thori'dal, the Stars' Fury
 			{ itemID = 32837 }, --Warglaive of Azzinoth
@@ -10903,9 +10903,9 @@ AtlasLoot_Data["WorldEpicsWrath"] = {
 
 AtlasLoot_Data["EmblemofHeroism"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = AL["Emblem of Heroism Rewards"],
+	Name = "Emblem of Heroism Rewards",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
 			{ itemID = 40697, price = "40 #eofheroism#" }, --Elegant Temple Gardens' Girdle
 			{ itemID = 40696, price = "40 #eofheroism#" }, --Plush Sash of Guzbah
@@ -10929,7 +10929,7 @@ AtlasLoot_Data["EmblemofHeroism"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
 			{ itemID = 40711, price = "15 #eofheroism#" }, --Idol of Lush Moss
 			{ itemID = 40712, price = "15 #eofheroism#" }, --Idol of Steadfast Renewal
@@ -10955,7 +10955,7 @@ AtlasLoot_Data["EmblemofHeroism"] = {
 		},
 	},
 	{
-		Name = AL["Page 3"],
+		Name = "Page 3",
 		{
 			{ itemID = 40610, price = "80 #eofheroism#" }, --Chestguard of the Lost Conqueror
 			{ itemID = 40611, price = "80 #eofheroism#" }, --Chestguard of the Lost Protector
@@ -10984,9 +10984,9 @@ AtlasLoot_Data["EmblemofHeroism"] = {
 
 AtlasLoot_Data["EmblemofValor"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = AL["Emblem of Valor Rewards"],
+	Name = "Emblem of Valor Rewards",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
 			{ itemID = 40724, price = "25 #eofvalor#" }, --Cloak of Kea Feathers
 			{ itemID = 40723, price = "25 #eofvalor#" }, --Disguise of the Kumiho
@@ -11015,7 +11015,7 @@ AtlasLoot_Data["EmblemofValor"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
 			{ itemID = 40719, price = "25 #eofvalor#" }, --Band of Channeled Magic
 			{ itemID = 40720, price = "25 #eofvalor#" }, --Renewal of Life
@@ -11050,9 +11050,9 @@ AtlasLoot_Data["EmblemofValor"] = {
 
 AtlasLoot_Data["EmblemofConquest"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = AL["Emblem of Conquest Rewards"],
+	Name = "Emblem of Conquest Rewards",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
 			{ itemID = 45840, price = "28 #eofconquest#" }, --Touch of the Occult
 			{ itemID = 45831, price = "28 #eofconquest#" }, --Sash of Potent Incantations
@@ -11083,7 +11083,7 @@ AtlasLoot_Data["EmblemofConquest"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
 			{ itemID = 45820, price = "19 #eofconquest#" }, --Broach of the Wailing Night
 			{ itemID = 45822, price = "19 #eofconquest#" }, --Evoker's Charm
@@ -11121,9 +11121,9 @@ AtlasLoot_Data["EmblemofConquest"] = {
 
 AtlasLoot_Data["EmblemofTriumph"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = AL["Emblem of Triumph Rewards"],
+	Name = "Emblem of Triumph Rewards",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
 			{ itemID = 47694, price = "75 #eoftriumph#" }, --Helm of Clouded Sight
 			{ itemID = 47693, price = "75 #eoftriumph#" }, --Hood of Fiery Aftermath
@@ -11146,7 +11146,7 @@ AtlasLoot_Data["EmblemofTriumph"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
 			{ itemID = 47695, price = "75 #eoftriumph#" }, --Hood of Clouded Sight
 			{ itemID = 47692, price = "75 #eoftriumph#" }, --Hood of Smoldering Aftermath
@@ -11169,7 +11169,7 @@ AtlasLoot_Data["EmblemofTriumph"] = {
 		},
 	},
 	{
-		Name = AL["Page 3"],
+		Name = "Page 3",
 		{
 			{ itemID = 47732, price = "35 #eoftriumph#" }, --Band of the Invoker
 			{ itemID = 47729, price = "35 #eoftriumph#" }, --Bloodshed Band
@@ -11207,9 +11207,9 @@ AtlasLoot_Data["EmblemofTriumph"] = {
 
 AtlasLoot_Data["EmblemofFrost"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
-	Name = AL["Emblem of Frost Rewards"],
+	Name = "Emblem of Frost Rewards",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
 			{ itemID = 50975, price = "95 #eoffrost#" }, --Ermine Coronation Robes
 			{ itemID = 50974, price = "95 #eoffrost#" }, --Meteor Chaser's Raiment
@@ -11243,7 +11243,7 @@ AtlasLoot_Data["EmblemofFrost"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
 			{ itemID = 50468, price = "50 #eoffrost#" }, --Drape of the Violet Tower
 			{ itemID = 50467, price = "50 #eoffrost#" }, --Might of the Ocean Serpent

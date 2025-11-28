@@ -1,6 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
+
+
 
 local ALCHEMY = GetSpellInfo(2259)
 local BLACKSMITHING = GetSpellInfo(2018)
@@ -81,7 +81,7 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 	Name = ALCHEMY,
 	Type = "ClassicCrafting",
 	{
-		Name = AL["Battle Elixirs"],
+		Name = "Battle Elixirs",
 		{
 			{itemID = 13454, spellID = 17573 }, --Greater Arcane Elixir
 			{itemID = 13452, spellID = 17571 }, --Elixir of the Mongoose
@@ -106,7 +106,7 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Guardian Elixirs"],
+		Name = "Guardian Elixirs",
 		{
 			{itemID = 20004, spellID = 24368 }, --Major Troll's Blood Elixir
 			{itemID = 20007, spellID = 24365 }, --Mageblood Elixir
@@ -126,7 +126,7 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Potions"] .. " 1",
+		Name = "Potions" .. " 1",
 		{
 			{itemID = 18253, spellID = 22732 }, --Major Rejuvenation Potion
 			{itemID = 13444, spellID = 17580 }, --Major Mana Potion
@@ -155,7 +155,7 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Potions"] .. " 2",
+		Name = "Potions" .. " 2",
 		{
 			{itemID = 9030, spellID = 11452 }, --Restorative Potion
 			{itemID = 6149, spellID = 11448 }, --Greater Mana Potion
@@ -186,7 +186,7 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Flasks"],
+		Name = "Flasks",
 		{
 			{itemID = 13513, spellID = 17638 }, --Flask of Chromatic Resistance
 			{itemID = 13511, spellID = 17636 }, --Flask of Distilled Wisdom
@@ -197,7 +197,7 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Transmutes"],
+		Name = "Transmutes",
 		{
 			{itemID = 3577, spellID = 11479 }, --Transmute: Iron to Gold
 			{itemID = 6037, spellID = 11480 }, --Transmute: Mithril to Truesilver
@@ -214,7 +214,7 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{itemID = 19931, spellID = 24266 }, --Gurubashi Mojo Madness
 			{itemID = 9210, spellID = 11473 }, --Ghost Dye
@@ -233,9 +233,9 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["High Risk"],
+		Name = "High Risk",
 		{
-			{ name = AL["Rare"], icon = "INV_Box_01"},
+			{ name = "Rare", icon = "INV_Box_01"},
 			{itemID = 967444, spellID = 968403 }, --Potent Flask of Manifesting Power
 			{itemID = 967447, spellID = 968406 }, --Potent Flask of the Warsong
 			{itemID = 967450, spellID = 968409 }, --Potent Flask of the Kirin Tor
@@ -249,7 +249,7 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 			{itemID = 967474, spellID = 968433 }, --Potent Flask of Adept Striking
 		},
 		{
-			{ name = AL["Epic"], icon = "INV_Box_01"},
+			{ name = "Epic", icon = "INV_Box_01"},
 			{itemID = 967445, spellID = 968404 }, --Distilled Flask of Manifesting Power
 			{itemID = 967448, spellID = 968407 }, --Distilled Flask of the Warsong
 			{itemID = 967451, spellID = 968410 }, --Distilled Flask of the Kirin Tor
@@ -272,7 +272,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	Name = BLACKSMITHING,
 	Type = "ClassicCrafting",
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Chest",
 		{
 			{itemID = 22669, spellID = 28242 }, --Icebane Breastplate
 			{itemID = 12641, spellID = 16746 }, --Invulnerable Mail
@@ -308,7 +308,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 			{itemID = 10421, spellID = 12260 }, --Rough Copper Vest
 		},
 	},
-	{ Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Feet",
+	{ Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Feet",
 		{
 			{itemID = 20039, spellID = 24399 }, --Dark Iron Boots
 			{itemID = 19048, spellID = 23629 }, --Heavy Timbermaw Boots
@@ -328,7 +328,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Hands",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Hands",
 		{
 			{itemID = 19164, spellID = 23637 }, --Dark Iron Gauntlets
 			{itemID = 22670, spellID = 28243 }, --Icebane Gauntlets
@@ -355,7 +355,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Head",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Head",
 		{
 			{itemID = 19148, spellID = 23636 }, --Dark Iron Helm
 			{itemID = 12640, spellID = 16729 }, --Lionheart Helm
@@ -381,7 +381,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Legs",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Legs",
 		{
 			{itemID = 17013, spellID = 20876 }, --Dark Iron Leggings
 			{itemID = 12414, spellID = 16662 }, --Thorium Leggings
@@ -408,7 +408,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Shoulder",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Shoulder",
 		{
 			{itemID = 16988, spellID = 20873 }, --Fiery Chain Shoulders
 			{itemID = 19691, spellID = 24137 }, --Bloodsoul Shoulders
@@ -428,7 +428,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Waist",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Waist",
 		{
 			{itemID = 22197, spellID = 27585 }, --Heavy Obsidian Belt
 			{itemID = 22764, spellID = 28463 }, --Ironvine Belt
@@ -444,7 +444,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Wrist",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Wrist",
 		{
 			{itemID = 22671, spellID = 28244 }, --Icebane Bracers
 			{itemID = 17014, spellID = 20874 }, --Dark Iron Bracers
@@ -568,7 +568,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Item Enhancements"],
+		Name = "Item Enhancements",
 		{
 			{itemID = 12404, spellID = 16641 }, --Dense Sharpening Stone
 			{itemID = 12643, spellID = 16640 }, --Dense Weightstone
@@ -586,7 +586,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{itemID = 15872, spellID = 19669 }, --Arcanite Skeleton Key
 			{itemID = 15871, spellID = 19668 }, --Truesilver Skeleton Key
@@ -621,9 +621,9 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["High Risk"],
+		Name = "High Risk",
 		{
-			{ name = AL["Rare"], icon = "INV_Box_01"},
+			{ name = "Rare", icon = "INV_Box_01"},
 			{itemID = 967173, spellID = 968019 }, --Sturdy Living Belt Buckle
 			{itemID = 967176, spellID = 968022 }, --Sturdy Deflecting Belt Buckle
 			{itemID = 967179, spellID = 968025 }, --Sturdy Roguish Belt Buckle
@@ -635,7 +635,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 			{itemID = 967681, spellID = 968481 }, --Homicite Key
 		},
 		{
-			{ name = AL["Epic"], icon = "INV_Box_01"},
+			{ name = "Epic", icon = "INV_Box_01"},
 			{itemID = 967174, spellID = 968020 }, --Mastercraft Living Belt Buckle
 			{itemID = 967177, spellID = 968023 }, --Mastercraft Deflecting Belt Buckle
 			{itemID = 967180, spellID = 968026 }, --Mastercraft Roguish Belt Buckle
@@ -657,7 +657,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 	Name = COOKING,
 	Type = "ClassicCrafting",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
 			{itemID = 21023, spellID = 25659 }, --Dirge's Kickin' Chimaerok Chops
 			{itemID = 100626, spellID = 966455 }, --Azerothian Schmorgus Boards
@@ -677,7 +677,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
 			{itemID = 20452, spellID = 24801 }, --Smoked Desert Dumplings
 			{itemID = 13935, spellID = 18247 }, --Baked Salmon
@@ -711,7 +711,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Page 3"],
+		Name = "Page 3",
 		{
 			{itemID = 12212, spellID = 15861 }, --Jungle Stew
 			{itemID = 8364, spellID = 20916 }, --Mithril Head Trout
@@ -748,7 +748,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Page 4"],
+		Name = "Page 4",
 		{
 			{itemID = 2687, spellID = 2546 }, --Dry Pork Ribs
 			{itemID = 21072, spellID = 25704 }, --Smoked Sagefish
@@ -785,7 +785,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Page 5"],
+		Name = "Page 5",
 		{
 			{itemID = 12224, spellID = 15935 }, --Crispy Bat Wing
 			{itemID = 33924, spellID = 43779 }, --Delicious Chocolate Cake
@@ -799,9 +799,9 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["High Risk"].." - Page 1",
+		Name = "High Risk".." - Page 1",
 		{
-			{ name = AL["Rare"], icon = "INV_Box_01"},
+			{ name = "Rare", icon = "INV_Box_01"},
 			{itemID = 967510, spellID = 968280 }, --Animated Soup for the Soul
 			{itemID = 967513, spellID = 968283 }, --Volcanic Sandwich
 			{itemID = 967516, spellID = 968286 }, --Winter Wontons
@@ -818,7 +818,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 			{itemID = 967549, spellID = 968319 }, --Crawling Steak
 		},
 		{
-			{ name = AL["Epic"], icon = "INV_Box_01"},
+			{ name = "Epic", icon = "INV_Box_01"},
 			{itemID = 967511, spellID = 968281 }, --Animated Soup for the Soul
 			{itemID = 967514, spellID = 968284 }, --Volcanic Sandwich
 			{itemID = 967517, spellID = 968287 }, --Winter Wontons
@@ -836,9 +836,9 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["High Risk"].." - Page 2",
+		Name = "High Risk".." - Page 2",
 		{
-			{ name = AL["Rare"], icon = "INV_Box_01"},
+			{ name = "Rare", icon = "INV_Box_01"},
 			{itemID = 967600, spellID = 968370 }, --Subtle Sandwich
 			{itemID = 967603, spellID = 968373 }, --Subtle Wontons
 			{itemID = 967606, spellID = 968376 }, --Subtle Sulferous Soup
@@ -854,7 +854,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 			{itemID = 967600, spellID = 968370 }, --Subtle Steak
 		},
 		{
-			{ name = AL["Epic"], icon = "INV_Box_01"},
+			{ name = "Epic", icon = "INV_Box_01"},
 			{itemID = 967601, spellID = 968371 }, --Subtle Sandwich
 			{itemID = 967604, spellID = 968374 }, --Subtle Wontons
 			{itemID = 967607, spellID = 968377 }, --Subtle Sulferous Soup
@@ -871,9 +871,9 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["High Risk"].." - Page 3",
+		Name = "High Risk".." - Page 3",
 		{
-			{ name = AL["Rare"], icon = "INV_Box_01"},
+			{ name = "Rare", icon = "INV_Box_01"},
 			{itemID = 967555, spellID = 968325 }, --Master Wontons
 			{itemID = 967558, spellID = 968328 }, --Big Whack Sandwich
 			{itemID = 967561, spellID = 968331 }, --Warping Wontons
@@ -890,7 +890,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 			{itemID = 967594, spellID = 968364 }, --Rolling Meatballs
 		},
 		{
-			{ name = AL["Epic"], icon = "INV_Box_01"},
+			{ name = "Epic", icon = "INV_Box_01"},
 			{itemID = 967556, spellID = 968326 }, --Master Wontons
 			{itemID = 967559, spellID = 968329 }, --Big Whack Sandwich
 			{itemID = 967562, spellID = 968332 }, --Warping Wontons
@@ -908,7 +908,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["High Risk"].." - "..AL["Miscellaneous"],
+		Name = "High Risk".." - ".."Miscellaneous",
 		{
 			{itemID = 967704, spellID = 968647 }, --Alluring Bait
 		},
@@ -927,7 +927,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 	Name = ENCHANTING,
 	Type = "ClassicCrafting",
 	{
-		Name = AL["Enchant Boots"],
+		Name = "Enchant Boots",
 		{
 			{spellID = 20023, icon = "Spell_Holy_GreaterHeal" }, --Enchant Boots - Greater Agility
 			{spellID = 20024, icon = "Spell_Holy_GreaterHeal" }, --Enchant Boots - Spirit
@@ -946,7 +946,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Bracer"],
+		Name = "Enchant Bracer",
 		{
 			{spellID = 23802, icon = "Spell_Holy_GreaterHeal" }, --Enchant Bracers - Healing Power
 			{spellID = 20011, icon = "Spell_Holy_GreaterHeal" }, --Enchant Bracers - Superior Stamina
@@ -978,7 +978,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Chest"],
+		Name = "Enchant Chest",
 		{
 			{spellID = 20025, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Greater Stats
 			{spellID = 20028, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Major Mana
@@ -1003,7 +1003,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Cloak"],
+		Name = "Enchant Cloak",
 		{
 			{spellID = 25081, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Greater Fire Resistance
 			{spellID = 20015, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Superior Defense
@@ -1027,7 +1027,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Gloves"],
+		Name = "Enchant Gloves",
 		{
 			{spellID = 25078, icon = "Spell_Holy_GreaterHeal" }, --Enchant Gloves - Fire Power
 			{spellID = 25074, icon = "Spell_Holy_GreaterHeal" }, --Enchant Gloves - Frost Power
@@ -1052,7 +1052,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Shield"],
+		Name = "Enchant Shield",
 		{
 			{spellID = 20016, icon = "Spell_Holy_GreaterHeal" }, --Enchant Shield - Superior Spirit
 			{spellID = 20017, icon = "Spell_Holy_GreaterHeal" }, --Enchant Shield - Greater Stamina
@@ -1068,7 +1068,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Enchant 2H Weapon"],
+		Name = "Enchant 2H Weapon",
 		{
 			{spellID = 20036, icon = "Spell_Holy_GreaterHeal" }, --Enchant 2H Weapon - Major Intellect
 			{spellID = 20035, icon = "Spell_Holy_GreaterHeal" }, --Enchant 2H Weapon - Major Spirit
@@ -1083,7 +1083,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Weapon"],
+		Name = "Enchant Weapon",
 		{
 			{spellID = 20034, icon = "Spell_Holy_GreaterHeal" }, --Enchant Weapon - Crusader
 			{spellID = 22750, icon = "Spell_Holy_GreaterHeal" }, --Enchant Weapon - Healing Power
@@ -1111,7 +1111,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{itemID = 20748, spellID = 25130 }, --Brilliant Mana Oil
 			{itemID = 20749, spellID = 25129 }, --Brilliant Wizard Oil
@@ -1137,9 +1137,9 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["High Risk"],
+		Name = "High Risk",
 		{
-			{ name = AL["Rare"], icon = "INV_Box_01"},
+			{ name = "Rare", icon = "INV_Box_01"},
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968677 }, --Enchant Weapon - Unstoppable Assault
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968680 }, --Enchant Weapon - Lucid Assault
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968683 }, --Enchant Weapon - Spellbinder's Rage
@@ -1152,7 +1152,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968770 }, --Enchant Weapon - Crusader II
 		},
 		{
-			{ name = AL["Epic"], icon = "INV_Box_01"},
+			{ name = "Epic", icon = "INV_Box_01"},
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968678 }, --Enchant Weapon - Greater Unstoppable Assault
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968681 }, --Enchant Weapon - Greater Lucid Assualt
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968684 }, --Enchant Weapon - Greater Spellbinder's Rage
@@ -1176,7 +1176,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 	Name = ENGINEERING,
 	Type = "ClassicCrafting",
 	{
-		Name = AL["Ammunition"],
+		Name = "Ammunition",
 		{
 			{itemID = 18042, desc = "Quest See Tooltip", quest = {14183,14182, text = "Trade Thorium Shells for Arrows"}}, --Thorium Headed Arrow
 			{itemID = 15997, spellID = 19800 }, --Thorium Shells
@@ -1188,7 +1188,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"],
+		Name = "Armor",
 		{
 			{itemID = 16022, spellID = 19830 }, --Arcanite Dragonling
 			{itemID = 19999, spellID = 24356 }, --Bloodvine Goggles
@@ -1220,7 +1220,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Explosives"],
+		Name = "Explosives",
 		{
 			{itemID = 16040, spellID = 19831 }, --Arcane Bomb
 			{itemID = 16005, spellID = 19799 }, --Dark Iron Bomb
@@ -1254,7 +1254,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Item Enhancements"],
+		Name = "Item Enhancements",
 		{
 			{itemID = 18283, spellID = 22793 }, --Biznicks 247x128 Accurascope
 			{itemID = 10548, spellID = 12620 }, --Sniper Scope
@@ -1265,7 +1265,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{itemID = 18232, spellID = 22704 }, --Field Repair Bot 74A
 			{itemID = 23832, spellID = 30573 }, --Gnomish Tonk Controller
@@ -1302,7 +1302,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{itemID = 4391, spellID = 3963 }, --Compact Harvest Reaper Kit
 			{itemID = 7148, spellID = 9273 }, --Goblin Jumper Cables
@@ -1326,7 +1326,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Reagents"],
+		Name = "Reagents",
 		{
 			{itemID = 16006, spellID = 19815 }, --Delicate Arcanite Converter
 			{itemID = 16000, spellID = 19795 }, --Thorium Tube
@@ -1357,7 +1357,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Weapon"],
+		Name = "Weapon",
 		{
 			{itemID = 18282, spellID = 22795 }, --Core Marksman Rifle
 			{itemID = 16007, spellID = 19833 }, --Flawless Arcanite Rifle
@@ -1414,9 +1414,9 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["High Risk"],
+		Name = "High Risk",
 		{
-			{ name = AL["Rare"], icon = "INV_Box_01"},
+			{ name = "Rare", icon = "INV_Box_01"},
 			{itemID = 967197, spellID = 968043 }, --Focused Gnomish Magnifying Lense
 			{itemID = 967200, spellID = 968046 }, --Focused Gnomish Focusing Lense
 			{itemID = 967203, spellID = 968049 }, --Focused Gnomish Prismatic Lense
@@ -1425,7 +1425,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 			{itemID = 967212, spellID = 968058 }, --Focused Reflex Scope
 		},
 		{
-			{ name = AL["Epic"], icon = "INV_Box_01"},
+			{ name = "Epic", icon = "INV_Box_01"},
 			{itemID = 967198, spellID = 968044 }, --Polished Gnomish Magnifying Lense
 			{itemID = 967201, spellID = 968047 }, --Polished Gnomish Focusing Lense
 			{itemID = 967204, spellID = 968050 }, --Polished Gnomish Prismatic Lense
@@ -1473,7 +1473,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	Name = LEATHERWORKING,
 	Type = "ClassicCrafting",
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Back",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Back",
 		{
 			{itemID = 18509, spellID = 22926 }, --Chromatic Cloak
 			{itemID = 18511, spellID = 22928 }, --Shifting Cloak
@@ -1493,7 +1493,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Chest",
 		{
 			{itemID = 22661, spellID = 28219 }, --Polar Tunic
 			{itemID = 15059, spellID = 19095 }, --Living Breastplate
@@ -1516,7 +1516,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Chest",
 		{
 			{itemID = 8175, spellID = 10499 }, --Nightscape Tunic
 			{itemID = 5739, spellID = 6661 }, --Barbaric Harness
@@ -1541,7 +1541,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	},
 
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Feet",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Feet",
 		{
 			{itemID = 22760, spellID = 28473 }, --Bramblewood Boots
 			{itemID = 18506, spellID = 22922 }, --Mongoose Boots
@@ -1561,7 +1561,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Hands",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Hands",
 		{
 			{itemID = 22662, spellID = 28220 }, --Polar Gloves
 			{itemID = 19686, spellID = 24122 }, --Primal Batskin Gloves
@@ -1592,7 +1592,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Head",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Head",
 		{
 			{itemID = 16983, spellID = 20854 }, --Molten Helm
 			{itemID = 22759, spellID = 28472 }, --Bramblewood Helm
@@ -1607,7 +1607,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Legs",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Legs",
 		{
 			{itemID = 15095, spellID = 19091 }, --Runic Leather Pants
 			{itemID = 15062, spellID = 19097 }, --Devilsaur Leggings
@@ -1639,7 +1639,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Shoulder",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Shoulder",
 		{
 			{itemID = 19049, spellID = 23704 }, --Timbermaw Brawlers
 			{itemID = 19689, spellID = 24125 }, --Blood Tiger Shoulders
@@ -1659,7 +1659,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Waist",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Waist",
 		{
 			{itemID = 19162, spellID = 23709 }, --Corehound Belt
 			{itemID = 19149, spellID = 23707 }, --Lava Belt
@@ -1685,7 +1685,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Wrist",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Wrist",
 		{
 			{itemID = 22663, spellID = 28221 }, --Polar Bracers
 			{itemID = 19687, spellID = 24123 }, --Primal Batskin Bracers
@@ -1702,7 +1702,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Chest",
 		{
 			{itemID = 22664, spellID = 28222 }, --Icy Scale Breastplate
 			{itemID = 20380, spellID = 24703 }, --Dreamscale Breastplate
@@ -1719,14 +1719,14 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Feet",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Feet",
 		{
 			{itemID = 16984, spellID = 20855 }, --Black Dragonscale Boots
 			{itemID = 8209, spellID = 10554 }, --Tough Scorpid Boots
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Hands",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Hands",
 		{
 			{itemID = 22666, spellID = 28223 }, --Icy Scale Gauntlets
 			{itemID = 19157, spellID = 23708 }, --Chromatic Gauntlets
@@ -1740,7 +1740,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Head",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Head",
 		{
 			{itemID = 15080, spellID = 19088 }, --Heavy Scorpid Helm
 			{itemID = 8208, spellID = 10570 }, --Tough Scorpid Helm
@@ -1748,7 +1748,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Legs",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Legs",
 		{
 			{itemID = 20295, spellID = 24654 }, --Blue Dragonscale Leggings
 			{itemID = 15052, spellID = 19107 }, --Black Dragonscale Leggings
@@ -1760,7 +1760,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Shoulder",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Shoulder",
 		{
 			{itemID = 15051, spellID = 19094 }, --Black Dragonscale Shoulders
 			{itemID = 15081, spellID = 19100 }, --Heavy Scorpid Shoulders
@@ -1770,13 +1770,13 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Waist",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Waist",
 		{
 			{itemID = 15082, spellID = 19070 }, --Heavy Scorpid Belt
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Wrist",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Wrist",
 		{
 			{itemID = 22665, spellID = 28224 }, --Icy Scale Bracers
 			{itemID = 18508, spellID = 22923 }, --Swift Flight Bracers
@@ -1788,7 +1788,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Item Enhancements"],
+		Name = "Item Enhancements",
 		{
 			{itemID = 15564, spellID = 19058 }, --Rugged Armor Kit
 			{itemID = 8173, spellID = 10487 }, --Thick Armor Kit
@@ -1798,7 +1798,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Quivers and Ammo Pouches"],
+		Name = "Quivers and Ammo Pouches",
 		{
 			{itemID = 8217, spellID = 14930 }, --Quickdraw Quiver
 			{itemID = 8218, spellID = 14932 }, --Thick Leather Ammo Pouch
@@ -1809,7 +1809,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Drums, Bags and Misc."],
+		Name = "Drums, Bags and Misc.",
 		{
 			{itemID = 18258, spellID = 22815 }, --Gordok Ogre Suit
 			{itemID = 18662, spellID = 23190 }, --Heavy Leather Ball
@@ -1817,7 +1817,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Leather"],
+		Name = "Leather",
 		{
 			{itemID = 8170, spellID = 22331 }, --Rugged Leather
 			{itemID = 15407, spellID = 19047 }, --Cured Rugged Hide
@@ -1858,9 +1858,9 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["High Risk"],
+		Name = "High Risk",
 		{
-			{ name = AL["Rare"], icon = "INV_Box_01"},
+			{ name = "Rare", icon = "INV_Box_01"},
 			{itemID = 967155, spellID = 968001 }, --Sturdy Yeti Gambeson
 			{itemID = 967158, spellID = 968004 }, --Sturdy Devilsaur Gambeson
 			{itemID = 967161, spellID = 968007 }, --Sturdy Plaguebat Gambeson
@@ -1869,7 +1869,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 			{itemID = 967170, spellID = 968016 }, --Sturdy AtlasLoot.Colors.BLUE Scale Gambeson
 		},
 		{
-			{ name = AL["Epic"], icon = "INV_Box_01"},
+			{ name = "Epic", icon = "INV_Box_01"},
 			{itemID = 967156, spellID = 968002 }, --Mastercraft Yeti Gambeson
 			{itemID = 967159, spellID = 968005 }, --Mastercraft Devilsaur Gambeson
 			{itemID = 967162, spellID = 968008 }, --Mastercraft Plaguebat Gambeson
@@ -1889,7 +1889,7 @@ AtlasLoot_Data["MiningCLASSIC"] = {
 	Name = MINING,
 	Type = "ClassicCrafting",
 	{
-		Name = AL["Smelting"],
+		Name = "Smelting",
 		{
 			{itemID = 17771, spellID = 22967 }, --Smelt Elementium
 			{itemID = 12655, spellID = 70524 }, --Enchanted Thorium
@@ -1907,7 +1907,7 @@ AtlasLoot_Data["MiningCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Materials"],
+		Name = "Materials",
 		{
 			{itemID = 10620 }, --Thorium
 			{itemID = 11370 }, --Dark Iron
@@ -1931,7 +1931,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	Name = TAILORING,
 	Type = "ClassicCrafting",
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Back",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Back",
 		{
 			{itemID = 22658, spellID = 28208 }, --Glacial Cloak
 			{itemID = 22660, spellID = 28210 }, --Gaea's Embrace
@@ -1957,7 +1957,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest 1",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Chest 1",
 		{
 			{itemID = 19156, spellID = 23666 }, --Flarecore Robe
 			{itemID = 22652, spellID = 28207 }, --Glacial Vest
@@ -1994,7 +1994,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest 2",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Chest 2",
 		{
 			{itemID = 10007, spellID = 12056 }, --Red Mageweave Vest
 			{itemID = 10004, spellID = 12055 }, --Shadoweave Robe
@@ -2027,7 +2027,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Feet",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Feet",
 		{
 			{itemID = 19684, spellID = 24093 }, --Bloodvine Boots
 			{itemID = 20537, spellID = 24903 }, --Runed Stygian Boots
@@ -2052,7 +2052,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Hands",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Hands",
 		{
 			{itemID = 16979, spellID = 20849 }, --Flarecore Gloves
 			{itemID = 22654, spellID = 28205 }, --Glacial Gloves
@@ -2081,7 +2081,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Head",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Head",
 		{
 			{itemID = 14140, spellID = 18452 }, --Mooncloth Circlet
 			{itemID = 22757, spellID = 28481 }, --Sylvan Crown
@@ -2101,7 +2101,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Legs",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Legs",
 		{
 			{itemID = 19165, spellID = 23667 }, --Flarecore Leggings
 			{itemID = 19683, spellID = 24092 }, --Bloodvine Leggings
@@ -2132,7 +2132,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Shoulder",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Shoulder",
 		{
 			{itemID = 16980, spellID = 20848 }, --Flarecore Mantle
 			{itemID = 19059, spellID = 23665 }, --Argent Shoulders
@@ -2155,7 +2155,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Waist",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Waist",
 		{
 			{itemID = 18405, spellID = 22866 }, --Belt of the Archmage
 			{itemID = 20539, spellID = 24902 }, --Runed Stygian Belt
@@ -2170,7 +2170,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Wrist",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Wrist",
 		{
 			{itemID = 18263, spellID = 22759 }, --Flarecore Wraps
 			{itemID = 22655, spellID = 28209 }, --Glacial Wrists
@@ -2178,7 +2178,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Bags"],
+		Name = "Bags",
 		{
 			{itemID = 21342, spellID = 26087 }, --Core Felcloth Bag
 			{itemID = 14156, spellID = 18455 }, --Bottomless Bag
@@ -2206,7 +2206,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{itemID = 14342, spellID = 18560 }, --Mooncloth
 			{itemID = 14048, spellID = 18401 }, --Bolt of Runecloth
@@ -2217,7 +2217,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Shirts"],
+		Name = "Shirts",
 		{
 			{itemID = 10034, spellID = 12085 }, --Tuxedo Shirt
 			{itemID = 10055, spellID = 12080 }, --Pink Mageweave Shirt
@@ -2246,9 +2246,9 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["High Risk"],
+		Name = "High Risk",
 		{
-			{ name = AL["Rare"], icon = "INV_Box_01"},
+			{ name = "Rare", icon = "INV_Box_01"},
 			{itemID = 967215, spellID = 968061 }, --Chain Cloak Lining
 			{itemID = 967218, spellID = 968064 }, --Sustaining Cloak Lining
 			{itemID = 967221, spellID = 968067 }, --Flowing Cloak Lining
@@ -2257,7 +2257,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 			{itemID = 967230, spellID = 968076 }, --Nimble Cloak Lining
 		},
 --[[ 		{
-			{ name = AL["Epic"], icon = "INV_Box_01"},
+			{ name = "Epic", icon = "INV_Box_01"},
 			{itemID = 967216, spellID = 968062 }, ----Mastercraft Chain Cloak Lining
 			{itemID = 967219, spellID = 968065 }, ----Mastercraft Sustaining Cloak Lining
 			{itemID = 967222, spellID = 968068 }, ----Mastercraft Flowing Cloak Lining

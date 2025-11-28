@@ -1,6 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0", "NewsFrame-1.0", "SettingsCreator-1.0", "AceSerializer-3.0", "AceComm-3.0")
 ATLASLOOT = AtlasLoot
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 
 AtlasLoot.Version = GetAddOnMetadata("AtlasLoot", "Version")
 AtlasLoot.DebugMessages = false
@@ -127,7 +127,7 @@ function AtlasLoot:Reset(data)
 		AtlasLootWishList = {}
 		self:WishlistSetup()
     end
-    DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.RED..AL["Reset complete!"])
+    DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot"..": "..self.Colors.RED.."Reset complete!")
 end
 
 function AtlasLoot:InitializeSlashCommands()
@@ -167,7 +167,7 @@ function AtlasLoot:SlashCommand(msg)
 		self:GetMerchantItems(arg1)
 	elseif cmd == "admin" then
 		self.selectedProfile.isAdmin = not self.selectedProfile.isAdmin
-		DEFAULT_CHAT_FRAME:AddMessage(self.selectedProfile.isAdmin and AL["AtlasLoot Admin mode is now enabled"] or AL["AtlasLoot Admin is mode now disabled"])
+		DEFAULT_CHAT_FRAME:AddMessage(self.selectedProfile.isAdmin and "AtlasLoot Admin mode is now enabled" or "AtlasLoot Admin is mode now disabled")
 	else
 		self.ui:Show()
 	end
@@ -216,7 +216,7 @@ function AtlasLoot:LoadAllModules()
 
 	if flag == 1 then
 		if self.DebugMessages then
-			DEFAULT_CHAT_FRAME:AddMessage(self.Colors.GREEN..AL["AtlasLoot"]..": "..self.Colors.WHITE..AL["All Available Modules Loaded"])
+			DEFAULT_CHAT_FRAME:AddMessage(self.Colors.GREEN.."AtlasLoot"..": "..self.Colors.WHITE.."All Available Modules Loaded")
 		end
 		collectgarbage("collect")
 	end

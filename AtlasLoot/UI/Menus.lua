@@ -4,7 +4,7 @@ Defines the table listings for the dropdown lists.
 ]]
 
 --Invoke all libraries
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
 function AtlasLoot:InitializeMenus()
@@ -16,20 +16,20 @@ function AtlasLoot:InitializeMenus()
 	--This is a multi-layer table defining the main loot listing.
 	--Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
 	menus.modules = {
-		{AL["Dungeons and Raids"], "Dungeons and Raids", 2},
-		{AL["Crafting"], "Crafting"},
-		{AL["Sets/Collections"], "Collections"},
-		{AL["PvP Rewards"], "PVP"},
-		{AL["Vanity"], "Vanity"},
-		{AL["Ascension Vanity Collection"], "CollectionsAscension"},
-		{AL["Factions"], "Factions"},
-		{AL["World Events"], "WorldEvents"},
+		{"Dungeons and Raids", "Dungeons and Raids", 2},
+		{"Crafting", "Crafting"},
+		{"Sets/Collections", "Collections"},
+		{"PvP Rewards", "PVP"},
+		{"Vanity", "Vanity"},
+		{"Ascension Vanity Collection", "CollectionsAscension"},
+		{"Factions", "Factions"},
+		{"World Events", "WorldEvents"},
 	}
 
 	menus.expansion = {
-		{ AL["Classic"], "CLASSIC" },
-		{ AL["Burning Crusade"], "TBC" },
-		{ AL["Wrath of the Lich King"], "WRATH" },
+		{ "Classic", "CLASSIC" },
+		{ "Burning Crusade", "TBC" },
+		{ "Wrath of the Lich King", "WRATH" },
 	}
 
 	-------------------------------------Dungeon and Raid Menus-------------------------------------
@@ -224,7 +224,7 @@ function AtlasLoot:InitializeMenus()
 		{ "", "WorldRaresTBC"},
 		{ "", "WorldEpicsTBC"},
 		{ "", "TBCSets"},
-		{ AL["Badge of Justice Rewards"], "BadgeShatt", "Header"},
+		{ "Badge of Justice Rewards", "BadgeShatt", "Header"},
 		{ "", "BadgeShatt"},
 		{ "", "BadgeSunwell"},
 		{ "", "SunmoteSunwell"},
@@ -526,6 +526,6 @@ function AtlasLoot:InitializeMenus()
 end
 
 AtlasLoot_Data["EmptyTable"] = {
-	Name = AL["Select a Loot Table..."],
-	{Name = AL["Select a Loot Table..."]},
+	Name = "Select a Loot Table...",
+	{Name = "Select a Loot Table..."},
 }

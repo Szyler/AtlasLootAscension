@@ -1,9 +1,9 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 
 local FilterTable = {
 	{
-		Name = AL["Primary Stats"],
+		Name = "Primary Stats",
 		Type = "PrimaryStat",
 		{"Strength", "ITEM_MOD_STRENGTH_SHORT"},
 		{"Agility", "ITEM_MOD_AGILITY_SHORT"},
@@ -11,7 +11,7 @@ local FilterTable = {
 		{"Spirit", "ITEM_MOD_SPIRIT_SHORT"},
 	},
 	{
-		Name = AL["Secondary Stats"],
+		Name = "Secondary Stats",
 		Type = "Stat",
 		{"Attack Power", "ITEM_MOD_ATTACK_POWER_SHORT"},
 		{"Spell Power", "ITEM_MOD_SPELL_POWER_SHORT"},
@@ -22,7 +22,7 @@ local FilterTable = {
 		{"Spell Pen", "ITEM_MOD_SPELL_PENETRATION_SHORT"}
 	},
 	{
-		Name = AL["Defensive Stats"],
+		Name = "Defensive Stats",
 		Type = "Stat",
 		{"Defense", "ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"},
 		{"Dodge", "ITEM_MOD_DODGE_RATING_SHORT"},

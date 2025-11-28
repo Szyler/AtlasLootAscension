@@ -1,9 +1,9 @@
 ﻿local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
-local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
-local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
-local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
+
+
+
+
+
 
 -- Index
 --- Permanent Events
@@ -44,20 +44,20 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 
 AtlasLoot_Data["ArgentTournament"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Argent Tournament"],
+	Name = "Argent Tournament",
 	{
-		Name = BabbleInventory["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
-			{ icon = "INV_BannerPVP_02", name = AtlasLoot.Colors.WHITE..BabbleFaction["Alliance"] },
+			{ icon = "INV_BannerPVP_02", name = AtlasLoot.Colors.WHITE.."Alliance" },
 			{ itemID = 45714, price = "1 #champwrit#" }, --Darnassus Commendation Badge
 			{ itemID = 45715, price = "1 #champwrit#" }, --Exodar Commendation Badge
 			{ itemID = 45716, price = "1 #champwrit#" }, --Gnomeregan Commendation Badge
 			{ itemID = 45717, price = "1 #champwrit#" }, --Ironforge Commendation Badge
 			{ itemID = 45718, price = "1 #champwrit#" }, --Stormwind Commendation Badge
-			{ itemID = 46114, desc = "=ds="..AL["Currency"] }, --Champion's Writ
+			{ itemID = 46114, desc = "=ds=".."Currency" }, --Champion's Writ
 		},
 		{
-			{ icon = "INV_BannerPVP_01", name = AtlasLoot.Colors.WHITE..BabbleFaction["Horde"] },
+			{ icon = "INV_BannerPVP_01", name = AtlasLoot.Colors.WHITE.."Horde" },
 			{ itemID = 45719, price = "1 #champwrit#" }, --Orgrimmar Commendation Badge
 			{ itemID = 45723, price = "1 #champwrit#" }, --Undercity Commendation Badge
 			{ itemID = 45722, price = "1 #champwrit#" }, --Thunder Bluff Commendation Badge
@@ -66,9 +66,9 @@ AtlasLoot_Data["ArgentTournament"] = {
 		},
 	},
 	{
-		Name = AL["Tabards"] .. " / " .. AL["Banner"],
+		Name = "Tabards" .. " / " .. "Banner",
 		{
-			{ icon = "INV_BannerPVP_02", name = AtlasLoot.Colors.WHITE..BabbleFaction["Alliance"] },
+			{ icon = "INV_BannerPVP_02", name = AtlasLoot.Colors.WHITE.."Alliance" },
 			{ itemID = 45021, price = "15 #champseal#" }, --Darnassus Banner
 			{ itemID = 45020, price = "15 #champseal#" }, --Exodar Banner
 			{ itemID = 45019, price = "15 #champseal#" }, --Gnomeregan Banner
@@ -83,7 +83,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 			{ itemID = 44990 }, --Champion's Seal
 		},
 		{
-			{ icon = "INV_BannerPVP_01", name = AtlasLoot.Colors.WHITE..BabbleFaction["Horde"] },
+			{ icon = "INV_BannerPVP_01", name = AtlasLoot.Colors.WHITE.."Horde" },
 			{ itemID = 45014, price = "15 #champseal#" }, --Orgrimmar Banner
 			{ itemID = 45016, price = "15 #champseal#" }, --Undercity Banner
 			{ itemID = 45013, price = "15 #champseal#" }, --Thunder Bluff Banner
@@ -95,15 +95,15 @@ AtlasLoot_Data["ArgentTournament"] = {
 			{ itemID = 45582, price = "50 #champseal#" }, --Sen'jin Tabard
 			{ itemID = 45585, price = "50 #champseal#" }, --Silvermoon City Tabard
 			{ itemID = 46818, price = "50 #champseal#" }, --Sunreaver Tabard
-			{ icon = "INV_Jewelry_Talisman_08", name = AtlasLoot.Colors.WHITE.. BabbleFaction["Argent Crusade"] },
+			{ icon = "INV_Jewelry_Talisman_08", name = AtlasLoot.Colors.WHITE.. "Argent Crusade" },
 			{ itemID = 46843, price = "15 #champseal#" }, --Argent Crusade Banner
 			{ itemID = 46874, price = "50 #champseal#" }, --Argent Crusader's Tabard
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"],
+		Name = "Armor",
 		{
-			{ icon = "INV_BannerPVP_02", name = AtlasLoot.Colors.WHITE..BabbleFaction["Alliance"] },
+			{ icon = "INV_BannerPVP_02", name = AtlasLoot.Colors.WHITE.."Alliance" },
 			{ itemID = 45156, price = "10 #champseal#" }, --Sash of Shattering Hearts
 			{ itemID = 45181, price = "10 #champseal#" }, --Wrap of the Everliving Tree
 			{ itemID = 45159, price = "10 #champseal#" }, --Treads of Nimble Evasion
@@ -120,7 +120,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 			{ itemID = 44990 }, --Champion's Seal
 		},
 		{
-			{ icon = "INV_BannerPVP_01", name = AtlasLoot.Colors.WHITE..BabbleFaction["Horde"] },
+			{ icon = "INV_BannerPVP_01", name = AtlasLoot.Colors.WHITE.."Horde" },
 			{ itemID = 45209, price = "10 #champseal#" }, --Sash of Trumpted Pride
 			{ itemID = 45211, price = "10 #champseal#" }, --Waistguard of Equine Fury
 			{ itemID = 45220, price = "10 #champseal#" }, --Treads of the Earnest Squire
@@ -137,9 +137,9 @@ AtlasLoot_Data["ArgentTournament"] = {
 		},
 	},
 	{
-		Name = AL["Weapons"],
+		Name = "Weapons",
 		{
-			{ icon = "INV_BannerPVP_02", name = AtlasLoot.Colors.WHITE..BabbleFaction["Alliance"] },
+			{ icon = "INV_BannerPVP_02", name = AtlasLoot.Colors.WHITE.."Alliance" },
 			{ itemID = 45078, price = "25 #champseal#" }, --Dagger of Lunar Purity
 			{ itemID = 45077, price = "25 #champseal#" }, --Dagger of the Rising Moon
 			{ itemID = 45129, price = "25 #champseal#" }, --Gnomeregan Bonechopper
@@ -151,7 +151,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 			{ itemID = 44990 }, --Champion's Seal
 		},
 		{
-			{ icon = "INV_BannerPVP_01", name = AtlasLoot.Colors.WHITE..BabbleFaction["Horde"] },
+			{ icon = "INV_BannerPVP_01", name = AtlasLoot.Colors.WHITE.."Horde" },
 			{ itemID = 45214, price = "25 #champseal#" }, --Scalpel of the Royal Apothecary
 			{ itemID = 45222, price = "25 #champseal#" }, --Spinal Destroyer
 			{ itemID = 45208, price = "25 #champseal#" }, --Blade of the Keening Banshee
@@ -163,23 +163,23 @@ AtlasLoot_Data["ArgentTournament"] = {
 		},
 	},
 	{
-		Name = AL["Vanity Pets"],
+		Name = "Vanity Pets",
 		{
-			{ icon = "INV_BannerPVP_02", name = AtlasLoot.Colors.WHITE..BabbleFaction["Alliance"] },
-			{ itemID = 44998, desc = AL["Quest Reward"] }, --Argent Squire
+			{ icon = "INV_BannerPVP_02", name = AtlasLoot.Colors.WHITE.."Alliance" },
+			{ itemID = 44998, desc = "Quest Reward" }, --Argent Squire
 			{ itemID = 44984, price = "40 #champseal#" }, --Ammen Vale Lashling
 			{ itemID = 44965, price = "40 #champseal#" }, --Teldrassil Sproutling
 			{ itemID = 44970, price = "40 #champseal#" }, --Dun Morogh Cub
 			{ itemID = 44974, price = "40 #champseal#" }, --Elwynn Lamb
 			{ itemID = 45002, price = "40 #champseal#" }, --Mechanopeep
 			{ itemID = 46820, price = "40 #champseal#" }, --Shimmering Wyrmling
-			{ icon = "INV_Jewelry_Talisman_08", name = AtlasLoot.Colors.WHITE.. BabbleFaction["Argent Crusade"] },
+			{ icon = "INV_Jewelry_Talisman_08", name = AtlasLoot.Colors.WHITE.. "Argent Crusade" },
 			{ itemID = 47541, price = "150 #champseal#" }, --Argent Pony Bridle
 			{ itemID = 44990 }, --Champion's Seal
 		},
 		{
-			{ icon = "INV_BannerPVP_01", name = AtlasLoot.Colors.WHITE..BabbleFaction["Horde"] },
-			{ itemID = 45022, desc = AL["Quest Reward"] }, --Argent Gruntling
+			{ icon = "INV_BannerPVP_01", name = AtlasLoot.Colors.WHITE.."Horde" },
+			{ itemID = 45022, desc = "Quest Reward" }, --Argent Gruntling
 			{ itemID = 44980, price = "40 #champseal#" }, --Mulgore Hatchling
 			{ itemID = 45606, price = "40 #champseal#" }, --Sen'jin Fetish
 			{ itemID = 44971, price = "40 #champseal#" }, --Tirisfal Batling
@@ -189,9 +189,9 @@ AtlasLoot_Data["ArgentTournament"] = {
 		},
 	},
 	{
-		Name = AL["Mounts"],
+		Name = "Mounts",
 		{
-			{ icon = "INV_BannerPVP_02", name = AtlasLoot.Colors.WHITE..BabbleFaction["Alliance"] },
+			{ icon = "INV_BannerPVP_02", name = AtlasLoot.Colors.WHITE.."Alliance" },
 			{ itemID = 45591, price = "100 #champseal#" }, --Darnassian Nightsaber
 			{ itemID = 45590, price = "100 #champseal#" }, --Exodar Elekk
 			{ itemID = 45589, price = "100 #champseal#" }, --Gnomeregan Mechanostrider
@@ -205,7 +205,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 			{ itemID = 44990 }, --Champion's Seal
 		},
 		{
-			{ icon = "INV_BannerPVP_01", name = AtlasLoot.Colors.WHITE..BabbleFaction["Horde"] },
+			{ icon = "INV_BannerPVP_01", name = AtlasLoot.Colors.WHITE.."Horde" },
 			{ itemID = 45593, price = "100 #champseal#" }, --Darkspear Raptor
 			{ itemID = 45597, price = "100 #champseal#" }, --Forsaken Warhorse
 			{ itemID = 45595, price = "100 #champseal#" }, --Orgrimmar Wolf
@@ -219,19 +219,19 @@ AtlasLoot_Data["ArgentTournament"] = {
 		},
 	},
 	{
-		Name = AL["Mounts"],
+		Name = "Mounts",
 		{
-			{ icon = "inv_misc_tabardpvp_01", name = AtlasLoot.Colors.WHITE.. BabbleFaction["The Silver Covenant"], "=ec1="..BabbleFaction["Alliance"] },
+			{ icon = "inv_misc_tabardpvp_01", name = AtlasLoot.Colors.WHITE.. "The Silver Covenant", "=ec1=".."Alliance" },
 			{ itemID = 46815, price = "100 #champseal#" }, --Quel'dorei Steed
 			{ itemID = 46813, price = "150 #champseal#" }, --Silver Covenant Hippogryph
-			{ icon = "INV_Jewelry_Talisman_08", name = AtlasLoot.Colors.WHITE.. BabbleFaction["Argent Crusade"] },
+			{ icon = "INV_Jewelry_Talisman_08", name = AtlasLoot.Colors.WHITE.. "Argent Crusade" },
 			{ itemID = 47179, price = "100 #champseal#" }, --Argent Charger
 			{ itemID = 47180, price = "100 #champseal#" }, --Argent Warhorse
 			{ itemID = 45725, price = "150 #champseal#" }, --Argent Hippogryph
 			{ itemID = 44990 }, --Champion's Seal
 		},
 		{
-			{ icon = "inv_misc_tabardpvp_02", name = AtlasLoot.Colors.WHITE.. BabbleFaction["The Sunreavers"], "=ec1="..BabbleFaction["Horde"] },
+			{ icon = "inv_misc_tabardpvp_02", name = AtlasLoot.Colors.WHITE.. "The Sunreavers", "=ec1=".."Horde" },
 			{ itemID = 46816, price = "100 #champseal#" }, --Sunreaver Hawkstrider
 			{ itemID = 46814, price = "150 #champseal#" }, --Sunreaver Dragonhawk
 		},
@@ -248,7 +248,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 
 local brewfest = {}
 brewfest.a = {
-	Name = AL["Brewfest"] .. " 1",
+	Name = "Brewfest" .. " 1",
 		{
 			{ itemID = 33047, price = "100 #brewfest#" }, --Belbi's Eyesight Enhancing Romance Goggles
 			{ itemID = 34008, price = "100 #brewfest#" }, --Blix's Eyesight Enhancing Romance Goggles
@@ -275,7 +275,7 @@ brewfest.a = {
 }
 
 brewfest.b = {
-	Name = AL["Brewfest"] .. " 2",
+	Name = "Brewfest" .. " 2",
 		{
 			{ itemID = 37892 }, --AtlasLoot.Colors.GREEN Brewfest Stein
 			{ itemID = 33016 }, --AtlasLoot.Colors.BLUE Brewfest Stein
@@ -298,27 +298,27 @@ brewfest.b = {
 }
 
 brewfest.c = {
-	Name = AL["Brewfest"] .. " 3",
+	Name = "Brewfest" .. " 3",
 		{
-			{ icon = "INV_Cask_04", name = AtlasLoot.Colors.WHITE..AL["Barleybrew Brewery"] },
+			{ icon = "INV_Cask_04", name = AtlasLoot.Colors.WHITE.."Barleybrew Brewery" },
 			{ itemID = 33030 }, --Barleybrew Clear
 			{ itemID = 33028 }, --Barleybrew Light
 			{ itemID = 33029 }, --Barleybrew Dark
-			{ icon = "INV_Cask_04", name = AtlasLoot.Colors.WHITE..AL["Thunderbrew Brewery"] },
+			{ icon = "INV_Cask_04", name = AtlasLoot.Colors.WHITE.."Thunderbrew Brewery" },
 			{ itemID = 33031 }, --Thunder 45
 			{ itemID = 33032 }, --Thunderbrew Ale
 			{ itemID = 33033 }, --Thunderbrew Stout
-			{ icon = "INV_Cask_04", name = AtlasLoot.Colors.WHITE..AL["Gordok Brewery"] },
+			{ icon = "INV_Cask_04", name = AtlasLoot.Colors.WHITE.."Gordok Brewery" },
 			{ itemID = 33034 }, --Gordok Grog
 			{ itemID = 33036 }, --Mudder's Milk
 			{ itemID = 33035 }, --Ogre Mead
 	},
 		{
-			{ icon = "INV_Cask_04", name = AtlasLoot.Colors.WHITE..AL["Drohn's Distillery"] },
+			{ icon = "INV_Cask_04", name = AtlasLoot.Colors.WHITE.."Drohn's Distillery" },
 			{ itemID = 34017 }, --Small Step Brew
 			{ itemID = 34018 }, --Long Stride Brew
 			{ itemID = 34019 }, --Path of Brew
-			{ icon = "INV_Cask_04", name = AtlasLoot.Colors.WHITE..AL["T'chali's Voodoo Brewery"] },
+			{ icon = "INV_Cask_04", name = AtlasLoot.Colors.WHITE.."T'chali's Voodoo Brewery" },
 			{ itemID = 34020 }, --Jungle River Water
 			{ itemID = 34021 }, --Brewdoo Magic
 			{ itemID = 34022 }, --Stout Shrunken Head
@@ -326,27 +326,27 @@ brewfest.c = {
 }
 
 brewfest.d = {
-	Name = AL["Brew of the Month Club"],
+	Name = "Brew of the Month Club",
 		{
-			{ itemID = 37488, desc = "=ds="..AL["January"] }, --Wild Winter Pilsner
-			{ itemID = 37489, desc = "=ds="..AL["February"] }, --Izzard's Ever Flavor
-			{ itemID = 37490, desc = "=ds="..AL["March"] }, --Aromatic Honey Brew
-			{ itemID = 37491, desc = "=ds="..AL["April"] }, --Metok's Bubble Bock
-			{ itemID = 37492, desc = "=ds="..AL["May"] }, --Springtime Stout
-			{ itemID = 37493, desc = "=ds="..AL["June"] }, --Blackrock Lager
+			{ itemID = 37488, desc = "=ds=".."January" }, --Wild Winter Pilsner
+			{ itemID = 37489, desc = "=ds=".."February" }, --Izzard's Ever Flavor
+			{ itemID = 37490, desc = "=ds=".."March" }, --Aromatic Honey Brew
+			{ itemID = 37491, desc = "=ds=".."April" }, --Metok's Bubble Bock
+			{ itemID = 37492, desc = "=ds=".."May" }, --Springtime Stout
+			{ itemID = 37493, desc = "=ds=".."June" }, --Blackrock Lager
 	},
 		{
-			{ itemID = 37494, desc = "=ds="..AL["July"] }, --Stranglethorn Brew
-			{ itemID = 37495, desc = "=ds="..AL["August"] }, --Draenic Pale Ale
-			{ itemID = 37496, desc = "=ds="..AL["September"] }, --Binary Brew
-			{ itemID = 37497, desc = "=ds="..AL["October"] }, --Autumnal Acorn Ale
-			{ itemID = 37498, desc = "=ds="..AL["November"] }, --Bartlett's Bitter Brew
-			{ itemID = 37499, desc = "=ds="..AL["December"] }, --Lord of Frost's Private Label
+			{ itemID = 37494, desc = "=ds=".."July" }, --Stranglethorn Brew
+			{ itemID = 37495, desc = "=ds=".."August" }, --Draenic Pale Ale
+			{ itemID = 37496, desc = "=ds=".."September" }, --Binary Brew
+			{ itemID = 37497, desc = "=ds=".."October" }, --Autumnal Acorn Ale
+			{ itemID = 37498, desc = "=ds=".."November" }, --Bartlett's Bitter Brew
+			{ itemID = 37499, desc = "=ds=".."December" }, --Lord of Frost's Private Label
 	},
 }
 
 brewfest.corenCLASSIC = {
-	Name = AL["Coren Direbrew"],
+	Name = "Coren Direbrew",
 		{
 			{ itemID = 2037128 }, --Balebrew Charm
 			{ itemID = 2037127 }, --Brightbrew Charm
@@ -367,7 +367,7 @@ brewfest.corenCLASSIC = {
 }
 
 brewfest.corenTBC = {
-	Name = AL["Coren Direbrew"],
+	Name = "Coren Direbrew",
 		{
 			{ itemID = 37128 }, --Balebrew Charm
 			{ itemID = 37127 }, --Brightbrew Charm
@@ -388,7 +388,7 @@ brewfest.corenTBC = {
 }
 
 brewfest.corenWRATH = {
-	Name = AL["Coren Direbrew"],
+	Name = "Coren Direbrew",
 		{
 			{ itemID = 49078 }, --Ancient Pickled Egg
 			{ itemID = 49118 }, --Bubbling Balebrew Charm
@@ -411,7 +411,7 @@ brewfest.corenWRATH = {
 
 AtlasLoot_Data["BrewfestCLASSIC"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Brewfest"],
+	Name = "Brewfest",
 	brewfest.a,
 	brewfest.b,
 	brewfest.c,
@@ -421,7 +421,7 @@ AtlasLoot_Data["BrewfestCLASSIC"] = {
 
 AtlasLoot_Data["BrewfestTBC"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Brewfest"],
+	Name = "Brewfest",
 	brewfest.a,
 	brewfest.b,
 	brewfest.c,
@@ -431,7 +431,7 @@ AtlasLoot_Data["BrewfestTBC"] = {
 
 AtlasLoot_Data["BrewfestWRATH"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Brewfest"],
+	Name = "Brewfest",
 	brewfest.a,
 	brewfest.b,
 	brewfest.c,
@@ -445,22 +445,22 @@ AtlasLoot_Data["BrewfestWRATH"] = {
 
 AtlasLoot_Data["ChildrensWeek"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Children's Week"],
+	Name = "Children's Week",
 	{
-		Name = AL["Children's Week"],
+		Name = "Children's Week",
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..BabbleZone["Azeroth"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Azeroth" },
 			{ itemID = 23007 }, --Piglet's Collar
 			{ itemID = 23015 }, --Rat Cage
 			{ itemID = 23002 }, --Turtle Box
 			{ itemID = 23022 }, --Curmudgeon's Payoff
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..BabbleZone["Outland"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Outland" },
 			{ itemID = 32616 }, --Egbert's Egg
 			{ itemID = 32622 }, --Elekk Training Collar
 			{ itemID = 32617 }, --Sleepy Willy
 		},
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..BabbleZone["Northrend"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Northrend" },
 			{ itemID = 46545 }, --Curious Oracle Hatchling
 			{ itemID = 46544 }, --Curious Wolvar Pup
 		},
@@ -473,9 +473,9 @@ AtlasLoot_Data["ChildrensWeek"] = {
 
 AtlasLoot_Data["DayoftheDead"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Day of the Dead"],
+	Name = "Day of the Dead",
 	{
-		Name = AL["Day of the Dead"],
+		Name = "Day of the Dead",
 		{
 			{ itemID = 46831 }, --Macabre Marionette
 			{ itemID = 46860, price = "5 #copper#" }, --Whimsical Skull Mask
@@ -495,9 +495,9 @@ AtlasLoot_Data["DayoftheDead"] = {
 
 AtlasLoot_Data["Winterviel"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Feast of Winter Veil"],
+	Name = "Feast of Winter Veil",
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{ itemID = 21525 }, --AtlasLoot.Colors.GREEN Winter Hat
 			{ itemID = 21524 }, --AtlasLoot.Colors.RED Winter Hat
@@ -506,7 +506,7 @@ AtlasLoot_Data["Winterviel"] = {
 			{ itemID = 34191 }, --Handful of Snowflakes
 			{ itemID = 21212 }, --Fresh Holly
 			{ itemID = 21519 }, --Mistletoe
-			{ icon = "INV_Holiday_Christmas_Present_01", name = AtlasLoot.Colors.WHITE..AL["Smokywood Pastures Vendor"] },
+			{ icon = "INV_Holiday_Christmas_Present_01", name = AtlasLoot.Colors.WHITE.."Smokywood Pastures Vendor" },
 			{ itemID = 34262 }, --Pattern: Winter Boots
 			{ itemID = 34319 }, --Pattern: AtlasLoot.Colors.RED Winter Clothes
 			{ itemID = 34261 }, --Pattern: AtlasLoot.Colors.GREEN Winter Clothes
@@ -535,21 +535,21 @@ AtlasLoot_Data["Winterviel"] = {
 	{
 		Name = "Presents",
 		{
-			{ icon = "INV_Holiday_Christmas_Present_01", name = AtlasLoot.Colors.WHITE..AL["Gaily Wrapped Present"] },
+			{ icon = "INV_Holiday_Christmas_Present_01", name = AtlasLoot.Colors.WHITE.."Gaily Wrapped Present" },
 			{ itemID = 21301 }, --AtlasLoot.Colors.GREEN Helper Box
 			{ itemID = 21308 }, --Jingling Bell
 			{ itemID = 21305 }, --AtlasLoot.Colors.RED Helper Box
 			{ itemID = 21309 }, --Snowman Kit
-			{ icon = "INV_Holiday_Christmas_Present_01", name = AtlasLoot.Colors.WHITE..AL["Festive Gift"] },
+			{ icon = "INV_Holiday_Christmas_Present_01", name = AtlasLoot.Colors.WHITE.."Festive Gift" },
 			{ itemID = 21328 }, --Wand of Holiday Cheer
-			{ icon = "INV_Holiday_Christmas_Present_01", name = AL["Winter Veil Gift"] },
+			{ icon = "INV_Holiday_Christmas_Present_01", name = "Winter Veil Gift" },
 			{ itemID = 34425 }, --Clockwork Rocket Bot
-			{ icon = "INV_Holiday_Christmas_Present_01", name = AtlasLoot.Colors.WHITE..AL["Gently Shaken Gift"] },
+			{ icon = "INV_Holiday_Christmas_Present_01", name = AtlasLoot.Colors.WHITE.."Gently Shaken Gift" },
 			{ itemID = 21235 }, --Winter Veil Roast
 			{ itemID = 21241 }, --Winter Veil Eggnog
 		},
 		{
-			{ icon = "INV_Holiday_Christmas_Present_01", name = AtlasLoot.Colors.WHITE..AL["Festive Gift"] },
+			{ icon = "INV_Holiday_Christmas_Present_01", name = AtlasLoot.Colors.WHITE.."Festive Gift" },
 			{ itemID = 21325 }, --Mechanical Greench
 			{ itemID = 21213 }, --Preserved Holly
 			{ itemID = 17706 }, --Plans: Edge of Winter
@@ -558,9 +558,9 @@ AtlasLoot_Data["Winterviel"] = {
 			{ itemID = 17722 }, --Pattern: Gloves of the Greatfather
 			{ itemID = 17709 }, --Recipe: Elixir of Frost Power
 			{ itemID = 17724 }, --Pattern: AtlasLoot.Colors.GREEN Holiday Shirt
-			{ icon = "INV_Holiday_Christmas_Present_01", name = AL["Carefully Wrapped Present"] },
+			{ icon = "INV_Holiday_Christmas_Present_01", name = "Carefully Wrapped Present" },
 			{ itemID = 21254 }, --Winter Veil Cookie
-			{ icon = "INV_Holiday_Christmas_Present_01", name = AL["Smokywood Pastures Extra-Special Gift"] },
+			{ icon = "INV_Holiday_Christmas_Present_01", name = "Smokywood Pastures Extra-Special Gift" },
 			{ itemID = 21215 }, --Graccu's Mince Meat Fruitcake
 		},
 	},
@@ -570,7 +570,7 @@ AtlasLoot_Data["Winterviel"] = {
 --- Hallow's End ---
 --------------------
 local HorsemanCLASSIC = {
-	Name = AL["Headless Horseman"],
+	Name = "Headless Horseman",
 	{
 		{ itemID = 2033808 }, --The Horseman's Helm
 		{ itemID = 2034075 }, --Ring of Ghoulish Delight
@@ -589,7 +589,7 @@ local HorsemanCLASSIC = {
 }
 
 local HorsemanTBC = {
-	Name = AL["Headless Horseman"],
+	Name = "Headless Horseman",
 	{
 		{ itemID = 33808 }, --The Horseman's Helm
 		{ itemID = 34075 }, --Ring of Ghoulish Delight
@@ -608,7 +608,7 @@ local HorsemanTBC = {
 }
 
 local HorsemanWRATH = {
-	Name = AL["Headless Horseman"],
+	Name = "Headless Horseman",
 	{
 		{ itemID = 49126 }, --The Horseman's Horrific Helm
 		{ itemID = 49121 }, --Ring of Ghoulish Glee
@@ -627,7 +627,7 @@ local HorsemanWRATH = {
 }
 
 local HallowsEnd = {
-	Name = AL["Miscellaneous"],
+	Name = "Miscellaneous",
 	{
 		{ itemID = 33117 }, --Jack-o'-Lantern
 		{ itemID = 20400 }, --Pumpkin Bag
@@ -636,14 +636,14 @@ local HallowsEnd = {
 		{ itemID = 18632 }, --Moonbrook Riot Taffy
 		{ itemID = 18635 }, --Bellara's Nutterbar
 		{ itemID = 20557 }, --Hallow's End Pumpkin Treat
-		{ icon = "inv_gauntlets_06", name = AL["Handful of Candy"] },
+		{ icon = "inv_gauntlets_06", name = "Handful of Candy" },
 		{ itemID = 37585 }, --Chewy Fel Taffy
 		{ itemID = 37583 }, --G.N.E.R.D.S.
 		{ itemID = 37582 }, --Pyroblast Cinnamon Ball
 		{ itemID = 37584 }, --Soothing Spearmint Candy
 	},
 	{
-		{ icon = "INV_Misc_Bag_11", name = "=q6=#"..AL["Treat Bag"] },
+		{ icon = "INV_Misc_Bag_11", name = "=q6=#".."Treat Bag" },
 		{ itemID = 33292 }, --Hallowed Helm
 		{ itemID = 33154 }, --Sinister Squashling
 		{ itemID = 20410 }, --Hallowed Wand - Bat
@@ -663,7 +663,7 @@ local HallowsEnd = {
 local HallowsEndMasks = {
 	Name = "Masks",
 	{
-		{ icon = "INV_Misc_Bag_11", name = AtlasLoot.Colors.WHITE..AL["Treat Bag"] },
+		{ icon = "INV_Misc_Bag_11", name = AtlasLoot.Colors.WHITE.."Treat Bag" },
 		{ itemID = 34003 }, --Flimsy Male Draenei Mask
 		{ itemID = 20561 }, --Flimsy Male Dwarf Mask
 		{ itemID = 20391 }, --Flimsy Male Gnome Mask
@@ -691,7 +691,7 @@ local HallowsEndMasks = {
 
 AtlasLoot_Data["HalloweenCLASSIC"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Hallow's End"],
+	Name = "Hallow's End",
 	HallowsEnd,
 	HallowsEndMasks,
 	HorsemanCLASSIC,
@@ -699,7 +699,7 @@ AtlasLoot_Data["HalloweenCLASSIC"] = {
 
 AtlasLoot_Data["HalloweenTBC"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Hallow's End"],
+	Name = "Hallow's End",
 	HallowsEnd,
 	HallowsEndMasks,
 	HorsemanTBC,
@@ -707,7 +707,7 @@ AtlasLoot_Data["HalloweenTBC"] = {
 
 AtlasLoot_Data["HalloweenWRATH"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Hallow's End"],
+	Name = "Hallow's End",
 	HallowsEnd,
 	HallowsEndMasks,
 	HorsemanWRATH,
@@ -719,9 +719,9 @@ AtlasLoot_Data["HalloweenWRATH"] = {
 
 AtlasLoot_Data["HarvestFestival"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Harvest Festival"],
+	Name = "Harvest Festival",
 	{
-		Name = AL["Harvest Festival"],
+		Name = "Harvest Festival",
 		{
 			{ itemID = 19697 }, --Bounty of the Harvest
 			{ itemID = 20009 }, --For the Light!
@@ -740,9 +740,9 @@ AtlasLoot_Data["HarvestFestival"] = {
 
 AtlasLoot_Data["Valentineday"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Love is in the Air"],
+	Name = "Love is in the Air",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
 			{ itemID = 34480, price = "10 #valentineday#" }, --Romantic Picnic Basket
 			{ itemID = 21815, price = "1 #valentineday2#" }, --Love Token
@@ -769,25 +769,25 @@ AtlasLoot_Data["Valentineday"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
-			{ icon = "INV_Box_02", name = AtlasLoot.Colors.WHITE.. AL["Lovely Dress Box"] },
+			{ icon = "INV_Box_02", name = AtlasLoot.Colors.WHITE.. "Lovely Dress Box" },
 			{ itemID = 22279 }, --Lovely Black Dress
 			{ itemID = 22276 }, --Lovely AtlasLoot.Colors.RED Dress
 			{ itemID = 22278 }, --Lovely AtlasLoot.Colors.BLUE Dress
 			{ itemID = 22280 }, --Lovely Purple Dress
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.. AL["Dinner Suit Box"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.. "Dinner Suit Box" },
 			{ itemID = 22277 }, --AtlasLoot.Colors.RED Dinner Suit
 			{ itemID = 22281 }, --AtlasLoot.Colors.BLUE Dinner Suit
 			{ itemID = 22282 }, --Purple Dinner Suit
 		},
 		{
-			{ icon = "INV_ValentinesBoxOfChocolates02", name = AtlasLoot.Colors.WHITE..AL["Box of Chocolates"] },
+			{ icon = "INV_ValentinesBoxOfChocolates02", name = AtlasLoot.Colors.WHITE.."Box of Chocolates" },
 			{ itemID = 22237 }, --Dark Desire
 			{ itemID = 22238 }, --Very Berry Cream
 			{ itemID = 22236 }, --Buttermilk Deligh
 			{ itemID = 22239 }, --Sweet Surprise 
-			{ icon = "inv_valentinescandysack", name = AtlasLoot.Colors.WHITE.. AL["Bag of Heart Candies"] },
+			{ icon = "inv_valentinescandysack", name = AtlasLoot.Colors.WHITE.. "Bag of Heart Candies" },
 			{ itemID = 21816 }, --Heart Candy
 			{ itemID = 21817 }, --Heart Candy
 			{ itemID = 21818 }, --Heart Candy
@@ -799,7 +799,7 @@ AtlasLoot_Data["Valentineday"] = {
 		},
 	},
 	{
-		Name = AL["Page 3"],
+		Name = "Page 3",
 		{
 			{ itemID = 51804 }, --Winking Eye of Love
 			{ itemID = 51805 }, --Heartbreak Charm
@@ -823,9 +823,9 @@ AtlasLoot_Data["Valentineday"] = {
 
 AtlasLoot_Data["LunarFestival"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Lunar Festival"],
+	Name = "Lunar Festival",
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{ itemID = 21540 }, --Elune's Lantern
 			{ itemID = 21157 }, --Festive AtlasLoot.Colors.GREEN Dress
@@ -839,7 +839,7 @@ AtlasLoot_Data["LunarFestival"] = {
 			{ itemID = 21100 }, --Coin of Ancestry
 		},
 		{
-			{ icon = "INV_Box_02", name = AL["Lunar Festival Fireworks Pack"] },
+			{ icon = "INV_Box_02", name = "Lunar Festival Fireworks Pack" },
 			{ itemID = 21558 }, --Small AtlasLoot.Colors.BLUE Rocket
 			{ itemID = 21559 }, --Small AtlasLoot.Colors.GREEN Rocket
 			{ itemID = 21557 }, --Small AtlasLoot.Colors.RED Rocket
@@ -850,20 +850,20 @@ AtlasLoot_Data["LunarFestival"] = {
 			{ itemID = 21592 }, --Large AtlasLoot.Colors.RED Rocket
 			{ itemID = 21593 }, --Large AtlasLoot.Colors.WHITE Rocket
 			{ itemID = 21595 }, --Large Yellow Rocket
-			{ icon = "INV_Misc_LuckyMoneyEnvelope", name = AL["Lucky AtlasLoot.Colors.RED Envelope"] },
+			{ icon = "INV_Misc_LuckyMoneyEnvelope", name = "Lucky AtlasLoot.Colors.RED Envelope" },
 			{ itemID = 21744 }, --Lucky Rocket Cluster
 			{ itemID = 21745 }, --Elder's Moonstone
 		},
 	},
 	{
-		Name = AL["Crafting Patterns"],
+		Name = "Crafting Patterns",
 		{
 			{ itemID = 21738 }, --Schematic: Firework Launcher 
-			{ icon = "INV_Scroll_03", name = AL["Small Rocket Recipes"] },
+			{ icon = "INV_Scroll_03", name = "Small Rocket Recipes" },
 			{ itemID = 21724 }, --Schematic: Small AtlasLoot.Colors.BLUE Rocket
 			{ itemID = 21725 }, --Schematic: Small AtlasLoot.Colors.GREEN Rocket
 			{ itemID = 21726 }, --Schematic: Small AtlasLoot.Colors.RED Rocket
-			{ icon = "INV_Scroll_04", name = AL["Large Rocket Recipes"] },
+			{ icon = "INV_Scroll_04", name = "Large Rocket Recipes" },
 			{ itemID = 21727 }, --Schematic: Large AtlasLoot.Colors.BLUE Rocket
 			{ itemID = 21728 }, --Schematic: Large AtlasLoot.Colors.GREEN Rocket
 			{ itemID = 21729 }, --Schematic: Large AtlasLoot.Colors.RED Rocket
@@ -871,11 +871,11 @@ AtlasLoot_Data["LunarFestival"] = {
 		},
 		{
 			{ itemID = 21737 }, --Schematic: Cluster Launcher
-			{ icon = "INV_Scroll_05", name = AL["Cluster Rocket Recipes"] },
+			{ icon = "INV_Scroll_05", name = "Cluster Rocket Recipes" },
 			{ itemID = 21730 }, --Schematic: AtlasLoot.Colors.BLUE Rocket Cluster
 			{ itemID = 21731 }, --Schematic: AtlasLoot.Colors.GREEN Rocket Cluster
 			{ itemID = 21732 }, --Schematic: AtlasLoot.Colors.RED Rocket Cluster
-			{ icon = "INV_Scroll_06", name = AL["Large Cluster Rocket Recipes"] },
+			{ icon = "INV_Scroll_06", name = "Large Cluster Rocket Recipes" },
 			{ itemID = 21733 }, --Schematic: Large AtlasLoot.Colors.BLUE Rocket Cluster
 			{ itemID = 21734 }, --Schematic: Large AtlasLoot.Colors.GREEN Rocket Cluster
 			{ itemID = 21735 }, --Schematic: Large AtlasLoot.Colors.RED Rocket Cluster
@@ -889,7 +889,7 @@ AtlasLoot_Data["LunarFestival"] = {
 -------------------------------
 
 local lordAhuneTBC = {
-	Name = AL["Lord Ahune"],
+	Name = "Lord Ahune",
 	{
 		{ itemID = 35507 }, --Amulet of Bitter Hatred
 		{ itemID = 35509 }, --Amulet of Glacial Tranquility
@@ -911,7 +911,7 @@ local lordAhuneTBC = {
 }
 
 local lordAhuneWRATH = {
-	Name = AL["Lord Ahune"],
+	Name = "Lord Ahune",
 	{
 		{ itemID = 54805 }, --Cloak of the Frigid Winds
 		{ itemID = 54801 }, --Icebound Cloak
@@ -931,7 +931,7 @@ local lordAhuneWRATH = {
 }
 
 local midSummerMain = {
-	Name = AL["Midsummer Fire Festival"],
+	Name = "Midsummer Fire Festival",
 	{
 		{ itemID = 34686, price = "350 #fireflower#" }, --Brazier of Dancing Flames
 		{ itemID = 23083, price = "350 #fireflower#" }, --Captured Flame
@@ -956,20 +956,20 @@ local midSummerMain = {
 
 AtlasLoot_Data["MidsummerFestivalCLASSIC"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Midsummer Fire Festival"],
+	Name = "Midsummer Fire Festival",
 	midSummerMain,
 }
 
 AtlasLoot_Data["MidsummerFestivalTBC"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Midsummer Fire Festival"],
+	Name = "Midsummer Fire Festival",
 	midSummerMain,
 	lordAhuneTBC,
 }
 
 AtlasLoot_Data["MidsummerFestivalWRATH"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Midsummer Fire Festival"],
+	Name = "Midsummer Fire Festival",
 	midSummerMain,
 	lordAhuneWRATH,
 }
@@ -980,9 +980,9 @@ AtlasLoot_Data["MidsummerFestivalWRATH"] = {
 
 AtlasLoot_Data["Noblegarden"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Noblegarden"],
+	Name = "Noblegarden",
 	{
-		Name = AL["Noblegarden"],
+		Name = "Noblegarden",
 		{
 			{ itemID = 44793, price = "100 #noblegarden#" }, --Tome of Polymorph: Rabbit
 			{ itemID = 44794, price = "100 #noblegarden#" }, --Spring Rabbit's Foot
@@ -1005,9 +1005,9 @@ AtlasLoot_Data["Noblegarden"] = {
 
 AtlasLoot_Data["PilgrimsBounty"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Pilgrim's Bounty"],
+	Name = "Pilgrim's Bounty",
 	{
-		Name = AL["Pilgrim's Bounty"],
+		Name = "Pilgrim's Bounty",
 		{
 			{ itemID = 46809 }, --Bountiful Cookbook
 			{ itemID = 44860 }, --Recipe: Spice Bread Stuffing
@@ -1046,14 +1046,14 @@ AtlasLoot_Data["BashirLanding"] = {
 	Module = "AtlasLoot_WorldEvents",
 	Name = "Bash'ir Landing Skyguard",
 	{
-		Name = AL["Bash'ir Landing Skyguard Raid"],
+		Name = "Bash'ir Landing Skyguard Raid",
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Phase 1"], desc = "=q1="..AL["Aether-tech Assistant"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Phase 1", desc = "=q1=".."Aether-tech Assistant" },
 			{ itemID = 32596 }, --Unstable Flask of the Elder
 			{ itemID = 32600 }, --Unstable Flask of the Physician
 			{ itemID = 32599 }, --Unstable Flask of the Bandit
 			{ itemID = 32597 }, --Unstable Flask of the Soldier
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Phase 2"], desc = "=q1="..AL["Aether-tech Adept"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Phase 2", desc = "=q1=".."Aether-tech Adept" },
 			{ itemID = 32634 }, --Unstable Amethyst
 			{ itemID = 32637 }, --Unstable Citrine
 			{ itemID = 32635 }, --Unstable Peridot
@@ -1062,7 +1062,7 @@ AtlasLoot_Data["BashirLanding"] = {
 			{ itemID = 32638 }, --Unstable Topaz
 		},
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Phase 3"], desc = "=q1="..AL["Aether-tech Master"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Phase 3", desc = "=q1=".."Aether-tech Master" },
 			{ itemID = 32641 }, --Imbued Unstable Diamond
 			{ itemID = 32640 }, --Potent Unstable Diamond
 			{ itemID = 32759 }, --Accelerator Module
@@ -1083,9 +1083,9 @@ AtlasLoot_Data["BashirLanding"] = {
 
 AtlasLoot_Data["Darkmoon"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = BabbleFaction["Darkmoon Faire"],
+	Name = "Darkmoon Faire",
 	{
-		Name = AL["Darkmoon Faire Rewards"],
+		Name = "Darkmoon Faire Rewards",
 		{
 			{ itemID = 19491, price = "1200 #darkmoon#" }, --Amulet of the Darkmoon
 			{ itemID = 19426, price = "1200 #darkmoon#" }, --Orb of the Darkmoon
@@ -1108,7 +1108,7 @@ AtlasLoot_Data["Darkmoon"] = {
 		},
 	},
 	{
-		Name = AL["Low Level Decks"],
+		Name = "Low Level Decks",
 		{
 			{ itemID = 37163 }, --Rogues Deck
 			{ itemID = 38318 }, --Darkmoon Robe
@@ -1130,7 +1130,7 @@ AtlasLoot_Data["Darkmoon"] = {
 		},
 	},
 	{
-		Name = AL["Original and BC Trinkets"],
+		Name = "Original and BC Trinkets",
 		{
 			{ itemID = 19228 }, --Beasts Deck
 			{ itemID = 19288 }, --Darkmoon Card: AtlasLoot.Colors.BLUE Dragon
@@ -1153,7 +1153,7 @@ AtlasLoot_Data["Darkmoon"] = {
 		},
 	},
 	{
-		Name = AL["WotLK Trinkets"],
+		Name = "WotLK Trinkets",
 		{
 			{ itemID = 44276 }, --Chaos Deck
 			{ itemID = 42989 }, --Darkmoon Card: Berserker!
@@ -1178,26 +1178,26 @@ AtlasLoot_Data["Darkmoon"] = {
 
 AtlasLoot_Data["ElementalInvasion"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Elemental Invasion"],
+	Name = "Elemental Invasion",
 	{
-		Name = AL["Elemental Invasion"],
+		Name = "Elemental Invasion",
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..BabbleBoss["Baron Charr"].."", "=q1="..AL["Fire"]..", "..BabbleZone["Un'Goro Crater"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Baron Charr".."", "=q1=".."Fire"..", ".."Un'Goro Crater" },
 			{ itemID = 18671 }, --Baron Charr's Sceptre
 			{ itemID = 19268 }, --Ace of Elementals
 			{ itemID = 18672 }, --Elemental Ember
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..BabbleBoss["Princess Tempestria"].."", "=q1="..AL["Water"]..", "..BabbleZone["Winterspring"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Princess Tempestria".."", "=q1=".."Water"..", ".."Winterspring" },
 			{ itemID = 18678 }, --Tempestria's Frozen Necklace
 			{ itemID = 19268 }, --Ace of Elementals
 			{ itemID = 21548 }, --Pattern: Stormshroud Gloves
 			{ itemID = 18679 }, --Frigid Ring
 		},
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..BabbleBoss["Avalanchion"].."", "=q1="..AL["Earth"]..", "..BabbleZone["Azshara"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Avalanchion".."", "=q1=".."Earth"..", ".."Azshara" },
 			{ itemID = 18673 }, --Avalanchion's Stony Hide
 			{ itemID = 19268 }, --Ace of Elementals
 			{ itemID = 18674 }, --Hardened Stone Band
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..BabbleBoss["The Windreaver"].."", "=q1="..AL["Wind"]..", "..BabbleZone["Silithus"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."The Windreaver".."", "=q1=".."Wind"..", ".."Silithus" },
 			{ itemID = 18676 }, --Sash of the Windreaver
 			{ itemID = 19268 }, --Ace of Elementals
 			{ itemID = 21548 }, --Pattern: Stormshroud Gloves
@@ -1212,9 +1212,9 @@ AtlasLoot_Data["ElementalInvasion"] = {
 
 AtlasLoot_Data["GurubashiArena"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Gurubashi Arena Booty Run"],
+	Name = "Gurubashi Arena Booty Run",
 	{
-		Name = AL["Gurubashi Arena Booty Run"],
+		Name = "Gurubashi Arena Booty Run",
 		{
 			{ itemID = 18709 }, --Arena Wristguards
 			{ itemID = 18710 }, --Arena Bracers
@@ -1222,7 +1222,7 @@ AtlasLoot_Data["GurubashiArena"] = {
 			{ itemID = 18712 }, --Arena Vambraces
 		},
 		{
-			{ itemID = 18706, desc = ", =q1="..AL["This Item Begins a Quest"] }, --Arena Master
+			{ itemID = 18706, desc = ", =q1=".."This Item Begins a Quest" }, --Arena Master
 			{ itemID = 19024 }, --Arena Grand Master
 		},
 	},
@@ -1236,17 +1236,17 @@ AtlasLoot_Data["FishingExtravaganza"] = {
 	Module = "AtlasLoot_WorldEvents",
 	Name = "Stranglethorn Fishing",
 	{
-		Name = AL["Stranglethorn Fishing Extravaganza"],
+		Name = "Stranglethorn Fishing Extravaganza",
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["First Prize"], "=q1="..AL["Master Angler"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."First Prize", "=q1=".."Master Angler" },
 			{ itemID = 19970 }, --Arcanite Fishing Pole
 			{ itemID = 19979 }, --Hook of the Master Angler
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Rare Fish"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Rare Fish" },
 			{ itemID = 19805 }, --Keefer's Angelfish
 			{ itemID = 19803 }, --Brownell's AtlasLoot.Colors.BLUE Striped Racer
 			{ itemID = 19806 }, --Dezian Queenfish
 			{ itemID = 19808 }, --Rockhide Strongfish
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Rare Fish Rewards"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Rare Fish Rewards" },
 			{ itemID = 19972 }, --Lucky Fishing Hat
 			{ itemID = 19969 }, --Nat Pagle's Extreme Anglin' Boots
 			{ itemID = 19971 }, --High Test Eternium Fishing Line		{
@@ -1264,28 +1264,28 @@ AtlasLoot_Data["FishingExtravaganza"] = {
 
 AtlasLoot_Data["AbyssalCouncil"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Abyssal Council"],
+	Name = "Abyssal Council",
 	{
-		Name = AL["Templars"],
+		Name = "Templars",
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Crimson Templar"].."", "=q1="..AL["Fire"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Crimson Templar".."", "=q1=".."Fire" },
 			{ itemID = 20657 }, --Crystal Tipped Stiletto
 			{ itemID = 20655 }, --Abyssal Cloth Handwraps
 			{ itemID = 20656 }, --Abyssal Mail Sabatons
 			{ itemID = 20513 }, --Abyssal Crest
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Azure Templar"].."", "=q1="..AL["Water"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Azure Templar".."", "=q1=".."Water" },
 			{ itemID = 20654 }, --Amethyst War Staff
 			{ itemID = 20652 }, --Abyssal Cloth Slippers
 			{ itemID = 20653 }, --Abyssal Plate Gauntlets
 			{ itemID = 20513 }, --Abyssal Crest
 		},
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Hoary Templar"].."", "=q1="..AL["Wind"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Hoary Templar".."", "=q1=".."Wind" },
 			{ itemID = 20660 }, --Stonecutting Glaive
 			{ itemID = 20658 }, --Abyssal Leather Boots
 			{ itemID = 20659 }, --Abyssal Mail Handguards
 			{ itemID = 20513 }, --Abyssal Crest
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Earthen Templar"].."", "=q1="..AL["Earth"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Earthen Templar".."", "=q1=".."Earth" },
 			{ itemID = 20663 }, --Deep Strike Bow
 			{ itemID = 20661 }, --Abyssal Leather Gloves
 			{ itemID = 20662 }, --Abyssal Plate Greaves
@@ -1293,27 +1293,27 @@ AtlasLoot_Data["AbyssalCouncil"] = {
 		},
 	},
 	{
-		Name = AL["Dukes"],
+		Name = "Dukes",
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["The Duke of Cynders"].."", "=q1="..AL["Fire"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."The Duke of Cynders".."", "=q1=".."Fire" },
 			{ itemID = 20665 }, --Abyssal Leather Leggings
 			{ itemID = 20666 }, --Hardened Steel Warhammer
 			{ itemID = 20514 }, --Abyssal Signet
 			{ itemID = 20664 }, --Abyssal Cloth Sash
 			{ itemID = 21989 }, --Cinder of Cynders
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["The Duke of Fathoms"].."", "=q1="..AL["Water"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."The Duke of Fathoms".."", "=q1=".."Water" },
 			{ itemID = 20668 }, --Abyssal Mail Legguards
 			{ itemID = 20669, price = "29.62%" }, --Darkstone Claymore
 			{ itemID = 20514 }, --Abyssal Signet
 			{ itemID = 20667 }, --Abyssal Leather Belt
 		},
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["The Duke of Zephyrs"].."", "=q1="..AL["Wind"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."The Duke of Zephyrs".."", "=q1=".."Wind" },
 			{ itemID = 20674 }, --Abyssal Cloth Pants
 			{ itemID = 20675, price = "29.73%" }, --Soulrender
 			{ itemID = 20514 }, --Abyssal Signet
 			{ itemID = 20673 }, --Abyssal Plate Girdle
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["The Duke of Shards"].."", "=q1="..AL["Earth"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."The Duke of Shards".."", "=q1=".."Earth" },
 			{ itemID = 20671 }, --Abyssal Plate Legplates
 			{ itemID = 20672 }, --Sparkling Crystal Wand
 			{ itemID = 20514 }, --Abyssal Signet
@@ -1321,26 +1321,26 @@ AtlasLoot_Data["AbyssalCouncil"] = {
 		},
 	},
 	{
-		Name = AL["High Council"],
+		Name = "High Council",
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..BabbleBoss["Prince Skaldrenox"].."", "=q1="..AL["Fire"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Prince Skaldrenox".."", "=q1=".."Fire" },
 			{ itemID = 20682 }, --Elemental Focus Band
 			{ itemID = 20515 }, --Abyssal Scepter
 			{ itemID = 20681 }, --Abyssal Leather Bracers
 			{ itemID = 20680 }, --Abyssal Mail Pauldrons
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..BabbleBoss["Lord Skwol"].."", "=q1="..AL["Water"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Lord Skwol".."", "=q1=".."Water" },
 			{ itemID = 20685, price = "24.48%" }, --Wavefront Necklace
 			{ itemID = 20515 }, --Abyssal Scepter
 			{ itemID = 20684 }, --Abyssal Mail Armguards
 			{ itemID = 20683 }, --Abyssal Plate Epaulets
 		},
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..BabbleBoss["High Marshal Whirlaxis"].."", "=q1="..AL["Wind"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."High Marshal Whirlaxis".."", "=q1=".."Wind" },
 			{ itemID = 20691 }, --Windshear Cape
 			{ itemID = 20515 }, --Abyssal Scepter
 			{ itemID = 20690 }, --Abyssal Cloth Wristbands
 			{ itemID = 20689 }, --Abyssal Leather Shoulders
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..BabbleBoss["Baron Kazum"].."", "=q1="..AL["Earth"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Baron Kazum".."", "=q1=".."Earth" },
 			{ itemID = 20688 }, --Earthen Guard
 			{ itemID = 20515 }, --Abyssal Scepter
 			{ itemID = 20686 }, --Abyssal Cloth Amice
@@ -1355,9 +1355,9 @@ AtlasLoot_Data["AbyssalCouncil"] = {
 
 AtlasLoot_Data["EthereumPrison"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Ethereum Prison"],
+	Name = "Ethereum Prison",
 	{
-		Name = AL["Armbreaker Huffaz"],
+		Name = "Armbreaker Huffaz",
 		{
 			{ itemID = 31943 }, --Ethereum Band
 			{ itemID = 31939 }, --Dark Cloak
@@ -1374,7 +1374,7 @@ AtlasLoot_Data["EthereumPrison"] = {
 		},
 	},
 	{
-		Name = AL["Fel Tinkerer Zortan"],
+		Name = "Fel Tinkerer Zortan",
 		{
 			{ itemID = 31573 }, --Mistshroud Boots
 			{ itemID = 31939 }, --Dark Cloak
@@ -1391,7 +1391,7 @@ AtlasLoot_Data["EthereumPrison"] = {
 		},
 	},
 	{
-		Name = AL["Forgosh"],
+		Name = "Forgosh",
 		{
 			{ itemID = 31565 }, --Skystalker's Boots
 			{ itemID = 31939 }, --Dark Cloak
@@ -1408,7 +1408,7 @@ AtlasLoot_Data["EthereumPrison"] = {
 		},
 	},
 	{
-		Name = AL["Gul'bor"],
+		Name = "Gul'bor",
 		{
 			{ itemID = 31940 }, --Ethereum Torque
 			{ itemID = 31939 }, --Dark Cloak
@@ -1425,7 +1425,7 @@ AtlasLoot_Data["EthereumPrison"] = {
 		},
 	},
 	{
-		Name = AL["Malevus the Mad"],
+		Name = "Malevus the Mad",
 		{
 			{ itemID = 31581 }, --Slatesteel Boots
 			{ itemID = 31939 }, --Dark Cloak
@@ -1442,7 +1442,7 @@ AtlasLoot_Data["EthereumPrison"] = {
 		},
 	},
 	{
-		Name = AL["Porfus the Gem Gorger"],
+		Name = "Porfus the Gem Gorger",
 		{
 			{ itemID = 31557 }, --Windchanneller's Boots
 			{ itemID = 31939 }, --Dark Cloak
@@ -1459,7 +1459,7 @@ AtlasLoot_Data["EthereumPrison"] = {
 		},
 	},
 	{
-		Name = AL["Wrathbringer Laz-tarash"],
+		Name = "Wrathbringer Laz-tarash",
 		{
 			{ itemID = 32520 }, --Manaforged Sphere
 			{ itemID = 31939 }, --Dark Cloak
@@ -1476,23 +1476,23 @@ AtlasLoot_Data["EthereumPrison"] = {
 		},
 	},
 	{
-		Name = AL["Bash'ir Landing Stasis Chambers"],
+		Name = "Bash'ir Landing Stasis Chambers",
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Trelopades"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Trelopades" },
 			{ itemID = 32522 }, --Demonic Bulwark
 			{ itemID = 31941 }, --Mark of the Nexus-King
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["King Dorfbruiser"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."King Dorfbruiser" },
 			{ itemID = 31577 }, --Slatesteel Shoulders
 			{ itemID = 31941 }, --Mark of the Nexus-King
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Gorgolon the All-seeing"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Gorgolon the All-seeing" },
 			{ itemID = 31569 }, --Mistshroud Shoulders
 			{ itemID = 31941 }, --Mark of the Nexus-King
 		},
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Matron Li-sahar"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Matron Li-sahar" },
 			{ itemID = 31553 }, --Windchanneller's Mantle
 			{ itemID = 31941 }, --Mark of the Nexus-King
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Solus the Eternal"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Solus the Eternal" },
 			{ itemID = 31561 }, --Skystalker's Shoulders
 			{ itemID = 31941 }, --Mark of the Nexus-King
 		},
@@ -1505,9 +1505,9 @@ AtlasLoot_Data["EthereumPrison"] = {
 
 AtlasLoot_Data["Shartuul"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Shartuul"],
+	Name = "Shartuul",
 	{
-		Name = AL["Shartuul"],
+		Name = "Shartuul",
 		{
 			{ itemID = 32941 }, --Corruptor's Signet
 			{ itemID = 32676 }, --Depleted Cloth Bracers
@@ -1543,9 +1543,9 @@ AtlasLoot_Data["Shartuul"] = {
 
 AtlasLoot_Data["Skettis"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Skettis"],
+	Name = "Skettis",
 	{
-		Name = AL["Darkscreecher Akkarai"],
+		Name = "Darkscreecher Akkarai",
 		{
 			{ itemID = 32529, price = "17.3%" }, --Heretic's Gauntlets
 			{ itemID = 32715 }, --Akkarai's Talons
@@ -1561,7 +1561,7 @@ AtlasLoot_Data["Skettis"] = {
 		},
 	},
 	{
-		Name = AL["Karrog"],
+		Name = "Karrog",
 		{
 			{ itemID = 32533 }, --Karrog's Shard
 			{ itemID = 32717 }, --Karrog's Spine
@@ -1577,7 +1577,7 @@ AtlasLoot_Data["Skettis"] = {
 		},
 	},
 	{
-		Name = AL["Gezzarak the Huntress"],
+		Name = "Gezzarak the Huntress",
 		{
 			{ itemID = 32531, price = "16.9%" }, --Gezzarak's Fang
 			{ itemID = 32716 }, --Gezzarak's Claws
@@ -1593,7 +1593,7 @@ AtlasLoot_Data["Skettis"] = {
 		},
 	},
 	{
-		Name = AL["Vakkiz the Windrager"],
+		Name = "Vakkiz the Windrager",
 		{
 			{ itemID = 32532 }, --Windrager's Coils
 			{ itemID = 32718 }, --Vakkiz's Scale
@@ -1609,7 +1609,7 @@ AtlasLoot_Data["Skettis"] = {
 		},
 	},
 	{
-		Name = AL["Terokk"],
+		Name = "Terokk",
 		{
 			{ itemID = 32540 }, --Terokk's Might
 			{ itemID = 32541 }, --Terokk's Wisdom
@@ -1620,8 +1620,8 @@ AtlasLoot_Data["Skettis"] = {
 			{ itemID = 32535 }, --Gift of the Talonpriests
 			{ itemID = 32534, price = "11.2%" }, --Brooch of the Immortal King
 			{ itemID = 32782 }, --Time-Lost Figurine
-			{ itemID = 32536, desc = "=ds= =q2="..AL["(has random enchantment)"] }, --Terokk's Gavel
-			{ itemID = 32537, desc = "=ds= =q2="..AL["(has random enchantment)"] }, --Terokk's Gavel
+			{ itemID = 32536, desc = "=ds= =q2=".."(has random enchantment)" }, --Terokk's Gavel
+			{ itemID = 32537, desc = "=ds= =q2=".."(has random enchantment)" }, --Terokk's Gavel
 		},
 	},
 	{
@@ -1648,9 +1648,9 @@ AtlasLoot_Data["Skettis"] = {
 
 AtlasLoot_Data["ScourgeInvasionEvent"] = {
 	Module = "AtlasLoot_WorldEvents",
-	Name = AL["Scourge Invasion"],
+	Name = "Scourge Invasion",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
 			{ itemID = 40601 }, --Argent Dawn Banner
 			{ itemID = 40593 }, --Argent Tome
@@ -1660,37 +1660,37 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 			{ itemID = 22999 }, --Tabard of the Argent Dawn
 			{ itemID = 43531 }, --Argent Healing Potion
 			{ itemID = 43530 }, --Argent Mana Potion
-			{ itemID = 22484, desc = "=ds="..AL["Currency"] }, --Necrotic Rune
+			{ itemID = 22484, desc = "=ds=".."Currency" }, --Necrotic Rune
 		},
 		{
 			{ itemID = 40110 }, --Haunted Memento
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.. AL["Prince Tenris Mirkblood"], "=q5=" .. BabbleZone["Karazhan"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.. "Prince Tenris Mirkblood", "=q5=" .. "Karazhan" },
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 39769 }, --Arcanite Ripper
 			{ itemID = 38658 }, --Vampiric Batling
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.. AL["Blessed Regalia of Undead Cleansing"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.. "Blessed Regalia of Undead Cleansing" },
 			{ itemID = 43074 }, --Blessed Mantle of Undead Cleansing
 			{ itemID = 43072 }, --Blessed Robe of Undead Cleansing
 			{ itemID = 43073 }, --Blessed Gloves of Undead Cleansing
 			{ itemID = 43075 }, --Blessed Trousers of Undead Cleansing
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.. AL["Undead Slayer's Blessed Armor"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.. "Undead Slayer's Blessed Armor" },
 			{ itemID = 43077 }, --Blessed Shoulderpads of Undead Slaying
 			{ itemID = 43076 }, --Blessed Tunic of Undead Slaying
 			{ itemID = 43078 }, --Blessed Grips of Undead Slaying
 			{ itemID = 43079 }, --Blessed Leggings of Undead Slaying
 		},
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.. AL["Blessed Garb of the Undead Slayer"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.. "Blessed Garb of the Undead Slayer" },
 			{ itemID = 43081 }, --Blessed Pauldrons of Undead Slaying
 			{ itemID = 43080 }, --Blessed Hauberk of Undead Slaying
 			{ itemID = 43082 }, --Blessed Handguards of Undead Slaying
 			{ itemID = 43083 }, --Blessed Greaves of Undead Slaying
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.. AL["Blessed Battlegear of Undead Slaying"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.. "Blessed Battlegear of Undead Slaying" },
 			{ itemID = 43068 }, --Blessed Spaulders of Undead Slaying
 			{ itemID = 43069 }, --Blessed Breastplate of Undead Slaying
 			{ itemID = 43070 }, --Blessed Gauntlets of Undead Slaying
@@ -1698,30 +1698,30 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 		},
 	},
 	{
-		Name = AL["Page 3"],
+		Name = "Page 3",
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Balzaphon"], "=q1="..BabbleZone["Stratholme"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Balzaphon", "=q1=".."Stratholme" },
 			{ itemID = 23126 }, --Waistband of Balzaphon
 			{ itemID = 23125 }, --Chains of the Lich
 			{ itemID = 23124 }, --Staff of Balzaphon
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Lord Blackwood"], "=q1="..BabbleZone["Scholomance"].."" },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Lord Blackwood", "=q1=".."Scholomance".."" },
 			{ itemID = 23156 }, --Blackwood's Thigh
 			{ itemID = 23132 }, --Lord Blackwood's Blade
 			{ itemID = 23139 }, --Lord Blackwood's Buckler
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Revanchion"], "=q1="..BabbleZone["Dire Maul (East)"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Revanchion", "=q1=".."Dire Maul (East)" },
 			{ itemID = 23127 }, --Cloak of Revanchion
 			{ itemID = 23129 }, --Bracers of Mending
 			{ itemID = 23128 }, --The Shadow's Grasp
 		},
 		{
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Scorn"], "=q1="..BabbleZone["Scarlet Monastery"].." - "..BabbleZone["Graveyard"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Scorn", "=q1=".."Scarlet Monastery".." - ".."Graveyard" },
 			{ itemID = 23170 }, --The Frozen Clutch
 			{ itemID = 23169 }, --Scorn's Icy Choker
 			{ itemID = 23168 }, --Scorn's Focal Dagger
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Sever"], "=q1="..BabbleZone["Shadowfang Keep"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Sever", "=q1=".."Shadowfang Keep" },
 			{ itemID = 23173 }, --Abomination Skin Leggings
 			{ itemID = 23171 }, --The Axe of Severing
-			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE..AL["Lady Falther'ess"], "=q1="..BabbleZone["Razorfen Downs"] },
+			{ icon = "INV_Box_01", name = AtlasLoot.Colors.WHITE.."Lady Falther'ess", "=q1=".."Razorfen Downs" },
 			{ itemID = 23178 }, --Mantle of Lady Falther'ess
 			{ itemID = 23177 }, --Lady Falther'ess' Finger
 		},

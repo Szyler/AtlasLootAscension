@@ -1,5 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 local itemHighlightBlue = "Interface\\AddOns\\AtlasLoot\\Images\\knownBlue"
 local itemHighlightGreen = "Interface\\AddOns\\AtlasLoot\\Images\\knownGreen"
 
@@ -280,7 +280,7 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 		local name = self:FixText(dataSource[dataID].Name)
 		extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
 	elseif itemNumber.lootTable and itemNumber.lootTable[2] == "Token" then
-		extra = AL["Set Token (Click)"]
+		extra = "Set Token (Click)"
 	elseif itemEquipLoc and itemEquipLoc ~= "" and itemSubType then
 		extra = "=ds="..itemEquipLoc..", "..itemSubType
 	elseif itemSubType then

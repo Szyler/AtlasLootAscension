@@ -1,5 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 
 local playerName = UnitName("player")
 local playerFaction = UnitFactionGroup("player")
@@ -26,7 +26,7 @@ function AtlasLoot:SetCraftingTooltip(data)
         end
     else
         GameTooltip:AddLine(" ")
-        GameTooltip:AddLine(self.Colors.WHITE..AL["Hold CTRL for source"])
+        GameTooltip:AddLine(self.Colors.WHITE.."Hold CTRL for source")
     end
 end
 
@@ -53,17 +53,17 @@ function AtlasLoot:SetDroprateTooltip(data)
             dropIndex = 5
         end
         if data.droprate[dropIndex] then
-            GameTooltip:AddLine(AL["Drop Rate: "]..data.droprate[dropIndex], 1, 1, 0)
+            GameTooltip:AddLine("Drop Rate: "..data.droprate[dropIndex], 1, 1, 0)
         end
     else
-        GameTooltip:AddLine(AL["Drop Rate: "]..data.droprate, 1, 1, 0)
+        GameTooltip:AddLine("Drop Rate: "..data.droprate, 1, 1, 0)
     end
 end
 
 --Set extra info tooltip
 function AtlasLoot:SetExtraTooltip(data)
     if not data.extraInfo then return end
-    GameTooltip:AddLine(AL["Extra Info: "]..data.extraInfo, 1, 1, 0)
+    GameTooltip:AddLine("Extra Info: "..data.extraInfo, 1, 1, 0)
 end
 --------------------------------------------------------------------------------
 -- Item OnEnter
@@ -280,15 +280,15 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
 
     local menuList = {
         {
-                {text = AL["Links"], isTitle = true},
-                {text = self.Colors.ORANGE..AL["Open AscensionDB To Entry"], func = function() self:OpenDBURL(linkID,Type) end},
-                {text = self.Colors.GREEN..AL["Guild"], func = function() self:Chatlink(linkID,"GUILD",Type) end},
-                {text = self.Colors.LIGHTBLUE..AL["Party"], func = function() self:Chatlink(linkID,"PARTY",Type) end},
-                {text = self.Colors.ORANGE2..AL["Raid"], func = function() self:Chatlink(linkID,"RAID",Type) end},
-                {text = AL["Auction House Search"], isTitle = true, showOnCondition = isAuction, divider = true},
-                {text = AL["Created Item"], func = function() self:SearchAuctionHouse(self:GetItemInfo(recipeData[1][1])) end, showOnCondition = isCrafted},
-                {text = AL["Recipe"], func = function() self:SearchAuctionHouse(self:GetItemInfo(recipeData.Recipe)) end, showOnCondition = isRecipe},
-                {text = AL["Item"], func = function() self:SearchAuctionHouse(self:GetItemInfo(itemID)) end, showOnCondition = isAuction},
+                {text = "Links", isTitle = true},
+                {text = self.Colors.ORANGE.."Open AscensionDB To Entry", func = function() self:OpenDBURL(linkID,Type) end},
+                {text = self.Colors.GREEN.."Guild", func = function() self:Chatlink(linkID,"GUILD",Type) end},
+                {text = self.Colors.LIGHTBLUE.."Party", func = function() self:Chatlink(linkID,"PARTY",Type) end},
+                {text = self.Colors.ORANGE2.."Raid", func = function() self:Chatlink(linkID,"RAID",Type) end},
+                {text = "Auction House Search", isTitle = true, showOnCondition = isAuction, divider = true},
+                {text = "Created Item", func = function() self:SearchAuctionHouse(self:GetItemInfo(recipeData[1][1])) end, showOnCondition = isCrafted},
+                {text = "Recipe", func = function() self:SearchAuctionHouse(self:GetItemInfo(recipeData.Recipe)) end, showOnCondition = isRecipe},
+                {text = "Item", func = function() self:SearchAuctionHouse(self:GetItemInfo(itemID)) end, showOnCondition = isAuction},
         }, {}
     }
     local wishList
@@ -300,24 +300,24 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
     if not self.ui.itemPopupframe or self.ui.itemPopupframe and not self.ui.itemPopupframe:IsVisible()  then
         wishList = {
             {
-                    {text = AL["Wishlists"], isTitle = true, divider = true},
-                    {text = AL["Add Custom Header/Blank Line"], func = function() StaticPopup_Show("ATLASLOOT_ADD_CUSTOMHEADER") StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = data.item.positionNumber end, showOnCondition = isWishlist},
-                    {text = AL["Delete"], func = function() self:DeleteFromWishList(data.item) end, showOnCondition = isWishlist},
-                    {text = AL["Add To Default"], func = function() self:AddItemToWishList(wList[1], wList[3], data) end, showOnCondition = notWishlist},
-                    {text = AL["Own Wishlists"], value = "OwnWishlists", hasArrow = true, showOnCondition = notWishlist},
-                    {text = AL["Shared Wishlists"], value = "SharedWishlists", hasArrow = true, showOnCondition = notWishlist},
-                    {text = AL["Add Wishlist"], func = function() self:AddWishList() end, showOnCondition = notWishlist},
-                    {text = AL["Vanity Collection"], isTitle = true, showOnCondition = isCollectionItem},
-                    {text = AL["Learn/Recive Vanity Item"], func = function() RequestDeliverVanityCollectionItem(itemID) end, showOnCondition = isCollectionItem}
+                    {text = "Wishlists", isTitle = true, divider = true},
+                    {text = "Add Custom Header/Blank Line", func = function() StaticPopup_Show("ATLASLOOT_ADD_CUSTOMHEADER") StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = data.item.positionNumber end, showOnCondition = isWishlist},
+                    {text = "Delete", func = function() self:DeleteFromWishList(data.item) end, showOnCondition = isWishlist},
+                    {text = "Add To Default", func = function() self:AddItemToWishList(wList[1], wList[3], data) end, showOnCondition = notWishlist},
+                    {text = "Own Wishlists", value = "OwnWishlists", hasArrow = true, showOnCondition = notWishlist},
+                    {text = "Shared Wishlists", value = "SharedWishlists", hasArrow = true, showOnCondition = notWishlist},
+                    {text = "Add Wishlist", func = function() self:AddWishList() end, showOnCondition = notWishlist},
+                    {text = "Vanity Collection", isTitle = true, showOnCondition = isCollectionItem},
+                    {text = "Learn/Recive Vanity Item", func = function() RequestDeliverVanityCollectionItem(itemID) end, showOnCondition = isCollectionItem}
             },{}}
             
-        table.insert(wishList[2], {text = AL["OwnWishlists"], isTitle = true, show = "OwnWishlists"})
+        table.insert(wishList[2], {text = "OwnWishlists", isTitle = true, show = "OwnWishlists"})
         for i,v in pairs(AtlasLootWishList.Own) do
             if type(v) == "table" then
                 table.insert(wishList[2],{text = v.Name, func = function() self:AddItemToWishList("Own", i, data) end, show = "OwnWishlists"})
             end
         end
-        table.insert(wishList[2], {text = AL["SharedWishlists"], isTitle = true, show = "SharedWishlists"})
+        table.insert(wishList[2], {text = "SharedWishlists", isTitle = true, show = "SharedWishlists"})
         for i,v in pairs(AtlasLootWishList.Shared) do
             if type(v) == "table" then
                 table.insert(wishList[2],{text = v.Name,func = function() self:AddItemToWishList("Shared", i, data) end, show = "SharedWishlists"})
@@ -341,7 +341,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
             end
             local isWaypoint = (craftingData and wayPoint) and true or false
             wayPointList = { [1] = {
-                {text = AL["Recipe Waypoints"], isTitle = true},
+                {text = "Recipe Waypoints", isTitle = true},
                 {text = "Add pin to map",
                 func = function()
                     for _,v in pairs(wayPoint) do

@@ -1,6 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
+
 --[[
 Functions:
 self:ShowLootTab()
@@ -39,7 +39,7 @@ function AtlasLoot:InitializeUIFunctions()
     function self:ShowInstance()
         for _, v in pairs(self.ui.menus.collection) do
             for _, t in ipairs(v) do
-                local zone = BabbleZone[GetRealZoneText()] or "noZone"
+                local zone = GetRealZoneText() or "noZone"
                 if t[4] == zone or (t[5] and t[5] == zone) then
                     self.currentTable = v.SubMenu
                     self.lastModule = v.Module
@@ -90,7 +90,7 @@ function AtlasLoot:InitializeUIFunctions()
     Constructs the main category menu from a tiered table
     ]]
     function self:ModuleMenuOpen()
-        local menuList = {dividerLength = 40,{{text = AL["Modules"], isTitle = true}}}
+        local menuList = {dividerLength = 40,{{text = "Modules", isTitle = true}}}
             for _, menu in ipairs(AtlasLoot.ui.menus.modules) do
             table.insert(menuList[1], {text = menu[1], func = function() moduleMenuClick(menu[2], menu[1], menu[3]) end})
             end
@@ -122,7 +122,7 @@ function AtlasLoot:InitializeUIFunctions()
     Generates the sub menu needed by passing a table of loot tables and titles
     ]]
     function self:SubMenuOpen(loottable)
-        local menuList = {dividerLength = 50, {{text = AL["Categorys"], isTitle = true}}, {}}
+        local menuList = {dividerLength = 50, {{text = "Categorys", isTitle = true}}, {}}
             for _, menu in pairs(loottable) do
                 if type(menu) == "table" then
                     if type(menu[3]) == "table" then
@@ -173,7 +173,7 @@ function AtlasLoot:InitializeUIFunctions()
     Adds expansion menu from expansion table in mainmenus.lua
     ]]
     function self:ExpansionMenuOpen(btn)
-        local menuList = {{{text = AL["Expansions"], isTitle = true}}}
+        local menuList = {{{text = "Expansions", isTitle = true}}}
             for _,v in ipairs(AtlasLoot.ui.menus.expansion) do
                 if type(v) == "table" then
                     table.insert(menuList[1], {text = v[1], func = function() expansionMenuClick(v[2], v[1]) end})

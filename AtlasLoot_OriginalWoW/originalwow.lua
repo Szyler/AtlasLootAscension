@@ -1,10 +1,10 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 local color = AtlasLoot.Colors
-local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
-local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
-local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
-local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
+
+
+
+
 local gap = {"gap"}
 -- Index
 --- Dungeons & Raids
@@ -87,7 +87,7 @@ AtlasLoot_Data["OldKeys"] = {
 	{
 		Name = "Old Keys",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..BabbleInventory["Key"].."s" },
+			{ icon = "INV_Box_01", name = color.WHITE.."Key".."s" },
 			{ itemID = 7146 }, --The Scarlet Key
 			{ itemID = 12382 }, --Key to the City
 			{ itemID = 6893 }, --Workshop Key
@@ -96,12 +96,12 @@ AtlasLoot_Data["OldKeys"] = {
 			{ itemID = 18249 }, --Crescent Key
 			{ itemID = 13704 }, --Skeleton Key
 			gap,
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Dungeon Set 2"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Dungeon Set 2" },
 			{ itemID = 22057 }, --Brazier of Invocation
 			{ itemID = 21986 }, --Banner of Provocation
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Misc"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Misc" },
 			{ itemID = 19931 }, --Gurubashi Mojo Madness
 			{ itemID = 13523 }, --Blood of Innocents
 			{ itemID = 18746 }, --Divination Scryer
@@ -119,11 +119,11 @@ AtlasLoot_Data["OldKeys"] = {
 
 AtlasLoot_Data["RuinsofAQ"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Ruins of Ahn'Qiraj"],
+	Name = "Ruins of Ahn'Qiraj",
 	Type = "ClassicRaid",
 	Map = "TheRuinsofAhnQiraj",
 	{
-		Name = BabbleBoss["Kurinnaxx"],
+		Name = "Kurinnaxx",
 		{
 			{ itemID = 21500, groupID = 1, refLootEntry = 15348 }, --Belt of the Inquisition
 			{ itemID = 21503, groupID = 1, refLootEntry = 15348 }, --Belt of the Sand Reaver
@@ -141,7 +141,7 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["General Rajaxx"],
+		Name = "General Rajaxx",
 		{
 			{ itemID = 21497, groupID = 1, refLootEntry = 15341 }, --Boots of the Qiraji General
 			{ itemID = 21493, groupID = 1, refLootEntry = 15341 }, --Boots of the Vanguard
@@ -153,20 +153,20 @@ AtlasLoot_Data["RuinsofAQ"] = {
 			{ itemID = 21494, groupID = 1, refLootEntry = 15341 }, --Southwind's Grasps
 
 			{ itemID = 21495 }, --Legplates of the Qiraji Command
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Rajaxx's Captains"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Rajaxx's Captains" },
 			{ itemID = 21810 }, --Treads of the Wandering Nomad
 			{ itemID = 21809 }, --Fury of the Forgotten Swarm
 			{ itemID = 21806 }, --Gavel of Qiraji Authority
 		},
 		{
 			{ itemID = 1506051, lootTable = {"AQ20SetsBACK","Token"} }, --Ceremonial Qiraji Drape
-			{ icon = "INV_Box_01", name = color.WHITE..BabbleBoss["Lieutenant General Andorov"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Lieutenant General Andorov" },
 			{ itemID = 22221 }, --Plans: Obsidian Mail Tunic
 			{ itemID = 22219 }, --Plans: Jagged Obsidian Shield
 		},
 	},
 	{
-		Name = BabbleBoss["Moam"],
+		Name = "Moam",
 		{
 			{ itemID = 21472, groupID = 1, refLootEntry = 15340 }, --Dustwind Turban
 			{ itemID = 21473, groupID = 1, refLootEntry = 15340 }, --Eye of Moam
@@ -186,7 +186,7 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Buru the Gorger"],
+		Name = "Buru the Gorger",
 		{
 			{ itemID = 21485, groupID = 1, refLootEntry = 15370 }, --Buru's Skull Fragment
 			{ itemID = 21474, groupID = 1, refLootEntry = 15370 }, --Chitinous Shoulderguards
@@ -203,7 +203,7 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ayamiss the Hunter"],
+		Name = "Ayamiss the Hunter",
 		{
 			{ itemID = 21481, groupID = 1, refLootEntry = 15369 }, --Boots of the Desert Protector
 			{ itemID = 21482, groupID = 1, refLootEntry = 15369 }, --Boots of the Fiery Sands
@@ -220,7 +220,7 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ossirian the Unscarred"],
+		Name = "Ossirian the Unscarred",
 		{
 			{ itemID = 21457, groupID = 1, refLootEntry = 15339 }, --Bracers of Brutality
 			{ itemID = 21459, groupID = 1, refLootEntry = 15339 }, --Crossbow of Imminent Doom
@@ -250,7 +250,7 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 20873 }, --Alabaster Idol
 			{ itemID = 20869 }, --Amber Idol
@@ -288,7 +288,7 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		},
 	},
 	{
-		Name = AL["AQ Enchants"],
+		Name = "AQ Enchants",
 		{
 			{ itemID = 20728 }, --Formula: Enchant Gloves - Frost Power
 			{ itemID = 20731 }, --Formula: Enchant Gloves - Superior Agility
@@ -307,11 +307,11 @@ AtlasLoot_Data["RuinsofAQ"] = {
 
 AtlasLoot_Data["TempleofAQ"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Temple of Ahn'Qiraj"],
+	Name = "Temple of Ahn'Qiraj",
 	Type = "ClassicRaid",
 	Map = "TheTempleofAhnQiraj",
 	{
-		Name = BabbleBoss["The Prophet Skeram"],
+		Name = "The Prophet Skeram",
 		{
 			{ itemID = 21705, groupID = 1, refLootEntry = 15263 }, --Boots of the Fallen Prophet
 			{ itemID = 21704, groupID = 1, refLootEntry = 15263 }, --Boots of the Redeemed Prophecy
@@ -337,7 +337,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Bug Family"],
+		Name = "The Bug Family",
 		{
 			{ itemID = 21697 }, --Cape of the Trinity
 			{ itemID = 21694 }, --Ternary Mantle
@@ -369,7 +369,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Battleguard Sartura"],
+		Name = "Battleguard Sartura",
 		{
 			{ itemID = 21669, groupID = 1, refLootEntry = 15516 }, --Creeping Vine Helm
 			{ itemID = 21676, groupID = 1, refLootEntry = 15516 }, --Leggings of the Festering Swarm
@@ -392,7 +392,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Fankriss the Unyielding"],
+		Name = "Fankriss the Unyielding",
 		{
 			{ itemID = 21627, groupID = 1, refLootEntry = 15510 }, --Cloak of Untold Secrets
 			{ itemID = 21647, groupID = 1, refLootEntry = 15510 }, --Fetish of the Sand Reaver
@@ -415,7 +415,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Viscidus"],
+		Name = "Viscidus",
 		{
 			{ itemID = 21688, groupID = 1, refLootEntry = 15299 }, --Boots of the Fallen Hero
 			{ itemID = 22399, groupID = 1, refLootEntry = 15299 }, --Idol of Health
@@ -439,7 +439,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		},
 	},
 	{ 
-		Name = BabbleBoss["Princess Huhuran"],
+		Name = "Princess Huhuran",
 		{
 			{ itemID = 21619, groupID = 1, refLootEntry = 15509 }, --Gloves of the Messiah
 			{ itemID = 21620, groupID = 1, refLootEntry = 15509 }, --Ring of the Martyr
@@ -462,7 +462,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Twin Emperors"],
+		Name = "The Twin Emperors",
 		{
 			{ itemID = 21608, groupID = 1, refLootEntry = 15275 }, --Amulet of Vek'nilash
 			{ itemID = 21606, groupID = 1, refLootEntry = 15275 }, --Belt of the Fallen Emperor
@@ -489,7 +489,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ouro"],
+		Name = "Ouro",
 		{
 			{ itemID = 15029, groupID = 1, refLootEntry = 15517 }, --Aera's Poison Gland
 			{ itemID = 21611, groupID = 1, refLootEntry = 15517 }, --Burrower Bracers
@@ -511,7 +511,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["C'Thun"],
+		Name = "C'Thun",
 		{
 			{ itemID = 21583, groupID = 1, refLootEntry = 15727 }, --Cloak of Clarity
 			{ itemID = 22731, groupID = 1, refLootEntry = 15727 }, --Cloak of the Devoured
@@ -536,7 +536,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 21838 }, --Garb of Royal Ascension
 			{ itemID = 21888 }, --Gloves of the Immortal
@@ -557,21 +557,21 @@ AtlasLoot_Data["TempleofAQ"] = {
 		},
 	},
 	{
-		Name = AL["Shoulder Enchants"],
+		Name = "Shoulder Enchants",
 		{
-			{ itemID = 1319786, desc = AL["Quest Requirements"], contentsPreview = {{20878},{20868},{20872},{20859,3},{20864,3}} }, --Inscription of the Stormcaller
-			{ itemID = 1319785, desc = AL["Quest Requirements"], contentsPreview = {{20881},{20869},{20871},{20861,3},{20862,3}} }, --Inscription of the Stalker
-			{ itemID = 1319789, desc = AL["Quest Requirements"], contentsPreview = {{20874},{20872},{20866},{20864,3},{20858,3}} }, --Inscription of the Oracle
-			{ itemID = 1319790, desc = AL["Quest Requirements"], contentsPreview = {{20879},{20873},{20868},{20865,3},{20859,3}} }, --Inscription of the Genesis
-			{ itemID = 1319787, desc = AL["Quest Requirements"], contentsPreview = {{20877},{20871},{20867},{20862,3},{20860,3}} }, --Inscription of the Enigma
-			{ itemID = 1319788, desc = AL["Quest Requirements"], contentsPreview = {{20875},{20870},{20869},{20863,3},{20861,3}} }, --Inscription of the Doomcaller
-			{ itemID = 1319784, desc = AL["Quest Requirements"], contentsPreview = {{20876},{20867},{20870},{20860,3},{20863,3}} }, --Inscription of the Deathdealer
-			{ itemID = 1319782, desc = AL["Quest Requirements"], contentsPreview = {{20882},{20866},{20873},{20858,3},{20865,3}} }, --Inscription of the Conqueror
-			{ itemID = 1319783, desc = AL["Quest Requirements"], contentsPreview = {{20878},{20868},{20872},{20859,3},{20864,3}} }, --Inscription of the Avenger
+			{ itemID = 1319786, desc = "Quest Requirements", contentsPreview = {{20878},{20868},{20872},{20859,3},{20864,3}} }, --Inscription of the Stormcaller
+			{ itemID = 1319785, desc = "Quest Requirements", contentsPreview = {{20881},{20869},{20871},{20861,3},{20862,3}} }, --Inscription of the Stalker
+			{ itemID = 1319789, desc = "Quest Requirements", contentsPreview = {{20874},{20872},{20866},{20864,3},{20858,3}} }, --Inscription of the Oracle
+			{ itemID = 1319790, desc = "Quest Requirements", contentsPreview = {{20879},{20873},{20868},{20865,3},{20859,3}} }, --Inscription of the Genesis
+			{ itemID = 1319787, desc = "Quest Requirements", contentsPreview = {{20877},{20871},{20867},{20862,3},{20860,3}} }, --Inscription of the Enigma
+			{ itemID = 1319788, desc = "Quest Requirements", contentsPreview = {{20875},{20870},{20869},{20863,3},{20861,3}} }, --Inscription of the Doomcaller
+			{ itemID = 1319784, desc = "Quest Requirements", contentsPreview = {{20876},{20867},{20870},{20860,3},{20863,3}} }, --Inscription of the Deathdealer
+			{ itemID = 1319782, desc = "Quest Requirements", contentsPreview = {{20882},{20866},{20873},{20858,3},{20865,3}} }, --Inscription of the Conqueror
+			{ itemID = 1319783, desc = "Quest Requirements", contentsPreview = {{20878},{20868},{20872},{20859,3},{20864,3}} }, --Inscription of the Avenger
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 20876 }, --Idol of Death
 			{ itemID = 20879 }, --Idol of Life
@@ -633,18 +633,18 @@ AtlasLoot_Data["AQOpening"] = {
 
 AtlasLoot_Data["BlackfathomDeeps"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Blackfathom Deeps"],
+	Name = "Blackfathom Deeps",
 	Type = "ClassicDungeon",
 	Map = "BlackfathomDeeps",
 	{
-		Name = BabbleBoss["Ghamoo-ra"],
+		Name = "Ghamoo-ra",
 		{
 			{ itemID = 6908, groupID = 1, refLootEntry = 4887 }, --Ghamoo-ra's Bind
 			{ itemID = 6907, groupID = 1, refLootEntry = 4887 }, --Tortoise Armor
 		},
 	},
 	{
-		Name = BabbleBoss["Lady Sarevess"],
+		Name = "Lady Sarevess",
 		{
 			{ itemID = 11121, groupID = 1, refLootEntry = 4831 }, --Darkwater Talwar
 			{ itemID = 888, groupID = 1, refLootEntry = 4831 }, --Naga Battle Gloves
@@ -654,7 +654,7 @@ AtlasLoot_Data["BlackfathomDeeps"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gelihast"],
+		Name = "Gelihast",
 		{
 			{ itemID = 6906, groupID = 1, refLootEntry = 6243 }, --Algae Fists
 			{ itemID = 6905, groupID = 1, refLootEntry = 6243 }, --Reef Axe
@@ -665,7 +665,7 @@ AtlasLoot_Data["BlackfathomDeeps"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Baron Aquanis"],
+		Name = "Baron Aquanis",
 		{
 			{ itemID = 3414, groupID = 1, refLootEntry = 12876 }, --Crested Scepter
 			{ itemID = 2567, groupID = 1, refLootEntry = 12876 }, --Evocator's Blade
@@ -677,7 +677,7 @@ AtlasLoot_Data["BlackfathomDeeps"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Twilight Lord Kelris"],
+		Name = "Twilight Lord Kelris",
 		{
 			{ itemID = 6903, groupID = 1, refLootEntry = 4832 }, --Gaze Dreamer Pants
 			{ itemID = 1155, groupID = 1, refLootEntry = 4832 }, --Rod of the Sleepwalker
@@ -695,7 +695,7 @@ AtlasLoot_Data["BlackfathomDeeps"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Old Serra'kis"],
+		Name = "Old Serra'kis",
 		{
 			{ itemID = 6902, groupID = 1, refLootEntry = 4830 }, --Bands of Serra'kis
 			{ itemID = 6904, groupID = 1, refLootEntry = 4830 }, --Bite of Serra'kis
@@ -703,19 +703,19 @@ AtlasLoot_Data["BlackfathomDeeps"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Aku'mai"],
+		Name = "Aku'mai",
 		{
 			{ itemID = 6910, groupID = 1, refLootEntry = 4829 }, --Leech Pants
 			{ itemID = 6911, groupID = 1, refLootEntry = 4829 }, --Moss Cinch
 			{ itemID = 6909, groupID = 1, refLootEntry = 4829 }, --Strike of the Hydra
 			gap,
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Quest Item"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Quest Item" },
 			{ itemID = 5359 }, --Lorgalis Manuscript
 			{ itemID = 16762 }, --Fathom Core
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 1486 }, --Tree Bark Jacket
 			{ itemID = 3416 }, --Martyr's Chain
@@ -738,17 +738,17 @@ AtlasLoot_Data["BlackfathomDeeps"] = {
 
 AtlasLoot_Data["BlackrockDepths"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Blackrock Depths"],
+	Name = "Blackrock Depths",
 	Type = "ClassicDungeonExt",
 	Map = "BlackrockDepths",
 	{
-		Name = AL["Overmaster Pyron"],
+		Name = "Overmaster Pyron",
 		{
 			{ itemID = 14486 }, --Pattern: Cloak of Fire
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Roccor"],
+		Name = "Lord Roccor",
 		{
 			{ itemID = 11632, groupID = 1, refLootEntry = 9025 }, --Earthslag Shoulders
 			{ itemID = 22397, groupID = 1, refLootEntry = 9025 }, --Idol of Ferocity
@@ -762,7 +762,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["High Interrogator Gerstahn"],
+		Name = "High Interrogator Gerstahn",
 		{
 			{ itemID = 11626, groupID = 1, refLootEntry = 9018 }, --Blackveil Cape
 			{ itemID = 11625, groupID = 1, refLootEntry = 9018 }, --Enthralled Sphere
@@ -818,9 +818,9 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = AL["Theldren"],
+		Name = "Theldren",
 		{
-			{ icon = "INV_Misc_Bag_09", name = color.WHITE..AL["Dungeon Set 2 Summonable"], desc = "=q5="..AL["Theldren"] },
+			{ icon = "INV_Misc_Bag_09", name = color.WHITE.."Dungeon Set 2 Summonable", desc = "=q5=".."Theldren" },
 			{ itemID = 22330 }, --Shroud of Arcane Mastery
 			{ itemID = 22305 }, --Ironweave Mantle
 			{ itemID = 22317 }, --Lefty's Brass Knuckle
@@ -829,7 +829,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Houndmaster Grebmar"],
+		Name = "Houndmaster Grebmar",
 		{
 			{ itemID = 11627, groupID = 1, refLootEntry = 9319 }, --Fleetfoot Greaves
 			{ itemID = 11628, groupID = 1, refLootEntry = 9319 }, --Houndmaster's Bow
@@ -855,7 +855,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Pyromancer Loregrain"],
+		Name = "Pyromancer Loregrain",
 		{
 			{ itemID = 11747, groupID = 1, refLootEntry = 9024 }, --Flamestrider Robes
 			{ itemID = 11750, groupID = 1, refLootEntry = 9024 }, --Kindling Stave
@@ -875,12 +875,12 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = AL["The Vault"],
+		Name = "The Vault",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["The Vault"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."The Vault" },
 			{ itemID = 11309 }, --The Heart of the Mountain
 		gap,
-			{ icon = "INV_Box_01", name = color.WHITE..AL["The Secret Safe"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."The Secret Safe" },
 			{ itemID = 22256 }, --Mana Shaping Handwraps
 			{ itemID = 11929 }, --Haunting Specter Leggings
 			{ itemID = 11926 }, --Deathdealer Breastplate
@@ -891,14 +891,14 @@ AtlasLoot_Data["BlackrockDepths"] = {
 			{ itemID = 22254 }, --Wand of Eternal Light
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Dark Coffer"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Dark Coffer" },
 			{ itemID = 11752 }, --Black Blood of the Tormented
 			{ itemID = 11751 }, --Burning Essence
 			{ itemID = 11753 }, --Eye of Kajal
 		},
 	},
 	{
-		Name = BabbleBoss["Warder Stilgiss"],
+		Name = "Warder Stilgiss",
 		{
 			{ itemID = 11784, groupID = 1, refLootEntry = 9041 }, --Arbiter's Blade
 			{ itemID = 11782, groupID = 1, refLootEntry = 9041 }, --Boreal Mantle
@@ -916,14 +916,14 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Verek"],
+		Name = "Verek",
 		{
 			{ itemID = 11755, groupID = 1, refLootEntry = 9042 }, --Verek's Collar
 			{ itemID = 22242, groupID = 1, refLootEntry = 9042 }, --Verek's Leash
 		},
 	},
 	{
-		Name = BabbleBoss["Fineous Darkvire"],
+		Name = "Fineous Darkvire",
 		{
 			{ itemID = 11839, groupID = 1, refLootEntry = 9056 }, --Chief Architect's Monocle
 			{ itemID = 22223, groupID = 1, refLootEntry = 9056 }, --Foreman's Head Protector
@@ -945,7 +945,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Incendius"],
+		Name = "Lord Incendius",
 		{
 			{ itemID = 11764, groupID = 1, refLootEntry = 9017 }, --Cinderhide Armsplints
 			{ itemID = 11767, groupID = 1, refLootEntry = 9017 }, --Emberplate Armguards
@@ -959,7 +959,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Bael'Gar"],
+		Name = "Bael'Gar",
 		{
 			{ itemID = 11803, groupID = 1, refLootEntry = 9016 }, --Force of Magma
 			{ itemID = 11802, groupID = 1, refLootEntry = 9016 }, --Lavacrest Leggings
@@ -968,7 +968,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["General Angerforge"],
+		Name = "General Angerforge",
 		{
 			{ itemID = 11816, groupID = 1, refLootEntry = 9033 }, --Angerforge's Battle Axe
 			{ itemID = 11810, groupID = 1, refLootEntry = 9033 }, --Force of Will
@@ -988,7 +988,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Golem Lord Argelmach"],
+		Name = "Golem Lord Argelmach",
 		{
 			{ itemID = 11823, groupID = 1, refLootEntry = 8983 }, --Luminary Kilt
 			{ itemID = 11669, groupID = 1, refLootEntry = 8983 }, --Naglering
@@ -1012,7 +1012,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Hurley Blackbreath"],
+		Name = "Hurley Blackbreath",
 		{
 			{ itemID = 18043, groupID = 1, refLootEntry = 9537 }, --Coal Miner Boots
 			{ itemID = 22275, groupID = 1, refLootEntry = 9537 }, --Firemoss Boots
@@ -1033,7 +1033,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Phalanx"],
+		Name = "Phalanx",
 		{
 			{ itemID = 11744, groupID = 1, refLootEntry = 9502 }, --Bloodfist
 			{ itemID = 11745, groupID = 1, refLootEntry = 9502 }, --Fists of Phalanx
@@ -1041,7 +1041,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ribbly Screwspigot"],
+		Name = "Ribbly Screwspigot",
 		{
 			{ itemID = 11612 }, --Plans: Dark Iron Plate
 			{ itemID = 2662 }, --Ribbly's Quiver
@@ -1060,7 +1060,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Plugger Spazzring"],
+		Name = "Plugger Spazzring",
 		{
 			{ itemID = 12791, groupID = 1, refLootEntry = 9499 }, --Barman Shanker
 			{ itemID = 12793, groupID = 1, refLootEntry = 9499 }, --Mixologist's Tunic
@@ -1083,7 +1083,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ambassador Flamelash"],
+		Name = "Ambassador Flamelash",
 		{
 			{ itemID = 11832, groupID = 1, refLootEntry = 9156 }, --Burst of Knowledge
 			{ itemID = 11812, groupID = 1, refLootEntry = 9156 }, --Cape of the Fire Salamander
@@ -1098,7 +1098,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Panzor the Invincible"] .." (" ..AL["Rare"] ..")",
+		Name = "Panzor the Invincible" .." (" .."Rare" ..")",
 		{
 			{ itemID = 11785, groupID = 1, refLootEntry = 8923 }, --Rock Golem Bulwark
 			{ itemID = 11787, groupID = 1, refLootEntry = 8923 }, --Shalehusk Boots
@@ -1109,7 +1109,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 	{
 		Name = "Summoner's Tomb",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..BabbleBoss["Chest of The Seven"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Chest of The Seven" },
 			{ itemID = 11929 }, --Haunting Specter Leggings
 			{ itemID = 11925 }, --Ghostshroud
 			{ itemID = 11926 }, --Deathdealer Breastplate
@@ -1121,14 +1121,14 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = AL["Shadowforge Flame Keeper"],
+		Name = "Shadowforge Flame Keeper",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Shadowforge Flame Keeper"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Shadowforge Flame Keeper" },
 			{ itemID = 11885 }, --Shadowforge Torch
 		},
 	},
 	{
-		Name = BabbleBoss["Magmus"],
+		Name = "Magmus",
 		{
 			{ itemID = 11746, groupID = 1, refLootEntry = 9938 }, --Golem Skull Helm
 			{ itemID = 22208, groupID = 1, refLootEntry = 9938 }, --Lavastone Hammer
@@ -1138,7 +1138,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Emperor Dagran Thaurissan"],
+		Name = "Emperor Dagran Thaurissan",
 		{
 			{ itemID = 12557, groupID = 1, refLootEntry = 8929 }, --Ebonsteel Spaulders
 			{ itemID = 12554, groupID = 1, refLootEntry = 8929 }, --Hands of the Exalted Herald
@@ -1168,7 +1168,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Princess Moira Bronzebeard"],
+		Name = "Princess Moira Bronzebeard",
 		{
 			{ itemID = 12554 }, --Hands of the Exalted Herald
 			{ itemID = 12556 }, --High Priestess Boots
@@ -1184,7 +1184,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 12552 }, --Blisterbane Wrap
 			{ itemID = 12551 }, --Stoneshield Cloak
@@ -1225,11 +1225,11 @@ AtlasLoot_Data["BlackrockDepths"] = {
 
 AtlasLoot_Data["BlackrockCaverns"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["Blackrock Caverns"],
+	Name = "Blackrock Caverns",
 	Type = "ClassicDungeonExt",
 	--Map = "BlackrockDepths",
 	{
-		Name = AL["Ascendant Lord Obsidius"],
+		Name = "Ascendant Lord Obsidius",
 		WebID = {39705,"npc"},
 		{
 			{ itemID = 241661 }, -- Amber Messenger
@@ -1247,7 +1247,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 		},
 	},
 	{
-		Name = AL["Beauty"],
+		Name = "Beauty",
 		WebID = {39700,"npc"},
 		{
 			{ itemID = 223128 }, -- Beauty's Favorite Bone
@@ -1258,7 +1258,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 		},
 	},
 	{
-		Name = AL["Corla, Herald of Twilight"],
+		Name = "Corla, Herald of Twilight",
 		WebID = {39679,"npc"},
 		{
 			{ itemID = 212713 }, -- Grace of the Herald
@@ -1269,7 +1269,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 		},
 	},
 	{
-		Name = AL["Karsh Steelbender <Twilight Armorer>"],
+		Name = "Karsh Steelbender <Twilight Armorer>",
 		WebID = {39698,"npc"},
 		{
 			{ itemID = 218298 }, -- Steelbender's Masterpiece
@@ -1283,7 +1283,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 		},
 	},
 	{
-		Name = AL["Rom'ogg Bonecrusher"],
+		Name = "Rom'ogg Bonecrusher",
 		WebID = {39665,"npc"},
 		{
 			{ itemID = 232104 }, -- Torturer's Mercy
@@ -1300,18 +1300,18 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 
 AtlasLoot_Data["LowerBlackrock"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Lower Blackrock Spire"],
+	Name = "Lower Blackrock Spire",
 	Type = "ClassicDungeonExt",
 	Loadfirst = 3,
 	Map = "BlackrockSpire",
 	{
-		Name = AL["Scarshield Quartermaster"],
+		Name = "Scarshield Quartermaster",
 		{
 			{ itemID = 18987 }, --Blackhand's Command
 		},
 	},
 	{
-		Name = AL["Quest Item"],
+		Name = "Quest Item",
 		{
 			{ itemID = 12812 }, --Unfired Plate Gauntlets
 			{ itemID = 12631 }, --Fiery Plate Gauntlets
@@ -1323,7 +1323,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Spirestone Butcher"] .." (" ..AL["Rare"] ..")",
+		Name = "Spirestone Butcher" .." (" .."Rare" ..")",
 		{
 			{ itemID = 12608, groupID = 1, refLootEntry = 9219 }, --Butcher's Apron
 			{ itemID = 13286, groupID = 1, refLootEntry = 9219 }, --Rivenspike
@@ -1331,7 +1331,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Highlord Omokk"],
+		Name = "Highlord Omokk",
 		{
 			{ itemID = 16670, groupID = 1, refLootEntry = 9196 }, --Boots of Elements
 			{ itemID = 13167, groupID = 1, refLootEntry = 9196 }, --Fist of Omokk
@@ -1352,14 +1352,14 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Spirestone Battle Lord"] .." (" ..AL["Rare"] ..")",
+		Name = "Spirestone Battle Lord" .." (" .."Rare" ..")",
 		{
 			{ itemID = 13284 }, --Swiftdart Battleboots
 			{ itemID = 13285 }, --The Blackrock Slicer
 		},
 	},
 	{
-		Name = BabbleBoss["Spirestone Lord Magus"] .." (" ..AL["Rare"] ..")",
+		Name = "Spirestone Lord Magus" .." (" .."Rare" ..")",
 		{
 			{ itemID = 13282 }, --Ogreseer Tower Boots
 			{ itemID = 13283 }, --Magus Ring
@@ -1367,7 +1367,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Shadow Hunter Vosh'gajin"],
+		Name = "Shadow Hunter Vosh'gajin",
 		{
 			{ itemID = 12651, groupID = 1, refLootEntry = 9236 }, --Blackcrow
 			{ itemID = 13257, groupID = 1, refLootEntry = 9236 }, --Demonic Runed Spaulders
@@ -1396,7 +1396,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["War Master Voone"],
+		Name = "War Master Voone",
 		{
 			{ itemID = 16676, groupID = 1, refLootEntry = 9237 }, --Beaststalker's Gloves
 			{ itemID = 13179, groupID = 1, refLootEntry = 9237 }, --Brazecore Armguards
@@ -1420,7 +1420,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Mor Grayhoof"] .." (" ..AL["Summon"] ..")",
+		Name = "Mor Grayhoof" .." (" .."Summon" ..")",
 		{
 			{ itemID = 22325, groupID = 1, refLootEntry = 16080 }, --Belt of the Trickster
 			{ itemID = 22398, groupID = 1, refLootEntry = 16080 }, --Idol of Rejuvenation
@@ -1442,7 +1442,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Bannok Grimaxe"] .." (" ..AL["Rare"] ..")",
+		Name = "Bannok Grimaxe" .." (" .."Rare" ..")",
 		{
 			{ itemID = 12637, groupID = 1, refLootEntry = 9596 }, --Backusarian Gauntlets
 			{ itemID = 12634, groupID = 1, refLootEntry = 9596 }, --Chiselbrand Girdle
@@ -1463,7 +1463,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Mother Smolderweb"],
+		Name = "Mother Smolderweb",
 		{
 			{ itemID = 13244, groupID = 1, refLootEntry = 10596 }, --Gilded Gauntlets
 			{ itemID = 13213, groupID = 1, refLootEntry = 10596 }, --Smolderweb's Eye
@@ -1472,7 +1472,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Crystal Fang"],
+		Name = "Crystal Fang",
 		{
 			{ itemID = 13184, groupID = 1, refLootEntry = 10376 }, --Fallbrush Handgrips
 			{ itemID = 13218, groupID = 1, refLootEntry = 10376 }, --Fang of the Crystal Spider
@@ -1480,7 +1480,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Urok Doomhowl"] .." (" ..AL["Summon"] ..")",
+		Name = "Urok Doomhowl" .." (" .."Summon" ..")",
 		{
 			{ itemID = 22232, groupID = 1, refLootEntry = 10584 }, --Marksman's Girdle
 			{ itemID = 13259, groupID = 1, refLootEntry = 10584 }, --Ribsteel Footguards
@@ -1498,7 +1498,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Quartermaster Zigris"],
+		Name = "Quartermaster Zigris",
 		{
 			{ itemID = 13252, groupID = 1, refLootEntry = 9736 }, --Cloudrunner Girdle
 			{ itemID = 13253, groupID = 1, refLootEntry = 9736 }, --Hands of Power
@@ -1520,7 +1520,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gizrul the Slavener"],
+		Name = "Gizrul the Slavener",
 		{
 			{ itemID = 13208, groupID = 1, refLootEntry = 10268 }, --Bleak Howler Armguards
 			{ itemID = 13205, groupID = 1, refLootEntry = 10268 }, --Rhombeard Protector
@@ -1529,7 +1529,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Halycon"],
+		Name = "Halycon",
 		{
 			{ itemID = 13212, groupID = 1, refLootEntry = 10220 }, --Halycon's Spiked Collar
 			{ itemID = 22313, groupID = 1, refLootEntry = 10220 }, --Ironweave Bracers
@@ -1538,7 +1538,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ghok Bashguud"] .." (" ..AL["Rare"] ..")",
+		Name = "Ghok Bashguud" .." (" .."Rare" ..")",
 		{
 			{ itemID = 13203, groupID = 1, refLootEntry = 9718 }, --Armswake Cloak
 			{ itemID = 13204, groupID = 1, refLootEntry = 9718 }, --Bashguuder
@@ -1557,7 +1557,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Overlord Wyrmthalak"],
+		Name = "Overlord Wyrmthalak",
 		{
 			{ itemID = 16679, groupID = 1, refLootEntry = 9568 }, --Beaststalker's Mantle
 			{ itemID = 13148, groupID = 1, refLootEntry = 9568 }, --Chillpike
@@ -1574,14 +1574,14 @@ AtlasLoot_Data["LowerBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Burning Felguard"] .." (" ..AL["Rare"] ..", " ..AL["Random"] ..")",
+		Name = "Burning Felguard" .." (" .."Rare" ..", " .."Random" ..")",
 		{
 			{ itemID = 13181 }, --Demonskin Gloves
 			{ itemID = 13182 }, --Phase Blade
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 14513 }, --Pattern: Robe of the Archmage
 			{ itemID = 14152 }, --Robe of the Archmage
@@ -1604,11 +1604,11 @@ AtlasLoot_Data["LowerBlackrock"] = {
 
 AtlasLoot_Data["UpperBlackrock"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Upper Blackrock Spire"],
+	Name = "Upper Blackrock Spire",
 	Type = "ClassicDungeonExt",
 	Map = "BlackrockSpire",
 	{
-		Name = BabbleBoss["Pyroguard Emberseer"],
+		Name = "Pyroguard Emberseer",
 		{
 			{ itemID = 12905 }, --Wildfire Cape
 			{ itemID = 12927 }, --TruestrikeShoulders
@@ -1623,7 +1623,7 @@ AtlasLoot_Data["UpperBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Solakar Flamewreath"],
+		Name = "Solakar Flamewreath",
 		{
 			{ itemID = 12609 }, --Polychromatic Visionwrap
 			{ itemID = 12589 }, --Dustfeather Sash
@@ -1638,20 +1638,20 @@ AtlasLoot_Data["UpperBlackrock"] = {
 		},
 	},
 	{
-		Name = AL["Father Flame"],
+		Name = "Father Flame",
 		{
 			{ itemID = 13371 }, --Father Flame
 		},
 	},
 	{
-		Name = AL["Quest Item"],
+		Name = "Quest Item",
 		{
 			{ itemID = 12358 }, --Darkstone Tablet
 			{ itemID = 12352 }, --Doomrigger's Clasp
 		},
 	},
 	{
-		Name = BabbleBoss["Jed Runewatcher"],
+		Name = "Jed Runewatcher",
 		{
 			{ itemID = 12604 }, --Starfire Tiara
 			{ itemID = 12930 }, --Briarwood Reed
@@ -1659,7 +1659,7 @@ AtlasLoot_Data["UpperBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Goraluk Anvilcrack"],
+		Name = "Goraluk Anvilcrack",
 		{
 			{ itemID = 18047, groupID = 1, refLootEntry = 10899 }, --Flame Walkers
 			{ itemID = 13502, groupID = 1, refLootEntry = 10899 }, --Handcrafted Mastersmith Girdle
@@ -1679,13 +1679,13 @@ AtlasLoot_Data["UpperBlackrock"] = {
 			{ itemID = 12834, contentsPreview = {12790} }, --Plans: Arcanite Champion
 			{ itemID = 18779 }, --Bottom Half of Advanced Armorsmithing: Volume I
 			{ itemID = 12727 }, --Plans: Enchanted Thorium Breastplate
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Unforged Rune Covered Breastplate"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Unforged Rune Covered Breastplate" },
 			{ itemID = 12806 }, --Unforged Rune Covered Breastplate
 			{ itemID = 12696 }, --Plans: Demon Forged Breastplate
 		},
 	},
 	{
-		Name = BabbleBoss["Warchief Rend Blackhand"],
+		Name = "Warchief Rend Blackhand",
 		{
 			{ itemID = 18103, groupID = 1, refLootEntry = 10429 }, --Band of Rumination
 			{ itemID = 12936, groupID = 1, refLootEntry = 10429 }, --Battleborn Armbraces
@@ -1721,7 +1721,7 @@ AtlasLoot_Data["UpperBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gyth"],
+		Name = "Gyth",
 		{
 			{ itemID = 12871 }, --Chromatic Carapace
 			{ itemID = 12945 }, --Legplates of the Chromatic Defier
@@ -1740,7 +1740,7 @@ AtlasLoot_Data["UpperBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Beast"],
+		Name = "The Beast",
 		{
 			{ itemID = 12966, groupID = 1, refLootEntry = 10430 }, --Blackmist Armguards
 			{ itemID = 12963, groupID = 1, refLootEntry = 10430 }, --Blademaster Leggings
@@ -1759,9 +1759,9 @@ AtlasLoot_Data["UpperBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Valthalak"] .." (" ..AL["Summon"] ..")",
+		Name = "Lord Valthalak" .." (" .."Summon" ..")",
 		{
-			{ icon = "INV_Misc_Bag_09", name = color.WHITE..AL["Dungeon Set 2 Summonable"], desc = "=q5="..BabbleBoss["Lord Valthalak"] },
+			{ icon = "INV_Misc_Bag_09", name = color.WHITE.."Dungeon Set 2 Summonable", desc = "=q5=".."Lord Valthalak" },
 			{ itemID = 22336, groupID = 1, refLootEntry = 16042 }, --Draconian Aegis of the Legion
 			{ itemID = 22343, groupID = 1, refLootEntry = 16042 }, --Handguards of Savagery
 			{ itemID = 22302, groupID = 1, refLootEntry = 16042 }, --Ironweave Cowl
@@ -1775,7 +1775,7 @@ AtlasLoot_Data["UpperBlackrock"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["General Drakkisath"],
+		Name = "General Drakkisath",
 		{
 			{ itemID = 16674, groupID = 1, refLootEntry = 10363 }, --Beaststalker's Tunic
 			{ itemID = 12592, groupID = 1, refLootEntry = 10363 }, --Blackblade of Shahram
@@ -1804,7 +1804,7 @@ AtlasLoot_Data["UpperBlackrock"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 13260 }, --Wind Dancer Boots
 			{ itemID = 24102 }, --Manual of Eviscerate IX
@@ -1821,11 +1821,11 @@ AtlasLoot_Data["UpperBlackrock"] = {
 
 AtlasLoot_Data["MoltenCore"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Molten Core"],
+	Name = "Molten Core",
 	Type = "ClassicRaid",
 	Map = "MoltenCore",
 	{
-		Name = BabbleBoss["Lucifron"],
+		Name = "Lucifron",
 		{
 			{ itemID = 17072, groupID = 1, refLootEntry = 12056 }, --Blastershot Launcher
 			{ itemID = 18829, groupID = 1, refLootEntry = 12056 }, --Deep Earth Spaulders
@@ -1843,7 +1843,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Magmadar"],
+		Name = "Magmadar",
 		{
 			{ itemID = 18823, groupID = 1, refLootEntry = 11982 }, --Aged Core Leather Gloves
 			{ itemID = 17105, groupID = 1, refLootEntry = 11982 }, --Aurastone Hammer
@@ -1861,7 +1861,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gehennas"],
+		Name = "Gehennas",
 		{
 			{ itemID = 18832, groupID = 1, refLootEntry = 12259 }, --Brutality Blade
 			{ itemID = 17077, groupID = 1, refLootEntry = 12259 }, --Crimson Shocker
@@ -1880,7 +1880,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Garr"],
+		Name = "Garr",
 		{
 			{ itemID = 18823, groupID = 1, refLootEntry = 12057 }, --Aged Core Leather Gloves
 			{ itemID = 17105, groupID = 1, refLootEntry = 12057 }, --Aurastone Hammer
@@ -1903,7 +1903,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Shazzrah"],
+		Name = "Shazzrah",
 		{
 			{ itemID = 17103, groupID = 1, refLootEntry = 12264 }, --Azuresong Mageblade
 			{ itemID = 17109, groupID = 1, refLootEntry = 12264 }, --Choker of Enlightenment
@@ -1923,7 +1923,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Baron Geddon"],
+		Name = "Baron Geddon",
 		{
 			{ itemID = 17072, groupID = 1, refLootEntry = 12056 }, --Blastershot Launcher
 			{ itemID = 18829, groupID = 1, refLootEntry = 12056 }, --Deep Earth Spaulders
@@ -1943,7 +1943,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Golemagg the Incinerator"],
+		Name = "Golemagg the Incinerator",
 		{
 			{ itemID = 17072, groupID = 1, refLootEntry = 11988 }, --Blastershot Launcher
 			{ itemID = 18829, groupID = 1, refLootEntry = 11988 }, --Deep Earth Spaulders
@@ -1964,7 +1964,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Sulfuron Harbinger"],
+		Name = "Sulfuron Harbinger",
 		{
 			{ itemID = 17103, groupID = 1, refLootEntry = 12098 }, --Azuresong Mageblade
 			{ itemID = 12872, groupID = 1, refLootEntry = 12098 }, --Blazing Slippers
@@ -1984,7 +1984,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Majordomo Executus"],
+		Name = "Majordomo Executus",
 		{
 			{ itemID = 18806, groupID = 1, refLootEntry = 12018 }, --Core Forged Greaves
 			{ itemID = 18805, groupID = 1, refLootEntry = 12018 }, --Core Hound Tooth
@@ -2003,7 +2003,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ragnaros"],
+		Name = "Ragnaros",
 		{
 			{ itemID = 17063, groupID = 1, refLootEntry = 11502 }, --Band of Accuria
 			{ itemID = 19138, groupID = 1, refLootEntry = 11502 }, --Band of Sulfuras
@@ -2044,7 +2044,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 18264, contentsPreview = {18262} }, --Plans: Elemental Sharpening Stone
 			{ itemID = 18292, contentsPreview = {18282} }, --Schematic: Core Marksman Rifle
@@ -2066,11 +2066,11 @@ AtlasLoot_Data["MoltenCore"] = {
 
 AtlasLoot_Data["BlackwingLair"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Blackwing Lair"],
+	Name = "Blackwing Lair",
 	Type = "ClassicRaid",
 	Map = "BlackwingLair",
 	{
-		Name = BabbleBoss["Razorgore the Untamed"],
+		Name = "Razorgore the Untamed",
 		{
 			{ itemID = 19369, groupID = 1, refLootEntry = 12435 }, --Gloves of Rapid Evolution
 			{ itemID = 19370, groupID = 1, refLootEntry = 12435 }, --Mantle of the Blackwing Cabal
@@ -2101,7 +2101,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Vaelastrasz the Corrupt"],
+		Name = "Vaelastrasz the Corrupt",
 		{
 			{ itemID = 19403, groupID = 1, refLootEntry = 13020 }, --Band of Forced Concentration
 			{ itemID = 19367, groupID = 1, refLootEntry = 13020 }, --Dragon's Touch
@@ -2121,7 +2121,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Broodlord Lashlayer"],
+		Name = "Broodlord Lashlayer",
 		{
 			{ itemID = 19345, groupID = 1, refLootEntry = 12017 }, --Aegis of Preservation
 			{ itemID = 19399, groupID = 1, refLootEntry = 12017 }, --Black Ash Robe
@@ -2145,7 +2145,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Firemaw"],
+		Name = "Firemaw",
 		{
 			{ itemID = 19407, groupID = 1, refLootEntry = 11983 }, --Ebony Flame Gloves
 			{ itemID = 19433, groupID = 1, refLootEntry = 11983 }, --Emberweave Leggings
@@ -2165,7 +2165,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ebonroc"],
+		Name = "Ebonroc",
 		{
 			{ itemID = 19345, groupID = 1, refLootEntry = 34036 }, --Aegis of Preservation
 			{ itemID = 19403, groupID = 1, refLootEntry = 34036 }, --Band of Forced Concentration
@@ -2185,7 +2185,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Flamegor"],
+		Name = "Flamegor",
 		{
 			{ itemID = 19432, groupID = 1, refLootEntry = 34037 }, --Circle of Applied Force
 			{ itemID = 19367, groupID = 1, refLootEntry = 34037 }, --Dragon's Touch
@@ -2207,7 +2207,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Chromaggus"],
+		Name = "Chromaggus",
 		{
 			{ itemID = 19388, groupID = 1, refLootEntry = 14020 }, --Angelista's Grasp
 			{ itemID = 19347, groupID = 1, refLootEntry = 14020 }, --Claw of Chromaggus
@@ -2228,7 +2228,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Nefarian"],
+		Name = "Nefarian",
 		{
 			{ itemID = 19378, groupID = 1, refLootEntry = 11583 }, --Cloak of the Brood Lord
 			{ itemID = 19360, groupID = 1, refLootEntry = 11583 }, --Lok'amir il Romathis
@@ -2252,7 +2252,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 19436 }, --Cloak of Draconic Might
 			{ itemID = 19437 }, --Boots of Pure Thought
@@ -2278,11 +2278,11 @@ AtlasLoot_Data["BlackwingLair"] = {
 
 AtlasLoot_Data["DireMaulEast"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Dire Maul"] .." East",
+	Name = "Dire Maul" .." East",
 	Type = "ClassicDungeonExt",
 	Map = "DireMaul",
 	{
-		Name = BabbleBoss["Pusillin"],
+		Name = "Pusillin",
 		{
 			{ itemID = 18267 }, --Recipe: Runn Tum Tuber Surprise
 		gap,
@@ -2291,7 +2291,7 @@ AtlasLoot_Data["DireMaulEast"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Zevrim Thornhoof"],
+		Name = "Zevrim Thornhoof",
 		{
 			{ itemID = 18308, groupID = 1, refLootEntry = 11490 }, --Clever Hat
 			{ itemID = 18319, groupID = 1, refLootEntry = 11490 }, --Fervent Helm
@@ -2301,7 +2301,7 @@ AtlasLoot_Data["DireMaulEast"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lethtendris"],
+		Name = "Lethtendris",
 		{
 			{ itemID = 18302, groupID = 1, refLootEntry = 14327 }, --Band of Vigor
 			{ itemID = 18325, groupID = 1, refLootEntry = 14327 }, --Felhide Cap
@@ -2320,13 +2320,13 @@ AtlasLoot_Data["DireMaulEast"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Pimgib"],
+		Name = "Pimgib",
 		{
 			{ itemID = 18354 }, --Pimgib's Collar
 		},
 	},
 	{
-		Name = BabbleBoss["Hydrospawn"],
+		Name = "Hydrospawn",
 		{
 			{ itemID = 18305, groupID = 1, refLootEntry = 13280 }, --Breakwater Legguards
 			{ itemID = 18307, groupID = 1, refLootEntry = 13280 }, --Riptide Shoes
@@ -2336,7 +2336,7 @@ AtlasLoot_Data["DireMaulEast"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Alzzin the Wildshaper"],
+		Name = "Alzzin the Wildshaper",
 		{
 			{ itemID = 18321, groupID = 1, refLootEntry = 11492 }, --Energetic Rod
 			{ itemID = 18312, groupID = 1, refLootEntry = 11492 }, --Energized Chestplate
@@ -2354,9 +2354,9 @@ AtlasLoot_Data["DireMaulEast"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Isalien"],
+		Name = "Isalien",
 		{
-			{ icon = "INV_Misc_Bag_09", name = color.WHITE..AL["Dungeon Set 2 Summonable"], desc = "=q5="..BabbleBoss["Isalien"] },
+			{ icon = "INV_Misc_Bag_09", name = color.WHITE.."Dungeon Set 2 Summonable", desc = "=q5=".."Isalien" },
 			{ itemID = 22304 }, --Ironweave Gloves
 			{ itemID = 22472 }, --Boots of Ferocity
 			{ itemID = 22401 }, --Libram of Hope
@@ -2370,7 +2370,7 @@ AtlasLoot_Data["DireMaulEast"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 18295 }, --Phasing Boots
 			{ itemID = 18298 }, --Unbridled Leggings
@@ -2416,11 +2416,11 @@ AtlasLoot_Data["DireMaulEast"] = {
 
 AtlasLoot_Data["DireMaulNorth"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Dire Maul"] .." North",
+	Name = "Dire Maul" .." North",
 	Type = "ClassicDungeonExt",
 	Map = "DireMaul",
 	{
-		Name = BabbleBoss["Guard Mol'dar"],
+		Name = "Guard Mol'dar",
 		{
 			{ itemID = 18498, groupID = 0, refLootEntry = 14326 }, --Hedgecutter
 			{ itemID = 18493, groupID = 1, refLootEntry = 14326 }, --Bulky Iron Spaulders
@@ -2444,7 +2444,7 @@ AtlasLoot_Data["DireMaulNorth"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Stomper Kreeg"],
+		Name = "Stomper Kreeg",
 		{
 			{ itemID = 2218464, groupID = 1, refLootEntry = 14322 }, --Flattened Elven Ring
 			{ itemID = 18459, groupID = 1, refLootEntry = 14322 }, --Gallant's Wristguards
@@ -2462,7 +2462,7 @@ AtlasLoot_Data["DireMaulNorth"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Guard Fengus"],
+		Name = "Guard Fengus",
 		{
 			{ itemID = 18493, groupID = 1, refLootEntry = 14321 }, --Bulky Iron Spaulders
 			{ itemID = 18494, groupID = 1, refLootEntry = 14321 }, --Denwatcher's Shoulders
@@ -2482,12 +2482,12 @@ AtlasLoot_Data["DireMaulNorth"] = {
 			{ itemID = 2075990, groupID = 1, refLootEntry = 2075990 }, --Fengus's Warblade
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Fengus's Chest"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Fengus's Chest" },
 			{ itemID = 18266 }, --Gordok Courtyard Key
 		},
 	},
 	{
-		Name = AL["Knot Thimblejack"],
+		Name = "Knot Thimblejack",
 		{
 			{ itemID = 18517 }, --Pattern: Chromatic Cloak
 			{ itemID = 18518 }, --Pattern: Hide of the Wild
@@ -2502,7 +2502,7 @@ AtlasLoot_Data["DireMaulNorth"] = {
 			{ itemID = 18515 }, --Pattern: Mongoose Boots
 			{ itemID = 18516 }, --Pattern: Swift Flight Bracers
 		gap,
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Ogre Tannin Basket"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Ogre Tannin Basket" },
 			{ itemID = 18240 }, --Ogre Tannin
 		},
 		{
@@ -2521,7 +2521,7 @@ AtlasLoot_Data["DireMaulNorth"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Guard Slip'kik"],
+		Name = "Guard Slip'kik",
 		{
 			{ itemID = 18493, groupID = 1, refLootEntry = 14323 }, --Bulky Iron Spaulders
 			{ itemID = 18494, groupID = 1, refLootEntry = 14323 }, --Denwatcher's Shoulders
@@ -2543,7 +2543,7 @@ AtlasLoot_Data["DireMaulNorth"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Captain Kromcrush"],
+		Name = "Captain Kromcrush",
 		{
 			{ itemID = 18507, groupID = 1, refLootEntry = 14325 }, --Boots of the Full Moon
 			{ itemID = 18503, groupID = 1, refLootEntry = 14325 }, --Kromcrush's Chestplate
@@ -2553,7 +2553,7 @@ AtlasLoot_Data["DireMaulNorth"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Cho'Rush the Observer"],
+		Name = "Cho'Rush the Observer",
 		{
 			{ itemID = 18484, groupID = 1, refLootEntry = 14324 }, --Cho'Rush's Blade
 			{ itemID = 18490, groupID = 1, refLootEntry = 14324 }, --Insightful Hood
@@ -2562,7 +2562,7 @@ AtlasLoot_Data["DireMaulNorth"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["King Gordok"],
+		Name = "King Gordok",
 		{
 			{ itemID = 18522, groupID = 1, refLootEntry = 11501 }, --Band of the Ogre King
 			{ itemID = 18520, groupID = 1, refLootEntry = 11501 }, --Barbarous Blade
@@ -2582,7 +2582,7 @@ AtlasLoot_Data["DireMaulNorth"] = {
 		},
 	},
 	{
-		Name = AL["DM North Tribute Chest"],
+		Name = "DM North Tribute Chest",
 		{
 			{ itemID = 18538 }, --Treant's Bane
 			{ itemID = 18495 }, --Redoubt Cloak
@@ -2617,11 +2617,11 @@ AtlasLoot_Data["DireMaulNorth"] = {
 
 AtlasLoot_Data["DireMaulWest"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Dire Maul"] .." West",
+	Name = "Dire Maul" .." West",
 	Type = "ClassicDungeonExt",
 	Map = "DireMaul",
 	{
-		Name = BabbleBoss["Tendris Warpwood"],
+		Name = "Tendris Warpwood",
 		{
 			{ itemID = 18352, groupID = 1, refLootEntry = 11489 }, --Petrified Bark Shield
 			{ itemID = 18353, groupID = 1, refLootEntry = 11489 }, --Stoneflower Staff
@@ -2630,7 +2630,7 @@ AtlasLoot_Data["DireMaulWest"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Illyanna Ravenoak"],
+		Name = "Illyanna Ravenoak",
 		{
 			{ itemID = 18383, groupID = 1, refLootEntry = 11488 }, --Force Imbued Gauntlets
 			{ itemID = 18349, groupID = 1, refLootEntry = 11488 }, --Gauntlets of Accuracy
@@ -2648,7 +2648,7 @@ AtlasLoot_Data["DireMaulWest"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Magister Kalendris"],
+		Name = "Magister Kalendris",
 		{
 			{ itemID = 18350, groupID = 1, refLootEntry = 11487 }, --Amplifying Cloak
 			{ itemID = 18397, groupID = 1, refLootEntry = 11487 }, --Elder Magus Pendant
@@ -2668,7 +2668,7 @@ AtlasLoot_Data["DireMaulWest"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Tsu'zee"],
+		Name = "Tsu'zee",
 		{
 			{ itemID = 18387, groupID = 1, refLootEntry = 11467 }, --Brightspark Gloves
 			{ itemID = 18345, groupID = 1, refLootEntry = 11467 }, --Murmuring Ring
@@ -2684,7 +2684,7 @@ AtlasLoot_Data["DireMaulWest"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Immol'thar"],
+		Name = "Immol'thar",
 		{
 			{ itemID = 18384, groupID = 1, refLootEntry = 11496 }, --Bile-etched Spaulders
 			{ itemID = 18372, groupID = 1, refLootEntry = 11496 }, --Blade of the New Moon
@@ -2699,7 +2699,7 @@ AtlasLoot_Data["DireMaulWest"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Hel'nurath"],
+		Name = "Lord Hel'nurath",
 		{
 			{ itemID = 18757, groupID = 0, refLootEntry = 14506 }, --Diabolic Mantle
 			{ itemID = 18756, groupID = 1, refLootEntry = 14506 }, --Dreadguard's Protector
@@ -2708,7 +2708,7 @@ AtlasLoot_Data["DireMaulWest"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Prince Tortheldrin"],
+		Name = "Prince Tortheldrin",
 		{
 			{ itemID = 18375, groupID = 1, refLootEntry = 11486 }, --Bracers of the Eclipse
 			{ itemID = 18373, groupID = 1, refLootEntry = 11486 }, --Chestplate of Tranquility
@@ -2732,18 +2732,18 @@ AtlasLoot_Data["DireMaulWest"] = {
 			{ itemID = 2063093, groupID = 1, refLootEntry = 2060435 }, --Vestments of Eldre'Thalas
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["The Prince's Chest"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."The Prince's Chest" },
 			{ itemID = 18336 }, --Gauntlet of Gordok Might
 		},
 	},
 	{
-		Name = AL["Shen'dralar Provisioner"],
+		Name = "Shen'dralar Provisioner",
 		{
 			{ itemID = 18487 }, --Pattern: Mooncloth Robe
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 18344 }, --Stonebark Gauntlets
 			{ itemID = 18340 }, --Eidolon Talisman
@@ -2757,17 +2757,17 @@ AtlasLoot_Data["DireMaulWest"] = {
 
 AtlasLoot_Data["Gnomeregan"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Gnomeregan"],
+	Name = "Gnomeregan",
 	Type = "ClassicDungeon",
 	Map = "Gnomeregan",
 	{
-		Name = AL["Namdo Bizzfizzle"],
+		Name = "Namdo Bizzfizzle",
 		{
 			{ itemID = 14639 }, --Schematic: Minor Recombobulator
 		},
 	},
 	{
-		Name = BabbleBoss["Techbot"],
+		Name = "Techbot",
 		{
 			{ itemID = 9444, groupID = 1, refLootEntry = 6231 }, --Techbot CPU Shell
 			{ itemID = 3041, groupID = 1, refLootEntry = 1221203 }, --"Mage-Eye" Blunderbuss
@@ -2804,13 +2804,13 @@ AtlasLoot_Data["Gnomeregan"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Grubbis"],
+		Name = "Grubbis",
 		{
 			{ itemID = 9445, groupID = 1, refLootEntry = 7361 }, --Grubbis Paws
 		},
 	},
 	{
-		Name = BabbleBoss["Viscous Fallout"],
+		Name = "Viscous Fallout",
 		{
 			{ itemID = 9454, groupID = 1, refLootEntry = 7079 }, --Acidic Walkers
 			{ itemID = 9452, groupID = 1, refLootEntry = 7079 }, --Hydrocane
@@ -2818,7 +2818,7 @@ AtlasLoot_Data["Gnomeregan"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Electrocutioner 6000"],
+		Name = "Electrocutioner 6000",
 		{
 			{ itemID = 9447, groupID = 1, refLootEntry = 6235 }, --Electrocutioner Lagnut
 			{ itemID = 9446, groupID = 1, refLootEntry = 6235 }, --Electrocutioner Leg
@@ -2827,7 +2827,7 @@ AtlasLoot_Data["Gnomeregan"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Crowd Pummeler 9-60"],
+		Name = "Crowd Pummeler 9-60",
 		{
 			{ itemID = 406004, groupID = 1, refLootEntry = 6229 }, --Calibrated Puncher
 			{ itemID = 9450, groupID = 1, refLootEntry = 6229 }, --Gnomebot Operating Boots
@@ -2835,7 +2835,7 @@ AtlasLoot_Data["Gnomeregan"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Dark Iron Ambassador"],
+		Name = "Dark Iron Ambassador",
 		{
 			{ itemID = 9455, groupID = 1, refLootEntry = 6228 }, --Emissary Cuffs
 			{ itemID = 9456, groupID = 1, refLootEntry = 6228 }, --Glass Shooter
@@ -2852,7 +2852,7 @@ AtlasLoot_Data["Gnomeregan"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Mekgineer Thermaplugg"],
+		Name = "Mekgineer Thermaplugg",
 		{
 			{ itemID = 9461, groupID = 1, refLootEntry = 7800 }, --Charged Gear
 			{ itemID = 9492, groupID = 1, refLootEntry = 7800 }, --Electromagnetic Gigaflux Reactivator
@@ -2866,7 +2866,7 @@ AtlasLoot_Data["Gnomeregan"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 9508 }, --Mechbuilder's Overalls
 			{ itemID = 9491 }, --Hotshot Pilot's Gloves
@@ -2887,11 +2887,11 @@ AtlasLoot_Data["Gnomeregan"] = {
 
 AtlasLoot_Data["KarazhanCrypts"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["The Karazhan Crypts"],
+	Name = "The Karazhan Crypts",
 	Type = "ClassicDungeonExt",
 	--Map = "Gnomeregan",
 	{
-		Name = AL["Cynfael"],
+		Name = "Cynfael",
 		WebID = {254401,"npc"},
 		{
 			{ itemID = 252821 }, -- Twinglaive of the Vampire Council
@@ -2906,7 +2906,7 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 		},
 	},
 	{
-		Name = AL["Dryn Miel <The Second Eidolon>"],
+		Name = "Dryn Miel <The Second Eidolon>",
 		WebID = {254413,"npc"},
 		{
 			{ itemID = 253151 }, -- Sorrow of the Eclipse
@@ -2930,7 +2930,7 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 
 	},
 	{
-		Name = AL["Kurgoth Doomreaver"],
+		Name = "Kurgoth Doomreaver",
 		WebID = {254406,"npc"},
 		{
 			{ itemID = 253677 }, -- Forgiveness
@@ -2944,7 +2944,7 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 		},
 	},
 	{
-		Name = AL["The Judgement of Sinners"],
+		Name = "The Judgement of Sinners",
 		WebID = {254405,"npc"},
 		{
 			{ itemID = 253004 }, -- Ghoul Spine Cleaver
@@ -2958,7 +2958,7 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 		},
 	},
 	{
-		Name = AL["Captain Taveir (Rare Spawn)"],
+		Name = "Captain Taveir (Rare Spawn)",
 		WebID = {254495,"npc"},
 		{
 			{ itemID = 254088 }, --Funeral Treads
@@ -2971,7 +2971,7 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 		},
 	},
 	{
-		Name = AL["Kelivex Autumnvale (Rare Spawn)"],
+		Name = "Kelivex Autumnvale (Rare Spawn)",
 		WebID = {254493,"npc"},
 		{
 			{ itemID = 254088 }, --Funeral Treads
@@ -2992,11 +2992,11 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 
 AtlasLoot_Data["Maraudon"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Maraudon"],
+	Name = "Maraudon",
 	Type = "ClassicDungeon",
 	Map = "Maraudon",
 	{
-		Name = BabbleBoss["Noxxion"],
+		Name = "Noxxion",
 		{
 			{ itemID = 17746 }, --Noxxion's Shackles
 			{ itemID = 17744 }, --Heart of Noxxion
@@ -3005,7 +3005,7 @@ AtlasLoot_Data["Maraudon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Razorlash"],
+		Name = "Razorlash",
 		{
 			{ itemID = 17750 }, --Chloromesh Girdle
 			{ itemID = 17748 }, --Vinerot Sandals
@@ -3014,7 +3014,7 @@ AtlasLoot_Data["Maraudon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Vyletongue"],
+		Name = "Lord Vyletongue",
 		{
 			{ itemID = 2078661, groupID = 1, refLootEntry = 2075821 }, --Corrupting Wildfire Bow
 			{ itemID = 2075821, groupID = 1, refLootEntry = 2075821 }, --Vyletongue's Shadowfang
@@ -3026,7 +3026,7 @@ AtlasLoot_Data["Maraudon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Meshlok the Harvester"],
+		Name = "Meshlok the Harvester",
 		{
 			{ itemID = 17741 }, --Nature's Embrace
 			{ itemID = 17742 }, --Fungus Shroud Armor
@@ -3034,7 +3034,7 @@ AtlasLoot_Data["Maraudon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Celebras the Cursed"],
+		Name = "Celebras the Cursed",
 		{
 			{ itemID = 17739 }, --Grovekeeper's Drape
 			{ itemID = 17740 }, --Soothsayer's Headdress
@@ -3044,7 +3044,7 @@ AtlasLoot_Data["Maraudon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Landslide"],
+		Name = "Landslide",
 		{
 			{ itemID = 17736 }, --Rockgrip Gauntlets
 			{ itemID = 17734 }, --Helm of the Mountain
@@ -3053,7 +3053,7 @@ AtlasLoot_Data["Maraudon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Tinkerer Gizlock"],
+		Name = "Tinkerer Gizlock",
 		{
 			{ itemID = 2078151, groupID = 1, refLootEntry = 2062870 }, --Barrier of Gears and Sparks
 			{ itemID = 2075957, groupID = 1, refLootEntry = 2062870 }, --Blade of Ingenious Design
@@ -3066,7 +3066,7 @@ AtlasLoot_Data["Maraudon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Rotgrip"],
+		Name = "Rotgrip",
 		{
 			{ itemID = 17732 }, --Rotgrip Mantle
 			{ itemID = 17728 }, --Albino Crocscale Boots
@@ -3074,7 +3074,7 @@ AtlasLoot_Data["Maraudon"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Princess Theradras"],
+		Name = "Princess Theradras",
 		{
 			{ itemID = 17713, groupID = 1, refLootEntry = 35009 }, --Blackstone Ring
 			{ itemID = 17780, groupID = 1, refLootEntry = 35009 }, --Blade of Eternal Darkness
@@ -3087,7 +3087,7 @@ AtlasLoot_Data["Maraudon"] = {
 		},
 	},
 	{
-		Name = AL["Quest Item"],
+		Name = "Quest Item",
 		{
 			{ itemID = 17764 }, --Gem of the Fourth Khan
 			{ itemID = 17765 }, --Gem of the Fifth Khan
@@ -3099,11 +3099,11 @@ AtlasLoot_Data["Maraudon"] = {
 ----------------------
 AtlasLoot_Data["RagefireChasm"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Ragefire Chasm"],
+	Name = "Ragefire Chasm",
 	Type = "ClassicDungeon",
 	Map = "RagefireChasm",
 	{
-		Name = BabbleBoss["Taragaman the Hungerer"],
+		Name = "Taragaman the Hungerer",
 		{
 			{ itemID = 14145, groupID = 1, refLootEntry = 11520 }, --Cursed Felblade
 			{ itemID = 11321, groupID = 1, refLootEntry = 11520 }, --The Hungerer
@@ -3112,7 +3112,7 @@ AtlasLoot_Data["RagefireChasm"] = {
 		},
 	},
 	{
-		Name = AL["Zelemar the Wrathful"],
+		Name = "Zelemar the Wrathful",
 		{
 			{ itemID = 14147, groupID = 1, refLootEntry = 17830 }, --Cavedweller Bracers
 			{ itemID = 14148, groupID = 1, refLootEntry = 17830 }, --Crystalline Cuffs
@@ -3120,7 +3120,7 @@ AtlasLoot_Data["RagefireChasm"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Jergosh the Invoker"],
+		Name = "Jergosh the Invoker",
 		{
 			{ itemID = 2559, groupID = 1, refLootEntry = 11518 }, --Ebonstone Staff
 			{ itemID = 14150, groupID = 1, refLootEntry = 11518 }, --Robe of Evocation
@@ -3135,7 +3135,7 @@ AtlasLoot_Data["RagefireChasm"] = {
 		},
 	},
 	{
-		Name = AL["Oggleflint"],
+		Name = "Oggleflint",
 		{
 			{ itemID = 68194, groupID = 1, refLootEntry = 11517 }, --Oggleflint's Inspirer
 			{ itemID = 14149, groupID = 1, refLootEntry = 11517 }, --Subterranean Cape
@@ -3150,27 +3150,27 @@ AtlasLoot_Data["RagefireChasm"] = {
 
 AtlasLoot_Data["RazorfenDowns"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Razorfen Downs"],
+	Name = "Razorfen Downs",
 	Type = "ClassicDungeon",
 	Map = "RazorfenDowns",
 	{
-		Name = BabbleBoss["Tuten'kash"],
+		Name = "Tuten'kash",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..BabbleBoss["Tuten'kash"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Tuten'kash" },
 			{ itemID = 10776 }, --Silky Spider Cape
 			{ itemID = 10777 }, --Arachnid Gloves
 			{ itemID = 10775 }, --Carapace of Tuten'kash
 		},
 	},
 	{
-		Name = AL["Henry Stern"],
+		Name = "Henry Stern",
 		{
 			{ itemID = 3831 }, --Recipe: Mighty Troll's Blood Potion
 			{ itemID = 10841, spellID = 13028 }, --Goldthorn Tea
 		},
 	},
 	{
-		Name = BabbleBoss["Mordresh Fire Eye"],
+		Name = "Mordresh Fire Eye",
 		{
 			{ itemID = 10771 }, --Deathmage Sash
 			{ itemID = 10769 }, --Glowing Eye of Mordresh
@@ -3178,14 +3178,14 @@ AtlasLoot_Data["RazorfenDowns"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Glutton"],
+		Name = "Glutton",
 		{
 			{ itemID = 10774 }, --Fleshhide Shoulders
 			{ itemID = 10772 }, --Glutton's Cleaver
 		},
 	},
 	{
-		Name = BabbleBoss["Ragglesnout"],
+		Name = "Ragglesnout",
 		{
 			{ itemID = 2075397, groupID = 1, refLootEntry = 2075397 }, --Blade of Ragglesnout's Gloom
 			{ itemID = 10768 }, --Boar Champion's Belt
@@ -3194,7 +3194,7 @@ AtlasLoot_Data["RazorfenDowns"] = {
 		},
 	},
 	{
-		Name = AL["Lady Falther'ess"],
+		Name = "Lady Falther'ess",
 		{
 			{ itemID = 2069624, groupID = 1, refLootEntry = 2063851 }, --Ghostly Harbinger's Slippers
 			{ itemID = 2065473, groupID = 1, refLootEntry = 2063851 }, --Phantom Conqueror's Girdle
@@ -3203,7 +3203,7 @@ AtlasLoot_Data["RazorfenDowns"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Amnennar the Coldbringer"],
+		Name = "Amnennar the Coldbringer",
 		{
 			{ itemID = 10762 }, --Robes of the Lich
 			{ itemID = 10765 }, --Bonefingers
@@ -3214,14 +3214,14 @@ AtlasLoot_Data["RazorfenDowns"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Plaguemaw the Rotting"],
+		Name = "Plaguemaw the Rotting",
 		{
 			{ itemID = 10760 }, --Swine Fists
 			{ itemID = 10766 }, --Plaguerot Sprig
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 10574 }, --Corpseshroud
 			{ itemID = 10581 }, --Death's Head Vestment
@@ -3244,11 +3244,11 @@ AtlasLoot_Data["RazorfenDowns"] = {
 
 AtlasLoot_Data["RazorfenKraul"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Razorfen Kraul"],
+	Name = "Razorfen Kraul",
 	Type = "ClassicDungeon",
 	Map = "RazorfenKraul",
 	{
-		Name = AL["Roogug"],
+		Name = "Roogug",
 		{
 			{ itemID = 2039, groupID = 1, refLootEntry = 6168 }, --Plains Ring
 			{ itemID = 2177, groupID = 1, refLootEntry = 6168 }, --Quartzstone Staff
@@ -3257,7 +3257,7 @@ AtlasLoot_Data["RazorfenKraul"] = {
 		},
 	},
 	{
-		Name = AL["Aggem Thorncurse"],
+		Name = "Aggem Thorncurse",
 		{
 			{ itemID = 2551, groupID = 1, refLootEntry = 4424 }, --Boar Bolter
 			{ itemID = 6681, groupID = 1, refLootEntry = 4424 }, --Thornspike
@@ -3265,7 +3265,7 @@ AtlasLoot_Data["RazorfenKraul"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Death Speaker Jargba"],
+		Name = "Death Speaker Jargba",
 		{
 			{ itemID = 6685, groupID = 1, refLootEntry = 4428 }, --Death Speaker Mantle
 			{ itemID = 6682, groupID = 1, refLootEntry = 4428 }, --Death Speaker Robes
@@ -3276,13 +3276,13 @@ AtlasLoot_Data["RazorfenKraul"] = {
 		},
 	},
 	{
-		Name = AL["Razorfen Spearhide"],
+		Name = "Razorfen Spearhide",
 		{
 			{ itemID = 6679 }, --Armor Piercer
 		},
 	},
 	{
-		Name = BabbleBoss["Overlord Ramtusk"],
+		Name = "Overlord Ramtusk",
 		{
 			{ itemID = 6687, groupID = 1, refLootEntry = 4420 }, --Corpsemaker
 			{ itemID = 6686, groupID = 1, refLootEntry = 4420 }, --Tusken Helm
@@ -3290,14 +3290,14 @@ AtlasLoot_Data["RazorfenKraul"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Agathelos the Raging"],
+		Name = "Agathelos the Raging",
 		{
 			{ itemID = 6690, groupID = 1, refLootEntry = 4422 }, --Ferine Leggings
 			{ itemID = 6691, groupID = 1, refLootEntry = 4422 }, --Swinetusk Shank
 		},
 	},
 	{
-		Name = BabbleBoss["Blind Hunter"],
+		Name = "Blind Hunter",
 		{
 			{ itemID = 6697, groupID = 1, refLootEntry = 4425 }, --Batwing Mantle
 			{ itemID = 6696, groupID = 1, refLootEntry = 4425 }, --Nightstalker Bow
@@ -3306,7 +3306,7 @@ AtlasLoot_Data["RazorfenKraul"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Charlga Razorflank"],
+		Name = "Charlga Razorflank",
 		{
 			{ itemID = 6693, groupID = 1, refLootEntry = 4421 }, --Agamaggan's Clutch
 			{ itemID = 6694, groupID = 1, refLootEntry = 4421 }, --Heart of Agamaggan
@@ -3321,7 +3321,7 @@ AtlasLoot_Data["RazorfenKraul"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Earthcaller Halmgar"],
+		Name = "Earthcaller Halmgar",
 		{
 			{ itemID = 6688, groupID = 1, refLootEntry = 4842 }, --Whisperwind Headdress
 			{ itemID = 6689, groupID = 1, refLootEntry = 4842 }, --Wind Spirit Staff
@@ -3330,7 +3330,7 @@ AtlasLoot_Data["RazorfenKraul"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 2264 }, --Mantle of Thieves
 			{ itemID = 1978 }, --Wolfclaw Gloves
@@ -3351,7 +3351,7 @@ AtlasLoot_Data["RazorfenKraul"] = {
 
 AtlasLoot_Data["Scarlet Monastery"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Scarlet Monastery"],
+	Name = "Scarlet Monastery",
 	Type = "ClassicDungeon",
 	Map = "ScarletMonastery",
 	{
@@ -3362,12 +3362,12 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 			{ itemID = 10330 }, --Scarlet Leggings
 			{ itemID = 7717 }, --Ravager
 		gap,
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Scarlet Trainee"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Scarlet Trainee" },
 			{ itemID = 23192 }, --Tabard of the Scarlet Crusade
 		},
 	},
 	{
-		Name = BabbleZone["Cathedral"] .. " - " .. color.WHITE..BabbleBoss["High Inquisitor Fairbanks"],
+		Name = "Cathedral" .. " - " .. color.WHITE.."High Inquisitor Fairbanks",
 		{
 			{ itemID = 19507 }, --Inquisitor's Shawl
 			{ itemID = 19508 }, --Branded Leather Bracers
@@ -3386,7 +3386,7 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 		},
 	},
 	{
-		Name = color.WHITE..BabbleBoss["Scarlet Commander Mograine"],
+		Name = color.WHITE.."Scarlet Commander Mograine",
 		{
 			{ itemID = 7724 }, --Gauntlets of Divinity
 			{ itemID = 10330 }, --Scarlet Leggings
@@ -3406,7 +3406,7 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 		},
 	},
 	{
-		Name = color.WHITE..BabbleBoss["High Inquisitor Whitemane"],
+		Name = color.WHITE.."High Inquisitor Whitemane",
 		{
 			{ itemID = 7720 }, --Whitemane's Chapeau
 			{ itemID = 7722 }, --Triune Amulet
@@ -3415,7 +3415,7 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 		},
 	},
 	{
-		Name = BabbleZone["Graveyard"] .. " - " .. color.WHITE..BabbleBoss["Interrogator Vishas"],
+		Name = "Graveyard" .. " - " .. color.WHITE.."Interrogator Vishas",
 		{
 			{ itemID = 7683 }, --Bloody Brass Knuckles
 			{ itemID = 7682 }, --Torturing Poker
@@ -3433,14 +3433,14 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 		},
 	},
 		{
-		Name = color.WHITE..BabbleBoss["Bloodmage Thalnos"],
+		Name = color.WHITE.."Bloodmage Thalnos",
 		{
 			{ itemID = 7684 }, --Bloodmage Mantle
 			{ itemID = 7685 }, --Orb of the Forgotten Seer
 		},
 	},
 	{
-		Name = color.WHITE..BabbleBoss["Ironspine"],
+		Name = color.WHITE.."Ironspine",
 		{
 			{ itemID = 7688 }, --Ironspine's Ribcage
 			{ itemID = 7686 }, --Ironspine's Eye
@@ -3451,7 +3451,7 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 		},
 	},
 		{
-		Name = color.WHITE..BabbleBoss["Azshir the Sleepless"],
+		Name = color.WHITE.."Azshir the Sleepless",
 		{
 			{ itemID = 7709 }, --Blighted Leggings
 			{ itemID = 7731 }, --Ghostshard Talisman
@@ -3468,7 +3468,7 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 		},
 	},
 		{
-		Name = color.WHITE..BabbleBoss["Fallen Champion"],
+		Name = color.WHITE.."Fallen Champion",
 		{
 			{ itemID = 7691 }, --Embalmed Shroud
 			{ itemID = 7690 }, --Ebon Vise
@@ -3488,7 +3488,7 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 		},
 	},
 	{
-		Name = BabbleZone["Library"] .. " - " .. color.WHITE..BabbleBoss["Houndmaster Loksey"],
+		Name = "Library" .. " - " .. color.WHITE.."Houndmaster Loksey",
 		{
 			{ itemID = 7756 }, --Dog Training Gloves
 			{ itemID = 7710 }, --Loksey's Training Stick
@@ -3506,7 +3506,7 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 		},
 	},
 	{
-		Name = color.WHITE..BabbleBoss["Arcanist Doan"],
+		Name = color.WHITE.."Arcanist Doan",
 		{
 			{ itemID = 34227 }, --Deadman's Hand
 			{ itemID = 7712 }, --Mantle of Doan
@@ -3514,7 +3514,7 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 			{ itemID = 7714 }, --Hypnotic Blade
 			{ itemID = 7713 }, --Illusionary Rod
 		gap,
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Doan's Strongbox"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Doan's Strongbox" },
 			{ itemID = 7146 }, --The Scarlet Key
 		},
 		{
@@ -3527,7 +3527,7 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 7728 }, --Beguiler Robes
 			{ itemID = 7755 }, --Flintrock Shoulders
@@ -3567,12 +3567,12 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 
 AtlasLoot_Data["Scholomance"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Scholomance"],
+	Name = "Scholomance",
 	Type = "ClassicDungeonExt",
 	Loadfirst = 3,
 	Map = "Scholomance",
 	{
-		Name = AL["Quest Item"],
+		Name = "Quest Item",
 		{
 			{ itemID = 13873 }, --Viewing Room Key
 		gap,
@@ -3583,7 +3583,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Blood Steward of Kirtonos"],
+		Name = "Blood Steward of Kirtonos",
 		{
 			{ itemID = 13523 }, --Blood of Innocents
 		},
@@ -3604,7 +3604,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Kirtonos the Herald"],
+		Name = "Kirtonos the Herald",
 		{
 			{ itemID = 13956 }, --Clutch of Andros
 			{ itemID = 13957 }, --Gargoyle Slashers
@@ -3620,7 +3620,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Jandice Barov"],
+		Name = "Jandice Barov",
 		{
 			{ itemID = 14541, groupID = 1, refLootEntry = 10503 }, --Barovian Family Sword
 			{ itemID = 16701, groupID = 1, refLootEntry = 10503 }, --Dreadmist Mantle
@@ -3645,7 +3645,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Rattlegore"],
+		Name = "Rattlegore",
 		{
 			{ itemID = 18686, groupID = 1, refLootEntry = 11622 }, --Bone Golem Shoulders
 			{ itemID = 14539, groupID = 1, refLootEntry = 11622 }, --Bone Ring Helm
@@ -3663,7 +3663,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Death Knight Darkreaver"],
+		Name = "Death Knight Darkreaver",
 		{
 			{ itemID = 18760 }, --Necromantic Band
 			{ itemID = 18758 }, --Specter's Blade
@@ -3674,14 +3674,14 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Vectus"],
+		Name = "Vectus",
 		{
 			{ itemID = 18691, groupID = 1, refLootEntry = 10432 }, --Dark Advisor's Pendant
 			{ itemID = 14577, groupID = 1, refLootEntry = 10432 }, --Skullsmoke Pants
 		},
 	},
 	{
-		Name = BabbleBoss["Marduk Blackpool"],
+		Name = "Marduk Blackpool",
 		{
 			{ itemID = 18692 }, --Death Knight Sabatons
 			{ itemID = 14576 }, --Ebon Hilt of Marduk
@@ -3698,7 +3698,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ras Frostwhisper"],
+		Name = "Ras Frostwhisper",
 		{
 			{ itemID = 13314, groupID = 1, refLootEntry = 10508 }, --Alanna's Embrace
 			{ itemID = 14487, groupID = 1, refLootEntry = 10508 }, --Bonechill Hammer
@@ -3723,14 +3723,14 @@ AtlasLoot_Data["Scholomance"] = {
 			{ itemID = 13982 }, --Warblade of Caer Darrow
 			{ itemID = 14002 }, --Darrowshire Strongguard
 		gap,
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Frostwhisper's Embalming Fluid"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Frostwhisper's Embalming Fluid" },
 			{ itemID = 12736 }, --Frostwhisper's Embalming Fluid
 		},
 	},
 	{
-		Name = BabbleBoss["Kormok"],
+		Name = "Kormok",
 		{
-			{ icon = "INV_Misc_Bag_09", name = color.WHITE..AL["Dungeon Set 2 Summonable"], desc = "=q5="..BabbleBoss["Kormok"] },
+			{ icon = "INV_Misc_Bag_09", name = color.WHITE.."Dungeon Set 2 Summonable", desc = "=q5=".."Kormok" },
 			{ itemID = 22303 }, --Ironweave Pants
 			{ itemID = 22326 }, --Amalgam's Band
 			{ itemID = 22331 }, --Band of the Steadfast Hero
@@ -3742,7 +3742,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Instructor Malicia"],
+		Name = "Instructor Malicia",
 		{
 			{ itemID = 18680, groupID = 1, refLootEntry = 10505 }, --Ancient Bone Bow
 			{ itemID = 14614, groupID = 1, refLootEntry = 10505 }, --Bloodmail Belt
@@ -3790,7 +3790,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Doctor Theolen Krastinov"],
+		Name = "Doctor Theolen Krastinov",
 		{
 			{ itemID = 18680, groupID = 1, refLootEntry = 11261 }, --Ancient Bone Bow
 			{ itemID = 14614, groupID = 1, refLootEntry = 11261 }, --Bloodmail Belt
@@ -3840,7 +3840,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lorekeeper Polkelt"],
+		Name = "Lorekeeper Polkelt",
 		{
 			{ itemID = 18680, groupID = 1, refLootEntry = 10901 }, --Ancient Bone Bow
 			{ itemID = 14614, groupID = 1, refLootEntry = 10901 }, --Bloodmail Belt
@@ -3877,7 +3877,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Ravenian"],
+		Name = "The Ravenian",
 		{
 			{ itemID = 18680, groupID = 1, refLootEntry = 10507 }, --Ancient Bone Bow
 			{ itemID = 14614, groupID = 1, refLootEntry = 10507 }, --Bloodmail Belt
@@ -3912,7 +3912,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Alexei Barov"],
+		Name = "Lord Alexei Barov",
 		{
 			{ itemID = 18680, groupID = 1, refLootEntry = 10504 }, --Ancient Bone Bow
 			{ itemID = 14614, groupID = 1, refLootEntry = 10504 }, --Bloodmail Belt
@@ -3958,7 +3958,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lady Illucia Barov"],
+		Name = "Lady Illucia Barov",
 		{
 			{ itemID = 18680, groupID = 1, refLootEntry = 10502 }, --Ancient Bone Bow
 			{ itemID = 14614, groupID = 1, refLootEntry = 10502 }, --Bloodmail Belt
@@ -4003,7 +4003,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Darkmaster Gandling"],
+		Name = "Darkmaster Gandling",
 		{
 			{ itemID = 13937 }, --Headmaster's Charge
 			{ itemID = 14514 }, --Pattern: Robe of the Void
@@ -4035,7 +4035,7 @@ AtlasLoot_Data["Scholomance"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 18697 }, --Coldstone Slippers
 			{ itemID = 18698 }, --Tattered Leather Hood
@@ -4069,11 +4069,11 @@ AtlasLoot_Data["Scholomance"] = {
 
 AtlasLoot_Data["ShadowfangKeep"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Shadowfang Keep"],
+	Name = "Shadowfang Keep",
 	Type = "ClassicDungeon",
 	Map = "ShadowfangKeep",
 	{
-		Name = AL["Apothecary Hummel"],
+		Name = "Apothecary Hummel",
 		{
 			{ itemID = 397168, groupID = 1, refLootEntry = 36296 }, --Choker of the Pure Heart
 			{ itemID = 397132, groupID = 1, refLootEntry = 36296 }, --Heartbreak Charm
@@ -4095,28 +4095,28 @@ AtlasLoot_Data["ShadowfangKeep"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Deathsworn Captain"],
+		Name = "Deathsworn Captain",
 		{
 			{ itemID = 6642 }, --Phantom Armor
 			{ itemID = 6641 }, --Haunting Blade
 		},
 	},
 	{
-		Name = AL["Rethilgore"],
+		Name = "Rethilgore",
 		{
 			{ itemID = 6341, groupID = 1, refLootEntry = 3914 }, --Eerie Stable Lantern
 			{ itemID = 5254, groupID = 1, refLootEntry = 3914 }, --Rugged Spaulders
 		},
 	},
 	{
-		Name = AL["Felsteed"],
+		Name = "Felsteed",
 		{
 			{ itemID = 6341 }, --Eerie Stable Lantern
 			{ itemID = 932 }, --Fel Steed Saddlebags
 		},
 	},
 	{
-		Name = BabbleBoss["Razorclaw the Butcher"],
+		Name = "Razorclaw the Butcher",
 		{
 			{ itemID = 6226, groupID = 1, refLootEntry = 3886 }, --Bloody Apron
 			{ itemID = 1292, groupID = 1, refLootEntry = 3886 }, --Butcher's Cleaver
@@ -4126,7 +4126,7 @@ AtlasLoot_Data["ShadowfangKeep"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Baron Silverlaine"],
+		Name = "Baron Silverlaine",
 		{
 			{ itemID = 6323, groupID = 1, refLootEntry = 3887 }, --Baron's Scepter
 			{ itemID = 6321, groupID = 1, refLootEntry = 3887 }, --Silverlaine's Family Seal
@@ -4139,7 +4139,7 @@ AtlasLoot_Data["ShadowfangKeep"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Commander Springvale"],
+		Name = "Commander Springvale",
 		{
 			{ itemID = 3191, groupID = 1, refLootEntry = 4278 }, --Arced War Axe
 			{ itemID = 6320, groupID = 1, refLootEntry = 4278 }, --Commander's Crest
@@ -4155,34 +4155,34 @@ AtlasLoot_Data["ShadowfangKeep"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Odo the Blindwatcher"],
+		Name = "Odo the Blindwatcher",
 		{
 			{ itemID = 6319, groupID = 1, refLootEntry = 4279 }, --Girdle of the Blindwatcher
 			{ itemID = 6318, groupID = 1, refLootEntry = 4279 }, --Odo's Ley Staff
 		},
 	},
 	{
-		Name = BabbleBoss["Fenrus the Devourer"],
+		Name = "Fenrus the Devourer",
 		{
 			{ itemID = 3230, groupID = 1, refLootEntry = 4274 }, --Black Wolf Bracers
 			{ itemID = 6340, groupID = 1, refLootEntry = 4274 }, --Fenrus' Hide
 		},
 	},
 	{
-		Name = BabbleBoss["Arugal's Voidwalker"],
+		Name = "Arugal's Voidwalker",
 		{
 			{ itemID = 5943 }, --Rift Bracers
 		},
 	},
 	{
-		Name = BabbleBoss["Wolf Master Nandos"],
+		Name = "Wolf Master Nandos",
 		{
 			{ itemID = 3748, groupID = 1, refLootEntry = 3927 }, --Feline Mantle
 			{ itemID = 6314, groupID = 1, refLootEntry = 3927 }, --Wolfmaster Cape
 		},
 	},
 	{
-		Name = BabbleBoss["Archmage Arugal"],
+		Name = "Archmage Arugal",
 		{
 			{ itemID = 6392, groupID = 1, refLootEntry = 4275 }, --Belt of Arugal
 			{ itemID = 6220, groupID = 1, refLootEntry = 4275 }, --Meteor Shard
@@ -4198,7 +4198,7 @@ AtlasLoot_Data["ShadowfangKeep"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 2292 }, --Necrology Robes
 			{ itemID = 1974 }, --Mindthrust Bracers
@@ -4221,11 +4221,11 @@ AtlasLoot_Data["ShadowfangKeep"] = {
 
 AtlasLoot_Data["Stratholme"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Stratholme"],
+	Name = "Stratholme",
 	Type = "ClassicDungeonExt",
 	Map = "Stratholme",
 	{
-		Name = BabbleBoss["Skul"],
+		Name = "Skul",
 		{
 			{ itemID = 13394, groupID = 1, refLootEntry = 10393 }, --Skul's Cold Embrace
 			{ itemID = 13395, groupID = 1, refLootEntry = 10393 }, --Skul's Fingerbone Claws
@@ -4244,7 +4244,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Fras Siabi"],
+		Name = "Fras Siabi",
 		{
 			{ itemID = 13172 }, --Siabi's Premium Tobacco
 			{ itemID = 13171 }, --Smokey's Lighter
@@ -4257,7 +4257,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Hearthsinger Forresten"],
+		Name = "Hearthsinger Forresten",
 		{
 			{ itemID = 16682, groupID = 1, refLootEntry = 10558 }, --Magister's Boots
 			{ itemID = 13379, groupID = 1, refLootEntry = 10558 }, --Piccolo of the Flaming Fire
@@ -4276,7 +4276,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Unforgiven"],
+		Name = "The Unforgiven",
 		{
 			{ itemID = 13404, groupID = 1, refLootEntry = 10516 }, --Mask of the Unforgiven
 			{ itemID = 13408, groupID = 1, refLootEntry = 10516 }, --Soul Breaker
@@ -4286,7 +4286,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Timmy the Cruel"],
+		Name = "Timmy the Cruel",
 		{
 			{ itemID = 13403 }, --Grimgore Noose
 			{ itemID = 13402 }, --Timmy's Galoshes
@@ -4298,14 +4298,14 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = AL["Malor's Strongbox"],
+		Name = "Malor's Strongbox",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Malor's Strongbox"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Malor's Strongbox" },
 			{ itemID = 12845 }, --Medallion of Faith
 		},
 	},
 	{
-		Name = BabbleBoss["Crimson Hammersmith"] .." (" ..AL["Summon"] ..")",
+		Name = "Crimson Hammersmith" .." (" .."Summon" ..")",
 		{
 			{ itemID = 18781 }, --Bottom Half of Advanced Armorsmithing: Volume II
 			{ itemID = 12726 }, --Plans: Enchanted Thorium Leggings
@@ -4320,7 +4320,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Cannon Master Willey"],
+		Name = "Cannon Master Willey",
 		{
 			{ itemID = 18721, groupID = 1, refLootEntry = 10997 }, --Barrage Girdle
 			{ itemID = 13382, groupID = 1, refLootEntry = 10997 }, --Cannonball Runner
@@ -4351,7 +4351,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Archivist Galford"],
+		Name = "Archivist Galford",
 		{
 			{ itemID = 13386, groupID = 1, refLootEntry = 10811 }, --Archivist Cape
 			{ itemID = 18716, groupID = 1, refLootEntry = 10811 }, --Ash Covered Boots
@@ -4373,12 +4373,12 @@ AtlasLoot_Data["Stratholme"] = {
 			gap,
 			{ itemID = 12811 }, --Righteous Orb
 			gap,
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Unfinished Painting"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Unfinished Painting" },
 			{ itemID = 14679 }, --Of Love and Family
 		},
 	},
 	{
-		Name = BabbleBoss["Balnazzar"],
+		Name = "Balnazzar",
 		{
 			{ itemID = 13353 }, --Book of the Dead
 			{ itemID = 14512 }, --Pattern: Truefaith Vestments
@@ -4403,9 +4403,9 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = AL["Sothos and Jarien"],
+		Name = "Sothos and Jarien",
 		{
-			{ icon = "INV_Misc_Bag_09", name = color.WHITE..AL["Dungeon Set 2 Summonable"], desc = "=q5="..AL["Sothos and Jarien"] },
+			{ icon = "INV_Misc_Bag_09", name = color.WHITE.."Dungeon Set 2 Summonable", desc = "=q5=".."Sothos and Jarien" },
 			{ itemID = 22301 }, --Ironweave Robe
 			{ itemID = 22328 }, --Legplates of Vigilance
 			{ itemID = 22327 }, --Amulet of the Redeemed
@@ -4417,7 +4417,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Stonespine"],
+		Name = "Stonespine",
 		{
 			{ itemID = 13399, groupID = 1, refLootEntry = 10809 }, --Gargoyle Shredder Talons
 			{ itemID = 13397, groupID = 1, refLootEntry = 10809 }, --Stoneskin Gargoyle Cape
@@ -4425,7 +4425,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Baroness Anastari"],
+		Name = "Baroness Anastari",
 		{
 			{ itemID = 18728, groupID = 1, refLootEntry = 10436 }, --Anastari Heirloom
 			{ itemID = 13534, groupID = 1, refLootEntry = 10436 }, --Banshee Finger
@@ -4441,7 +4441,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Black Guard Swordsmith"] .." (" ..AL["Summon"] ..")",
+		Name = "Black Guard Swordsmith" .." (" .."Summon" ..")",
 		{
 			{ itemID = 18783 }, --Bottom Half of Advanced Armorsmithing: Volume III
 			{ itemID = 12725 }, --Plans: Enchanted Thorium Helm
@@ -4457,7 +4457,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Nerub'enkan"],
+		Name = "Nerub'enkan",
 		{
 			{ itemID = 16675, groupID = 1, refLootEntry = 10437 }, --Beaststalker's Boots
 			{ itemID = 18738, groupID = 1, refLootEntry = 10437 }, --Carapace Spine Crossbow
@@ -4474,7 +4474,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Maleki the Pallid"],
+		Name = "Maleki the Pallid",
 		{
 			{ itemID = 18737, groupID = 1, refLootEntry = 10438 }, --Bone Slicing Hatchet
 			{ itemID = 16691, groupID = 1, refLootEntry = 10438 }, --Devout Sandals
@@ -4501,7 +4501,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Magistrate Barthilas"],
+		Name = "Magistrate Barthilas",
 		{
 			{ itemID = 18727, groupID = 1, refLootEntry = 10435 }, --Crimson Felt Hat
 			{ itemID = 18722, groupID = 1, refLootEntry = 10435 }, --Death Grips
@@ -4514,7 +4514,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ramstein the Gorger"],
+		Name = "Ramstein the Gorger",
 		{
 			{ itemID = 13374 }, --Soulstealer Mantle
 			{ itemID = 18723 }, --Animated Chain Necklace
@@ -4528,7 +4528,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Baron Rivendare"],
+		Name = "Baron Rivendare",
 		{
 			{ itemID = 16678, groupID = 1, refLootEntry = 10440 }, --Beaststalker's Pants
 			{ itemID = 13368, groupID = 1, refLootEntry = 10440 }, --Bonescraper
@@ -4564,7 +4564,7 @@ AtlasLoot_Data["Stratholme"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 18743 }, --Gracious Cape
 			{ itemID = 17061 }, --Juno's Shadow
@@ -4601,31 +4601,31 @@ AtlasLoot_Data["Stratholme"] = {
 
 AtlasLoot_Data["TheDeadmines"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["The Deadmines"],
+	Name = "The Deadmines",
 	Type = "ClassicDungeon",
 	Map = "TheDeadmines",
 	{
-		Name = BabbleBoss["Marisa du'Paige"],
+		Name = "Marisa du'Paige",
 		{
 			{ itemID = 3019 }, --Noble's Robe
 			{ itemID = 4660 }, --Walking Boots
 		},
 	},
 	{
-		Name = BabbleBoss["Brainwashed Noble"],
+		Name = "Brainwashed Noble",
 		{
 			{ itemID = 5967 }, --Girdle of Nobility
 			{ itemID = 3902 }, --Staff of Nobles
 		},
 	},
 	{
-		Name = BabbleBoss["Foreman Thistlenettle"],
+		Name = "Foreman Thistlenettle",
 		{
 			{ itemID = 1875 }, --Thistlenettle's Badge
 		},
 	},
 	{
-		Name = BabbleBoss["Rhahk'Zor"],
+		Name = "Rhahk'Zor",
 		{
 			{ itemID = 5187, groupID = 1, refLootEntry = 644 }, --Rhahk'Zor's Hammer
 			{ itemID = 872, groupID = 1, refLootEntry = 644 }, --Rockslicer
@@ -4635,7 +4635,7 @@ AtlasLoot_Data["TheDeadmines"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Miner Johnson"],
+		Name = "Miner Johnson",
 		{
 			{ itemID = 5443, groupID = 1, refLootEntry = 3586 }, --Gold-plated Buckler
 			{ itemID = 5444, groupID = 1, refLootEntry = 3586 }, --Miner's Cape
@@ -4651,7 +4651,7 @@ AtlasLoot_Data["TheDeadmines"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Sneed's Shredder"],
+		Name = "Sneed's Shredder",
 		{
 			{ itemID = 1937, groupID = 1, refLootEntry = 642 }, --Buzz Saw
 			{ itemID = 2169, groupID = 1, refLootEntry = 642 }, --Buzzer Blade
@@ -4659,7 +4659,7 @@ AtlasLoot_Data["TheDeadmines"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Sneed"],
+		Name = "Sneed",
 		{
 			{ itemID = 5195, groupID = 1, refLootEntry = 642 }, --Gold-flecked Gloves
 			{ itemID = 5194, groupID = 1, refLootEntry = 642 }, --Taskmaster Axe
@@ -4667,7 +4667,7 @@ AtlasLoot_Data["TheDeadmines"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gilnid"],
+		Name = "Gilnid",
 		{
 			{ itemID = 1156, groupID = 1, refLootEntry = 1763 }, --Lavishly Jeweled Ring
 			{ itemID = 5199, groupID = 1, refLootEntry = 1763 }, --Smelting Pants
@@ -4681,7 +4681,7 @@ AtlasLoot_Data["TheDeadmines"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Captain Greenskin"],
+		Name = "Captain Greenskin",
 		{
 			{ itemID = 10403, groupID = 1, refLootEntry = 647 }, --Blackened Defias Belt
 			{ itemID = 5201, groupID = 1, refLootEntry = 647 }, --Emberstone Staff
@@ -4696,7 +4696,7 @@ AtlasLoot_Data["TheDeadmines"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Mr. Smite"],
+		Name = "Mr. Smite",
 		{
 			{ itemID = 7230, groupID = 1, refLootEntry = 646 }, --Smite's Mighty Hammer
 			{ itemID = 5196, groupID = 1, refLootEntry = 646 }, --Smite's Reaver
@@ -4708,7 +4708,7 @@ AtlasLoot_Data["TheDeadmines"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Cookie"],
+		Name = "Cookie",
 		{
 			{ itemID = 5198, groupID = 1, refLootEntry = 645 }, --Cookie's Stirring Rod
 			{ itemID = 5197, groupID = 1, refLootEntry = 645 }, --Cookie's Tenderizer
@@ -4718,7 +4718,7 @@ AtlasLoot_Data["TheDeadmines"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Edwin VanCleef"],
+		Name = "Edwin VanCleef",
 		{
 			{ itemID = 10399, groupID = 1, refLootEntry = 639 }, --Blackened Defias Armor
 			{ itemID = 5193, groupID = 1, refLootEntry = 639 }, --Cape of the Brotherhood
@@ -4747,11 +4747,11 @@ AtlasLoot_Data["TheDeadmines"] = {
 
 AtlasLoot_Data["TheStockade"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["The Stockade"],
+	Name = "The Stockade",
 	Type = "ClassicDungeon",
 	Map = "TheStockade",
 	{
-		Name = BabbleBoss["Targorr the Dread"],
+		Name = "Targorr the Dread",
 		{
 			{ itemID = 5305, groupID = 1, refLootEntry = 1696 }, --Dreadful Blade
 			gap,
@@ -4764,7 +4764,7 @@ AtlasLoot_Data["TheStockade"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Kam Deepfury"],
+		Name = "Kam Deepfury",
 		{
 			{ itemID = 1985, groupID = 1, refLootEntry = 1666 }, --Kam's Buckler
 			{ itemID = 2280, groupID = 1, refLootEntry = 1666 }, --Kam's Walking Stick
@@ -4784,7 +4784,7 @@ AtlasLoot_Data["TheStockade"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Bazil Thredd"],
+		Name = "Bazil Thredd",
 		{
 			{ itemID = 1897, groupID = 1, refLootEntry = 1716 }, --Behander
 			gap,
@@ -4804,7 +4804,7 @@ AtlasLoot_Data["TheStockade"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Hamhock"],
+		Name = "Hamhock",
 		{
 			{ itemID = 2827, groupID = 1, refLootEntry = 1717 }, --Hamhock's Ham Hacker
 			gap,
@@ -4815,7 +4815,7 @@ AtlasLoot_Data["TheStockade"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Dextren Ward"],
+		Name = "Dextren Ward",
 		{
 			{ itemID = 3432, groupID = 1, refLootEntry = 1663 }, --Unnecessary Big Shanker
 			gap,
@@ -4832,7 +4832,7 @@ AtlasLoot_Data["TheStockade"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Bruegal Ironknuckle"],
+		Name = "Bruegal Ironknuckle",
 		{
 			{ itemID = 2942, groupID = 1, refLootEntry = 1720 }, --Iron Knuckles
 			{ itemID = 3228, groupID = 1, refLootEntry = 1720 }, --Jimmied Handcuffs
@@ -4904,7 +4904,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Atal'alarion"],
+		Name = "Atal'alarion",
 		{
 			{ itemID = 10800 }, --Darkwater Bracers
 			{ itemID = 10798 }, --Atal'alarion's Tusk Ring
@@ -4912,7 +4912,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Dreamscythe"],
+		Name = "Dreamscythe",
 		{
 			{ itemID = 12464, groupID = 1, refLootEntry = 35011 }, --Bloodfire Talons
 			{ itemID = 12466, groupID = 1, refLootEntry = 35011 }, --Dawnspire Cord
@@ -4925,7 +4925,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Weaver"],
+		Name = "Weaver",
 		{
 			{ itemID = 12464, groupID = 1, refLootEntry = 35011 }, --Bloodfire Talons
 			{ itemID = 12466, groupID = 1, refLootEntry = 35011 }, --Dawnspire Cord
@@ -4938,7 +4938,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Avatar of Hakkar"],
+		Name = "Avatar of Hakkar",
 		{
 			{ itemID = 10846, groupID = 1, refLootEntry = 35012 }, --Bloodshot Greaves
 			{ itemID = 12462, groupID = 1, refLootEntry = 35012 }, --Embrace of the Wind Serpent
@@ -4952,7 +4952,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Jammal'an the Prophet"],
+		Name = "Jammal'an the Prophet",
 		{
 			{ itemID = 10806 }, --Vestments of the Atal'ai Prophet
 			{ itemID = 10808 }, --Gloves of the Atal'ai Prophet
@@ -4971,7 +4971,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ogom the Wretched"],
+		Name = "Ogom the Wretched",
 		{
 			{ itemID = 10805 }, --Eater of the Dead
 			{ itemID = 10804 }, --Fist of the Damned
@@ -4989,7 +4989,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Morphaz"],
+		Name = "Morphaz",
 		{
 			{ itemID = 12464, groupID = 1, refLootEntry = 35011 }, --Bloodfire Talons
 			{ itemID = 12466, groupID = 1, refLootEntry = 35011 }, --Dawnspire Cord
@@ -5007,7 +5007,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Hazzas"],
+		Name = "Hazzas",
 		{
 			{ itemID = 12464, groupID = 1, refLootEntry = 35011 }, --Bloodfire Talons
 			{ itemID = 12466, groupID = 1, refLootEntry = 35011 }, --Dawnspire Cord
@@ -5020,7 +5020,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Shade of Eranikus"],
+		Name = "Shade of Eranikus",
 		{
 			{ itemID = 10835, groupID = 1, refLootEntry = 5709 }, --Crest of Supremacy
 			{ itemID = 10828, groupID = 1, refLootEntry = 5709 }, --Dire Nail
@@ -5035,7 +5035,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 10630 }, --Soulcatcher Halo
 			{ itemID = 10629 }, --Mistwalker Boots
@@ -5067,11 +5067,11 @@ AtlasLoot_Data["SunkenTemple"] = {
 
 AtlasLoot_Data["Uldaman"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Uldaman"],
+	Name = "Uldaman",
 	Type = "ClassicDungeon",
 	Map = "Uldaman",
 	{
-		Name = AL["Magregan Deepshadow"],
+		Name = "Magregan Deepshadow",
 		{
 			{ itemID = 4635 }, --Hammertoe's Amulet
 		},
@@ -5083,19 +5083,19 @@ AtlasLoot_Data["Uldaman"] = {
 		},
 	},
 	{
-		Name = AL["Krom Stoutarm's Chest"],
+		Name = "Krom Stoutarm's Chest",
 		{
 			{ itemID = 8027 }, --Krom Stoutarm's Treasure
 		},
 	},
 	{
-		Name = AL["Garrett Family Chest"],
+		Name = "Garrett Family Chest",
 		{
 			{ itemID = 8026 }, --Garrett Family Treasure
 		},
 	},
 	{
-		Name = BabbleBoss["Digmaster Shovelphlange"],
+		Name = "Digmaster Shovelphlange",
 		{
 			{ itemID = 9375 }, --Expert Goldminer's Helmet
 			{ itemID = 9378 }, --Shovelphlange's Mining Axe
@@ -5103,9 +5103,9 @@ AtlasLoot_Data["Uldaman"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Baelog"],
+		Name = "Baelog",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..BabbleBoss["Baelog"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Baelog" },
 			{ itemID = 9401 }, --Nordic Longshank
 			{ itemID = 9400 }, --Baelog's Shortbow
 			{ itemID = 9399 }, --Precision Arrow
@@ -5121,26 +5121,26 @@ AtlasLoot_Data["Uldaman"] = {
 			{ itemID = 3595662, groupID = 1, refLootEntry = 3595662 }, --Dwarven Crossbow
 
 		gap,
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Eric 'The Swift'"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Eric 'The Swift'" },
 			{ itemID = 9394 }, --Horned Viking Helmet
 			{ itemID = 9398 }, --Worn Running Boots
 			{ itemID = 2459 }, --Swiftness Potion
 		gap,
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Olaf"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Olaf" },
 			{ itemID = 9404 }, --Olaf's All Purpose Shield
 			{ itemID = 9403 }, --Battered Viking Shield
 			{ itemID = 1177 }, --Oil of Olaf
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Baelog's Chest"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Baelog's Chest" },
 			{ itemID = 7740 }, --Gni'kiv Medallion
 		gap,
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Conspicuous Urn"] },
+			{ icon = "INV_Box_01", name = color.WHITE.."Conspicuous Urn" },
 			{ itemID = 7671 }, --Shattered Necklace Topaz
 		},
 	},
 	{
-		Name = BabbleBoss["Revelosh"],
+		Name = "Revelosh",
 		{
 			{ itemID = 9390 }, --Revelosh's Gloves
 			{ itemID = 9389 }, --Revelosh's Spaulders
@@ -5151,7 +5151,7 @@ AtlasLoot_Data["Uldaman"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ironaya"],
+		Name = "Ironaya",
 		{
 			{ itemID = 9407 }, --Stoneweaver Leggings
 			{ itemID = 9409 }, --Ironaya's Bracers
@@ -5161,7 +5161,7 @@ AtlasLoot_Data["Uldaman"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Obsidian Sentinel"],
+		Name = "Obsidian Sentinel",
 		{
 			{ itemID = 8053 }, --Obsidian Power Source
 			gap,
@@ -5173,14 +5173,14 @@ AtlasLoot_Data["Uldaman"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Ancient Stone Keeper"],
+		Name = "Ancient Stone Keeper",
 		{
 			{ itemID = 9411 }, --Rockshard Pauldrons
 			{ itemID = 9410 }, --Cragfists
 		},
 	},
 	{
-		Name = BabbleBoss["Galgann Firehammer"],
+		Name = "Galgann Firehammer",
 		{
 			{ itemID = 11311 }, --Emberscale Cape
 			{ itemID = 11310 }, --Flameseer Mantle
@@ -5211,7 +5211,7 @@ AtlasLoot_Data["Uldaman"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Grimlok"],
+		Name = "Grimlok",
 		{
 			{ itemID = 9415 }, --Grimlok's Tribal Vestments
 			{ itemID = 9414 }, --Oilskin Leggings
@@ -5223,7 +5223,7 @@ AtlasLoot_Data["Uldaman"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Archaedas"],
+		Name = "Archaedas",
 		{
 			{ itemID = 11118 }, --Archaedic Stone
 			{ itemID = 9418 }, --Stoneslayer
@@ -5235,7 +5235,7 @@ AtlasLoot_Data["Uldaman"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 9397 }, --Energy Cloak
 			{ itemID = 9431 }, --Papal Fez
@@ -5274,38 +5274,38 @@ AtlasLoot_Data["Uldaman"] = {
 
 AtlasLoot_Data["WailingCaverns"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Wailing Caverns"],
+	Name = "Wailing Caverns",
 	Type = "ClassicDungeon",
 	Map = "WailingCaverns",
 	{
-		Name = AL["Kalldan Felmoon"],
+		Name = "Kalldan Felmoon",
 		{
 			{ itemID = 6475 }, --Pattern: Deviate Scale Gloves
 			{ itemID = 6474 }, --Pattern: Deviate Scale Cloak
 		},
 	},
 	{
-		Name = BabbleBoss["Mad Magglish"],
+		Name = "Mad Magglish",
 		{
 			{ itemID = 5334 }, --99-Year-Old Port
 		},
 	},
 	{
-		Name = BabbleBoss["Trigore the Lasher"],
+		Name = "Trigore the Lasher",
 		{
 			{ itemID = 5425 }, --Runescale Girdle
 			{ itemID = 5426 }, --Serpent's Kiss
 		},
 	},
 	{
-		Name = BabbleBoss["Boahn"],
+		Name = "Boahn",
 		{
 			{ itemID = 5423 }, --Boahn's Fang
 			{ itemID = 5422 }, --Brambleweed Leggings
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Cobrahn"],
+		Name = "Lord Cobrahn",
 		{
 			{ itemID = 6460, groupID = 1, refLootEntry = 3669 }, --Cobrahn's Grasp
 			{ itemID = 10410, groupID = 1, refLootEntry = 3669 }, --Leggings of the Fang
@@ -5321,7 +5321,7 @@ AtlasLoot_Data["WailingCaverns"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Lady Anacondra"],
+		Name = "Lady Anacondra",
 		{
 			{ itemID = 10412, groupID = 1, refLootEntry = 3671 }, --Belt of the Fang
 			{ itemID = 5404, groupID = 1, refLootEntry = 3671 }, --Serpent's Shoulders
@@ -5336,14 +5336,14 @@ AtlasLoot_Data["WailingCaverns"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Kresh"],
+		Name = "Kresh",
 		{
 			{ itemID = 13245, groupID = 1, refLootEntry = 3653 }, --Kresh's Back
 			{ itemID = 6447, groupID = 1, refLootEntry = 3653 }, --Worn Turtle Shell Shield
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Pythas"],
+		Name = "Lord Pythas",
 		{
 			{ itemID = 6473, groupID = 1, refLootEntry = 3670 }, --Armor of the Fang
 			{ itemID = 6472, groupID = 1, refLootEntry = 3670 }, --Stinging Viper
@@ -5358,14 +5358,14 @@ AtlasLoot_Data["WailingCaverns"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Skum"],
+		Name = "Skum",
 		{
 			{ itemID = 6449, groupID = 1, refLootEntry = 3674 }, --Glowing Lizardscale Cloak
 			{ itemID = 6448, groupID = 1, refLootEntry = 3674 }, --Tail Spike
 		},
 	},
 	{
-		Name = BabbleBoss["Lord Serpentis"],
+		Name = "Lord Serpentis",
 		{
 			{ itemID = 10411, groupID = 1, refLootEntry = 3673 }, --Footpads of the Fang
 			{ itemID = 6459, groupID = 1, refLootEntry = 3673 }, --Savage Trodders
@@ -5383,7 +5383,7 @@ AtlasLoot_Data["WailingCaverns"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Verdan the Everliving"],
+		Name = "Verdan the Everliving",
 		{
 			{ itemID = 6631, groupID = 1, refLootEntry = 5775 }, --Living Root
 			{ itemID = 6630, groupID = 1, refLootEntry = 5775 }, --Seedcloud Buckler
@@ -5391,7 +5391,7 @@ AtlasLoot_Data["WailingCaverns"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Mutanus the Devourer"],
+		Name = "Mutanus the Devourer",
 		{
 			{ itemID = 6463, groupID = 1, refLootEntry = 3654 }, --Deep Fathom Ring
 			{ itemID = 6627, groupID = 1, refLootEntry = 3654 }, --Mutant Scale Breastplate
@@ -5400,7 +5400,7 @@ AtlasLoot_Data["WailingCaverns"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Deviate Faerie Dragon"],
+		Name = "Deviate Faerie Dragon",
 		{
 			{ itemID = 6632 }, --Feyscale Cloak
 			{ itemID = 5243 }, --Firebelcher
@@ -5414,11 +5414,11 @@ AtlasLoot_Data["WailingCaverns"] = {
 
 AtlasLoot_Data["ZulFarrak"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Zul'Farrak"],
+	Name = "Zul'Farrak",
 	Type = "ClassicDungeon",
 	Map = "ZulFarrak",
 	{
-		Name = BabbleBoss["Antu'sul"],
+		Name = "Antu'sul",
 		{
 			{ itemID = 9640 }, --Vice Grips
 			{ itemID = 9641 }, --Lifeblood Amulet
@@ -5438,7 +5438,7 @@ AtlasLoot_Data["ZulFarrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Theka the Martyr"],
+		Name = "Theka the Martyr",
 		{
 			{ itemID = 13134, groupID = 1, refLootEntry = 24046 }, --Belt of the Gladiator
 			{ itemID = 13109, groupID = 1, refLootEntry = 24046 }, --Blackflame Cape
@@ -5463,7 +5463,7 @@ AtlasLoot_Data["ZulFarrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Witch Doctor Zum'rah"],
+		Name = "Witch Doctor Zum'rah",
 		{
 			{ itemID = 18083 }, --Jumanza Grips
 			{ itemID = 18082 }, --Zum'rah's Vexing Cane
@@ -5479,7 +5479,7 @@ AtlasLoot_Data["ZulFarrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Nekrum Gutchewer"],
+		Name = "Nekrum Gutchewer",
 		{
 			{ itemID = 14549, groupID = 1, refLootEntry = 24081 }, --Boots of Avoidance
 			{ itemID = 2164, groupID = 1, refLootEntry = 24081 }, --Gut Ripper
@@ -5501,7 +5501,7 @@ AtlasLoot_Data["ZulFarrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Shadowpriest Sezz'ziz"],
+		Name = "Shadowpriest Sezz'ziz",
 		{
 			{ itemID = 9470 }, --Bad Mojo Mask
 			{ itemID = 9473 }, --Jinxed Hoodoo Skin
@@ -5518,7 +5518,7 @@ AtlasLoot_Data["ZulFarrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Dustwraith"],
+		Name = "Dustwraith",
 		{
 			{ itemID = 12471 }, --Desertwalker Cane
 			gap,
@@ -5534,7 +5534,7 @@ AtlasLoot_Data["ZulFarrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Sergeant Bly"],
+		Name = "Sergeant Bly",
 		{
 			{ itemID = 1718, groupID = 1, refLootEntry = 24040 }, --Basilisk Hide Pants
 			{ itemID = 2802, groupID = 1, refLootEntry = 24040 }, --Blazing Emblem
@@ -5570,13 +5570,13 @@ AtlasLoot_Data["ZulFarrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Sandfury Executioner"],
+		Name = "Sandfury Executioner",
 		{
 			{ itemID = 8548 }, --Divino-matic Rod
 		},
 	},
 	{
-		Name = BabbleBoss["Hydromancer Velratha"],
+		Name = "Hydromancer Velratha",
 		{
 			{ itemID = 14549, groupID = 1, refLootEntry = 24081 }, --Boots of Avoidance
 			{ itemID = 2164, groupID = 1, refLootEntry = 24081 }, --Gut Ripper
@@ -5604,7 +5604,7 @@ AtlasLoot_Data["ZulFarrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gahz'rilla"],
+		Name = "Gahz'rilla",
 		{
 			{ itemID = 9469 }, --Gahz'rilla Scale Armor
 			{ itemID = 9467 }, --Gahz'rilla Fang
@@ -5613,7 +5613,7 @@ AtlasLoot_Data["ZulFarrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Chief Ukorz Sandscalp"],
+		Name = "Chief Ukorz Sandscalp",
 		{
 			{ itemID = 9479 }, --Embrace of the Lycan
 			{ itemID = 9476 }, --Big Bad Pauldrons
@@ -5636,7 +5636,7 @@ AtlasLoot_Data["ZulFarrak"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Zerillis"],
+		Name = "Zerillis",
 		{
 			{ itemID = 12470 }, --Sandstalker Ankleguards
 			{ itemID = 14549, groupID = 1, refLootEntry = 24081 }, --Boots of Avoidance
@@ -5655,7 +5655,7 @@ AtlasLoot_Data["ZulFarrak"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 9512 }, --Blackmetal Cape
 			{ itemID = 9484 }, --Spellshock Leggings
@@ -5682,380 +5682,294 @@ AtlasLoot_Data["ZulFarrak"] = {
 -----------------
 --- Zul'Gurub ---
 -----------------
+local test = {
+{
+	{ icon = "INV_Box_01", name = color.WHITE.."Gri'lek" },
+	{ itemID = 19961 }, --Gri'lek's Grinder
+	{ itemID = 19962 }, --Gri'lek's Carver
+	{ itemID = 19939 }, --Gri'lek's Blood
+gap,
+	{ icon = "INV_Box_01", name = color.WHITE.."Hazza'rah" },
+	{ itemID = 19968 }, --Fiery Retributer
+	{ itemID = 19967 }, --Thoughtblighter
+	{ itemID = 19942 }, --Hazza'rah's Dream Thread
+},
+{
+	{ icon = "INV_Box_01", name = color.WHITE.."Renataki" },
+	{ itemID = 19964 }, --Renataki's Soul Conduit
+	{ itemID = 19963 }, --Pitchfork of Madness
+	{ itemID = 19940 }, --Renataki's Tooth
+gap,
+	{ icon = "INV_Box_01", name = color.WHITE.."Wushoolay" },
+	{ itemID = 19965 }, --Wushoolay's Poker
+	{ itemID = 19993 }, --Hoodoo Hunting Bow
+	{ itemID = 19941 }, --Wushoolay's Mane
+},
+}
+
+AtlasLoot_ItemData = {
+	{ itemID = 19928, groupID = 1, refLootEntry = 14517 }, --Animist's Spaulders
+	{ itemID = 19918, groupID = 1, refLootEntry = 14517 }, --Jeklik's Crusher
+	{ itemID = 19923, groupID = 1, refLootEntry = 14517 }, --Jeklik's Opaline Talisman
+	{ itemID = 20265, groupID = 1, refLootEntry = 14517 }, --Peacekeeper Boots
+	{ itemID = 19920, groupID = 1, refLootEntry = 14517 }, --Primalist's Band
+	{ itemID = 20262, groupID = 1, refLootEntry = 14517 }, --Seafury Boots
+	{ itemID = 19915, groupID = 1, refLootEntry = 14517 }, --Zulian Defender
+	{ itemID = 22721, groupID = 2, refLootEntry = 14517 }, --Band of Servitude
+	{ itemID = 22716, groupID = 2, refLootEntry = 14517 }, --Belt of Untapped Power
+	{ itemID = 22718, groupID = 2, refLootEntry = 14517 }, --Blooddrenched Mask
+	{ itemID = 22711, groupID = 2, refLootEntry = 14517 }, --Cloak of the Hakkari Worshippers
+	{ itemID = 22715, groupID = 2, refLootEntry = 14517 }, --Gloves of the Tormented
+	{ itemID = 22712, groupID = 2, refLootEntry = 14517 }, --Might of the Tribe
+	{ itemID = 22714, groupID = 2, refLootEntry = 14517 }, --Sacrificial Gauntlets
+	{ itemID = 22722, groupID = 2, refLootEntry = 14517 }, --Seal of the Gurubashi Berserker
+	{ itemID = 22720, groupID = 2, refLootEntry = 14517 }, --Zulian Headdress
+	{ itemID = 22713, groupID = 2, refLootEntry = 14517 }, --Zulian Scepter of Rites
+	{ itemID = 19943, refLootEntry = 14517 }, --Massive Mojo
+	{ itemID = 19881, refLootEntry = 14517 }, --Channeler's Head
+	{ icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"}, refLootEntry = 14517 },
+	{ itemID = 19906, groupID = 1, refLootEntry = 14507 }, --Blooddrenched Footpads
+	{ itemID = 19903, groupID = 1, refLootEntry = 14507 }, --Fang of Venoxis
+	{ itemID = 19904, groupID = 1, refLootEntry = 14507 }, --Runed Bloodstained Hauberk
+	{ itemID = 19905, groupID = 1, refLootEntry = 14507 }, --Zanzil's Band
+	{ itemID = 19900, groupID = 1, refLootEntry = 14507 }, --Zulian Stone Axe
+	{ itemID = 19907, groupID = 1, refLootEntry = 14507 }, --Zulian Tigerhide Cloak
+	{ itemID = 22721, groupID = 2, refLootEntry = 14507 }, --Band of Servitude
+	{ itemID = 22716, groupID = 2, refLootEntry = 14507 }, --Belt of Untapped Power
+	{ itemID = 22718, groupID = 2, refLootEntry = 14507 }, --Blooddrenched Mask
+	{ itemID = 22711, groupID = 2, refLootEntry = 14507 }, --Cloak of the Hakkari Worshippers
+	{ itemID = 22715, groupID = 2, refLootEntry = 14507 }, --Gloves of the Tormented
+	{ itemID = 22712, groupID = 2, refLootEntry = 14507 }, --Might of the Tribe
+	{ itemID = 22714, groupID = 2, refLootEntry = 14507 }, --Sacrificial Gauntlets
+	{ itemID = 22722, groupID = 2, refLootEntry = 14507 }, --Seal of the Gurubashi Berserker
+	{ itemID = 22720, groupID = 2, refLootEntry = 14507 }, --Zulian Headdress
+	{ itemID = 22713, groupID = 2, refLootEntry = 14507 }, --Zulian Scepter of Rites
+	{ icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} },
+	{ itemID = 19943, refLootEntry = 14507 }, --Massive Mojo
+	{ itemID = 19881, refLootEntry = 14507 }, --Channeler's Head
+	{ itemID = 22216, refLootEntry = 14507 }, --Venoxis's Venom Sac
+	{ itemID = 19925, groupID = 1, refLootEntry = 14510 }, --Band of Jin
+	{ itemID = 19919, groupID = 1, refLootEntry = 14510 }, --Bloodstained Greaves
+	{ itemID = 20032, groupID = 1, refLootEntry = 14510 }, --Flowing Ritual Robes
+	{ itemID = 19930, groupID = 1, refLootEntry = 14510 }, --Mar'li's Eye
+	{ itemID = 19927, groupID = 1, refLootEntry = 14510 }, --Mar'li's Touch
+	{ itemID = 19871, groupID = 1, refLootEntry = 14510 }, --Talisman of Protection
+	{ itemID = 22721, groupID = 2, refLootEntry = 14510 }, --Band of Servitude
+	{ itemID = 22716, groupID = 2, refLootEntry = 14510 }, --Belt of Untapped Power
+	{ itemID = 22718, groupID = 2, refLootEntry = 14510 }, --Blooddrenched Mask
+	{ itemID = 22711, groupID = 2, refLootEntry = 14510 }, --Cloak of the Hakkari Worshippers
+	{ itemID = 22715, groupID = 2, refLootEntry = 14510 }, --Gloves of the Tormented
+	{ itemID = 22712, groupID = 2, refLootEntry = 14510 }, --Might of the Tribe
+	{ itemID = 22714, groupID = 2, refLootEntry = 14510 }, --Sacrificial Gauntlets
+	{ itemID = 22722, groupID = 2, refLootEntry = 14510 }, --Seal of the Gurubashi Berserker
+	{ itemID = 22720, groupID = 2, refLootEntry = 14510 }, --Zulian Headdress
+	{ itemID = 22713, groupID = 2, refLootEntry = 14510 }, --Zulian Scepter of Rites
+	{ icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"}, refLootEntry = 14510 },
+	{ itemID = 19943, refLootEntry = 14510 }, --Massive Mojo
+	{ itemID = 19881, refLootEntry = 14510 }, --Channeler's Head
+	{ itemID = 19867, groupID = 1, refLootEntry = 11382 }, --Bloodlord's Defender
+	{ itemID = 19874, groupID = 1, refLootEntry = 11382 }, --Halberd of Smiting
+	{ itemID = 20038, groupID = 1, refLootEntry = 11382 }, --Mandokir's Sting
+	{ itemID = 19866, groupID = 1, refLootEntry = 11382 }, --Warblade of the Hakkari
+	{ itemID = 19877, groupID = 2, refLootEntry = 11382 }, --Animist's Leggings
+	{ itemID = 19869, groupID = 2, refLootEntry = 11382 }, --Blooddrenched Grips
+	{ itemID = 19878, groupID = 2, refLootEntry = 11382 }, --Bloodsoaked Pauldrons
+	{ itemID = 19895, groupID = 2, refLootEntry = 11382 }, --Bloodtinged Kilt
+	{ itemID = 19870, groupID = 2, refLootEntry = 11382 }, --Hakkari Loa Cloak
+	{ itemID = 19873, groupID = 2, refLootEntry = 11382 }, --Overlord's Crimson Band
+	{ itemID = 19863, groupID = 2, refLootEntry = 11382 }, --Primalist's Seal
+	{ itemID = 19893, groupID = 2, refLootEntry = 11382 }, --Zanzil's Seal
+	{ itemID = 19872, refLootEntry = 11382 }, --Swift Razzashi Raptor
+	{ icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"}, refLootEntry = 11382 },
+	{ itemID = 22637, refLootEntry = 11382 }, --Primal Hakkari Idol
+	{ itemID = 19943, refLootEntry = 11382 }, --Massive Mojo
+	{ itemID = 19945, refLootEntry = 15114 }, --Foror's Eyepatch
+	{ itemID = 19944, refLootEntry = 15114 }, --Nat Pagle's Fish Terminator
+	{ itemID = 19947, refLootEntry = 15114 }, --Nat Pagle's Broken Reel
+	{ itemID = 19946, refLootEntry = 15114 }, --Tigule's Harpoon
+	{ itemID = 22739, refLootEntry = 15114 }, --Tome of Polymorph: Turtle
+	{ itemID = 19897, groupID = 1, refLootEntry = 14509 }, --Betrayer's Boots
+	{ itemID = 20266, groupID = 1, refLootEntry = 14509 }, --Peacekeeper Leggings
+	{ itemID = 19899, groupID = 1, refLootEntry = 14509 }, --Ritualistic Legguards
+	{ itemID = 20260, groupID = 1, refLootEntry = 14509 }, --Seafury Leggings
+	{ itemID = 19898, groupID = 1, refLootEntry = 14509 }, --Seal of Jin
+	{ itemID = 19896, groupID = 1, refLootEntry = 14509 }, --Thekal's Grasp
+	{ itemID = 19901, groupID = 1, refLootEntry = 14509 }, --Zulian Slicer
+	{ itemID = 22721, groupID = 2, refLootEntry = 14509 }, --Band of Servitude
+	{ itemID = 22716, groupID = 2, refLootEntry = 14509 }, --Belt of Untapped Power
+	{ itemID = 22718, groupID = 2, refLootEntry = 14509 }, --Blooddrenched Mask
+	{ itemID = 22711, groupID = 2, refLootEntry = 14509 }, --Cloak of the Hakkari Worshippers
+	{ itemID = 22715, groupID = 2, refLootEntry = 14509 }, --Gloves of the Tormented
+	{ itemID = 22712, groupID = 2, refLootEntry = 14509 }, --Might of the Tribe
+	{ itemID = 22714, groupID = 2, refLootEntry = 14509 }, --Sacrificial Gauntlets
+	{ itemID = 22722, groupID = 2, refLootEntry = 14509 }, --Seal of the Gurubashi Berserker
+	{ itemID = 22720, groupID = 2, refLootEntry = 14509 }, --Zulian Headdress
+	{ itemID = 22713, groupID = 2, refLootEntry = 14509 }, --Zulian Scepter of Rites
+	{ itemID = 19902, refLootEntry = 14509 }, --Swift Zulian Tiger
+	{ icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"}, refLootEntry = 14509 },
+	{ itemID = 19943, refLootEntry = 14509 }, --Massive Mojo
+	{ itemID = 19881, refLootEntry = 14509 }, --Channeler's Head
+	{ itemID = 60101, droprate = "1%", refLootEntry = 14509 }, --Pet Sigil
+	{ itemID = 19910, groupID = 1, refLootEntry = 14515 }, --Arlokk's Grasp
+	{ itemID = 19922, groupID = 1, refLootEntry = 14515 }, --Arlokk's Hoodoo Stick
+	{ itemID = 19913, groupID = 1, refLootEntry = 14515 }, --Bloodsoaked Greaves
+	{ itemID = 19912, groupID = 1, refLootEntry = 14515 }, --Overlord's Onyx Band
+	{ itemID = 19909, groupID = 1, refLootEntry = 14515 }, --Will of Arlokk
+	{ itemID = 22721, groupID = 2, refLootEntry = 14515 }, --Band of Servitude
+	{ itemID = 22716, groupID = 2, refLootEntry = 14515 }, --Belt of Untapped Power
+	{ itemID = 22718, groupID = 2, refLootEntry = 14515 }, --Blooddrenched Mask
+	{ itemID = 22711, groupID = 2, refLootEntry = 14515 }, --Cloak of the Hakkari Worshippers
+	{ itemID = 22715, groupID = 2, refLootEntry = 14515 }, --Gloves of the Tormented
+	{ itemID = 22712, groupID = 2, refLootEntry = 14515 }, --Might of the Tribe
+	{ itemID = 22714, groupID = 2, refLootEntry = 14515 }, --Sacrificial Gauntlets
+	{ itemID = 22722, groupID = 2, refLootEntry = 14515 }, --Seal of the Gurubashi Berserker
+	{ itemID = 22720, groupID = 2, refLootEntry = 14515 }, --Zulian Headdress
+	{ itemID = 22713, groupID = 2, refLootEntry = 14515 }, --Zulian Scepter of Rites
+	{ itemID = 19914, refLootEntry = 14515 }, --Panther Hide Sack
+	{ icon = "INV_Banner_01", name = "ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"}, refLootEntry = 14515 },
+	{ itemID = 19943, refLootEntry = 14515 }, --Massive Mojo
+	{ itemID = 19881, refLootEntry = 14515 }, --Channeler's Head
+	{ itemID = 19891, groupID = 1, refLootEntry = 11380 }, --Jin'do's Bag of Whammies
+	{ itemID = 19885, groupID = 1, refLootEntry = 11380 }, --Jin'do's Evil Eye
+	{ itemID = 19890, groupID = 1, refLootEntry = 11380 }, --Jin'do's Hexxer
+	{ itemID = 19884, groupID = 1, refLootEntry = 11380 }, --Jin'do's Judgement
+	{ itemID = 19892, groupID = 2, refLootEntry = 11380 }, --Animist's Boots
+	{ itemID = 19889, groupID = 2, refLootEntry = 11380 }, --Blooddrenched Leggings
+	{ itemID = 19894, groupID = 2, refLootEntry = 11380 }, --Bloodsoaked Gauntlets
+	{ itemID = 19875, groupID = 2, refLootEntry = 11380 }, --Bloodstained Coif
+	{ itemID = 19887, groupID = 2, refLootEntry = 11380 }, --Bloodstained Legplates
+	{ itemID = 19929, groupID = 2, refLootEntry = 11380 }, --Bloodtinged Gloves
+	{ itemID = 19888, groupID = 2, refLootEntry = 11380 }, --Overlord's Embrace
+	{ itemID = 19886, groupID = 2, refLootEntry = 11380 }, --The Hexxer's Cover
+	{ icon = "INV_Banner_01", name = "ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"}, refLootEntry = 11380 },
+	{ itemID = 22637, refLootEntry = 11380 }, --Primal Hakkari Idol
+	{ itemID = 19943, refLootEntry = 11380 }, --Massive Mojo
+	{ itemID = 19855, groupID = 1, refLootEntry = 14834 }, --Bloodsoaked Legplates
+	{ itemID = 19857, groupID = 1, refLootEntry = 14834 }, --Cloak of Consumption
+	{ itemID = 20264, groupID = 1, refLootEntry = 14834 }, --Peacekeeper Gauntlets
+	{ itemID = 20257, groupID = 1, refLootEntry = 14834 }, --Seafury Gauntlets
+	{ itemID = 19876, groupID = 1, refLootEntry = 14834 }, --Soul Corrupter's Necklace
+	{ itemID = 19856, groupID = 1, refLootEntry = 14834 }, --The Eye of Hakkar
+	{ itemID = 19862, groupID = 2, refLootEntry = 14834 }, --Aegis of the Blood God
+	{ itemID = 19852, groupID = 2, refLootEntry = 14834 }, --Ancient Hakkari Manslayer
+	{ itemID = 19864, groupID = 2, refLootEntry = 14834 }, --Bloodcaller
+	{ itemID = 19859, groupID = 2, refLootEntry = 14834 }, --Fang of the Faceless
+	{ itemID = 19853, groupID = 2, refLootEntry = 14834 }, --Gurubashi Dwarf Destroyer
+	{ itemID = 19861, groupID = 2, refLootEntry = 14834 }, --Touch of Chaos
+	{ itemID = 19865, groupID = 2, refLootEntry = 14834 }, --Warblade of the Hakkari
+	{ itemID = 19854, groupID = 2, refLootEntry = 14834 }, --Zin'rokh, Destroyer of Worlds
+	{ itemID = 19862, groupID = 3, refLootEntry = 14834 }, --Aegis of the Blood God
+	{ itemID = 19852, groupID = 3, refLootEntry = 14834 }, --Ancient Hakkari Manslayer
+	{ itemID = 19864, groupID = 3, refLootEntry = 14834 }, --Bloodcaller
+	{ itemID = 19855, groupID = 3, refLootEntry = 14834 }, --Bloodsoaked Legplates
+	{ itemID = 19857, groupID = 3, refLootEntry = 14834 }, --Cloak of Consumption
+	{ itemID = 19859, groupID = 3, refLootEntry = 14834 }, --Fang of the Faceless
+	{ itemID = 19853, groupID = 3, refLootEntry = 14834 }, --Gurubashi Dwarf Destroyer
+	{ itemID = 20264, groupID = 3, refLootEntry = 14834 }, --Peacekeeper Gauntlets
+	{ itemID = 20257, groupID = 3, refLootEntry = 14834 }, --Seafury Gauntlets
+	{ itemID = 19876, groupID = 3, refLootEntry = 14834 }, --Soul Corrupter's Necklace
+	{ itemID = 19856, groupID = 3, refLootEntry = 14834 }, --The Eye of Hakkar
+	{ itemID = 19861, groupID = 3, refLootEntry = 14834 }, --Touch of Chaos
+	{ itemID = 19865, groupID = 3, refLootEntry = 14834 }, --Warblade of the Hakkari
+	{ itemID = 19854, groupID = 3, refLootEntry = 14834 }, --Zin'rokh, Destroyer of Worlds
+	{ itemID = 19802, refLootEntry = 14834 }, --Heart of Hakkar
+	{ itemID = 19950, refLootEntry = 14834 }, --Zandalarian Hero Charm
+	{ itemID = 19949, refLootEntry = 14834 }, --Zandalarian Hero Medallion
+	{ itemID = 19948, refLootEntry = 14834 }, --Zandalarian Hero Badge
+	{ itemID = 19943, refLootEntry = 14834 }, --Massive Mojo
+}
 
 AtlasLoot_Data["ZulGurub"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Zul'Gurub"],
+	Name = "Zul'Gurub",
 	Type = "ClassicRaid",
 	Map = "ZulGurub",
-	{
-		Name = BabbleBoss["High Priestess Jeklik"],
-		{
-			{ itemID = 19928, groupID = 1, refLootEntry = 14517 }, --Animist's Spaulders
-			{ itemID = 19918, groupID = 1, refLootEntry = 14517 }, --Jeklik's Crusher
-			{ itemID = 19923, groupID = 1, refLootEntry = 14517 }, --Jeklik's Opaline Talisman
-			{ itemID = 20265, groupID = 1, refLootEntry = 14517 }, --Peacekeeper Boots
-			{ itemID = 19920, groupID = 1, refLootEntry = 14517 }, --Primalist's Band
-			{ itemID = 20262, groupID = 1, refLootEntry = 14517 }, --Seafury Boots
-			{ itemID = 19915, groupID = 1, refLootEntry = 14517 }, --Zulian Defender
-			{ itemID = 22721, groupID = 2, refLootEntry = 14517 }, --Band of Servitude
-			{ itemID = 22716, groupID = 2, refLootEntry = 14517 }, --Belt of Untapped Power
-			{ itemID = 22718, groupID = 2, refLootEntry = 14517 }, --Blooddrenched Mask
-			{ itemID = 22711, groupID = 2, refLootEntry = 14517 }, --Cloak of the Hakkari Worshippers
-			{ itemID = 22715, groupID = 2, refLootEntry = 14517 }, --Gloves of the Tormented
-			{ itemID = 22712, groupID = 2, refLootEntry = 14517 }, --Might of the Tribe
-			{ itemID = 22714, groupID = 2, refLootEntry = 14517 }, --Sacrificial Gauntlets
-			{ itemID = 22722, groupID = 2, refLootEntry = 14517 }, --Seal of the Gurubashi Berserker
-			{ itemID = 22720, groupID = 2, refLootEntry = 14517 }, --Zulian Headdress
-
-		},
-		{
-			{ itemID = 22713, groupID = 2, refLootEntry = 14517 }, --Zulian Scepter of Rites
-			gap,
-			{ icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} },
-			gap,
-			{ itemID = 19943 }, --Massive Mojo
-			{ itemID = 19881 }, --Channeler's Head
-		},
-	},
-	{
-		Name = BabbleBoss["High Priest Venoxis"],
-		{
-			{ itemID = 19906, groupID = 1, refLootEntry = 14507 }, --Blooddrenched Footpads
-			{ itemID = 19903, groupID = 1, refLootEntry = 14507 }, --Fang of Venoxis
-			{ itemID = 19904, groupID = 1, refLootEntry = 14507 }, --Runed Bloodstained Hauberk
-			{ itemID = 19905, groupID = 1, refLootEntry = 14507 }, --Zanzil's Band
-			{ itemID = 19900, groupID = 1, refLootEntry = 14507 }, --Zulian Stone Axe
-			{ itemID = 19907, groupID = 1, refLootEntry = 14507 }, --Zulian Tigerhide Cloak
-			{ itemID = 22721, groupID = 2, refLootEntry = 14507 }, --Band of Servitude
-			{ itemID = 22716, groupID = 2, refLootEntry = 14507 }, --Belt of Untapped Power
-			{ itemID = 22718, groupID = 2, refLootEntry = 14507 }, --Blooddrenched Mask
-			{ itemID = 22711, groupID = 2, refLootEntry = 14507 }, --Cloak of the Hakkari Worshippers
-			{ itemID = 22715, groupID = 2, refLootEntry = 14507 }, --Gloves of the Tormented
-			{ itemID = 22712, groupID = 2, refLootEntry = 14507 }, --Might of the Tribe
-			{ itemID = 22714, groupID = 2, refLootEntry = 14507 }, --Sacrificial Gauntlets
-			{ itemID = 22722, groupID = 2, refLootEntry = 14507 }, --Seal of the Gurubashi Berserker
-			{ itemID = 22720, groupID = 2, refLootEntry = 14507 }, --Zulian Headdress
-			{ itemID = 22713, groupID = 2, refLootEntry = 14507 }, --Zulian Scepter of Rites
-		},
-		{
-			{ icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} },
-		gap,
-			{ itemID = 19943 }, --Massive Mojo
-			{ itemID = 19881 }, --Channeler's Head
-		gap,
-			{ itemID = 22216 }, --Venoxis's Venom Sac
-		},
-	},
-	{
-		Name = BabbleBoss["High Priestess Mar'li"],
-		{
-			{ itemID = 19925, groupID = 1, refLootEntry = 14510 }, --Band of Jin
-			{ itemID = 19919, groupID = 1, refLootEntry = 14510 }, --Bloodstained Greaves
-			{ itemID = 20032, groupID = 1, refLootEntry = 14510 }, --Flowing Ritual Robes
-			{ itemID = 19930, groupID = 1, refLootEntry = 14510 }, --Mar'li's Eye
-			{ itemID = 19927, groupID = 1, refLootEntry = 14510 }, --Mar'li's Touch
-			{ itemID = 19871, groupID = 1, refLootEntry = 14510 }, --Talisman of Protection
-			{ itemID = 22721, groupID = 2, refLootEntry = 14510 }, --Band of Servitude
-			{ itemID = 22716, groupID = 2, refLootEntry = 14510 }, --Belt of Untapped Power
-			{ itemID = 22718, groupID = 2, refLootEntry = 14510 }, --Blooddrenched Mask
-			{ itemID = 22711, groupID = 2, refLootEntry = 14510 }, --Cloak of the Hakkari Worshippers
-			{ itemID = 22715, groupID = 2, refLootEntry = 14510 }, --Gloves of the Tormented
-			{ itemID = 22712, groupID = 2, refLootEntry = 14510 }, --Might of the Tribe
-			{ itemID = 22714, groupID = 2, refLootEntry = 14510 }, --Sacrificial Gauntlets
-			{ itemID = 22722, groupID = 2, refLootEntry = 14510 }, --Seal of the Gurubashi Berserker
-			{ itemID = 22720, groupID = 2, refLootEntry = 14510 }, --Zulian Headdress
-			{ itemID = 22713, groupID = 2, refLootEntry = 14510 }, --Zulian Scepter of Rites
-		},
-		{
-			{ icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} },
-		gap,
-			{ itemID = 19943 }, --Massive Mojo
-			{ itemID = 19881 }, --Channeler's Head
-		},
-	},
-	{
-		Name = BabbleBoss["Bloodlord Mandokir"],
-		{
-			{ itemID = 19867, groupID = 1, refLootEntry = 11382 }, --Bloodlord's Defender
-			{ itemID = 19874, groupID = 1, refLootEntry = 11382 }, --Halberd of Smiting
-			{ itemID = 20038, groupID = 1, refLootEntry = 11382 }, --Mandokir's Sting
-			{ itemID = 19866, groupID = 1, refLootEntry = 11382 }, --Warblade of the Hakkari
-			{ itemID = 19877, groupID = 2, refLootEntry = 11382 }, --Animist's Leggings
-			{ itemID = 19869, groupID = 2, refLootEntry = 11382 }, --Blooddrenched Grips
-			{ itemID = 19878, groupID = 2, refLootEntry = 11382 }, --Bloodsoaked Pauldrons
-			{ itemID = 19895, groupID = 2, refLootEntry = 11382 }, --Bloodtinged Kilt
-			{ itemID = 19870, groupID = 2, refLootEntry = 11382 }, --Hakkari Loa Cloak
-			{ itemID = 19873, groupID = 2, refLootEntry = 11382 }, --Overlord's Crimson Band
-			{ itemID = 19863, groupID = 2, refLootEntry = 11382 }, --Primalist's Seal
-			{ itemID = 19893, groupID = 2, refLootEntry = 11382 }, --Zanzil's Seal
-		},
-		{
-				{ itemID = 19872 }, --Swift Razzashi Raptor
-			gap,
-			{ icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} },
-			gap,
-			{ itemID = 22637 }, --Primal Hakkari Idol
-			{ itemID = 19943 }, --Massive Mojo
-		},
-	},
-	{
-		Name = BabbleZone["Zul'Gurub"],
-		{
-			{ icon = "INV_Box_01", name = color.WHITE..BabbleBoss["Gri'lek"] },
-			{ itemID = 19961 }, --Gri'lek's Grinder
-			{ itemID = 19962 }, --Gri'lek's Carver
-			{ itemID = 19939 }, --Gri'lek's Blood
-		gap,
-			{ icon = "INV_Box_01", name = color.WHITE..BabbleBoss["Hazza'rah"] },
-			{ itemID = 19968 }, --Fiery Retributer
-			{ itemID = 19967 }, --Thoughtblighter
-			{ itemID = 19942 }, --Hazza'rah's Dream Thread
-		},
-		{
-			{ icon = "INV_Box_01", name = color.WHITE..BabbleBoss["Renataki"] },
-			{ itemID = 19964 }, --Renataki's Soul Conduit
-			{ itemID = 19963 }, --Pitchfork of Madness
-			{ itemID = 19940 }, --Renataki's Tooth
-		gap,
-			{ icon = "INV_Box_01", name = color.WHITE..BabbleBoss["Wushoolay"] },
-			{ itemID = 19965 }, --Wushoolay's Poker
-			{ itemID = 19993 }, --Hoodoo Hunting Bow
-			{ itemID = 19941 }, --Wushoolay's Mane
-		},
-	},
-	{
-		Name = BabbleBoss["Gahz'ranka"],
-		{
-			{ itemID = 19945 }, --Foror's Eyepatch
-			{ itemID = 19944 }, --Nat Pagle's Fish Terminator
-		gap,
-			{ itemID = 19947 }, --Nat Pagle's Broken Reel
-			{ itemID = 19946 }, --Tigule's Harpoon
-		gap,
-			{ itemID = 22739 }, --Tome of Polymorph: Turtle
-		},
-	},
-	{
-		Name = BabbleBoss["High Priest Thekal"],
-		{
-			{ itemID = 19897, groupID = 1, refLootEntry = 14509 }, --Betrayer's Boots
-			{ itemID = 20266, groupID = 1, refLootEntry = 14509 }, --Peacekeeper Leggings
-			{ itemID = 19899, groupID = 1, refLootEntry = 14509 }, --Ritualistic Legguards
-			{ itemID = 20260, groupID = 1, refLootEntry = 14509 }, --Seafury Leggings
-			{ itemID = 19898, groupID = 1, refLootEntry = 14509 }, --Seal of Jin
-			{ itemID = 19896, groupID = 1, refLootEntry = 14509 }, --Thekal's Grasp
-			{ itemID = 19901, groupID = 1, refLootEntry = 14509 }, --Zulian Slicer
-			{ itemID = 22721, groupID = 2, refLootEntry = 14509 }, --Band of Servitude
-			{ itemID = 22716, groupID = 2, refLootEntry = 14509 }, --Belt of Untapped Power
-			{ itemID = 22718, groupID = 2, refLootEntry = 14509 }, --Blooddrenched Mask
-			{ itemID = 22711, groupID = 2, refLootEntry = 14509 }, --Cloak of the Hakkari Worshippers
-			{ itemID = 22715, groupID = 2, refLootEntry = 14509 }, --Gloves of the Tormented
-			{ itemID = 22712, groupID = 2, refLootEntry = 14509 }, --Might of the Tribe
-			{ itemID = 22714, groupID = 2, refLootEntry = 14509 }, --Sacrificial Gauntlets
-			{ itemID = 22722, groupID = 2, refLootEntry = 14509 }, --Seal of the Gurubashi Berserker
-			{ itemID = 22720, groupID = 2, refLootEntry = 14509 }, --Zulian Headdress
-			{ itemID = 22713, groupID = 2, refLootEntry = 14509 }, --Zulian Scepter of Rites
-		},
-		{
-			{ itemID = 19902 }, --Swift Zulian Tiger
-			gap,
-			{ icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} },
-			gap,
-			{ itemID = 19943 }, --Massive Mojo
-			{ itemID = 19881 }, --Channeler's Head
-			gap,
-			{ itemID = 60101, droprate = "1%" }, --Pet Sigil
-		},
-	},
-	{
-		Name = BabbleBoss["High Priestess Arlokk"],
-		{
-			{ itemID = 19910, groupID = 1, refLootEntry = 14515 }, --Arlokk's Grasp
-			{ itemID = 19922, groupID = 1, refLootEntry = 14515 }, --Arlokk's Hoodoo Stick
-			{ itemID = 19913, groupID = 1, refLootEntry = 14515 }, --Bloodsoaked Greaves
-			{ itemID = 19912, groupID = 1, refLootEntry = 14515 }, --Overlord's Onyx Band
-			{ itemID = 19909, groupID = 1, refLootEntry = 14515 }, --Will of Arlokk
-			{ itemID = 22721, groupID = 2, refLootEntry = 14515 }, --Band of Servitude
-			{ itemID = 22716, groupID = 2, refLootEntry = 14515 }, --Belt of Untapped Power
-			{ itemID = 22718, groupID = 2, refLootEntry = 14515 }, --Blooddrenched Mask
-			{ itemID = 22711, groupID = 2, refLootEntry = 14515 }, --Cloak of the Hakkari Worshippers
-			{ itemID = 22715, groupID = 2, refLootEntry = 14515 }, --Gloves of the Tormented
-			{ itemID = 22712, groupID = 2, refLootEntry = 14515 }, --Might of the Tribe
-			{ itemID = 22714, groupID = 2, refLootEntry = 14515 }, --Sacrificial Gauntlets
-			{ itemID = 22722, groupID = 2, refLootEntry = 14515 }, --Seal of the Gurubashi Berserker
-			{ itemID = 22720, groupID = 2, refLootEntry = 14515 }, --Zulian Headdress
-			{ itemID = 22713, groupID = 2, refLootEntry = 14515 }, --Zulian Scepter of Rites
-			gap,
-			{ itemID = 19914 }, --Panther Hide Sack
-		},
-		{
-			{ icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} },
-		gap,
-			{ itemID = 19943 }, --Massive Mojo
-			{ itemID = 19881 }, --Channeler's Head
-		},
-
-	},
-	{
-		Name = BabbleBoss["Jin'do the Hexxer"],
-		{
-			{ itemID = 19891, groupID = 1, refLootEntry = 11380 }, --Jin'do's Bag of Whammies
-			{ itemID = 19885, groupID = 1, refLootEntry = 11380 }, --Jin'do's Evil Eye
-			{ itemID = 19890, groupID = 1, refLootEntry = 11380 }, --Jin'do's Hexxer
-			{ itemID = 19884, groupID = 1, refLootEntry = 11380 }, --Jin'do's Judgement
-			{ itemID = 19892, groupID = 2, refLootEntry = 11380 }, --Animist's Boots
-			{ itemID = 19889, groupID = 2, refLootEntry = 11380 }, --Blooddrenched Leggings
-			{ itemID = 19894, groupID = 2, refLootEntry = 11380 }, --Bloodsoaked Gauntlets
-			{ itemID = 19875, groupID = 2, refLootEntry = 11380 }, --Bloodstained Coif
-			{ itemID = 19887, groupID = 2, refLootEntry = 11380 }, --Bloodstained Legplates
-			{ itemID = 19929, groupID = 2, refLootEntry = 11380 }, --Bloodtinged Gloves
-			{ itemID = 19888, groupID = 2, refLootEntry = 11380 }, --Overlord's Embrace
-			{ itemID = 19886, groupID = 2, refLootEntry = 11380 }, --The Hexxer's Cover
-		},
-		{
-			{ icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} },
-		gap,
-			{ itemID = 22637 }, --Primal Hakkari Idol
-			{ itemID = 19943 }, --Massive Mojo
-		},
-	},
-	{
-		Name = BabbleBoss["Hakkar"],
-		{
-			{ itemID = 19855, groupID = 1, refLootEntry = 14834 }, --Bloodsoaked Legplates
-			{ itemID = 19857, groupID = 1, refLootEntry = 14834 }, --Cloak of Consumption
-			{ itemID = 20264, groupID = 1, refLootEntry = 14834 }, --Peacekeeper Gauntlets
-			{ itemID = 20257, groupID = 1, refLootEntry = 14834 }, --Seafury Gauntlets
-			{ itemID = 19876, groupID = 1, refLootEntry = 14834 }, --Soul Corrupter's Necklace
-			{ itemID = 19856, groupID = 1, refLootEntry = 14834 }, --The Eye of Hakkar
-			{ itemID = 19862, groupID = 2, refLootEntry = 14834 }, --Aegis of the Blood God
-			{ itemID = 19852, groupID = 2, refLootEntry = 14834 }, --Ancient Hakkari Manslayer
-			{ itemID = 19864, groupID = 2, refLootEntry = 14834 }, --Bloodcaller
-			{ itemID = 19859, groupID = 2, refLootEntry = 14834 }, --Fang of the Faceless
-			{ itemID = 19853, groupID = 2, refLootEntry = 14834 }, --Gurubashi Dwarf Destroyer
-			{ itemID = 19861, groupID = 2, refLootEntry = 14834 }, --Touch of Chaos
-			{ itemID = 19865, groupID = 2, refLootEntry = 14834 }, --Warblade of the Hakkari
-			{ itemID = 19854, groupID = 2, refLootEntry = 14834 }, --Zin'rokh, Destroyer of Worlds
-			{ itemID = 19862, groupID = 3, refLootEntry = 14834 }, --Aegis of the Blood God
-			{ itemID = 19852, groupID = 3, refLootEntry = 14834 }, --Ancient Hakkari Manslayer
-			{ itemID = 19864, groupID = 3, refLootEntry = 14834 }, --Bloodcaller
-			{ itemID = 19855, groupID = 3, refLootEntry = 14834 }, --Bloodsoaked Legplates
-			{ itemID = 19857, groupID = 3, refLootEntry = 14834 }, --Cloak of Consumption
-			{ itemID = 19859, groupID = 3, refLootEntry = 14834 }, --Fang of the Faceless
-			{ itemID = 19853, groupID = 3, refLootEntry = 14834 }, --Gurubashi Dwarf Destroyer
-			{ itemID = 20264, groupID = 3, refLootEntry = 14834 }, --Peacekeeper Gauntlets
-			{ itemID = 20257, groupID = 3, refLootEntry = 14834 }, --Seafury Gauntlets
-			{ itemID = 19876, groupID = 3, refLootEntry = 14834 }, --Soul Corrupter's Necklace
-			{ itemID = 19856, groupID = 3, refLootEntry = 14834 }, --The Eye of Hakkar
-			{ itemID = 19861, groupID = 3, refLootEntry = 14834 }, --Touch of Chaos
-			{ itemID = 19865, groupID = 3, refLootEntry = 14834 }, --Warblade of the Hakkari
-			{ itemID = 19854, groupID = 3, refLootEntry = 14834 }, --Zin'rokh, Destroyer of Worlds
-		},
-		{
-			{ itemID = 19802 }, --Heart of Hakkar
-			{ itemID = 19950 }, --Zandalarian Hero Charm
-			{ itemID = 19949 }, --Zandalarian Hero Medallion
-			{ itemID = 19948 }, --Zandalarian Hero Badge
-		gap,
-			{ itemID = 19943 }, --Massive Mojo
-		},
-	},
+	{ 14517, "High Priestess Jeklik" },
+	{ 14507, "High Priest Venoxis" },
+	{ 14510, "High Priestess Mar'li" },
+	{ 11382, "Bloodlord Mandokir" },
+	{ 15114, "Gahz'ranka" },
+	{ 14509, "High Priest Thekal" },
+	{ 14515, "High Priestess Arlokk", },
+	{ 11380, "Jin'do the Hexxer" },
+	{ 14834, "Hakkar" },
 	{
 		Name = "Muddy Churning Waters",
-		{
-			{ itemID = 19975 }, --Zulian Mudskunk
-		},
+		{ itemID = 19975 }, --Zulian Mudskunk
 	},
 	{
 		Name = "Shared ZG Priest Drops",
-		{
-			{ itemID = 22721 }, --Band of Servitude
-			{ itemID = 22722 }, --Seal of the Gurubashi Berserker
-			{ itemID = 22711 }, --Cloak of the Hakkari Worshipers
-			{ itemID = 22712 }, --Might of the Tribe
-			{ itemID = 22720 }, --Zulian Headdress
-			{ itemID = 22716 }, --Belt of Untapped Power
-			{ itemID = 22718 }, --Blooddrenched Mask
-			{ itemID = 22715 }, --Gloves of the Tormented
-			{ itemID = 22714 }, --Sacrificial Gauntlets
-			{ itemID = 22713 }, --Zulian Scepter of Rites
-		},
+		{ itemID = 22721 }, --Band of Servitude
+		{ itemID = 22722 }, --Seal of the Gurubashi Berserker
+		{ itemID = 22711 }, --Cloak of the Hakkari Worshipers
+		{ itemID = 22712 }, --Might of the Tribe
+		{ itemID = 22720 }, --Zulian Headdress
+		{ itemID = 22716 }, --Belt of Untapped Power
+		{ itemID = 22718 }, --Blooddrenched Mask
+		{ itemID = 22715 }, --Gloves of the Tormented
+		{ itemID = 22714 }, --Sacrificial Gauntlets
+		{ itemID = 22713 }, --Zulian Scepter of Rites
 	},
 	{
-		Name = AL["Trash Mobs"],
-		{
-			{ itemID = 20259 }, --Shadow Panther Hide Gloves
-			{ itemID = 20261 }, --Shadow Panther Hide Belt
-			{ itemID = 20263 }, --Gurubashi Helm
-			{ itemID = 19908 }, --Sceptre of Smiting
-			{ itemID = 19921 }, --Zulian Hacker
-			{ itemID = 20258 }, --Zulian Ceremonial Staff
-			{ itemID = 19727 }, --Blood Scythe
-			{ itemID = 48126 }, --Razzashi Hatchling
-		gap,
-			{ itemID = 19726 }, --Bloodvine
-			{ itemID = 19774 }, --Souldarite
-			{ itemID = 19767 }, --Primal Bat Leather
-			{ itemID = 19768 }, --Primal Tiger Leather
-		},
-		{
-			{ itemID = 19821 }, --Punctured Voodoo Doll
-			{ itemID = 19816 }, --Punctured Voodoo Doll
-			{ itemID = 19818 }, --Punctured Voodoo Doll
-			{ itemID = 19815 }, --Punctured Voodoo Doll
-			{ itemID = 19820 }, --Punctured Voodoo Doll
-			{ itemID = 19814 }, --Punctured Voodoo Doll
-			{ itemID = 19817 }, --Punctured Voodoo Doll
-			{ itemID = 19819 }, --Punctured Voodoo Doll
-			{ itemID = 19813 }, --Punctured Voodoo Doll
-		},
+		Name = "Trash Mobs",
+		{ itemID = 20259 }, --Shadow Panther Hide Gloves
+		{ itemID = 20261 }, --Shadow Panther Hide Belt
+		{ itemID = 20263 }, --Gurubashi Helm
+		{ itemID = 19908 }, --Sceptre of Smiting
+		{ itemID = 19921 }, --Zulian Hacker
+		{ itemID = 20258 }, --Zulian Ceremonial Staff
+		{ itemID = 19727 }, --Blood Scythe
+		{ itemID = 48126 }, --Razzashi Hatchling
+		{ itemID = 19726 }, --Bloodvine
+		{ itemID = 19774 }, --Souldarite
+		{ itemID = 19767 }, --Primal Bat Leather
+		{ itemID = 19768 }, --Primal Tiger Leather
+		{ itemID = 19821 }, --Punctured Voodoo Doll
+		{ itemID = 19816 }, --Punctured Voodoo Doll
+		{ itemID = 19818 }, --Punctured Voodoo Doll
+		{ itemID = 19815 }, --Punctured Voodoo Doll
+		{ itemID = 19820 }, --Punctured Voodoo Doll
+		{ itemID = 19814 }, --Punctured Voodoo Doll
+		{ itemID = 19817 }, --Punctured Voodoo Doll
+		{ itemID = 19819 }, --Punctured Voodoo Doll
+		{ itemID = 19813 }, --Punctured Voodoo Doll
 	},
 	{
 		Name = "Coin's and Bijou's",
-		{
-			{ itemID = 19708 }, --Blue Hakkari Bijou
-			{ itemID = 19713 }, --Bronze Hakkari Bijou
-			{ itemID = 19715 }, --Gold Hakkari Bijou
-			{ itemID = 19711 }, --Green Hakkari Bijou
-			{ itemID = 19710 }, --color.ORANGE Hakkari Bijou
-			{ itemID = 19712 }, --Purple Hakkari Bijou
-			{ itemID = 19707 }, --Red Hakkari Bijou
-			{ itemID = 19714 }, --Silver Hakkari Bijou
-			{ itemID = 19709 }, --Yellow Hakkari Bijou
-		},
-		{
-			{ itemID = 19706 }, --Bloodscalp Coin
-			{ itemID = 19701 }, --Gurubashi Coin
-			{ itemID = 19700 }, --Hakkari Coin
-			{ itemID = 19699 }, --Razzashi Coin
-			{ itemID = 19704 }, --Sandfury Coin
-			{ itemID = 19705 }, --Skullsplitter Coin
-			{ itemID = 19702 }, --Vilebranch Coin
-			{ itemID = 19703 }, --Witherbark Coin
-			{ itemID = 19698 }, --Zulian Coin
-		},
+		{ itemID = 19708 }, --Blue Hakkari Bijou
+		{ itemID = 19713 }, --Bronze Hakkari Bijou
+		{ itemID = 19715 }, --Gold Hakkari Bijou
+		{ itemID = 19711 }, --Green Hakkari Bijou
+		{ itemID = 19710 }, --color.ORANGE Hakkari Bijou
+		{ itemID = 19712 }, --Purple Hakkari Bijou
+		{ itemID = 19707 }, --Red Hakkari Bijou
+		{ itemID = 19714 }, --Silver Hakkari Bijou
+		{ itemID = 19709 }, --Yellow Hakkari Bijou
+		{ itemID = 19706 }, --Bloodscalp Coin
+		{ itemID = 19701 }, --Gurubashi Coin
+		{ itemID = 19700 }, --Hakkari Coin
+		{ itemID = 19699 }, --Razzashi Coin
+		{ itemID = 19704 }, --Sandfury Coin
+		{ itemID = 19705 }, --Skullsplitter Coin
+		{ itemID = 19702 }, --Vilebranch Coin
+		{ itemID = 19703 }, --Witherbark Coin
+		{ itemID = 19698 }, --Zulian Coin
 	},
 	{
 		Name = "ZG Enchants",
-		{
-			{ itemID = 19790 }, --Animist's Caress
-			{ itemID = 19785 }, --Falcon's Call
-			{ itemID = 19787 }, --Presence of Sight
-			{ itemID = 19783 }, --Syncretist's Sigil
-			{ itemID = 19789 }, --Prophetic Aura
-			{ itemID = 19784 }, --Death's Embrace
-			{ itemID = 19786 }, --Vodouisant's Vigilant Embrace
-			{ itemID = 19788 }, --Hoodoo Hex
-			{ itemID = 19782 }, --Presence of Might
-		},
-		{
-			{ itemID = 20077 }, --Zandalar Signet of Might
-			{ itemID = 20076 }, --Zandalar Signet of Mojo
-			{ itemID = 20078 }, --Zandalar Signet of Serenity
-		gap,
-			{ itemID = 22635 }, --Savage Guard
-		},
+		{ itemID = 19790 }, --Animist's Caress
+		{ itemID = 19785 }, --Falcon's Call
+		{ itemID = 19787 }, --Presence of Sight
+		{ itemID = 19783 }, --Syncretist's Sigil
+		{ itemID = 19789 }, --Prophetic Aura
+		{ itemID = 19784 }, --Death's Embrace
+		{ itemID = 19786 }, --Vodouisant's Vigilant Embrace
+		{ itemID = 19788 }, --Hoodoo Hex
+		{ itemID = 19782 }, --Presence of Might
+		{ itemID = 20077 }, --Zandalar Signet of Might
+		{ itemID = 20076 }, --Zandalar Signet of Mojo
+		{ itemID = 20078 }, --Zandalar Signet of Serenity
+		{ itemID = 22635 }, --Savage Guard
 	},
 }
 
@@ -6065,11 +5979,11 @@ AtlasLoot_Data["ZulGurub"] = {
 
 AtlasLoot_Data["Naxxramas60"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Naxxramas"],
+	Name = "Naxxramas",
 	Type = "ClassicRaid",
 	Map = "Naxxramas60",
 	{
-		Name = BabbleBoss["Patchwerk"],
+		Name = "Patchwerk",
 		WebID = {16028,"npc"},
 		{
 			{ itemID = 22961, groupID = 2, refLootEntry = 16028 }, --Band of Reanimation
@@ -6088,7 +6002,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Grobbulus"],
+		Name = "Grobbulus",
 		WebID = {15931,"npc"},
 		{
 			{ itemID = 22803, groupID = 2, refLootEntry = 15931 }, --Midnight Haze
@@ -6104,7 +6018,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gluth"],
+		Name = "Gluth",
 		WebID = {15932,"npc"},
 		{
 			{ itemID = 22813, groupID = 2, refLootEntry = 15932 }, --Claymore of Unholy Might
@@ -6126,7 +6040,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Thaddius"],
+		Name = "Thaddius",
 		WebID = {15928,"npc"},
 		{
 			{ itemID = 15032, groupID = 2, refLootEntry = 15928 }, --Dislocated Spine
@@ -6145,7 +6059,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Anub'Rekhan"],
+		Name = "Anub'Rekhan",
 		WebID = {15956,"npc"},
 		{
 			{ itemID = 22939, groupID = 2, refLootEntry = 15956 }, --Band of Unanswered Prayers
@@ -6163,7 +6077,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Grand Widow Faerlina"],
+		Name = "Grand Widow Faerlina",
 		WebID = {15953,"npc"},
 		{
 			{ itemID = 22943, groupID = 2, refLootEntry = 15953 }, --Malice Stone Pendant
@@ -6180,7 +6094,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Maexxna"],
+		Name = "Maexxna",
 		WebID = {15952,"npc"},
 		{
 			{ itemID = 23220, groupID = 2, refLootEntry = 15952 }, --Crystal Webbed Robe
@@ -6199,7 +6113,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Instructor Razuvious"],
+		Name = "Instructor Razuvious",
 		WebID = {16061,"npc"},
 		{
 			{ itemID = 23219, groupID = 2, refLootEntry = 16061 }, --Girdle of the Mentor
@@ -6221,7 +6135,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Gothik the Harvester"],
+		Name = "Gothik the Harvester",
 		WebID = {16060,"npc"},
 		{
 			{ itemID = 23073, groupID = 2, refLootEntry = 16060 }, --Boots of Displacement
@@ -6238,7 +6152,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["The Four Horsemen"],
+		Name = "The Four Horsemen",
 		WebID = {181366,"object"},
 		{
 			{ itemID = 23071 }, --Leggings of Apocalypse
@@ -6256,7 +6170,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Noth the Plaguebringer"],
+		Name = "Noth the Plaguebringer",
 		WebID = {15954,"npc"},
 		{
 			{ itemID = 23031, groupID = 2, refLootEntry = 15954 }, --Band of the Inevitable
@@ -6275,7 +6189,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Heigan the Unclean"],
+		Name = "Heigan the Unclean",
 		WebID = {15936,"npc"},
 		{
 			{ itemID = 23068, groupID = 2, refLootEntry = 15936 }, --Legplates of Carnage
@@ -6291,7 +6205,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Loatheb"],
+		Name = "Loatheb",
 		WebID = {16011,"npc"},
 		{
 			{ itemID = 23038, groupID = 2, refLootEntry = 16011 }, --Band of Unnatural Forces
@@ -6310,7 +6224,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Sapphiron"],
+		Name = "Sapphiron",
 		WebID = {15989,"npc"},
 		{
 			{ itemID = 23242, groupID = 2, refLootEntry = 15989 }, --Claw of the Frost Wyrm
@@ -6339,7 +6253,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = BabbleBoss["Kel'Thuzad"],
+		Name = "Kel'Thuzad",
 		WebID = {15990,"npc"},
 		{
 			{ itemID = 22821, groupID = 2, refLootEntry = 15990 }, --Doomfinger
@@ -6373,7 +6287,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = AL["Shared Frost Resistance Gear"],
+		Name = "Shared Frost Resistance Gear",
 		{
 			{ itemID = 22968 }, -- Glacial Mantle
 			{ itemID = 23019 }, -- Icebane Helmet
@@ -6388,7 +6302,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		},
 	},
 	{
-		Name = AL["Trash Mobs"],
+		Name = "Trash Mobs",
 		{
 			{ itemID = 23069 }, --Necro-Knight's Garb
 			{ itemID = 23226 }, --Ghoul Skin Tunic
@@ -6421,11 +6335,11 @@ AtlasLoot_Data["Naxxramas60"] = {
 
 AtlasLoot_Data["Onyxia60"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Onyxia's Lair"],
+	Name = "Onyxia's Lair",
 	Type = "ClassicRaid",
 	Map = "Onyxia60",
 	{
-		Name = BabbleZone["Onyxia's Lair"],
+		Name = "Onyxia's Lair",
 		WebID = {10184,"npc"},
 		{
 			{ itemID = 17067, groupID = 2, refLootEntry = 10184 }, --Ancient Cornerstone Grimoire
@@ -6466,10 +6380,10 @@ AtlasLoot_Data["Onyxia60"] = {
 
 AtlasLoot_Data["FrozenReach"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["Frozen Reach"],
+	Name = "Frozen Reach",
 	Type = "Manastorm",
 	{
-		Name = AL["Frozen Reach"],
+		Name = "Frozen Reach",
 		WebID ={98888,"item"},
 		{
 			{ itemID = 1519391 }, -- Reclaimed Blade of the Frozen Sepulcher
@@ -6497,10 +6411,10 @@ AtlasLoot_Data["FrozenReach"] = {
 
 AtlasLoot_Data["SharedDungeonLoot"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["Shared Dungeon Loot"],
+	Name = "Shared Dungeon Loot",
 	Type = "ClassicDungeonExt",
 	{
-		Name = AL["Heroic"].." - "..color.WHITE..AL["Page 1"],
+		Name = "Heroic".." - "..color.WHITE.."Page 1",
 		{
 			{ itemID = 1552721 }, --Holy Shroud
 			{ itemID = 1553020 }, --Enduring Cap
@@ -6534,7 +6448,7 @@ AtlasLoot_Data["SharedDungeonLoot"] = {
 		},
 	},
 	{
-		Name = AL["Heroic"].." - "..color.WHITE..AL["Page 2"],
+		Name = "Heroic".." - "..color.WHITE.."Page 2",
 		{
 			{ itemID = 1559359 }, --Wirt's Third Leg
 			{ itemID = 1562974 }, --The Black Knight
@@ -6571,7 +6485,7 @@ AtlasLoot_Data["SharedDungeonLoot"] = {
 		},
 	},
 	{
-		Name = AL["Heroic"].." - "..color.WHITE..AL["Page 3"],
+		Name = "Heroic".." - "..color.WHITE.."Page 3",
 		{
 			{ itemID = 1559405 }, --Girdle of Golem Strength
 			{ itemID = 1563011 }, --Silver-lined Belt
@@ -6594,7 +6508,7 @@ AtlasLoot_Data["SharedDungeonLoot"] = {
 		},
 	},
 	{
-		Name = AL["Mythic"].." - "..color.WHITE..AL["Page 1"],
+		Name = "Mythic".." - "..color.WHITE.."Page 1",
 		{
 			{ itemID = 2431147 }, --Pendant of Cunning
 			{ itemID = 2431178 }, --Amulet of Unstable Power
@@ -6631,7 +6545,7 @@ AtlasLoot_Data["SharedDungeonLoot"] = {
 		},
 	},
 	{
-		Name = AL["Mythic"].." - "..color.WHITE..AL["Page 2"],
+		Name = "Mythic".." - "..color.WHITE.."Page 2",
 		{
 			{ itemID = 2431131 }, --Sash of Silent Blades
 			{ itemID = 2431138 }, --Storm Lord's Girdle
@@ -6659,10 +6573,10 @@ AtlasLoot_Data["SharedDungeonLoot"] = {
 
 AtlasLoot_Data["MarkOfTriumph"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["Mark of Triumph Vendor"],
+	Name = "Mark of Triumph Vendor",
 	Type = "ClassicDungeonExt",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		WebID = {1414503,"npc"},
 		{
 			{ itemID = 212827 }, -- Corla's Baton
@@ -6700,7 +6614,7 @@ AtlasLoot_Data["MarkOfTriumph"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		WebID = {1414503,"npc"},
 		{
 			{ itemID = 1414555 }, -- Shroud of the Cathedral
@@ -6721,121 +6635,121 @@ AtlasLoot_Data["T0"] = {
 	Name = "Dungeon Sets",
 	Type = "ClassicDungeonExt",
 	{
-		Name = AL["Wildheart Raiment"],
+		Name = "Wildheart Raiment",
 		{
-			{ itemID = 16720, desc = "=ds=" ..BabbleBoss["Darkmaster Gandling"] .." (" ..AL["Scholo"] ..")" }, --Wildheart Cowl
-			{ itemID = 16718, desc = "=ds=" ..BabbleBoss["Gizrul the Slavener"] .." (" ..AL["LBRS"] ..")" }, --Wildheart Spaulders
-			{ itemID = 16706, desc = "=ds=" ..BabbleBoss["General Drakkisath"] .." (" ..AL["UBRS"] ..")" }, --Wildheart Vest
-			{ itemID = 16714, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["Strat"] ..")" }, --Wildheart Bracers
-			{ itemID = 16717, desc = "=ds=" ..BabbleBoss["The Unforgiven"] .." (" ..AL["Strat"] ..")" }, --Wildheart Gloves
-			{ itemID = 16716, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["Scholo"] ..")" }, --Wildheart Belt
-			{ itemID = 16719, desc = "=ds=" ..BabbleBoss["Baron Rivendare"] .." (" ..AL["Strat"] ..")" }, --Wildheart Kilt
-			{ itemID = 16715, desc = "=ds=" ..BabbleBoss["Mother Smolderweb"] .." (" ..AL["LBRS"] ..")" }, --Wildheart Boots
+			{ itemID = 16720, desc = "=ds=" .."Darkmaster Gandling" .." (" .."Scholo" ..")" }, --Wildheart Cowl
+			{ itemID = 16718, desc = "=ds=" .."Gizrul the Slavener" .." (" .."LBRS" ..")" }, --Wildheart Spaulders
+			{ itemID = 16706, desc = "=ds=" .."General Drakkisath" .." (" .."UBRS" ..")" }, --Wildheart Vest
+			{ itemID = 16714, desc = "=ds=" .."Trash Mobs" .." (" .."Strat" ..")" }, --Wildheart Bracers
+			{ itemID = 16717, desc = "=ds=" .."The Unforgiven" .." (" .."Strat" ..")" }, --Wildheart Gloves
+			{ itemID = 16716, desc = "=ds=" .."Trash Mobs" .." (" .."Scholo" ..")" }, --Wildheart Belt
+			{ itemID = 16719, desc = "=ds=" .."Baron Rivendare" .." (" .."Strat" ..")" }, --Wildheart Kilt
+			{ itemID = 16715, desc = "=ds=" .."Mother Smolderweb" .." (" .."LBRS" ..")" }, --Wildheart Boots
 		},
 	},
 	{
-		Name = AL["Beaststalker Armor"],
+		Name = "Beaststalker Armor",
 		{
-			{ itemID = 16677, desc = "=ds=" ..BabbleBoss["Darkmaster Gandling"] .." (" ..AL["Scholo"] ..")" }, --Beaststalker's Cap
-			{ itemID = 16679, desc = "=ds=" ..BabbleBoss["Overlord Wyrmthalak"] .." (" ..AL["LBRS"] ..")" }, --Beaststalker's Mantle
-			{ itemID = 16674, desc = "=ds=" ..BabbleBoss["General Drakkisath"] .." (" ..AL["UBRS"] ..")" }, --Beaststalker's Tunic
-			{ itemID = 16681, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["Strat"] ..")" }, --Beaststalker's Bindings
-			{ itemID = 16676, desc = "=ds=" ..BabbleBoss["War Master Voone"] .." (" ..AL["LBRS"] ..")" }, --Beaststalker's Gloves
-			{ itemID = 16680, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["LBRS"] ..")" }, --Beaststalker's Belt
-			{ itemID = 16678, desc = "=ds=" ..BabbleBoss["Baron Rivendare"] .." (" ..AL["Strat"] ..")" }, --Beaststalker's Pants
-			{ itemID = 16675, desc = "=ds=" ..BabbleBoss["Nerub'enkan"] .." (" ..AL["Strat"] ..")" }, --Beaststalker's Boots
+			{ itemID = 16677, desc = "=ds=" .."Darkmaster Gandling" .." (" .."Scholo" ..")" }, --Beaststalker's Cap
+			{ itemID = 16679, desc = "=ds=" .."Overlord Wyrmthalak" .." (" .."LBRS" ..")" }, --Beaststalker's Mantle
+			{ itemID = 16674, desc = "=ds=" .."General Drakkisath" .." (" .."UBRS" ..")" }, --Beaststalker's Tunic
+			{ itemID = 16681, desc = "=ds=" .."Trash Mobs" .." (" .."Strat" ..")" }, --Beaststalker's Bindings
+			{ itemID = 16676, desc = "=ds=" .."War Master Voone" .." (" .."LBRS" ..")" }, --Beaststalker's Gloves
+			{ itemID = 16680, desc = "=ds=" .."Trash Mobs" .." (" .."LBRS" ..")" }, --Beaststalker's Belt
+			{ itemID = 16678, desc = "=ds=" .."Baron Rivendare" .." (" .."Strat" ..")" }, --Beaststalker's Pants
+			{ itemID = 16675, desc = "=ds=" .."Nerub'enkan" .." (" .."Strat" ..")" }, --Beaststalker's Boots
 		},
 	},
 	{
-		Name = AL["Magister's Regalia"],
+		Name = "Magister's Regalia",
 		{
-			{ itemID = 16686, desc = "=ds=" ..BabbleBoss["Darkmaster Gandling"] .." (" ..AL["Scholo"] ..")" }, --Magister's Crown
-			{ itemID = 16689, desc = "=ds=" ..BabbleBoss["Ras Frostwhisper"] .." (" ..AL["Scholo"] ..")" }, --Magister's Mantle
-			{ itemID = 16688, desc = "=ds=" ..BabbleBoss["General Drakkisath"] .." (" ..AL["UBRS"] ..")" }, --Magister's Robes
-			{ itemID = 16683, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["LBRS"] ..")" }, --Magister's Bindings
-			{ itemID = 16684, desc = "=ds=" ..BabbleBoss["Doctor Theolen Krastinov"] .." (" ..AL["Scholo"] ..")" }, --Magister's Gloves
-			{ itemID = 16685, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["Strat"] ..")" }, --Magister's Belt
-			{ itemID = 16687, desc = "=ds=" ..BabbleBoss["Baron Rivendare"] .." (" ..AL["Strat"] ..")" }, --Magister's Leggings
-			{ itemID = 16682, desc = "=ds=" ..BabbleBoss["Hearthsinger Forresten"] .." (" ..AL["Strat"] ..")" }, --Magister's Boots
+			{ itemID = 16686, desc = "=ds=" .."Darkmaster Gandling" .." (" .."Scholo" ..")" }, --Magister's Crown
+			{ itemID = 16689, desc = "=ds=" .."Ras Frostwhisper" .." (" .."Scholo" ..")" }, --Magister's Mantle
+			{ itemID = 16688, desc = "=ds=" .."General Drakkisath" .." (" .."UBRS" ..")" }, --Magister's Robes
+			{ itemID = 16683, desc = "=ds=" .."Trash Mobs" .." (" .."LBRS" ..")" }, --Magister's Bindings
+			{ itemID = 16684, desc = "=ds=" .."Doctor Theolen Krastinov" .." (" .."Scholo" ..")" }, --Magister's Gloves
+			{ itemID = 16685, desc = "=ds=" .."Trash Mobs" .." (" .."Strat" ..")" }, --Magister's Belt
+			{ itemID = 16687, desc = "=ds=" .."Baron Rivendare" .." (" .."Strat" ..")" }, --Magister's Leggings
+			{ itemID = 16682, desc = "=ds=" .."Hearthsinger Forresten" .." (" .."Strat" ..")" }, --Magister's Boots
 		},
 	},
 	{
-		Name = AL["Lightforge Armor"],
+		Name = "Lightforge Armor",
 		{
-			{ itemID = 16727, desc = "=ds=" ..BabbleBoss["Darkmaster Gandling"] .." (" ..AL["Scholo"] ..")" }, --Lightforge Helm
-			{ itemID = 16729, desc = "=ds=" ..BabbleBoss["The Beast"] .." (" ..AL["UBRS"] ..")" }, --Lightforge Spaulders
-			{ itemID = 16726, desc = "=ds=" ..BabbleBoss["General Drakkisath"] .." (" ..AL["UBRS"] ..")" }, --Lightforge Breastplate
-			{ itemID = 16722, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["Scholo"] ..")" }, --Lightforge Bracers
-			{ itemID = 16724, desc = "=ds=" ..BabbleBoss["Timmy the Cruel"] .." (" ..AL["Strat"] ..")" }, --Lightforge Gauntlets
-			{ itemID = 16723, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["Strat"] ..")" }, --Lightforge Belt
-			{ itemID = 16728, desc = "=ds=" ..BabbleBoss["Baron Rivendare"] .." (" ..AL["Strat"] ..")" }, --Lightforge Legplates
-			{ itemID = 16725, desc = "=ds=" ..BabbleBoss["Balnazzar"] .." (" ..AL["Strat"] ..")" }, --Lightforge Boots
+			{ itemID = 16727, desc = "=ds=" .."Darkmaster Gandling" .." (" .."Scholo" ..")" }, --Lightforge Helm
+			{ itemID = 16729, desc = "=ds=" .."The Beast" .." (" .."UBRS" ..")" }, --Lightforge Spaulders
+			{ itemID = 16726, desc = "=ds=" .."General Drakkisath" .." (" .."UBRS" ..")" }, --Lightforge Breastplate
+			{ itemID = 16722, desc = "=ds=" .."Trash Mobs" .." (" .."Scholo" ..")" }, --Lightforge Bracers
+			{ itemID = 16724, desc = "=ds=" .."Timmy the Cruel" .." (" .."Strat" ..")" }, --Lightforge Gauntlets
+			{ itemID = 16723, desc = "=ds=" .."Trash Mobs" .." (" .."Strat" ..")" }, --Lightforge Belt
+			{ itemID = 16728, desc = "=ds=" .."Baron Rivendare" .." (" .."Strat" ..")" }, --Lightforge Legplates
+			{ itemID = 16725, desc = "=ds=" .."Balnazzar" .." (" .."Strat" ..")" }, --Lightforge Boots
 		},
 
 	},
 	{
-		Name = AL["Vestments of the Devout"],
+		Name = "Vestments of the Devout",
 		{
-			{ itemID = 16693, desc = "=ds=" ..BabbleBoss["Darkmaster Gandling"] .." (" ..AL["Scholo"] ..")" }, --Devout Crown
-			{ itemID = 16695, desc = "=ds=" ..BabbleBoss["Solakar Flamewreath"] .." (" ..AL["UBRS"] ..")" }, --Devout Mantle
-			{ itemID = 16690, desc = "=ds=" ..BabbleBoss["General Drakkisath"] .." (" ..AL["UBRS"] ..")" }, --Devout Robe
-			{ itemID = 16697, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["Strat"] ..")" }, --Devout Bracers
-			{ itemID = 16692, "=q3=Devout Gloves", "=ds=" ..BabbleBoss["Archivist Galford"] .." (" ..AL["Strat"] ..")" },
-			{ itemID = 16696, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["LBRS"] ..")" }, --Devout Belt
-			{ itemID = 16694, desc = "=ds=" ..BabbleBoss["Baron Rivendare"] .." (" ..AL["Strat"] ..")" }, --Devout Skirt
-			{ itemID = 16691, desc = "=ds=" ..BabbleBoss["Maleki the Pallid"] .." (" ..AL["Strat"] ..")" }, --Devout Sandals
+			{ itemID = 16693, desc = "=ds=" .."Darkmaster Gandling" .." (" .."Scholo" ..")" }, --Devout Crown
+			{ itemID = 16695, desc = "=ds=" .."Solakar Flamewreath" .." (" .."UBRS" ..")" }, --Devout Mantle
+			{ itemID = 16690, desc = "=ds=" .."General Drakkisath" .." (" .."UBRS" ..")" }, --Devout Robe
+			{ itemID = 16697, desc = "=ds=" .."Trash Mobs" .." (" .."Strat" ..")" }, --Devout Bracers
+			{ itemID = 16692, "=q3=Devout Gloves", "=ds=" .."Archivist Galford" .." (" .."Strat" ..")" },
+			{ itemID = 16696, desc = "=ds=" .."Trash Mobs" .." (" .."LBRS" ..")" }, --Devout Belt
+			{ itemID = 16694, desc = "=ds=" .."Baron Rivendare" .." (" .."Strat" ..")" }, --Devout Skirt
+			{ itemID = 16691, desc = "=ds=" .."Maleki the Pallid" .." (" .."Strat" ..")" }, --Devout Sandals
 		},
 	},
 	{
-		Name = AL["Shadowcraft Armor"],
+		Name = "Shadowcraft Armor",
 		{
-			{ itemID = 16707, desc = "=ds=" ..BabbleBoss["Darkmaster Gandling"] .." (" ..AL["Scholo"] ..")" }, --Shadowcraft Cap
-			{ itemID = 16708, desc = "=ds=" ..BabbleBoss["Cannon Master Willey"] .." (" ..AL["Strat"] ..")" }, --Shadowcraft Spaulders
-			{ itemID = 16721, desc = "=ds=" ..BabbleBoss["General Drakkisath"] .." (" ..AL["UBRS"] ..")" }, --Shadowcraft Tunic
-			{ itemID = 16710, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["Scholo"] ..")" }, --Shadowcraft Bracers
-			{ itemID = 16712, desc = "=ds=" ..BabbleBoss["Shadow Hunter Vosh'gajin"] .." (" ..AL["LBRS"] ..")" }, --Shadowcraft Gloves
-			{ itemID = 16713, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["LBRS"] ..")" }, --Shadowcraft Belt
-			{ itemID = 16709, desc = "=ds=" ..BabbleBoss["Baron Rivendare"] .." (" ..AL["Strat"] ..")" }, --Shadowcraft Pants
-			{ itemID = 16711, desc = "=ds=" ..BabbleBoss["Rattlegore"] .." (" ..AL["Scholo"] ..")" }, --Shadowcraft Boots
+			{ itemID = 16707, desc = "=ds=" .."Darkmaster Gandling" .." (" .."Scholo" ..")" }, --Shadowcraft Cap
+			{ itemID = 16708, desc = "=ds=" .."Cannon Master Willey" .." (" .."Strat" ..")" }, --Shadowcraft Spaulders
+			{ itemID = 16721, desc = "=ds=" .."General Drakkisath" .." (" .."UBRS" ..")" }, --Shadowcraft Tunic
+			{ itemID = 16710, desc = "=ds=" .."Trash Mobs" .." (" .."Scholo" ..")" }, --Shadowcraft Bracers
+			{ itemID = 16712, desc = "=ds=" .."Shadow Hunter Vosh'gajin" .." (" .."LBRS" ..")" }, --Shadowcraft Gloves
+			{ itemID = 16713, desc = "=ds=" .."Trash Mobs" .." (" .."LBRS" ..")" }, --Shadowcraft Belt
+			{ itemID = 16709, desc = "=ds=" .."Baron Rivendare" .." (" .."Strat" ..")" }, --Shadowcraft Pants
+			{ itemID = 16711, desc = "=ds=" .."Rattlegore" .." (" .."Scholo" ..")" }, --Shadowcraft Boots
 		},
 	},
 	{
-		Name = AL["The Elements"],
+		Name = "The Elements",
 		{
-			{ itemID = 16667, desc = "=ds=" ..BabbleBoss["Darkmaster Gandling"] .." (" ..AL["Scholo"] ..")" }, --Coif of Elements
-			{ itemID = 16669, desc = "=ds=" ..BabbleBoss["Gyth"] .." (" ..AL["UBRS"] ..")" }, --Pauldrons of Elements
-			{ itemID = 16666, desc = "=ds=" ..BabbleBoss["General Drakkisath"] .." (" ..AL["UBRS"] ..")" }, --Vest of Elements
-			{ itemID = 16671, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["Strat"] ..")" }, --Bindings of Elements
-			{ itemID = 16672, desc = "=ds=" ..BabbleBoss["Pyroguard Emberseer"] .." (" ..AL["UBRS"] ..")" }, --Gauntlets of Elements
-			{ itemID = 16673, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["LBRS"] ..")" }, --Cord of Elements
-			{ itemID = 16668, desc = "=ds=" ..BabbleBoss["Baron Rivendare"] .." (" ..AL["Strat"] ..")" }, --Kilt of Elements
-			{ itemID = 16670, desc = "=ds=" ..BabbleBoss["Highlord Omokk"] .." (" ..AL["LBRS"] ..")" }, --Boots of Elements
+			{ itemID = 16667, desc = "=ds=" .."Darkmaster Gandling" .." (" .."Scholo" ..")" }, --Coif of Elements
+			{ itemID = 16669, desc = "=ds=" .."Gyth" .." (" .."UBRS" ..")" }, --Pauldrons of Elements
+			{ itemID = 16666, desc = "=ds=" .."General Drakkisath" .." (" .."UBRS" ..")" }, --Vest of Elements
+			{ itemID = 16671, desc = "=ds=" .."Trash Mobs" .." (" .."Strat" ..")" }, --Bindings of Elements
+			{ itemID = 16672, desc = "=ds=" .."Pyroguard Emberseer" .." (" .."UBRS" ..")" }, --Gauntlets of Elements
+			{ itemID = 16673, desc = "=ds=" .."Trash Mobs" .." (" .."LBRS" ..")" }, --Cord of Elements
+			{ itemID = 16668, desc = "=ds=" .."Baron Rivendare" .." (" .."Strat" ..")" }, --Kilt of Elements
+			{ itemID = 16670, desc = "=ds=" .."Highlord Omokk" .." (" .."LBRS" ..")" }, --Boots of Elements
 		},
 	},
 	{
-		Name = AL["Dreadmist Raiment"],
+		Name = "Dreadmist Raiment",
 		{
-			{ itemID = 16698, desc = "=ds=" ..BabbleBoss["Darkmaster Gandling"] .." (" ..AL["Scholo"] ..")" }, --Dreadmist Mask
-			{ itemID = 16701, desc = "=ds=" ..BabbleBoss["Jandice Barov"] .." (" ..AL["Scholo"] ..")" }, --Dreadmist Mantle
-			{ itemID = 16700, desc = "=ds=" ..BabbleBoss["General Drakkisath"] .." (" ..AL["UBRS"] ..")" }, --Dreadmist Robe
-			{ itemID = 16703, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["LBRS"] ..")" }, --Dreadmist Bracers
-			{ itemID = 16705, desc = "=ds=" ..BabbleBoss["Lorekeeper Polkelt"] .." (" ..AL["Scholo"] ..")" }, --Dreadmist Wraps
-			{ itemID = 16702, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["Strat"] ..")" }, --Dreadmist Belt
-			{ itemID = 16699, desc = "=ds=" ..BabbleBoss["Baron Rivendare"] .." (" ..AL["Strat"] ..")" }, --Dreadmist Leggings
-			{ itemID = 16704, desc = "=ds=" ..BabbleBoss["Baroness Anastari"] .." (" ..AL["Strat"] ..")" }, --Dreadmist Sandals
+			{ itemID = 16698, desc = "=ds=" .."Darkmaster Gandling" .." (" .."Scholo" ..")" }, --Dreadmist Mask
+			{ itemID = 16701, desc = "=ds=" .."Jandice Barov" .." (" .."Scholo" ..")" }, --Dreadmist Mantle
+			{ itemID = 16700, desc = "=ds=" .."General Drakkisath" .." (" .."UBRS" ..")" }, --Dreadmist Robe
+			{ itemID = 16703, desc = "=ds=" .."Trash Mobs" .." (" .."LBRS" ..")" }, --Dreadmist Bracers
+			{ itemID = 16705, desc = "=ds=" .."Lorekeeper Polkelt" .." (" .."Scholo" ..")" }, --Dreadmist Wraps
+			{ itemID = 16702, desc = "=ds=" .."Trash Mobs" .." (" .."Strat" ..")" }, --Dreadmist Belt
+			{ itemID = 16699, desc = "=ds=" .."Baron Rivendare" .." (" .."Strat" ..")" }, --Dreadmist Leggings
+			{ itemID = 16704, desc = "=ds=" .."Baroness Anastari" .." (" .."Strat" ..")" }, --Dreadmist Sandals
 		},
 	},
 	{
-		Name = AL["Battlegear of Valor"],
+		Name = "Battlegear of Valor",
 		{
-			{ itemID = 16731, desc = "=ds=" ..BabbleBoss["Darkmaster Gandling"] .." (" ..AL["Scholo"] ..")" }, --Helm of Valor
-			{ itemID = 16733, desc = "=ds=" ..BabbleBoss["Warchief Rend Blackhand"] .." (" ..AL["UBRS"] ..")" }, --Spaulders of Valor
-			{ itemID = 16730, desc = "=ds=" ..BabbleBoss["General Drakkisath"] .." (" ..AL["UBRS"] ..")" }, --Breastplate of Valor
-			{ itemID = 16735, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["LBRS"] ..")" }, --Bracers of Valor
-			{ itemID = 16737, desc = "=ds=" ..BabbleBoss["Ramstein the Gorger"] .." (" ..AL["Strat"] ..")" }, --Gauntlets of Valor
-			{ itemID = 16736, desc = "=ds=" ..AL["Trash Mobs"] .." (" ..AL["LBRS"] ..")" }, --Belt of Valor
-			{ itemID = 16732, desc = "=ds=" ..BabbleBoss["Baron Rivendare"] .." (" ..AL["Strat"] ..")" }, --Legplates of Valor
-			{ itemID = 16734, desc = "=ds=" ..BabbleBoss["Kirtonos the Herald"] .." (" ..AL["Scholo"] ..")" }, --Boots of Valor
+			{ itemID = 16731, desc = "=ds=" .."Darkmaster Gandling" .." (" .."Scholo" ..")" }, --Helm of Valor
+			{ itemID = 16733, desc = "=ds=" .."Warchief Rend Blackhand" .." (" .."UBRS" ..")" }, --Spaulders of Valor
+			{ itemID = 16730, desc = "=ds=" .."General Drakkisath" .." (" .."UBRS" ..")" }, --Breastplate of Valor
+			{ itemID = 16735, desc = "=ds=" .."Trash Mobs" .." (" .."LBRS" ..")" }, --Bracers of Valor
+			{ itemID = 16737, desc = "=ds=" .."Ramstein the Gorger" .." (" .."Strat" ..")" }, --Gauntlets of Valor
+			{ itemID = 16736, desc = "=ds=" .."Trash Mobs" .." (" .."LBRS" ..")" }, --Belt of Valor
+			{ itemID = 16732, desc = "=ds=" .."Baron Rivendare" .." (" .."Strat" ..")" }, --Legplates of Valor
+			{ itemID = 16734, desc = "=ds=" .."Kirtonos the Herald" .." (" .."Scholo" ..")" }, --Boots of Valor
 		},
 	},
 	{
@@ -6904,7 +6818,7 @@ AtlasLoot_Data["T0"] = {
 		},
 	},
 	{
-		Name = AL["Necropile Raiment"],
+		Name = "Necropile Raiment",
 		{
 			{ itemID = 14626 }, --Necropile Robe
         	{ itemID = 14629 }, --Necropile Cuffs
@@ -6917,7 +6831,7 @@ AtlasLoot_Data["T0"] = {
 		},
 	},
 	{
-		Name = AL["Cadaverous Garb"],
+		Name = "Cadaverous Garb",
 		{
 			{ itemID = 14011 }, --Cadaverous Crown
 			{ itemID = 14012 }, --Cadaverous Shoulders
@@ -6930,7 +6844,7 @@ AtlasLoot_Data["T0"] = {
 		},
 	},
 	{
-		Name = AL["Bloodmail Regalia"],
+		Name = "Bloodmail Regalia",
 		{
 			{ itemID = 14611 }, --Bloodmail Hauberk
         	{ itemID = 14612 }, --Bloodmail Legguards
@@ -6943,7 +6857,7 @@ AtlasLoot_Data["T0"] = {
 		},
 	},
 	{
-		Name = AL["Deathbone Guardian"],
+		Name = "Deathbone Guardian",
 		{
 			{ itemID = 14621 }, --Deathbone Sabatons
         	{ itemID = 14623 }, --Deathbone Legguards
@@ -6962,7 +6876,7 @@ AtlasLoot_Data["T0.5"] = {
 	Name = "Dungeon Sets Quest Upgrades",
 	Type = "ClassicDungeonExt",
 	{
-		Name = AL["Feralheart Raiment"],
+		Name = "Feralheart Raiment",
 		{
 			{ itemID = 22109, maxDifficulty = "Normal" },  --Feralheart Cowl
 			{ itemID = 22112, maxDifficulty = "Normal" },  --Feralheart Spaulders
@@ -6975,7 +6889,7 @@ AtlasLoot_Data["T0.5"] = {
 		},
 	},
 	{
-		Name = AL["Beastmaster Armor"],  
+		Name = "Beastmaster Armor",  
 		{
 			{ itemID = 22013, maxDifficulty = "Normal" },  --Beastmaster's Cap
 			{ itemID = 22016, maxDifficulty = "Normal" },  --Beastmaster's Mantle
@@ -6988,7 +6902,7 @@ AtlasLoot_Data["T0.5"] = {
 		},
 	},
 	{
-		Name = AL["Sorcerer's Regalia"],
+		Name = "Sorcerer's Regalia",
 		{
 			{ itemID = 22065, maxDifficulty = "Normal" },  --Sorcerer's Crown
 			{ itemID = 22068, maxDifficulty = "Normal" },  --Sorcerer's Mantle
@@ -7001,7 +6915,7 @@ AtlasLoot_Data["T0.5"] = {
 		},
 	},
 	{
-		Name = AL["Soulforge Armor"],  
+		Name = "Soulforge Armor",  
 		{
 			{ itemID = 22091, maxDifficulty = "Normal" },  --Soulforge Helm
 			{ itemID = 22093, maxDifficulty = "Normal" },  --Soulforge Spaulders
@@ -7014,7 +6928,7 @@ AtlasLoot_Data["T0.5"] = {
 		},
 	},
 	{
-		Name = AL["Vestments of the Virtuous"],  
+		Name = "Vestments of the Virtuous",  
 		{
 			{ itemID = 22080, maxDifficulty = "Normal" },  --Virtuous Crown
 			{ itemID = 22082, maxDifficulty = "Normal" },  --Virtuous Mantle
@@ -7027,7 +6941,7 @@ AtlasLoot_Data["T0.5"] = {
 		},
 	},
 	{
-		Name = AL["Darkmantle Armor"],
+		Name = "Darkmantle Armor",
 		{
 			{ itemID = 22005, maxDifficulty = "Normal" },  --Darkmantle Cap
 			{ itemID = 22008, maxDifficulty = "Normal" },  --Darkmantle Spaulders
@@ -7040,7 +6954,7 @@ AtlasLoot_Data["T0.5"] = {
 		},
 	},
 	{
-		Name = AL["The Five Thunders"],
+		Name = "The Five Thunders",
 		{
 			{ itemID = 22097, maxDifficulty = "Normal" },  --Coif of The Five Thunders
 			{ itemID = 22101, maxDifficulty = "Normal" },  --Pauldrons of The Five Thunders
@@ -7053,7 +6967,7 @@ AtlasLoot_Data["T0.5"] = {
 		},
 	},
 	{
-		Name = AL["Deathmist Raiment"],
+		Name = "Deathmist Raiment",
 		{
 			{ itemID = 22074, maxDifficulty = "Normal" },  --Deathmist Mask
 			{ itemID = 22073, maxDifficulty = "Normal" },  --Deathmist Mantle
@@ -7066,7 +6980,7 @@ AtlasLoot_Data["T0.5"] = {
 		},
 	},
 	{
-		Name = AL["Battlegear of Heroism"],
+		Name = "Battlegear of Heroism",
 		{
 			{ itemID = 21999, maxDifficulty = "Normal" },  --Helm of Heroism
 			{ itemID = 22001, maxDifficulty = "Normal" },  --Spaulders of Heroism
@@ -7089,237 +7003,237 @@ AtlasLoot_Data["T1"] = {
 	Name = "Tier 1",
 	Type = "ClassicRaid",
 	{
-		Name = "Druid"..color.WHITE.." - "..AL["Restoration"],
+		Name = "Druid"..color.WHITE.." - ".."Restoration",
 		{
-			{ itemID = 16834, desc = "=ds=" ..BabbleBoss["Garr"] }, --Cenarion Helm
-			{ itemID = 16836, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Cenarion Spaulders
-			{ itemID = 16833, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Cenarion Vestments
-			{ itemID = 16830, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Bracers
-			{ itemID = 16831, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Cenarion Gloves
-			{ itemID = 16828, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Belt
-			{ itemID = 16835, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Cenarion Leggings
-			{ itemID = 16829, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Cenarion Boots
+			{ itemID = 16834, desc = "=ds=" .."Garr" }, --Cenarion Helm
+			{ itemID = 16836, desc = "=ds=" .."Baron Geddon" }, --Cenarion Spaulders
+			{ itemID = 16833, desc = "=ds=" .."Golemagg the Incinerator" }, --Cenarion Vestments
+			{ itemID = 16830, desc = "=ds=" .."Trash Mobs" }, --Cenarion Bracers
+			{ itemID = 16831, desc = "=ds=" .."Shazzrah" }, --Cenarion Gloves
+			{ itemID = 16828, desc = "=ds=" .."Trash Mobs" }, --Cenarion Belt
+			{ itemID = 16835, desc = "=ds=" .."Magmadar" }, --Cenarion Leggings
+			{ itemID = 16829, desc = "=ds=" .."Lucifron" }, --Cenarion Boots
 		},
 	},
 	{
-		Name = "Druid" ..color.WHITE.." - "..AL["Guardian"],
+		Name = "Druid" ..color.WHITE.." - ".."Guardian",
 		{
-			{ itemID = 13437, desc = "=ds=" ..BabbleBoss["Garr"] }, --Cenarion Cover
-			{ itemID = 13439, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Cenarion Pauldrons
-			{ itemID = 13436, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Cenarion Tunic
-			{ itemID = 13434, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Bands
-			{ itemID = 13435, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Cenarion Handguards
-			{ itemID = 13432, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Girdle
-			{ itemID = 13438, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Cenarion Pants
-			{ itemID = 13433, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Cenarion Treads
+			{ itemID = 13437, desc = "=ds=" .."Garr" }, --Cenarion Cover
+			{ itemID = 13439, desc = "=ds=" .."Baron Geddon" }, --Cenarion Pauldrons
+			{ itemID = 13436, desc = "=ds=" .."Golemagg the Incinerator" }, --Cenarion Tunic
+			{ itemID = 13434, desc = "=ds=" .."Trash Mobs" }, --Cenarion Bands
+			{ itemID = 13435, desc = "=ds=" .."Shazzrah" }, --Cenarion Handguards
+			{ itemID = 13432, desc = "=ds=" .."Trash Mobs" }, --Cenarion Girdle
+			{ itemID = 13438, desc = "=ds=" .."Magmadar" }, --Cenarion Pants
+			{ itemID = 13433, desc = "=ds=" .."Lucifron" }, --Cenarion Treads
 		},
 	},
 	{
-		Name = "Druid" ..color.WHITE.." - "..AL["Feral"],
+		Name = "Druid" ..color.WHITE.." - ".."Feral",
 		{
-			{ itemID = 10984, desc = "=ds=" ..BabbleBoss["Garr"] }, --Cenarion Cover
-			{ itemID = 10986, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Cenarion Pauldrons
-			{ itemID = 10983, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Cenarion Tunic
-			{ itemID = 10981, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Bands
-			{ itemID = 10982, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Cenarion Handguards
-			{ itemID = 10979, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Girdle
-			{ itemID = 10985, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Cenarion Pants
-			{ itemID = 10980, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Cenarion Treads
+			{ itemID = 10984, desc = "=ds=" .."Garr" }, --Cenarion Cover
+			{ itemID = 10986, desc = "=ds=" .."Baron Geddon" }, --Cenarion Pauldrons
+			{ itemID = 10983, desc = "=ds=" .."Golemagg the Incinerator" }, --Cenarion Tunic
+			{ itemID = 10981, desc = "=ds=" .."Trash Mobs" }, --Cenarion Bands
+			{ itemID = 10982, desc = "=ds=" .."Shazzrah" }, --Cenarion Handguards
+			{ itemID = 10979, desc = "=ds=" .."Trash Mobs" }, --Cenarion Girdle
+			{ itemID = 10985, desc = "=ds=" .."Magmadar" }, --Cenarion Pants
+			{ itemID = 10980, desc = "=ds=" .."Lucifron" }, --Cenarion Treads
 		},
 	},
 	{
-		Name = "Druid" ..color.WHITE.." - "..AL["Balance"],
+		Name = "Druid" ..color.WHITE.." - ".."Balance",
 		{
-			{ itemID = 10395, desc = "=ds=" ..BabbleBoss["Garr"] }, --Cenarion Cover
-			{ itemID = 10396, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Cenarion Pauldrons
-			{ itemID = 10415, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Cenarion Tunic
-			{ itemID = 10416, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Bands
-			{ itemID = 10425, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Cenarion Handguards
-			{ itemID = 10468, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Girdle
-			{ itemID = 10469, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Cenarion Pants
-			{ itemID = 10516, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Cenarion Treads
+			{ itemID = 10395, desc = "=ds=" .."Garr" }, --Cenarion Cover
+			{ itemID = 10396, desc = "=ds=" .."Baron Geddon" }, --Cenarion Pauldrons
+			{ itemID = 10415, desc = "=ds=" .."Golemagg the Incinerator" }, --Cenarion Tunic
+			{ itemID = 10416, desc = "=ds=" .."Trash Mobs" }, --Cenarion Bands
+			{ itemID = 10425, desc = "=ds=" .."Shazzrah" }, --Cenarion Handguards
+			{ itemID = 10468, desc = "=ds=" .."Trash Mobs" }, --Cenarion Girdle
+			{ itemID = 10469, desc = "=ds=" .."Magmadar" }, --Cenarion Pants
+			{ itemID = 10516, desc = "=ds=" .."Lucifron" }, --Cenarion Treads
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{
-			{ itemID = 16846, desc = "=ds=" ..BabbleBoss["Garr"] }, --Giantstalker's Helmet
-			{ itemID = 16848, desc = "=ds=" ..BabbleBoss["Sulfuron Harbinger"] }, --Giantstalker's Epaulets
-			{ itemID = 16845, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Giantstalker's Breastplate
-			{ itemID = 16850, desc = "=ds=" ..AL["Trash Mobs"] }, --Giantstalker's Bracers
-			{ itemID = 16852, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Giantstalker's Gloves
-			{ itemID = 16851, desc = "=ds=" ..AL["Trash Mobs"] }, --Giantstalker's Belt
-			{ itemID = 16847, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Giantstalker's Leggings
-			{ itemID = 16849, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Giantstalker's Boots
+			{ itemID = 16846, desc = "=ds=" .."Garr" }, --Giantstalker's Helmet
+			{ itemID = 16848, desc = "=ds=" .."Sulfuron Harbinger" }, --Giantstalker's Epaulets
+			{ itemID = 16845, desc = "=ds=" .."Golemagg the Incinerator" }, --Giantstalker's Breastplate
+			{ itemID = 16850, desc = "=ds=" .."Trash Mobs" }, --Giantstalker's Bracers
+			{ itemID = 16852, desc = "=ds=" .."Shazzrah" }, --Giantstalker's Gloves
+			{ itemID = 16851, desc = "=ds=" .."Trash Mobs" }, --Giantstalker's Belt
+			{ itemID = 16847, desc = "=ds=" .."Magmadar" }, --Giantstalker's Leggings
+			{ itemID = 16849, desc = "=ds=" .."Gehennas" }, --Giantstalker's Boots
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{
-			{ itemID = 16795, desc = "=ds=" ..BabbleBoss["Garr"] }, --Arcanist Crown
-			{ itemID = 16797, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Arcanist Mantle
-			{ itemID = 16798, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Arcanist Robes
-			{ itemID = 16799, desc = "=ds=" ..AL["Trash Mobs"] }, --Arcanist Bindings
-			{ itemID = 16801, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Arcanist Gloves
-			{ itemID = 16802, desc = "=ds=" ..AL["Trash Mobs"] }, --Arcanist Belt
-			{ itemID = 16796, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Arcanist Leggings
-			{ itemID = 16800, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Arcanist Boots
+			{ itemID = 16795, desc = "=ds=" .."Garr" }, --Arcanist Crown
+			{ itemID = 16797, desc = "=ds=" .."Baron Geddon" }, --Arcanist Mantle
+			{ itemID = 16798, desc = "=ds=" .."Golemagg the Incinerator" }, --Arcanist Robes
+			{ itemID = 16799, desc = "=ds=" .."Trash Mobs" }, --Arcanist Bindings
+			{ itemID = 16801, desc = "=ds=" .."Shazzrah" }, --Arcanist Gloves
+			{ itemID = 16802, desc = "=ds=" .."Trash Mobs" }, --Arcanist Belt
+			{ itemID = 16796, desc = "=ds=" .."Magmadar" }, --Arcanist Leggings
+			{ itemID = 16800, desc = "=ds=" .."Lucifron" }, --Arcanist Boots
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..color.WHITE.." - "..AL["Holy"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..color.WHITE.." - ".."Holy",
 		{
-			{ itemID = 16854, desc = "=ds=" ..BabbleBoss["Garr"] }, --Lawbringer Helm
-			{ itemID = 16856, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Lawbringer Spaulders
-			{ itemID = 16853, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Lawbringer Chestguard
-			{ itemID = 16857, desc = "=ds=" ..AL["Trash Mobs"] }, --Lawbringer Bracers
-			{ itemID = 16860, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Lawbringer Gauntlets
-			{ itemID = 16858, desc = "=ds=" ..AL["Trash Mobs"] }, --Lawbringer Belt
-			{ itemID = 16855, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Lawbringer Legplates
-			{ itemID = 16859, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Lawbringer Boots
+			{ itemID = 16854, desc = "=ds=" .."Garr" }, --Lawbringer Helm
+			{ itemID = 16856, desc = "=ds=" .."Baron Geddon" }, --Lawbringer Spaulders
+			{ itemID = 16853, desc = "=ds=" .."Golemagg the Incinerator" }, --Lawbringer Chestguard
+			{ itemID = 16857, desc = "=ds=" .."Trash Mobs" }, --Lawbringer Bracers
+			{ itemID = 16860, desc = "=ds=" .."Gehennas" }, --Lawbringer Gauntlets
+			{ itemID = 16858, desc = "=ds=" .."Trash Mobs" }, --Lawbringer Belt
+			{ itemID = 16855, desc = "=ds=" .."Magmadar" }, --Lawbringer Legplates
+			{ itemID = 16859, desc = "=ds=" .."Lucifron" }, --Lawbringer Boots
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..color.WHITE.." - "..AL["Protection"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..color.WHITE.." - ".."Protection",
 		{
-			{ itemID = 11536, desc = "=ds=" ..BabbleBoss["Garr"] }, --Lawbringer Greathelm
-			{ itemID = 11538, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Lawbringer Pauldrons
-			{ itemID = 11535, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Lawbringer Breastplate
-			{ itemID = 11531, desc = "=ds=" ..AL["Trash Mobs"] }, --Lawbringer Wristguards
-			{ itemID = 11533, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Lawbringer Handguards
-			{ itemID = 11534, desc = "=ds=" ..AL["Trash Mobs"] }, --Lawbringer Waistguard
-			{ itemID = 11537, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Lawbringer Legguards
-			{ itemID = 11532, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Lawbringer Stompers
+			{ itemID = 11536, desc = "=ds=" .."Garr" }, --Lawbringer Greathelm
+			{ itemID = 11538, desc = "=ds=" .."Baron Geddon" }, --Lawbringer Pauldrons
+			{ itemID = 11535, desc = "=ds=" .."Golemagg the Incinerator" }, --Lawbringer Breastplate
+			{ itemID = 11531, desc = "=ds=" .."Trash Mobs" }, --Lawbringer Wristguards
+			{ itemID = 11533, desc = "=ds=" .."Gehennas" }, --Lawbringer Handguards
+			{ itemID = 11534, desc = "=ds=" .."Trash Mobs" }, --Lawbringer Waistguard
+			{ itemID = 11537, desc = "=ds=" .."Magmadar" }, --Lawbringer Legguards
+			{ itemID = 11532, desc = "=ds=" .."Lucifron" }, --Lawbringer Stompers
 		},
 	},
 		{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..color.WHITE.." - "..AL["Retribution"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..color.WHITE.." - ".."Retribution",
 		{
-			{ itemID = 11236, desc = "=ds=" ..BabbleBoss["Garr"] }, --Lawbringer Helmet
-			{ itemID = 11237, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Lawbringer Epaulets
-			{ itemID = 11238, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Lawbringer Chestpiece
-			{ itemID = 11244, desc = "=ds=" ..AL["Trash Mobs"] }, --Lawbringer Bands
-			{ itemID = 11245, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Lawbringer Gloves
-			{ itemID = 11246, desc = "=ds=" ..AL["Trash Mobs"] }, --Lawbringer Girdle
-			{ itemID = 11247, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Lawbringer Greaves
-			{ itemID = 11248, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Lawbringer Treads
-		},
-	},
-	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..color.WHITE.." - ".. AL["Healing"],
-		{
-			{ itemID = 16813, desc = "=ds=" ..BabbleBoss["Garr"] }, --Circlet of Prophecy
-			{ itemID = 16816, desc = "=ds=" ..BabbleBoss["Sulfuron Harbinger"] }, --Mantle of Prophecy
-			{ itemID = 16815, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] },
-			{ itemID = 16819, desc = "=ds=" ..AL["Trash Mobs"] }, --Vambraces of Prophecy
-			{ itemID = 16812, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Gloves of Prophecy
-			{ itemID = 16817, desc = "=ds=" ..AL["Trash Mobs"] }, --Girdle of Prophecy
-			{ itemID = 16814, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Pants of Prophecy
-			{ itemID = 16811, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Boots of Prophecy
+			{ itemID = 11236, desc = "=ds=" .."Garr" }, --Lawbringer Helmet
+			{ itemID = 11237, desc = "=ds=" .."Baron Geddon" }, --Lawbringer Epaulets
+			{ itemID = 11238, desc = "=ds=" .."Golemagg the Incinerator" }, --Lawbringer Chestpiece
+			{ itemID = 11244, desc = "=ds=" .."Trash Mobs" }, --Lawbringer Bands
+			{ itemID = 11245, desc = "=ds=" .."Gehennas" }, --Lawbringer Gloves
+			{ itemID = 11246, desc = "=ds=" .."Trash Mobs" }, --Lawbringer Girdle
+			{ itemID = 11247, desc = "=ds=" .."Magmadar" }, --Lawbringer Greaves
+			{ itemID = 11248, desc = "=ds=" .."Lucifron" }, --Lawbringer Treads
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..color.WHITE.." - ".. AL["Shadow"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..color.WHITE.." - ".. "Healing",
 		{
-			{ itemID = 10012, desc = "=ds=" ..BabbleBoss["Garr"] }, --Circlet of Prophecy
-			{ itemID = 10013, desc = "=ds=" ..BabbleBoss["Sulfuron Harbinger"] }, --Mantle of Prophecy
-			{ itemID = 10291, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Gown of Prophecy
-			{ itemID = 10292, desc = "=ds=" ..AL["Trash Mobs"] }, --Vambraces of Prophecy
-			{ itemID = 10293, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Gloves of Prophecy
-			{ itemID = 10294, desc = "=ds=" ..AL["Trash Mobs"] }, --Girdle of Prophecy
-			{ itemID = 10295, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Pants of Prophecy
-			{ itemID = 10334, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Boots of Prophecy
+			{ itemID = 16813, desc = "=ds=" .."Garr" }, --Circlet of Prophecy
+			{ itemID = 16816, desc = "=ds=" .."Sulfuron Harbinger" }, --Mantle of Prophecy
+			{ itemID = 16815, desc = "=ds=" .."Golemagg the Incinerator" },
+			{ itemID = 16819, desc = "=ds=" .."Trash Mobs" }, --Vambraces of Prophecy
+			{ itemID = 16812, desc = "=ds=" .."Gehennas" }, --Gloves of Prophecy
+			{ itemID = 16817, desc = "=ds=" .."Trash Mobs" }, --Girdle of Prophecy
+			{ itemID = 16814, desc = "=ds=" .."Magmadar" }, --Pants of Prophecy
+			{ itemID = 16811, desc = "=ds=" .."Shazzrah" }, --Boots of Prophecy
+		},
+	},
+	{
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..color.WHITE.." - ".. "Shadow",
+		{
+			{ itemID = 10012, desc = "=ds=" .."Garr" }, --Circlet of Prophecy
+			{ itemID = 10013, desc = "=ds=" .."Sulfuron Harbinger" }, --Mantle of Prophecy
+			{ itemID = 10291, desc = "=ds=" .."Golemagg the Incinerator" }, --Gown of Prophecy
+			{ itemID = 10292, desc = "=ds=" .."Trash Mobs" }, --Vambraces of Prophecy
+			{ itemID = 10293, desc = "=ds=" .."Gehennas" }, --Gloves of Prophecy
+			{ itemID = 10294, desc = "=ds=" .."Trash Mobs" }, --Girdle of Prophecy
+			{ itemID = 10295, desc = "=ds=" .."Magmadar" }, --Pants of Prophecy
+			{ itemID = 10334, desc = "=ds=" .."Shazzrah" }, --Boots of Prophecy
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{
-			{ itemID = 16821, desc = "=ds=" ..BabbleBoss["Garr"] }, --Nightslayer Cover
-			{ itemID = 16823, desc = "=ds=" ..BabbleBoss["Sulfuron Harbinger"] }, --Nightslayer Shoulder Pads
-			{ itemID = 16820, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Nightslayer Chestpiece
-			{ itemID = 16825, desc = "=ds=" ..AL["Trash Mobs"] }, --Nightslayer Bracelets
-			{ itemID = 16826, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Nightslayer Gloves
-			{ itemID = 16827, desc = "=ds=" ..AL["Trash Mobs"] }, --Nightslayer Belt
-			{ itemID = 16822, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Nightslayer Pants
-			{ itemID = 16824, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Nightslayer Boots
+			{ itemID = 16821, desc = "=ds=" .."Garr" }, --Nightslayer Cover
+			{ itemID = 16823, desc = "=ds=" .."Sulfuron Harbinger" }, --Nightslayer Shoulder Pads
+			{ itemID = 16820, desc = "=ds=" .."Golemagg the Incinerator" }, --Nightslayer Chestpiece
+			{ itemID = 16825, desc = "=ds=" .."Trash Mobs" }, --Nightslayer Bracelets
+			{ itemID = 16826, desc = "=ds=" .."Gehennas" }, --Nightslayer Gloves
+			{ itemID = 16827, desc = "=ds=" .."Trash Mobs" }, --Nightslayer Belt
+			{ itemID = 16822, desc = "=ds=" .."Magmadar" }, --Nightslayer Pants
+			{ itemID = 16824, desc = "=ds=" .."Shazzrah" }, --Nightslayer Boots
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..color.WHITE.." - "..AL["Restoration"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..color.WHITE.." - ".."Restoration",
 		{
-			{ itemID = 16842, desc = "=ds=" ..BabbleBoss["Garr"] }, --Earthfury Helmet
-			{ itemID = 16844, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Earthfury Epaulets
-			{ itemID = 16841, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Earthfury Vestments
-			{ itemID = 16840, desc = "=ds=" ..AL["Trash Mobs"] }, --Earthfury Bracers
-			{ itemID = 16839, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Earthfury Gauntlets
-			{ itemID = 16838, desc = "=ds=" ..AL["Trash Mobs"] }, --Earthfury Belt
-			{ itemID = 16843, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Earthfury Legguards
-			{ itemID = 16837, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Earthfury Boots
+			{ itemID = 16842, desc = "=ds=" .."Garr" }, --Earthfury Helmet
+			{ itemID = 16844, desc = "=ds=" .."Baron Geddon" }, --Earthfury Epaulets
+			{ itemID = 16841, desc = "=ds=" .."Golemagg the Incinerator" }, --Earthfury Vestments
+			{ itemID = 16840, desc = "=ds=" .."Trash Mobs" }, --Earthfury Bracers
+			{ itemID = 16839, desc = "=ds=" .."Gehennas" }, --Earthfury Gauntlets
+			{ itemID = 16838, desc = "=ds=" .."Trash Mobs" }, --Earthfury Belt
+			{ itemID = 16843, desc = "=ds=" .."Magmadar" }, --Earthfury Legguards
+			{ itemID = 16837, desc = "=ds=" .."Lucifron" }, --Earthfury Boots
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..color.WHITE.." - "..AL["Enhancement"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..color.WHITE.." - ".."Enhancement",
 		{
-			{ itemID = 11794, desc = "=ds=" ..BabbleBoss["Garr"] }, --Earthfury Cover
-			{ itemID = 11796, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Earthfury Pauldrons
-			{ itemID = 11792, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Earthfury Tunic
-			{ itemID = 11793, desc = "=ds=" ..AL["Trash Mobs"] }, --Earthfury Bands
-			{ itemID = 11791, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Earthfury Gloves
-			{ itemID = 11790, desc = "=ds=" ..AL["Trash Mobs"] }, --Earthfury Girdle
-			{ itemID = 11789, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Earthfury Leggings
-			{ itemID = 11795, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Earthfury Treads
+			{ itemID = 11794, desc = "=ds=" .."Garr" }, --Earthfury Cover
+			{ itemID = 11796, desc = "=ds=" .."Baron Geddon" }, --Earthfury Pauldrons
+			{ itemID = 11792, desc = "=ds=" .."Golemagg the Incinerator" }, --Earthfury Tunic
+			{ itemID = 11793, desc = "=ds=" .."Trash Mobs" }, --Earthfury Bands
+			{ itemID = 11791, desc = "=ds=" .."Gehennas" }, --Earthfury Gloves
+			{ itemID = 11790, desc = "=ds=" .."Trash Mobs" }, --Earthfury Girdle
+			{ itemID = 11789, desc = "=ds=" .."Magmadar" }, --Earthfury Leggings
+			{ itemID = 11795, desc = "=ds=" .."Lucifron" }, --Earthfury Treads
 		},
 	},
 		{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..color.WHITE.." - "..AL["Elemental"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..color.WHITE.." - ".."Elemental",
 		{
-			{ itemID = 10861, desc = "=ds=" ..BabbleBoss["Garr"] }, --Earthfury Cover
-			{ itemID = 10908, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Earthfury Pauldrons
-			{ itemID = 10923, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Earthfury Tunic
-			{ itemID = 10924, desc = "=ds=" ..AL["Trash Mobs"] }, --Earthfury Bands
-			{ itemID = 10925, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Earthfury Gloves
-			{ itemID = 10926, desc = "=ds=" ..AL["Trash Mobs"] }, --Earthfury Girdle
-			{ itemID = 10960, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Earthfury Leggings
-			{ itemID = 10961, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Earthfury Treads
+			{ itemID = 10861, desc = "=ds=" .."Garr" }, --Earthfury Cover
+			{ itemID = 10908, desc = "=ds=" .."Baron Geddon" }, --Earthfury Pauldrons
+			{ itemID = 10923, desc = "=ds=" .."Golemagg the Incinerator" }, --Earthfury Tunic
+			{ itemID = 10924, desc = "=ds=" .."Trash Mobs" }, --Earthfury Bands
+			{ itemID = 10925, desc = "=ds=" .."Gehennas" }, --Earthfury Gloves
+			{ itemID = 10926, desc = "=ds=" .."Trash Mobs" }, --Earthfury Girdle
+			{ itemID = 10960, desc = "=ds=" .."Magmadar" }, --Earthfury Leggings
+			{ itemID = 10961, desc = "=ds=" .."Lucifron" }, --Earthfury Treads
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{
-			{ itemID = 16808, desc = "=ds=" ..BabbleBoss["Garr"] }, --Felheart Horns
-			{ itemID = 16807, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Felheart Shoulder Pads
-			{ itemID = 16809, "=q4=Felheart Robes", "=ds=" ..BabbleBoss["Golemagg the Incinerator"] },
-			{ itemID = 16804, desc = "=ds=" ..AL["Trash Mobs"] }, --Felheart Bracers
-			{ itemID = 16805, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Felheart Gloves
-			{ itemID = 16806, desc = "=ds=" ..AL["Trash Mobs"] }, --Felheart Belt
-			{ itemID = 16810, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Felheart Pants
-			{ itemID = 16803, "=q4=Felheart Slippers", "=ds=" ..BabbleBoss["Shazzrah"], "1" },
+			{ itemID = 16808, desc = "=ds=" .."Garr" }, --Felheart Horns
+			{ itemID = 16807, desc = "=ds=" .."Baron Geddon" }, --Felheart Shoulder Pads
+			{ itemID = 16809, "=q4=Felheart Robes", "=ds=" .."Golemagg the Incinerator" },
+			{ itemID = 16804, desc = "=ds=" .."Trash Mobs" }, --Felheart Bracers
+			{ itemID = 16805, desc = "=ds=" .."Lucifron" }, --Felheart Gloves
+			{ itemID = 16806, desc = "=ds=" .."Trash Mobs" }, --Felheart Belt
+			{ itemID = 16810, desc = "=ds=" .."Magmadar" }, --Felheart Pants
+			{ itemID = 16803, "=q4=Felheart Slippers", "=ds=" .."Shazzrah", "1" },
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] ..color.WHITE.." - ".. AL["Tank"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] ..color.WHITE.." - ".. "Tank",
 		{
-			{ itemID = 16866, desc = "=ds=" ..BabbleBoss["Garr"] }, --Helm of Might
-			{ itemID = 16868, desc = "=ds=" ..BabbleBoss["Sulfuron Harbinger"] }, --Pauldrons of Might
-			{ itemID = 16865, "=q4=Breastplate of Might", "=ds=" ..BabbleBoss["Golemagg the Incinerator"], "1" },
-			{ itemID = 16861, desc = "=ds=" ..AL["Trash Mobs"] }, --Bracers of Might
-			{ itemID = 16863, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Gauntlets of Might
-			{ itemID = 16864, desc = "=ds=" ..AL["Trash Mobs"] }, --Belt of Might
-			{ itemID = 16867, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Legplates of Might
-			{ itemID = 16862, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Sabatons of Might
+			{ itemID = 16866, desc = "=ds=" .."Garr" }, --Helm of Might
+			{ itemID = 16868, desc = "=ds=" .."Sulfuron Harbinger" }, --Pauldrons of Might
+			{ itemID = 16865, "=q4=Breastplate of Might", "=ds=" .."Golemagg the Incinerator", "1" },
+			{ itemID = 16861, desc = "=ds=" .."Trash Mobs" }, --Bracers of Might
+			{ itemID = 16863, desc = "=ds=" .."Lucifron" }, --Gauntlets of Might
+			{ itemID = 16864, desc = "=ds=" .."Trash Mobs" }, --Belt of Might
+			{ itemID = 16867, desc = "=ds=" .."Magmadar" }, --Legplates of Might
+			{ itemID = 16862, desc = "=ds=" .."Gehennas" }, --Sabatons of Might
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] ..color.WHITE.." - ".. AL["DPS"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] ..color.WHITE.." - ".. "DPS",
 		{
-			{ itemID = 10480, desc = "=ds=" ..BabbleBoss["Garr"] },--Faceguard of Might
-			{ itemID = 10481, desc = "=ds=" ..BabbleBoss["Sulfuron Harbinger"] },--Shoulderpads of Might
-			{ itemID = 10482, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] },--Chesttplate of Might
-			{ itemID = 10483, desc = "=ds=" ..AL["Trash Mobs"] },--Wristguards of Might
-			{ itemID = 10484, desc = "=ds=" ..BabbleBoss["Lucifron"] },--Handguards of Might
-			{ itemID = 10485, desc = "=ds=" ..AL["Trash Mobs"] },--Girdle of Might
-			{ itemID = 10486, desc = "=ds=" ..BabbleBoss["Magmadar"] },--Legguards of Might
-			{ itemID = 10487, desc = "=ds=" ..BabbleBoss["Gehennas"] },--Stompers of Might
+			{ itemID = 10480, desc = "=ds=" .."Garr" },--Faceguard of Might
+			{ itemID = 10481, desc = "=ds=" .."Sulfuron Harbinger" },--Shoulderpads of Might
+			{ itemID = 10482, desc = "=ds=" .."Golemagg the Incinerator" },--Chesttplate of Might
+			{ itemID = 10483, desc = "=ds=" .."Trash Mobs" },--Wristguards of Might
+			{ itemID = 10484, desc = "=ds=" .."Lucifron" },--Handguards of Might
+			{ itemID = 10485, desc = "=ds=" .."Trash Mobs" },--Girdle of Might
+			{ itemID = 10486, desc = "=ds=" .."Magmadar" },--Legguards of Might
+			{ itemID = 10487, desc = "=ds=" .."Gehennas" },--Stompers of Might
 		},
 	},
 }
@@ -7332,222 +7246,222 @@ AtlasLoot_Data["T2"] = {
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DRUID"]..color.WHITE.." - Healer",
 		{
-			{ itemID = 16900, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Stormrage Cover
-			{ itemID = 16902, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Stormrage Pauldrons
-			{ itemID = 16897, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Stormrage Chestguard
-			{ itemID = 16904, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Stormrage Bracers
-			{ itemID = 16899, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Stormrage Handguards
-			{ itemID = 16903, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Stormrage Belt
-			{ itemID = 16901, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Stormrage Legguards
-			{ itemID = 16898, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Stormrage Boots
+			{ itemID = 16900, desc = "=ds=" .."Onyxia" },--Stormrage Cover
+			{ itemID = 16902, desc = "=ds=" .."Chromaggus" },--Stormrage Pauldrons
+			{ itemID = 16897, desc = "=ds=" .."Nefarian" },--Stormrage Chestguard
+			{ itemID = 16904, desc = "=ds=" .."Razorgore the Untamed" },--Stormrage Bracers
+			{ itemID = 16899, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Stormrage Handguards
+			{ itemID = 16903, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Stormrage Belt
+			{ itemID = 16901, desc = "=ds=" .."Ragnaros" },--Stormrage Legguards
+			{ itemID = 16898, desc = "=ds=" .."Broodlord Lashlayer" },--Stormrage Boots
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DRUID"] ..color.WHITE.." - Tank",
 		{
-			{ itemID = 1517000, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Stormrage Cover
-			{ itemID = 1517002, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Stormrage Pauldrons
-			{ itemID = 1516997, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Stormrage Chestguard
-			{ itemID = 1517004, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Stormrage Bracers
-			{ itemID = 1516999, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Stormrage Handguards
-			{ itemID = 1517003, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Stormrage Belt
-			{ itemID = 1517001, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Stormrage Legguards
-			{ itemID = 1516998, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Stormrage Boots
+			{ itemID = 1517000, desc = "=ds=" .."Onyxia" },--Stormrage Cover
+			{ itemID = 1517002, desc = "=ds=" .."Chromaggus" },--Stormrage Pauldrons
+			{ itemID = 1516997, desc = "=ds=" .."Nefarian" },--Stormrage Chestguard
+			{ itemID = 1517004, desc = "=ds=" .."Razorgore the Untamed" },--Stormrage Bracers
+			{ itemID = 1516999, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Stormrage Handguards
+			{ itemID = 1517003, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Stormrage Belt
+			{ itemID = 1517001, desc = "=ds=" .."Ragnaros" },--Stormrage Legguards
+			{ itemID = 1516998, desc = "=ds=" .."Broodlord Lashlayer" },--Stormrage Boots
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DRUID"] ..color.WHITE.." - Caster",
 		{
-			{ itemID = 1516892, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Stormrage Cover
-			{ itemID = 1516894, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Stormrage Pauldrons
-			{ itemID = 1516889, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Stormrage Chestguard
-			{ itemID = 1516896, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Stormrage Bracers
-			{ itemID = 1516891, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Stormrage Handguards
-			{ itemID = 1516895, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Stormrage Belt
-			{ itemID = 1516893, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Stormrage Legguards
-			{ itemID = 1516890, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Stormrage Boots
+			{ itemID = 1516892, desc = "=ds=" .."Onyxia" },--Stormrage Cover
+			{ itemID = 1516894, desc = "=ds=" .."Chromaggus" },--Stormrage Pauldrons
+			{ itemID = 1516889, desc = "=ds=" .."Nefarian" },--Stormrage Chestguard
+			{ itemID = 1516896, desc = "=ds=" .."Razorgore the Untamed" },--Stormrage Bracers
+			{ itemID = 1516891, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Stormrage Handguards
+			{ itemID = 1516895, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Stormrage Belt
+			{ itemID = 1516893, desc = "=ds=" .."Ragnaros" },--Stormrage Legguards
+			{ itemID = 1516890, desc = "=ds=" .."Broodlord Lashlayer" },--Stormrage Boots
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{
-			{ itemID = 16939, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Dragonstalker's Helm
-			{ itemID = 16937, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Dragonstalker's Spaulders
-			{ itemID = 16942, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Dragonstalker's Breastplate
-			{ itemID = 16935, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Dragonstalker's Bracers
-			{ itemID = 16940, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Dragonstalker's Gauntlets
-			{ itemID = 16936, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Dragonstalker's Belt
-			{ itemID = 16938, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Dragonstalker's Legguards
-			{ itemID = 16941, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Dragonstalker's Greaves
+			{ itemID = 16939, desc = "=ds=" .."Onyxia" },--Dragonstalker's Helm
+			{ itemID = 16937, desc = "=ds=" .."Chromaggus" },--Dragonstalker's Spaulders
+			{ itemID = 16942, desc = "=ds=" .."Nefarian" },--Dragonstalker's Breastplate
+			{ itemID = 16935, desc = "=ds=" .."Razorgore the Untamed" },--Dragonstalker's Bracers
+			{ itemID = 16940, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Dragonstalker's Gauntlets
+			{ itemID = 16936, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Dragonstalker's Belt
+			{ itemID = 16938, desc = "=ds=" .."Ragnaros" },--Dragonstalker's Legguards
+			{ itemID = 16941, desc = "=ds=" .."Broodlord Lashlayer" },--Dragonstalker's Greaves
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{
-			{ itemID = 16914, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Netherwind Crown
-			{ itemID = 16917, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Netherwind Mantle
-			{ itemID = 16916, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Netherwind Robes
-			{ itemID = 16918, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Netherwind Bindings
-			{ itemID = 16913, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Netherwind Gloves
-			{ itemID = 16818, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Netherwind Belt
-			{ itemID = 16915, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Netherwind Pants
-			{ itemID = 16912, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Netherwind Boots
+			{ itemID = 16914, desc = "=ds=" .."Onyxia" },--Netherwind Crown
+			{ itemID = 16917, desc = "=ds=" .."Chromaggus" },--Netherwind Mantle
+			{ itemID = 16916, desc = "=ds=" .."Nefarian" },--Netherwind Robes
+			{ itemID = 16918, desc = "=ds=" .."Razorgore the Untamed" },--Netherwind Bindings
+			{ itemID = 16913, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Netherwind Gloves
+			{ itemID = 16818, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Netherwind Belt
+			{ itemID = 16915, desc = "=ds=" .."Ragnaros" },--Netherwind Pants
+			{ itemID = 16912, desc = "=ds=" .."Broodlord Lashlayer" },--Netherwind Boots
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"],
 		{
-			{ itemID = 16955, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Judgement Crown
-			{ itemID = 16953, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Judgement Spaulders
-			{ itemID = 16958, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Judgement Breastplate
-			{ itemID = 16951, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Judgement Bindings
-			{ itemID = 16956, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Judgement Gauntlets
-			{ itemID = 16952, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Judgement Belt
-			{ itemID = 16954, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Judgement Legplates
-			{ itemID = 16957, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Judgement Sabatons
+			{ itemID = 16955, desc = "=ds=" .."Onyxia" },--Judgement Crown
+			{ itemID = 16953, desc = "=ds=" .."Chromaggus" },--Judgement Spaulders
+			{ itemID = 16958, desc = "=ds=" .."Nefarian" },--Judgement Breastplate
+			{ itemID = 16951, desc = "=ds=" .."Razorgore the Untamed" },--Judgement Bindings
+			{ itemID = 16956, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Judgement Gauntlets
+			{ itemID = 16952, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Judgement Belt
+			{ itemID = 16954, desc = "=ds=" .."Ragnaros" },--Judgement Legplates
+			{ itemID = 16957, desc = "=ds=" .."Broodlord Lashlayer" },--Judgement Sabatons
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..color.WHITE.." - Tank",
 		{
-			{ itemID = 1516955, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Judgement Crown
-			{ itemID = 1516953, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Judgement Spaulders
-			{ itemID = 1516958, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Judgement Breastplate
-			{ itemID = 1516951, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Judgement Bindings
-			{ itemID = 1516956, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Judgement Gauntlets
-			{ itemID = 1516952, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Judgement Belt
-			{ itemID = 1516954, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Judgement Legplates
-			{ itemID = 1516957, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Judgement Sabatons
+			{ itemID = 1516955, desc = "=ds=" .."Onyxia" },--Judgement Crown
+			{ itemID = 1516953, desc = "=ds=" .."Chromaggus" },--Judgement Spaulders
+			{ itemID = 1516958, desc = "=ds=" .."Nefarian" },--Judgement Breastplate
+			{ itemID = 1516951, desc = "=ds=" .."Razorgore the Untamed" },--Judgement Bindings
+			{ itemID = 1516956, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Judgement Gauntlets
+			{ itemID = 1516952, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Judgement Belt
+			{ itemID = 1516954, desc = "=ds=" .."Ragnaros" },--Judgement Legplates
+			{ itemID = 1516957, desc = "=ds=" .."Broodlord Lashlayer" },--Judgement Sabatons
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..color.WHITE.." - Healer",
 		{
-			{ itemID = 16921, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Halo of Transcendence
-			{ itemID = 16924, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Pauldrons of Transcendence
-			{ itemID = 16923, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Robes of Transcendence
-			{ itemID = 16926, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Bindings of Transcendence
-			{ itemID = 16920, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Handguards of Transcendence
-			{ itemID = 16925, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Belt of Transcendence
-			{ itemID = 16922, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Leggings of Transcendence
-			{ itemID = 16919, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Boots of Transcendence
+			{ itemID = 16921, desc = "=ds=" .."Onyxia" },--Halo of Transcendence
+			{ itemID = 16924, desc = "=ds=" .."Chromaggus" },--Pauldrons of Transcendence
+			{ itemID = 16923, desc = "=ds=" .."Nefarian" },--Robes of Transcendence
+			{ itemID = 16926, desc = "=ds=" .."Razorgore the Untamed" },--Bindings of Transcendence
+			{ itemID = 16920, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Handguards of Transcendence
+			{ itemID = 16925, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Belt of Transcendence
+			{ itemID = 16922, desc = "=ds=" .."Ragnaros" },--Leggings of Transcendence
+			{ itemID = 16919, desc = "=ds=" .."Broodlord Lashlayer" },--Boots of Transcendence
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..color.WHITE.." - Caster",
 		{
-			{ itemID = 1516921, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Halo of Transcendence
-			{ itemID = 1516924, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Pauldrons of Transcendence
-			{ itemID = 1516923, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Robes of Transcendence
-			{ itemID = 1516926, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Bindings of Transcendence
-			{ itemID = 1516920, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Handguards of Transcendence
-			{ itemID = 1516925, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Belt of Transcendence
-			{ itemID = 1516922, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Leggings of Transcendence
-			{ itemID = 1516919, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Boots of Transcendence
+			{ itemID = 1516921, desc = "=ds=" .."Onyxia" },--Halo of Transcendence
+			{ itemID = 1516924, desc = "=ds=" .."Chromaggus" },--Pauldrons of Transcendence
+			{ itemID = 1516923, desc = "=ds=" .."Nefarian" },--Robes of Transcendence
+			{ itemID = 1516926, desc = "=ds=" .."Razorgore the Untamed" },--Bindings of Transcendence
+			{ itemID = 1516920, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Handguards of Transcendence
+			{ itemID = 1516925, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Belt of Transcendence
+			{ itemID = 1516922, desc = "=ds=" .."Ragnaros" },--Leggings of Transcendence
+			{ itemID = 1516919, desc = "=ds=" .."Broodlord Lashlayer" },--Boots of Transcendence
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{
-			{ itemID = 16908, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Bloodfang Hood
-			{ itemID = 16832, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Bloodfang Spaulders
-			{ itemID = 16905, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Bloodfang Chestpiece
-			{ itemID = 16911, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Bloodfang Bracers
-			{ itemID = 16907, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Bloodfang Gloves
-			{ itemID = 16910, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Bloodfang Belt
-			{ itemID = 16909, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Bloodfang Pants
-			{ itemID = 16906, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Bloodfang Boots
+			{ itemID = 16908, desc = "=ds=" .."Onyxia" },--Bloodfang Hood
+			{ itemID = 16832, desc = "=ds=" .."Chromaggus" },--Bloodfang Spaulders
+			{ itemID = 16905, desc = "=ds=" .."Nefarian" },--Bloodfang Chestpiece
+			{ itemID = 16911, desc = "=ds=" .."Razorgore the Untamed" },--Bloodfang Bracers
+			{ itemID = 16907, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Bloodfang Gloves
+			{ itemID = 16910, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Bloodfang Belt
+			{ itemID = 16909, desc = "=ds=" .."Ragnaros" },--Bloodfang Pants
+			{ itemID = 16906, desc = "=ds=" .."Broodlord Lashlayer" },--Bloodfang Boots
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..color.WHITE.." - Healer",
 		{
-			{ itemID = 16947, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Helmet of Ten Storms
-			{ itemID = 16945, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Epaulets of Ten Storms
-			{ itemID = 16950, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Breastplate of Ten Storms
-			{ itemID = 16943, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Bracers of Ten Storms
-			{ itemID = 16948, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Gauntlets of Ten Storms
-			{ itemID = 16944, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Belt of Ten Storms
-			{ itemID = 16946, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Legplates of Ten Storms
-			{ itemID = 16949, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Greaves of Ten Storms
+			{ itemID = 16947, desc = "=ds=" .."Onyxia" },--Helmet of Ten Storms
+			{ itemID = 16945, desc = "=ds=" .."Chromaggus" },--Epaulets of Ten Storms
+			{ itemID = 16950, desc = "=ds=" .."Nefarian" },--Breastplate of Ten Storms
+			{ itemID = 16943, desc = "=ds=" .."Razorgore the Untamed" },--Bracers of Ten Storms
+			{ itemID = 16948, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Gauntlets of Ten Storms
+			{ itemID = 16944, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Belt of Ten Storms
+			{ itemID = 16946, desc = "=ds=" .."Ragnaros" },--Legplates of Ten Storms
+			{ itemID = 16949, desc = "=ds=" .."Broodlord Lashlayer" },--Greaves of Ten Storms
 		},
 	},
 	{		
 		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..color.WHITE.." - Caster",
 		{
-			{ itemID = 10962, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Helmet of Ten Storms
-			{ itemID = 10963, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Epaulets of Ten Storms
-			{ itemID = 10964, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Breastplate of Ten Storms
-			{ itemID = 10965, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Bracers of Ten Storms
-			{ itemID = 11001, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Gauntlets of Ten Storms
-			{ itemID = 11002, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Belt of Ten Storms
-			{ itemID = 11003, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Legplates of Ten Storms
-			{ itemID = 11004, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Greaves of Ten Storms
+			{ itemID = 10962, desc = "=ds=" .."Onyxia" },--Helmet of Ten Storms
+			{ itemID = 10963, desc = "=ds=" .."Chromaggus" },--Epaulets of Ten Storms
+			{ itemID = 10964, desc = "=ds=" .."Nefarian" },--Breastplate of Ten Storms
+			{ itemID = 10965, desc = "=ds=" .."Razorgore the Untamed" },--Bracers of Ten Storms
+			{ itemID = 11001, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Gauntlets of Ten Storms
+			{ itemID = 11002, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Belt of Ten Storms
+			{ itemID = 11003, desc = "=ds=" .."Ragnaros" },--Legplates of Ten Storms
+			{ itemID = 11004, desc = "=ds=" .."Broodlord Lashlayer" },--Greaves of Ten Storms
 		},
 	},
 	{		
 		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..color.WHITE.." - Hybrid",
 		{
-			{ itemID = 1516947, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Helmet of Ten Storms
-			{ itemID = 1516945, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Epaulets of Ten Storms
-			{ itemID = 1516950, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Breastplate of Ten Storms
-			{ itemID = 1516943, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Bracers of Ten Storms
-			{ itemID = 1516948, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Gauntlets of Ten Storms
-			{ itemID = 1516944, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Belt of Ten Storms
-			{ itemID = 1516946, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Legplates of Ten Storms
-			{ itemID = 1516949, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Greaves of Ten Storms
+			{ itemID = 1516947, desc = "=ds=" .."Onyxia" },--Helmet of Ten Storms
+			{ itemID = 1516945, desc = "=ds=" .."Chromaggus" },--Epaulets of Ten Storms
+			{ itemID = 1516950, desc = "=ds=" .."Nefarian" },--Breastplate of Ten Storms
+			{ itemID = 1516943, desc = "=ds=" .."Razorgore the Untamed" },--Bracers of Ten Storms
+			{ itemID = 1516948, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Gauntlets of Ten Storms
+			{ itemID = 1516944, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Belt of Ten Storms
+			{ itemID = 1516946, desc = "=ds=" .."Ragnaros" },--Legplates of Ten Storms
+			{ itemID = 1516949, desc = "=ds=" .."Broodlord Lashlayer" },--Greaves of Ten Storms
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{
-			{ itemID = 16929, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Nemesis Skullcap
-			{ itemID = 16932, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Nemesis Spaulders
-			{ itemID = 16931, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Nemesis Robes
-			{ itemID = 16934, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Nemesis Bracers
-			{ itemID = 16928, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Nemesis Gloves
-			{ itemID = 16933, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Nemesis Belt
-			{ itemID = 16930, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Nemesis Leggings
-			{ itemID = 16927, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Nemesis Boots
+			{ itemID = 16929, desc = "=ds=" .."Onyxia" },--Nemesis Skullcap
+			{ itemID = 16932, desc = "=ds=" .."Chromaggus" },--Nemesis Spaulders
+			{ itemID = 16931, desc = "=ds=" .."Nefarian" },--Nemesis Robes
+			{ itemID = 16934, desc = "=ds=" .."Razorgore the Untamed" },--Nemesis Bracers
+			{ itemID = 16928, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Nemesis Gloves
+			{ itemID = 16933, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Nemesis Belt
+			{ itemID = 16930, desc = "=ds=" .."Ragnaros" },--Nemesis Leggings
+			{ itemID = 16927, desc = "=ds=" .."Broodlord Lashlayer" },--Nemesis Boots
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..color.WHITE.." - DPS",
 		{
-			{ itemID = 10904, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Faceguard of Wrath
-			{ itemID = 10902, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Shoulderpads of Wrath
-			{ itemID = 10907, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Chestplate of Wrath
-			{ itemID = 10900, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Wristguards of Wrath
-			{ itemID = 10905, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Grippers of Wrath
-			{ itemID = 10901, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Belt of Wrath
-			{ itemID = 10903, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Legguards of Wrath
-			{ itemID = 10906, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Stompers of Wrath
+			{ itemID = 10904, desc = "=ds=" .."Onyxia" },--Faceguard of Wrath
+			{ itemID = 10902, desc = "=ds=" .."Chromaggus" },--Shoulderpads of Wrath
+			{ itemID = 10907, desc = "=ds=" .."Nefarian" },--Chestplate of Wrath
+			{ itemID = 10900, desc = "=ds=" .."Razorgore the Untamed" },--Wristguards of Wrath
+			{ itemID = 10905, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Grippers of Wrath
+			{ itemID = 10901, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Belt of Wrath
+			{ itemID = 10903, desc = "=ds=" .."Ragnaros" },--Legguards of Wrath
+			{ itemID = 10906, desc = "=ds=" .."Broodlord Lashlayer" },--Stompers of Wrath
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..color.WHITE.." - Block Tank",
 		{
-			{ itemID = 16963, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Helm of Wrath
-			{ itemID = 16961, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Pauldrons of Wrath
-			{ itemID = 16966, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Breastplate of Wrath
-			{ itemID = 16959, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Bracelets of Wrath
-			{ itemID = 16964, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Gauntlets of Wrath
-			{ itemID = 16960, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Waistband of Wrath
-			{ itemID = 16962, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Legplates of Wrath
-			{ itemID = 16965, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Sabatons of Wrath
+			{ itemID = 16963, desc = "=ds=" .."Onyxia" },--Helm of Wrath
+			{ itemID = 16961, desc = "=ds=" .."Chromaggus" },--Pauldrons of Wrath
+			{ itemID = 16966, desc = "=ds=" .."Nefarian" },--Breastplate of Wrath
+			{ itemID = 16959, desc = "=ds=" .."Razorgore the Untamed" },--Bracelets of Wrath
+			{ itemID = 16964, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Gauntlets of Wrath
+			{ itemID = 16960, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Waistband of Wrath
+			{ itemID = 16962, desc = "=ds=" .."Ragnaros" },--Legplates of Wrath
+			{ itemID = 16965, desc = "=ds=" .."Broodlord Lashlayer" },--Sabatons of Wrath
 		},
 	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..color.WHITE.." - Avoidance Tank",
 		{
-			{ itemID = 1516963, desc = "=ds=" ..BabbleBoss["Onyxia"] },--Faceguard of Wrath
-			{ itemID = 1516961, desc = "=ds=" ..BabbleBoss["Chromaggus"] },--Shoulderpads of Wrath
-			{ itemID = 1516966, desc = "=ds=" ..BabbleBoss["Nefarian"] },--Chestplate of Wrath
-			{ itemID = 1516959, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] },--Wristguards of Wrath
-			{ itemID = 1516964, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] },--Grippers of Wrath
-			{ itemID = 1516960, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] },--Belt of Wrath
-			{ itemID = 1516962, desc = "=ds=" ..BabbleBoss["Ragnaros"] },--Legguards of Wrath
-			{ itemID = 1516965, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] },--Stompers of Wrath
+			{ itemID = 1516963, desc = "=ds=" .."Onyxia" },--Faceguard of Wrath
+			{ itemID = 1516961, desc = "=ds=" .."Chromaggus" },--Shoulderpads of Wrath
+			{ itemID = 1516966, desc = "=ds=" .."Nefarian" },--Chestplate of Wrath
+			{ itemID = 1516959, desc = "=ds=" .."Razorgore the Untamed" },--Wristguards of Wrath
+			{ itemID = 1516964, desc = "Firemaw" ..", " .."Ebonroc" ..", " .."Flamegor" },--Grippers of Wrath
+			{ itemID = 1516960, desc = "=ds=" .."Vaelastrasz the Corrupt" },--Belt of Wrath
+			{ itemID = 1516962, desc = "=ds=" .."Ragnaros" },--Legguards of Wrath
+			{ itemID = 1516965, desc = "=ds=" .."Broodlord Lashlayer" },--Stompers of Wrath
 		},
 	},
 }
@@ -7820,63 +7734,63 @@ AtlasLoot_Data["T3"] = {
 
 AtlasLoot_Data["ClassicSets"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["Classic Sets"],
+	Name = "Classic Sets",
 	{
-		Name = AL["Defias Leather"],
+		Name = "Defias Leather",
 		{
-			{ itemID = 10399, desc = "=ds==q2="..BabbleBoss["Edwin VanCleef"] }, --Blackened Defias Armor
-			{ itemID = 10401, desc = "=ds==q2="..AL["Defias Overseer/Taskmaster"] }, --Blackened Defias Gloves
-			{ itemID = 10403, desc = "=ds==q2="..BabbleBoss["Captain Greenskin"] }, --Blackened Defias Belt
-			{ itemID = 10400, desc = "=ds==q2="..AL["Defias Overseer/Taskmaster"] }, --Blackened Defias Leggings
-			{ itemID = 10402, desc = "=ds==q2="..AL["Defias Strip Miner"] }, --Blackened Defias Boots
+			{ itemID = 10399, desc = "=ds==q2=".."Edwin VanCleef" }, --Blackened Defias Armor
+			{ itemID = 10401, desc = "=ds==q2=".."Defias Overseer/Taskmaster" }, --Blackened Defias Gloves
+			{ itemID = 10403, desc = "=ds==q2=".."Captain Greenskin" }, --Blackened Defias Belt
+			{ itemID = 10400, desc = "=ds==q2=".."Defias Overseer/Taskmaster" }, --Blackened Defias Leggings
+			{ itemID = 10402, desc = "=ds==q2=".."Defias Strip Miner" }, --Blackened Defias Boots
 		},
 	},
 	{
-		Name = AL["Embrace of the Viper"],
+		Name = "Embrace of the Viper",
 		{
-			{ itemID = 6473, desc = "=ds==q2="..BabbleBoss["Lord Pythas"] }, --Armor of the Fang
-			{ itemID = 10413, desc = "=ds==q2="..AL["Druid of the Fang"] }, --Gloves of the Fang
-			{ itemID = 10412, desc = "=ds==q2="..BabbleBoss["Lady Anacondra"] }, --Belt of the Fang
-			{ itemID = 10410, desc = "=ds==q2="..BabbleBoss["Lord Cobrahn"] }, --Leggings of the Fang
-			{ itemID = 10411, desc = "=ds==q2="..BabbleBoss["Lord Serpentis"] }, --Footpads of the Fang
+			{ itemID = 6473, desc = "=ds==q2=".."Lord Pythas" }, --Armor of the Fang
+			{ itemID = 10413, desc = "=ds==q2=".."Druid of the Fang" }, --Gloves of the Fang
+			{ itemID = 10412, desc = "=ds==q2=".."Lady Anacondra" }, --Belt of the Fang
+			{ itemID = 10410, desc = "=ds==q2=".."Lord Cobrahn" }, --Leggings of the Fang
+			{ itemID = 10411, desc = "=ds==q2=".."Lord Serpentis" }, --Footpads of the Fang
 		},
 	},
 	{
-		Name = AL["Chain of the Scarlet Crusade"],
+		Name = "Chain of the Scarlet Crusade",
 		{
-			{ itemID = 10328, desc = "=ds==q2="..AL["Scarlet Champion"] }, --Scarlet Chestpiece
-			{ itemID = 10333, desc = "=ds==q2="..AL["Scarlet Protector/Guardsman"] }, --Scarlet Wristguards
-			{ itemID = 10331, desc = "=ds==q2="..AL["Scarlet Centurion"] }, --Scarlet Gauntlets
-			{ itemID = 10329, desc = "=ds==q2="..AL["Scarlet Defender/Myrmidon"] }, --Scarlet Belt
-			{ itemID = 10330, desc = "=ds==q2="..AL["Herod/Mograine"] }, --Scarlet Leggings
-			{ itemID = 10332, desc = "=ds==q2="..AL["Trash Mobs"] }, --Scarlet Boots
+			{ itemID = 10328, desc = "=ds==q2=".."Scarlet Champion" }, --Scarlet Chestpiece
+			{ itemID = 10333, desc = "=ds==q2=".."Scarlet Protector/Guardsman" }, --Scarlet Wristguards
+			{ itemID = 10331, desc = "=ds==q2=".."Scarlet Centurion" }, --Scarlet Gauntlets
+			{ itemID = 10329, desc = "=ds==q2=".."Scarlet Defender/Myrmidon" }, --Scarlet Belt
+			{ itemID = 10330, desc = "=ds==q2=".."Herod/Mograine" }, --Scarlet Leggings
+			{ itemID = 10332, desc = "=ds==q2=".."Trash Mobs" }, --Scarlet Boots
 		},
 	},
 	{
-		Name = AL["The Gladiator"],
+		Name = "The Gladiator",
 		{
-			{ itemID = 11729, desc = "=ds==q2=#brd3#, "..BabbleBoss["Hedrum the Creeper"] }, --Savage Gladiator Helm
-			{ itemID = 11726, desc = "=ds==q2="..BabbleBoss["Gorosh the Dervish"] }, --Savage Gladiator Chain
-			{ itemID = 11730, desc = "=ds==q2="..BabbleBoss["Eviscerator"] }, --Savage Gladiator Grips
-			{ itemID = 11728, desc = "=ds==q2="..BabbleBoss["Ok'thor the Breaker"] }, --Savage Gladiator Leggings
-			{ itemID = 11731, desc = "=ds==q2="..BabbleBoss["Anub'shiah"] }, --Savage Gladiator Greaves
+			{ itemID = 11729, desc = "=ds==q2=#brd3#, ".."Hedrum the Creeper" }, --Savage Gladiator Helm
+			{ itemID = 11726, desc = "=ds==q2=".."Gorosh the Dervish" }, --Savage Gladiator Chain
+			{ itemID = 11730, desc = "=ds==q2=".."Eviscerator" }, --Savage Gladiator Grips
+			{ itemID = 11728, desc = "=ds==q2=".."Ok'thor the Breaker" }, --Savage Gladiator Leggings
+			{ itemID = 11731, desc = "=ds==q2=".."Anub'shiah" }, --Savage Gladiator Greaves
 		},
 	},
 	{
-		Name = AL["Ironweave Battlesuit"],
+		Name = "Ironweave Battlesuit",
 		{
-			{ itemID = 22302, desc = "=ds==q2="..BabbleBoss["Lord Valthalak"].." (#z9#)" }, --Ironweave Cowl
-			{ itemID = 22305, desc = "=ds==q2="..AL["Theldren"].." ("..BabbleZone["Blackrock Depths"]..")" }, --Ironweave Mantle
-			{ itemID = 22301, desc = "=ds==q2="..AL["Sothos and Jarien"].." ("..BabbleZone["Stratholme"]..")" }, --Ironweave Robe
-			{ itemID = 22313, desc = "=ds==q2="..BabbleBoss["Halycon"].." (#z10#)" }, --Ironweave Bracers
-			{ itemID = 22304, desc = "=ds==q2="..BabbleBoss["Isalien"].." ("..BabbleZone["Dire Maul (East)"]..")" }, --Ironweave Gloves
-			{ itemID = 22306, desc = "=ds==q2="..BabbleBoss["Mor Grayhoof"].." (#z10#)" }, --Ironweave Belt
-			{ itemID = 22303, desc = "=ds==q2="..BabbleBoss["Kormok"].." ("..BabbleZone["Scholomance"]..")" }, --Ironweave Pants
-			{ itemID = 22311, desc = "=ds==q2="..BabbleBoss["The Beast"].." (#z9#)" }, --Ironweave Boots
+			{ itemID = 22302, desc = "=ds==q2=".."Lord Valthalak".." (#z9#)" }, --Ironweave Cowl
+			{ itemID = 22305, desc = "=ds==q2=".."Theldren".." (".."Blackrock Depths"..")" }, --Ironweave Mantle
+			{ itemID = 22301, desc = "=ds==q2=".."Sothos and Jarien".." (".."Stratholme"..")" }, --Ironweave Robe
+			{ itemID = 22313, desc = "=ds==q2=".."Halycon".." (#z10#)" }, --Ironweave Bracers
+			{ itemID = 22304, desc = "=ds==q2=".."Isalien".." (".."Dire Maul (East)"..")" }, --Ironweave Gloves
+			{ itemID = 22306, desc = "=ds==q2=".."Mor Grayhoof".." (#z10#)" }, --Ironweave Belt
+			{ itemID = 22303, desc = "=ds==q2=".."Kormok".." (".."Scholomance"..")" }, --Ironweave Pants
+			{ itemID = 22311, desc = "=ds==q2=".."The Beast".." (#z9#)" }, --Ironweave Boots
 		},
 	},
 	{
-		Name = AL["The Postmaster"],
+		Name = "The Postmaster",
 		{
 			{ itemID = 13390 }, --The Postmaster's Band
 			{ itemID = 13388 }, --The Postmaster's Tunic
@@ -7886,14 +7800,14 @@ AtlasLoot_Data["ClassicSets"] = {
 		},
 	},
 	{
-		Name = AL["Shard of the Gods"],
+		Name = "Shard of the Gods",
 		{
-			{ itemID = 17082, desc = "=ds==q2="..BabbleBoss["Ragnaros"].." ("..BabbleZone["Molten Core"]..")" }, --Shard of the Flame
-			{ itemID = 17064, desc = "=ds==q2="..BabbleBoss["Onyxia"].." ("..BabbleZone["Onyxia's Lair"]..")" }, --Shard of the Scale
+			{ itemID = 17082, desc = "=ds==q2=".."Ragnaros".." (".."Molten Core"..")" }, --Shard of the Flame
+			{ itemID = 17064, desc = "=ds==q2=".."Onyxia".." (".."Onyxia's Lair"..")" }, --Shard of the Scale
 		},
 	},
 	{
-		Name = AL["Spirit of Eskhandar"],
+		Name = "Spirit of Eskhandar",
 		{
 			{ itemID = 18204 }, --Eskhandar's Pelt
 			{ itemID = 18203 }, --Eskhandar's Right Claw
@@ -7901,56 +7815,56 @@ AtlasLoot_Data["ClassicSets"] = {
 		},
 	},
 	{
-		Name = AL["Spider's Kiss"],
+		Name = "Spider's Kiss",
 		{
 			{ itemID = 13218 }, --Fang of the Crystal Spider
 			{ itemID = 13183 }, --Venomspitter
 		},
 	},
 	{
-		Name = AL["Dal'Rend's Arms"],
+		Name = "Dal'Rend's Arms",
 		{
 			{ itemID = 12940 }, --Dal'Rend's Sacred Charge
 			{ itemID = 12939 }, --Dal'Rend's Tribal Guardian
 		},
 	},
 	{
-		Name = AL["Major Mojo Infusion"],
+		Name = "Major Mojo Infusion",
 		{
 			{ itemID = 19898 }, --Seal of Jin
 			{ itemID = 19925 }, --Band of Jin
 		},
 	},
 	{
-		Name = AL["Overlord's Resolution"],
+		Name = "Overlord's Resolution",
 		{
 			{ itemID = 19873 }, --Overlord's Crimson Band
 			{ itemID = 19912 }, --Overlord's Onyx Band
 		},
 	},
 	{
-		Name = AL["Primal Blessing"],
+		Name = "Primal Blessing",
 		{
 			{ itemID = 19896 }, --Thekal's Grasp
 			{ itemID = 19910 }, --Arlokk's Grasp
 		},
 	},
 	{
-		Name = AL["Prayer of the Primal"],
+		Name = "Prayer of the Primal",
 		{
 			{ itemID = 19863 }, --Primalist's Seal
 			{ itemID = 19920 }, --Primalist's Band
 		},
 	},
 	{
-		Name = AL["Zanzil's Concentration"],
+		Name = "Zanzil's Concentration",
 		{
 			{ itemID = 19905 }, --Zanzil's Band
 			{ itemID = 19893 }, --Zanzil's Seal
 		},
 	},
 	{
-		Name = AL["The Twin Blades of Hakkari"],
+		Name = "The Twin Blades of Hakkari",
 		{
 			{ itemID = 19865 }, --Warblade of the Hakkari
 			{ itemID = 19866 }, --Warblade of the Hakkari
@@ -7964,96 +7878,96 @@ AtlasLoot_Data["ClassicSets"] = {
 
 AtlasLoot_Data["ZGSets"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["Zul'Gurub Sets"],
+	Name = "Zul'Gurub Sets",
 	Type = "ClassicRaid",
 	{
-		Name = AL["Haruspex's Garb"],
+		Name = "Haruspex's Garb",
 		{
 			{ itemID = 19955 }, -- =q4=Wushoolay's Charm of Nature" 
-			{ itemID = 19613, desc = "=ds="..BabbleFaction["Exalted"] }, --Pristine Enchanted South Seas Kelp
-			{ itemID = 19838, desc = "=q4="..AL["Primal Hakkari Tabard"]..", =ds="..BabbleFaction["Revered"] }, --Zandalar Haruspex's Tunic
-			{ itemID = 19839, desc = "=q4="..AL["Primal Hakkari Sash"]..", =ds="..BabbleFaction["Honored"] }, --Zandalar Haruspex's Belt
-			{ itemID = 19840, desc = "=q4="..AL["Primal Hakkari Stanchion"]..", =ds="..BabbleFaction["Friendly"] }, --Zandalar Haruspex's Bracers
+			{ itemID = 19613, desc = "=ds=".."Exalted" }, --Pristine Enchanted South Seas Kelp
+			{ itemID = 19838, desc = "=q4=".."Primal Hakkari Tabard"..", =ds=".."Revered" }, --Zandalar Haruspex's Tunic
+			{ itemID = 19839, desc = "=q4=".."Primal Hakkari Sash"..", =ds=".."Honored" }, --Zandalar Haruspex's Belt
+			{ itemID = 19840, desc = "=q4=".."Primal Hakkari Stanchion"..", =ds=".."Friendly" }, --Zandalar Haruspex's Bracers
 		},
 	},
 	{
-		Name = AL["Predator's Armor"],
+		Name = "Predator's Armor",
 		{
 			{ itemID = 19953 }, -- =q4=Renataki's Charm of Beasts" 
-			{ itemID = 19621, desc = "=ds="..BabbleFaction["Exalted"] }, --Maelstrom's Wrath
-			{ itemID = 19831, desc = "=q4="..AL["Primal Hakkari Aegis"]..", =ds="..BabbleFaction["Revered"] }, --Zandalar Predator's Mantle
-			{ itemID = 19832, desc = "=q4="..AL["Primal Hakkari Shawl"]..", =ds="..BabbleFaction["Honored"] }, --Zandalar Predator's Belt
-			{ itemID = 19833, desc = "=q4="..AL["Primal Hakkari Bindings"]..", =ds="..BabbleFaction["Friendly"] }, --Zandalar Predator's Bracers
+			{ itemID = 19621, desc = "=ds=".."Exalted" }, --Maelstrom's Wrath
+			{ itemID = 19831, desc = "=q4=".."Primal Hakkari Aegis"..", =ds=".."Revered" }, --Zandalar Predator's Mantle
+			{ itemID = 19832, desc = "=q4=".."Primal Hakkari Shawl"..", =ds=".."Honored" }, --Zandalar Predator's Belt
+			{ itemID = 19833, desc = "=q4=".."Primal Hakkari Bindings"..", =ds=".."Friendly" }, --Zandalar Predator's Bracers
 		},
 	},
 	{
-		Name = AL["Illusionist's Attire"],
+		Name = "Illusionist's Attire",
 		{
 			{ itemID = 19959 }, -- =q4=Hazza'rah's Charm of Magic" 
-			{ itemID = 19601, desc = "=ds="..BabbleFaction["Exalted"] }, --Jewel of Kajaro
-			{ itemID = 20034, desc = "=q4="..AL["Primal Hakkari Kossack"]..", =ds="..BabbleFaction["Revered"] }, --Zandalar Illusionist's Robe
-			{ itemID = 19845, desc = "=q4="..AL["Primal Hakkari Shawl"]..", =ds="..BabbleFaction["Honored"] }, --Zandalar Illusionist's Mantle
-			{ itemID = 19846, desc = "=q4="..AL["Primal Hakkari Bindings"]..", =ds="..BabbleFaction["Friendly"] }, --Zandalar Illusionist's Wraps
+			{ itemID = 19601, desc = "=ds=".."Exalted" }, --Jewel of Kajaro
+			{ itemID = 20034, desc = "=q4=".."Primal Hakkari Kossack"..", =ds=".."Revered" }, --Zandalar Illusionist's Robe
+			{ itemID = 19845, desc = "=q4=".."Primal Hakkari Shawl"..", =ds=".."Honored" }, --Zandalar Illusionist's Mantle
+			{ itemID = 19846, desc = "=q4=".."Primal Hakkari Bindings"..", =ds=".."Friendly" }, --Zandalar Illusionist's Wraps
 		},
 	},
 	{
-		Name = AL["Freethinker's Armor"],
+		Name = "Freethinker's Armor",
 		{
 			{ itemID = 19952 }, -- =q4=Gri'lek's Charm of Valor" 
-			{ itemID = 19588, desc = "=ds="..BabbleFaction["Exalted"] }, --Hero's Brand
-			{ itemID = 19825, desc = "=q4="..AL["Primal Hakkari Tabard"]..", =ds="..BabbleFaction["Revered"] }, --Zandalar Freethinker's Breastplate
-			{ itemID = 19826, desc = "=q4="..AL["Primal Hakkari Shawl"]..", =ds="..BabbleFaction["Honored"] }, --Zandalar Freethinker's Belt
-			{ itemID = 19827, desc = "=q4="..AL["Primal Hakkari Bindings"]..", =ds="..BabbleFaction["Friendly"] }, --Zandalar Freethinker's Armguards
+			{ itemID = 19588, desc = "=ds=".."Exalted" }, --Hero's Brand
+			{ itemID = 19825, desc = "=q4=".."Primal Hakkari Tabard"..", =ds=".."Revered" }, --Zandalar Freethinker's Breastplate
+			{ itemID = 19826, desc = "=q4=".."Primal Hakkari Shawl"..", =ds=".."Honored" }, --Zandalar Freethinker's Belt
+			{ itemID = 19827, desc = "=q4=".."Primal Hakkari Bindings"..", =ds=".."Friendly" }, --Zandalar Freethinker's Armguards
 		},
 	},
 	{
-		Name = AL["Confessor's Raiment"],
+		Name = "Confessor's Raiment",
 		{
 			{ itemID = 19958 }, -- =q4=Hazza'rah's Charm of Healing" 
-			{ itemID = 19594, desc = "=ds="..BabbleFaction["Exalted"] }, --The All-Seeing Eye of Zuldazar
-			{ itemID = 19841, desc = "=q4="..AL["Primal Hakkari Aegis"]..", =ds="..BabbleFaction["Revered"] }, --Zandalar Confessor's Mantle
-			{ itemID = 19842, desc = "=q4="..AL["Primal Hakkari Sash"]..", =ds="..BabbleFaction["Honored"] }, --Zandalar Confessor's Bindings
-			{ itemID = 19843, desc = "=q4="..AL["Primal Hakkari Stanchion"]..", =ds="..BabbleFaction["Friendly"] }, --Zandalar Confessor's Wraps
+			{ itemID = 19594, desc = "=ds=".."Exalted" }, --The All-Seeing Eye of Zuldazar
+			{ itemID = 19841, desc = "=q4=".."Primal Hakkari Aegis"..", =ds=".."Revered" }, --Zandalar Confessor's Mantle
+			{ itemID = 19842, desc = "=q4=".."Primal Hakkari Sash"..", =ds=".."Honored" }, --Zandalar Confessor's Bindings
+			{ itemID = 19843, desc = "=q4=".."Primal Hakkari Stanchion"..", =ds=".."Friendly" }, --Zandalar Confessor's Wraps
 		},
 	},
 	{
-		Name = AL["Madcap's Outfit"],
+		Name = "Madcap's Outfit",
 		{
 			{ itemID = 19954 }, -- =q4=Renataki's Charm of Trickery" 
-			{ itemID = 19617, desc = "=ds="..BabbleFaction["Exalted"] }, --Zandalarian Shadow Mastery Talisman
-			{ itemID = 19834, desc = "=q4="..AL["Primal Hakkari Aegis"]..", =ds="..BabbleFaction["Revered"] }, --Zandalar Madcap's Tunic
-			{ itemID = 19835, desc = "=q4="..AL["Primal Hakkari Girdle"]..", =ds="..BabbleFaction["Honored"] }, --Zandalar Madcap's Mantle
-			{ itemID = 19836, desc = "=q4="..AL["Primal Hakkari Armsplint"]..", =ds="..BabbleFaction["Friendly"] }, --Zandalar Madcap's Bracers
+			{ itemID = 19617, desc = "=ds=".."Exalted" }, --Zandalarian Shadow Mastery Talisman
+			{ itemID = 19834, desc = "=q4=".."Primal Hakkari Aegis"..", =ds=".."Revered" }, --Zandalar Madcap's Tunic
+			{ itemID = 19835, desc = "=q4=".."Primal Hakkari Girdle"..", =ds=".."Honored" }, --Zandalar Madcap's Mantle
+			{ itemID = 19836, desc = "=q4=".."Primal Hakkari Armsplint"..", =ds=".."Friendly" }, --Zandalar Madcap's Bracers
 		},
 	},
 	{
-		Name = AL["Augur's Regalia"],
+		Name = "Augur's Regalia",
 		{
 			{ itemID = 19956 }, -- =q4=Wushoolay's Charm of Spirits" 
-			{ itemID = 19609, desc = "=ds="..BabbleFaction["Exalted"] }, --Unmarred Vision of Voodress
-			{ itemID = 19828, desc = "=q4="..AL["Primal Hakkari Tabard"]..", =ds="..BabbleFaction["Revered"] }, --Zandalar Augur's Hauberk
-			{ itemID = 19829, desc = "=q4="..AL["Primal Hakkari Girdle"]..", =ds="..BabbleFaction["Honored"] }, --Zandalar Augur's Belt
-			{ itemID = 19830, desc = "=q4="..AL["Primal Hakkari Armsplint"]..", =ds="..BabbleFaction["Friendly"] }, --Zandalar Augur's Bracers
+			{ itemID = 19609, desc = "=ds=".."Exalted" }, --Unmarred Vision of Voodress
+			{ itemID = 19828, desc = "=q4=".."Primal Hakkari Tabard"..", =ds=".."Revered" }, --Zandalar Augur's Hauberk
+			{ itemID = 19829, desc = "=q4=".."Primal Hakkari Girdle"..", =ds=".."Honored" }, --Zandalar Augur's Belt
+			{ itemID = 19830, desc = "=q4=".."Primal Hakkari Armsplint"..", =ds=".."Friendly" }, --Zandalar Augur's Bracers
 		},
 	},
 	{
-		Name = AL["Demoniac's Threads"],
+		Name = "Demoniac's Threads",
 		{
 			{ itemID = 19957 }, -- =q4=Hazza'rah's Charm of Destruction" 
-			{ itemID = 19605, desc = "=ds="..BabbleFaction["Exalted"] }, --Kezan's Unstoppable Taint
-			{ itemID = 20033, desc = "=q4="..AL["Primal Hakkari Kossack"]..", =ds="..BabbleFaction["Revered"] }, --Zandalar Demoniac's Robe
-			{ itemID = 19849, desc = "=q4="..AL["Primal Hakkari Sash"]..", =ds="..BabbleFaction["Honored"] }, --Zandalar Demoniac's Mantle
-			{ itemID = 19848, desc = "=q4="..AL["Primal Hakkari Stanchion"]..", =ds="..BabbleFaction["Friendly"] }, --Zandalar Demoniac's Wraps
+			{ itemID = 19605, desc = "=ds=".."Exalted" }, --Kezan's Unstoppable Taint
+			{ itemID = 20033, desc = "=q4=".."Primal Hakkari Kossack"..", =ds=".."Revered" }, --Zandalar Demoniac's Robe
+			{ itemID = 19849, desc = "=q4=".."Primal Hakkari Sash"..", =ds=".."Honored" }, --Zandalar Demoniac's Mantle
+			{ itemID = 19848, desc = "=q4=".."Primal Hakkari Stanchion"..", =ds=".."Friendly" }, --Zandalar Demoniac's Wraps
 		},
 	},
 	{
-		Name = AL["Vindicator's Battlegear"],
+		Name = "Vindicator's Battlegear",
 		{
 			{ itemID = 19951 }, -- =q4=Gri'lek's Charm of Might" 
-			{ itemID = 19577, desc = "=ds="..BabbleFaction["Exalted"] }, --Rage of Mugamba
-			{ itemID = 19822, desc = "=q4="..AL["Primal Hakkari Kossack"]..", =ds="..BabbleFaction["Revered"] }, --Zandalar Vindicator's Breastplate
-			{ itemID = 19823, desc = "=q4="..AL["Primal Hakkari Girdle"]..", =ds="..BabbleFaction["Honored"] }, --Zandalar Vindicator's Belt
-			{ itemID = 19824, desc = "=q4="..AL["Primal Hakkari Armsplint"]..", =ds="..BabbleFaction["Friendly"] }, --Zandalar Vindicator's Armguards
+			{ itemID = 19577, desc = "=ds=".."Exalted" }, --Rage of Mugamba
+			{ itemID = 19822, desc = "=q4=".."Primal Hakkari Kossack"..", =ds=".."Revered" }, --Zandalar Vindicator's Breastplate
+			{ itemID = 19823, desc = "=q4=".."Primal Hakkari Girdle"..", =ds=".."Honored" }, --Zandalar Vindicator's Belt
+			{ itemID = 19824, desc = "=q4=".."Primal Hakkari Armsplint"..", =ds=".."Friendly" }, --Zandalar Vindicator's Armguards
 		},
 	},
 }
@@ -8064,140 +7978,140 @@ AtlasLoot_Data["ZGSets"] = {
 
 AtlasLoot_Data["AQ20Sets"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["AQ20 Class Sets"],
+	Name = "AQ20 Class Sets",
 	Type = "ClassicRaid",
 	{
-		Name = AL["Symbols of Unending Life"],
+		Name = "Symbols of Unending Life",
 		{
-			{ itemID = 1506017, desc = "=q4="..AL["Qiraji Ornate Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Locket of Unending Life
+			{ itemID = 1506017, desc = "=q4=".."Qiraji Ornate Hilt"..", =ds=".."Exalted" }, --Locket of Unending Life
 			{ itemID = 21409, groupID = 3, refLootEntry = 15341 }, --Cloak of Unending Life
 			{ itemID = 21408, groupID = 4, refLootEntry = 15369 }, --Band of Unending Life
 		},
 	},
 	{
-		Name = AL["Trappings of the Unseen Path"],
+		Name = "Trappings of the Unseen Path",
 		{
-			{ itemID = 1506018, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Choker of the Unseen Path
+			{ itemID = 1506018, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Choker of the Unseen Path
 			{ itemID = 21403, groupID = 3, refLootEntry = 15341 }, --Cloak of the Unseen Path
 			{ itemID = 21402, groupID = 4, refLootEntry = 15369 }, --Signet of the Unseen Path
 		},
 	},
 	{
-		Name = AL["Trappings of Vaulted Secrets"],
+		Name = "Trappings of Vaulted Secrets",
 		{
-			{ itemID = 1506021, desc = "=q4="..AL["Qiraji Ornate Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Charm of Vaulted Secrets
+			{ itemID = 1506021, desc = "=q4=".."Qiraji Ornate Hilt"..", =ds=".."Exalted" }, --Charm of Vaulted Secrets
 			{ itemID = 21415, groupID = 3, refLootEntry = 15341 }, --Drape of Vaulted Secrets
 			{ itemID = 21414, groupID = 4, refLootEntry = 15369 }, --Band of Vaulted Secrets
 		},
 	},
 	{
-		Name = AL["Battlegear of Eternal Justice"],
+		Name = "Battlegear of Eternal Justice",
 		{
-			{ itemID = 1506020, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Medallion of Eternal Justice
+			{ itemID = 1506020, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Medallion of Eternal Justice
 			{ itemID = 21397, groupID = 3, refLootEntry = 15341 }, --Cape of Eternal Justice
 			{ itemID = 21396, groupID = 4, refLootEntry = 15369 }, --Ring of Eternal Justice
 		},
 	},
 	{
-		Name = AL["Finery of Infinite Wisdom"],
+		Name = "Finery of Infinite Wisdom",
 		{
-			{ itemID = 1506023, desc = "=q4="..AL["Qiraji Ornate Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Bayadere of Infinite Wisdom
+			{ itemID = 1506023, desc = "=q4=".."Qiraji Ornate Hilt"..", =ds=".."Exalted" }, --Bayadere of Infinite Wisdom
 			{ itemID = 21412, groupID = 3, refLootEntry = 15341 }, --Shroud of Infinite Wisdom
 			{ itemID = 21411, groupID = 4, refLootEntry = 15369 }, --Ring of Infinite Wisdom
 		},
 	},
 	{
-		Name = AL["Emblems of Veiled Shadows"],
+		Name = "Emblems of Veiled Shadows",
 		{
-			{ itemID = 1506021, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Charm of Vaulted Secrets
+			{ itemID = 1506021, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Charm of Vaulted Secrets
 			{ itemID = 21406, groupID = 3, refLootEntry = 15341 }, --Cloak of Veiled Shadows
 			{ itemID = 21405, groupID = 4, refLootEntry = 15369 }, --Band of Veiled Shadows
 		},
 	},
 	{
-		Name = AL["Gift of the Gathering Storm"],
+		Name = "Gift of the Gathering Storm",
 		{
-			{ itemID = 1506024, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Necklace of the Gathering Storm
+			{ itemID = 1506024, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Necklace of the Gathering Storm
 			{ itemID = 21400, groupID = 3, refLootEntry = 15341 }, --Cloak of the Gathering Storm
 			{ itemID = 21399, groupID = 4, refLootEntry = 15369 }, --Ring of the Gathering Storm
 		},
 	},
 	{
-		Name = AL["Implements of Unspoken Names"],
+		Name = "Implements of Unspoken Names",
 		{
-			{ itemID = 1506026, desc = "=q4="..AL["Qiraji Ornate Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Bayadere of Unspoken Names
+			{ itemID = 1506026, desc = "=q4=".."Qiraji Ornate Hilt"..", =ds=".."Exalted" }, --Bayadere of Unspoken Names
 			{ itemID = 21418, groupID = 3, refLootEntry = 15341 }, --Shroud of Unspoken Names
 			{ itemID = 21417, groupID = 4, refLootEntry = 15369 }, --Ring of Unspoken Names
 		},
 	},
 	{
-		Name = AL["Battlegear of Unyielding Strength"],
+		Name = "Battlegear of Unyielding Strength",
 		{
-			{ itemID = 1506025, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Collar of Unyielding Strength
+			{ itemID = 1506025, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Collar of Unyielding Strength
 			{ itemID = 21394, groupID = 3, refLootEntry = 15341 }, --Drape of Unyielding Strength
 			{ itemID = 21393, groupID = 4, refLootEntry = 15369 }, --Signet of Unyielding Strength
 		},
 	},
 	{
-		Name = AL["Keepsakes of Endless Machinations"],
+		Name = "Keepsakes of Endless Machinations",
 		{
-			{ itemID = 1506027, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Choker of Endless Machinations
+			{ itemID = 1506027, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Choker of Endless Machinations
 			{ itemID = 1506028, groupID = 3, refLootEntry = 15341 }, --Shroud of Endless Machinations
 			{ itemID = 1506029, groupID = 4, refLootEntry = 15369 }, --Loop of Endless Machinations
 		},
 	},
 	{
-		Name = AL["Regalia of Roaring Earth"],
+		Name = "Regalia of Roaring Earth",
 		{
-			{ itemID = 1506019, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Pendant of Roaring Earth
+			{ itemID = 1506019, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Pendant of Roaring Earth
 			{ itemID = 1506031, groupID = 3, refLootEntry = 15341 }, --Drape of Roaring Earth
 			{ itemID = 1506030, groupID = 4, refLootEntry = 15369 }, --Signet of Roaring Earth
 		},
 	},
 	{
-		Name = AL["Relics of Ferocious Vigor"],
+		Name = "Relics of Ferocious Vigor",
 		{
-			{ itemID = 1506034, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Choker of Ferocious Vigor
+			{ itemID = 1506034, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Choker of Ferocious Vigor
 			{ itemID = 1506033, groupID = 3, refLootEntry = 15341 }, --Cape of Ferocious Vigor
 			{ itemID = 1506032, groupID = 4, refLootEntry = 15369 }, --Signet of Ferocious Vigor
 		},
 	},
 	{
-		Name = AL["Laurels of the Faithful Zealot"],
+		Name = "Laurels of the Faithful Zealot",
 		{
-			{ itemID = 1506037, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Locket of the Faithful Zealot
+			{ itemID = 1506037, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Locket of the Faithful Zealot
 			{ itemID = 1506036, groupID = 3, refLootEntry = 15341 }, --Shroud of the Faithful Zealot
 			{ itemID = 1506035, groupID = 4, refLootEntry = 15369 }, --Band of the Faithful Zealot
 		},
 	},
 	{
-		Name = AL["Instruments of Masterful Technique"],
+		Name = "Instruments of Masterful Technique",
 		{
-			{ itemID = 1506040, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Locket of Masterful Technique
+			{ itemID = 1506040, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Locket of Masterful Technique
 			{ itemID = 1506039, groupID = 3, refLootEntry = 15341 }, --Drape of Masterful Technique
 			{ itemID = 1506038, groupID = 4, refLootEntry = 15369 }, --Band of Masterful Technique
 		},
 	},
 	{
-		Name = AL["Decorations of Martial Prowess"],
+		Name = "Decorations of Martial Prowess",
 		{
-			{ itemID = 1506043, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Lariat of Martial Prowess
+			{ itemID = 1506043, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Lariat of Martial Prowess
 			{ itemID = 1506042, groupID = 3, refLootEntry = 15341 }, --Cloak of Martial Prowess
 			{ itemID = 1506041, groupID = 4, refLootEntry = 15369 }, --Ring of Martial Prowess
 		},
 	},
 	{
-		Name = AL["Trophies of Unrivaled Rage"],
+		Name = "Trophies of Unrivaled Rage",
 		{
-			{ itemID = 1506046, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Collar of Unrivaled Rage
+			{ itemID = 1506046, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Collar of Unrivaled Rage
 			{ itemID = 1506045, groupID = 3, refLootEntry = 15341 }, --Cloak of Unrivaled Rage
 			{ itemID = 1506044, groupID = 4, refLootEntry = 15369 }, --Signet of Unrivaled Rage
 		},
 	},
 	{
-		Name = AL["Remnants of Expansive Research"],
+		Name = "Remnants of Expansive Research",
 		{
-			{ itemID = 1506049, desc = "=q4="..AL["Qiraji Spiked Hilt"]..", =ds="..BabbleFaction["Exalted"] }, --Bayadere of Expansive Research
+			{ itemID = 1506049, desc = "=q4=".."Qiraji Spiked Hilt"..", =ds=".."Exalted" }, --Bayadere of Expansive Research
 			{ itemID = 1506048, groupID = 3, refLootEntry = 15341 }, --Drape of Expansive Research
 			{ itemID = 1506047, groupID = 4, refLootEntry = 15369 }, --Loop of Expansive Research
 		},
@@ -8210,7 +8124,7 @@ AtlasLoot_Data["AQ20Sets"] = {
 
 AtlasLoot_Data["T2.5"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["AQ40 Class Sets"] .." (Tier 2.5)",
+	Name = "AQ40 Class Sets" .." (Tier 2.5)",
 	Type = "ClassicRaid",
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["DRUID"],
@@ -8370,10 +8284,10 @@ AtlasLoot_Data["T2.5"] = {
 
 AtlasLoot_Data["WorldEpicsCLASSIC"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["BoE World Epics"],
+	Name = "BoE World Epics",
 	Type = "ClassicDungeonExt",
 	{
-		Name = AL["Level 30-39"],
+		Name = "Level 30-39",
 		{
 			{ itemID = 867 },--Gloves of Holy Might
 			{ itemID = 1981 },--Icemail Jerkin
@@ -8390,7 +8304,7 @@ AtlasLoot_Data["WorldEpicsCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Level 40-49"],
+		Name = "Level 40-49",
 		{
 			{ itemID = 3075 },--Eye of Flame
 			{ itemID = 940 },--Robes of Insight
@@ -8418,7 +8332,7 @@ AtlasLoot_Data["WorldEpicsCLASSIC"] = {
 		},
 	},
 	{
-		Name = AL["Level 50-60"],
+		Name = "Level 50-60",
 		{
 			{ itemID = 3475 }, -- =q4=Cloak of Flames" 
 			{ itemID = 14553 },--Sash of Mercy
@@ -8457,11 +8371,11 @@ AtlasLoot_Data["WorldEpicsCLASSIC"] = {
 
 AtlasLoot_Data["AVMisc"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Alterac Valley"],
+	Name = "Alterac Valley",
 	{
-		Name = AL["Misc. Rewards"],
+		Name = "Misc. Rewards",
 		{
-			{ icon = "INV_BannerPVP_02", name = color.WHITE..BabbleFaction["Alliance"], desc = "=q5="..BabbleFaction["Stormpike Guard"] },
+			{ icon = "INV_BannerPVP_02", name = color.WHITE.."Alliance", desc = "=q5=".."Stormpike Guard" },
 			{ itemID = 19030, price = "50000 #alliance#" }, --Stormpike Battle Charger
 			{ itemID = 19045, price = "15000 #alliance#" }, --Stormpike Battle Standard
 			{ itemID = 19032, price = "15000 #alliance#" }, --Stormpike Battle Tabard
@@ -8472,7 +8386,7 @@ AtlasLoot_Data["AVMisc"] = {
 			{ itemID = 19307, price = "80 #silver#" }, --Alterac Heavy Runecloth Bandage
 		},
 		{
-			{ icon = "INV_BannerPVP_01", name = color.WHITE..BabbleFaction["Horde"], desc = "=q5="..BabbleFaction["Frostwolf Clan"] },
+			{ icon = "INV_BannerPVP_01", name = color.WHITE.."Horde", desc = "=q5=".."Frostwolf Clan" },
 			{ itemID = 19029, price = "50000 #horde#" }, --Horn of the Frostwolf Howler
 			{ itemID = 19046, price = "15000 #horde#" }, --Frostwolf Battle Standard
 			{ itemID = 19031, price = "15000 #horde#" }, --Frostwolf Battle Tabard
@@ -8552,9 +8466,9 @@ AtlasLoot_Data["AVMisc"] = {
 
 AtlasLoot_Data["AB_A"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Arathi Basin"] ..color.WHITE.." (Alliance)",
+	Name = "Arathi Basin" ..color.WHITE.." (Alliance)",
 	{
-		Name = AL["Misc. Rewards"],
+		Name = "Misc. Rewards",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 17349, price = "5 #silver# 1 #alliance#" }, --Superior Healing Draught
@@ -8572,7 +8486,7 @@ AtlasLoot_Data["AB_A"] = {
 		},
 	},
 	{
-		Name = AL["Level 60 Rewards"],
+		Name = "Level 60 Rewards",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 20073, price = "5000 #alliance#" }, --Cloak of the Honor Guard
@@ -8581,7 +8495,7 @@ AtlasLoot_Data["AB_A"] = {
 		},
 	},
 	{
-		Name = AL["Level 40-49 Rewards"],
+		Name = "Level 40-49 Rewards",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 20097, price = "400 #alliance#" }, --Highlander's Cloth Girdle
@@ -8611,7 +8525,7 @@ AtlasLoot_Data["AB_A"] = {
 		},
 	},
 	{
-		Name = AL["Level 30-39 Rewards"],
+		Name = "Level 30-39 Rewards",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 20098, price = "300 #alliance#" }, --Highlander's Cloth Girdle
@@ -8623,7 +8537,7 @@ AtlasLoot_Data["AB_A"] = {
 		},
 	},
 	{
-		Name = AL["Level 20-29 Rewards"],
+		Name = "Level 20-29 Rewards",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 20099, price = "300 #alliance#" }, --Highlander's Cloth Girdle
@@ -8643,7 +8557,7 @@ AtlasLoot_Data["AB_A"] = {
 		},
 	},
 	{
-		Name = AL["The Highlander's Intent"],
+		Name = "The Highlander's Intent",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 20061, price = "9000 #alliance#" }, --Highlander's Epaulets
@@ -8652,7 +8566,7 @@ AtlasLoot_Data["AB_A"] = {
 		},
 	},
 	{
-		Name = AL["The Highlander's Purpose"],
+		Name = "The Highlander's Purpose",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 20059, price = "9000 #alliance#" }, --Highlander's Leather Shoulders
@@ -8661,7 +8575,7 @@ AtlasLoot_Data["AB_A"] = {
 		},
 	},
 	{
-		Name = AL["The Highlander's Will"],
+		Name = "The Highlander's Will",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 20060, price = "9000 #alliance#" }, --Highlander's Lizardhide Shoulders
@@ -8670,7 +8584,7 @@ AtlasLoot_Data["AB_A"] = {
 		},
 	},
 	{
-		Name = AL["The Highlander's Determination"],
+		Name = "The Highlander's Determination",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 20055, price = "9000 #alliance#" }, --Highlander's Chain Pauldrons
@@ -8679,7 +8593,7 @@ AtlasLoot_Data["AB_A"] = {
 		},
 	},
 	{
-		Name = AL["The Highlander's Fortitude"],
+		Name = "The Highlander's Fortitude",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 20056, price = "9000 #alliance#" }, --Highlander's Mail Pauldrons
@@ -8688,7 +8602,7 @@ AtlasLoot_Data["AB_A"] = {
 		},
 	},
 	{
-		Name = AL["The Highlander's Resolution"],
+		Name = "The Highlander's Resolution",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 20057, price = "9000 #alliance#" }, --Highlander's Plate Spaulders
@@ -8697,7 +8611,7 @@ AtlasLoot_Data["AB_A"] = {
 		},
 	},
 	{
-		Name = AL["The Highlander's Resolve"],
+		Name = "The Highlander's Resolve",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 20058, price = "9000 #alliance#" }, --Highlander's Lamellar Spaulders
@@ -8709,9 +8623,9 @@ AtlasLoot_Data["AB_A"] = {
 
 AtlasLoot_Data["AB_H"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Arathi Basin"] ..color.WHITE.." (Horde)",
+	Name = "Arathi Basin" ..color.WHITE.." (Horde)",
 	{
-		Name = AL["Misc. Rewards"],
+		Name = "Misc. Rewards",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 17349, price = "5 #silver# 5 #horde#" }, --Superior Healing Draught
@@ -8729,7 +8643,7 @@ AtlasLoot_Data["AB_H"] = {
 		},
 	},
 	{
-		Name = AL["Level 60 Rewards"],
+		Name = "Level 60 Rewards",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 20068, price = "5000 #horde#" }, --Deathguard's Cloak
@@ -8738,7 +8652,7 @@ AtlasLoot_Data["AB_H"] = {
 		},
 	},
 	{
-		Name = AL["Level 40-49 Rewards"],
+		Name = "Level 40-49 Rewards",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 20165, price = "400 #horde#" }, --Defiler's Cloth Girdle
@@ -8768,7 +8682,7 @@ AtlasLoot_Data["AB_H"] = {
 		},
 	},
 	{
-		Name = AL["Level 30-39 Rewards"],
+		Name = "Level 30-39 Rewards",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 20166, price = "300 #horde#" }, --Defiler's Cloth Girdle
@@ -8780,7 +8694,7 @@ AtlasLoot_Data["AB_H"] = {
 		},
 	},
 	{
-		Name = AL["Level 20-29 Rewards"],
+		Name = "Level 20-29 Rewards",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 20164, price = "300 #horde#" }, --Defiler's Cloth Girdle
@@ -8800,7 +8714,7 @@ AtlasLoot_Data["AB_H"] = {
 		},
 	},
 	{
-		Name = AL["The Defiler's Intent"],
+		Name = "The Defiler's Intent",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 20176, price = "9000 #horde#" }, --Defiler's Epaulets
@@ -8809,7 +8723,7 @@ AtlasLoot_Data["AB_H"] = {
 		},
 	},
 	{
-		Name = AL["The Defiler's Purpose"],
+		Name = "The Defiler's Purpose",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 20194, price = "9000 #horde#" }, --Defiler's Leather Shoulders
@@ -8818,7 +8732,7 @@ AtlasLoot_Data["AB_H"] = {
 		},
 	},
 	{
-		Name = AL["The Defiler's Will"],
+		Name = "The Defiler's Will",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 20175, price = "9000 #horde#" }, --Defiler's Lizardhide Shoulders
@@ -8827,7 +8741,7 @@ AtlasLoot_Data["AB_H"] = {
 		},
 	},
 	{
-		Name = AL["The Defiler's Determination"],
+		Name = "The Defiler's Determination",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 20158, price = "9000 #horde#" }, --Defiler's Chain Pauldrons
@@ -8836,7 +8750,7 @@ AtlasLoot_Data["AB_H"] = {
 		},
 	},
 	{
-		Name = AL["The Defiler's Fortitude"],
+		Name = "The Defiler's Fortitude",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 20203, price = "9000 #horde#" }, --Defiler's Mail Pauldrons
@@ -8845,7 +8759,7 @@ AtlasLoot_Data["AB_H"] = {
 		},
 	},
 	{
-		Name = AL["The Defiler's Resolution"],
+		Name = "The Defiler's Resolution",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 20212, price = "9000 #horde#" }, --Defiler's Plate Spaulders
@@ -8854,7 +8768,7 @@ AtlasLoot_Data["AB_H"] = {
 		},
 	},
 	{
-		Name = AL["The Defiler's Resolve"],
+		Name = "The Defiler's Resolve",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 20184, price = "9000 #horde#" }, --Defiler's Lamellar Spaulders
@@ -8870,9 +8784,9 @@ AtlasLoot_Data["AB_H"] = {
 
 AtlasLoot_Data["WSG_A"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Warsong Gulch"] ..color.WHITE.." (Alliance)",
+	Name = "Warsong Gulch" ..color.WHITE.." (Alliance)",
 	{
-		Name = AL["Misc. Rewards"],
+		Name = "Misc. Rewards",
 		WebID = {890,"faction"},
 		{
 			{ itemID = 19506, price = "12000 #faction#" }, --Silverwing Battle Tabard
@@ -8884,7 +8798,7 @@ AtlasLoot_Data["WSG_A"] = {
 		},
 	},
 	{
-		Name = AL["Accessories"],
+		Name = "Accessories",
 		WebID = {890,"faction"},
 		{
 			{ itemID = 20428, price = "100 #alliance#" }, --Caretaker's Cape
@@ -8916,7 +8830,7 @@ AtlasLoot_Data["WSG_A"] = {
 		},
 	},
 	{
-		Name = AL["Weapons"],
+		Name = "Weapons",
 		WebID = {890,"faction"},
 		{
 			{ itemID = 20443, price = "300 #alliance#" }, --Sentinel's Blade
@@ -8944,7 +8858,7 @@ AtlasLoot_Data["WSG_A"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"],
+		Name = "Armor",
 		WebID = {890,"faction"},
 		{
 			{ itemID = 19597, price = "500 #alliance#" }, --Dryad's Wrist Bindings
@@ -8974,9 +8888,9 @@ AtlasLoot_Data["WSG_A"] = {
 
 AtlasLoot_Data["WSG_H"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Warsong Gulch"] ..color.WHITE.." (Horde)",
+	Name = "Warsong Gulch" ..color.WHITE.." (Horde)",
 	{
-		Name = AL["Misc. Rewards"],
+		Name = "Misc. Rewards",
 		WebID = {889,"faction"},
 		{
 			{ itemID = 19505, price = "12000 #faction#" }, --Warsong Battle Tabard
@@ -8988,7 +8902,7 @@ AtlasLoot_Data["WSG_H"] = {
 		},
 	},
 	{
-		Name = AL["Accessories"],
+		Name = "Accessories",
 		WebID = {889,"faction"},
 		{
 			{ itemID = 20427, price = "100 #horde#" }, --Battle Healer's Cloak
@@ -9020,7 +8934,7 @@ AtlasLoot_Data["WSG_H"] = {
 		},
 	},
 	{
-		Name = AL["Weapons"],
+		Name = "Weapons",
 		WebID = {889,"faction"},
 		{
 			{ itemID = 20441, price = "300 #horde#" }, --Scout's Blade
@@ -9048,7 +8962,7 @@ AtlasLoot_Data["WSG_H"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"],
+		Name = "Armor",
 		WebID = {889,"faction"},
 		{
 			{ itemID = 19597, price = "500 #horde#" }, --Dryad's Wrist Bindings
@@ -9083,7 +8997,7 @@ AtlasLoot_Data["PVPDruid"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = LOCALIZED_CLASS_NAMES_MALE["DRUID"],
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 16424, price = "9435 #alliance#" }, --Lieutenant Commander's Dragonhide Headguard
 			{ itemID = 16423, price = "6885 #alliance#" }, --Lieutenant Commander's Dragonhide Shoulders
@@ -9094,7 +9008,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 23308, price = "24000 #alliance#" }, --Lieutenant Commander's Dragonhide Headguard
 			{ itemID = 23309, price = "14000 #alliance#" }, --Lieutenant Commander's Dragonhide Shoulders
@@ -9105,7 +9019,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 16451, price = "68200 #alliance#" }, --Field Marshal's Dragonhide Helmet
 			{ itemID = 16449, price = "52200 #alliance#" }, --Field Marshal's Dragonhide Spaulders
@@ -9116,7 +9030,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 6116550, price = "2370 #arena# #horde#" }, --Grand Marshal's Chain Helm
 			{ itemID = 6116551, price = "1930 #arena# #horde#" }, --Grand Marshal's Chain Spaulders
@@ -9127,7 +9041,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		},
 	},
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16503, price = "9435 #horde#" }, --Champion's Dragonhide Headguard
 			{ itemID = 16501, price = "6885 #horde#" }, --Champion's Dragonhide Shoulders
@@ -9138,7 +9052,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 23253, price = "24000 #horde#" }, --Champion's Dragonhide Headguard
 			{ itemID = 23254, price = "14000 #horde#" }, --Champion's Dragonhide Shoulders
@@ -9149,7 +9063,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16550, price = "68200 #horde#" }, --Warlord's Dragonhide Helmet
 			{ itemID = 16551, price = "52200 #horde#" }, --Warlord's Dragonhide Epaulets
@@ -9160,7 +9074,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 6116451, price = "2370 #arena# #alliance#" }, --High Warlord's Dragonhide Helmet
 			{ itemID = 6116449, price = "1930 #arena# #alliance#" }, --High Warlord's Dragonhide Epaulets
@@ -9306,7 +9220,7 @@ AtlasLoot_Data["PVPHunter"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 16428, price = "9435 #alliance#" }, --Lieutenant Commander's Chain Helm
 			{ itemID = 16427, price = "6885 #alliance#" }, --Lieutenant Commander's Chain Shoulders
@@ -9317,7 +9231,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 23306, price = "24000 #alliance#" }, --Lieutenant Commander's Chain Helm
 			{ itemID = 23307, price = "14000 #alliance#" }, --Lieutenant Commander's Chain Shoulders
@@ -9328,7 +9242,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 16465, price = "68200 #alliance#" }, --Field Marshal's Chain Helm
 			{ itemID = 16468, price = "52200 #alliance#" }, --Field Marshal's Chain Spaulders
@@ -9339,7 +9253,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 6116465, price = "2370 #arena# #alliance#" }, --Grand Marshal's Chain Helm
 			{ itemID = 6116468, price = "1930 #arena# #alliance#" }, --Grand Marshal's Chain Spaulders
@@ -9350,7 +9264,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		},
 	},
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16526, price = "9435 #horde#" }, --Champion's Chain Helm
 			{ itemID = 16528, price = "6885 #horde#" }, --Champion's Chain Shoulders
@@ -9361,7 +9275,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 23251, price = "24000 #horde#" }, --Champion's Chain Helm
 			{ itemID = 23252, price = "14000 #horde#" }, --Champion's Chain Shoulders
@@ -9372,7 +9286,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16566, price = "68200 #horde#" }, --Warlord's Chain Helmet
 			{ itemID = 16568, price = "52200 #horde#" }, --Warlord's Chain Shoulders
@@ -9383,7 +9297,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 6116566, price = "2370 #arena# #horde#" }, --High Warlord's Chain Helmet
 			{ itemID = 6116568, price = "1930 #arena# #horde#" }, --High Warlord's Chain Shoulders
@@ -9399,7 +9313,7 @@ AtlasLoot_Data["PVPMage"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 16416, price = "9435 #alliance#" }, --Lieutenant Commander's Silk Cowl
 			{ itemID = 16415, price = "6885 #alliance#" }, --Lieutenant Commander's Silk Mantle
@@ -9410,7 +9324,7 @@ AtlasLoot_Data["PVPMage"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 23318, price = "24000 #alliance#" }, --Lieutenant Commander's Silk Cowl
 			{ itemID = 23319, price = "14000 #alliance#" }, --Lieutenant Commander's Silk Mantle
@@ -9421,7 +9335,7 @@ AtlasLoot_Data["PVPMage"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 16441, price = "68200 #alliance#" }, --Field Marshal's Coronet
 			{ itemID = 16444, price = "52200 #alliance#" }, --Field Marshal's Silk Spaulders
@@ -9432,7 +9346,7 @@ AtlasLoot_Data["PVPMage"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 6116441, price = "2370 #arena# #alliance#" }, --Grand Marshal's Coronet
 			{ itemID = 6116444, price = "1930 #arena# #alliance#" }, --Grand Marshal's Silk Spaulders
@@ -9443,7 +9357,7 @@ AtlasLoot_Data["PVPMage"] = {
 		},
 	},
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16489, price = "9435 #horde#" }, --Champion's Silk Cowl
 			{ itemID = 16492, price = "6885 #horde#" }, --Champion's Silk Mantle
@@ -9454,7 +9368,7 @@ AtlasLoot_Data["PVPMage"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 23263, price = "24000 #horde#" }, --Champion's Silk Cowl
 			{ itemID = 23264, price = "14000 #horde#" }, --Champion's Silk Mantle
@@ -9465,7 +9379,7 @@ AtlasLoot_Data["PVPMage"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16533, price = "68200 #horde#" }, --Warlord's Silk Cowl
 			{ itemID = 16536, price = "52200 #horde#" }, --Warlord's Silk Amice
@@ -9476,7 +9390,7 @@ AtlasLoot_Data["PVPMage"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 6116533, price = "2370 #arena# #horde#" }, --High Warlord's Silk Cowl
 			{ itemID = 6116536, price = "1930 #arena# #horde#" }, --High Warlord's Silk Amice
@@ -9492,7 +9406,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"],
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 16434, price = "9435 #alliance#" }, --Lieutenant Commander's Lamellar Headguard
 			{ itemID = 16436, price = "6885 #alliance#" }, --Lieutenant Commander's Lamellar Shoulders
@@ -9503,7 +9417,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 23276, price = "24000 #alliance#" }, --Lieutenant Commander's Lamellar Headguard
 			{ itemID = 23277, price = "14000 #alliance#" }, --Lieutenant Commander's Lamellar Shoulders
@@ -9514,7 +9428,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 16474, price = "68200 #alliance#" }, --Field Marshal's Lamellar Faceguard
 			{ itemID = 16476, price = "52200 #alliance#" }, --Field Marshal's Lamellar Pauldrons
@@ -9525,7 +9439,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 6116474, price = "2370 #arena# #alliance#" }, --Grand Marshal's Lamellar Faceguard
 			{ itemID = 6116476, price = "1930 #arena# #alliance#" }, --Grand Marshal's Lamellar Pauldrons
@@ -9536,7 +9450,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 29604, price = "24000 #horde#" }, --Champion's Lamellar Headguard
 			{ itemID = 29605, price = "14000 #horde#" }, --Champion's Lamellar Shoulders
@@ -9547,7 +9461,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 29616, price = "68200 #horde#" }, --Warlord's Lamellar Faceguard
 			{ itemID = 29617, price = "52200 #horde#" }, --Warlord's Lamellar Pauldrons
@@ -9558,7 +9472,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 6129616, price = "2370 #arena# #horde#" }, --High Warlord's Lamellar Faceguard
 			{ itemID = 6129617, price = "1930 #arena# #horde#" }, --High Warlord's Lamellar Pauldrons
@@ -9574,7 +9488,7 @@ AtlasLoot_Data["PVPPriest"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 17598, price = "9435 #alliance#" }, --Lieutenant Commander's Satin Hood
 			{ itemID = 17601, price = "6885 #alliance#" }, --Lieutenant Commander's Satin Mantle
@@ -9585,7 +9499,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 23316, price = "24000 #alliance#" }, --Lieutenant Commander's Satin Hood
 			{ itemID = 23317, price = "14000 #alliance#" }, --Lieutenant Commander's Satin Mantle
@@ -9596,7 +9510,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 17602, price = "68200 #alliance#" }, --Field Marshal's Headdress
 			{ itemID = 17604, price = "52200 #alliance#" }, --Field Marshal's Satin Mantle
@@ -9607,7 +9521,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 6117602, price = "2370 #arena# #alliance#" }, --Grand Marshal's Headdress
 			{ itemID = 6117604, price = "1930 #arena# #alliance#" }, --Grand Marshal's Satin Mantle
@@ -9618,7 +9532,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		},
 	},
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16489, price = "9435 #horde#" }, --Champion's Satin Hood
 			{ itemID = 16492, price = "6885 #horde#" }, --Champion's Satin Mantle
@@ -9629,7 +9543,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 23261, price = "24000 #horde#" }, --Champion's Satin Hood
 			{ itemID = 23262, price = "14000 #horde#" }, --Champion's Satin Mantle
@@ -9640,7 +9554,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 17623, price = "68200 #horde#" }, --Warlord's Satin Cowl
 			{ itemID = 17622, price = "52200 #horde#" }, --Warlord's Satin Mantle
@@ -9651,7 +9565,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 6117623, price = "2370 #arena# #horde#" }, --High Warlord's Satin Cowl
 			{ itemID = 6117622, price = "1930 #arena# #horde#" }, --High Warlord's Satin Mantle
@@ -9668,7 +9582,7 @@ AtlasLoot_Data["PVPRogue"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 16418, price = "9435 #alliance#" }, --Lieutenant Commander's Leather Helm
 			{ itemID = 16420, price = "6885 #alliance#" }, --Lieutenant Commander's Leather Shoulders
@@ -9679,7 +9593,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 23312, price = "24000 #alliance#" }, --Lieutenant Commander's Leather Helm
 			{ itemID = 23313, price = "14000 #alliance#" }, --Lieutenant Commander's Leather Shoulders
@@ -9690,7 +9604,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 16455, price = "68200 #alliance#" }, --Field Marshal's Leather Mask
 			{ itemID = 16457, price = "52200 #alliance#" }, --Field Marshal's Leather Epaulets
@@ -9701,7 +9615,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 6116455, price = "2370 #arena# #alliance#" }, --Grand Marshal's Leather Mask
 			{ itemID = 6116457, price = "1930 #arena# #alliance#" }, --Grand Marshal's Leather Epaulets
@@ -9712,7 +9626,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		},
 	},
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16506, price = "9435 #horde#" }, --Champion's Leather Helm
 			{ itemID = 16507, price = "6885 #horde#" }, --Champion's Leather Shoulders
@@ -9723,7 +9637,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 23257, price = "24000 #horde#" }, --Champion's Leather Helm
 			{ itemID = 23258, price = "14000 #horde#" }, --Champion's Leather Shoulders
@@ -9734,7 +9648,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16561, price = "68200 #horde#" }, --Warlord's Leather Helm
 			{ itemID = 16562, price = "52200 #horde#" }, --Warlord's Leather Spaulders
@@ -9745,7 +9659,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 6116561, price = "2370 #arena# #horde#" }, --High Warlord's Leather Helm
 			{ itemID = 6116562, price = "1930 #arena# #horde#" }, --High Warlord's Leather Spaulders
@@ -9761,7 +9675,7 @@ AtlasLoot_Data["PVPShaman"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"],
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 29598, price = "24000 #alliance#" }, --Lieutenant Commander's Mail Headguard
 			{ itemID = 29599, price = "14000 #alliance#" }, --Lieutenant Commander's Mail Pauldrons
@@ -9772,7 +9686,7 @@ AtlasLoot_Data["PVPShaman"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 29610, price = "68200 #alliance#" }, --Field Marshal's Mail Helm
 			{ itemID = 29611, price = "52200 #alliance#" }, --Field Marshal's Mail Spaulders
@@ -9783,7 +9697,7 @@ AtlasLoot_Data["PVPShaman"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 6129610, price = "2370 #arena# #alliance#" }, --Grand Marshal's Mail Helm
 			{ itemID = 6129611, price = "1930 #arena# #alliance#" }, --Grand Marshal's Mail Spaulders
@@ -9794,7 +9708,7 @@ AtlasLoot_Data["PVPShaman"] = {
 		},
 	},
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16521, price = "9435 #horde#" }, --Champion's Mail Headguard
 			{ itemID = 16524, price = "6885 #horde#" }, --Champion's Mail Pauldrons
@@ -9805,7 +9719,7 @@ AtlasLoot_Data["PVPShaman"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 23259, price = "24000 #horde#" }, --Champion's Mail Headguard
 			{ itemID = 23260, price = "14000 #horde#" }, --Champion's Mail Pauldrons
@@ -9816,7 +9730,7 @@ AtlasLoot_Data["PVPShaman"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16578, price = "68200 #horde#" }, --Warlord's Mail Helm
 			{ itemID = 16580, price = "52200 #horde#" }, --Warlord's Mail Spaulders
@@ -9827,7 +9741,7 @@ AtlasLoot_Data["PVPShaman"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 6116578, price = "2370 #arena# #horde#" }, --High Warlord's Mail Helm
 			{ itemID = 6116580, price = "1930 #arena# #horde#" }, --High Warlord's Mail Spaulders
@@ -9843,7 +9757,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 17566, price = "9435 #alliance#" }, --Lieutenant Commander's Dreadweave Cowl
 			{ itemID = 17569, price = "6885 #alliance#" }, --Lieutenant Commander's Dreadweave Spaulders
@@ -9854,7 +9768,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 23310, price = "24000 #alliance#" }, --Lieutenant Commander's Dreadweave Cowl
 			{ itemID = 23311, price = "14000 #alliance#" }, --Lieutenant Commander's Dreadweave Spaulders
@@ -9865,7 +9779,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 6117578, price = "2370 #arena# #alliance#" }, --Grand Marshal's Coronal
 			{ itemID = 6117580, price = "1930 #arena# #alliance#" }, --Grand Marshal's Dreadweave Shoulders
@@ -9876,7 +9790,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 17578, price = "68200 #alliance#" }, --Field Marshal's Coronal
 			{ itemID = 17580, price = "52200 #alliance#" }, --Field Marshal's Dreadweave Shoulders
@@ -9887,7 +9801,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		},
 	},
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 17570, price = "9435 #horde#" }, --Champion's Dreadweave Cowl
 			{ itemID = 17573, price = "6885 #horde#" }, --Champion's Dreadweave Spaulders
@@ -9898,7 +9812,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 23255, price = "24000 #horde#" }, --Champion's Dreadweave Cowl
 			{ itemID = 23256, price = "14000 #horde#" }, --Champion's Dreadweave Spaulders
@@ -9909,7 +9823,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 17591, price = "68200 #horde#" }, --Warlord's Dreadweave Hood
 			{ itemID = 17590, price = "52200 #horde#" }, --Warlord's Dreadweave Mantle
@@ -9920,7 +9834,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 6117591, price = "2370 #arena# #horde#" }, --High Warlord's Dreadweave Hood
 			{ itemID = 6117590, price = "1930 #arena# #horde#" }, --High Warlord's Dreadweave Mantle
@@ -9936,7 +9850,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"],
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 16429, price = "9435 #alliance#" }, --Lieutenant Commander's Plate Helm
 			{ itemID = 16432, price = "6885 #alliance#" }, --Lieutenant Commander's Plate Shoulders
@@ -9947,7 +9861,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 23314, price = "24000 #alliance#" }, --Lieutenant Commander's Plate Helm
 			{ itemID = 23315, price = "14000 #alliance#" }, --Lieutenant Commander's Plate Shoulders
@@ -9958,7 +9872,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 16478, price = "68200 #alliance#" }, --Field Marshal's Plate Helm
 			{ itemID = 16480, price = "52200 #alliance#" }, --Field Marshal's Plate Shoulderguards
@@ -9969,7 +9883,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Alliance)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Alliance)",
 		{
 			{ itemID = 6116478, price = "2370 #arena# #alliance#" }, --Grand Marshal's Plate Helm
 			{ itemID = 6116480, price = "1930 #arena# #alliance#" }, --Grand Marshal's Plate Shoulderguards
@@ -9980,7 +9894,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		},
 	},
 	{
-		Name = AL["Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16514, price = "9435 #horde#" }, --Champion's Plate Helm
 			{ itemID = 16516, price = "6885 #horde#" }, --Champion's Plate Shoulders
@@ -9991,7 +9905,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		},
 	},
 	{
-		Name = AL["Superior Rare Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Rare Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 23244, price = "24000 #horde#" }, --Champion's Plate Helm
 			{ itemID = 23243, price = "14000 #horde#" }, --Champion's Plate Shoulders
@@ -10002,7 +9916,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		},
 	},
 	{
-		Name = AL["Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 16542, price = "68200 #horde#" }, --Warlord's Plate Headpiece
 			{ itemID = 16544, price = "52200 #horde#" }, --Warlord's Plate Shoulders
@@ -10013,7 +9927,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		},
 	},
 	{
-		Name = AL["Superior Epic Set"] ..color.WHITE.." (Horde)",
+		Name = "Superior Epic Set" ..color.WHITE.." (Horde)",
 		{
 			{ itemID = 6116542, price = "2370 #arena# #horde#" }, --High Warlord's Plate Headpiece
 			{ itemID = 6116544, price = "1930 #arena# #horde#" }, --High Warlord's Plate Shoulders
@@ -10031,7 +9945,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 
 AtlasLoot_Data["PVPWeapons60"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["PvP Weapons (Level 60)"],
+	Name = "PvP Weapons (Level 60)",
 	{
 		Name = "Grand Marshal's (Alliance)",
 		{
@@ -10152,7 +10066,7 @@ AtlasLoot_Data["PVPWeapons60"] = {
 --------------------------------
 AtlasLoot_Data["PvP60Accessories"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["PvP Accessories (Level 60)"],
+	Name = "PvP Accessories (Level 60)",
 	{
 		Name = "Alliance 1",
 		{
@@ -10309,9 +10223,9 @@ AtlasLoot_Data["PvP60Accessories"] = {
 
 AtlasLoot_Data["PvP60Ench"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["PvP Enchants"],
+	Name = "PvP Enchants",
 	{
-		Name = AL["PvP Enchants"],
+		Name = "PvP Enchants",
 		{
 			{ itemID = 100545, price = "25000 #alliance#" }, --Superior Resistance
 			{ itemID = 100546, price = "25000 #alliance#" }, --Lesser Resilience
@@ -10351,7 +10265,7 @@ AtlasLoot_Data["DesolaceCentaurClans"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = "Desolace Centaur Clans",
 	{
-		Name = BabbleFaction["Magram Clan Centaur"],
+		Name = "Magram Clan Centaur",
 		WebID = {93,"faction"},
 		{
 			{ itemID = 6789}, --Ceremonial Centaur Blanket
@@ -10359,7 +10273,7 @@ AtlasLoot_Data["DesolaceCentaurClans"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Gelkis Clan Centaur"],
+		Name = "Gelkis Clan Centaur",
 		WebID = {92,"faction"},
 		{
 			{ itemID = 6773}, --Gelkis Marauder Chain
@@ -10370,9 +10284,9 @@ AtlasLoot_Data["DesolaceCentaurClans"] = {
 
 AtlasLoot_Data["Wintersaber"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleFaction["Wintersaber Trainers"],
+	Name = "Wintersaber Trainers",
 	{
-		Name = BabbleFaction["Wintersaber Trainers"],
+		Name = "Wintersaber Trainers",
 		{
 			{ itemID = 13086}, --Reins of the Winterspring Frostsaber 
 		},
@@ -10381,16 +10295,16 @@ AtlasLoot_Data["Wintersaber"] = {
 
 AtlasLoot_Data["ArathiBasinFactions"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Arathi Basin"],
+	Name = "Arathi Basin",
 	{
-		Name = BabbleFaction["The League of Arathor"] .." (" ..BabbleFaction["Alliance"] ..")",
+		Name = "The League of Arathor" .." (" .."Alliance" ..")",
 		WebID = {509,"faction"},
 		{
 			{ itemID = 20132}, --Arathor Battle Tabard
 		},
 	},
 	{
-		Name = BabbleFaction["The Defilers"] .." (" ..BabbleFaction["Horde"] ..")",
+		Name = "The Defilers" .." (" .."Horde" ..")",
 		WebID = {510,"faction"},
 		{
 			{ itemID = 20131}, --Battle Tabard of the Defilers
@@ -10404,9 +10318,9 @@ AtlasLoot_Data["ArathiBasinFactions"] = {
 
 AtlasLoot_Data["Argent"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleFaction["Argent Dawn"],
+	Name = "Argent Dawn",
 	{
-		Name = BabbleFaction["Argent Dawn"],
+		Name = "Argent Dawn",
 		WebID = {529,"faction"},
 		{
 			{ itemID = 22689}, --Sanctified Leather Helm
@@ -10431,7 +10345,7 @@ AtlasLoot_Data["Argent"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Friendly"],
+		Name = "Friendly",
 		WebID = {529,"faction"},
 		{
 			{ itemID = 13724}, --Enriched Manna Biscuit
@@ -10440,7 +10354,7 @@ AtlasLoot_Data["Argent"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		WebID = {529,"faction"},
 		{
 			{ itemID = 1519874 }, -- Crusader's Libram
@@ -10459,7 +10373,7 @@ AtlasLoot_Data["Argent"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		WebID = {529,"faction"},
 		{
 			{ itemID = 1519867 }, -- Arcanist's Cloak
@@ -10484,7 +10398,7 @@ AtlasLoot_Data["Argent"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		WebID = {529,"faction"},
 		{
 			{ itemID = 43072 }, -- Blessed Robe of Undead Cleansing
@@ -10522,17 +10436,17 @@ AtlasLoot_Data["Argent"] = {
 
 AtlasLoot_Data["Bloodsail"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleFaction["Bloodsail Buccaneers"],
+	Name = "Bloodsail Buccaneers",
 	{
-		Name = BabbleFaction["Bloodsail Buccaneers"],
+		Name = "Bloodsail Buccaneers",
 		WebID = {87,"faction"},
 		{
-			{ icon = "INV_Helmet_66", name = color.WHITE..BabbleFaction["Neutral"] },
+			{ icon = "INV_Helmet_66", name = color.WHITE.."Neutral" },
 			{ itemID = 22742}, --Bloodsail Shirt
 			{ itemID = 22743}, --Bloodsail Sash
 			{ itemID = 22745}, --Bloodsail Pants
 			{ itemID = 22744}, --Bloodsail Boots
-			{ icon = "INV_Helmet_66", name = color.WHITE..BabbleFaction["Friendly"] },
+			{ icon = "INV_Helmet_66", name = color.WHITE.."Friendly" },
 			{ itemID = 12185}, --Bloodsail Admiral's Hat
 		},
 	},
@@ -10540,18 +10454,18 @@ AtlasLoot_Data["Bloodsail"] = {
 
 AtlasLoot_Data["Hydraxian"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleFaction["Hydraxian Waterlords"],
+	Name = "Hydraxian Waterlords",
 	{
-		Name = BabbleFaction["Hydraxian Waterlords"],
+		Name = "Hydraxian Waterlords",
 		WebID = {749,"faction"},
 		{
-			{ icon = "Spell_Frost_SummonWaterElemental_2", name = color.WHITE..BabbleFaction["Honored"] },
+			{ icon = "Spell_Frost_SummonWaterElemental_2", name = color.WHITE.."Honored" },
 			{ itemID = 18399}, --Ocean's Breeze 
 			{ itemID = 18398}, --Tidal Loop 
 			{ itemID = 17333}, --Aqual Quintessence
 		},
 		{
-			{ icon = "Spell_Frost_SummonWaterElemental_2", name = color.WHITE..BabbleFaction["Revered"] },
+			{ icon = "Spell_Frost_SummonWaterElemental_2", name = color.WHITE.."Revered" },
 			{ itemID = 22754}, --Eternal Quintessence
 		},
 	},
@@ -10562,18 +10476,18 @@ AtlasLoot_Data["Hydraxian"] = {
 
 AtlasLoot_Data["AQBroodRings"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleFaction["Brood of Nozdormu"],
+	Name = "Brood of Nozdormu",
 	{
-		Name = BabbleFaction["Brood of Nozdormu"],
+		Name = "Brood of Nozdormu",
 		WebID = {910,"faction"},
 		{
-			{ icon = "INV_Jewelry_Ring_40", name = color.WHITE..AL["Path of the Conqueror"] },
+			{ icon = "INV_Jewelry_Ring_40", name = color.WHITE.."Path of the Conqueror" },
 			{ itemID = 21201}, --Signet Ring of the Bronze Dragonflight
 			{ itemID = 21202}, --Signet Ring of the Bronze Dragonflight
 			{ itemID = 21203}, --Signet Ring of the Bronze Dragonflight
 			{ itemID = 21204}, --Signet Ring of the Bronze Dragonflight
 			{ itemID = 21205}, --Signet Ring of the Bronze Dragonflight
-			{ icon = "INV_Jewelry_Ring_40", name = color.WHITE..AL["Path of the Invoker"] },
+			{ icon = "INV_Jewelry_Ring_40", name = color.WHITE.."Path of the Invoker" },
 			{ itemID = 21206}, --Signet Ring of the Bronze Dragonflight
 			{ itemID = 21207}, --Signet Ring of the Bronze Dragonflight
 			{ itemID = 21208}, --Signet Ring of the Bronze Dragonflight
@@ -10581,7 +10495,7 @@ AtlasLoot_Data["AQBroodRings"] = {
 			{ itemID = 21210}, --Signet Ring of the Bronze Dragonflight
 		},
 		{
-			{ icon = "INV_Jewelry_Ring_40", name = color.WHITE..AL["Path of the Protector"] },
+			{ icon = "INV_Jewelry_Ring_40", name = color.WHITE.."Path of the Protector" },
 			{ itemID = 21196}, --Signet Ring of the Bronze Dragonflight
 			{ itemID = 21197}, --Signet Ring of the Bronze Dragonflight
 			{ itemID = 21198}, --Signet Ring of the Bronze Dragonflight
@@ -10597,9 +10511,9 @@ AtlasLoot_Data["AQBroodRings"] = {
 
 AtlasLoot_Data["Cenarion"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleFaction["Cenarion Circle"],
+	Name = "Cenarion Circle",
 	{
-		Name = BabbleFaction["Friendly"],
+		Name = "Friendly",
 		WebID = {609,"faction"},
 		{
 			{ itemID = 22209}, --Plans: Heavy Obsidian Belt
@@ -10612,7 +10526,7 @@ AtlasLoot_Data["Cenarion"] = {
 			{ itemID = 22310}, --Pattern: Cenarion Herb Bag
 		},
 		{
-			{ icon = "INV_QirajIdol_Amber", name = color.WHITE..AL["Token Hand-Ins"] },
+			{ icon = "INV_QirajIdol_Amber", name = color.WHITE.."Token Hand-Ins" },
 			{ itemID = 21187}, --Earthweave Cloak
 			{ itemID = 21178}, --Gloves of Earthen Power
 			{ itemID = 21179}, --Band of Earthen Wrath
@@ -10624,7 +10538,7 @@ AtlasLoot_Data["Cenarion"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		WebID = {609,"faction"},
 		{
 			{ itemID = 1519873 }, -- Sandcovered Libram
@@ -10639,7 +10553,7 @@ AtlasLoot_Data["Cenarion"] = {
 			{ itemID = 22773}, --Pattern: Sylvan Crown
 		},
 		{
-			{ icon = "INV_QirajIdol_Amber", name = color.WHITE..AL["Token Hand-Ins"] },
+			{ icon = "INV_QirajIdol_Amber", name = color.WHITE.."Token Hand-Ins" },
 			{ itemID = 21183}, --Earthpower Vest
 			{ itemID = 21182}, --Band of Earthen Might
 			{ itemID = 21181}, --Grace of Earth
@@ -10647,7 +10561,7 @@ AtlasLoot_Data["Cenarion"] = {
 
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		WebID = {609,"faction"},
 		{
 			{ itemID = 1519870 }, -- Amulet of the Third War
@@ -10666,7 +10580,7 @@ AtlasLoot_Data["Cenarion"] = {
 			{ itemID = 46514}, -- Formula: Enchant Bracers - Lesser Expertise
 		},
 		{
-			{ icon = "INV_QirajIdol_Amber", name = color.WHITE..AL["Token Hand-Ins"] },
+			{ icon = "INV_QirajIdol_Amber", name = color.WHITE.."Token Hand-Ins" },
 			{ itemID = 21186}, --Rockfury Bracers
 			{ itemID = 21184}, --Deeprock Bracers
 			{ itemID = 21189}, --Might of Cenarius
@@ -10674,7 +10588,7 @@ AtlasLoot_Data["Cenarion"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		WebID = {609,"faction"},
 		{
 			{ itemID = 1519862 }, -- Ancient Buckler
@@ -10690,7 +10604,7 @@ AtlasLoot_Data["Cenarion"] = {
 			{ itemID = 20382}, --Pattern: Dreamscale Breastplate
 		},
 		{
-			{ icon = "INV_QirajIdol_Amber", name = color.WHITE..AL["Token Hand-Ins"] },
+			{ icon = "INV_QirajIdol_Amber", name = color.WHITE.."Token Hand-Ins" },
 			{ itemID = 21190}, --Wrath of Cenarius
 			{ itemID = 21180}, --Earthstrike
 			{ itemID = 21188}, --Fist of Cenarius
@@ -10704,9 +10618,9 @@ AtlasLoot_Data["Cenarion"] = {
 
 AtlasLoot_Data["AlteracFactions"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleZone["Alterac Valley"],
+	Name = "Alterac Valley",
 	{
-		Name = BabbleFaction["Stormpike Guard"] .." (" ..BabbleFaction["Alliance"] ..")",
+		Name = "Stormpike Guard" .." (" .."Alliance" ..")",
 		WebID = {730,"faction"},
 		{
 			{ itemID = 17904}, --Stormpike Insignia Rank 6
@@ -10722,7 +10636,7 @@ AtlasLoot_Data["AlteracFactions"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Frostwolf Clan"] .." (" ..BabbleFaction["Horde"] ..")",
+		Name = "Frostwolf Clan" .." (" .."Horde" ..")",
 		WebID = {729,"faction"},
 		{
 			{ itemID = 17909}, --Frostwolf Insignia Rank 6
@@ -10741,9 +10655,9 @@ AtlasLoot_Data["AlteracFactions"] = {
 
 AtlasLoot_Data["Thorium"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleFaction["Thorium Brotherhood"],
+	Name = "Thorium Brotherhood",
 	{
-		Name = BabbleFaction["Friendly"],
+		Name = "Friendly",
 		WebID = {59,"faction"},
 		{
 			{ itemID = 17051}, --Plans: Dark Iron Bracers
@@ -10755,7 +10669,7 @@ AtlasLoot_Data["Thorium"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		WebID = {59,"faction"},
 		{
 			{ itemID = 1519907 }, -- Thorium Linked Wristsguards
@@ -10774,7 +10688,7 @@ AtlasLoot_Data["Thorium"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		WebID = {59,"faction"},
 		{
 			{ itemID = 1519905 }, -- Thorium Reinforced Buckler
@@ -10796,7 +10710,7 @@ AtlasLoot_Data["Thorium"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		WebID = {59,"faction"},
 		{
 			{ itemID = 1519900 }, -- Thorium Staff
@@ -10817,9 +10731,9 @@ AtlasLoot_Data["Thorium"] = {
 
 AtlasLoot_Data["Timbermaw"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleFaction["Timbermaw Hold"],
+	Name = "Timbermaw Hold",
     {
-		Name = BabbleFaction["Timbermaw Hold"],
+		Name = "Timbermaw Hold",
 		WebID = {576,"faction"},
 		{
 			{ itemID = 16768 }, -- Furbold Medicine Pouch
@@ -10827,7 +10741,7 @@ AtlasLoot_Data["Timbermaw"] = {
 		},
 	},
     {
-		Name = BabbleFaction["Friendly"],
+		Name = "Friendly",
 		WebID = {576,"faction"},
 		{
 			{ itemID = 20254 }, -- Pattern: Warbear Woolies
@@ -10837,7 +10751,7 @@ AtlasLoot_Data["Timbermaw"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		WebID = {576,"faction"},
 		{
 			{ itemID = 1519894 }, -- Timbermaw Root
@@ -10850,7 +10764,7 @@ AtlasLoot_Data["Timbermaw"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		WebID = {576,"faction"},
 		{
 			{ itemID = 856010 }, -- Handcrafted Beast Cleaver
@@ -10868,7 +10782,7 @@ AtlasLoot_Data["Timbermaw"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		WebID = {576,"faction"},
 		{
 			{ itemID = 21326 }, -- Defender of the Timbermaw
@@ -10889,16 +10803,16 @@ AtlasLoot_Data["Timbermaw"] = {
 
 AtlasLoot_Data["Zandalar"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = BabbleFaction["Zandalar Tribe"],
+	Name = "Zandalar Tribe",
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		WebID = {270,"faction"},
 		{
 			{ itemID = 19858}, --Zandalar Honor Token
 		},
 	},
 	{
-		Name = BabbleFaction["Friendly"],
+		Name = "Friendly",
 		WebID = {270,"faction"},
 		{
 			{ itemID = 20012}, --Recipe: Greater Dreamless Sleep
@@ -10911,7 +10825,7 @@ AtlasLoot_Data["Zandalar"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Honored"],
+		Name = "Honored",
 		WebID = {270,"faction"},
 		{
 			{ itemID = 20014}, --Recipe: Major Troll's Blood Potion
@@ -10926,7 +10840,7 @@ AtlasLoot_Data["Zandalar"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Revered"],
+		Name = "Revered",
 		WebID = {270,"faction"},
 		{
 			{ itemID = 20080}, --Sheen of Zanza
@@ -10941,7 +10855,7 @@ AtlasLoot_Data["Zandalar"] = {
 		},
 	},
 	{
-		Name = BabbleFaction["Exalted"],
+		Name = "Exalted",
 		WebID = {270,"faction"},
 		{
 			{ itemID = 20077}, --Zandalar Signet of Might
@@ -10984,7 +10898,7 @@ AtlasLoot_Data["Zandalar"] = {
 
 AtlasLoot_Data["WorldBossesCLASSIC"] = {
 	Module = "AtlasLoot_OriginalWoW",
-	Name = AL["World Bosses"],
+	Name = "World Bosses",
 	Type = "ClassicRaid",
 	{
 		Name = "Weapons/Trinkets",

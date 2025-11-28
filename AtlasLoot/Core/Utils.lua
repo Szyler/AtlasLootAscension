@@ -1,5 +1,4 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 --------------------------------- DewDrop Dropdownmenu ---------------------------------
 -- Used to create a dewdrop menus from tables
@@ -69,7 +68,7 @@ function AtlasLoot:OpenDewdropMenu(frame, menuList, ...)
 				if i == #menuList[level] then
 					addDiviver(textLength)
 					self.Dewdrop:AddLine(
-						"text", self.Colors.CYAN..AL["Close Menu"],
+						"text", self.Colors.CYAN.."Close Menu",
 						"textHeight", textSize,
 						"textWidth", textSize,
 						"closeWhenClicked", true,
@@ -99,7 +98,7 @@ end
 --drop down map menu
 function AtlasLoot:OpenDB(frame, type, text)
     local menuList = { [1] = {
-        {text = self.Colors.ORANGE..AL["Open AscensionDB To NPC"], func = function() self:OpenDBURL(text , type) end},
+        {text = self.Colors.ORANGE.."Open AscensionDB To NPC", func = function() self:OpenDBURL(text , type) end},
 		}
 	}
     self:OpenDewdropMenu(frame, menuList)

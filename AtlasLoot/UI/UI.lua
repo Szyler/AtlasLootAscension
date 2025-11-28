@@ -1,5 +1,4 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local INDENT = "    "
 local backDrop = {
         bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
@@ -51,7 +50,7 @@ function AtlasLoot:InitializeUI()
             atlas = "poi-islands-table",
             onClick = function(...) self:ShowMapTab(...) end,
             onEnter = function(button)
-                self:SetGameTooltip(button,AL["Right Click to select the map"], "ANCHOR_BOTTOMRIGHT")
+                self:SetGameTooltip(button,"Right Click to select the map", "ANCHOR_BOTTOMRIGHT")
             end,
             onLeave = function() GameTooltip:Hide() end,
         },
@@ -60,7 +59,7 @@ function AtlasLoot:InitializeUI()
             atlas = "poi-workorders",
             onClick = function(button, buttonClick)self:ShowWishListTab(button,buttonClick,true) end,
             onEnter = function(button)
-                self:SetGameTooltip(button,AL["Right Click to view options"], "ANCHOR_BOTTOMRIGHT")
+                self:SetGameTooltip(button,"Right Click to view options", "ANCHOR_BOTTOMRIGHT")
             end,
             onLeave = function() GameTooltip:Hide() end,
         },
@@ -183,7 +182,7 @@ function AtlasLoot:InitializeUI()
     -- Back button
     self.ui.backbutton = CreateFrame("Button", nil, self.itemframe, "UIPanelButtonTemplate")
     self.ui.backbutton:SetPoint("BOTTOM", self.itemframe, "BOTTOM",0,5)
-    self.ui.backbutton:SetText(AL["Back"])
+    self.ui.backbutton:SetText("Back")
     self.ui.backbutton:SetScript("OnClick", function(button) self:BackButton_OnClick() end)
 
     -- Toggle the visibility of the next/prev and back buttons true to show
@@ -203,11 +202,11 @@ function AtlasLoot:InitializeUI()
     -- Learn Unknown vanity spells button
     self.ui.learnSpellbtn = CreateFrame("Button", "AtlasLoot_LearnUnknownSpells", self.itemframe, "OptionsButtonTemplate")
     self.ui.learnSpellbtn:SetPoint("BOTTOM", self.itemframe, "BOTTOM",0,5)
-    self.ui.learnSpellbtn:SetText(AL["Learn All Unknown"])
+    self.ui.learnSpellbtn:SetText("Learn All Unknown")
     self.ui.learnSpellbtn:SetWidth(150)
     self.ui.learnSpellbtn:SetScript("OnClick", function() self:LearnAllUnknownVanitySpells() end)
     self.ui.learnSpellbtn:SetScript("OnEnter", function(button)
-        self:SetGameTooltip(button,AL["Learn all the vanity items and spells that you currently don't know on this character"])
+        self:SetGameTooltip(button,"Learn all the vanity items and spells that you currently don't know on this character")
     end)
     self.ui.learnSpellbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
@@ -249,7 +248,7 @@ function AtlasLoot:InitializeUI()
     self.ui.wishlistShareButton.IconAtlas:SetAtlas("communities-create-button-wow-up")
     self.ui.wishlistShareButton:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
         self.ui.wishlistShareButton:SetScript("OnEnter", function(button)
-        self:SetGameTooltip(button,AL["Share wishlist"])
+        self:SetGameTooltip(button,"Share wishlist")
     end)
     self.ui.wishlistShareButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
     self.ui.wishlistShareButton:SetScript("OnMouseDown", function(button)
@@ -272,7 +271,7 @@ function AtlasLoot:InitializeUI()
     self.ui.wishlistLearnVanityButton:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
     self.ui.wishlistLearnVanityButton:SetScript("OnClick", function() self:BatchRequestVanity(self.vanityItems, true) end)
     self.ui.wishlistLearnVanityButton:SetScript("OnEnter", function(button)
-        self:SetGameTooltip(button,AL["Learn/Recive all the vanity items on this page"])
+        self:SetGameTooltip(button,"Learn/Recive all the vanity items on this page")
     end)
     self.ui.wishlistLearnVanityButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
@@ -280,7 +279,7 @@ function AtlasLoot:InitializeUI()
     self.ui.filterButton = CreateFrame("CheckButton","AtlasLootFilterCheck",self.itemframe,"OptionsCheckButtonTemplate")
     self.ui.filterButton:SetPoint("TOPLEFT", self.itemframe,5 ,-5)
     self.ui.filterButton.Label = self.ui.filterButton:CreateFontString(nil,"OVERLAY","GameFontNormal")
-    self.ui.filterButton.Label:SetText(AL["Filter"])
+    self.ui.filterButton.Label:SetText("Filter")
     self.ui.filterButton.Label:SetPoint("RIGHT", self.ui.filterButton, 30, 2)
     self.ui.filterButton:RegisterForClicks("LeftButtonDown","RightButtonDown")
     self.ui.filterButton:SetScript("OnClick", function(button, btnclick) self:FilterEnableButton(button, btnclick) end)
@@ -315,7 +314,7 @@ function AtlasLoot:InitializeUI()
     self.ui.moduelMenuButton:SetPoint("RIGHT", self.ui.submenuButton, "LEFT",-5,0)
     self.ui.moduelMenuButton.Lable:SetText("Select Module")
     self.ui.moduelMenuButton.Lable:Show()
-    self.ui.moduelMenuButton:SetText(AL["Select Loot Table"])
+    self.ui.moduelMenuButton:SetText("Select Loot Table")
     self.ui.moduelMenuButton:SetScript("OnClick", function() self:ModuleMenuOpen() end)
 
     --Options Button

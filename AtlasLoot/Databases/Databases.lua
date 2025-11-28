@@ -1,12 +1,12 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
+
+
 
 --Table holding all loot tables is initialised here as it loads early
 AtlasLoot_Data = {
 	["EmptyTable"] = {
-		Name = AL["Select a Loot Table..."],
-		{Name = AL["Select a Loot Table..."]},
+		Name = "Select a Loot Table...",
+		{Name = "Select a Loot Table..."},
 	}
 }
 AtlasLoot.itemData = {}
@@ -29,70 +29,70 @@ AtlasLoot_CraftingData = {
 }
 
 AtlasLoot_CraftingData["Custom"] = {
-[1] = { AL["DISCOVERY_ALCH_ELIXIRFLASK"] },
-[2] = { AL["DISCOVERY_ALCH_POTION"] },
-[3] = { AL["DISCOVERY_ALCH_XMUTE"] },
-[4] = { AL["DISCOVERY_ALCH_PROT"] },
-[5] = { AL["DAILY_COOKING_MEAT"], BabbleZone["Shattrath"], 0, 0 },
-[6] = { AL["DAILY_COOKING_FISH"], BabbleZone["Shattrath"], 0, 0 },
-[7] = { AL["DAILY_FISHING_SHATT"], BabbleZone["Shattrath"], 0, 0 },
-[8] = { AL["DEFAULT_RECIPE"] },
-[9] = { AL["CRAFTED_ENGINEERS"] },
-[10] = { AL["ONYXIA_HEAD_QUEST"], BabbleZone["Onyxia's Lair"], 0, 0 },
-[11] = { AL["EDGE_OF_MADNESS"], BabbleZone["Zul'Gurub"], 0, 0 },
-[12] = { AL["DISCOVERY_ALCH_WRATH"] },
-[13] = { AL["HENRY_STERN_RFD"], BabbleZone["Razorfen Downs"], 0, 0 },
-[14] = { AL["DISCOVERY_INSC_MINOR"] },
-[15] = { AL["DISCOVERY_INSC_NORTHREND"] },
-[16] = { AL["ENG_GNOMER"], BabbleZone["Gnomeregan"], 0, 0 },
-[17] = { AL["ENG_FLOOR_ITEM_BRD"], BabbleZone["Blackrock Depths"], 0, 0 },
-[18] = { AL["DISCOVERY_ALCH_NORTHREND_RESEARCH"] },
-[19] = { AL["DISCOVERY_ALCH_NORTHREND_XMUTE"] },
-[20] = { AL["Custom36"] },
-[21] = { AL["Custom36"] },
-[22] = { AL["AQ40_RANDOM_BOP"], BabbleZone["Temple of Ahn'Qiraj"], 0, 0 },
-[23] = { AL["DM_CACHE"], BabbleZone["Dire Maul"], 59.04, 48.82 },
-[24] = { AL["SUNWELL_RANDOM"], BabbleZone["Sunwell Plateau"], 0, 0 },
-[25] = { AL["BRD_RANDOM_ROOM"], BabbleZone["Blackrock Depths"], 0, 0 },
-[26] = { AL["MC_RANDOM"], BabbleZone["Molten Core"], 0, 0 },
-[27] = { AL["HYJAL_RANDOM"], BabbleZone["Hyjal Summit"], 0, 0 },
-[28] = { AL["Custom36"] },
-[29] = { AL["ZA_RANDOM"], BabbleZone["Zul'Aman"], 0, 0 },
-[30] = { AL["SCHOLO_BOOK_SPAWN"], BabbleZone["Scholomance"], 0, 0 },
-[31] = { AL["STRATH_BS_PLANS"], BabbleZone["Stratholme"], 0, 0 },
-[32] = { AL["DM_TRIBUTE"], BabbleZone["Dire Maul"], 59.04, 48.82 },
-[33] = { AL["Custom36"] },
-[34] = { AL["BT_RANDOM"], BabbleZone["Black Temple"], 0, 0 },
-[35] = { AL["Random Level 70 instance drop"] },
-[36] = { AL["Custom36"] },
-[37] = { AL["SSC_RANDOM"], BabbleZone["Serpentshrine Cavern"], 0, 0 },
-[38] = { AL["DAILY_COOKING_DAL"], BabbleZone["Dalaran"], 0, 0 },
-[39] = { AL["ULDUAR_RANDOM"], BabbleZone["Ulduar"], 0, 0 },
-[40] = { AL["DISCOVERY_INSC_BOOK"] },
-[41] = { AL["Custom41"] },
-[42] = { AL["TOC25_RANDOM"] },
-[43] = { AL["TK_RANDOM"], BabbleZone["The Eye"], 0, 0 },
-[44] = { AL["Custom44"] },
-[45] = { AL["Custom45"] },
-[46] = { AL["Random Level 70 instance drop/Raid Trash Drop"].."/"..AL["TBC Callboard Cache"] },
+[1] = { "DISCOVERY_ALCH_ELIXIRFLASK" },
+[2] = { "DISCOVERY_ALCH_POTION" },
+[3] = { "DISCOVERY_ALCH_XMUTE" },
+[4] = { "DISCOVERY_ALCH_PROT" },
+[5] = { "DAILY_COOKING_MEAT", "Shattrath", 0, 0 },
+[6] = { "DAILY_COOKING_FISH", "Shattrath", 0, 0 },
+[7] = { "DAILY_FISHING_SHATT", "Shattrath", 0, 0 },
+[8] = { "DEFAULT_RECIPE" },
+[9] = { "CRAFTED_ENGINEERS" },
+[10] = { "ONYXIA_HEAD_QUEST", "Onyxia's Lair", 0, 0 },
+[11] = { "EDGE_OF_MADNESS", "Zul'Gurub", 0, 0 },
+[12] = { "DISCOVERY_ALCH_WRATH" },
+[13] = { "HENRY_STERN_RFD", "Razorfen Downs", 0, 0 },
+[14] = { "DISCOVERY_INSC_MINOR" },
+[15] = { "DISCOVERY_INSC_NORTHREND" },
+[16] = { "ENG_GNOMER", "Gnomeregan", 0, 0 },
+[17] = { "ENG_FLOOR_ITEM_BRD", "Blackrock Depths", 0, 0 },
+[18] = { "DISCOVERY_ALCH_NORTHREND_RESEARCH" },
+[19] = { "DISCOVERY_ALCH_NORTHREND_XMUTE" },
+[20] = { "Custom36" },
+[21] = { "Custom36" },
+[22] = { "AQ40_RANDOM_BOP", "Temple of Ahn'Qiraj", 0, 0 },
+[23] = { "DM_CACHE", "Dire Maul", 59.04, 48.82 },
+[24] = { "SUNWELL_RANDOM", "Sunwell Plateau", 0, 0 },
+[25] = { "BRD_RANDOM_ROOM", "Blackrock Depths", 0, 0 },
+[26] = { "MC_RANDOM", "Molten Core", 0, 0 },
+[27] = { "HYJAL_RANDOM", "Hyjal Summit", 0, 0 },
+[28] = { "Custom36" },
+[29] = { "ZA_RANDOM", "Zul'Aman", 0, 0 },
+[30] = { "SCHOLO_BOOK_SPAWN", "Scholomance", 0, 0 },
+[31] = { "STRATH_BS_PLANS", "Stratholme", 0, 0 },
+[32] = { "DM_TRIBUTE", "Dire Maul", 59.04, 48.82 },
+[33] = { "Custom36" },
+[34] = { "BT_RANDOM", "Black Temple", 0, 0 },
+[35] = { "Random Level 70 instance drop" },
+[36] = { "Custom36" },
+[37] = { "SSC_RANDOM", "Serpentshrine Cavern", 0, 0 },
+[38] = { "DAILY_COOKING_DAL", "Dalaran", 0, 0 },
+[39] = { "ULDUAR_RANDOM", "Ulduar", 0, 0 },
+[40] = { "DISCOVERY_INSC_BOOK" },
+[41] = { "Custom41" },
+[42] = { "TOC25_RANDOM" },
+[43] = { "TK_RANDOM", "The Eye", 0, 0 },
+[44] = { "Custom44" },
+[45] = { "Custom45" },
+[46] = { "Random Level 70 instance drop/Raid Trash Drop".."/".."TBC Callboard Cache" },
 }
 
 AtlasLoot_CraftingData["Seasonal"] = {
 [1] = { GetCategoryInfo(156) }, -- Winter's Veil
 [2] = { GetCategoryInfo(160) }, -- Lunar Festival
-[3] = { AL["Darkmoon Faire"] }, -- Darkmoon Faire
+[3] = { "Darkmoon Faire" }, -- Darkmoon Faire
 [4] = { GetCategoryInfo(161) }, -- Midsummer
 [5] = { GetCategoryInfo(14981) }, -- Pilgrim's Bounty
-[6] = { AL["Day of the Dead"] }, -- Day of the Dead
+[6] = { "Day of the Dead" }, -- Day of the Dead
 }
 
 ----------------------
 --- Heirloom Items ---
 ----------------------
 AtlasLoot_Data["Heirloom"] = {
-	Name = AL["Heirloom"],
+	Name = "Heirloom",
 	{
-		Name = AL["Trinkets"],
+		Name = "Trinkets",
 		{
 			{ itemID = 1642992, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }, --Discerning Eye of the Beast
 			{ itemID = 1642991, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }, --Swift Hand of Justice
@@ -101,7 +101,7 @@ AtlasLoot_Data["Heirloom"] = {
 		},
 	},
 	{
-		Name = AL["Necks"],
+		Name = "Necks",
 		{
 			{ itemID = 1339077, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },
 			{ itemID = 1339076, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },
@@ -111,7 +111,7 @@ AtlasLoot_Data["Heirloom"] = {
 		},
 	},
 	{
-		Name = AL["Rings"],
+		Name = "Rings",
 		{
 			{ itemID = 1339079, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },
 			{ itemID = 1339080, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },
@@ -122,7 +122,7 @@ AtlasLoot_Data["Heirloom"] = {
 		},
 	},
 	{
-		Name = AL["Weapons"],
+		Name = "Weapons",
 		{
 			{ itemID = 1642944, price = "600 #tokenofprestige# | 96000 #marks# | 600 #bazaar#"  }, --Balanced Heartseeker
 			{ itemID = 1642945, price = "600 #tokenofprestige# | 96000 #marks# | 600 #bazaar#"  }, --Venerable Dal'Rend's Sacred Charge

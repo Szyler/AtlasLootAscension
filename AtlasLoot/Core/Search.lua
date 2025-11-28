@@ -1,5 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 
 -- Supported Operators
 local OP_AND = "&"
@@ -666,7 +666,7 @@ end
 local itemList = {}
 
 function AtlasLoot:DoSearch(searchText)
-    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", {Name = AL["Search Results"],{},{}}}
+    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", {Name = "Search Results",{},{}}}
     count = 1
     showSearch = false
 
@@ -747,7 +747,7 @@ local searchCategories = {
 function AtlasLoot:ShowSearchOptions(button)
     local profile = self.selectedProfile
     local menuList = {{
-			{text = AL["Search Categories"], func = function() self:AddWishList() end, isTitle = true},
+			{text = "Search Categories", func = function() self:AddWishList() end, isTitle = true},
 	}}
 
     for _, cat in pairs(searchCategories) do
@@ -760,16 +760,16 @@ function AtlasLoot:ShowSearchOptions(button)
     end
 
     local searchOptionsItems = {{
-        { text = AL["Search options"], isTitle = true },
+        { text = "Search options", isTitle = true },
         {
-            text = AL["Ascension Vanity Collection"], isRadio = true, checked = profile.SearchAscensionVanity, dontCloseWhenClicked = true,
-            tooltip = AL["If checked, AtlasLoot will search Ascension Vanity Collection"], func = function() profile.SearchAscensionVanity = not profile.SearchAscensionVanity end },
+            text = "Ascension Vanity Collection", isRadio = true, checked = profile.SearchAscensionVanity, dontCloseWhenClicked = true,
+            tooltip = "If checked, AtlasLoot will search Ascension Vanity Collection", func = function() profile.SearchAscensionVanity = not profile.SearchAscensionVanity end },
         {
-            text = AL["Partial matching"], isRadio = true, checked = profile.PartialMatching, dontCloseWhenClicked = true,
-            tooltip = AL["If checked, AtlasLoot search item names for a partial match."], func = function() profile.PartialMatching = not profile.PartialMatching end },
+            text = "Partial matching", isRadio = true, checked = profile.PartialMatching, dontCloseWhenClicked = true,
+            tooltip = "If checked, AtlasLoot search item names for a partial match.", func = function() profile.PartialMatching = not profile.PartialMatching end },
         {
-            text = AL["Search AscensionDB"], isRadio = true, checked = profile.SearchAscensionDB, dontCloseWhenClicked = true,
-            tooltip = AL["If checked, AtlasLoot will open a browser window and search AscensionDB"], func = function() profile.SearchAscensionDB = not profile.SearchAscensionDB end 
+            text = "Search AscensionDB", isRadio = true, checked = profile.SearchAscensionDB, dontCloseWhenClicked = true,
+            tooltip = "If checked, AtlasLoot will open a browser window and search AscensionDB", func = function() profile.SearchAscensionDB = not profile.SearchAscensionDB end 
         },
     }}
 
@@ -1067,7 +1067,7 @@ function AtlasLoot:InitializeSearch()
                     end
                 end
                 -- Close button
-                self.Dewdrop:AddLine("text", AL["Close Menu"], "textR", 0, "textG", 1, "textB", 1, "closeWhenClicked", true, "notCheckable", true)
+                self.Dewdrop:AddLine("text", "Close Menu", "textR", 0, "textG", 1, "textB", 1, "closeWhenClicked", true, "notCheckable", true)
             elseif level == 2 then
                 if value then
                     for k, v in ipairs(value) do
@@ -1160,7 +1160,7 @@ function AtlasLoot:InitializeSearch()
                     end
                 end
                 -- Close button
-                self.Dewdrop:AddLine("text", AL["Close Menu"], "textR", 0, "textG", 1, "textB", 1, "func", function()
+                self.Dewdrop:AddLine("text", "Close Menu", "textR", 0, "textG", 1, "textB", 1, "func", function()
                     self.Dewdrop:Close()
                 end, "notCheckable", true)
             elseif level == 2 then
@@ -1187,7 +1187,7 @@ function AtlasLoot:InitializeSearch()
                         end
                     end
                 end
-                self.Dewdrop:AddLine("text", AL["Close Menu"], "textR", 0, "textG", 1, "textB", 1, "func", function()
+                self.Dewdrop:AddLine("text", "Close Menu", "textR", 0, "textG", 1, "textB", 1, "func", function()
                     self.Dewdrop:Close()
                 end, "notCheckable", true)
             end
@@ -1288,7 +1288,7 @@ function AtlasLoot:InitializeSearch()
             end
         end
         if allDisabled then
-            DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED .. AL["AtlasLoot"] .. ": " .. self.Colors.WHITE .. AL["You don't have any module selected to search on. Right click search to select modules the more selected the longer it will take to search"])
+            DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED .. "AtlasLoot" .. ": " .. self.Colors.WHITE .. "You don't have any module selected to search on. Right click search to select modules the more selected the longer it will take to search")
             return
         end
 

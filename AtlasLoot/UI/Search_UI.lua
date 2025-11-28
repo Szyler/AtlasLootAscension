@@ -1,5 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 
 local MAX_ARGUMENTS = 6
 local backDrop = {
@@ -171,7 +171,7 @@ function AtlasLoot:CreateSearchFrame()
     searchPanel.searchbtn:SetPoint("BOTTOMLEFT", searchPanel, "BOTTOMLEFT", 15, 15)
 
     searchPanel.searchbtn:SetScript("OnShow", function(self)
-        self:SetText(AL["Search"])
+        self:SetText("Search")
         self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 )
     end)
     searchPanel.searchbtn:SetScript("OnClick", function()

@@ -1,5 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 
 --[[
 AtlasLoot:OptionsToggle:
@@ -7,7 +7,7 @@ Toggle on/off the options window
 ]]
 function AtlasLoot:OptionsToggle()
     if InterfaceOptionsFrame_OpenToCategory and not InterfaceOptionsFrame:IsVisible() then
-	    InterfaceOptionsFrame_OpenToCategory(AL["AtlasLoot"])
+	    InterfaceOptionsFrame_OpenToCategory("AtlasLoot")
 	else
 		InterfaceOptionsFrame:Hide()
     end
@@ -25,58 +25,58 @@ function AtlasLoot:InitializeOptionsFrame()
                     {
                         Type = "CheckButton",
                         Name = "Opaque",
-                        Lable = AL["Make Loot Table Opaque"],
+                        Lable = "Make Loot Table Opaque",
                         OnClick = function(button) self.selectedProfile.Opaque = button:GetChecked() self:FrameOpaqueToogle() end
                     },
                     {
                         Type = "CheckButton",
                         Name = "AutoCurrentInstance",
-                        Lable = AL["Auto Load Instance Loot Pages"],
+                        Lable = "Auto Load Instance Loot Pages",
                         OnClick = function(button) self.selectedProfile.AutoCurrentInstance = button:GetChecked() end
                     },
                     {
                         Type = "CheckButton",
                         Name = "showdropLocationOnSearch",
-                        Lable = AL["Show drop location on search results"],
+                        Lable = "Show drop location on search results",
                         OnClick = function(button) self.selectedProfile.showdropLocationOnSearch = button:GetChecked() end
                     },
                     {
                         Type = "CheckButton",
                         Name = "showUnknownRecipeTooltip",
-                        Lable = AL["Show if recipe is unknown in tooltips"],
+                        Lable = "Show if recipe is unknown in tooltips",
                         OnClick = function(button) self.selectedProfile.showUnknownRecipeTooltip = button:GetChecked() end
                     },
                     {
                         Type = "CheckButton",
                         
                         Name = "recipeExtraInfoSwitch",
-                        Lable = AL["Hide crafting source unless holding CTRL"],
+                        Lable = "Hide crafting source unless holding CTRL",
                         OnClick = function(button) self.selectedProfile.recipeExtraInfoSwitch = button:GetChecked() end
                     },
                     {
                         Type = "CheckButton",
                         Name = "showdropLocationTooltips",
-                        Lable = AL["Show drop locations in tooltips"],
+                        Lable = "Show drop locations in tooltips",
                         OnClick = function(button) self.selectedProfile.showdropLocationTooltips = button:GetChecked() self:CreateItemSourceList(true) end
                     },
                     {
                         Type = "CheckButton",
                         Name = "MerchantGlow",
-                        Lable = AL["Wishlist Vendor Glow"],
-                        Tooltip = AL["Make items in a vendor window glow if they are on a wishlist"],
+                        Lable = "Wishlist Vendor Glow",
+                        Tooltip = "Make items in a vendor window glow if they are on a wishlist",
                         OnClick = function(button) self.selectedProfile.MerchantGlow = button:GetChecked() self:InitializeWishlistMerchantGlow() end
                     },
                     {
                         Type = "CheckButton",
                         Name = "EquipCompare",
-                        Lable = AL["Show Comparison Tooltips"],
+                        Lable = "Show Comparison Tooltips",
                         OnClick = function(button) self.selectedProfile.EquipCompare = button:GetChecked() end
                     },
                     {
                         Type = "Menu",
                         Name = "LootBrowserStyle",
-                        Lable = AL["Skin"],
-                        Tooltip = AL["Change Atlasloot skin"],
+                        Lable = "Skin",
+                        Tooltip = "Change Atlasloot skin",
                         Func = 	function(name, selection)
                             self.selectedProfile.LootBrowserStyle = selection
                             self:SetSkin(self.skinKeys[self.selectedProfile.LootBrowserStyle][1])
@@ -92,8 +92,8 @@ function AtlasLoot:InitializeOptionsFrame()
                     {
                         Type = "Menu",
                         Name = "selectedProfile",
-                        Lable = AL["Settings Profile"],
-                        Tooltip = AL["Change settings the profile of AtlasLoot"],
+                        Lable = "Settings Profile",
+                        Tooltip = "Change settings the profile of AtlasLoot",
                         Func = 	function(name, selection)
                             self.db.profile.settingsProfile = name
                             self.selectedProfile = self.db.settingsProfiles[name]
@@ -131,7 +131,7 @@ function AtlasLoot:InitializeOptionsFrame()
                     {
                         Type = "CheckButton",
                         Name = "minimap",
-                        Lable = AL["Hide minimap icon"],
+                        Lable = "Hide minimap icon",
                         OnClick = function() self:ToggleMinimap() end
                     },
                     {
@@ -174,30 +174,30 @@ function AtlasLoot:InitializeOptionsFrame()
             },
             {
                 Name = "Help",
-                TitleText = AL["AtlasLoot Help"],
+                TitleText = "AtlasLoot Help",
             },
             {
                 Name = "Reset",
-                TitleText = AL["Reset Settings"],
+                TitleText = "Reset Settings",
                 Left = {
                     {
                         Type = "Button",
                         Name = "ResetWishList",
-                        Lable = AL["Reset Wishlist"],
+                        Lable = "Reset Wishlist",
                         Size = {130,25},
                         OnClick = function() self:Reset("wishlist") end
                     },
                     {
                         Type = "Button",
                         Name = "ResetFrames",
-                        Lable = AL["Reset Frames"],
+                        Lable = "Reset Frames",
                         Size = {130,25},
                         OnClick = function() self:Reset("frames") end
                     },
                     {
                         Type = "Button",
                         Name = "ResetFavorites",
-                        Lable = AL["Reset Favorites"],
+                        Lable = "Reset Favorites",
                         Size = {130,25},
                         OnClick = function() self:Reset("quicklooks") end
                     },
@@ -214,22 +214,22 @@ function AtlasLoot:InitializeOptionsFrame()
 end
 
 local helpText = {
-    {AL["How to link an item to someone else:"],
-    AL["Shift+Left Click the item like you would for any other in-game item"],},
-    {AL["How to view an item in the Dressing Room:"],
-    AL["Simply Ctrl+Left Click on the item.  Sometimes the dressing room window is hidden behind the AtlasLoot windows, so if nothing seems to happen move your Atlas or AtlasLoot windows and see if anything is hidden."],},
-    {AL["How to add an item to the wishlist:"],
-    AL["Right Click any item and open the context menu and click add to wishlist."],
-    AL["Or Alt+Left Click any item to add it to the default wishlist."],},
-    {AL["How to delete an item from the wishlist:"],
-    AL["While on the wishlist screen, just Alt+Left Click on an item to delete it."],},
-    {AL["What else does the wishlist do?"],
-    AL["If you Left Click any item on the wishlist, you can jump to the loot page the item comes from.  Also, on a loot page any item already in your wishlist is marked with a yellow star."],},
-    {AL["How to set of change a page filter:"],
-    AL["If you Right Click on the filter check box you will get a drop downmenu with a list of filters. Click the filter you want to use."],},
-    {AL["HELP!! I have broken the mod somehow!"],
-    AL["Use the reset buttons available in the options menu, or type '/al reset' in your chat window."],},
-    AL["For further help, join us of discord: "]..AtlasLoot.Colors.GREEN.."https://discord.gg/uYCE2X2FgA"
+    {"How to link an item to someone else:",
+    "Shift+Left Click the item like you would for any other in-game item",},
+    {"How to view an item in the Dressing Room:",
+    "Simply Ctrl+Left Click on the item.  Sometimes the dressing room window is hidden behind the AtlasLoot windows, so if nothing seems to happen move your Atlas or AtlasLoot windows and see if anything is hidden.",},
+    {"How to add an item to the wishlist:",
+    "Right Click any item and open the context menu and click add to wishlist.",
+    "Or Alt+Left Click any item to add it to the default wishlist.",},
+    {"How to delete an item from the wishlist:",
+    "While on the wishlist screen, just Alt+Left Click on an item to delete it.",},
+    {"What else does the wishlist do?",
+    "If you Left Click any item on the wishlist, you can jump to the loot page the item comes from.  Also, on a loot page any item already in your wishlist is marked with a yellow star.",},
+    {"How to set of change a page filter:",
+    "If you Right Click on the filter check box you will get a drop downmenu with a list of filters. Click the filter you want to use.",},
+    {"HELP!! I have broken the mod somehow!",
+    "Use the reset buttons available in the options menu, or type '/al reset' in your chat window.",},
+    "For further help, join us of discord: "..AtlasLoot.Colors.GREEN.."https://discord.gg/uYCE2X2FgA"
 }
 
 function AtlasLoot:DisplayHelp()
@@ -263,14 +263,14 @@ function AtlasLoot:OpenSettingQuickMenu(button)
     local admin = self.selectedProfile.isAdmin
     local menuList = {
         {
-            {text = AL["Quick Settings"], isTitle = true},
-            {text = AL["News/Patch Notes"], tooltip = "Open the news/patch notes ui", func = function() self:OpenNewsFrame("AtlasLoot") end},
-            {text = AL["Learn vanity"], tooltip = "Learn all unknown vanity spells", func = function() self:LearnAllUnknownVanitySpells() end},
-            {text = AL["Admin Menu"], isTitle = true, show = admin, divider = true},
-            {text = AL["Update ItemId Database"], tooltip = "Updates the item id variations cache",func = function() self:UpdateItemIDsDatabase() end, show = admin},
-            {text = AL["Wipe ItemIds Database"], tooltip = "Wipe the item id variations cache", func = function() wipe(AtlasLootItemCache) end, show = admin},
-            {text = AL["Pull Merchant items"], tooltip = "Cache all off the items in the currently open merchant window", func = function() self:GetMerchantItems() end, show = admin},
-            {text = AL["Wipe Merchant Cache"], tooltip = "Wipe the item merchant cache", func = function() wipe(AtlasLootOtherIds) end, show = admin},
+            {text = "Quick Settings", isTitle = true},
+            {text = "News/Patch Notes", tooltip = "Open the news/patch notes ui", func = function() self:OpenNewsFrame("AtlasLoot") end},
+            {text = "Learn vanity", tooltip = "Learn all unknown vanity spells", func = function() self:LearnAllUnknownVanitySpells() end},
+            {text = "Admin Menu", isTitle = true, show = admin, divider = true},
+            {text = "Update ItemId Database", tooltip = "Updates the item id variations cache",func = function() self:UpdateItemIDsDatabase() end, show = admin},
+            {text = "Wipe ItemIds Database", tooltip = "Wipe the item id variations cache", func = function() wipe(AtlasLootItemCache) end, show = admin},
+            {text = "Pull Merchant items", tooltip = "Cache all off the items in the currently open merchant window", func = function() self:GetMerchantItems() end, show = admin},
+            {text = "Wipe Merchant Cache", tooltip = "Wipe the item merchant cache", func = function() wipe(AtlasLootOtherIds) end, show = admin},
         }}
     self:OpenDewdropMenu(button, menuList)
 end
@@ -292,7 +292,7 @@ StaticPopupDialogs["ATLASLOOT_ADD_PROFILE"] = {
           self.selectedProfile = self.db.settingsProfiles[text]
           self:RefreshOptions("AtlasLoot", self.selectedProfile)
         elseif self.db.settingsProfiles[text] then
-            DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot: "]..self.Colors.WHITE..AL["A profile with this name already exists"])
+            DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot: "..self.Colors.WHITE.."A profile with this name already exists")
 		end
 	end,
 	timeout = 0,
@@ -313,7 +313,7 @@ StaticPopupDialogs["ATLASLOOT_ADD_PROFILE"] = {
         local self = AtlasLoot
         local profile = StaticPopupDialogs.ATLASLOOT_DELETE_PROFILE.profile
         if profile == "default" then
-                DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot: "]..self.Colors.WHITE..AL["You can not delete the default profile"])
+                DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot: "..self.Colors.WHITE.."You can not delete the default profile")
         else
             if self.db.profile.settingsProfile == profile then
                 self.db.profile.settingsProfile = "default"

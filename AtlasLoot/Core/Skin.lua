@@ -1,5 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 
 function AtlasLoot:InitializeSkins()
     self.CloseDefaults = {}
@@ -11,9 +11,9 @@ function AtlasLoot:InitializeSkins()
     TDF[1], TDF[2], TDF[3], TDF[4], TDF[5] = self.ui.TitleText:GetPoint()
 
     self.skinKeys = {
-        {"Modern", AL["Modern"]},
-        {"OldAtlasLoot", AL["Old AtlasLoot"]},
-        {"ElvUIDark", AL["ElvUI Dark"]},
+        {"Modern", "Modern"},
+        {"OldAtlasLoot", "Old AtlasLoot"},
+        {"ElvUIDark", "ElvUI Dark"},
     }
 
     local skins = {

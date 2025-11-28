@@ -1,14 +1,14 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 
 local function CollectionNames(cat)
 	local C_names = {
 		["Axe1H"] = "One-Handed Axes",
 		["Axe2H"] = "Two-Handed Axes",
-		["Sword1H"] = AL["One-Handed Sword"],
-		["Sword2H"] = AL["Two-Handed Sword"],
-		["Mace1H"] = AL["One-Handed Mace"],
-		["Mace2H"] = AL["Two-Handed Mace"],
+		["Sword1H"] = "One-Handed Sword",
+		["Sword2H"] = "Two-Handed Sword",
+		["Mace1H"] = "One-Handed Mace",
+		["Mace2H"] = "Two-Handed Mace",
 	}
 	return C_names[cat] or cat
 end
@@ -69,7 +69,7 @@ function AtlasLoot:CreateVanityCollection()
 	end
 
     local function setGroup(group, name)
-       	if not AtlasLoot_Data["Vanity"..group] then AtlasLoot_Data["Vanity"..group] = { Name = AL[name or group], vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
+       	if not AtlasLoot_Data["Vanity"..group] then AtlasLoot_Data["Vanity"..group] = { Name = name or group, vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
 		return "Vanity"..group
     end
 
@@ -210,7 +210,7 @@ function AtlasLoot:BatchRequestVanity(itemList)
 			end
 			return Timer.After(.2, nextItem)
         end
-		DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.YELLOW..AL["Retrieving Vanity Items Completed!"])
+		DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot"..": "..self.Colors.YELLOW.."Retrieving Vanity Items Completed!")
     end
     return nextItem()
 end

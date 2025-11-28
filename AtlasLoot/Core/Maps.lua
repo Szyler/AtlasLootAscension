@@ -1,5 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 local DefaultPin = "questlog-questtypeicon-daily"
 -- Map Functions
 local playerFaction = UnitFactionGroup("player")
@@ -194,9 +194,9 @@ function AtlasLoot:MapSelect(mapID, mapNum)
     self.Colors.GOLD .. "Player Limit: ".. self.Colors.WHITE..map.PlayerLimit
 
     if map.Reputation and type(map.Reputation) == "table" then
-        text = text .. "\n" .. self.Colors.GOLD .. AL["Reputation"] .. ": ".. self.Colors.WHITE .. map.Reputation[playerFaction]
+        text = text .. "\n" .. self.Colors.GOLD .. "Reputation" .. ": ".. self.Colors.WHITE .. map.Reputation[playerFaction]
     elseif map.Reputation then
-        text = text .. "\n" .. self.Colors.GOLD .. AL["Reputation"] .. ": ".. self.Colors.WHITE .. map.Reputation
+        text = text .. "\n" .. self.Colors.GOLD .. "Reputation" .. ": ".. self.Colors.WHITE .. map.Reputation
     end
     self.ui.difficultyScrollFrame.Lable:SetText(text)
 end
@@ -217,7 +217,7 @@ function AtlasLoot:MapMenuOpen(frame)
         end
     local menuList = { 
     {
-        {text = self.Colors.ORANGE..AL["Open AscensionDB To Zone Map"], divider = true, func = function() self:OpenDBURL(AtlasLoot_MapData[self.CurrentMap].ZoneName[2] , "zone") end},
+        {text = self.Colors.ORANGE.."Open AscensionDB To Zone Map", divider = true, func = function() self:OpenDBURL(AtlasLoot_MapData[self.CurrentMap].ZoneName[2] , "zone") end},
     }}
 
     self:OpenDewdropMenu(frame, zones, menuList)

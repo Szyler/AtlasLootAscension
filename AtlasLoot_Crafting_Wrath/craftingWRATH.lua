@@ -1,6 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
+
+
 local gap = {"gap"}
 
 local ALCHEMY = GetSpellInfo(2259)
@@ -83,7 +83,7 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 	Name = ALCHEMY,
 	Type = "WrathCrafting",
 	{
-		Name = AL["Battle Elixirs"],
+		Name = "Battle Elixirs",
 		{
 			{ itemID = 44330, spellID = 60365 }, --Elixir of Armor Piercing
 			{ itemID = 44327, spellID = 60355 }, --Elixir of Deadly Strikes
@@ -98,7 +98,7 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Guardian Elixirs"],
+		Name = "Guardian Elixirs",
 		{
 			{ itemID = 44328, spellID = 60356 }, --Elixir of Mighty Defense
 			{ itemID = 40109, spellID = 56519 }, --Elixir of Mighty Mageblood
@@ -110,7 +110,7 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Potions"],
+		Name = "Potions",
 		{
 			{ itemID = 40211, spellID = 54221 }, --Potion of Speed
 			{ itemID = 40212, spellID = 54222 }, --Potion of Wild Magic
@@ -134,7 +134,7 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Flasks"],
+		Name = "Flasks",
 		{
 			{ itemID = 47499, spellID = 67025 }, --Flask of the North
 			{ itemID = 46377, spellID = 53903 }, --Flask of Endless Rage
@@ -146,7 +146,7 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Transmutes"],
+		Name = "Transmutes",
 		{
 			{ itemID = 35624, spellID = 53777 }, --Transmute: Eternal Air to Earth
 			{ itemID = 35622, spellID = 53776 }, --Transmute: Eternal Air to Water
@@ -175,7 +175,7 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{ itemID = 35751, spellID = 47050 }, --Assassin's Alchemist Stone
 			{ itemID = 35748, spellID = 47046 }, --Guardian's Alchemist Stone
@@ -201,7 +201,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 	Name = BLACKSMITHING,
 	Type = "WrathCrafting",
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Chest",
 		{
 			{ spellID = 67130, itemID = 47592 },
 			{ spellID = 67091, itemID = 47591 },
@@ -219,7 +219,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 39085, spellID = 52570 }, --Cobalt Chestpiece
 		},
 	},
-	{ Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Feet",
+	{ Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Feet",
 		{
 			{ itemID = 49907, spellID = 70568 }, --Boots of Kingly Upheaval
 			{ itemID = 49906, spellID = 70566 }, --Hellfrozen Bonegrinders
@@ -242,7 +242,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Hands",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Hands",
 		{
 			{ itemID = 41357, spellID = 55301 }, --Daunting Handguards
 			{ itemID = 42724, spellID = 56553 }, --Ornate Saronite Gauntlets
@@ -255,7 +255,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Head",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Head",
 		{
 			{ itemID = 41388, spellID = 55374 }, --Brilliant Titansteel Helm
 			{ itemID = 41386, spellID = 55372 }, --Spiked Titansteel Helm
@@ -272,7 +272,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Legs",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Legs",
 		{
 			{ itemID = 49903, spellID = 70565 }, --Legplates of Painful Death
 			{ itemID = 49904, spellID = 70567 }, --Pillars of Might
@@ -290,7 +290,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Shoulder",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Shoulder",
 		{
 			{ itemID = 42727, spellID = 56550 }, --Ornate Saronite Pauldrons
 			{ itemID = 41351, spellID = 55306 }, --Savage Saronite Pauldrons
@@ -302,7 +302,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Waist",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Waist",
 		{
 			{ itemID = 45550, spellID = 63187 }, --Belt of the Titans
 			{ itemID = 45551, spellID = 63191 }, --Indestructible Plate Girdle
@@ -317,7 +317,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Wrist",
+		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Wrist",
 		{
 			{ itemID = 47571, spellID = 67131 }, --Saronite Swordbreakers
 			{ itemID = 47570, spellID = 67092 }, --Saronite Swordbreakers
@@ -381,7 +381,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Item Enhancements"],
+		Name = "Item Enhancements",
 		{
 			{ spellID = 55628, icon = "INV_Jewelcrafting_ThoriumSetting" },
 			{ spellID = 55641, icon = "INV_GAUNTLETS_61" },
@@ -392,7 +392,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{ itemID = 43853, spellID = 59406 }, --Titanium Skeleton Key
 			{ itemID = 43854, spellID = 59405 }, --Cobalt Skeleton Key
@@ -479,7 +479,7 @@ AtlasLoot_Data["CookingWRATH"] = {
 	Name = COOKING,
 	Type = "WrathCrafting",
 	{
-		Name = AL["Page 1"],
+		Name = "Page 1",
 		{
 			{ itemID = 43015, spellID = 57423 }, --Fish Feast
 			{ itemID = 43478, spellID = 58527 }, --Gigantic Feast
@@ -516,7 +516,7 @@ AtlasLoot_Data["CookingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Page 2"],
+		Name = "Page 2",
 		{
 			{ itemID = 34760, spellID = 45561 }, --Grilled Bonescale
 			{ itemID = 34762, spellID = 45563 }, --Grilled Sculpin
@@ -549,7 +549,7 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 	Name = ENCHANTING,
 	Type = "WrathCrafting",
 	{
-		Name = AL["Enchant Boots"],
+		Name = "Enchant Boots",
 		{
 			{ spellID = 60763, icon = "Spell_Holy_GreaterHeal" }, --Enchant Boots - Greater Assault
 			{ spellID = 47901, icon = "Spell_Holy_GreaterHeal" }, --Enchant Boots - Tuskarr's Vitality
@@ -562,7 +562,7 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Bracer"],
+		Name = "Enchant Bracer",
 		{
 			{ spellID = 62256, icon = "Spell_Holy_GreaterHeal" }, --Enchant Bracers - Major Stamina
 			{ spellID = 60767, icon = "Spell_Holy_GreaterHeal" }, --Enchant Bracers - Superior Spellpower
@@ -576,7 +576,7 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Chest"],
+		Name = "Enchant Chest",
 		{
 			{ spellID = 27958, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Exceptional Mana
 			{ spellID = 44588, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Exceptional Resilience
@@ -589,7 +589,7 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Cloak"],
+		Name = "Enchant Cloak",
 		{
 			{ spellID = 60609, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Speed
 			{ spellID = 44631, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Shadow Armor
@@ -608,7 +608,7 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Gloves"],
+		Name = "Enchant Gloves",
 		{
 			{ spellID = 71692, icon = "Spell_Holy_GreaterHeal" }, --Enchant Gloves - Angler
 			{ spellID = 44625, icon = "Spell_Holy_GreaterHeal" }, --Enchant Gloves - Armsman
@@ -622,7 +622,7 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Ring"],
+		Name = "Enchant Ring",
 		{
 			{ spellID = 44645, icon = "Spell_Holy_GreaterHeal" }, --Enchant Ring - Assault
 			{ spellID = 44636, icon = "Spell_Holy_GreaterHeal" }, --Enchant Ring - Greater Spellpower
@@ -630,14 +630,14 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Shield"],
+		Name = "Enchant Shield",
 		{
 			{ spellID = 44489, icon = "Spell_Holy_GreaterHeal" }, --Enchant Shield - Defense
 			{ spellID = 60653, icon = "Spell_Holy_GreaterHeal" }, --Enchant Shield - Greater Intellect
 		},
 	},
 	{
-		Name = AL["Enchant 2H Weapon"],
+		Name = "Enchant 2H Weapon",
 		{
 			{ spellID = 60691, icon = "Spell_Holy_GreaterHeal" }, --Enchant 2H Weapon - Massacre
 			{ spellID = 44595, icon = "Spell_Holy_GreaterHeal" }, --Enchant 2H Weapon - Scourgebane
@@ -645,7 +645,7 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Enchant Weapon"],
+		Name = "Enchant Weapon",
 		{
 			{ spellID = 64441, icon = "Spell_Holy_GreaterHeal" }, --Enchant Weapon - Blade Ward
 			{ spellID = 64579, icon = "Spell_Holy_GreaterHeal" }, --Enchant Weapon - Blood Draining
@@ -671,7 +671,7 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{ itemID = 22459, spellID = 28028 }, --Void Sphere
 			{ itemID = 44452, spellID = 60619 }, --Runed Titanium Rod
@@ -697,7 +697,7 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Armor"],
+		Name = "Armor",
 		{
 			{ itemID = 42549, spellID = 56480 }, --Armored Titanium Goggles
 			{ itemID = 42552, spellID = 56483 }, --Charged Titanium Specs
@@ -715,7 +715,7 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Explosives"],
+		Name = "Explosives",
 		{
 			{ itemID = 42641, spellID = 56514 }, --Global Thermal Sapper Charge
 			{ itemID = 44951, spellID = 56468 }, --Box of Bombs
@@ -725,7 +725,7 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Item Enhancements"],
+		Name = "Item Enhancements",
 		{
 			{ itemID = 41167, spellID = 56478 }, --Heartseeker Scope
 			{ itemID = 41146, spellID = 56470 }, --Sun Scope
@@ -743,7 +743,7 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 		},
 	},
 	{
-		Name = BabbleInventory["Weapon"],
+		Name = "Weapon",
 		{
 			{ itemID = 41168, spellID = 56479 }, --Armor Plated Combat Shotgun
 			{ itemID = 44504, spellID = 60874 }, --Nesingwary 4000
@@ -751,7 +751,7 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{ itemID = 49040, spellID = 68067 }, --Jeeves
 			{ itemID = 41508, spellID = 60866 }, --Mechano-hog
@@ -763,7 +763,7 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Reagents"],
+		Name = "Reagents",
 		{
 			{ itemID = 39681, spellID = 56349 }, --Handful of Cobalt Bolts
 			{ itemID = 39683, spellID = 56471 }, --Froststeel Tube
@@ -837,7 +837,7 @@ AtlasLoot_Data["Inscription"] = {
 	Name = INSCRIPTION,
 	Type = "WrathCrafting",
 	{
-		Name = AL["Off-Hand Items"],
+		Name = "Off-Hand Items",
 		{
 			{ itemID = 44210, spellID = 59498 }, --Faces of Doom
 			{ itemID = 38322, spellID = 59497 }, --Iron-bound Tome
@@ -857,7 +857,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Reagents"],
+		Name = "Reagents",
 		{
 			{ itemID = 43127, spellID = 57716 }, --Snowfall Ink
 			{ itemID = 43125, spellID = 57714 }, --Darkflame Ink
@@ -880,7 +880,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Scrolls"],
+		Name = "Scrolls",
 		{
 			{ itemID = 49632, spellID = 69385 }, --Runescroll of Fortitude
 			{ itemID = 44315, spellID = 60337 }, --Scroll of Recall III
@@ -915,7 +915,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Scrolls"],
+		Name = "Scrolls",
 		{
 			{ itemID = 1180, spellID = 50620 }, --Scroll of Stamina VIII
 			{ itemID = 1180, spellID = 50619 }, --Scroll of Stamina VII
@@ -938,7 +938,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
 			{ spellID = 59504, icon = "INV_Feather_05" }, --Darkmoon Card of the North
 			{ spellID = 59503, icon = "INV_Feather_05" }, --Greater Darkmoon Card
@@ -964,7 +964,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"],
+		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"],
 		{
 			{ itemID = 43533, spellID = 57207 }, --Glyph of Anti-Magic Shell
 			{ itemID = 43826, spellID = 59339 }, --Glyph of Blood Strike
@@ -998,7 +998,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"],
+		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"],
 		{
 			{ itemID = 43535, spellID = 57209 }, --Glyph of Blood Tap
 			{ itemID = 43671, spellID = 57229 }, --Glyph of Corpse Explosion
@@ -1009,7 +1009,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DRUID"],
+		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DRUID"],
 		{
 			{ itemID = 45623, spellID = 64256 }, --Glyph of Barkskin
 			{ itemID = 45601, spellID = 64268 }, --Glyph of Berserk
@@ -1046,7 +1046,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DRUID"],
+		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DRUID"],
 		{
 			{ itemID = 45602, spellID = 64270 }, --Glyph of Wild Growth
 			{ itemID = 43316, spellID = 58286 }, --Glyph of Aquatic Form
@@ -1059,7 +1059,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
+		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{
 			{ itemID = 42897, spellID = 56994 }, --Glyph of Aimed Shot
 			{ itemID = 42898, spellID = 56995 }, --Glyph of Arcane Shot
@@ -1093,7 +1093,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
+		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{
 			{ itemID = 43351, spellID = 58302 }, --Glyph of Feign Death
 			{ itemID = 43350, spellID = 58301 }, --Glyph of Mend Pet
@@ -1104,7 +1104,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["MAGE"],
+		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{
 			{ itemID = 45738, spellID = 64276 }, --Glyph of Arcane Barrage
 			{ itemID = 44955, spellID = 56991 }, --Glyph of Arcane Blast
@@ -1140,7 +1140,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["MAGE"],
+		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{
 			{ itemID = 43339, spellID = 58303 }, --Glyph of Arcane Intellect
 			{ itemID = 44920, spellID = 56990 }, --Glyph of Blast Wave
@@ -1152,7 +1152,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PALADIN"],
+		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PALADIN"],
 		{
 			{ itemID = 41101, spellID = 57019 }, --Glyph of Avenger's Shield
 			{ itemID = 41107, spellID = 57021 }, --Glyph of Avenging WRATH
@@ -1187,7 +1187,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PALADIN"],
+		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PALADIN"],
 		{
 			{ itemID = 43365, spellID = 58311 }, --Glyph of Blessing of Kings
 			{ itemID = 43340, spellID = 58314 }, --Glyph of Blessing of Might
@@ -1198,7 +1198,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
+		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
 		{
 			{ itemID = 42396, spellID = 57181 }, --Glyph of Circle of Healing
 			{ itemID = 42397, spellID = 57183 }, --Glyph of Dispel Magic
@@ -1232,7 +1232,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
+		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
 		{
 			{ itemID = 43342, spellID = 58317 }, --Glyph of Fading
 			{ itemID = 43371, spellID = 58318 }, --Glyph of Fortitude
@@ -1243,7 +1243,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
+		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{
 			{ itemID = 42954, spellID = 57112 }, --Glyph of Adrenaline Rush
 			{ itemID = 42955, spellID = 57113 }, --Glyph of Ambush
@@ -1278,7 +1278,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
+		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{
 			{ itemID = 43379, spellID = 58323 }, --Glyph of Blurred Speed
 			{ itemID = 43376, spellID = 58324 }, --Glyph of Distract
@@ -1289,7 +1289,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"],
+		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"],
 		{
 			{ itemID = 41517, spellID = 57232 }, --Glyph of Chain Heal
 			{ itemID = 41518, spellID = 57233 }, --Glyph of Chain Lightning
@@ -1324,7 +1324,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"],
+		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"],
 		{
 			{ itemID = 43381, spellID = 58329 }, --Glyph of Astral Recall
 			{ itemID = 43725, spellID = 59326 }, --Glyph of Ghost Wolf
@@ -1336,7 +1336,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
+		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{
 			{ itemID = 45781, spellID = 64294 }, --Glyph of Chaos Bolt
 			{ itemID = 42454, spellID = 57258 }, --Glyph of Conflagrate
@@ -1372,7 +1372,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
+		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{
 			{ itemID = 43392, spellID = 58338 }, --Glyph of Curse of Exhaustion
 			{ itemID = 43390, spellID = 58337 }, --Glyph of Drain Soul
@@ -1383,7 +1383,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"],
+		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"],
 		{
 			{ itemID = 43420, spellID = 57151 }, --Glyph of Barbaric Insults
 			{ itemID = 45790, spellID = 64295 }, --Glyph of Bladestorm
@@ -1417,7 +1417,7 @@ AtlasLoot_Data["Inscription"] = {
 		},
 	},
 	{
-		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"],
+		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"],
 		{
 			{ itemID = 43395, spellID = 58342 }, --Glyph of Battle
 			{ itemID = 43396, spellID = 58343 }, --Glyph of Bloodrage
@@ -1440,7 +1440,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 	Name = JEWELCRAFTING,
 	Type = "WrathCrafting",
 	{
-		Name = AL["AtlasLoot.Colors.RED Gems"],
+		Name = "AtlasLoot.Colors.RED Gems",
 		{
 			{ itemID = 40111, spellID = 66447 }, --Bold Cardinal Ruby
 			{ itemID = 40114, spellID = 66449 }, --Bright Cardinal Ruby
@@ -1470,7 +1470,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["AtlasLoot.Colors.BLUE Gems"],
+		Name = "AtlasLoot.Colors.BLUE Gems",
 		{
 			{ itemID = 40121, spellID = 66500 }, --Lustrous Majestic Zircon
 			{ itemID = 40119, spellID = 66497 }, --Solid Majestic Zircon
@@ -1487,7 +1487,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Yellow Gems"],
+		Name = "Yellow Gems",
 		{
 			{ itemID = 40123, spellID = 66503 }, --Brilliant King's Amber
 			{ itemID = 40127, spellID = 66505 }, --Mystic King's Amber
@@ -1512,7 +1512,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["AtlasLoot.Colors.GREEN Gems"],
+		Name = "AtlasLoot.Colors.GREEN Gems",
 		{
 			{ itemID = 40175, spellID = 66430 }, --Dazzling Eye of Zul
 			{ itemID = 40167, spellID = 66338 }, --Enduring Eye of Zul
@@ -1549,7 +1549,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["AtlasLoot.Colors.GREEN Gems"],
+		Name = "AtlasLoot.Colors.GREEN Gems",
 		{
 			{ itemID = 40106, spellID = 54014 }, --Shattered Forest Emerald
 			{ itemID = 40099, spellID = 54004 }, --Shining Forest Emerald
@@ -1583,7 +1583,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["AtlasLoot.Colors.ORANGE Gems"],
+		Name = "AtlasLoot.Colors.ORANGE Gems",
 		{
 			{ itemID = 40162, spellID = 66576 }, --Accurate Ametrine
 			{ itemID = 40144, spellID = 66579 }, --Champion's Ametrine
@@ -1612,7 +1612,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["AtlasLoot.Colors.ORANGE Gems"],
+		Name = "AtlasLoot.Colors.ORANGE Gems",
 		{
 			{ itemID = 40058, spellID = 53994 }, --Accurate Monarch Topaz
 			{ itemID = 40039, spellID = 53977 }, --Champion's Monarch Topaz
@@ -1641,7 +1641,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["AtlasLoot.Colors.ORANGE Gems"],
+		Name = "AtlasLoot.Colors.ORANGE Gems",
 		{
 			{ itemID = 39965, spellID = 53891 }, --Glimmering Huge Citrine
 			{ itemID = 39966, spellID = 53892 }, --Accurate Huge Citrine
@@ -1670,7 +1670,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Purple Gems"],
+		Name = "Purple Gems",
 		{
 			{ itemID = 40136, spellID = 66553 }, --Balanced Dreadstone
 			{ itemID = 40139, spellID = 66560 }, --Defender's Dreadstone
@@ -1703,7 +1703,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Purple Gems"],
+		Name = "Purple Gems",
 		{
 			{ itemID = 39940, spellID = 53871 }, --Guardian's Shadow Crystal
 			{ itemID = 39944, spellID = 53867 }, --Infused Shadow Crystal
@@ -1722,7 +1722,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Meta Gems"],
+		Name = "Meta Gems",
 		{
 			{ itemID = 41285, spellID = 55389 }, --Chaotic Skyflare Diamond
 			{ itemID = 41307, spellID = 55390 }, --Destructive Skyflare Diamond
@@ -1749,7 +1749,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Prismatic Gems"],
+		Name = "Prismatic Gems",
 		{
 			{ itemID = 49110, spellID = 68253 }, --Nightmare Tear
 			{ itemID = 22459, spellID = 28028 }, --Void Sphere
@@ -1786,7 +1786,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Trinkets"],
+		Name = "Trinkets",
 		{
 			{ itemID = 42418, spellID = 56203 }, --Figurine - Emerald Boar
 			{ itemID = 44063, spellID = 59759 }, --Figurine - Monarch Crab
@@ -1796,7 +1796,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Rings"],
+		Name = "Rings",
 		{
 			{ itemID = 42643, spellID = 56497 }, --Titanium Earthguard Ring
 			{ itemID = 42642, spellID = 56496 }, --Titanium Impact Band
@@ -1804,9 +1804,9 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 43582, spellID = 58954 }, --Titanium Frostguard Ring
 			{ itemID = 31398, spellID = 38503 }, --The Frozen Eye
 			{ itemID = 31399, spellID = 38504 }, --The Natural Ward
-			{ itemID = 34361, spellID = 46124 }, --Hard Khorium Band", "=ds="..AL["Skill Required:"].." 365
-			{ itemID = 34362, spellID = 46122 }, --Loop of Forged Power", "=ds="..AL["Skill Required:"].." 365
-			{ itemID = 34363, spellID = 46123 }, --Ring of Flowing Life", "=ds="..AL["Skill Required:"].." 365
+			{ itemID = 34361, spellID = 46124 }, --Hard Khorium Band", "=ds=".."Skill Required:".." 365
+			{ itemID = 34362, spellID = 46122 }, --Loop of Forged Power", "=ds=".."Skill Required:".." 365
+			{ itemID = 34363, spellID = 46123 }, --Ring of Flowing Life", "=ds=".."Skill Required:".." 365
 			{ itemID = 45808, spellID = 64727 }, --Runed Mana Band
 			{ itemID = 45809, spellID = 64728 }, --Scarlet Signet
 			{ itemID = 43250, spellID = 58147 }, --Ring of Earthern Might
@@ -1825,14 +1825,14 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Necks"],
+		Name = "Necks",
 		{
 			{ itemID = 42646, spellID = 56500 }, --Titanium Earthguard Chain
 			{ itemID = 42645, spellID = 56499 }, --Titanium Impact Choker
 			{ itemID = 42647, spellID = 56501 }, --Titanium Spellshock Necklace
-			{ itemID = 34360, spellID = 46126 }, --Amulet of Flowing Life", "=ds="..AL["Skill Required:"].." 365
-			{ itemID = 34358, spellID = 46127 }, --Hard Khorium Choker", "=ds="..AL["Skill Required:"].." 365
-			{ itemID = 34359, spellID = 46125 }, --Pendant of Sunfire", "=ds="..AL["Skill Required:"].." 365
+			{ itemID = 34360, spellID = 46126 }, --Amulet of Flowing Life", "=ds=".."Skill Required:".." 365
+			{ itemID = 34358, spellID = 46127 }, --Hard Khorium Choker", "=ds=".."Skill Required:".." 365
+			{ itemID = 34359, spellID = 46125 }, --Pendant of Sunfire", "=ds=".."Skill Required:".." 365
 			{ itemID = 45812, spellID = 64725 }, --Emerald Choker
 			{ itemID = 45813, spellID = 64726 }, --Sky Sapphire Amulet
 			{ itemID = 42339, spellID = 56196 }, --Blood Sun Necklace
@@ -1842,10 +1842,10 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Miscellaneous"],
+		Name = "Miscellaneous",
 		{
-			{ itemID = 24123, spellID = 31078 }, --Circlet of Arcane Might", "=ds="..AL["Skill Required:"].." 370
-			{ itemID = 24122, spellID = 31077 }, --Coronet of the Verdant Flame", "=ds="..AL["Skill Required:"].." 370
+			{ itemID = 24123, spellID = 31078 }, --Circlet of Arcane Might", "=ds=".."Skill Required:".." 370
+			{ itemID = 24122, spellID = 31077 }, --Coronet of the Verdant Flame", "=ds=".."Skill Required:".." 370
 			{ itemID = 44943, spellID = 62242 }, --Icy Prism
 			{ itemID = 42421, spellID = 56208 }, --Shadow Jade Focusing Lens
 			{ itemID = 42420, spellID = 56206 }, --Shadow Crystal Focusing Lens
@@ -1864,14 +1864,14 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 	Name = LEATHERWORKING,
 	Type = "WrathCrafting",
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Back",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Back",
 		{
 			{ itemID = 43565, spellID = 60640 }, --Durable Nerubhide Cape
 			{ itemID = 43566, spellID = 60637 }, --Ice Striker's Cloak
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Chest",
 		{
 			{ itemID = 47600, spellID = 67142 }, --Knightbane Carapace
 			{ itemID = 47599, spellID = 67086 }, --Knightbane Carapace
@@ -1888,7 +1888,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Feet",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Feet",
 		{
 			{ itemID = 49894, spellID = 70555 }, --Blessed Cenarion Boots
 			{ itemID = 49895, spellID = 70557 }, --Footpads of Impending Death
@@ -1907,7 +1907,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Hands",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Hands",
 		{
 			{ itemID = 43436, spellID = 60705 }, --Eviscerator's Gauntlets
 			{ itemID = 43265, spellID = 60721 }, --Overcast Handwraps
@@ -1917,7 +1917,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Head",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Head",
 		{
 			{ itemID = 43260, spellID = 60697 }, --Eviscerator's Facemask
 			{ itemID = 43261, spellID = 60715 }, --Overcast Headguard
@@ -1926,7 +1926,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Legs",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Legs",
 		{
 			{ itemID = 49899, spellID = 70556 }, --Bladeborn Leggings
 			{ itemID = 49898, spellID = 70554 }, --Legwraps of Unleashed Nature
@@ -1942,7 +1942,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Shoulder",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Shoulder",
 		{
 			{ itemID = 43481, spellID = 60758 }, --Trollwoven Spaulders
 			{ itemID = 43433, spellID = 60702 }, --Eviscerator's Shoulderpads
@@ -1953,7 +1953,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Waist",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Waist",
 		{
 			{ itemID = 45556, spellID = 63200 }, --Belt of Arctic Life
 			{ itemID = 45555, spellID = 63198 }, --Death-warmed Belt
@@ -1966,7 +1966,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Wrist",
+		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Wrist",
 		{
 			{ itemID = 47581, spellID = 67087 }, --Bracers of Swift Death
 			{ itemID = 47582, spellID = 67139 }, --Bracers of Swift Death
@@ -1979,7 +1979,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Chest",
 		{
 			{ itemID = 47596, spellID = 67138 }, --Crusader's Dragonscale Breastplate
 			{ itemID = 47595, spellID = 67082 }, --Crusader's Dragonscale Breastplate
@@ -1997,7 +1997,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Feet",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Feet",
 		{
 			{ itemID = 49896, spellID = 70559 }, --Earthsoul Boots
 			{ itemID = 49897, spellID = 70561 }, --Rock-Steady Treads
@@ -2014,7 +2014,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Hands",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Hands",
 		{
 			{ itemID = 43446, spellID = 60732 }, --Swiftarrow Gauntlets
 			{ itemID = 43454, spellID = 60749 }, --Stormhide Grips
@@ -2024,7 +2024,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Head",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Head",
 		{
 			{ itemID = 43447, spellID = 60728 }, --Swiftarrow Helm
 			{ itemID = 43455, spellID = 60743 }, --Stormhide Crown
@@ -2034,7 +2034,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Legs",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Legs",
 		{
 			{ itemID = 49901, spellID = 70560 }, --Draconic Bonesplinter Legguards
 			{ itemID = 49900, spellID = 70558 }, --Lightning-Infused Leggings
@@ -2048,7 +2048,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Shoulder",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Shoulder",
 		{
 			{ itemID = 43449, spellID = 60729 }, --Swiftarrow Shoulderguards
 			{ itemID = 43457, spellID = 60746 }, --Stormhide Shoulders
@@ -2058,7 +2058,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Waist",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Waist",
 		{
 			{ itemID = 45553, spellID = 63194 }, --Belt of Dragons
 			{ itemID = 45554, spellID = 63196 }, --Blue Belt of Chaos
@@ -2071,7 +2071,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Wrist",
+		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Wrist",
 		{
 			{ itemID = 47580, spellID = 67137 }, --Black Chitin Bracers
 			{ itemID = 47579, spellID = 67081 }, --Black Chitin Bracers
@@ -2086,18 +2086,18 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Item Enhancements"],
+		Name = "Item Enhancements",
 		{
 			{ itemID = 44963, spellID = 62448 }, --Earthen Leg Armor
 			{ itemID = 38373, spellID = 50965 }, --Frosthide Leg Armor
 			{ itemID = 38374, spellID = 50967 }, --Icescale Leg Armor
-			{ itemID = 29536, spellID = 35557 }, --Nethercleft Leg Armor", "=ds="..AL["Skill Required:"].." 365
-			{ itemID = 29535, spellID = 35554 }, --Nethercobra Leg Armor", "=ds="..AL["Skill Required:"].." 365
+			{ itemID = 29536, spellID = 35557 }, --Nethercleft Leg Armor", "=ds=".."Skill Required:".." 365
+			{ itemID = 29535, spellID = 35554 }, --Nethercobra Leg Armor", "=ds=".."Skill Required:".." 365
 			{ itemID = 38371, spellID = 50964 }, --Jormungar Leg Armor
 			{ itemID = 38372, spellID = 50966 }, --Nerubian Leg Armor
 			{ itemID = 29534, spellID = 35555 }, --Clefthide Leg Armor
 			{ itemID = 29533, spellID = 35549 }, --Cobrahide Leg Armor
-			{ itemID = 18251, spellID = 22727 }, --Core Armor Kit", "=ds="..AL["Skill Required:"].." 300
+			{ itemID = 18251, spellID = 22727 }, --Core Armor Kit", "=ds=".."Skill Required:".." 300
 			{ itemID = 38376, spellID = 50963 }, --Heavy Borean Armor Kit
 		},
 		{
@@ -2114,14 +2114,14 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Quivers and Ammo Pouches"],
+		Name = "Quivers and Ammo Pouches",
 		{
 			{ itemID = 44447, spellID = 60645 }, --Dragonscale Ammo Pouch
 			{ itemID = 44448, spellID = 60647 }, --Nerubian Reinforced Quiver
 		},
 	},
 	{
-		Name = AL["Drums, Bags and Misc."],
+		Name = "Drums, Bags and Misc.",
 		{
 			{ itemID = 44446, spellID = 60643 }, --Pack of Endless Pockets
 			{ itemID = 38399, spellID = 50970 }, --Trapper's Traveling Pack
@@ -2132,7 +2132,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 
 	},
 	{
-		Name = BabbleInventory["Leather"],
+		Name = "Leather",
 		{
 			{ itemID = 38425, spellID = 50936 }, --Heavy Borean Leather
 			{ itemID = 33568, spellID = 64661 }, --Borean Leather
@@ -2177,7 +2177,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 	Name = TAILORING,
 	Type = "WrathCrafting",
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Back",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Back",
 		{
 			{ itemID = 41610, spellID = 56017 }, --Deathchill Cloak
 			{ itemID = 41609, spellID = 56016 }, --Wispcloak
@@ -2188,7 +2188,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Chest",
 		{
 			{ itemID = 47603, spellID = 67066 }, --Merlin's Robe
 			{ itemID = 47604, spellID = 67146 }, --Merlin's Robe
@@ -2206,7 +2206,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Feet",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Feet",
 		{
 			{ itemID = 49890, spellID = 70551 }, --Deathfrost Boots
 			{ itemID = 49893, spellID = 70553 }, --Sandals of Consecration
@@ -2222,7 +2222,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Hands",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Hands",
 		{
 			{ itemID = 42111, spellID = 56027 }, --Ebonweave Gloves
 			{ itemID = 42103, spellID = 56025 }, --Moonshroud Gloves
@@ -2234,7 +2234,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Head",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Head",
 		{
 			{ itemID = 41984, spellID = 56018 }, --Hat of Wintry Doom
 			{ itemID = 43971, spellID = 59589 }, --Frostsavage Cowl
@@ -2243,7 +2243,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Legs",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Legs",
 		{
 			{ itemID = 49891, spellID = 70550 }, --Leggings of Woven Death
 			{ itemID = 49892, spellID = 70552 }, --Lightweave Leggings
@@ -2255,7 +2255,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Shoulder",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Shoulder",
 		{
 			{ itemID = 43973, spellID = 59584 }, --Frostsavage Shoulders
 			{ itemID = 41523, spellID = 55910 }, --Mystic Frostwoven Shoulders
@@ -2264,7 +2264,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Waist",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Waist",
 		{
 			{ itemID = 45558, spellID = 63205 }, --Cord of the AtlasLoot.Colors.WHITE Dawn
 			{ itemID = 45557, spellID = 63203 }, --Sash of Ancient Power
@@ -2276,12 +2276,12 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Wrist",
+		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Wrist",
 		{
 			{ itemID = 47586, spellID = 67145 }, --Bejeweled Wizard's Bracers
 			{ itemID = 47585, spellID = 67079 }, --Bejeweled Wizard's Bracers
-			{ itemID = 47587, spellID = 67065 }, --Royal Moonshroud Bracers" ..", " .. BabbleZone["Trial of the Crusader"]
-			{ itemID = 47588, spellID = 67147 }, --Royal Moonshroud Bracers" ..", " .. BabbleZone["Trial of the Crusader"]
+			{ itemID = 47587, spellID = 67065 }, --Royal Moonshroud Bracers" ..", " .. "Trial of the Crusader"
+			{ itemID = 47588, spellID = 67147 }, --Royal Moonshroud Bracers" ..", " .. "Trial of the Crusader"
 			{ itemID = 41555, spellID = 55943 }, --Black Duskweave Wristwraps
 			{ itemID = 43974, spellID = 59583 }, --Frostsavage Bracers
 			{ itemID = 41528, spellID = 55913 }, --Mystic Frostwoven Wriststraps
@@ -2290,7 +2290,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Bags"],
+		Name = "Bags",
 		{
 			{ itemID = 41600, spellID = 56005 }, --Glacial Bag
 			{ itemID = 41598, spellID = 56006 }, --Mysterious Bag
@@ -2300,7 +2300,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Item Enhancements"],
+		Name = "Item Enhancements",
 		{
 			{ itemID = 41602, spellID = 56009 }, --Brilliant Spellthread
 			{ itemID = 41604, spellID = 56011 }, --Sapphire Spellthread
@@ -2316,7 +2316,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		},
 	},
 	{
-		Name = "Cloth/" .. AL["Miscellaneous"],
+		Name = "Cloth/" .. "Miscellaneous",
 		{
 			{ itemID = 41593, spellID = 56002 }, --Ebonweave
 			{ itemID = 41594, spellID = 56001 }, --Moonshroud
@@ -2329,7 +2329,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		},
 	},
 	{
-		Name = AL["Shirts"],
+		Name = "Shirts",
 		{
 			{ itemID = 41249, spellID = 55994 }, --Blue Lumberjack Shirt
 			{ itemID = 41253, spellID = 55998 }, --Blue Workman's Shirt
