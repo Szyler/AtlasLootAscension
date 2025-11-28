@@ -6,9 +6,7 @@ local itemHighlightGreen = "Interface\\AddOns\\AtlasLoot\\Images\\knownGreen"
 function AtlasLoot:InitializeItemFrame()
 
 	----------------------------------- Item Loot Panel -------------------------------------------
-	self.itemframe = CreateFrame("Frame", nil, self.ui.tabs.Loot)
-	self.itemframe:SetSize(765,510)
-	self.itemframe:SetPoint("TOPLEFT", self.ui.tabs.Loot, "TOPLEFT", 2, -2)
+	self.itemframe = self.ui.tabs.Loot
 	self.itemframe.Label = self.itemframe:CreateFontString(nil,"OVERLAY","GameFontHighlightLarge")
 	self.itemframe.Label:SetPoint("TOP", self.itemframe, "TOP")
 	self.itemframe.Label:SetSize(512,30)
