@@ -234,3 +234,12 @@ replace with this
 { itemID = $2 }; --$5
 
 ]]
+
+function AtlasLoot:CreateMainLootTable()
+	for _, item in pairs(AtlasLoot_ItemData) do
+		if item.refLootEntry then
+			if not self.itemData[item.refLootEntry] then self.itemData[item.refLootEntry] = {} end
+			table.insert(self.itemData[item.refLootEntry], item)
+		end
+	end
+end

@@ -9,6 +9,7 @@ AtlasLoot_Data = {
 		{Name = AL["Select a Loot Table..."]},
 	}
 }
+AtlasLoot.itemData = {}
 AtlasLoot_TokenData = {}
 AtlasLoot_MapData = {}
 AtlasLoot_ExtraData = {}
