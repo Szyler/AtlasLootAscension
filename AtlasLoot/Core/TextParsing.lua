@@ -1,6 +1,9 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
+local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
+local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 --------------------------------------------------------------------------------
 -- Text replacement function
@@ -75,46 +78,17 @@ local txtSubstitution = {
     { "INVTYPE_RELIC, Libram", BabbleInventory["Libram"] },
     { "INVTYPE_BAG, Bag", BabbleInventory["Bag"] },
     { "INVTYPE_BAG, Soul Bag", BabbleInventory["Soul Bag"] },
-    { "INVTYPE_AMMO, Junk", "Ammo (Obsolete)"},
-    { "INVTYPE_AMMO, Bullet", "Ammo (Obsolete)"},
-    { "Axes", BabbleInventory["Axe"] },
-    { "Bows", BabbleInventory["Bow"] },
-    { "Daggers", BabbleInventory["Dagger"] },
-    { "Guns", BabbleInventory["Gun"] },
+    { "INVTYPE_AMMO, Junk", "Ammo"},
+    { "INVTYPE_AMMO, Bullet", "Ammo"},
     { "One%-Handed Maces", AL["One-Handed Mace"] },
     { "Two%-Handed Maces", AL["Two-Handed Mace"] },
-    { "Polearms", BabbleInventory["Polearm"] },
-    { "Shields", BabbleInventory["Shield"] },
-    { "Staves", BabbleInventory["Staff"] },
     { "One%-Handed Swords", AL["One-Handed Sword"] },
     { "Two%-Handed Swords", AL["Two-Handed Sword"] },
-    { "Fist Weapons", BabbleInventory["Fist Weapon"] },
-
-    { "Pet", BabbleInventory["Pet"] },
     { "Money", AL["Currency"] },
-    { "Consumable", BabbleInventory["Consumable"] },
-    { "Mount", BabbleInventory["Mount"] },
-    { "Quest", BabbleInventory["Quest"] },
-    { "Key", BabbleInventory["Key"] },
-    { "Book", BabbleInventory["Book"] },
     { "Materials", BabbleInventory["Reagent"] },
-    { "Flask", BabbleInventory["Flask"] },
     { "Other", AL["Misc"] },
     { "Junk", AL["Misc"] },
     { "%(OBSOLETE%)", ""},
-    { "Food & Drink", BabbleInventory["Food & Drink"] },
-
-    -- Crafting
-    { "Jewelcrafting", BabbleInventory["Jewelcrafting"] },
-    { "Enchanting", BabbleInventory["Enchanting"] },
-    { "Tailoring", BabbleInventory["Tailoring"] },
-    { "Blacksmithing", BabbleInventory["Blacksmithing"] },
-    { "Leatherworking", BabbleInventory["Leatherworking"] },
-    { "Alchemy", BabbleInventory["Alchemy"] },
-    { "Engineering", BabbleInventory["Engineering"] },
-    { "Cooking", BabbleInventory["Cooking"] },
-    { "Mining", AL["Mining"] },
-    { "Herbalism", AL["Herbalism"] },
 
     -- Gems
     { "Red", AL["Red Gem"] },
@@ -193,6 +167,7 @@ local txtSubstitution = {
 }
 
 function AtlasLoot:FixText(text)
+    if not text then return end
     for _, subTable in pairs (txtSubstitution) do
         text = gsub(text, subTable[1], subTable[2])
     end
@@ -207,6 +182,10 @@ function AtlasLoot:FixText(text)
         text = gsub(text, "#factionoutlandPvP#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Alliance:0|t")
         text = gsub(text, "#markthrallmarhhold#", "|TInterface\\Icons\\INV_Misc_Token_HonorHold:0|t")
     end
-
+        text = BabbleBoss[text]
+        text = BabbleInventory[text]
+        text = BabbleZone[text]
+        text = BabbleFaction[text]
+        text = AL[text]
     return text
 end

@@ -277,7 +277,8 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 		extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss
 	elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
 		local lvls = AtlasLoot_CraftingData["CraftingLevels"][spellID]
-		extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..dataSource[dataID].Name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
+		local name = self:FixText(dataSource[dataID].Name)
+		extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
 	elseif itemNumber.lootTable and itemNumber.lootTable[2] == "Token" then
 		extra = AL["Set Token (Click)"]
 	elseif itemEquipLoc and itemEquipLoc ~= "" and itemSubType then
@@ -493,14 +494,15 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	--For stopping the subtable from changing if its a token table
 	if dataSource[dataID].NoSubt == nil then
-		local text = dataSource[dataID].DisplayName or dataSource[dataID].Name 
+		local text = self:FixText(dataSource[dataID].DisplayName) or self:FixText(dataSource[dataID].Name)
 		self.ui.submenuButton:SetText(text)
 		self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
 	end
 
 	-- Sets the main page lable
 	if dataSource[dataID][tablenum] and dataSource[dataID][tablenum].Name then
-		self.itemframe.Label:SetText(dataSource[dataID][tablenum].Name)
+		local name = self:FixText(dataSource[dataID][tablenum].Name)
+		self.itemframe.Label:SetText(name)
 	else
 		self.itemframe.Label:SetText("This Is Empty")
 		return
