@@ -307,7 +307,7 @@ function AtlasLoot:InitializeUI()
     self.ui.submenuButton.Lable:SetPoint("TOP",self.ui.submenuButton,"BOTTOM",0,42)
     self.ui.submenuButton.Lable:SetText("Select Category")
     self.ui.submenuButton.Lable:Show()
-    self.ui.submenuButton:SetScript("OnClick", function() self:DewdropSubMenuOpen(self.ui.menus.collection[self.currentTable]) end)
+    self.ui.submenuButton:SetScript("OnClick", function() self:SubMenuOpen(self.ui.menus.collection[self.currentTable]) end)
 
     --Moduel Menu Button
     self.ui.moduelMenuButton = CreateFrame("Button", nil, self.ui, "AtlasLootDropMenuTemplate")
@@ -316,7 +316,7 @@ function AtlasLoot:InitializeUI()
     self.ui.moduelMenuButton.Lable:SetText("Select Module")
     self.ui.moduelMenuButton.Lable:Show()
     self.ui.moduelMenuButton:SetText(AL["Select Loot Table"])
-    self.ui.moduelMenuButton:SetScript("OnClick", function() self:DewdropModuleMenuOpen() end)
+    self.ui.moduelMenuButton:SetScript("OnClick", function() self:ModuleMenuOpen() end)
 
     --Options Button
     self.ui.optionsCogButton = CreateFrame("Button", "AtlasLootSettingsCog", self.ui, "SettingsGearButtonTemplate")
@@ -341,7 +341,7 @@ function AtlasLoot:InitializeUI()
     self.ui.expansionMenuButton:SetText(self.ui.menus.expansion[GetAccountExpansionLevel()+1][1]);
     self.ui.expansionMenuButton.Lable:SetText("Select Expansion")
     self.ui.expansionMenuButton.Lable:Show()
-    self.ui.expansionMenuButton:SetScript("OnClick", function(button) self:DewdropExpansionMenuOpen(button) end)
+    self.ui.expansionMenuButton:SetScript("OnClick", function(button) self:ExpansionMenuOpen(button) end)
 
 ---------------------  Diffcuility ScrollFrame ----------------------------------
     local ROW_HEIGHT = 16   -- How tall is each row?
