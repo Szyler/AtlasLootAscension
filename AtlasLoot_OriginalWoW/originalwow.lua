@@ -10760,6 +10760,7 @@ AtlasLoot_Data["Thorium"] = {
 		{
 			{ itemID = 1519907 }, -- Thorium Linked Wristsguards
 			{ itemID = 1519908 }, -- Brawlers Totem
+			{ itemID = 1519909 }, -- Thorium Threaded Boots
 		},
 		{
 			{ itemID = 17060}, --Plans: Dark Iron Destroyer
@@ -10780,6 +10781,8 @@ AtlasLoot_Data["Thorium"] = {
 			{ itemID = 1519905 }, -- Thorium Reinforced Buckler
 			{ itemID = 1519906 }, -- Thorium Studded Pants
 			{ itemID = 1519904 }, -- Rust Covered Belt
+			{ itemID = 856006 }, -- Black Visor of the Brotherhood
+			{ itemID = 1519806 }, -- Thorium Studded Cowl
 		},
 		{
 			{ itemID = 18592}, --Plans: Sulfuron Hammer
@@ -10789,6 +10792,7 @@ AtlasLoot_Data["Thorium"] = {
 			{ itemID = 19208}, --Plans: Black Amnesty
 			{ itemID = 19207}, --Plans: Dark Iron Gauntlets
 			{ itemID = 19449}, --Formula: Enchant Weapon - Mighty Intellect
+			{ itemID = 46519}, -- Formula: Enchant Cloak - Lesser Armor Penetration
 			{ itemID = 19331}, --Pattern: Chromatic Gauntlets
 			{ itemID = 19332}, --Pattern: Corehound Belt
 			{ itemID = 19333}, --Pattern: Molten Belt
@@ -10802,6 +10806,11 @@ AtlasLoot_Data["Thorium"] = {
 			{ itemID = 1519900 }, -- Thorium Staff
 			{ itemID = 1519902 }, -- Thorium Throwing Knives
 			{ itemID = 1519901 }, -- Thorium Rifle
+			{ itemID = 856007 }, -- Crystalline Gavel
+			{ itemID = 856008 }, -- Blackscale Encrusted Gloves
+			{ itemID = 1519805 }, -- Thorium Linked Spaulders
+			{ itemID = 1519903 }, -- Darkbargainer "Gemstone"
+			{ itemID = 1519804 }, -- Brotherhoods Special Whetstone
 		},
 		{
 			{ itemID = 19211}, --Plans: Blackguard
