@@ -182,10 +182,10 @@ function AtlasLoot:FixText(text)
         text = gsub(text, "#factionoutlandPvP#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Alliance:0|t")
         text = gsub(text, "#markthrallmarhhold#", "|TInterface\\Icons\\INV_Misc_Token_HonorHold:0|t")
     end
-        text = BabbleBoss[text] or text
-        text = BabbleInventory[text] or text
-        text = BabbleZone[text] or text
-        text = BabbleFaction[text] or text
-        text = AL[text] or text
+        text = BabbleBoss[text] and gsub(text, text, BabbleBoss[text]) or text
+        text = BabbleInventory[text] and gsub(text, text, BabbleInventory[text]) or text
+        text = BabbleZone[text] and gsub(text, text, BabbleZone[text]) or text
+        text = BabbleFaction[text] and gsub(text, text, BabbleFaction[text]) or text
+        text = AL[text] and gsub(text, text, AL[text]) or text
     return text
 end

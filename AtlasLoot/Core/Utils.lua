@@ -115,6 +115,7 @@ local itemEquipLocConversion = {
 
 -- custom getiteminfo returns same formate as getiteminfo but will use info from either getiteminfo or getiteminfoinstant
 function AtlasLoot:GetItemInfo(item, dontCache)
+	if not item then return end
 	item = tonumber(item) and Item:CreateFromID(item) or Item:CreateFromLink(item)
 	local itemDescription
 	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = GetItemInfo(item.itemID)
@@ -305,20 +306,22 @@ AtlasLoot:IsLootTableAvailable(dataID):
 Checks if a loot table is in memory and attempts to load the correct LoD module if it isn't
 dataID: Loot table dataID
 ]]
+local loadedModules = {}
 function AtlasLoot:IsLootTableAvailable(dataSource)
-	local moduleName
-	moduleName = self.ModuleName[dataSource]
-	if moduleName and IsAddOnLoaded(moduleName) then
+	local moduleName = self.ModuleName[dataSource]
+	if moduleName and IsAddOnLoaded(moduleName) and loadedModules[moduleName] then
 		return true
 	elseif moduleName then
 		LoadAddOn(moduleName)
+		loadedModules[moduleName] = true
 	end
+	self:CreateMainLootTable()
 end
 
 --------- rate limited item frame refresh ---------
 local refreshTimer
 function AtlasLoot:ItemRefreshTimer()
-    self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+    self:ShowItemsFrame("refresh")
     refreshTimer = false
 end
 
@@ -628,4 +631,24 @@ function AtlasLoot:DewdropToggle(button)
 	else
 		self.Dewdrop:Open(button)
 	end
+end
+
+function AtlasLoot:RateLimitLoadTable(table, taskFunction)
+	-- rate limit tied to half the current frame rate
+	local maxDuration = (self.selectedProfile.ItemLoadingSpeed*500)/GetFramerate()
+	local startTime = debugprofilestop()
+	local function continue()
+		startTime = debugprofilestop()
+		local task = tremove(table)
+		while (task) do
+			taskFunction(task)
+			if (debugprofilestop() - startTime > maxDuration) then
+				Timer.After(0, continue)
+				return
+			end
+			task = tremove(table)
+		end
+	end
+
+	return continue()
 end

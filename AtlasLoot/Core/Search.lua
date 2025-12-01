@@ -719,7 +719,7 @@ function AtlasLoot:DoSearch(searchText)
 end
 
 function AtlasLoot:ShowSearchResult()
-    self:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1)
+    self:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1, 1)
 end
 
 -- Search Options Menu

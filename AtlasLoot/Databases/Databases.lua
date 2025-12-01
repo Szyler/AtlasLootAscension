@@ -9,7 +9,8 @@ AtlasLoot_Data = {
 		{Name = "Select a Loot Table..."},
 	}
 }
-AtlasLoot.itemData = {}
+AtlasLoot.itemData = { EmptyTable = {} }
+AtlasLoot_ItemData = {}
 AtlasLoot_TokenData = {}
 AtlasLoot_MapData = {}
 AtlasLoot_ExtraData = {}

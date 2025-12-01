@@ -29,22 +29,22 @@ function AtlasLoot:InitializeUIFunctions()
             self.moduleName = lastboss[6]
             self:IsLootTableAvailable(lastboss[4])
             self.ui.moduelMenuButton:SetText(self.moduleName)
-            self:ShowItemsFrame(lastboss[1], "AtlasLoot_Data", lastboss[3])
+            self:ShowItemsFrame(lastboss[1], "AtlasLoot_Data", lastboss[3], lastboss[7])
         else
-            self:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1)
+            self:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1, 1)
         end
     end
 
     -- Show the Instance you are in
     function self:ShowInstance()
-        for _, v in pairs(self.ui.menus.collection) do
+        for subMenu, v in pairs(self.ui.menus.collection) do
             for _, t in ipairs(v) do
                 local zone = GetRealZoneText() or "noZone"
                 if t[4] == zone or (t[5] and t[5] == zone) then
-                    self.currentTable = v.SubMenu
+                    self.currentTable = subMenu
                     self.lastModule = v.Module
                     self:IsLootTableAvailable(self.lastModule)
-                    self:ShowItemsFrame(t[2], "AtlasLoot_Data", 1)
+                    self:ShowItemsFrame(t[2], "AtlasLoot_Data", 1, 1)
                     return true
                 end
             end
@@ -79,9 +79,9 @@ function AtlasLoot:InitializeUIFunctions()
         self:IsLootTableAvailable(AtlasLoot.ui.menus.collection[tablename].Module)
             local lasttable = self.db.profile.savedState[self.currentTable]
             if lasttable then
-                self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
+                self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3], lasttable[7])
             else
-                self:ShowItemsFrame(AtlasLoot.ui.menus.collection[tablename][tablenum][2], "AtlasLoot_Data", tablenum)
+                self:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum, 1)
             end
     end
 
@@ -103,16 +103,14 @@ function AtlasLoot:InitializeUIFunctions()
     Called when a button in AtlasLoot.DewdropSubMenu is clicked
     ]]
     local function subMenuClick(tablename, onDamand, name)
-        local dataSource = "AtlasLoot_Data"
         self.backEnabled = false
         if  onDamand then
-            dataSource = "AtlasLoot_OnDemand"
             self:CreateOnDemandLootTable(onDamand[1], onDamand[2], name)
         else
             --Show the select loot table
-            local tablenum = _G[dataSource][tablename].Loadfirst or 1
+            local tablenum = self.ui.menus.data[tablename].Loadfirst or 1
             --Show the table that has been selected
-            self:ShowItemsFrame(tablename, dataSource, tablenum)
+            self:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum, 1)
         end
     end
 
@@ -131,13 +129,13 @@ function AtlasLoot:InitializeUIFunctions()
                             if submenu[3] == "Header" then
                                 table.insert(menuList[2], {text = self.Colors.GREEN..submenu[1], func = function() subMenuClick(submenu[2], submenu.OnDamand, submenu[1]) end, isTitle = true, show = menu[1], divider = true} )
                             elseif type(submenu) == "table" then
-                                table.insert(menuList[2], {text = AtlasLoot_Data[submenu[2]] and AtlasLoot_Data[submenu[2]].Name or submenu[1], func = function() subMenuClick(submenu[2], submenu.OnDamand, submenu[1]) end, show = menu[1]})
+                                table.insert(menuList[2], {text = self.ui.menus.data[submenu[2]] and self.ui.menus.data[submenu[2]].Name or submenu[1], func = function() subMenuClick(submenu[2], submenu.OnDamand, submenu[1]) end, show = menu[1]})
                             end
                         end
                     elseif menu[3] == "Header" then
                         table.insert(menuList[1], {text = self.Colors.GREEN..menu[1], func = function() subMenuClick(menu[2]) end, isTitle = true, divider = true})
                     else
-                        table.insert(menuList[1], {text = AtlasLoot_Data[menu[2]] and AtlasLoot_Data[menu[2]].Name or menu[1], func = function() subMenuClick(menu[2], menu.OnDamand, menu[1]) end})
+                        table.insert(menuList[1], {text = self.ui.menus.data[menu[2]] and self.ui.menus.data[menu[2]].Name or menu[1], func = function() subMenuClick(menu[2], menu.OnDamand, menu[1]) end})
                     end
                 end
             end
@@ -152,7 +150,7 @@ function AtlasLoot:InitializeUIFunctions()
     ]]
     local function expansionMenuClick(expansion, name)
         self.backEnabled = false
-        AtlasLoot_ExpansionMenu:SetText(name)
+        AtlasLoot_ExpansionMenu:SetText(self:FixText(name))
         self.Expac = expansion
         if self.currentTable then
             self.currentTable = cleanDataID(self.currentTable, 1) .. self.Expac
@@ -160,10 +158,10 @@ function AtlasLoot:InitializeUIFunctions()
             local tablename = AtlasLoot.ui.menus.collection[self.currentTable][1][2]
             local lasttable = self.db.profile.savedState[self.currentTable]
             if lasttable then
-                self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
+                self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3], lasttable[7])
             else
-                local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1
-                self:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum)
+                local tablenum = self.ui.menus.data[tablename].Loadfirst or 1
+                self:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum, 1)
             end
         end
     end
@@ -212,7 +210,7 @@ function AtlasLoot:InitializeUIFunctions()
                 if favButton[2] == "AtlasLootWishList" then
                     self:ShowWishList(favButton[3])
                 else
-                    self:ShowItemsFrame(favButton[1], favButton[2], favButton[3])
+                    self:ShowItemsFrame(favButton[1], favButton[2], favButton[3], favButton[4])
                 end
             end
         end

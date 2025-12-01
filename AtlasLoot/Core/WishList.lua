@@ -28,7 +28,7 @@ function AtlasLoot:ShowWishList(listNum)
 		end
 	end
 
-	self:ShowItemsFrame("Show", "AtlasLoot_CurrentWishList", listNum or 1)
+	self:ShowItemsFrame("Show", "AtlasLoot_CurrentWishList", listNum or 1, 1)
 end
 
 -- Change Wishlist item toggle state
@@ -41,7 +41,7 @@ function AtlasLoot:WishListItemLockStateClick()
 			self.wishListLockState = "Locked"
             self.ui.wishlistLockButton.IconAtlas:SetAtlas("spell-list-locked")
         end
-        self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+        self:ShowItemsFrame("refresh")
 end
 
 function AtlasLoot:WishListLockButtonReset()
@@ -399,7 +399,7 @@ StaticPopupDialogs["ATLASLOOT_DELETE_WISHLIST"] = {
 		table.remove(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType], AtlasLoot.ui.lootTableScrollFrame.tablenum)
 		AtlasLootWishList.Options[playerName].DefaultWishList[3] = 1
 		if AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][1] == nil then
-			AtlasLoot:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1)
+			AtlasLoot:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1, 1)
 		else
 			AtlasLoot:ShowWishList( 1)
 		end

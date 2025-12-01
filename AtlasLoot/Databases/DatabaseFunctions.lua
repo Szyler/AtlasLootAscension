@@ -236,10 +236,78 @@ replace with this
 ]]
 
 function AtlasLoot:CreateMainLootTable()
-	for _, item in pairs(AtlasLoot_ItemData) do
+	local function addItem(item)
 		if item.refLootEntry then
 			if not self.itemData[item.refLootEntry] then self.itemData[item.refLootEntry] = {} end
 			table.insert(self.itemData[item.refLootEntry], item)
 		end
 	end
+	self:RateLimitLoadTable(AtlasLoot_ItemData, addItem)
+end
+
+local itemCatagories = {
+	Armor = {Cloth = {}, Leather = {}, Mail = {}, Plate = {}, Misc = {}},
+	Weapon = {},
+	Misc = {}
+}
+
+local function sortItemData(dataSource)
+	if dataSource.sorted then return dataSource end
+	for _, itemData in pairs(dataSource) do
+		local itemType, itemSubType, _, itemEquipLoc = select(6, AtlasLoot:GetItemInfo(itemData.itemID))
+		print(itemType)
+		local iType = itemCatagories[itemType]
+		if iType and iType[itemSubType] then
+			local addType
+			if itemEquipLoc then
+				iType[itemSubType][itemEquipLoc] = iType[itemSubType][itemEquipLoc] or {}
+				addType = iType[itemSubType][itemEquipLoc]
+			else
+				iType[itemSubType].Misc = iType[itemSubType].Misc or {}
+				addType = iType[itemSubType].Misc
+			end
+			table.insert(addType, itemData)
+		elseif iType then
+			iType.Misc = iType.Misc or {}
+			table.insert(iType.Misc, itemData)
+		else
+			table.insert(itemCatagories.Misc, itemData)
+		end
+	end
+
+	local function getLootItem(table)
+		for _, item in pairs(table) do
+			if item.refLootEntry then
+				return item
+			else
+				return getLootItem(item)
+			end
+		end
+	end
+
+	local sortedTable = {{}}
+	for _, catType in pairs(itemCatagories) do
+		if #sortedTable[#sortedTable] > 30 then
+			sortedTable[(#sortedTable+1)] = {}
+		end
+		local newTable = sortedTable[#sortedTable]
+		local item = getLootItem(catType)
+		table.insert(newTable, item)
+	end
+	sortedTable.sorted = true
+	dataSource = sortedTable
+	return dataSource, #dataSource
+
+end
+
+function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
+	local dataTable, dataSource
+	if dataSource_backup == "AtlasLoot_CurrentWishList" then
+		dataTable = _G["AtlasLootWishList"]
+	elseif dataSource_backup == "AtlasLoot_Data" then
+		dataSource = self.ui.menus.data[dataID]
+		dataTable = self.itemData[dataSource[tablenum][2]]
+	end
+	local itemData, numberPages = sortItemData(dataTable)
+	return dataSource, itemData, numberPages
 end

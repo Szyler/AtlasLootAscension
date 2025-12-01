@@ -444,7 +444,7 @@ local rows = setmetatable({}, { __index = function(t, i)
         else
             self.ItemindexID = row.itemIndex
             if not self.ui.tabs.Search:IsVisible() then
-                self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+                self:ShowItemsFrame("refresh")
             end
             self:ScrollFrameUpdate()
         end
@@ -482,11 +482,13 @@ local MAX_ROWS2 = 24      -- How many rows can be shown at once?
         end
 end)
 
-    function self:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
-        local maxValue = #_G[dataSource][tablename]
-        if dataSource == "AtlasLoot_MapData" then maxValue = #_G[dataSource][tablename][tablenum] end
-        self.ui.tabs.Loot.TableScrollFrame.tablename = tablename
-        self.ui.tabs.Loot.TableScrollFrame.dataSource = dataSource
+    function self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum, pageNumber)
+        local dataSource, itemData = self:GetSourceData(dataSource_backup, dataID, tablenum)
+        local maxValue = #dataSource
+        itemData = itemData[pageNumber]
+        if dataSource == "AtlasLoot_MapData" then maxValue = #dataSource[tablenum] end
+        self.ui.tabs.Loot.TableScrollFrame.dataID = dataID
+        self.ui.tabs.Loot.TableScrollFrame.dataSource = dataSource_backup
         self.ui.tabs.Loot.TableScrollFrame.tablenum = tablenum
         FauxScrollFrame_Update(self.ui.tabs.Loot.TableScrollFrame.scrollSlider, maxValue, MAX_ROWS2, ROW_HEIGHT)
         local offset = FauxScrollFrame_GetOffset(self.ui.tabs.Loot.TableScrollFrame.scrollSlider)
@@ -494,33 +496,35 @@ end)
             local value = i + offset
             self.ui.tabs.Loot.TableScrollFrame.rows[i]:SetChecked(false)
             self.ui.tabs.Loot.TableScrollFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-            if value <= maxValue and (_G[dataSource][tablename][value] or _G[dataSource][tablename][tablenum][value]) and tablename ~= "SearchMENU" then
+            if value <= maxValue and (itemData and itemData[value] or dataSource[tablenum][value]) and dataID ~= "SearchMENU" then
                 local row = self.ui.tabs.Loot.TableScrollFrame.rows[i]
                     row.dataSource = dataSource
-                    row.tablename = tablename
+                    row.dataSource_backup = dataSource_backup
+                    row.dataID = dataID
                     row.tablenum = value
-                if dataSource == "AtlasLoot_MapData" then
-                    local text = _G[dataSource][tablename][tablenum][value][1]
-                    if _G[dataSource][tablename][tablenum][value][2] then text = text.._G[dataSource][tablename][tablenum][value][2] end
-                    if _G[dataSource][tablename][tablenum][value].SubZone then
+                    row.pageNumber = pageNumber
+                if dataSource_backup == "AtlasLoot_MapData" then
+                    local text = dataSource[tablenum][value][1]
+                    if dataSource[tablenum][value][2] then text = text..dataSource[tablenum][value][2] end
+                    if dataSource[tablenum][value].SubZone then
                         text = self.Colors.BLUE..text
-                    elseif not _G[dataSource][tablename][tablenum][value].Zone then
+                    elseif not dataSource[tablenum][value].Zone then
                         text = self.Colors.WHITE..text
                     end
-                    if not _G[dataSource][tablename][tablenum][value].cords and not _G[dataSource][tablename][tablenum][value].Zone and not _G[dataSource][tablename][tablenum][value].SubZone then text = INDENT..text end
+                    if not dataSource[tablenum][value].cords and not dataSource[tablenum][value].Zone and not dataSource[tablenum][value].SubZone then text = INDENT..text end
                     row.Text:SetText(text)
                     row:SetScript("OnEnter", function(button)
                         GameTooltip:SetOwner(button, "ANCHOR_TOP")
-                        GameTooltip:SetText(_G[dataSource][tablename][tablenum][value][1])
+                        GameTooltip:SetText(dataSource[tablenum][value][1])
                         GameTooltip:Show()
                     end)
                     row:SetScript("OnLeave", function() GameTooltip:Hide() end)
                 else
-                    row.Text:SetText("|cffFFd200"..(_G[dataSource][tablename][value].Name or ""))
+                    row.Text:SetText("|cffFFd200"..(self:FixText(dataSource[value][1]) or ""))
                     row:SetScript("OnEnter", function(button)
                         GameTooltip:Hide()
                     end)
-                    if tablenum == value and dataSource ~= "AtlasLoot_MapData" then
+                    if tablenum == value and dataSource_backup ~= "AtlasLoot_MapData" then
                         row:SetChecked(true)
                     end
                 end
@@ -536,7 +540,7 @@ end)
     self.ui.tabs.Loot.TableScrollFrame.scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8)
     self.ui.tabs.Loot.TableScrollFrame.scrollSlider:SetScript("OnVerticalScroll", function(slider, offset)
         slider.offset = math.floor(offset / ROW_HEIGHT + 0.5)
-            self:SubTableScrollFrameUpdate(self.ui.tabs.Loot.TableScrollFrame.tablename, self.ui.tabs.Loot.TableScrollFrame.dataSource, self.ui.tabs.Loot.TableScrollFrame.tablenum)
+            self:SubTableScrollFrameUpdate(self.ui.tabs.Loot.TableScrollFrame.dataID, self.ui.tabs.Loot.TableScrollFrame.dataSource, self.ui.tabs.Loot.TableScrollFrame.tablenum)
     end)
 
 local rows2 = setmetatable({}, { __index = function(t, i)
@@ -551,12 +555,12 @@ local rows2 = setmetatable({}, { __index = function(t, i)
     row.Text:SetPoint("LEFT",row)
     row.Text:SetJustifyH("LEFT")
     row:SetScript("OnClick", function(button, buttonClick)
-        local webID = _G[row.dataSource][row.tablename][row.tablenum] and _G[row.dataSource][row.tablename][row.tablenum].WebID
+        local webID = row.dataSource.webID
         if buttonClick == "RightButton" and webID then
             row:SetChecked(not row:GetChecked())
             self:OpenDB(button, webID[2], webID[1])
-        elseif row.dataSource ~= "AtlasLoot_MapData" then
-            self:ShowItemsFrame(row.tablename, row.dataSource, row.tablenum)
+        elseif row.dataSource_backup ~= "AtlasLoot_MapData" then
+            self:ShowItemsFrame(row.dataID, row.dataSource_backup, row.tablenum, row.pageNumber)
         else
             row:SetChecked(false)
         end

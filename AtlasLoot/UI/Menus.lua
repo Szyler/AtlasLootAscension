@@ -8,7 +8,8 @@ Defines the table listings for the dropdown lists.
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
 function AtlasLoot:InitializeMenus()
-	self.ui.menus = {collection = {}}
+	self.ui.menus = {collection = {}, data = {}}
+	self:InitializeMenuData()
 	local menus = self.ui.menus
 	local collection = menus.collection
 
@@ -35,7 +36,6 @@ function AtlasLoot:InitializeMenus()
 	-------------------------------------Dungeon and Raid Menus-------------------------------------
 	collection["Dungeons and RaidsCLASSIC"] = {
 		Module = "AtlasLootOriginalWoW",
-		SubMenu = "Dungeons and RaidsCLASSIC",
 		---- Raids ----
 		{ "Raids:", "OldKeys", "Header" },
 		{ "", "ZulGurub", "", "Zul'Gurub" },
@@ -80,7 +80,6 @@ function AtlasLoot:InitializeMenus()
 
 	collection["Dungeons and RaidsTBC"] = {
 		Module = "AtlasLootBurningCrusade",
-		SubMenu = "Dungeons and RaidsTBC",
 		---- Raids ----
 		{ "Raids:", "BCKeys", "Header" },
 		{ "", "Karazhan", "", "Karazhan" },
@@ -120,7 +119,6 @@ function AtlasLoot:InitializeMenus()
 
 	collection["Dungeons and RaidsWRATH"] = {
 		Module = "AtlasLootWotLK",
-		SubMenu = "Dungeons and RaidsWRATH",
 		---- Raids ----
 		{ "Raids:", "WrathKeys", "Header" },
 		{ "", "Naxxramas80", "Naxxramas" },

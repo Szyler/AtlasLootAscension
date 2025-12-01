@@ -137,10 +137,10 @@ function AtlasLoot:FilterEnableButton(frame, btnclick)
 	else
 		if self.filterEnable then
 			self.filterEnable = false
-			self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+			self:ShowItemsFrame("refresh")
 		else
 			self.filterEnable = true
-			self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+			self:ShowItemsFrame("refresh")
 		end
 	end
 end
@@ -170,7 +170,7 @@ function AtlasLoot:FilterMenuOpen(frame)
 				db[filter[1]] = not db[filter[1]]
 				disableFilters(filter[1])
 				if self.filterEnable then
-					self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+					self:ShowItemsFrame("refresh")
 				end
 			end})
 		end
@@ -183,7 +183,7 @@ function AtlasLoot:FilterMenuOpen(frame)
 				db[filter[1]] = not db[filter[1]]
 				disableFilters(filter[1])
 				if self.filterEnable then
-					self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+					self:ShowItemsFrame("refresh")
 				end
 			end
 			})
@@ -197,7 +197,7 @@ function AtlasLoot:FilterMenuOpen(frame)
 				func = function()
 					db[filters[2]][1] = not db[filters[2]][1]
 					if self.filterEnable then
-						self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+						self:ShowItemsFrame("refresh")
 					end
 				end})
 			end

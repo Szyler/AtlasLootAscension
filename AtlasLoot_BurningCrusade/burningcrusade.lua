@@ -73,6 +73,10 @@ local gap = {"gap"}
 ----BoE World Epics
 ----World Bosses
 
+AtlasLoot_ItemData = {
+	{ itemID = 29298, rep = "Friendly", maxDifficulty = "Normal", refLootEntry = "Rings" }, --Band of the Eternal Champion
+
+}
 
 --The scale of the sand rep rings
 local scaleOfSandsRings = {

@@ -138,7 +138,8 @@
         	</OnLoad>
 		</Scripts>
     </Frame>
-
+    
+    <Script file="Menu_Data.lua"/>
     <Script file="Menus.lua"/>
     <Script file="UI.lua"/>
     <Script file="UI_Functions.lua"/>
