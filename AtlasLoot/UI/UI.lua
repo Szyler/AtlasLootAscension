@@ -199,6 +199,22 @@ function AtlasLoot:InitializeUI()
     end
     self:ToggleNavigationButtonsVisibility()
 
+    function self:SetNavigationButtonsPoints(next, prev)
+        if next then
+            local parent, points = unpack(next)
+            self.ui.nextbutton:SetParent(parent)
+            self.ui.nextbutton:ClearAllPoints()
+            self.ui.nextbutton:SetPoint(unpack(points))
+        end
+
+        if prev then
+            local parent, points = unpack(prev)
+            self.ui.prevbutton:SetParent(parent)
+            self.ui.prevbutton:ClearAllPoints()
+            self.ui.prevbutton:SetPoint(unpack(points))
+        end
+    end
+
     -- Learn Unknown vanity spells button
     self.ui.learnSpellbtn = CreateFrame("Button", "AtlasLoot_LearnUnknownSpells", self.itemframe, "OptionsButtonTemplate")
     self.ui.learnSpellbtn:SetPoint("BOTTOM", self.itemframe, "BOTTOM",0,5)

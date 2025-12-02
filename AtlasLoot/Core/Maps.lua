@@ -109,20 +109,19 @@ function AtlasLoot:SetNavButtons(mapID, mapNum)
     self:ToggleNavigationButtonsVisibility()
 
         if mapNum ~= #_G["AtlasLoot_MapData"][mapID] then
-            self.ui.nextbutton:SetParent(self.ui.tabs.Map)
+            	--Set the parent frame and anchor points
+            local nextSet = {self.ui.tabs.Map, {"BOTTOMRIGHT", self.ui.tabs.Map, "BOTTOMRIGHT",-30,10}}
+            self:SetNavigationButtonsPoints(nextSet)
             self.ui.nextbutton:Show()
             self.ui.nextbutton.mapNum = mapNum + 1
             self.ui.nextbutton.mapID = mapID
-            self.ui.nextbutton:ClearAllPoints()
-            self.ui.nextbutton:SetPoint("BOTTOMRIGHT", self.ui.tabs.Map, "BOTTOMRIGHT",-30,5)
         end
         if mapNum ~= 1 then
-            self.ui.prevbutton:SetParent(self.ui.tabs.Map)
+            local prevSet = {self.ui.tabs.Map, {"BOTTOMLEFT", self.ui.tabs.Map, "BOTTOMLEFT",10,10}}
+            self:SetNavigationButtonsPoints(nil, prevSet)
             self.ui.prevbutton:Show()
             self.ui.prevbutton.mapNum = mapNum - 1
             self.ui.prevbutton.mapID = mapID
-            self.ui.prevbutton:ClearAllPoints()
-            self.ui.prevbutton:SetPoint("BOTTOMLEFT", self.ui.tabs.Map, "BOTTOMLEFT",5,5)
         end
 end
 

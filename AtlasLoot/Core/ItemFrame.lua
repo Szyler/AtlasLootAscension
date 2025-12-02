@@ -8,12 +8,12 @@ function AtlasLoot:InitializeItemFrame()
 	----------------------------------- Item Loot Panel -------------------------------------------
 	self.itemframe = self.ui.tabs.Loot
 	self.itemframe.Label = self.itemframe:CreateFontString(nil,"OVERLAY","GameFontHighlightLarge")
-	self.itemframe.Label:SetPoint("TOP", self.itemframe, "TOP")
+	self.itemframe.Label:SetPoint("TOP", self.itemframe, "TOP", 0, -3)
 	self.itemframe.Label:SetSize(512,30)
 	self.itemframe.Label:SetJustifyH("CENTER")
 
 	self.itemframe.PageNumber = self.itemframe:CreateFontString(nil,"OVERLAY","GameFontHighlightLarge")
-	self.itemframe.PageNumber:SetPoint("TOPRIGHT", self.itemframe, "TOPRIGHT", 15, -5)
+	self.itemframe.PageNumber:SetPoint("TOPRIGHT", self.itemframe, "TOPRIGHT", 10, -10)
 	self.itemframe.PageNumber:SetSize(100,20)
 	self.itemframe.PageNumber:SetJustifyH("LEFT")
 
@@ -259,12 +259,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 
 	--Hide navigation buttons by default, only show what we need
 	self:ToggleNavigationButtonsVisibility()
-	self.ui.nextbutton:SetParent(self.itemframe)
-	self.ui.prevbutton:SetParent(self.itemframe)
-	self.ui.nextbutton:ClearAllPoints()
-	self.ui.nextbutton:SetPoint("BOTTOMRIGHT", self.itemframe, "BOTTOMRIGHT",-30,5)
-	self.ui.prevbutton:ClearAllPoints()
-	self.ui.prevbutton:SetPoint("BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",5,5)
+	--Set the parent frame and anchor points
+	local nextSet = {self.itemframe, {"BOTTOMRIGHT", self.itemframe, "BOTTOMRIGHT",-10,10}}
+	local prevSet = {self.itemframe, {"BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",10,10}}
+	self:SetNavigationButtonsPoints(nextSet, prevSet)
+
 	self:ToogleWishListButtons()
 	self.ui.learnSpellbtn:Hide()
 
@@ -596,7 +595,7 @@ function AtlasLoot:NavButton_OnClick(btn)
 	else
 		if #btn.dataSource > 26 then
 			local min, max = AtlasLootSubTableScrollScrollBar:GetMinMaxValues()
-			AtlasLootSubTableScrollScrollBar:SetValue(btn.tablenum * (max / #dataSource))
+			AtlasLootSubTableScrollScrollBar:SetValue(btn.tablenum * (max / #btn.dataSource))
 		end
 		self:ShowItemsFrame(btn.dataID, btn.dataSource_backup, btn.tablenum, btn.numberPages)
 	end
