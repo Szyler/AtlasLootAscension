@@ -499,9 +499,14 @@ local MAX_ROWS2 = 24      -- How many rows can be shown at once?
 end)
 
     function self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
-        local dataSource, itemData = self:GetSourceData(dataSource_backup, dataID, tablenum)
-        local maxValue = #dataSource
-        if dataSource == "AtlasLoot_MapData" then maxValue = #dataSource[tablenum] end
+        local dataSource, maxValue
+        if dataSource_backup == "AtlasLoot_MapData" then
+            dataSource = _G[dataSource_backup][dataID][tablenum]
+            maxValue = #dataSource
+        else
+            dataSource = self:GetSourceData(dataSource_backup, dataID, tablenum)
+            maxValue = #dataSource
+        end
         self.ui.tabs.Loot.TableScrollFrame.dataID = dataID
         self.ui.tabs.Loot.TableScrollFrame.dataSource = dataSource_backup
         self.ui.tabs.Loot.TableScrollFrame.tablenum = tablenum
@@ -516,18 +521,18 @@ end)
                     row.tableInfo = {dataID, dataSource_backup, value}
                     row.dataSource = dataSource
                 if dataSource_backup == "AtlasLoot_MapData" then
-                    local text = dataSource[tablenum][value][1]
-                    if dataSource[tablenum][value][2] then text = text..dataSource[tablenum][value][2] end
-                    if dataSource[tablenum][value].SubZone then
+                    local text = dataSource[value][1]
+                    if dataSource[value][2] then text = text..dataSource[value][2] end
+                    if dataSource[value].SubZone then
                         text = self.Colors.BLUE..text
-                    elseif not dataSource[tablenum][value].Zone then
+                    elseif not dataSource[value].Zone then
                         text = self.Colors.WHITE..text
                     end
-                    if not dataSource[tablenum][value].cords and not dataSource[tablenum][value].Zone and not dataSource[tablenum][value].SubZone then text = INDENT..text end
+                    if not dataSource[value].cords and not dataSource[value].Zone and not dataSource[value].SubZone then text = INDENT..text end
                     row.Text:SetText(text)
                     row:SetScript("OnEnter", function(button)
                         GameTooltip:SetOwner(button, "ANCHOR_TOP")
-                        GameTooltip:SetText(dataSource[tablenum][value][1])
+                        GameTooltip:SetText(dataSource[value][1])
                         GameTooltip:Show()
                     end)
                     row:SetScript("OnLeave", function() GameTooltip:Hide() end)
