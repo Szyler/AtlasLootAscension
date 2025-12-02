@@ -12,6 +12,11 @@ function AtlasLoot:InitializeItemFrame()
 	self.itemframe.Label:SetSize(512,30)
 	self.itemframe.Label:SetJustifyH("CENTER")
 
+	self.itemframe.PageNumber = self.itemframe:CreateFontString(nil,"OVERLAY","GameFontHighlightLarge")
+	self.itemframe.PageNumber:SetPoint("TOPRIGHT", self.itemframe, "TOPRIGHT", 15, -5)
+	self.itemframe.PageNumber:SetSize(100,20)
+	self.itemframe.PageNumber:SetJustifyH("LEFT")
+
 	local function hideButton(button)
 		if not button then return end
 		button:Hide()
@@ -201,6 +206,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 		return
 	end
 
+	self.itemframe.PageNumber:SetText(self:FixText("Page")..": "..pageNumber.."/"..numberPages)
+
 	-- Create the loottable
 	self:ItemFrameUpdate(dataID, dataSource_backup, tablenum, pageNumber)
 
@@ -275,6 +282,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 	if self.itemframe.refresh and self.itemframe.refreshOri and tablenum ~= #refreshOri_dataSource and dataSource_backup ~= "AtlasLoot_TokenData" and dataID ~= "SearchResult" or tablenum ~= #refresh_dataSource and dataID == "SearchResult" then
 		self.ui.nextbutton:Show()
 		self.ui.nextbutton.dataID = dataID
+		self.ui.nextbutton.dataSource = self:GetSourceData(dataSource_backup, dataID, tablenum)
 		self.ui.nextbutton.dataSource_backup = dataSource_backup
 		if  pageNumber == numberPages then
 			self.ui.nextbutton.tablenum = tablenum + 1
@@ -286,12 +294,14 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 	end
 
 	if tablenum ~= 1 and dataSource_backup ~= "AtlasLoot_TokenData" then
+		local dataSourcePrev , _, numberPagesPrev = self:GetSourceData(dataSource_backup, dataID, tablenum - 1)
 		self.ui.prevbutton:Show()
 		self.ui.prevbutton.dataID = dataID
+		self.ui.prevbutton.dataSource = dataSourcePrev
 		self.ui.prevbutton.dataSource_backup = dataSource_backup
 		if  pageNumber == 1 then
 			self.ui.prevbutton.tablenum = tablenum - 1
-			self.ui.prevbutton.numberPages = self:GetNumberOfPages(dataSource_backup, dataID, tablenum - 1)
+			self.ui.prevbutton.numberPages = numberPagesPrev
 		else
 			self.ui.prevbutton.numberPages = pageNumber - 1
 			self.ui.prevbutton.tablenum = tablenum
@@ -584,8 +594,7 @@ function AtlasLoot:NavButton_OnClick(btn)
 	if self.ui.tabs.Map:IsVisible() then
 		self:MapSelect(btn.mapID, btn.mapNum)
 	else
-		local dataSource = self:GetSourceData(btn.dataSource_backup, btn.dataID, btn.tablenum)
-		if #dataSource > 26 then
+		if #btn.dataSource > 26 then
 			local min, max = AtlasLootSubTableScrollScrollBar:GetMinMaxValues()
 			AtlasLootSubTableScrollScrollBar:SetValue(btn.tablenum * (max / #dataSource))
 		end

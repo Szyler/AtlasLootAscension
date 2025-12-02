@@ -305,15 +305,3 @@ function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 	end
 	return dataSource, itemData, #itemData
 end
-
-function AtlasLoot:GetNumberOfPages(dataSource_backup, dataID, tablenum)
-	local itemData, dataSource
-	if dataSource_backup == "AtlasLoot_CurrentWishList" then
-		dataSource = _G["AtlasLootWishList"]
-		itemData = _G["AtlasLootWishList"]
-	elseif dataSource_backup == "AtlasLoot_Data" then
-		dataSource = self.ui.menus.data[dataID]
-		itemData = self.itemData[dataSource[tablenum][2]]
-	end
-	return #itemData
-end
