@@ -47,14 +47,13 @@ function AtlasLoot:InitializeItemFrame()
 	end
 
 	function self:ItemFrameUpdate(dataID, dataSource_backup, tablenum, pageNumber)
-		print(pageNumber)
 		local dataSource, itemData = self:GetSourceData(dataSource_backup, dataID, tablenum)
 		if not dataSource or not itemData then return end
 		itemData = itemData[pageNumber]
 		for i = 1, 30 do
 			local button = self.itemframe.buttons[i]
 			hideButton(button)
-			if itemData[i] then
+			if itemData and itemData[i] then
 				local item  = {}
 				local show, itemID, recipeID = self:GetItemConditionals(itemData[i], dataSource)
 				if (show and self:FilterItem(itemData[i], dataSource, dataID)) then
@@ -85,6 +84,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 	if dataID == "refresh" then
 		dataID, dataSource_backup, tablenum, pageNumber = unpack(self.itemframe.refresh)
 	end
+	pageNumber = pageNumber or 1
 
 	self.vanityItems = {}
 
@@ -189,12 +189,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 	if dataSource.NoSubt == nil then
 		local text = self:FixText(dataSource.DisplayName) or self:FixText(dataSource.Name)
 		self.ui.submenuButton:SetText(text)
-		self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum, pageNumber)
+		self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
 	end
 
 	-- Sets the main page lable
-	if dataSource.Name then
-		local name = self:FixText(dataSource.Name)
+	if dataSource[tablenum][1] then
+		local name = self:FixText(dataSource[tablenum][1])
 		self.itemframe.Label:SetText(name)
 	else
 		self.itemframe.Label:SetText("This Is Empty")
@@ -278,8 +278,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 		self.ui.nextbutton.dataSource_backup = dataSource_backup
 		if  pageNumber == numberPages then
 			self.ui.nextbutton.tablenum = tablenum + 1
+			self.ui.nextbutton.numberPages = 1
 		else
-			self.ui.nextbutton.numberPages = numberPages + 1
+			self.ui.nextbutton.numberPages = pageNumber + 1
 			self.ui.nextbutton.tablenum = tablenum
 		end
 	end
@@ -290,8 +291,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 		self.ui.prevbutton.dataSource_backup = dataSource_backup
 		if  pageNumber == 1 then
 			self.ui.prevbutton.tablenum = tablenum - 1
+			self.ui.prevbutton.numberPages = self:GetNumberOfPages(dataSource_backup, dataID, tablenum - 1)
 		else
-			self.ui.prevbutton.numberPages = numberPages-1
+			self.ui.prevbutton.numberPages = pageNumber - 1
 			self.ui.prevbutton.tablenum = tablenum
 		end
 	end
@@ -343,8 +345,6 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	local show = true
 	local text, extra
 	local itemName, _, itemQuality, _, _, itemType, itemSubType, _, itemEquipLoc, itemIcon = self:GetItemInfo(itemID)
-
-	print(itemName,"|",itemType,"|",itemSubType,"|", itemEquipLoc)
 	local spellName, spellIcon
 	--Use shortcuts for easier reference to parts of the item button
 	local iconFrame  = itemButton.Icon
@@ -570,9 +570,9 @@ end
 function AtlasLoot:BackButton_OnClick()
 	self.backEnabled = false
 	if self.itemframe.refreshSearch then
-		self:ShowItemsFrame(self.itemframe.refreshSearch[1], self.itemframe.refreshSearch[2], self.itemframe.refreshSearch[3])
+		self:ShowItemsFrame(unpack(self.itemframe.refreshSearch))
 	else
-		self:ShowItemsFrame(self.itemframe.refreshBack[1], self.itemframe.refreshBack[2], self.itemframe.refreshBack[3])
+		self:ShowItemsFrame(unpack(self.itemframe.refreshBack))
 	end
 end
 

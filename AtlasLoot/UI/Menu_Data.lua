@@ -822,7 +822,7 @@ function AtlasLoot:InitializeMenuData()
 		Type = "BCRaid",
 		Map = "Karazhan",
 		Loadfirst = 2,
-		{ "Servant's Quarter Animal Bosses" },
+		--{ "Servant's Quarter Animal Bosses" },
 		{ "Attumen the Huntsman", 16152 },
 		{ "Moroes", 15687 },
 		{ "Maiden of Virtue", 16457 },

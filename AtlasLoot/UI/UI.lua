@@ -482,10 +482,9 @@ local MAX_ROWS2 = 24      -- How many rows can be shown at once?
         end
 end)
 
-    function self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum, pageNumber)
+    function self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
         local dataSource, itemData = self:GetSourceData(dataSource_backup, dataID, tablenum)
         local maxValue = #dataSource
-        itemData = itemData[pageNumber]
         if dataSource == "AtlasLoot_MapData" then maxValue = #dataSource[tablenum] end
         self.ui.tabs.Loot.TableScrollFrame.dataID = dataID
         self.ui.tabs.Loot.TableScrollFrame.dataSource = dataSource_backup
@@ -496,13 +495,10 @@ end)
             local value = i + offset
             self.ui.tabs.Loot.TableScrollFrame.rows[i]:SetChecked(false)
             self.ui.tabs.Loot.TableScrollFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-            if value <= maxValue and (itemData and itemData[value] or dataSource[tablenum][value]) and dataID ~= "SearchMENU" then
+            if value <= maxValue and (dataSource and dataSource[value] or dataSource[tablenum][value]) and dataID ~= "SearchMENU" then
                 local row = self.ui.tabs.Loot.TableScrollFrame.rows[i]
+                    row.tableInfo = {dataID, dataSource_backup, value}
                     row.dataSource = dataSource
-                    row.dataSource_backup = dataSource_backup
-                    row.dataID = dataID
-                    row.tablenum = value
-                    row.pageNumber = pageNumber
                 if dataSource_backup == "AtlasLoot_MapData" then
                     local text = dataSource[tablenum][value][1]
                     if dataSource[tablenum][value][2] then text = text..dataSource[tablenum][value][2] end
@@ -540,7 +536,7 @@ end)
     self.ui.tabs.Loot.TableScrollFrame.scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8)
     self.ui.tabs.Loot.TableScrollFrame.scrollSlider:SetScript("OnVerticalScroll", function(slider, offset)
         slider.offset = math.floor(offset / ROW_HEIGHT + 0.5)
-            self:SubTableScrollFrameUpdate(self.ui.tabs.Loot.TableScrollFrame.dataID, self.ui.tabs.Loot.TableScrollFrame.dataSource, self.ui.tabs.Loot.TableScrollFrame.tablenum)
+            self:SubTableScrollFrameUpdate(unpack(self.ui.tabs.Loot.TableScrollFrame.tableInfo))
     end)
 
 local rows2 = setmetatable({}, { __index = function(t, i)
@@ -559,8 +555,8 @@ local rows2 = setmetatable({}, { __index = function(t, i)
         if buttonClick == "RightButton" and webID then
             row:SetChecked(not row:GetChecked())
             self:OpenDB(button, webID[2], webID[1])
-        elseif row.dataSource_backup ~= "AtlasLoot_MapData" then
-            self:ShowItemsFrame(row.dataID, row.dataSource_backup, row.tablenum, row.pageNumber)
+        elseif row.tableInfo[2] ~= "AtlasLoot_MapData" then
+            self:ShowItemsFrame(unpack(row.tableInfo))
         else
             row:SetChecked(false)
         end
