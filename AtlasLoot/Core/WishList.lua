@@ -407,9 +407,9 @@ StaticPopupDialogs["ATLASLOOT_DELETE_WISHLIST"] = {
 		self:SetFrameStrata("TOOLTIP")
 	end,
 	OnAccept = function()
-		table.remove(AtlasLootWishList[self.currentWishList.Show.ListType], AtlasLoot.ui.lootTableScrollFrame.tablenum)
+		table.remove(AtlasLootWishList[AtlasLoot.currentWishList.Show.ListType], AtlasLoot.ui.tabs.Loot.TableScrollFrame.tablenum)
 		AtlasLootWishList.Options[playerName].DefaultWishList[3] = 1
-		if AtlasLootWishList[self.currentWishList.Show.ListType][1] == nil then
+		if AtlasLootWishList[AtlasLoot.currentWishList.Show.ListType][1] == nil then
 			AtlasLoot:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1, 1)
 		else
 			AtlasLoot:ShowWishList(1)
@@ -722,7 +722,7 @@ StaticPopupDialogs["ATLASLOOT_SEND_WISHLIST"] = {
 
 		else
 			if SpamProtect(string.lower(name)) then
-				curtable = { "AtlasLootWishList", AtlasLoot.ui.lootTableScrollFrame.tablenum}
+				curtable = { "AtlasLootWishList", AtlasLoot.ui.tabs.Loot.TableScrollFrame.tablenum}
 				AtlasLoot:SendCommMessage("AtlasLootWishlist", "WishlistRequest", "WHISPER", name)
 			else
 				local _,_,timeleft = string.find( 10-(GetTime() - SpamFilter[string.lower(name)]), "(%d+)%.")
@@ -759,7 +759,7 @@ StaticPopupDialogs["ATLASLOOT_ADD_CUSTOMHEADER"] = {
 
 function AtlasLoot:ExportString()
 	local listType = (self.currentWishList.selected == 2 and "Shared") or "Own"
-	Internal_CopyToClipboard("AL:"..self:Serialize(AtlasLootWishList[listType][AtlasLoot.ui.lootTableScrollFrame.tablenum]))
+	Internal_CopyToClipboard("AL:"..self:Serialize(AtlasLootWishList[listType][AtlasLoot.ui.tabs.Loot.TableScrollFrame.tablenum]))
 	DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot"..": "..self.Colors.YELLOW.."Wishlist Exported to clipboard")
 end
 
