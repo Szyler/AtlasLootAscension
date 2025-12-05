@@ -83,7 +83,7 @@ function AtlasLoot:OnEnable()
 
 	self:SetSeverType()
 	LoadItemIDsDatabase()
-	self:WishlistSetup()
+	self:InitializeWishLists()
 	self:InitializeUI()
 	self:CreateSearchFrame()
 	self:InitializeSkins()
@@ -116,14 +116,14 @@ function AtlasLoot:Reset(data)
     elseif data == "wishlist" then
 		AtlasLootWishList = {}
 		self:WishlistSetup()
-        AtlasLootCharDB["SearchResult"] = {}
+        AtlasLootCharDB.SearchResult = {}
     elseif data == "all" then
 		self.ui:ClearAllPoints()
 		self.ui:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
         self.selectedProfile.LootBrowserScale = 1.0
         self:UpdateLootBrowserScale()
         AtlasLootCharDB.QuickLooks = {}
-        AtlasLootCharDB["SearchResult"] = {}
+        AtlasLootCharDB.SearchResult = {}
 		AtlasLootWishList = {}
 		self:WishlistSetup()
     end

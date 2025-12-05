@@ -129,6 +129,8 @@ end
 function AtlasLoot:MapOnShow(mapID, mapNum, refresh)
     if self.CurrentMap then
         self.itemframe:Hide()
+        self.ui.tabs.Search:Hide()
+        self.ui.tabs.Loot.TableScrollFrame:Show()
         -- Hide the Filter Check-Box
 	    self.ui.filterButton:Hide()
         self.ui.tabs.Loot:Hide()

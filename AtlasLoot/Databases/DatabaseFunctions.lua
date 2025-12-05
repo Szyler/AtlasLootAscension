@@ -244,46 +244,119 @@ function AtlasLoot:CreateMainLootTable()
 	end
 	self:RateLimitLoadTable(AtlasLoot_ItemData, addItem)
 end
-local sortOrder = {
-		Cloth = 1, Leather = 2, Mail = 3, Plate = 4, Misc = 5
+
+local equipLocType = {
+    INVTYPE_HEAD = 1,
+	INVTYPE_SHOULDER = 2,
+	INVTYPE_BODY = 3,
+    INVTYPE_CHEST = 3,
+	INVTYPE_ROBE = 3,
+	INVTYPE_WRIST = 4,
+	INVTYPE_HAND = 5,
+    INVTYPE_WAIST = 6,
+    INVTYPE_LEGS = 7,
+    INVTYPE_FEET = 8,
+    INVTYPE_CLOAK = 9,
+	INVTYPE_FINGER = 10,
+	INVTYPE_NECK = 11,
+    INVTYPE_TRINKET = 12,
+    INVTYPE_RANGED = 13,
+	INVTYPE_RANGEDRIGHT = 14,
+	INVTYPE_THROWN = 15,
+	INVTYPE_WEAPON = 16,
+	INVTYPE_WEAPONMAINHAND = 17,
+    INVTYPE_WEAPONOFFHAND = 18,
+    INVTYPE_2HWEAPON = 19,
+    INVTYPE_SHIELD = 20,
+	INVTYPE_HOLDABLE = 21,
+    INVTYPE_RELIC = 22,
+	INVTYPE_BAG = 23,
+    INVTYPE_TABARD = 24,
+    INVTYPE_AMMO = 25,
+    INVTYPE_QUIVER = 26,
+	INVTYPE_NON_EQUIP = 27,
 }
+
+local subType = {
+    Cloth = 1,
+    Leather = 2,
+    Mail = 3,
+    Plate = 4,
+	Bows = 5,
+    Guns = 6,
+	Crossbows = 7,
+    Wands = 8,
+	Thrown = 9,
+    ["One-Handed Axes"] = 10,
+    ["Two-Handed Axes"] = 11,
+    ["One-Handed Maces"] = 12,
+    ["Two-Handed Maces"] = 13,
+    ["One-Handed Swords"] = 14,
+    ["Two-Handed Swords"] = 15,
+	Polearms = 16,
+    Staves = 17,
+    ["Fist Weapons"] = 18,
+    Daggers = 19,
+    Shields = 20,
+    Miscellaneous = 21,
+	Librams = 22,
+    Idols = 23,
+    Totems = 24,
+    Sigils = 25,
+    ["Fishing Poles"] = 26,
+	Enchanting = 27,
+	Quest = 28,
+	Pet = 29
+}
+
+local baseType = {
+	Armor = 1, Weapon = 2, Recipe = 3, Quest = 4, Miscellaneous = 5
+}
+
+local function createItemCatagoiresTable()
+	local newTable = {}
+		for _, base in pairs(baseType) do
+			newTable[base] = {}
+			for _, sub in pairs(subType) do
+				newTable[base][sub] = {}
+				for _, loc in pairs(equipLocType) do
+					newTable[base][sub][loc] = {}
+				end
+			end
+		end
+	return newTable
+end
+
 local function sortItemData(itemData)
-	local itemCatagories = {
-		Armor = {[1] = {}, [2] = {}, [3] = {}, [4] = {}, [5] = {}},
-		Weapon = {},
-		Misc = {}
-	}
 	if itemData.sorted then return itemData end
+	local itemCatagories = createItemCatagoiresTable()
+
 	for _, itemData in pairs(itemData) do
 		local itemType, itemSubType, _, itemEquipLoc = select(6, AtlasLoot:GetItemInfo(itemData.itemID))
-		local iType = itemCatagories[itemType]
-		if iType and iType[itemSubType] then
+		local iType = itemCatagories[baseType[itemType]]
+		if iType and iType[subType[itemSubType]] then
 			local addType
-			if itemEquipLoc then
-				iType[itemSubType][sortOrder[itemEquipLoc]] = iType[itemSubType][itemEquipLoc] or {}
-				addType = iType[itemSubType][sortOrder[itemEquipLoc]]
+			if itemEquipLoc and equipLocType[itemEquipLoc] then
+				addType = iType[subType[itemSubType]][equipLocType[itemEquipLoc]]
 			else
-				iType[itemSubType][5] = iType[itemSubType][5] or {}
-				addType = iType[itemSubType][5]
+				addType = iType[subType[itemSubType]]
 			end
 			table.insert(addType, itemData)
-		elseif iType then
-			iType.Misc = iType.Misc or {}
-			table.insert(iType.Misc, itemData)
 		else
-			table.insert(itemCatagories.Misc, itemData)
+			table.insert(itemCatagories[5], itemData)
 		end
 	end
+
 	local sortedTable = {{}}
 	local function getLootItem(cat)
 		if cat.refLootEntry then
-			if #sortedTable[#sortedTable] > 30 then
+			if #sortedTable[#sortedTable] >= 30 then
 				table.insert(sortedTable, {})
 			end
 			table.insert(sortedTable[#sortedTable], cat)
 		else
-			for _, item in pairs(cat) do
-				getLootItem(item)	
+			for _, item in ipairs(cat) do
+				getLootItem(item)
 			end
 		end
 	end
@@ -295,9 +368,12 @@ end
 
 function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 	local itemData, dataSource
-	if dataSource_backup == "AtlasLoot_CurrentWishList" then
-		dataSource = _G["AtlasLootWishList"]
-		itemData = _G["AtlasLootWishList"]
+	if dataSource_backup == "currentWishList" then
+		dataSource = self.currentWishList[dataID]
+		itemData = self.currentWishList[dataID][tablenum]
+	elseif dataID == "SearchResult" then
+		dataSource = AtlasLootCharDB[dataID]
+		itemData = AtlasLootCharDB[dataID][1]
 	elseif dataSource_backup == "AtlasLoot_Data" then
 		dataSource = self.ui.menus.data[dataID]
 		itemData = sortItemData(self.itemData[dataSource[tablenum][2]])

@@ -89,12 +89,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 	if dataID == "refresh" then
 		dataID, dataSource_backup, tablenum, pageNumber = unpack(self.itemframe.refresh)
 	end
-	pageNumber = pageNumber or 1
 
 	self.vanityItems = {}
 
 	local dataSource, itemData, numberPages = self:GetSourceData(dataSource_backup, dataID, tablenum)
 
+	pageNumber = (pageNumber and pageNumber > numberPages and (pageNumber - (pageNumber - numberPages)))  or pageNumber or 1
 
     --If the loot table name has not been passed, throw up a debugging statement
 	if not dataID or not dataSource then
@@ -102,7 +102,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
         return
 	end
 
-	
 	--Hide search for normal loot tables
 	if dataID ~= "SearchResult"  then
 		self.ui.tabs.Search:Hide()
@@ -126,7 +125,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 	self.ui.difficultyScrollFrame.Lable:Hide()
 
 	-- Enable map button if there is a map for this table.
-	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" then
+	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "currentWishList" then
 		if dataSource.Map then
 		-- Stops map reseting to default while still in the same raid/instance table
 			if self.itemframe.refresh == nil or dataID ~= self.itemframe.refresh[1] then
@@ -145,7 +144,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 		self.ui.tabs.Map.tabButton:Disable()
 	end
 
-	if dataSource_backup ~= "AtlasLoot_CurrentWishList" then
+	if dataSource_backup ~= "currentWishList" then
 		self:WishListLockButtonReset()
 	end
 
@@ -199,7 +198,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 
 	-- Sets the main page lable
 	if dataSource[tablenum][1] then
-		local name = self:FixText(dataSource[tablenum][1])
+		local name = self:FixText(dataSource[tablenum].Name or dataSource[tablenum][1])
 		self.itemframe.Label:SetText(name)
 	else
 		self.itemframe.Label:SetText("This Is Empty")
@@ -220,13 +219,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 		self.itemframe.refreshOri = {dataID, dataSource_backup, tablenum, pageNumber}
 	end
 
-	if dataID == "SearchResult" then
-		self.itemframe.refreshSearch = {dataID, dataSource_backup, tablenum, pageNumber}
-	elseif not self.ui.backbutton:IsVisible() then
-		self.itemframe.refreshSearch = nil
-	end
-
-	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and
+	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "currentWishList" and
 	dataSource.Back ~= true and dataID ~= "EmptyTable" then
 		self.db.profile.LastBoss[self.Expac] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName, pageNumber}
 		self.db.profile.savedState[self.currentTable] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName, pageNumber}
@@ -257,18 +250,17 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 		self.ui.filterButton:Show()
 	end
 
-	--Hide navigation buttons by default, only show what we need
-	self:ToggleNavigationButtonsVisibility()
 	--Set the parent frame and anchor points
 	local nextSet = {self.itemframe, {"BOTTOMRIGHT", self.itemframe, "BOTTOMRIGHT",-10,10}}
 	local prevSet = {self.itemframe, {"BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",10,10}}
 	self:SetNavigationButtonsPoints(nextSet, prevSet)
+	self:ToggleNavigationButtonsVisibility()
 
 	self:ToogleWishListButtons()
 	self.ui.learnSpellbtn:Hide()
 
 	-- Show Wishlist buttons when a wishlist in showing
-	if dataSource_backup == "AtlasLoot_CurrentWishList" then
+	if dataSource_backup == "currentWishList" then
 		self:ToogleWishListButtons(true)
 	end
 
@@ -278,10 +270,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 
 	local refreshOri_dataSource = self:GetSourceData(self.itemframe.refreshOri[2], self.itemframe.refreshOri[1], tablenum)
 	local refresh_dataSource = self:GetSourceData(self.itemframe.refresh[2], self.itemframe.refresh[1], tablenum)
-	if self.itemframe.refresh and self.itemframe.refreshOri and tablenum ~= #refreshOri_dataSource and dataSource_backup ~= "AtlasLoot_TokenData" and dataID ~= "SearchResult" or tablenum ~= #refresh_dataSource and dataID == "SearchResult" then
+	if (self.itemframe.refreshOri and tablenum ~= #refreshOri_dataSource) or (tablenum ~= #refresh_dataSource or pageNumber ~= numberPages) then
 		self.ui.nextbutton:Show()
 		self.ui.nextbutton.dataID = dataID
-		self.ui.nextbutton.dataSource = self:GetSourceData(dataSource_backup, dataID, tablenum)
+		self.ui.nextbutton.dataSource = dataSource
 		self.ui.nextbutton.dataSource_backup = dataSource_backup
 		if  pageNumber == numberPages then
 			self.ui.nextbutton.tablenum = tablenum + 1
@@ -292,8 +284,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 		end
 	end
 
-	if tablenum ~= 1 and dataSource_backup ~= "AtlasLoot_TokenData" then
-		local dataSourcePrev , _, numberPagesPrev = self:GetSourceData(dataSource_backup, dataID, tablenum - 1)
+	if tablenum ~= 1 or pageNumber ~= 1 and dataSource_backup ~= "AtlasLoot_TokenData" then
+		local dataSourcePrev , _, numberPagesPrev = self:GetSourceData(dataSource_backup, dataID, (tablenum == 1 and 1 or tablenum-1))
 		self.ui.prevbutton:Show()
 		self.ui.prevbutton.dataID = dataID
 		self.ui.prevbutton.dataSource = dataSourcePrev
@@ -406,7 +398,7 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 		elseif C_VanityCollection.IsCollectionItemOwned(itemID) then
 			hightlightFrame:SetTexture(itemHighlightBlue)
 			hightlightFrame:Show()
-			if dataSource_backup == "AtlasLoot_CurrentWishList" or (VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell ~= 0 and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell)) then
+			if dataSource_backup == "currentWishList" or (VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell ~= 0 and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell)) then
 				table.insert(self.vanityItems, itemID)
 			end
 		end
@@ -511,7 +503,7 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	itemButton.itemTexture = iconFrame:GetTexture()
 
 	--Highlight items in the wishlist
-	if itemID and dataSource_backup ~= "AtlasLoot_CurrentWishList" and (AtlasLootWishList.Options[UnitName("player")] and AtlasLootWishList.Options[UnitName("player")]["Mark"]) then
+	if itemID and dataSource_backup ~= "currentWishList" and (AtlasLootWishList.Options[UnitName("player")] and AtlasLootWishList.Options[UnitName("player")]["Mark"]) then
 		local xitemexistwish, itemwishicons = self:WishListCheck(itemID, true)
 		if xitemexistwish then
 			text = itemwishicons.." "..text
@@ -568,8 +560,8 @@ AtlasLoot:SetFavorites(number)
 sets the favorite when alt right clicked
 ]]
 function AtlasLoot:SetFavorites(num)
-    if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
-        AtlasLootCharDB.QuickLooks[num]={AtlasLoot_CurrentWishList.Show.ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList.Show.ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum].Name}
+    if self.itemframe.refresh[2] == "currentWishList" then
+        AtlasLootCharDB.QuickLooks[num]={self.currentWishList.Show.ListType, "AtlasLootWishList", self.currentWishList.Show.ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][self.currentWishList.Show.ListType][self.currentWishList.Show.ListNum].Name}
     else
         AtlasLootCharDB.QuickLooks[num]={self.itemframe.refreshOri[1], self.itemframe.refreshOri[2], self.itemframe.refreshOri[3], self.lastModule, self.currentTable, _G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]][self.itemframe.refreshOri[3]].Name}
     end
@@ -578,11 +570,7 @@ end
 --Called when 'Back'Button is pressed and calls up the appropriate loot page
 function AtlasLoot:BackButton_OnClick()
 	self.backEnabled = false
-	if self.itemframe.refreshSearch then
-		self:ShowItemsFrame(unpack(self.itemframe.refreshSearch))
-	else
-		self:ShowItemsFrame(unpack(self.itemframe.refreshBack))
-	end
+	self:ShowItemsFrame(unpack(self.itemframe.refreshBack))
 end
 
 --[[

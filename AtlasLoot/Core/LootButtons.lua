@@ -170,7 +170,7 @@ function AtlasLoot:ItemOnClick(item, button)
         elseif button == "LeftButton" and self.wishListLockState == "Unlocked" then
             self:MoveWishlistItem("Up", item.item.positionNumber)
 
-        elseif button == "RightButton" and itemID and IsAltKeyDown() and self.itemframe.refresh[2] ~= "AtlasLoot_CurrentWishList" then
+        elseif button == "RightButton" and itemID and IsAltKeyDown() and self.itemframe.refresh[2] ~= "currentWishList" then
             local wList = AtlasLootWishList.Options[playerName].DefaultWishList
 
             self:AddItemToWishList(wList[1], wList[3], item)
@@ -187,7 +187,7 @@ function AtlasLoot:ItemOnClick(item, button)
             --view item in dressing room
             DressUpItemLink(itemLink)
         elseif IsAltKeyDown() then
-            if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
+            if self.itemframe.refresh[2] == "currentWishList" then
                 self:DeleteFromWishList(item.item)
             end
         elseif item.sourcePage and item.sourcePage[2] == "Source" then
@@ -222,7 +222,7 @@ function AtlasLoot:ItemOnClick(item, button)
         elseif button == "RightButton" then
             self:ItemContextMenu(item, "spell", recipeData)
         elseif IsAltKeyDown() then
-            if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
+            if self.itemframe.refresh[2] == "currentWishList" then
                 self:DeleteFromWishList(item.item)
             end
         elseif IsControlKeyDown() then
@@ -293,7 +293,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
     }
     local wishList
     local wayPointList
-    local isWishlist = (self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList") or false
+    local isWishlist = (self.itemframe.refresh[2] == "currentWishList") or false
     local notWishlist = notWishlist and nil
     local wList = AtlasLootWishList.Options[playerName].DefaultWishList
     local isCollectionItem = itemID and C_VanityCollection.IsCollectionItemOwned(itemID)

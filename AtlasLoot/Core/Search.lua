@@ -254,6 +254,8 @@ SlashCmdList["ATLASLOOTSEARCH"] = function(search, editBox)
     end
 end
 
+function AtlasLoot:InitializeSearch()
+
 -- split one string on another (delimiter can be more than one character)
 local function SplitString(str, delimiter)
     local result = {}
@@ -586,36 +588,24 @@ function AtlasLoot:GetItemDetails(itemId)
     return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
 end
 
-local count = 1
-local tablenum = 1
-
-function AtlasLoot:AddItemToSearchResult(item, dataSource, dataID, tableNum)
-    AtlasLootCharDB["SearchResult"].SearchIDs = AtlasLootCharDB["SearchResult"].SearchIDs or {}
+local newTable = {{}}
+local searchIDs = {}
+local function addItemToSearchResult(item, dataSource, dataID, tableNum)
     local itemData = self:CloneTable(item)
-    local inResults = AtlasLootCharDB["SearchResult"].SearchIDs[item.itemID]
-    if item.itemID then
-        if inResults then
-            inResults[1][inResults[2]] = itemData
-            inResults[1][inResults[2]].lootTable = {{dataID, dataSource, tableNum}, "Source"}
-        else
-            local pageSide = AtlasLootCharDB["SearchResult"][1][1]
-            if count >= 16 then
-                pageSide = AtlasLootCharDB["SearchResult"][1][2]
-            end
-            table.insert(pageSide, itemData)
+    if item.itemID and not searchIDs[item.itemID] then
+        if #newTable[#newTable] >= 30 then
+		    table.insert(newTable, {})
+		end
+        itemData.lootTable = {{dataID, dataSource, tableNum}, "Source"}
+		table.insert(newTable[#newTable], itemData)
 
-            pageSide[#pageSide].lootTable = {{dataID, dataSource, tableNum}, "Source"}
-            AtlasLootCharDB["SearchResult"].SearchIDs[item.itemID] = {pageSide, #pageSide}
-            count = count + 1
-            if count == 31 then
-                count = 1
-            end
-        end
+        searchIDs[item.itemID] = {newTable, #newTable}
+        AtlasLootCharDB.SearchResult[1] = newTable
     end
 end
 
 local showSearch
-function AtlasLoot:ProcessItem(data)
+local function processItem(data)
     if not data then return end
     local itemData, dataID, tableNum, searchTerms, searchText = unpack(data)
     if type(itemData) == "table" then
@@ -625,7 +615,7 @@ function AtlasLoot:ProcessItem(data)
             self:ItemsLoading(-1)
             local spellName = GetSpellInfo(spellID)
             if self:NameMatches(spellName, searchText) then
-                self:AddItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
+                addItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
                 if not showSearch then
                     self:ShowSearchResult()
                     showSearch = true
@@ -639,7 +629,7 @@ function AtlasLoot:ProcessItem(data)
                 itemDetails[1] = item:GetName()
                 if not itemDetails[1] then return end
                 if self:ItemMatchesAllTerms(searchTerms, itemDetails) then
-                    self:AddItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
+                    addItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
                     if not showSearch then
                         self:ShowSearchResult()
                         showSearch = true
@@ -666,8 +656,9 @@ end
 local itemList = {}
 
 function AtlasLoot:DoSearch(searchText)
-    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", {Name = "Search Results",{},{}}}
-    count = 1
+    AtlasLootCharDB.SearchResult = {Name = "Search Result" , Type = "Search", {}}
+    newTable = {{}}
+    searchIDs = {}
     showSearch = false
 
     wipe(itemList)
@@ -706,7 +697,7 @@ function AtlasLoot:DoSearch(searchText)
         startTime = debugprofilestop()
         local task = tremove(itemList)
         while (task) do
-            self:ProcessItem(task[1])
+            processItem(task[1])
             if (debugprofilestop() - startTime > maxDuration) then
                 Timer.After(0, continue)
                 return
@@ -779,7 +770,7 @@ end
 local MAX_ARGUMENTS = 6
 local ACTIVE_ARGUMENT = 0
 
-function AtlasLoot:InitializeSearch()
+
     local searchPanel = self.ui.tabs.Search
     local frameMenuList = {
         ["EquipSubMenu"] = {searchPanel.equipbtn.subbtn, "Select Option", "type", ""}
@@ -912,7 +903,6 @@ function AtlasLoot:InitializeSearch()
 
     function self:ShowSearchTab()
         -- Hide all elements that could be in the AtlasTable
-        self:ToggleNavigationButtonsVisibility()
         self.ui.tabs.currentTab = "Search"
 
         -- Hide the Filter Check-Box

@@ -167,7 +167,7 @@ local txtSubstitution = {
 }
 
 function AtlasLoot:FixText(text)
-    if not text then return end
+    if not text or (text and type(text) ~= "string") then return "" end
     for _, subTable in pairs (txtSubstitution) do
         text = gsub(text, subTable[1], subTable[2])
     end

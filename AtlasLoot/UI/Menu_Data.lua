@@ -821,7 +821,7 @@ function AtlasLoot:InitializeMenuData()
 		Name = "Karazhan",
 		Type = "BCRaid",
 		Map = "Karazhan",
-		Loadfirst = 2,
+		Loadfirst = 1,
 		--{ "Servant's Quarter Animal Bosses" },
 		{ "Attumen the Huntsman", 16152 },
 		{ "Moroes", 15687 },

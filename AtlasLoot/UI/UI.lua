@@ -395,7 +395,7 @@ function self:ScrollFrameUpdate(hide,wishlist)
                 row:SetText("|cffFFd200"..text)
                 row.itemIndex = value
 
-                if row.itemIndex == AtlasLoot_CurrentWishList.selected then
+                if row.itemIndex == self.currentWishList.selected then
                     row:SetChecked(true)
                 end
                 row:Show()
@@ -454,7 +454,7 @@ local rows = setmetatable({}, { __index = function(t, i)
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
     row:SetScript("OnClick", function()
         if self.ui.difficultyScrollFrame.wishList then
-            AtlasLoot_CurrentWishList.selected = row.itemIndex
+            self.currentWishList.selected = row.itemIndex
             self:ShowWishList()
             self:ScrollFrameUpdate(nil,self.ui.difficultyScrollFrame.wishList)
         else
@@ -537,7 +537,8 @@ end)
                     end)
                     row:SetScript("OnLeave", function() GameTooltip:Hide() end)
                 else
-                    row.Text:SetText("|cffFFd200"..(self:FixText(dataSource[value][1]) or ""))
+                    local name = self:FixText(dataSource[value].Name or dataSource[value][1] or "")
+                    row.Text:SetText("|cffFFd200"..name)
                     row:SetScript("OnEnter", function(button)
                         GameTooltip:Hide()
                     end)
@@ -665,12 +666,12 @@ self.ui.tabs.Loot.TableScrollFrame.rows = rows2
     self.ui.tabs.Map:EnableMouse()
     self.ui.tabs.Map:SetScript("OnMouseDown", function(button, buttonClick)
         if buttonClick == "RightButton" then
-            self:MapOnShow()
+            self:MapOnShow(self.CurrentMap, self.MapNum or 1)
         elseif buttonClick == "LeftButton" then
             --print(self:GetCursorCords())
         end
     end)
-    self.ui.tabs.Map:SetScript("OnShow", function() self:MapOnShow() end)
+    self.ui.tabs.Map:SetScript("OnShow", function() self:MapOnShow(self.CurrentMap, self.MapNum or 1) end)
 
     self.ui.tabs.Map:EnableMouseWheel(true)
     self.ui.tabs.Map.cursorCords = self.ui.tabs.Map:CreateFontString(nil,"ARTWORK","GameFontNormal")
