@@ -656,7 +656,7 @@ end
 local itemList = {}
 
 function AtlasLoot:DoSearch(searchText)
-    AtlasLootCharDB.SearchResult = {Name = "Search Result" , Type = "Search", {}}
+    AtlasLootCharDB.SearchResult = {Name = "Search Results" , Type = "Search", {}}
     newTable = {{}}
     searchIDs = {}
     showSearch = false
