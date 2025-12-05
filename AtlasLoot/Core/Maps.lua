@@ -110,7 +110,7 @@ function AtlasLoot:SetNavButtons(mapID, mapNum)
 
         if mapNum ~= #_G["AtlasLoot_MapData"][mapID] then
             	--Set the parent frame and anchor points
-            local nextSet = {self.ui.tabs.Map, {"BOTTOMRIGHT", self.ui.tabs.Map, "BOTTOMRIGHT",-30,10}}
+            local nextSet = {self.ui.tabs.Map, {"BOTTOMRIGHT", self.ui.tabs.Map, "BOTTOMRIGHT",-10,10}}
             self:SetNavigationButtonsPoints(nextSet)
             self.ui.nextbutton:Show()
             self.ui.nextbutton.mapNum = mapNum + 1
