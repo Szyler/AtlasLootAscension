@@ -133,13 +133,6 @@ local SOCKET_FILTERS = {
 
 local SOCKET_TYPES = {"EMPTY_SOCKET_BLUE", "EMPTY_SOCKET_RED", "EMPTY_SOCKET_YELLOW", "EMPTY_SOCKET_META", "EMPTY_SOCKET_NO_COLOR"}
 
-local INFO_FILTERS = {
-    ["ilvl"] = true,
-    ["minlvl"] = true
-    -- ["type"] = true,
-    -- ["subtype"] = true,
-}
-
 local QUALITY_FILTERS = {
     ["poor"] = 0,
     ["common"] = 1,
@@ -219,434 +212,448 @@ local TYPE_FILTERS = {
 
 function AtlasLoot:InitializeSearch()
 
-local function showSearchResult()
-    self:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1, 1)
-end
-
--- split one string on another (delimiter can be more than one character)
-local function splitString(str, delimiter)
-    local result = {}
-    local start = 1
-    local len = #str
-    while start <= len do
-        local delimPos = str:find(delimiter, start, true)
-        if delimPos then
-            result[#result + 1] = str:sub(start, delimPos - 1) -- grab up to the delimeter
-            start = delimPos + #delimiter -- advance past the delimiter
-        else
-            result[#result + 1] = str:sub(start) -- grab the rest of the string
-            break
-        end
-    end
-    return result
-end
-
-local function compareNumbersByOperator(operator, left, right)
-    return left and right and
-               ((operator == "<>" and left ~= right) or (operator == "<=" and left <= right) or (operator == ">=" and left >= right) or (operator == "=" and left == right) or
-                   (operator == "<" and left < right) or (operator == ">" and left > right))
-end
-
-local function throwQueryError(...)
-    error("Error: " .. string.format(...))
-end
-
-local function isItemStatMatch(term, stats)
-    local filterKey = STAT_FILTERS[term.left]
-    if not filterKey then
-        return
+    local function showSearchResult()
+        self:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1, 1)
     end
 
-    local statValue = tonumber(stats[filterKey])
-    if not statValue then
-        return
+    function self:ShowSearchTab()
+        -- Hide all elements that could be in the AtlasTable
+        self.ui.tabs.currentTab = "Search"
+
+        -- Hide the Filter Check-Box
+        self.ui.filterButton:Hide()
+
+        searchPanel:Show()
+        self.CurrentType = "Search"
+        showSearchResult()
+        self:ScrollFrameUpdate()
     end
 
-    local searchedValue = tonumber(term.right)
-    if not searchedValue then
-        throwQueryError("'%s' requires a numeric argument", term.left)
-    end
-
-    return compareNumbersByOperator(term.relational, statValue, searchedValue)
-end
-
-local function isItemLevelFilterMatch(term, itemLvl)
-    if term.left ~= "ilvl" then
-        return
-    end
-
-    local searchedValue = tonumber(term.right)
-    if not searchedValue then
-        throwQueryError("ilvl search requires a numeric argument")
-    end
-
-    return itemLvl ~= nil and itemLvl > 0 and compareNumbersByOperator(term.relational, itemLvl, searchedValue)
-end
-
-local function isItemQualityMatch(term, itemQuality)
-    if term.left ~= "quality" then
-        return
-    end
-
-    local searchedValue = QUALITY_FILTERS[term.right]
-    if not searchedValue then
-        throwQueryError("unrecognized quality value \"%s\"", term.right)
-    end
-
-    return compareNumbersByOperator(term.relational, itemQuality, searchedValue)
-end
-
-local function isItemSocketMatch(term, stats)
-    if not SOCKET_FILTERS[term.left] then
-        return
-    end
-
-    local searchedValue = tonumber(term.right)
-    if not searchedValue then
-        throwQueryError("'%s' requires a numeric argument", term.left)
-    end
-
-    local socketCount = 0
-    for _, socketType in pairs(SOCKET_TYPES) do
-        local statValue = tonumber(stats[socketType])
-        if statValue then
-            socketCount = socketCount + statValue
-        end
-    end
-
-    return compareNumbersByOperator(term.relational, socketCount, searchedValue)
-end
-
-local function isMinLevelFilterMatch(term, minLvl)
-    if term.left ~= "minlvl" then
-        return
-    end
-
-    local searchedValue = tonumber(term.right)
-    if not searchedValue then
-        throwQueryError("minlvl search requires a numeric argument")
-    end
-
-    return minLvl ~= nil and minLvl > 0 and compareNumbersByOperator(term.relational, minLvl, searchedValue)
-end
-
-local function isItemSlotMatch(term, itemEquipLoc)
-    if term.left ~= "slot" then
-        return
-    end
-
-    if term.relational ~= "=" then
-        throwQueryError("slot searches should be in the form \"slot=[slotname]\"")
-    end
-
-    local slot = SLOT_FILTERS[term.right]
-    if not slot then
-        throwQueryError("unrecognized slot name: \"%s\"", term.right)
-    end
-
-    return slot == itemEquipLoc
-end
-
-local function isItemTypeMatch(term, itemEquipType)
-    if term.left ~= "type" then
-        return
-    end
-
-    if term.relational ~= "=" then
-        throwQueryError("type searches should be in the form \"type=[typename]\"")
-    end
-
-    local type = TYPE_FILTERS[term.right]
-    if not type then
-        throwQueryError("unrecognized type name: \"%s\"", term.right)
-    end
-
-    return type == itemEquipType
-end
-
-local function nameMatches(name, searchText)
-    if self.selectedProfile.PartialMatching then
-        return string.find(string.lower(name), string.lower(searchText))
-    else
-        return string.lower(name) == string.lower(searchText)
-    end
-end
-
-local RelationalFunctions = {
-    ["ilvl"] = {isItemLevelFilterMatch, 3},
-    ["minlvl"] = {isMinLevelFilterMatch, 4},
-    ["type"] = {isItemTypeMatch, 6},
-    ["slot"] = {isItemSlotMatch, 5},
-    ["quality"] = {isItemQualityMatch, 2},
-
-    ["gem"] = {isItemSocketMatch, 7},
-    ["gems"] = {isItemSocketMatch, 7},
-    ["socket"] = {isItemSocketMatch, 7},
-    ["sockets"] = {isItemSocketMatch, 7},
-
-    -- Base Stats
-    ["stamina"] = {isItemStatMatch, 7},
-    ["stam"] = {isItemStatMatch, 7},
-    ["sta"] = {isItemStatMatch, 7},
-
-    ["strength"] = {isItemStatMatch, 7},
-    ["str"] = {isItemStatMatch, 7},
-
-    ["agility"] = {isItemStatMatch, 7},
-    ["agi"] = {isItemStatMatch, 7},
-
-    ["intellect"] = {isItemStatMatch, 7},
-    ["int"] = {isItemStatMatch, 7},
-
-    ["spirit"] = {isItemStatMatch, 7},
-    ["spir"] = {isItemStatMatch, 7},
-    ["spi"] = {isItemStatMatch, 7},
-
-    ["health"] = {isItemStatMatch, 7},
-    ["mana"] = {isItemStatMatch, 7},
-
-    ["mp5"] = {isItemStatMatch, 7},
-    ["mpr"] = {isItemStatMatch, 7},
-
-    ["hp5"] = {isItemStatMatch, 7},
-    ["hpr"] = {isItemStatMatch, 7},
-
-    -- Sockets
-    ["socketblue"] = {isItemStatMatch, 7},
-    ["socketred"] = {isItemStatMatch, 7},
-    ["socketyellow"] = {isItemStatMatch, 7},
-
-    ["socketnocolor"] = {isItemStatMatch, 7},
-    ["socketwhite"] = {isItemStatMatch, 7},
-
-    ["socketmeta"] = {isItemStatMatch, 7},
-    ["meta"] = {isItemStatMatch, 7},
-
-    -- Secondary Stats
-    ["attackpowerferal"] = {isItemStatMatch, 7},
-    ["attackpowferal"] = {isItemStatMatch, 7},
-    ["apferal"] = {isItemStatMatch, 7},
-
-    ["attackpower"] = {isItemStatMatch, 7},
-    ["attackpow"] = {isItemStatMatch, 7},
-    ["ap"] = {isItemStatMatch, 7},
-
-    ["spellpower"] = {isItemStatMatch, 7},
-    ["spellpow"] = {isItemStatMatch, 7},
-    ["sp"] = {isItemStatMatch, 7},
-
-    ["spellpenetration"] = {isItemStatMatch, 7},
-    ["spellpen"] = {isItemStatMatch, 7},
-    ["spp"] = {isItemStatMatch, 7},
-
-    ["crit"] = {isItemStatMatch, 7},
-    ["haste"] = {isItemStatMatch, 7},
-
-    ["hit"] = {isItemStatMatch, 7},
-
-    ["armorpenetration"] = {isItemStatMatch, 7},
-    ["armourpenetration"] = {isItemStatMatch, 7},
-    ["armorpen"] = {isItemStatMatch, 7},
-    ["armourpen"] = {isItemStatMatch, 7},
-    ["arp"] = {isItemStatMatch, 7},
-
-    ["dps"] = {isItemStatMatch, 7},
-
-    ["resilience"] = {isItemStatMatch, 7},
-    ["resil"] = {isItemStatMatch, 7},
-    ["res"] = {isItemStatMatch, 7},
-
-    ["defense"] = {isItemStatMatch, 7},
-    ["def"] = {isItemStatMatch, 7},
-
-    ["dodge"] = {isItemStatMatch, 7},
-    ["dod"] = {isItemStatMatch, 7},
-
-    ["block"] = {isItemStatMatch, 7},
-
-    ["blockvalue"] = {isItemStatMatch, 7},
-    ["blockval"] = {isItemStatMatch, 7},
-    ["bv"] = {isItemStatMatch, 7},
-
-    ["parry"] = {isItemStatMatch, 7},
-
-    -- Resistances
-    ["armor"] = {isItemStatMatch, 7},
-    ["armour"] = {isItemStatMatch, 7},
-    ["arm"] = {isItemStatMatch, 7},
-    ["resistancephysical"] = {isItemStatMatch, 7},
-    ["resistancephys"] = {isItemStatMatch, 7},
-    ["resphys"] = {isItemStatMatch, 7},
-
-    ["resistanceholy"] = {isItemStatMatch, 7},
-    ["resholy"] = {isItemStatMatch, 7},
-
-    ["resistancefire"] = {isItemStatMatch, 7},
-    ["resfire"] = {isItemStatMatch, 7},
-
-    ["resistancenature"] = {isItemStatMatch, 7},
-    ["resnature"] = {isItemStatMatch, 7},
-    ["resnat"] = {isItemStatMatch, 7},
-
-    ["resistanceforst"] = {isItemStatMatch, 7},
-    ["resfrost"] = {isItemStatMatch, 7},
-
-    ["resistanceshadow"] = {isItemStatMatch, 7},
-    ["resshadow"] = {isItemStatMatch, 7},
-    ["resshad"] = {isItemStatMatch, 7},
-
-    ["resistancearcane"] = {isItemStatMatch, 7},
-    ["resarcane"] = {isItemStatMatch, 7},
-    ["resarc"] = {isItemStatMatch, 7},
-
-}
-
-local function itemMatchesTerm(term, itemDetails)
-    if term.relational then
-        local func, arg = unpack(RelationalFunctions[term.left])
-        if func then
-            return func(term, itemDetails[arg])
-        end
-        return false
-    else
-        return nameMatches(itemDetails[1], term.name)
-    end
-end
-
-local function itemMatchesAllTerms(searchTerms, itemDetails)
-    for _, term in ipairs(searchTerms) do
-        if not itemMatchesTerm(term, itemDetails) then
-            return false
-        end
-    end
-
-    return true
-end
-
-local function parseTerm(termText)
-    for _, relational in ipairs(RELATIONAL_OPERATORS) do
-        local operands = splitString(termText, relational)
-        if #operands == 2 then
-            return {
-                left = operands[1],
-                right = operands[2],
-                relational = relational
-            }
-        end
-    end
-    return {
-        name = termText
-    }
-end
-
--- Parse search text into '&'-delimited search terms,
--- then parse each term on its relational operator, if present.
-local function parseQuery(searchText)
-    local terms = {}
-    for _, term in pairs(splitString(searchText, OP_AND)) do
-        table.insert(terms, parseTerm(term))
-    end
-    return terms
-end
-
-local function getItemDetails(itemId)
-    -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
-    local itemName, _, itemQuality, itemLvl, minLvl, _, itemSubType, _, itemEquipLoc = self:GetItemInfo(itemId)
-    return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
-end
-
-local newTable = {{}}
-local searchIDs = {}
-local function addItemToSearchResult(item, dataSource, dataID, tableNum)
-    local itemData = self:CloneTable(item)
-    if item.itemID and not searchIDs[item.itemID] then
-        if #newTable[#newTable] >= 30 then
-		    table.insert(newTable, {})
-		end
-        itemData.lootTable = {{dataID, dataSource, tableNum}, "Source"}
-		table.insert(newTable[#newTable], itemData)
-
-        searchIDs[item.itemID] = {newTable, #newTable}
-        AtlasLootCharDB.SearchResult[1] = newTable
-    end
-end
-
-local showSearch
-local function processItem(data)
-    if not data then return end
-    local itemData, dataID, tableNum, searchTerms, searchText = unpack(data)
-    if type(itemData) == "table" then
-        local itemID = itemData.itemID
-        local spellID = itemData.spellID
-        if spellID then
-            self:ItemsLoading(-1)
-            local spellName = GetSpellInfo(spellID)
-            if nameMatches(spellName, searchText) then
-                addItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
-                if not showSearch then
-                    showSearchResult()
-                    showSearch = true
-                end
-                self:ItemFrameRefresh()
+    -- split one string on another (delimiter can be more than one character)
+    local function splitString(str, delimiter)
+        local result = {}
+        local start = 1
+        local len = #str
+        while start <= len do
+            local delimPos = str:find(delimiter, start, true)
+            if delimPos then
+                result[#result + 1] = str:sub(start, delimPos - 1) -- grab up to the delimeter
+                start = delimPos + #delimiter -- advance past the delimiter
+            else
+                result[#result + 1] = str:sub(start) -- grab the rest of the string
+                break
             end
-        elseif itemID then
-            local function nextItem(item)
+        end
+        return result
+    end
+
+    local function compareNumbersByOperator(operator, left, right)
+        return left and right and
+                ((operator == "<>" and left ~= right) or (operator == "<=" and left <= right) or (operator == ">=" and left >= right) or (operator == "=" and left == right) or
+                    (operator == "<" and left < right) or (operator == ">" and left > right))
+    end
+
+    local function throwQueryError(...)
+        error("Error: " .. string.format(...))
+    end
+
+    local function isItemStatMatch(term, stats)
+        local filterKey = STAT_FILTERS[term.left]
+        if not filterKey then
+            return
+        end
+
+        local statValue = tonumber(stats[filterKey])
+        if not statValue then
+            return
+        end
+
+        local searchedValue = tonumber(term.right)
+        if not searchedValue then
+            throwQueryError("'%s' requires a numeric argument", term.left)
+        end
+
+        return compareNumbersByOperator(term.relational, statValue, searchedValue)
+    end
+
+    local function isItemLevelFilterMatch(term, itemLvl)
+        if term.left ~= "ilvl" then
+            return
+        end
+
+        local searchedValue = tonumber(term.right)
+        if not searchedValue then
+            throwQueryError("ilvl search requires a numeric argument")
+        end
+
+        return itemLvl ~= nil and itemLvl > 0 and compareNumbersByOperator(term.relational, itemLvl, searchedValue)
+    end
+
+    local function isItemQualityMatch(term, itemQuality)
+        if term.left ~= "quality" then
+            return
+        end
+
+        local searchedValue = QUALITY_FILTERS[term.right]
+        if not searchedValue then
+            throwQueryError("unrecognized quality value \"%s\"", term.right)
+        end
+
+        return compareNumbersByOperator(term.relational, itemQuality, searchedValue)
+    end
+
+    local function isItemSocketMatch(term, stats)
+        if not SOCKET_FILTERS[term.left] then
+            return
+        end
+
+        local searchedValue = tonumber(term.right)
+        if not searchedValue then
+            throwQueryError("'%s' requires a numeric argument", term.left)
+        end
+
+        local socketCount = 0
+        for _, socketType in pairs(SOCKET_TYPES) do
+            local statValue = tonumber(stats[socketType])
+            if statValue then
+                socketCount = socketCount + statValue
+            end
+        end
+
+        return compareNumbersByOperator(term.relational, socketCount, searchedValue)
+    end
+
+    local function isMinLevelFilterMatch(term, minLvl)
+        if term.left ~= "minlvl" then
+            return
+        end
+
+        local searchedValue = tonumber(term.right)
+        if not searchedValue then
+            throwQueryError("minlvl search requires a numeric argument")
+        end
+
+        return minLvl ~= nil and minLvl > 0 and compareNumbersByOperator(term.relational, minLvl, searchedValue)
+    end
+
+    local function isItemSlotMatch(term, itemEquipLoc)
+        if term.left ~= "slot" then
+            return
+        end
+
+        if term.relational ~= "=" then
+            throwQueryError("slot searches should be in the form \"slot=[slotname]\"")
+        end
+
+        local slot = SLOT_FILTERS[term.right]
+        if not slot then
+            throwQueryError("unrecognized slot name: \"%s\"", term.right)
+        end
+
+        return slot == itemEquipLoc
+    end
+
+    local function isItemTypeMatch(term, itemEquipType)
+        if term.left ~= "type" then
+            return
+        end
+
+        if term.relational ~= "=" then
+            throwQueryError("type searches should be in the form \"type=[typename]\"")
+        end
+
+        local type = TYPE_FILTERS[term.right]
+        if not type then
+            throwQueryError("unrecognized type name: \"%s\"", term.right)
+        end
+
+        return type == itemEquipType
+    end
+
+    local function nameMatches(name, searchText)
+        if self.selectedProfile.PartialMatching then
+            return string.find(string.lower(name), string.lower(searchText))
+        else
+            return string.lower(name) == string.lower(searchText)
+        end
+    end
+
+    local RelationalFunctions = {
+        ["ilvl"] = {isItemLevelFilterMatch, 3},
+        ["minlvl"] = {isMinLevelFilterMatch, 4},
+        ["type"] = {isItemTypeMatch, 6},
+        ["slot"] = {isItemSlotMatch, 5},
+        ["quality"] = {isItemQualityMatch, 2},
+
+        ["gem"] = {isItemSocketMatch, 7},
+        ["gems"] = {isItemSocketMatch, 7},
+        ["socket"] = {isItemSocketMatch, 7},
+        ["sockets"] = {isItemSocketMatch, 7},
+
+        -- Base Stats
+        ["stamina"] = {isItemStatMatch, 7},
+        ["stam"] = {isItemStatMatch, 7},
+        ["sta"] = {isItemStatMatch, 7},
+
+        ["strength"] = {isItemStatMatch, 7},
+        ["str"] = {isItemStatMatch, 7},
+
+        ["agility"] = {isItemStatMatch, 7},
+        ["agi"] = {isItemStatMatch, 7},
+
+        ["intellect"] = {isItemStatMatch, 7},
+        ["int"] = {isItemStatMatch, 7},
+
+        ["spirit"] = {isItemStatMatch, 7},
+        ["spir"] = {isItemStatMatch, 7},
+        ["spi"] = {isItemStatMatch, 7},
+
+        ["health"] = {isItemStatMatch, 7},
+        ["mana"] = {isItemStatMatch, 7},
+
+        ["mp5"] = {isItemStatMatch, 7},
+        ["mpr"] = {isItemStatMatch, 7},
+
+        ["hp5"] = {isItemStatMatch, 7},
+        ["hpr"] = {isItemStatMatch, 7},
+
+        -- Sockets
+        ["socketblue"] = {isItemStatMatch, 7},
+        ["socketred"] = {isItemStatMatch, 7},
+        ["socketyellow"] = {isItemStatMatch, 7},
+
+        ["socketnocolor"] = {isItemStatMatch, 7},
+        ["socketwhite"] = {isItemStatMatch, 7},
+
+        ["socketmeta"] = {isItemStatMatch, 7},
+        ["meta"] = {isItemStatMatch, 7},
+
+        -- Secondary Stats
+        ["attackpowerferal"] = {isItemStatMatch, 7},
+        ["attackpowferal"] = {isItemStatMatch, 7},
+        ["apferal"] = {isItemStatMatch, 7},
+
+        ["attackpower"] = {isItemStatMatch, 7},
+        ["attackpow"] = {isItemStatMatch, 7},
+        ["ap"] = {isItemStatMatch, 7},
+
+        ["spellpower"] = {isItemStatMatch, 7},
+        ["spellpow"] = {isItemStatMatch, 7},
+        ["sp"] = {isItemStatMatch, 7},
+
+        ["spellpenetration"] = {isItemStatMatch, 7},
+        ["spellpen"] = {isItemStatMatch, 7},
+        ["spp"] = {isItemStatMatch, 7},
+
+        ["crit"] = {isItemStatMatch, 7},
+        ["haste"] = {isItemStatMatch, 7},
+
+        ["hit"] = {isItemStatMatch, 7},
+
+        ["armorpenetration"] = {isItemStatMatch, 7},
+        ["armourpenetration"] = {isItemStatMatch, 7},
+        ["armorpen"] = {isItemStatMatch, 7},
+        ["armourpen"] = {isItemStatMatch, 7},
+        ["arp"] = {isItemStatMatch, 7},
+
+        ["dps"] = {isItemStatMatch, 7},
+
+        ["resilience"] = {isItemStatMatch, 7},
+        ["resil"] = {isItemStatMatch, 7},
+        ["res"] = {isItemStatMatch, 7},
+
+        ["defense"] = {isItemStatMatch, 7},
+        ["def"] = {isItemStatMatch, 7},
+
+        ["dodge"] = {isItemStatMatch, 7},
+        ["dod"] = {isItemStatMatch, 7},
+
+        ["block"] = {isItemStatMatch, 7},
+
+        ["blockvalue"] = {isItemStatMatch, 7},
+        ["blockval"] = {isItemStatMatch, 7},
+        ["bv"] = {isItemStatMatch, 7},
+
+        ["parry"] = {isItemStatMatch, 7},
+
+        -- Resistances
+        ["armor"] = {isItemStatMatch, 7},
+        ["armour"] = {isItemStatMatch, 7},
+        ["arm"] = {isItemStatMatch, 7},
+        ["resistancephysical"] = {isItemStatMatch, 7},
+        ["resistancephys"] = {isItemStatMatch, 7},
+        ["resphys"] = {isItemStatMatch, 7},
+
+        ["resistanceholy"] = {isItemStatMatch, 7},
+        ["resholy"] = {isItemStatMatch, 7},
+
+        ["resistancefire"] = {isItemStatMatch, 7},
+        ["resfire"] = {isItemStatMatch, 7},
+
+        ["resistancenature"] = {isItemStatMatch, 7},
+        ["resnature"] = {isItemStatMatch, 7},
+        ["resnat"] = {isItemStatMatch, 7},
+
+        ["resistanceforst"] = {isItemStatMatch, 7},
+        ["resfrost"] = {isItemStatMatch, 7},
+
+        ["resistanceshadow"] = {isItemStatMatch, 7},
+        ["resshadow"] = {isItemStatMatch, 7},
+        ["resshad"] = {isItemStatMatch, 7},
+
+        ["resistancearcane"] = {isItemStatMatch, 7},
+        ["resarcane"] = {isItemStatMatch, 7},
+        ["resarc"] = {isItemStatMatch, 7},
+
+    }
+
+    local function itemMatchesTerm(term, itemDetails)
+        if term.relational then
+            local func, arg = unpack(RelationalFunctions[term.left])
+            if func then
+                return func(term, itemDetails[arg])
+            end
+            return false
+        else
+            return nameMatches(itemDetails[1], term.name)
+        end
+    end
+
+    local function itemMatchesAllTerms(searchTerms, itemDetails)
+        for _, term in ipairs(searchTerms) do
+            if not itemMatchesTerm(term, itemDetails) then
+                return false
+            end
+        end
+
+        return true
+    end
+
+    local function parseTerm(termText)
+        for _, relational in ipairs(RELATIONAL_OPERATORS) do
+            local operands = splitString(termText, relational)
+            if #operands == 2 then
+                return {
+                    left = operands[1],
+                    right = operands[2],
+                    relational = relational
+                }
+            end
+        end
+        return {
+            name = termText
+        }
+    end
+
+    -- Parse search text into '&'-delimited search terms,
+    -- then parse each term on its relational operator, if present.
+    local function parseQuery(searchText)
+        local terms = {}
+        for _, term in pairs(splitString(searchText, OP_AND)) do
+            table.insert(terms, parseTerm(term))
+        end
+        return terms
+    end
+
+    local function getItemDetails(itemId)
+        -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
+        local itemName, _, itemQuality, itemLvl, minLvl, _, itemSubType, _, itemEquipLoc = self:GetItemInfo(itemId)
+        return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
+    end
+
+    local newTable = {{}}
+    local searchIDs = {}
+    local function addItemToSearchResult(item, dataSource, dataID, tableNum)
+        local itemData = self:CloneTable(item)
+        if item.itemID and not searchIDs[item.itemID] then
+            if #newTable[#newTable] >= 30 then
+                table.insert(newTable, {})
+            end
+            itemData.lootTable = {{dataID, dataSource, tableNum}, "Source"}
+            table.insert(newTable[#newTable], itemData)
+
+            searchIDs[item.itemID] = {newTable, #newTable}
+            AtlasLootCharDB.SearchResult[1] = newTable
+        end
+    end
+
+    local showSearch
+    local function processItem(data)
+        if not data then return end
+        local itemData, dataID, tableNum, searchTerms, searchText = unpack(data)
+        if type(itemData) == "table" then
+            local itemID = itemData.itemID
+            local spellID = itemData.spellID
+            if spellID then
                 self:ItemsLoading(-1)
-                local itemDetails = {getItemDetails(itemID)}
-                itemDetails[1] = item:GetName()
-                if not itemDetails[1] then return end
-                if itemMatchesAllTerms(searchTerms, itemDetails) then
+                local spellName = GetSpellInfo(spellID)
+                if nameMatches(spellName, searchText) then
                     addItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
                     if not showSearch then
                         showSearchResult()
                         showSearch = true
-                    else
-                        self:ItemFrameRefresh()
+                    end
+                    self:ItemFrameRefresh()
+                end
+            elseif itemID then
+                local function nextItem(item)
+                    self:ItemsLoading(-1)
+                    local itemDetails = {getItemDetails(itemID)}
+                    itemDetails[1] = item:GetName()
+                    if not itemDetails[1] then return end
+                    if itemMatchesAllTerms(searchTerms, itemDetails) then
+                        addItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
+                        if not showSearch then
+                            showSearchResult()
+                            showSearch = true
+                        else
+                            self:ItemFrameRefresh()
+                        end
                     end
                 end
-            end
-            local item = Item:CreateFromID(itemID)
-            if item then
-                if searchTerms.relational and not item:GetInfo() then
-                    item:ContinueOnLoad(function(item)
+                local item = Item:CreateFromID(itemID)
+                if item then
+                    if searchTerms.relational and not item:GetInfo() then
+                        item:ContinueOnLoad(function(item)
+                            nextItem(item)
+                        end)
                         nextItem(item)
-                    end)
-                    nextItem(item)
-                else
-                    nextItem(item)
+                    else
+                        nextItem(item)
+                    end
                 end
             end
         end
     end
-end
 
-local itemList = {}
+    local itemList = {}
 
-local function doSearch(searchText)
-    AtlasLootCharDB.SearchResult = {Name = "Search Results" , Type = "Search", {}}
-    newTable = {{}}
-    searchIDs = {}
-    showSearch = false
+    local function doSearch(searchText)
+        AtlasLootCharDB.SearchResult = {Name = "Search Results" , Type = "Search", {}}
+        newTable = {{}}
+        searchIDs = {}
+        showSearch = false
 
-    wipe(itemList)
+        wipe(itemList)
 
-    local searchTerms = parseQuery(searchText)
-    for dataID, data in pairs(AtlasLoot_Data) do
-        if self.selectedProfile.SearchOn[data.Type] and self.selectedProfile.SearchOn[data.Type][1] or (self.selectedProfile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
-            for tableNum, t in ipairs(data) do
-                if type(t) == "table" then
-                    for _, side in pairs(t) do
-                        if type(side) == "table" then
-                            for _, itemData in pairs(side) do
-                                if type(itemData) == "table" then
-                                    if itemData.itemID or itemData.spellID then
-                                        if data.Type then
-                                            itemData.Type = data.Type
+        local searchTerms = parseQuery(searchText)
+        for dataID, data in pairs(AtlasLoot_Data) do
+            if self.selectedProfile.SearchOn[data.Type] and self.selectedProfile.SearchOn[data.Type][1] or (self.selectedProfile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
+                for tableNum, t in ipairs(data) do
+                    if type(t) == "table" then
+                        for _, side in pairs(t) do
+                            if type(side) == "table" then
+                                for _, itemData in pairs(side) do
+                                    if type(itemData) == "table" then
+                                        if itemData.itemID or itemData.spellID then
+                                            if data.Type then
+                                                itemData.Type = data.Type
+                                            end
+                                            if self.selectedProfile.showdropLocationOnSearch then
+                                                itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
+                                            end
+                                            tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
                                         end
-                                        if self.selectedProfile.showdropLocationOnSearch then
-                                            itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
-                                        end
-                                        tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
                                     end
                                 end
                             end
@@ -655,83 +662,82 @@ local function doSearch(searchText)
                 end
             end
         end
-    end
-    -- rate limit tied to half the current frame rate
-    self:ItemsLoading(#itemList)
-    local maxDuration = (self.selectedProfile.ItemLoadingSpeed*500)/GetFramerate()
-    local startTime = debugprofilestop()
-    local function continue()
-        startTime = debugprofilestop()
-        local task = tremove(itemList)
-        while (task) do
-            processItem(task[1])
-            if (debugprofilestop() - startTime > maxDuration) then
-                Timer.After(0, continue)
-                return
+        -- rate limit tied to half the current frame rate
+        self:ItemsLoading(#itemList)
+        local maxDuration = (self.selectedProfile.ItemLoadingSpeed*500)/GetFramerate()
+        local startTime = debugprofilestop()
+        local function continue()
+            startTime = debugprofilestop()
+            local task = tremove(itemList)
+            while (task) do
+                processItem(task[1])
+                if (debugprofilestop() - startTime > maxDuration) then
+                    Timer.After(0, continue)
+                    return
+                end
+                task = tremove(itemList)
             end
-            task = tremove(itemList)
         end
+
+        return continue()
     end
 
-    return continue()
-end
-
--- Search Options Menu
-local searchCategories = {
-    {
-        Name = "Classic",
-        {"Dungeon", "ClassicDungeonExt", "AtlasLoot_OriginalWoW"},
-        {"Raid", "ClassicRaid", "AtlasLoot_OriginalWoW"},
-        {"Crafting", "ClassicCrafting", "AtlasLoot_Crafting_OriginalWoW"},
-    },
-    {
-        Name = "BurningCrusade",
-        {"Dungeon", "BCDungeon", "AtlasLoot_BurningCrusade"},
-        {"Raid", "BCRaid", "AtlasLoot_BurningCrusade"},
-        {"Crafting", "BCCrafting", "AtlasLoot_Crafting_TBC"},
-    },
-    {
-        Name = "Wrath",
-        {"Dungeon", "WrathDungeon", "AtlasLoot_WrathoftheLichKing"},
-        {"Raid", "WrathRaid", "AtlasLoot_WrathoftheLichKing"},
-        {"Crafting", "WrathCrafting", "AtlasLoot_Crafting_Wrath"},
-    }
-}
-
-function AtlasLoot:ShowSearchOptions(button)
-    local profile = self.selectedProfile
-    local menuList = {{
-			{text = "Search Categories", func = function() self:AddWishList() end, isTitle = true},
-	}}
-
-    for _, cat in pairs(searchCategories) do
-        table.insert(menuList[1], {text = cat.Name, isTitle = true})
-        for _, data in ipairs(cat) do
-            local searchState = profile.SearchOn[data[2]]
-            searchState = searchState or {false, data[3]}
-            table.insert(menuList[1], {isRadio = true, text = data[1], checked = searchState and searchState[1], func = function() searchState[1] = not searchState[1] end, dontCloseWhenClicked = true})
-        end
-    end
-
-    local searchOptionsItems = {{
-        { text = "Search options", isTitle = true },
+    -- Search Options Menu
+    local searchCategories = {
         {
-            text = "Ascension Vanity Collection", isRadio = true, checked = profile.SearchAscensionVanity, dontCloseWhenClicked = true,
-            tooltip = "If checked, AtlasLoot will search Ascension Vanity Collection", func = function() profile.SearchAscensionVanity = not profile.SearchAscensionVanity end },
-        {
-            text = "Partial matching", isRadio = true, checked = profile.PartialMatching, dontCloseWhenClicked = true,
-            tooltip = "If checked, AtlasLoot search item names for a partial match.", func = function() profile.PartialMatching = not profile.PartialMatching end },
-        {
-            text = "Search AscensionDB", isRadio = true, checked = profile.SearchAscensionDB, dontCloseWhenClicked = true,
-            tooltip = "If checked, AtlasLoot will open a browser window and search AscensionDB", func = function() profile.SearchAscensionDB = not profile.SearchAscensionDB end 
+            Name = "Classic",
+            {"Dungeon", "ClassicDungeonExt", "AtlasLoot_OriginalWoW"},
+            {"Raid", "ClassicRaid", "AtlasLoot_OriginalWoW"},
+            {"Crafting", "ClassicCrafting", "AtlasLoot_Crafting_OriginalWoW"},
         },
-    }}
+        {
+            Name = "BurningCrusade",
+            {"Dungeon", "BCDungeon", "AtlasLoot_BurningCrusade"},
+            {"Raid", "BCRaid", "AtlasLoot_BurningCrusade"},
+            {"Crafting", "BCCrafting", "AtlasLoot_Crafting_TBC"},
+        },
+        {
+            Name = "Wrath",
+            {"Dungeon", "WrathDungeon", "AtlasLoot_WrathoftheLichKing"},
+            {"Raid", "WrathRaid", "AtlasLoot_WrathoftheLichKing"},
+            {"Crafting", "WrathCrafting", "AtlasLoot_Crafting_Wrath"},
+        }
+    }
 
-    self:OpenDewdropMenu(button, menuList, searchOptionsItems)
-end
+    function AtlasLoot:ShowSearchOptions(button)
+        local profile = self.selectedProfile
+        local menuList = {{
+                {text = "Search Categories", func = function() self:AddWishList() end, isTitle = true},
+        }}
 
-local MAX_ARGUMENTS = 6
-local ACTIVE_ARGUMENT = 0
+        for _, cat in pairs(searchCategories) do
+            table.insert(menuList[1], {text = cat.Name, isTitle = true})
+            for _, data in ipairs(cat) do
+                local searchState = profile.SearchOn[data[2]]
+                searchState = searchState or {false, data[3]}
+                table.insert(menuList[1], {isRadio = true, text = data[1], checked = searchState and searchState[1], func = function() searchState[1] = not searchState[1] end, dontCloseWhenClicked = true})
+            end
+        end
+
+        local searchOptionsItems = {{
+            { text = "Search options", isTitle = true },
+            {
+                text = "Ascension Vanity Collection", isRadio = true, checked = profile.SearchAscensionVanity, dontCloseWhenClicked = true,
+                tooltip = "If checked, AtlasLoot will search Ascension Vanity Collection", func = function() profile.SearchAscensionVanity = not profile.SearchAscensionVanity end },
+            {
+                text = "Partial matching", isRadio = true, checked = profile.PartialMatching, dontCloseWhenClicked = true,
+                tooltip = "If checked, AtlasLoot search item names for a partial match.", func = function() profile.PartialMatching = not profile.PartialMatching end },
+            {
+                text = "Search AscensionDB", isRadio = true, checked = profile.SearchAscensionDB, dontCloseWhenClicked = true,
+                tooltip = "If checked, AtlasLoot will open a browser window and search AscensionDB", func = function() profile.SearchAscensionDB = not profile.SearchAscensionDB end 
+            },
+        }}
+
+        self:OpenDewdropMenu(button, menuList, searchOptionsItems)
+    end
+
+    local MAX_ARGUMENTS = 6
+    local ACTIVE_ARGUMENT = 0
 
 
     local searchPanel = self.ui.tabs.Search
@@ -937,19 +943,6 @@ local ACTIVE_ARGUMENT = 0
                 end
             end
         end, "dontHook", true)
-    end
-
-    function self:ShowSearchTab()
-        -- Hide all elements that could be in the AtlasTable
-        self.ui.tabs.currentTab = "Search"
-
-        -- Hide the Filter Check-Box
-        self.ui.filterButton:Hide()
-
-        searchPanel:Show()
-        self.CurrentType = "Search"
-        showSearchResult()
-        self:ScrollFrameUpdate()
     end
 
     local function advSearchArgButtonToggle()
