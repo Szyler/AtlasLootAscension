@@ -217,47 +217,14 @@ local TYPE_FILTERS = {
     ["fishingpole"] = "Fishing Poles"
 }
 
-SLASH_ATLASLOOTHELP1 = "/atlasloothelp"
-SlashCmdList["ATLASLOOTHELP"] = function(msg, editBox)
-    local function show(caption, t)
-        local keys = {}
-        for key in pairs(t) do
-            table.insert(keys, key)
-        end
-        table.sort(keys, function(a, b)
-            return a < b
-        end)
-        print(caption .. ": " .. table.concat(keys, ", "))
-    end
-    show("stat", STAT_FILTERS)
-    show("socket", SOCKET_FILTERS)
-    show("slot", SLOT_FILTERS)
-    show("quality", QUALITY_FILTERS)
-    show("info", INFO_FILTERS)
-
-    print("\nExamples:")
-    print("gladiator")
-    print("str>40")
-    print("gladiator&str>40")
-    print("str>40&ilvl>=120&ilvl<140&int>0&socket>2")
-    print("sp>20&quality>=rare&quality<legendary&slot=finger")
-    print("stam>20&minlvl<=50")
-end
-
-SLASH_ATLASLOOTSEARCH1 = "/atlaslootsearch"
-SLASH_ATLASLOOTSEARCH2 = "/als"
-SlashCmdList["ATLASLOOTSEARCH"] = function(search, editBox)
-    self.ui:Show()
-    if search and search ~= '' then
-        AtlasLootSearchBox:SetText(search)
-        AtlasLootSearchButton:Click()
-    end
-end
-
 function AtlasLoot:InitializeSearch()
 
+local function showSearchResult()
+    self:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1, 1)
+end
+
 -- split one string on another (delimiter can be more than one character)
-local function SplitString(str, delimiter)
+local function splitString(str, delimiter)
     local result = {}
     local start = 1
     local len = #str
@@ -274,17 +241,17 @@ local function SplitString(str, delimiter)
     return result
 end
 
-local function CompareNumbersByOperator(operator, left, right)
+local function compareNumbersByOperator(operator, left, right)
     return left and right and
                ((operator == "<>" and left ~= right) or (operator == "<=" and left <= right) or (operator == ">=" and left >= right) or (operator == "=" and left == right) or
                    (operator == "<" and left < right) or (operator == ">" and left > right))
 end
 
-local function ThrowQueryError(...)
+local function throwQueryError(...)
     error("Error: " .. string.format(...))
 end
 
-local function IsItemStatMatch(term, stats)
+local function isItemStatMatch(term, stats)
     local filterKey = STAT_FILTERS[term.left]
     if not filterKey then
         return
@@ -297,46 +264,46 @@ local function IsItemStatMatch(term, stats)
 
     local searchedValue = tonumber(term.right)
     if not searchedValue then
-        ThrowQueryError("'%s' requires a numeric argument", term.left)
+        throwQueryError("'%s' requires a numeric argument", term.left)
     end
 
-    return CompareNumbersByOperator(term.relational, statValue, searchedValue)
+    return compareNumbersByOperator(term.relational, statValue, searchedValue)
 end
 
-local function IsItemLevelFilterMatch(term, itemLvl)
+local function isItemLevelFilterMatch(term, itemLvl)
     if term.left ~= "ilvl" then
         return
     end
 
     local searchedValue = tonumber(term.right)
     if not searchedValue then
-        ThrowQueryError("ilvl search requires a numeric argument")
+        throwQueryError("ilvl search requires a numeric argument")
     end
 
-    return itemLvl ~= nil and itemLvl > 0 and CompareNumbersByOperator(term.relational, itemLvl, searchedValue)
+    return itemLvl ~= nil and itemLvl > 0 and compareNumbersByOperator(term.relational, itemLvl, searchedValue)
 end
 
-local function IsItemQualityMatch(term, itemQuality)
+local function isItemQualityMatch(term, itemQuality)
     if term.left ~= "quality" then
         return
     end
 
     local searchedValue = QUALITY_FILTERS[term.right]
     if not searchedValue then
-        ThrowQueryError("unrecognized quality value \"%s\"", term.right)
+        throwQueryError("unrecognized quality value \"%s\"", term.right)
     end
 
-    return CompareNumbersByOperator(term.relational, itemQuality, searchedValue)
+    return compareNumbersByOperator(term.relational, itemQuality, searchedValue)
 end
 
-local function IsItemSocketMatch(term, stats)
+local function isItemSocketMatch(term, stats)
     if not SOCKET_FILTERS[term.left] then
         return
     end
 
     local searchedValue = tonumber(term.right)
     if not searchedValue then
-        ThrowQueryError("'%s' requires a numeric argument", term.left)
+        throwQueryError("'%s' requires a numeric argument", term.left)
     end
 
     local socketCount = 0
@@ -347,57 +314,57 @@ local function IsItemSocketMatch(term, stats)
         end
     end
 
-    return CompareNumbersByOperator(term.relational, socketCount, searchedValue)
+    return compareNumbersByOperator(term.relational, socketCount, searchedValue)
 end
 
-local function IsMinLevelFilterMatch(term, minLvl)
+local function isMinLevelFilterMatch(term, minLvl)
     if term.left ~= "minlvl" then
         return
     end
 
     local searchedValue = tonumber(term.right)
     if not searchedValue then
-        ThrowQueryError("minlvl search requires a numeric argument")
+        throwQueryError("minlvl search requires a numeric argument")
     end
 
-    return minLvl ~= nil and minLvl > 0 and CompareNumbersByOperator(term.relational, minLvl, searchedValue)
+    return minLvl ~= nil and minLvl > 0 and compareNumbersByOperator(term.relational, minLvl, searchedValue)
 end
 
-local function IsItemSlotMatch(term, itemEquipLoc)
+local function isItemSlotMatch(term, itemEquipLoc)
     if term.left ~= "slot" then
         return
     end
 
     if term.relational ~= "=" then
-        ThrowQueryError("slot searches should be in the form \"slot=[slotname]\"")
+        throwQueryError("slot searches should be in the form \"slot=[slotname]\"")
     end
 
     local slot = SLOT_FILTERS[term.right]
     if not slot then
-        ThrowQueryError("unrecognized slot name: \"%s\"", term.right)
+        throwQueryError("unrecognized slot name: \"%s\"", term.right)
     end
 
     return slot == itemEquipLoc
 end
 
-local function IsItemTypeMatch(term, itemEquipType)
+local function isItemTypeMatch(term, itemEquipType)
     if term.left ~= "type" then
         return
     end
 
     if term.relational ~= "=" then
-        ThrowQueryError("type searches should be in the form \"type=[typename]\"")
+        throwQueryError("type searches should be in the form \"type=[typename]\"")
     end
 
     local type = TYPE_FILTERS[term.right]
     if not type then
-        ThrowQueryError("unrecognized type name: \"%s\"", term.right)
+        throwQueryError("unrecognized type name: \"%s\"", term.right)
     end
 
     return type == itemEquipType
 end
 
-function AtlasLoot:NameMatches(name, searchText)
+local function nameMatches(name, searchText)
     if self.selectedProfile.PartialMatching then
         return string.find(string.lower(name), string.lower(searchText))
     else
@@ -406,135 +373,135 @@ function AtlasLoot:NameMatches(name, searchText)
 end
 
 local RelationalFunctions = {
-    ["ilvl"] = {IsItemLevelFilterMatch, 3},
-    ["minlvl"] = {IsMinLevelFilterMatch, 4},
-    ["type"] = {IsItemTypeMatch, 6},
-    ["slot"] = {IsItemSlotMatch, 5},
-    ["quality"] = {IsItemQualityMatch, 2},
+    ["ilvl"] = {isItemLevelFilterMatch, 3},
+    ["minlvl"] = {isMinLevelFilterMatch, 4},
+    ["type"] = {isItemTypeMatch, 6},
+    ["slot"] = {isItemSlotMatch, 5},
+    ["quality"] = {isItemQualityMatch, 2},
 
-    ["gem"] = {IsItemSocketMatch, 7},
-    ["gems"] = {IsItemSocketMatch, 7},
-    ["socket"] = {IsItemSocketMatch, 7},
-    ["sockets"] = {IsItemSocketMatch, 7},
+    ["gem"] = {isItemSocketMatch, 7},
+    ["gems"] = {isItemSocketMatch, 7},
+    ["socket"] = {isItemSocketMatch, 7},
+    ["sockets"] = {isItemSocketMatch, 7},
 
     -- Base Stats
-    ["stamina"] = {IsItemStatMatch, 7},
-    ["stam"] = {IsItemStatMatch, 7},
-    ["sta"] = {IsItemStatMatch, 7},
+    ["stamina"] = {isItemStatMatch, 7},
+    ["stam"] = {isItemStatMatch, 7},
+    ["sta"] = {isItemStatMatch, 7},
 
-    ["strength"] = {IsItemStatMatch, 7},
-    ["str"] = {IsItemStatMatch, 7},
+    ["strength"] = {isItemStatMatch, 7},
+    ["str"] = {isItemStatMatch, 7},
 
-    ["agility"] = {IsItemStatMatch, 7},
-    ["agi"] = {IsItemStatMatch, 7},
+    ["agility"] = {isItemStatMatch, 7},
+    ["agi"] = {isItemStatMatch, 7},
 
-    ["intellect"] = {IsItemStatMatch, 7},
-    ["int"] = {IsItemStatMatch, 7},
+    ["intellect"] = {isItemStatMatch, 7},
+    ["int"] = {isItemStatMatch, 7},
 
-    ["spirit"] = {IsItemStatMatch, 7},
-    ["spir"] = {IsItemStatMatch, 7},
-    ["spi"] = {IsItemStatMatch, 7},
+    ["spirit"] = {isItemStatMatch, 7},
+    ["spir"] = {isItemStatMatch, 7},
+    ["spi"] = {isItemStatMatch, 7},
 
-    ["health"] = {IsItemStatMatch, 7},
-    ["mana"] = {IsItemStatMatch, 7},
+    ["health"] = {isItemStatMatch, 7},
+    ["mana"] = {isItemStatMatch, 7},
 
-    ["mp5"] = {IsItemStatMatch, 7},
-    ["mpr"] = {IsItemStatMatch, 7},
+    ["mp5"] = {isItemStatMatch, 7},
+    ["mpr"] = {isItemStatMatch, 7},
 
-    ["hp5"] = {IsItemStatMatch, 7},
-    ["hpr"] = {IsItemStatMatch, 7},
+    ["hp5"] = {isItemStatMatch, 7},
+    ["hpr"] = {isItemStatMatch, 7},
 
     -- Sockets
-    ["socketblue"] = {IsItemStatMatch, 7},
-    ["socketred"] = {IsItemStatMatch, 7},
-    ["socketyellow"] = {IsItemStatMatch, 7},
+    ["socketblue"] = {isItemStatMatch, 7},
+    ["socketred"] = {isItemStatMatch, 7},
+    ["socketyellow"] = {isItemStatMatch, 7},
 
-    ["socketnocolor"] = {IsItemStatMatch, 7},
-    ["socketwhite"] = {IsItemStatMatch, 7},
+    ["socketnocolor"] = {isItemStatMatch, 7},
+    ["socketwhite"] = {isItemStatMatch, 7},
 
-    ["socketmeta"] = {IsItemStatMatch, 7},
-    ["meta"] = {IsItemStatMatch, 7},
+    ["socketmeta"] = {isItemStatMatch, 7},
+    ["meta"] = {isItemStatMatch, 7},
 
     -- Secondary Stats
-    ["attackpowerferal"] = {IsItemStatMatch, 7},
-    ["attackpowferal"] = {IsItemStatMatch, 7},
-    ["apferal"] = {IsItemStatMatch, 7},
+    ["attackpowerferal"] = {isItemStatMatch, 7},
+    ["attackpowferal"] = {isItemStatMatch, 7},
+    ["apferal"] = {isItemStatMatch, 7},
 
-    ["attackpower"] = {IsItemStatMatch, 7},
-    ["attackpow"] = {IsItemStatMatch, 7},
-    ["ap"] = {IsItemStatMatch, 7},
+    ["attackpower"] = {isItemStatMatch, 7},
+    ["attackpow"] = {isItemStatMatch, 7},
+    ["ap"] = {isItemStatMatch, 7},
 
-    ["spellpower"] = {IsItemStatMatch, 7},
-    ["spellpow"] = {IsItemStatMatch, 7},
-    ["sp"] = {IsItemStatMatch, 7},
+    ["spellpower"] = {isItemStatMatch, 7},
+    ["spellpow"] = {isItemStatMatch, 7},
+    ["sp"] = {isItemStatMatch, 7},
 
-    ["spellpenetration"] = {IsItemStatMatch, 7},
-    ["spellpen"] = {IsItemStatMatch, 7},
-    ["spp"] = {IsItemStatMatch, 7},
+    ["spellpenetration"] = {isItemStatMatch, 7},
+    ["spellpen"] = {isItemStatMatch, 7},
+    ["spp"] = {isItemStatMatch, 7},
 
-    ["crit"] = {IsItemStatMatch, 7},
-    ["haste"] = {IsItemStatMatch, 7},
+    ["crit"] = {isItemStatMatch, 7},
+    ["haste"] = {isItemStatMatch, 7},
 
-    ["hit"] = {IsItemStatMatch, 7},
+    ["hit"] = {isItemStatMatch, 7},
 
-    ["armorpenetration"] = {IsItemStatMatch, 7},
-    ["armourpenetration"] = {IsItemStatMatch, 7},
-    ["armorpen"] = {IsItemStatMatch, 7},
-    ["armourpen"] = {IsItemStatMatch, 7},
-    ["arp"] = {IsItemStatMatch, 7},
+    ["armorpenetration"] = {isItemStatMatch, 7},
+    ["armourpenetration"] = {isItemStatMatch, 7},
+    ["armorpen"] = {isItemStatMatch, 7},
+    ["armourpen"] = {isItemStatMatch, 7},
+    ["arp"] = {isItemStatMatch, 7},
 
-    ["dps"] = {IsItemStatMatch, 7},
+    ["dps"] = {isItemStatMatch, 7},
 
-    ["resilience"] = {IsItemStatMatch, 7},
-    ["resil"] = {IsItemStatMatch, 7},
-    ["res"] = {IsItemStatMatch, 7},
+    ["resilience"] = {isItemStatMatch, 7},
+    ["resil"] = {isItemStatMatch, 7},
+    ["res"] = {isItemStatMatch, 7},
 
-    ["defense"] = {IsItemStatMatch, 7},
-    ["def"] = {IsItemStatMatch, 7},
+    ["defense"] = {isItemStatMatch, 7},
+    ["def"] = {isItemStatMatch, 7},
 
-    ["dodge"] = {IsItemStatMatch, 7},
-    ["dod"] = {IsItemStatMatch, 7},
+    ["dodge"] = {isItemStatMatch, 7},
+    ["dod"] = {isItemStatMatch, 7},
 
-    ["block"] = {IsItemStatMatch, 7},
+    ["block"] = {isItemStatMatch, 7},
 
-    ["blockvalue"] = {IsItemStatMatch, 7},
-    ["blockval"] = {IsItemStatMatch, 7},
-    ["bv"] = {IsItemStatMatch, 7},
+    ["blockvalue"] = {isItemStatMatch, 7},
+    ["blockval"] = {isItemStatMatch, 7},
+    ["bv"] = {isItemStatMatch, 7},
 
-    ["parry"] = {IsItemStatMatch, 7},
+    ["parry"] = {isItemStatMatch, 7},
 
     -- Resistances
-    ["armor"] = {IsItemStatMatch, 7},
-    ["armour"] = {IsItemStatMatch, 7},
-    ["arm"] = {IsItemStatMatch, 7},
-    ["resistancephysical"] = {IsItemStatMatch, 7},
-    ["resistancephys"] = {IsItemStatMatch, 7},
-    ["resphys"] = {IsItemStatMatch, 7},
+    ["armor"] = {isItemStatMatch, 7},
+    ["armour"] = {isItemStatMatch, 7},
+    ["arm"] = {isItemStatMatch, 7},
+    ["resistancephysical"] = {isItemStatMatch, 7},
+    ["resistancephys"] = {isItemStatMatch, 7},
+    ["resphys"] = {isItemStatMatch, 7},
 
-    ["resistanceholy"] = {IsItemStatMatch, 7},
-    ["resholy"] = {IsItemStatMatch, 7},
+    ["resistanceholy"] = {isItemStatMatch, 7},
+    ["resholy"] = {isItemStatMatch, 7},
 
-    ["resistancefire"] = {IsItemStatMatch, 7},
-    ["resfire"] = {IsItemStatMatch, 7},
+    ["resistancefire"] = {isItemStatMatch, 7},
+    ["resfire"] = {isItemStatMatch, 7},
 
-    ["resistancenature"] = {IsItemStatMatch, 7},
-    ["resnature"] = {IsItemStatMatch, 7},
-    ["resnat"] = {IsItemStatMatch, 7},
+    ["resistancenature"] = {isItemStatMatch, 7},
+    ["resnature"] = {isItemStatMatch, 7},
+    ["resnat"] = {isItemStatMatch, 7},
 
-    ["resistanceforst"] = {IsItemStatMatch, 7},
-    ["resfrost"] = {IsItemStatMatch, 7},
+    ["resistanceforst"] = {isItemStatMatch, 7},
+    ["resfrost"] = {isItemStatMatch, 7},
 
-    ["resistanceshadow"] = {IsItemStatMatch, 7},
-    ["resshadow"] = {IsItemStatMatch, 7},
-    ["resshad"] = {IsItemStatMatch, 7},
+    ["resistanceshadow"] = {isItemStatMatch, 7},
+    ["resshadow"] = {isItemStatMatch, 7},
+    ["resshad"] = {isItemStatMatch, 7},
 
-    ["resistancearcane"] = {IsItemStatMatch, 7},
-    ["resarcane"] = {IsItemStatMatch, 7},
-    ["resarc"] = {IsItemStatMatch, 7},
+    ["resistancearcane"] = {isItemStatMatch, 7},
+    ["resarcane"] = {isItemStatMatch, 7},
+    ["resarc"] = {isItemStatMatch, 7},
 
 }
 
-function AtlasLoot:ItemMatchesTerm(term, itemDetails)
+local function itemMatchesTerm(term, itemDetails)
     if term.relational then
         local func, arg = unpack(RelationalFunctions[term.left])
         if func then
@@ -542,13 +509,13 @@ function AtlasLoot:ItemMatchesTerm(term, itemDetails)
         end
         return false
     else
-        return self:NameMatches(itemDetails[1], term.name)
+        return nameMatches(itemDetails[1], term.name)
     end
 end
 
-function AtlasLoot:ItemMatchesAllTerms(searchTerms, itemDetails)
+local function itemMatchesAllTerms(searchTerms, itemDetails)
     for _, term in ipairs(searchTerms) do
-        if not self:ItemMatchesTerm(term, itemDetails) then
+        if not itemMatchesTerm(term, itemDetails) then
             return false
         end
     end
@@ -556,9 +523,9 @@ function AtlasLoot:ItemMatchesAllTerms(searchTerms, itemDetails)
     return true
 end
 
-local function ParseTerm(termText)
+local function parseTerm(termText)
     for _, relational in ipairs(RELATIONAL_OPERATORS) do
-        local operands = SplitString(termText, relational)
+        local operands = splitString(termText, relational)
         if #operands == 2 then
             return {
                 left = operands[1],
@@ -574,15 +541,15 @@ end
 
 -- Parse search text into '&'-delimited search terms,
 -- then parse each term on its relational operator, if present.
-local function ParseQuery(searchText)
+local function parseQuery(searchText)
     local terms = {}
-    for _, term in pairs(SplitString(searchText, OP_AND)) do
-        table.insert(terms, ParseTerm(term))
+    for _, term in pairs(splitString(searchText, OP_AND)) do
+        table.insert(terms, parseTerm(term))
     end
     return terms
 end
 
-function AtlasLoot:GetItemDetails(itemId)
+local function getItemDetails(itemId)
     -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
     local itemName, _, itemQuality, itemLvl, minLvl, _, itemSubType, _, itemEquipLoc = self:GetItemInfo(itemId)
     return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
@@ -614,10 +581,10 @@ local function processItem(data)
         if spellID then
             self:ItemsLoading(-1)
             local spellName = GetSpellInfo(spellID)
-            if self:NameMatches(spellName, searchText) then
+            if nameMatches(spellName, searchText) then
                 addItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
                 if not showSearch then
-                    self:ShowSearchResult()
+                    showSearchResult()
                     showSearch = true
                 end
                 self:ItemFrameRefresh()
@@ -625,13 +592,13 @@ local function processItem(data)
         elseif itemID then
             local function nextItem(item)
                 self:ItemsLoading(-1)
-                local itemDetails = {self:GetItemDetails(itemID)}
+                local itemDetails = {getItemDetails(itemID)}
                 itemDetails[1] = item:GetName()
                 if not itemDetails[1] then return end
-                if self:ItemMatchesAllTerms(searchTerms, itemDetails) then
+                if itemMatchesAllTerms(searchTerms, itemDetails) then
                     addItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
                     if not showSearch then
-                        self:ShowSearchResult()
+                        showSearchResult()
                         showSearch = true
                     else
                         self:ItemFrameRefresh()
@@ -655,7 +622,7 @@ end
 
 local itemList = {}
 
-function AtlasLoot:DoSearch(searchText)
+local function doSearch(searchText)
     AtlasLootCharDB.SearchResult = {Name = "Search Results" , Type = "Search", {}}
     newTable = {{}}
     searchIDs = {}
@@ -663,7 +630,7 @@ function AtlasLoot:DoSearch(searchText)
 
     wipe(itemList)
 
-    local searchTerms = ParseQuery(searchText)
+    local searchTerms = parseQuery(searchText)
     for dataID, data in pairs(AtlasLoot_Data) do
         if self.selectedProfile.SearchOn[data.Type] and self.selectedProfile.SearchOn[data.Type][1] or (self.selectedProfile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
             for tableNum, t in ipairs(data) do
@@ -707,10 +674,6 @@ function AtlasLoot:DoSearch(searchText)
     end
 
     return continue()
-end
-
-function AtlasLoot:ShowSearchResult()
-    self:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1, 1)
 end
 
 -- Search Options Menu
@@ -889,109 +852,13 @@ local ACTIVE_ARGUMENT = 0
         ["difficulty"] = ""
     }
 
-    function self:SearchSetup()
-        self:SearchRegister(searchPanel.equipbtn, searchMenus.Equip)
-
-        for i = 1, MAX_ARGUMENTS do
-            self:SearchArgumentRegister(searchPanel.main[i], i, searchArguments.Stats)
-            self:SearchArgumentRegister(searchPanel.sub[i], i, searchArguments.Operators)
-        end
-
-        -- Reset Search options to defualt
-        self:SearchReset()
-    end
-
-    function self:ShowSearchTab()
-        -- Hide all elements that could be in the AtlasTable
-        self.ui.tabs.currentTab = "Search"
-
-        -- Hide the Filter Check-Box
-        self.ui.filterButton:Hide()
-
-        searchPanel:Show()
-        self.CurrentType = "Search"
-        self:ShowSearchResult()
-        self:ScrollFrameUpdate()
-    end
-
-    function self:SearchReset()
-        searchOptions = {
-            ["equip"] = "",
-            ["type"] = "",
-            ["difficulty"] = ""
-        }
-
-        for i = 1, MAX_ARGUMENTS do
-            searchOptions["arg" .. i] = ""
-            searchOptions["arg" .. i .. "op"] = ""
-
-            self:RemoveArgumentContainer()
-        end
-
-        searchPanel.levelmin:SetText("")
-        searchPanel.levelmax:SetText("")
-        searchPanel.ilevelmin:SetText("")
-        searchPanel.ilevelmax:SetText("")
-
-        searchPanel.equipbtn:SetText("Select Item Type")
-        searchPanel.equipbtn.subbtn:Disable()
-        searchPanel.equipbtn.subbtn:SetText("Select Option")
-    end
-
-    function self:AddArgumentContainer()
-        if ACTIVE_ARGUMENT == MAX_ARGUMENTS then
-            self:AdvSearchArgButtonToggle()
-            return
-        end
-
-        ACTIVE_ARGUMENT = ACTIVE_ARGUMENT + 1
-
-        searchPanel.main[ACTIVE_ARGUMENT]:Show()
-        searchPanel.main[ACTIVE_ARGUMENT]:SetText("Select Option")
-        searchPanel.sub[ACTIVE_ARGUMENT]:Show()
-
-        self:AdvSearchArgButtonToggle()
-    end
-
-    function self:RemoveArgumentContainer()
-        if ACTIVE_ARGUMENT == 0 then
-            self:AdvSearchArgButtonToggle()
-            return
-        end
-
-        searchOptions["arg" .. ACTIVE_ARGUMENT] = ""
-        searchOptions["arg" .. ACTIVE_ARGUMENT .. "op"] = ""
-
-        searchPanel.main[ACTIVE_ARGUMENT]:Hide()
-        searchPanel.sub[ACTIVE_ARGUMENT]:Disable()
-        searchPanel.sub[ACTIVE_ARGUMENT]:Hide()
-        searchPanel.value[ACTIVE_ARGUMENT]:Hide()
-
-        ACTIVE_ARGUMENT = ACTIVE_ARGUMENT - 1
-        self:AdvSearchArgButtonToggle()
-    end
-
-    function self:AdvSearchArgButtonToggle()
-        if ACTIVE_ARGUMENT == MAX_ARGUMENTS then
-            searchPanel.addArg:Disable()
-        else
-            searchPanel.addArg:Enable()
-        end
-
-        if ACTIVE_ARGUMENT == 0 then
-            searchPanel.remArg:Disable()
-        else
-            searchPanel.remArg:Enable()
-        end
-    end
-
     local searchDefaultText = {
         ["equip"] = "Select Item Type",
         ["type"] = "Select Option",
         ["difficulty"] = "Select Difficulty"
     }
 
-    function self:SearchMenuClick(Object, VariableToSet, VariableValue, ChildMenu, ChildMenuRegister)
+    local function searchMenuClick(Object, VariableToSet, VariableValue, ChildMenu, ChildMenuRegister)
         -- Setups child menus and sets search options to default
         if (ChildMenu ~= nil) then
             if (ChildMenuRegister == "Disable") then
@@ -1009,7 +876,7 @@ local ACTIVE_ARGUMENT = 0
                     return
                 end
             else
-                self:SearchRegister(frameMenuList[ChildMenu][1], searchMenus[ChildMenuRegister])
+                searchRegister(frameMenuList[ChildMenu][1], searchMenus[ChildMenuRegister])
                 searchOptions[frameMenuList[ChildMenu][3]] = frameMenuList[ChildMenu][4]
                 frameMenuList[ChildMenu][1]:Enable()
                 frameMenuList[ChildMenu][1]:SetText(frameMenuList[ChildMenu][2])
@@ -1028,7 +895,7 @@ local ACTIVE_ARGUMENT = 0
         Object[1]:SetText(Object[2])
     end
 
-    function self:SearchRegister(DropDownObject, MenuOption)
+    local function searchRegister(DropDownObject, MenuOption)
         self.Dewdrop:Register(DropDownObject, 'point', function(parent)
             return "TOP", "BOTTOM"
         end, 'children', function(level, value)
@@ -1040,7 +907,7 @@ local ACTIVE_ARGUMENT = 0
                             if v[1][1] ~= "" then
                                 self.Dewdrop:AddLine("text", v[1][1], "textR", 1, "textG", 0.82, "textB", 0,
                                 "func", function()
-                                    self:SearchMenuClick({DropDownObject, v[1][1]}, v[1][2], v[1][3], v[1][4], v[1][5])
+                                    searchMenuClick({DropDownObject, v[1][1]}, v[1][2], v[1][3], v[1][4], v[1][5])
                                 end,
                                 "notCheckable", true, "closeWhenClicked", true)
                             end
@@ -1063,7 +930,7 @@ local ACTIVE_ARGUMENT = 0
                     for k, v in ipairs(value) do
                         self.Dewdrop:AddLine("text", v[1], "textR", 1, "textG", 0.82, "textB", 0,
                         "func", function()
-                            self:SearchMenuClick({DropDownObject, v[1]}, v[2], v[3], v[4], v[5])
+                            searchMenuClick({DropDownObject, v[1]}, v[2], v[3], v[4], v[5])
                         end,
                         "notCheckable", true, "closeWhenClicked", true)
                     end
@@ -1072,7 +939,67 @@ local ACTIVE_ARGUMENT = 0
         end, "dontHook", true)
     end
 
-    function self:SearchArgumentClick(Object, VariableToSet, VariableValue, IsOperator)
+    function self:ShowSearchTab()
+        -- Hide all elements that could be in the AtlasTable
+        self.ui.tabs.currentTab = "Search"
+
+        -- Hide the Filter Check-Box
+        self.ui.filterButton:Hide()
+
+        searchPanel:Show()
+        self.CurrentType = "Search"
+        showSearchResult()
+        self:ScrollFrameUpdate()
+    end
+
+    local function advSearchArgButtonToggle()
+        if ACTIVE_ARGUMENT == MAX_ARGUMENTS then
+            searchPanel.addArg:Disable()
+        else
+            searchPanel.addArg:Enable()
+        end
+
+        if ACTIVE_ARGUMENT == 0 then
+            searchPanel.remArg:Disable()
+        else
+            searchPanel.remArg:Enable()
+        end
+    end
+
+    function self:AddArgumentContainer()
+        if ACTIVE_ARGUMENT == MAX_ARGUMENTS then
+            advSearchArgButtonToggle()
+            return
+        end
+
+        ACTIVE_ARGUMENT = ACTIVE_ARGUMENT + 1
+
+        searchPanel.main[ACTIVE_ARGUMENT]:Show()
+        searchPanel.main[ACTIVE_ARGUMENT]:SetText("Select Option")
+        searchPanel.sub[ACTIVE_ARGUMENT]:Show()
+
+        advSearchArgButtonToggle()
+    end
+
+    function self:RemoveArgumentContainer()
+        if ACTIVE_ARGUMENT == 0 then
+            advSearchArgButtonToggle()
+            return
+        end
+
+        searchOptions["arg" .. ACTIVE_ARGUMENT] = ""
+        searchOptions["arg" .. ACTIVE_ARGUMENT .. "op"] = ""
+
+        searchPanel.main[ACTIVE_ARGUMENT]:Hide()
+        searchPanel.sub[ACTIVE_ARGUMENT]:Disable()
+        searchPanel.sub[ACTIVE_ARGUMENT]:Hide()
+        searchPanel.value[ACTIVE_ARGUMENT]:Hide()
+
+        ACTIVE_ARGUMENT = ACTIVE_ARGUMENT - 1
+        advSearchArgButtonToggle()
+    end
+
+    local function searchArgumentClick(Object, VariableToSet, VariableValue, IsOperator)
         VariableToSet = tonumber(VariableToSet)
         if IsOperator and VariableValue == "reset" then
             searchOptions["arg" .. VariableToSet .. "op"] = ""
@@ -1115,7 +1042,7 @@ local ACTIVE_ARGUMENT = 0
         end
     end
 
-    function self:SearchArgumentRegister(DropDownObject, ArgumentCount, ArgumentMenu)
+    local function searchArgumentRegister(DropDownObject, ArgumentCount, ArgumentMenu)
         self.Dewdrop:Register(DropDownObject, 'point', function(parent)
             return "TOP", "BOTTOM"
         end, 'children', function(level, value)
@@ -1128,12 +1055,12 @@ local ACTIVE_ARGUMENT = 0
                             if v[1][3] == "Submenu" then
                                 self.Dewdrop:AddLine("text", v[1][1], "textR", 1, "textG", 0.82, "textB", 0,
                                 "func", function() 
-                                    self:SearchArgumentClick({DropDownObject, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
+                                    searchArgumentClick({DropDownObject, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
                                     end,
                                     "notCheckable", true)
                             elseif v[1][1] ~= "" then
                                 self.Dewdrop:AddLine("text", v[1][1], "textR", 1, "textG", 0.82, "textB", 0,
-                                "func", function() self:SearchArgumentClick({DropDownObject, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
+                                "func", function() searchArgumentClick({DropDownObject, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
                                 end,
                                 "notCheckable", true)
                             end
@@ -1161,17 +1088,17 @@ local ACTIVE_ARGUMENT = 0
                                 -- If an entry to show a submenu
                                 if v[4] == "Header" then
                                     self.Dewdrop:AddLine("text", v[1], "textR", 0.2, "textG", 0.82, "textB", 0.5, "func", function()
-                                        self:SearchArgumentClick({DropDownObject, v[1]}, ArgumentCount, v[2], v[3])
+                                        searchArgumentClick({DropDownObject, v[1]}, ArgumentCount, v[2], v[3])
                                         end,
                                         "notCheckable", true)
                                 elseif v[3] == "Submenu" then
                                     self.Dewdrop:AddLine("text", v[1], "textR", 1, "textG", 0.82, "textB", 0, "func", function()
-                                        self:SearchArgumentClick({DropDownObject, v[1]}, ArgumentCount, v[2], v[3])
+                                        searchArgumentClick({DropDownObject, v[1]}, ArgumentCount, v[2], v[3])
                                         end,
                                         "notCheckable", true)
                                 else
                                     self.Dewdrop:AddLine("text", v[1], "textR", 1, "textG", 0.82, "textB", 0, "notCheckable", true, "func",
-                                    function() self:SearchArgumentClick({DropDownObject, v[1]}, ArgumentCount, v[2], v[3]) end )
+                                    function() searchArgumentClick({DropDownObject, v[1]}, ArgumentCount, v[2], v[3]) end )
                                 end
                             end
                         end
@@ -1288,6 +1215,35 @@ local ACTIVE_ARGUMENT = 0
             end
         end
 
-        self:DoSearch(searchString)
+        doSearch(searchString)
     end
+
+    searchRegister(searchPanel.equipbtn, searchMenus.Equip)
+
+    for i = 1, MAX_ARGUMENTS do
+        searchArgumentRegister(searchPanel.main[i], i, searchArguments.Stats)
+        searchArgumentRegister(searchPanel.sub[i], i, searchArguments.Operators)
+    end
+
+    -- Reset Search options to defualt
+        searchOptions = {
+        ["equip"] = "",
+        ["type"] = "",
+        ["difficulty"] = ""
+    }
+
+    for i = 1, MAX_ARGUMENTS do
+        searchOptions["arg" .. i] = ""
+        searchOptions["arg" .. i .. "op"] = ""
+
+        self:RemoveArgumentContainer()
+    end
+
+    searchPanel.levelmin:SetText("")
+    searchPanel.levelmax:SetText("")
+    searchPanel.ilevelmin:SetText("")
+    searchPanel.ilevelmax:SetText("")
+    searchPanel.equipbtn:SetText("Select Item Type")
+    searchPanel.equipbtn.subbtn:Disable()
+    searchPanel.equipbtn.subbtn:SetText("Select Option")
 end

@@ -180,5 +180,4 @@ function AtlasLoot:CreateSearchFrame()
     end)
 
     self:InitializeSearch()
-    self:SearchSetup()
 end
