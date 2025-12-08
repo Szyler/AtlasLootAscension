@@ -881,7 +881,7 @@ function AtlasLoot:InitializeSearch()
                     return
                 end
             else
-                searchRegister(frameMenuList[ChildMenu][1], searchMenus[ChildMenuRegister])
+                self:searchRegister(frameMenuList[ChildMenu][1], searchMenus[ChildMenuRegister])
                 searchOptions[frameMenuList[ChildMenu][3]] = frameMenuList[ChildMenu][4]
                 frameMenuList[ChildMenu][1]:Enable()
                 frameMenuList[ChildMenu][1]:SetText(frameMenuList[ChildMenu][2])
@@ -900,7 +900,7 @@ function AtlasLoot:InitializeSearch()
         Object[1]:SetText(Object[2])
     end
 
-    local function searchRegister(DropDownObject, MenuOption)
+    function self:searchRegister(DropDownObject, MenuOption)
         self.Dewdrop:Register(DropDownObject, 'point', function(parent)
             return "TOP", "BOTTOM"
         end, 'children', function(level, value)
@@ -1210,7 +1210,7 @@ function AtlasLoot:InitializeSearch()
         doSearch(searchString)
     end
 
-    searchRegister(searchPanel.equipbtn, searchMenus.Equip)
+    self:searchRegister(searchPanel.equipbtn, searchMenus.Equip)
 
     for i = 1, MAX_ARGUMENTS do
         searchArgumentRegister(searchPanel.main[i], i, searchArguments.Stats)
