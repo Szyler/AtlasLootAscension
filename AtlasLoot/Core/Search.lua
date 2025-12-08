@@ -212,6 +212,11 @@ local TYPE_FILTERS = {
 
 function AtlasLoot:InitializeSearch()
 
+    local searchPanel = self.ui.tabs.Search
+    local frameMenuList = {
+        ["EquipSubMenu"] = {searchPanel.equipbtn.subbtn, "Select Option", "type", ""}
+    }
+
     local function showSearchResult()
         self:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1, 1)
     end
@@ -738,12 +743,6 @@ function AtlasLoot:InitializeSearch()
 
     local MAX_ARGUMENTS = 6
     local ACTIVE_ARGUMENT = 0
-
-
-    local searchPanel = self.ui.tabs.Search
-    local frameMenuList = {
-        ["EquipSubMenu"] = {searchPanel.equipbtn.subbtn, "Select Option", "type", ""}
-    }
 
     local searchMenus = {
 
