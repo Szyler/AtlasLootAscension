@@ -13,7 +13,7 @@ function AtlasLoot:InitializeItemFrame()
 	self.itemframe.Label:SetJustifyH("CENTER")
 
 	self.itemframe.PageNumber = self.itemframe:CreateFontString(nil,"OVERLAY","GameFontHighlightLarge")
-	self.itemframe.PageNumber:SetPoint("TOPRIGHT", self.itemframe, "TOPRIGHT", 10, -10)
+	self.itemframe.PageNumber:SetPoint("BOTTOM", self.itemframe, "BOTTOM", 0, 15)
 	self.itemframe.PageNumber:SetSize(100,20)
 	self.itemframe.PageNumber:SetJustifyH("LEFT")
 
