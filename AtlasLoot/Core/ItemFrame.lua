@@ -55,20 +55,25 @@ function AtlasLoot:InitializeItemFrame()
 		local dataSource, itemData = self:GetSourceData(dataSource_backup, dataID, tablenum)
 		if not dataSource or not itemData then return end
 		itemData = itemData[pageNumber]
+		local displayItems = {}
+		for _, item in pairs(itemData) do
+			local show, itemID, recipeID = self:GetItemConditionals(item, dataSource)
+			local newItemData = {}
+				if (show and self:FilterItem(item, dataSource)) then
+					newItemData.itemID = itemID
+					newItemData.recipeID = recipeID
+					table.insert(displayItems, {item, newItemData})
+				elseif item[1] == "blankLine" then
+					table.insert(displayItems, {item})
+				end
+		end
 		for i = 1, 30 do
 			local button = self.itemframe.buttons[i]
 			hideButton(button)
-			if itemData and itemData[i] then
-				local item  = {}
-				local show, itemID, recipeID = self:GetItemConditionals(itemData[i], dataSource)
-				if (show and self:FilterItem(itemData[i], dataSource, dataID)) then
-					item.itemID = itemID
-					item.recipeID = recipeID
-				end
-
-				if item then
-					local show = self:SetupButton(item.itemID or item.recipeID, itemData[i], button, dataSource, dataID, tablenum, dataSource_backup)
-					if show or (self.wishListLockState ~= "Locked" and item[1] == "blankLine") then
+			if displayItems and displayItems[i] then
+				if displayItems[i][2] then
+					local show = self:SetupButton(displayItems[i][2].itemID or displayItems[i][2].recipeID, displayItems[i][1], button, dataSource, dataID, tablenum, dataSource_backup)
+					if show or (self.wishListLockState ~= "Locked" and displayItems[i][1] == "blankLine") then
 						button:Show()
 					end
 				end

@@ -49,9 +49,8 @@ local CraftingFilterTable = {
 --	AtlasLoot:FilterItem()
 -- **********************************************************************
 
-function AtlasLoot:FilterItem(item, dataSource, dataID)
+function AtlasLoot:FilterItem(item, dataSource)
 	if not self.filterEnable then return true end
-	local source = dataSource[dataID]
 
 	-- returns true if item has the desired stats
 	local function checkStats(itemStats, sCheck)
@@ -116,13 +115,13 @@ function AtlasLoot:FilterItem(item, dataSource, dataID)
 	end
 
 	-- return true if item needs filtering
-	if source.vanity then
+	if dataSource.vanity then
 		if not getVanityFilters(item.itemID, item.learnedSpellID) then
 			return false
 		else
 			return true
 		end
-	elseif source.Type == "Crafting" and getCraftingFilters(item.spellID) then
+	elseif dataSource.Type == "Crafting" and getCraftingFilters(item.spellID) then
 		return true
 	elseif getFilterType(item.itemID) or item.icon then
 		return true
