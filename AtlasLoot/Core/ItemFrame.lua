@@ -68,7 +68,7 @@ function AtlasLoot:InitializeItemFrame()
 
 				if item then
 					local show = self:SetupButton(item.itemID or item.recipeID, itemData[i], button, dataSource, dataID, tablenum, dataSource_backup)
-					if show or (self.wishListLockState ~= "Locked" and item[1] == "gap") then
+					if show or (self.wishListLockState ~= "Locked" and item[1] == "blankLine") then
 						button:Show()
 					end
 				end
@@ -310,7 +310,7 @@ local faction = UnitFactionGroup("player")
 
 --Get whether the item should be displayed and get the itemID that needs to be displayed
 function AtlasLoot:GetItemConditionals(item, dataSource)
-	if (item and item.faction and item.faction ~= faction) or (item.Server and item.Server ~= self.serverType) or (item and item[1] == "gap") then return end
+	if (item and item.faction and item.faction ~= faction) or (item.Server and item.Server ~= self.serverType) or (item and item[1] == "blankLine") then return end
 
 	local itemID, recipeID
 	local show = true

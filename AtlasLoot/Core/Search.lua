@@ -851,7 +851,7 @@ function AtlasLoot:InitializeSearch()
         }
     }
 
-    local searchOptions = {
+    searchPanel.searchOptions = {
         ["equip"] = "",
         ["type"] = "",
         ["difficulty"] = ""
@@ -867,14 +867,14 @@ function AtlasLoot:InitializeSearch()
         -- Setups child menus and sets search options to default
         if (ChildMenu ~= nil) then
             if (ChildMenuRegister == "Disable") then
-                searchOptions[frameMenuList[ChildMenu][3]] = frameMenuList[ChildMenu][4]
+                searchPanel.searchOptions[frameMenuList[ChildMenu][3]] = frameMenuList[ChildMenu][4]
                 frameMenuList[ChildMenu][1]:Disable()
                 -- Disable assigned children menus as well
                 if (frameMenuList[ChildMenu][5]) then
                     frameMenuList[ChildMenu][5]:Disable()
                 end
                 if VariableValue == "reset" then
-                    searchOptions[VariableToSet] = ""
+                    searchPanel.searchOptions[VariableToSet] = ""
                     Object[1]:SetText(searchDefaultText[VariableToSet])
 
                     frameMenuList[ChildMenu][1]:SetText(frameMenuList[ChildMenu][2])
@@ -882,7 +882,7 @@ function AtlasLoot:InitializeSearch()
                 end
             else
                 self:searchRegister(frameMenuList[ChildMenu][1], searchMenus[ChildMenuRegister])
-                searchOptions[frameMenuList[ChildMenu][3]] = frameMenuList[ChildMenu][4]
+                searchPanel.searchOptions[frameMenuList[ChildMenu][3]] = frameMenuList[ChildMenu][4]
                 frameMenuList[ChildMenu][1]:Enable()
                 frameMenuList[ChildMenu][1]:SetText(frameMenuList[ChildMenu][2])
                 -- Disable assigned children menus as well
@@ -892,11 +892,11 @@ function AtlasLoot:InitializeSearch()
             end
         end
         if VariableValue == "reset" then
-            searchOptions[VariableToSet] = ""
+            searchPanel.searchOptions[VariableToSet] = ""
             Object[1]:SetText(searchDefaultText[VariableToSet])
             return
         end
-        searchOptions[VariableToSet] = VariableValue
+        searchPanel.searchOptions[VariableToSet] = VariableValue
         Object[1]:SetText(Object[2])
     end
 
@@ -979,8 +979,8 @@ function AtlasLoot:InitializeSearch()
             return
         end
 
-        searchOptions["arg" .. ACTIVE_ARGUMENT] = ""
-        searchOptions["arg" .. ACTIVE_ARGUMENT .. "op"] = ""
+        searchPanel.searchOptions["arg" .. ACTIVE_ARGUMENT] = ""
+        searchPanel.searchOptions["arg" .. ACTIVE_ARGUMENT .. "op"] = ""
 
         searchPanel.main[ACTIVE_ARGUMENT]:Hide()
         searchPanel.sub[ACTIVE_ARGUMENT]:Disable()
@@ -994,7 +994,7 @@ function AtlasLoot:InitializeSearch()
     local function searchArgumentClick(Object, VariableToSet, VariableValue, IsOperator)
         VariableToSet = tonumber(VariableToSet)
         if IsOperator and VariableValue == "reset" then
-            searchOptions["arg" .. VariableToSet .. "op"] = ""
+            searchPanel.searchOptions["arg" .. VariableToSet .. "op"] = ""
 
             searchPanel.value[VariableToSet]:SetText("")
             searchPanel.value[VariableToSet]:Hide()
@@ -1002,7 +1002,7 @@ function AtlasLoot:InitializeSearch()
             Object[1]:SetText("Select Option")
             self.Dewdrop:Close()
         elseif IsOperator then
-            searchOptions["arg" .. VariableToSet .. "op"] = VariableValue
+            searchPanel.searchOptions["arg" .. VariableToSet .. "op"] = VariableValue
 
             searchPanel.value[VariableToSet]:Show()
 
@@ -1015,20 +1015,20 @@ function AtlasLoot:InitializeSearch()
             searchPanel.value[VariableToSet]:SetText("")
             searchPanel.value[VariableToSet]:Hide()
 
-            searchOptions["arg" .. VariableToSet] = ""
-            searchOptions["arg" .. VariableToSet .. "op"] = ""
+            searchPanel.searchOptions["arg" .. VariableToSet] = ""
+            searchPanel.searchOptions["arg" .. VariableToSet .. "op"] = ""
 
             Object[1]:SetText("Select Option")
             self.Dewdrop:Close()
         else
             searchPanel.sub[VariableToSet]:SetText("Select Option")
             searchPanel.sub[VariableToSet]:Enable()
-            searchOptions["arg" .. VariableToSet .. "op"] = ""
+            searchPanel.searchOptions["arg" .. VariableToSet .. "op"] = ""
 
             searchPanel.value[VariableToSet]:SetText("")
             searchPanel.value[VariableToSet]:Hide()
 
-            searchOptions["arg" .. VariableToSet] = VariableValue
+            searchPanel.searchOptions["arg" .. VariableToSet] = VariableValue
             Object[1]:SetText(Object[2])
             self.Dewdrop:Close()
         end
@@ -1135,19 +1135,19 @@ function AtlasLoot:InitializeSearch()
                 return "ranged"
             end
 
-            if searchOptions.equip ~= "" then
-                if searchOptions.equip == "ranged" and searchOptions.type ~= "" then
-                    searchOptions.equip = FixRangedSlot(searchOptions.type)
+            if searchPanel.searchOptions.equip ~= "" then
+                if searchPanel.searchOptions.equip == "ranged" and searchPanel.searchOptions.type ~= "" then
+                    searchPanel.searchOptions.equip = FixRangedSlot(searchPanel.searchOptions.type)
                 end
-                searchString = AppendSearchString(searchString, "slot=" .. searchOptions.equip)
+                searchString = AppendSearchString(searchString, "slot=" .. searchPanel.searchOptions.equip)
             end
 
-            if searchOptions.type ~= "" and searchOptions.type then
-                searchString = AppendSearchString(searchString, "type=" .. searchOptions.type)
+            if searchPanel.searchOptions.type ~= "" and searchPanel.searchOptions.type then
+                searchString = AppendSearchString(searchString, "type=" .. searchPanel.searchOptions.type)
             end
 
-            if searchOptions.difficulty ~= "" and searchOptions.difficulty ~= 2 then
-                searchString = AppendSearchString(searchString, "dif=" .. searchOptions.difficulty)
+            if searchPanel.searchOptions.difficulty ~= "" and searchPanel.searchOptions.difficulty ~= 2 then
+                searchString = AppendSearchString(searchString, "dif=" .. searchPanel.searchOptions.difficulty)
             end
 
             if(not searchPanel.useleveltick:GetChecked()) then
@@ -1172,13 +1172,13 @@ function AtlasLoot:InitializeSearch()
             end
 
             for i = 1, ACTIVE_ARGUMENT, 1 do
-                if searchOptions["arg" .. i] ~= "" then
+                if searchPanel.searchOptions["arg" .. i] ~= "" then
                     local arg = searchPanel.value[i]:GetText()
-                    if searchOptions["arg" .. i .. "op"] == "" then
-                        searchOptions["arg" .. i .. "op"] = ">"
+                    if searchPanel.searchOptions["arg" .. i .. "op"] == "" then
+                        searchPanel.searchOptions["arg" .. i .. "op"] = ">"
                         arg = "0"
                     end
-                    searchString = AppendSearchString(searchString, searchOptions["arg" .. i] .. searchOptions["arg" .. i .. "op"] .. arg)
+                    searchString = AppendSearchString(searchString, searchPanel.searchOptions["arg" .. i] .. searchPanel.searchOptions["arg" .. i .. "op"] .. arg)
                 end
             end
 
@@ -1218,15 +1218,15 @@ function AtlasLoot:InitializeSearch()
     end
 
     -- Reset Search options to defualt
-        searchOptions = {
+        searchPanel.searchOptions = {
         ["equip"] = "",
         ["type"] = "",
         ["difficulty"] = ""
     }
 
     for i = 1, MAX_ARGUMENTS do
-        searchOptions["arg" .. i] = ""
-        searchOptions["arg" .. i .. "op"] = ""
+        searchPanel.searchOptions["arg" .. i] = ""
+        searchPanel.searchOptions["arg" .. i .. "op"] = ""
 
         self:RemoveArgumentContainer()
     end

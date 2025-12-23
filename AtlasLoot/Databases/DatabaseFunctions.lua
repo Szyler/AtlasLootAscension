@@ -277,37 +277,51 @@ local equipLocType = {
 	INVTYPE_NON_EQUIP = 27,
 }
 
-local subType = {
-    Cloth = 1,
-    Leather = 2,
-    Mail = 3,
-    Plate = 4,
-	Bows = 5,
-    Guns = 6,
-	Crossbows = 7,
-    Wands = 8,
-	Thrown = 9,
-    ["One-Handed Axes"] = 10,
-    ["Two-Handed Axes"] = 11,
-    ["One-Handed Maces"] = 12,
-    ["Two-Handed Maces"] = 13,
-    ["One-Handed Swords"] = 14,
-    ["Two-Handed Swords"] = 15,
-	Polearms = 16,
-    Staves = 17,
-    ["Fist Weapons"] = 18,
-    Daggers = 19,
-    Shields = 20,
-    Miscellaneous = 21,
-	Librams = 22,
-    Idols = 23,
-    Totems = 24,
-    Sigils = 25,
-    ["Fishing Poles"] = 26,
-	Enchanting = 27,
-	Quest = 28,
-	Pet = 29
+local subTypes = {
+	"Cloth",
+	"Leather",
+	"Mail",
+	"Plate",
+	"Bows",
+	"Guns",
+	"Crossbows",
+	"Wands",
+	"Thrown",
+	"One-Handed Axes",
+	"Two-Handed Axes",
+	"One-Handed Maces",
+	"Two-Handed Maces",
+	"One-Handed Swords",
+	"Two-Handed Swords",
+	"Polearms",
+	"Staves",
+	"Fist Weapons",
+	"Daggers",
+	"Shields",
+	"Miscellaneous",
+	"Librams",
+	"Idols",
+	"Totems",
+	"Sigils",
+	"Fishing Poles",
+	"Alchemy",
+	"Blacksmithing",
+	"Cooking",
+	"Enchanting",
+	"Engineering",
+	"Firstaid",
+	"Leatherworking",
+	"Mining",
+	"Tailoring",
+	"Quest",
+	"Pet",
+	"Mount"
 }
+local subType = {}
+--creates a key table for subtypes giving them a number value
+for i, sType in pairs(subTypes) do
+	subType[sType] = i
+end
 
 local baseType = {
 	Armor = 1, Weapon = 2, Recipe = 3, Quest = 4, Miscellaneous = 5
@@ -327,23 +341,27 @@ local function createItemCatagoiresTable()
 	return newTable
 end
 
-local function sortItemData(itemData)
-	if itemData.sorted then return itemData end
+local displayData = {}
+-- Sorts a lootTables items based on the order of the above lists and adds any spacers between groups
+local function sortItemData(lootTables)
+	if not lootTables then return end
+	if displayData[lootTables[1]] then return displayData[lootTables[1]] end
 	local itemCatagories = createItemCatagoiresTable()
-
-	for _, itemData in pairs(itemData) do
-		local itemType, itemSubType, _, itemEquipLoc = select(6, AtlasLoot:GetItemInfo(itemData.itemID))
-		local iType = itemCatagories[baseType[itemType]]
-		if iType and iType[subType[itemSubType]] then
-			local addType
-			if itemEquipLoc and equipLocType[itemEquipLoc] then
-				addType = iType[subType[itemSubType]][equipLocType[itemEquipLoc]]
+	for _, lootTableSelection in pairs(lootTables) do
+		for _, itemData in pairs(AtlasLoot.itemData[lootTableSelection]) do
+			local itemType, itemSubType, _, itemEquipLoc = select(6, AtlasLoot:GetItemInfo(itemData.itemID))
+			local iType = itemCatagories[baseType[itemType]]
+			if iType and iType[subType[itemSubType]] then
+				local addType
+				if itemEquipLoc and equipLocType[itemEquipLoc] then
+					addType = iType[subType[itemSubType]][equipLocType[itemEquipLoc]]
+				else
+					addType = iType[subType[itemSubType]]
+				end
+				table.insert(addType, itemData)
 			else
-				addType = iType[subType[itemSubType]]
+				table.insert(itemCatagories[5], itemData)
 			end
-			table.insert(addType, itemData)
-		else
-			table.insert(itemCatagories[5], itemData)
 		end
 	end
 
@@ -360,10 +378,18 @@ local function sortItemData(itemData)
 			end
 		end
 	end
-	getLootItem(itemCatagories)
-	sortedTable.sorted = true
-	return sortedTable
 
+	for _, itemCat in pairs(itemCatagories) do
+		getLootItem(itemCat)
+		if #sortedTable[#sortedTable] >= 30 then
+			table.insert(sortedTable, {})
+		end
+		if #sortedTable[#sortedTable] ~= 15 then
+			table.insert(sortedTable[#sortedTable], {"blankLine"})
+		end
+	end
+	displayData[lootTables[1]] = sortedTable
+	return displayData[lootTables[1]]
 end
 
 function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
@@ -376,8 +402,8 @@ function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 		itemData = AtlasLootCharDB[dataID][1]
 	elseif dataSource_backup == "AtlasLoot_Data" then
 		dataSource = self.ui.menus.data[dataID]
-		itemData = sortItemData(self.itemData[dataSource[tablenum][2]])
-		self.itemData[dataSource[tablenum][2]] = itemData
+		itemData = sortItemData(dataSource[tablenum][2])
 	end
+	if not itemData then return end
 	return dataSource, itemData, #itemData
 end

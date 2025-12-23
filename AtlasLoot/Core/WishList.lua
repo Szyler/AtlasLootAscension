@@ -82,7 +82,7 @@ end
 -- Add CustomHeader 
 function AtlasLoot:AddItemCustomHeader(num,text)
 	if text == "" or text == nil then
-		table.insert(AtlasLootWishList[self.currentWishList.Show.ListType][self.ui.tabs.Loot.TableScrollFrame.tablenum],num+1,{"gap"})
+		table.insert(AtlasLootWishList[self.currentWishList.Show.ListType][self.ui.tabs.Loot.TableScrollFrame.tablenum],num+1,{"blankLine"})
 	else
 		table.insert(AtlasLootWishList[self.currentWishList.Show.ListType][self.ui.tabs.Loot.TableScrollFrame.tablenum],num+1,{icon = "INV_Box_01", name = self.Colors.WHITE..text})
 	end

@@ -2137,6 +2137,11 @@ AtlasLoot_ItemData = {
 	{ itemID = 28504, groupID = 2, refLootEntry = 16152 }, --Steelhawk Crossbow
 	{ itemID = 28502, groupID = 2, refLootEntry = 16152 }, --Vambraces of Courage
 	{ itemID = 28509, groupID = 2, refLootEntry = 16152 }, --Worgen Claw Necklace
+	{ itemID = 229739, refLootEntry = "Huntsman" }, --Tome of Untold Secrets
+	{ itemID = 30480, refLootEntry = "Huntsman" }, --Fiery Warhorse's Reins
+	{ itemID = 23809, refLootEntry = "Huntsman" }, --Schematic: Stabilized Eternium Scope
+	{ itemID = 60198, droprate = "1%", refLootEntry = "Huntsman" }, --Pet Sigil
+
 	{ itemID = 12504, groupID = 1, refLootEntry = 15082 }, --Battleweaver's Medallion
 	{ itemID = 19968, groupID = 1, refLootEntry = 15082 }, --Fiery Retributer
 	{ itemID = 19962, groupID = 1, refLootEntry = 15082 }, --Gri'lek's Carver
