@@ -356,12 +356,14 @@ end
 local displayData = {}
 AtlasLootDisplaydata = displayData
 -- Sorts a lootTables items based on the order of the above lists and adds any spacers between groups
-local function sortItemData(lootTables)
+local function sortItemData(dataSource, dataID, tablenum)
+	local lootTables = dataSource[tablenum][2]
 	if not lootTables then return end
-	if displayData[lootTables[1]] then return displayData[lootTables[1]] end
+	local lootTableName = lootTables[1] or dataID..tablenum
+	if displayData[lootTableName] then return displayData[lootTableName] end
 	local newTable = {{}}
 
-	if not AtlasLoot.itemData[lootTables[1]].dontSort then
+	if not AtlasLoot.itemData[lootTableName].dontSort then
 		local itemCatagories = createItemCatagoiresTable()
 		for _, lootTableSelection in ipairs(lootTables) do
 			for _, itemData in pairs(AtlasLoot.itemData[lootTableSelection]) do
@@ -404,7 +406,7 @@ local function sortItemData(lootTables)
 			end
 		end
 	else
-		for itemNum, item in ipairs(AtlasLoot.itemData[lootTables[1]]) do
+		for itemNum, item in ipairs(AtlasLoot.itemData[lootTableName]) do
 			if (#newTable[#newTable] ~= 0 and item.name and item.icon) then
 				if #newTable[#newTable] < 16 then
 					for i = 1, (15 - #newTable[#newTable]) do
@@ -415,13 +417,13 @@ local function sortItemData(lootTables)
 				end
 			end
 			table.insert(newTable[#newTable], item)
-			if #newTable[#newTable] >= 30 and itemNum ~= #AtlasLoot.itemData[lootTables[1]] then
+			if #newTable[#newTable] >= 30 and itemNum ~= #AtlasLoot.itemData[lootTableName] then
 				table.insert(newTable, {})
 			end
 		end
 	end
-	displayData[lootTables[1]] = newTable
-	return displayData[lootTables[1]]
+	displayData[lootTableName] = newTable
+	return displayData[lootTableName]
 end
 
 function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
@@ -434,7 +436,7 @@ function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 		itemData = AtlasLootCharDB[dataID][1]
 	elseif dataSource_backup == "AtlasLoot_Data" then
 		dataSource = self.ui.menus.data[dataID]
-		itemData = sortItemData(dataSource[tablenum][2])
+		itemData = sortItemData(dataSource, dataID, tablenum)
 	end
 	if not itemData then return end
 	return dataSource, itemData, #itemData
