@@ -5,6 +5,21 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
+-- Colours stored for code readability
+local GREY = "|cff999999"
+local RED = "|cffff0000"
+local WHITE = "|cffFFFFFF"
+local GREEN = "|cff1eff00"
+local LIMEGREEN = "|cFF32CD32"
+local BLUE = "|cff0070dd"
+local ORANGE = "|cffFF8400"
+local YELLOW = "|cffFFd200"
+local GOLD  = "|cffffcc00"
+local CYAN =  "|cff00ffff"
+local PURPLE = "|cff9F3FFF"
+local SPRINGGREEN = "|cFF00FF7F"
+local LIGHTBLUE = "|cFFADD8E6"
+local ORANGE2 = "|cFFFFA500"
 --------------------------------------------------------------------------------
 -- Text replacement function
 --------------------------------------------------------------------------------
@@ -169,23 +184,29 @@ local txtSubstitution = {
 function AtlasLoot:FixText(text)
     if not text or (text and type(text) ~= "string") then return "" end
     for _, subTable in pairs (txtSubstitution) do
-        text = gsub(text, subTable[1], subTable[2])
-    end
+            text = gsub(text, subTable[1], subTable[2])
+        end
 
-    local englishFaction, _ = UnitFactionGroup("player")
-    if englishFaction == "Horde" then
-        text = gsub(text, "#faction#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Horde:14:14:0:-1|t")
-        text = gsub(text, "#factionoutlandPvP#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Horde:0|t")
-        text = gsub(text, "#markthrallmarhhold#", "|TInterface\\Icons\\INV_Misc_Token_Thrallmar:0|t")
-    else
-        text = gsub(text, "#faction#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Alliance:16:16:0:-2|t")
-        text = gsub(text, "#factionoutlandPvP#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Alliance:0|t")
-        text = gsub(text, "#markthrallmarhhold#", "|TInterface\\Icons\\INV_Misc_Token_HonorHold:0|t")
+        local englishFaction, _ = UnitFactionGroup("player")
+        if englishFaction == "Horde" then
+            text = gsub(text, "#faction#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Horde:14:14:0:-1|t")
+            text = gsub(text, "#factionoutlandPvP#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Horde:0|t")
+            text = gsub(text, "#markthrallmarhhold#", "|TInterface\\Icons\\INV_Misc_Token_Thrallmar:0|t")
+        else
+            text = gsub(text, "#faction#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Alliance:16:16:0:-2|t")
+            text = gsub(text, "#factionoutlandPvP#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Alliance:0|t")
+            text = gsub(text, "#markthrallmarhhold#", "|TInterface\\Icons\\INV_Misc_Token_HonorHold:0|t")
+        end
+    local wordList = {string.split(" ",text)}
+    local newText
+    for _, text in pairs(wordList) do
+        text = BabbleBoss[text] or text
+        text = BabbleInventory[text] or text
+        text = BabbleZone[text] or text
+        text = BabbleFaction[text] or text
+        text = AL[text]
+        newText = newText and newText .. " " .. text or text
     end
-        text = BabbleBoss[text] and gsub(text, text, BabbleBoss[text]) or text
-        text = BabbleInventory[text] and gsub(text, text, BabbleInventory[text]) or text
-        text = BabbleZone[text] and gsub(text, text, BabbleZone[text]) or text
-        text = BabbleFaction[text] and gsub(text, text, BabbleFaction[text]) or text
-        text = AL[text] and gsub(text, text, AL[text]) or text
-    return text
+    newText = gsub(newText, " %- ", WHITE.." - ")
+    return newText
 end
