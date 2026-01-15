@@ -1,8 +1,9 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-function AtlasLoot:InitializeMenuData()
+function AtlasLoot:InitializeClassicInstanceMenu()
     local menu = self.ui.menus.data
 
+	-- ClassicRaid
     menu["ZulGurub"] = {
         Module = "AtlasLoot_OriginalWoW",
         Name = "Zul'Gurub",
@@ -19,28 +20,13 @@ function AtlasLoot:InitializeMenuData()
         { "Hakkar", { 14834 } },
     }
 
-    menu["Naxxramas60"] = {
-	Module = "AtlasLoot_OriginalWoW",
-	Name = "Naxxramas",
-	Type = "ClassicRaid",
-	Map = "Naxxramas60",
-		{ "Patchwerk", { 16028 } },
-		{ "Grobbulus", { 15931 } },
-		{ "Gluth", { 15932 } },
-		{ "Thaddius", { 15928 } },
-		{ "Anub'Rekhan", { 15956 } },
-		{ "Grand Widow Faerlina", {  } },
-		{ "Maexxna", { 15953 } },
-		{ "Instructor Razuvious", { 15952 } },
-		{ "Gothik the Harvester", { 16061 } },
-		{ "The Four Horsemen", { 16060 } },
-		{ "Noth the Plaguebringer", { 15954 } },
-		{ "Heigan the Unclean", { 15936 } },
-		{ "Loatheb", { 16011 } },
-		{ "Sapphiron", { 15989 } },
-		{ "Kel'Thuzad", { 15990 } },
-
-    }
+	menu["Onyxia60"] = {
+		Module = "AtlasLoot_OriginalWoW",
+		Name = "Onyxia's Lair",
+		Type = "ClassicRaid",
+		Map = "Onyxia60",
+		{ "Onyxia's Lair", { 10184 } },
+	}
 
 	menu["RuinsofAQ"] = {
 		Module = "AtlasLoot_OriginalWoW",
@@ -82,6 +68,31 @@ function AtlasLoot:InitializeMenuData()
 		{ "AQOpening" },
 	}
 
+	menu["Naxxramas60"] = {
+		Module = "AtlasLoot_OriginalWoW",
+		Name = "Naxxramas",
+		Type = "ClassicRaid",
+		Map = "Naxxramas60",
+		{ "Patchwerk", { 16028 } },
+		{ "Grobbulus", { 15931 } },
+		{ "Gluth", { 15932 } },
+		{ "Thaddius", { 15928 } },
+		{ "Anub'Rekhan", { 15956 } },
+		{ "Grand Widow Faerlina", { 15953 } },
+		{ "Maexxna", { 15952 } },
+		{ "Instructor Razuvious", { 16061 } },
+		{ "Gothik the Harvester", { 16060 } },
+		{ "The Four Horsemen" },
+		{ "Noth the Plaguebringer", { 15954 } },
+		{ "Heigan the Unclean", { 15936 } },
+		{ "Loatheb", { 16011 } },
+		{ "Sapphiron", { 15989 } },
+		{ "Kel'Thuzad", { 15990 } },
+		{ "Shared Frost Resistance Gear" },
+		{ "Trash Mobs" },
+	}
+
+	-- ClassicDungeons
 	menu["BlackfathomDeeps"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Blackfathom Deeps",
@@ -573,351 +584,4 @@ function AtlasLoot:InitializeMenuData()
 		{ "Zerillis", { 24081 } },
 		{ "Trash Mobs" },
 	}
-
-	menu["Naxxramas60"] = {
-		Module = "AtlasLoot_OriginalWoW",
-		Name = "Naxxramas",
-		Type = "ClassicRaid",
-		Map = "Naxxramas60",
-		{ "Patchwerk", { 16028 } },
-		{ "Grobbulus", { 15931 } },
-		{ "Gluth", { 15932 } },
-		{ "Thaddius", { 15928 } },
-		{ "Anub'Rekhan", { 15956 } },
-		{ "Grand Widow Faerlina", { 15953 } },
-		{ "Maexxna", { 15952 } },
-		{ "Instructor Razuvious", { 16061 } },
-		{ "Gothik the Harvester", { 16060 } },
-		{ "The Four Horsemen" },
-		{ "Noth the Plaguebringer", { 15954 } },
-		{ "Heigan the Unclean", { 15936 } },
-		{ "Loatheb", { 16011 } },
-		{ "Sapphiron", { 15989 } },
-		{ "Kel'Thuzad", { 15990 } },
-		{ "Shared Frost Resistance Gear" },
-		{ "Trash Mobs" },
-	}
-
-	menu["Onyxia60"] = {
-		Module = "AtlasLoot_OriginalWoW",
-		Name = "Onyxia's Lair",
-		Type = "ClassicRaid",
-		Map = "Onyxia60",
-		{ "Onyxia's Lair", { 10184 } },
-	}
-
-	menu["AuchCrypts"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Auchindoun" .. ": " .. "Auchenai Crypts",
-		DisplayName = "Auchenai Crypts",
-		Type = "BCDungeon",
-		Map = "AuchAuchenaiCrypts",
-		{ "Shirrak the Dead Watcher", { 18371 } },
-		{ "Exarch Maladaar", { 18373 } },
-		{ "Avatar of the Martyred" },
-	}
-
-	menu["AuchManaTombs"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Auchindoun" .. ": " .. "Mana-Tombs",
-		DisplayName = "Mana-Tombs",
-		Type = "BCDungeon",
-		Map = "AuchManaTombs",
-		{ "Pandemonius", { 40110 } },
-		{ "Tavarok", { 40112 } },
-		{ "Nexus-Prince Shaffar", { 40115 } },
-		{ "Yor" .. " (" .. "Heroic" .. ")", { 22930 } },
-	}
-
-	menu["AuchSethekk"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Auchindoun" .. ": " .. "Sethekk Halls",
-		DisplayName = "Sethekk Halls",
-		Type = "BCDungeon",
-		Map = "AuchSethekkHalls",
-		{ "Darkweaver Syth", { 40130 } },
-		{ "Anzu" .. " (" .. "Heroic" .. ")", { 23035 } },
-		{ "Talon King Ikiss", { 25006 } },
-		{ "Trash Mobs" },
-	}
-
-	menu["AuchShadowLab"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Auchindoun" .. ": " .. "Shadow Labyrinth",
-		DisplayName = "Shadow Labyrinth",
-		Type = "BCDungeon",
-		Map = "AuchShadowLabyrinth",
-		{ "Ambassador Hellmaw", { 40140 } },
-		{ "Blackheart the Inciter", { 40141 } },
-		{ "Grandmaster Vorpil", { 40142 } },
-		{ "Murmur", { 40143 } },
-		{ "Trash Mobs" },
-	}
-
-	menu["BlackTemple"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Black Temple",
-		Type = "BCRaid",
-		Map = "BlackTemple",
-		{ "High Warlord Naj'entus", { 22887 } },
-		{ "Supremus", { 22898 } },
-		{ "Shade of Akama", { 22841 } },
-		{ "Teron Gorefiend", { 22871 } },
-		{ "Gurtogg Bloodboil", { 22948 } },
-		{ "Reliquary of the Lost", { 22856 } },
-		{ "Mother Shahraz", { 22947 } },
-		{ "The Illidari Council" },
-		{ "Illidan Stormrage", { 22917 } },
-		{ "Trash Mobs" },
-		{ "Reputation Trinkets" },
-		{ "BT Patterns/Plans" },
-	}
-
-	menu["CoTOldHillsbrad"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Caverns of Time" .. ": " .. "Old Hillsbrad Foothills",
-		DisplayName = "Old Hillsbrad Foothills",
-		Type = "BCDungeon",
-		Map = "CoTOldHillsbrad",
-		{ "Lieutenant Drake" },
-		{ "Captain Skarloc" },
-		{ "Epoch Hunter" },
-		{ "Trash Mobs" },
-	}
-
-	menu["CoTBlackMorass"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Caverns of Time" .. ": " .. "The Black Morass",
-		DisplayName = "The Black Morass",
-		Type = "BCDungeon",
-		Map = "CoTBlackMorass",
-		{ "Chrono Lord Deja" },
-		{ "Temporus" },
-		{ "Aeonus" },
-	}
-
-	menu["CoTHyjal"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Caverns of Time" .. ": " .. "Hyjal Summit",
-		DisplayName = "Hyjal Summit",
-		Type = "BCRaid",
-		Map = "CoTHyjal",
-		{ "Rage Winterchill" },
-		{ "Anetheron" },
-		{ "Kaz'rogal" },
-		{ "Azgalor" },
-		{ "Archimonde" },
-		{ "Chromius" },
-		{ "Trash Mobs - Items" },
-		{ "Crafting Recipe Drops Page 1" },
-		{ "Crafting Recipe Drops Page 2" },
-	}
-
-	menu["CFRSlavePens"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Coilfang Reservoir" .. ": " .. "The Slave Pens",
-		DisplayName = "The Slave Pens",
-		Type = "BCDungeon",
-		Map = "CFRTheSlavePens",
-		{ "Mennu the Betrayer" },
-		{ "Rokmar the Crackler" },
-		{ "Quagmirran" },
-	}
-
-	menu["CFRSteamvault"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Coilfang Reservoir" .. ": " .. "The Steamvault",
-		DisplayName = "The Steamvault",
-		Type = "BCDungeon",
-		Map = "CFRTheSteamvault",
-		{ "Hydromancer Thespia" },
-		{ "Mekgineer Steamrigger" },
-		{ "Warlord Kalithresh" },
-		{ "Trash Mobs" },
-	}
-
-	menu["CFRUnderbog"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Coilfang Reservoir" .. ": " .. "The Underbog",
-		DisplayName = "The Underbog",
-		Type = "BCDungeon",
-		Map = "CFRTheUnderbog",
-		{ "Hungarfen" },
-		{ "Ghaz'an" },
-		{ "Swamplord Musel'ek" },
-		{ "The Black Stalker" },
-	}
-
-	menu["CFRSerpentshrine"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Coilfang Reservoir" .. ": " .. "Serpentshrine Cavern",
-		DisplayName = "Serpentshrine Cavern",
-		Type = "BCRaid",
-		Map = "CFRSerpentshrineCavern",
-		{ "Hydross the Unstable" },
-		{ "The Lurker Below" },
-		{ "Leotheras the Blind" },
-		{ "Fathom-Lord Karathress" },
-		{ "Morogrim Tidewalker" },
-		{ "Lady Vashj" },
-		{ "Trash Mobs" },
-	}
-
-	menu["GruulsLair"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Gruul's Lair",
-		Type = "BCRaid",
-		Map = "GruulsLair",
-		{ "High King Maulgar" },
-		{ "Gruul the Dragonkiller" },
-	}
-
-	menu["HCRamparts"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Hellfire Citadel" .. ": " .. "Hellfire Ramparts",
-		DisplayName = "Hellfire Ramparts",
-		Type = "BCDungeon",
-		Map = "HCHellfireRamparts",
-		{ "Watchkeeper Gargolmar" },
-		{ "Omor the Unscarred" },
-		{ "Vazruden" },
-	}
-
-	menu["HCFurnace"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Hellfire Citadel" .. ": " .. "The Blood Furnace",
-		DisplayName = "The Blood Furnace",
-		Type = "BCDungeon",
-		Map = "HCBloodFurnace",
-		{ "The Maker" },
-		{ "Broggok" },
-		{ "Keli'dan the Breaker" },
-	}
-
-	menu["HCShatteredHalls"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Hellfire Citadel" .. ": " .. "The Shattered Halls",
-		DisplayName = "The Shattered Halls",
-		Type = "BCDungeon",
-		Map = "HCTheShatteredHalls",
-		{ "Grand Warlock Nethekurse" },
-		{ "Blood Guard Porung" },
-		{ "Warbringer O'mrogg" },
-		{ "Warchief Kargath Bladefist" },
-		{ "Trash Mobs" },
-	}
-
-	menu["HCMagtheridon"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Hellfire Citadel" .. ": " .. "Magtheridon's Lair",
-		DisplayName = "Magtheridon's Lair",
-		Type = "BCRaid",
-		Map = "HCMagtheridonsLair",
-		{ "Magtheridon", { 17257 } },
-	}
-
-	menu["Karazhan"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Karazhan",
-		Type = "BCRaid",
-		Map = "Karazhan",
-		Loadfirst = 1,
-		--{ "Servant's Quarter Animal Bosses" },
-		{ "Attumen the Huntsman", {16152, "Huntsman"} },
-		{ "Moroes", { 15687 } },
-		{ "Maiden of Virtue", { 16457 } },
-		--{ "Opera Event" },
-		{ "Nightbane", { 17225 } },
-		{ "The Curator", { 15691 } },
-		{ "Terestian Illhoof", { 15688 } },
-		{ "Shade of Aran", { 16524 } },
-		{ "Netherspite", { 15689 } },
-		{ "Chess Event", { 16816 } },
-		{ "Prince Malchezaar", { 15690 } },
-		--{ "Trash Mobs" },
-	}
-
-	menu["MagistersTerrace"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Sunwell Isle" .. ": " .. "Magisters' Terrace",
-		DisplayName = "Magisters' Terrace",
-		Type = "BCDungeon",
-		Map = "MagistersTerrace",
-		{ "Selin Fireheart" },
-		{ "Vexallus" },
-		{ "Priestess Delrissa" },
-		{ "Kael'thas Sunstrider" },
-		{ "Trash Mobs" },
-	}
-
-	menu["TKArc"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Tempest Keep" .. ": " .. "The Arcatraz",
-		DisplayName = "The Arcatraz",
-		Type = "BCDungeon",
-		Map = "TempestKeepArcatraz",
-		{ "Zereketh the Unbound" },
-		{ "Wrath-Scryer Soccothrates" },
-		{ "Dalliah the Doomsayer" },
-		{ "Harbinger Skyriss" },
-		{ "Trash Mobs" },
-	}
-
-	menu["TKBot"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Tempest Keep" .. ": " .. "The Botanica",
-		DisplayName = "The Botanica",
-		Type = "BCDungeon",
-		Map = "TempestKeepBotanica",
-		{ "Commander Sarannis" },
-		{ "High Botanist Freywinn" },
-		{ "Thorngrin the Tender" },
-		{ "Laj" },
-		{ "Warp Splinter" },
-	}
-
-	menu["TKMech"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Tempest Keep" .. ": " .. "The Mechanar",
-		DisplayName = "The Mechanar",
-		Type = "BCDungeon",
-		Map = "TempestKeepMechanar",
-		{ "Cache of the Legion" },
-		{ "Mechano-Lord Capacitus" },
-		{ "Nethermancer Sepethrea" },
-		{ "Pathaleon the Calculator" },
-	}
-
-	menu["TKEye"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Tempest Keep" .. ": " .. "The Eye",
-		DisplayName = "The Eye",
-		Type = "BCRaid",
-		Map = "TempestKeepTheEye",
-		{ "Al'ar" },
-		{ "Void Reaver" },
-		{ "High Astromancer Solarian" },
-		{ "Kael'thas Sunstrider" },
-		{ "Trash Mobs" },
-		{ "Legendary Items for Kael'thas Fight" },
-	}
-
-	menu["SunwellPlateau"] = {
-		Module = "AtlasLoot_BurningCrusade",
-		Name = "Sunwell Isle" .. ": " .. "Sunwell Plateau",
-		DisplayName = "Sunwell Plateau",
-		Type = "BCRaid",
-		Map = "SunwellPlateau",
-		{ "Kalecgos" },
-		{ "Brutallus" },
-		{ "Felmyst" },
-		{ "Grand Warlock Alythess" },
-		{ "High Commander Arynyes <Shadowsword Captain>" },
-		{ "M'uru" },
-		{ "Kil'jaeden" },
-		{ "Trash Mobs" },
-		{ "Jewelcrafting" },
-		{ "Patterns/Plans" },
-}
-
 end

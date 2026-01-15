@@ -9,7 +9,10 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
 function AtlasLoot:InitializeMenus()
 	self.ui.menus = {collection = {}, data = {}}
-	self:InitializeMenuData()
+	self:InitializeClassicCraftingMenu()
+	self:InitializeClassicInstanceMenu()
+	self:InitializeTBCCraftingMenu()
+	self:InitializeTBCInstanceMenu()
 	local menus = self.ui.menus
 	local collection = menus.collection
 

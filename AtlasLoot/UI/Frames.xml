@@ -139,7 +139,10 @@
 		</Scripts>
     </Frame>
     
-    <Script file="Menu_Data.lua"/>
+    <Script file="Menus\ClassicInstances.lua"/>
+    <Script file="Menus\ClassicCrafting.lua"/>
+    <Script file="Menus\TBCInstances.lua"/>
+    <Script file="Menus\TBCCrafting.lua"/>
     <Script file="Menus.lua"/>
     <Script file="UI.lua"/>
     <Script file="UI_Functions.lua"/>
