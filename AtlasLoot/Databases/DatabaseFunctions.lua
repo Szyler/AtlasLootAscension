@@ -245,6 +245,18 @@ function AtlasLoot:CreateMainLootTable()
 	self:RateLimitLoadTable(AtlasLoot_ItemData, addItem)
 end
 
+function AtlasLoot:AddSecondaryLootTable(data)
+	for tableName, tableParent in pairs(data) do
+		for i, table in ipairs(tableParent) do
+			self.itemData[tableName..i] = table
+			self.itemData[tableName..i].dontSort = true
+			for _, item in ipairs(self.itemData[tableName..i]) do
+				item.refLootEntry = tableName..i
+			end
+		end
+	end
+end
+
 local equipLocType = {
     INVTYPE_HEAD = 1,
 	INVTYPE_SHOULDER = 2,
@@ -342,53 +354,73 @@ local function createItemCatagoiresTable()
 end
 
 local displayData = {}
+AtlasLootDisplaydata = displayData
 -- Sorts a lootTables items based on the order of the above lists and adds any spacers between groups
 local function sortItemData(lootTables)
 	if not lootTables then return end
 	if displayData[lootTables[1]] then return displayData[lootTables[1]] end
-	local itemCatagories = createItemCatagoiresTable()
-	for _, lootTableSelection in pairs(lootTables) do
-		for _, itemData in pairs(AtlasLoot.itemData[lootTableSelection]) do
-			local itemType, itemSubType, _, itemEquipLoc = select(6, AtlasLoot:GetItemInfo(itemData.itemID))
-			local iType = itemCatagories[baseType[itemType]]
-			if iType and iType[subType[itemSubType]] then
-				local addType
-				if itemEquipLoc and equipLocType[itemEquipLoc] then
-					addType = iType[subType[itemSubType]][equipLocType[itemEquipLoc]]
+	local newTable = {{}}
+
+	if not AtlasLoot.itemData[lootTables[1]].dontSort then
+		local itemCatagories = createItemCatagoiresTable()
+		for _, lootTableSelection in ipairs(lootTables) do
+			for _, itemData in pairs(AtlasLoot.itemData[lootTableSelection]) do
+				local itemType, itemSubType, _, itemEquipLoc = select(6, AtlasLoot:GetItemInfo(itemData.itemID, true))
+				local iType = itemCatagories[baseType[itemType]]
+				if iType and iType[subType[itemSubType]] then
+					local addType
+					if itemEquipLoc and equipLocType[itemEquipLoc] then
+						addType = iType[subType[itemSubType]][equipLocType[itemEquipLoc]]
+					else
+						addType = iType[subType[itemSubType]]
+					end
+					table.insert(addType, itemData)
 				else
-					addType = iType[subType[itemSubType]]
+					table.insert(itemCatagories[5], itemData)
 				end
-				table.insert(addType, itemData)
+			end
+		end
+
+		local function getLootItem(cat)
+			if cat.refLootEntry then
+				if #newTable[#newTable] >= 30 then
+					table.insert(newTable, {})
+				end
+				table.insert(newTable[#newTable], cat)
 			else
-				table.insert(itemCatagories[5], itemData)
+				for _, item in ipairs(cat) do
+					getLootItem(item)
+				end
 			end
 		end
-	end
 
-	local sortedTable = {{}}
-	local function getLootItem(cat)
-		if cat.refLootEntry then
-			if #sortedTable[#sortedTable] >= 30 then
-				table.insert(sortedTable, {})
+		for _, itemCat in ipairs(itemCatagories) do
+			getLootItem(itemCat)
+			if #newTable[#newTable] >= 30 then
+				table.insert(newTable, {})
 			end
-			table.insert(sortedTable[#sortedTable], cat)
-		else
-			for _, item in ipairs(cat) do
-				getLootItem(item)
+			if #newTable[#newTable] ~= 15 then
+				table.insert(newTable[#newTable], {"blankLine"})
+			end
+		end
+	else
+		for itemNum, item in ipairs(AtlasLoot.itemData[lootTables[1]]) do
+			if (#newTable[#newTable] ~= 0 and item.name and item.icon) then
+				if #newTable[#newTable] < 16 then
+					for i = 1, (15 - #newTable[#newTable]) do
+						table.insert(newTable[#newTable], {"blankLine"})
+					end
+				elseif #newTable[#newTable] > 15 then
+					table.insert(newTable, {})
+				end
+			end
+			table.insert(newTable[#newTable], item)
+			if #newTable[#newTable] >= 30 and itemNum ~= #AtlasLoot.itemData[lootTables[1]] then
+				table.insert(newTable, {})
 			end
 		end
 	end
-
-	for _, itemCat in pairs(itemCatagories) do
-		getLootItem(itemCat)
-		if #sortedTable[#sortedTable] >= 30 then
-			table.insert(sortedTable, {})
-		end
-		if #sortedTable[#sortedTable] ~= 15 then
-			table.insert(sortedTable[#sortedTable], {"blankLine"})
-		end
-	end
-	displayData[lootTables[1]] = sortedTable
+	displayData[lootTables[1]] = newTable
 	return displayData[lootTables[1]]
 end
 
