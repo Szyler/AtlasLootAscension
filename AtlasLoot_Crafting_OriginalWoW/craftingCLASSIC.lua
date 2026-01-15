@@ -51,11 +51,10 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 --- Tradeskill List ---
 -----------------------
 
----------------
---- Alchemy ---
----------------
-
-local data = {
+AtlasLoot:AddSecondaryLootTable({
+	---------------
+	--- Alchemy ---
+	---------------
 	["AlchemyCLASSIC"] = {
 		{
 			{ itemID = 13454, spellID = 17573 }, --Greater Arcane Elixir
@@ -207,6 +206,7 @@ local data = {
 			{ itemID = 967475, spellID = 968434 }, --Distilled Flask of Adept Striking
 		},
 	},
+
 	---------------------
 	--- Blacksmithing ---
 	---------------------
@@ -517,10 +517,10 @@ local data = {
 			{ itemID = 967682, spellID = 968482 }, --Homicite Key
 		},
 	},
+
 	---------------
 	--- Cooking ---
 	---------------
-
 	["CookingCLASSIC"] = {
 		{
 			{ itemID = 21023, spellID = 25659 }, --Dirge's Kickin' Chimaerok Chops
@@ -734,7 +734,6 @@ local data = {
 	------------------
 	--- Enchanting ---
 	------------------
-
 	["EnchantingCLASSIC"] = {
 		{
 			{spellID = 20023, icon = "Spell_Holy_GreaterHeal" }, --Enchant Boots - Greater Agility
@@ -934,7 +933,6 @@ local data = {
 	-------------------
 	--- Engineering ---
 	-------------------
-
 	["EngineeringCLASSIC"] = {
 		{
 			{ itemID = 18042, desc = "Quest See Tooltip", quest = {14183,14182, text = "Trade Thorium Shells for Arrows"}}, --Thorium Headed Arrow
@@ -1155,7 +1153,6 @@ local data = {
 	-----------------
 	--- First Aid ---
 	-----------------
-
 	["FirstAidCLASSIC"] = {
 		{
 			{ itemID = 19440, spellID = 23787 }, --Powerful Anti-Venom
@@ -1177,7 +1174,6 @@ local data = {
 	----------------------
 	--- Leatherworking ---
 	----------------------
-
 	["LeatherworkingCLASSIC"] = {
 		{
 			{ itemID = 18509, spellID = 22926 }, --Chromatic Cloak
@@ -1495,7 +1491,6 @@ local data = {
 	--------------
 	--- Mining ---
 	--------------
-
 	["MiningCLASSIC"] = {
 		{
 			{ itemID = 17771, spellID = 22967 }, --Smelt Elementium
@@ -1523,13 +1518,12 @@ local data = {
 			{ itemID = 2771 }, --Tin
 			{ itemID = 2770 }, --Copper
 		},
-},
+	},
 
------------------
---- Tailoring ---
------------------
-
-["TailoringCLASSIC"] = {
+	-----------------
+	--- Tailoring ---
+	-----------------
+	["TailoringCLASSIC"] = {
 		{
 			{ itemID = 22658, spellID = 28208 }, --Glacial Cloak
 			{ itemID = 22660, spellID = 28210 }, --Gaea's Embrace
@@ -1796,5 +1790,4 @@ local data = {
 			{ itemID = 967230, spellID = 968076 }, --Nimble Cloak Lining
 		},
 	}
-}
-AtlasLoot:AddSecondaryLootTable(data)
+})
