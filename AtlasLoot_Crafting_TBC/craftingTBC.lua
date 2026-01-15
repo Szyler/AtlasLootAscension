@@ -1,34 +1,4 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local color = AtlasLoot.Colors
-
-
-
-local ALCHEMY = GetSpellInfo(2259)
-local BLACKSMITHING = GetSpellInfo(2018)
-local ARMORSMITH = GetSpellInfo(9788)
-local WEAPONSMITH = GetSpellInfo(9787)
-local AXESMITH = GetSpellInfo(17041)
-local HAMMERSMITH = GetSpellInfo(17040)
-local SWORDSMITH = GetSpellInfo(17039)
-local COOKING = GetSpellInfo(2550)
-local ENCHANTING = GetSpellInfo(7411)
-local ENGINEERING = GetSpellInfo(4036)
-local GNOMISH = GetSpellInfo(20220)
-local GOBLIN = GetSpellInfo(20221)
-local FIRSTAID = GetSpellInfo(3273)
-local JEWELCRAFTING = GetSpellInfo(25229)
-local LEATHERWORKING = GetSpellInfo(2108)
-local DRAGONSCALE = GetSpellInfo(10656)
-local ELEMENTAL = GetSpellInfo(10658)
-local TRIBAL = GetSpellInfo(10660)
-local MINING = GetSpellInfo(2575)
-local TAILORING = GetSpellInfo(3908)
-local MOONCLOTH = GetSpellInfo(26798)
-local SHADOWEAVE = GetSpellInfo(26801)
-local SPELLFIRE = GetSpellInfo(26797)
-
-local gap = {"gap"}
-
 -- Index
 --- Tradeskill List
 ---- Alchemy
@@ -75,15 +45,12 @@ local gap = {"gap"}
 --- Tradeskill List ---
 -----------------------
 
----------------
---- Alchemy ---
----------------
-AtlasLoot_Data["AlchemyTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = ALCHEMY,
-	Type = "BCCrafting",
-	{
-		Name = "Battle Elixirs",
+
+AtlasLoot:AddSecondaryLootTable({
+	---------------
+	--- Alchemy ---
+	---------------
+	["AlchemyTBC"] = {
 		{
 			{ itemID = 22835, spellID = 28558 }, --Elixir of Major Shadow Power
 			{ itemID = 22833, spellID = 28556 }, --Elixir of Major Firepower
@@ -96,9 +63,6 @@ AtlasLoot_Data["AlchemyTBC"] = {
 			{ itemID = 28103, spellID = 33740 }, --Adept's Elixir
 			{ itemID = 28102, spellID = 33738 }, --Onslaught Elixir
 		},
-	},
-	{
-		Name = "Guardian Elixirs",
 		{
 			{ itemID = 22848, spellID = 28578 }, --Elixir of Empowerment
 			{ itemID = 22840, spellID = 28570 }, --Elixir of Major Mageblood
@@ -108,9 +72,6 @@ AtlasLoot_Data["AlchemyTBC"] = {
 			{ itemID = 32067, spellID = 39638 }, --Elixir of Draenic Wisdom
 			{ itemID = 32062, spellID = 39636 }, --Elixir of Major Fortitude
 		},
-	},
-	{
-		Name = "Potions",
 		{
 			{ itemID = 22850, spellID = 28586 }, --Super Rejuvenation Potion
 			{ itemID = 31677, spellID = 38961 }, --Fel Mana Potion
@@ -127,8 +88,6 @@ AtlasLoot_Data["AlchemyTBC"] = {
 			{ itemID = 22836, spellID = 28562 }, --Major Dreamless Sleep Potion
 			{ itemID = 31676, spellID = 38962 }, --Fel Regeneration Potion
 			{ itemID = 22832, spellID = 28555 }, --Super Mana Potion
-		},
-		{
 			{ itemID = 22871, spellID = 28554 }, --Shrouding Potion
 			{ itemID = 34440, spellID = 45061 }, --Mad Alchemist's Potion
 			{ itemID = 22829, spellID = 28551 }, --Super Healing Potion
@@ -137,9 +96,6 @@ AtlasLoot_Data["AlchemyTBC"] = {
 			{ itemID = 28101, spellID = 33733 }, --Unstable Mana Potion
 			{ itemID = 28100, spellID = 33732 }, --Volatile Healing Potion
 		},
-	},
-	{
-		Name = "Flasks",
 		{
 			{ itemID = 33208, spellID = 42736 }, --Flask of Chromatic Wonder
 			{ itemID = 22861, spellID = 28590 }, --Flask of Blinding Light
@@ -148,9 +104,6 @@ AtlasLoot_Data["AlchemyTBC"] = {
 			{ itemID = 22866, spellID = 28591 }, --Flask of Pure Death
 			{ itemID = 22854, spellID = 28589 }, --Flask of Relentless Assault
 		},
-	},
-	{
-		Name = "Transmutes",
 		{
 			{ itemID = 23571, spellID = 29688 }, --Transmute: Primal Might
 			{ itemID = 25867, spellID = 32765 }, --Transmute: Earthstorm Diamond
@@ -166,9 +119,6 @@ AtlasLoot_Data["AlchemyTBC"] = {
 			{ itemID = 22452, spellID = 28568 }, --Transmute: Primal Fire to Earth
 			{ itemID = 22451, spellID = 28569 }, --Transmute: Primal Water to Air
 		},
-	},
-	{
-		Name = "Miscellaneous",
 		{
 			{ itemID = 19931, spellID = 24266 }, --Gurubashi Mojo Madness
 			{ itemID = 9154, spellID = 11460 }, --Elixir of Detect Undead
@@ -184,9 +134,6 @@ AtlasLoot_Data["AlchemyTBC"] = {
 			{ itemID = 5996, spellID = 7179 }, --Elixir of Water Breathing
 			{ itemID = 6370, spellID = 7836 }, --Blackmouth Oil
 		},
-	},
-	{
-		Name = "High Risk",
 		{
 			{ name = "Rare", icon = "INV_Box_01"},
 			{ itemID = 1203258, spellID = 979362 }, --Impure Flask of Manifesting Power
@@ -200,8 +147,6 @@ AtlasLoot_Data["AlchemyTBC"] = {
 			{ itemID = 1203274, spellID = 979378 }, --Impure Flask of the Executioner
 			{ itemID = 1203276, spellID = 979380 }, --Impure Flask of Deep Meditation
 			{ itemID = 1203278, spellID = 979382 }, --Impure Flask of Adept Striking
-		},
-		{
 			{ name = "Epic", icon = "INV_Box_01"},
 			{ itemID = 1203259, spellID = 979363 }, --Pure Flask of Manifesting Power
 			{ itemID = 1203261, spellID = 979365 }, --Pure Flask of the Warsong
@@ -216,20 +161,14 @@ AtlasLoot_Data["AlchemyTBC"] = {
 			{ itemID = 1203279, spellID = 979383 }, --Pure Flask of Adept Striking
 		},
 	},
-}
 
 
 
----------------------
---- Blacksmithing ---
----------------------
+	---------------------
+	--- Blacksmithing ---
+	---------------------
 
-AtlasLoot_Data["SmithingTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = BLACKSMITHING,
-	Type = "BCCrafting",
-	{
-		Name = "Armor" .. color.WHITE .. " - Chest",
+	["SmithingTBC"] = {
 		{
 			{ itemID = 28484, spellID = 34534 }, --Bulwark of Kings
 			{ itemID = 28485, spellID = 36257 }, --Bulwark of the Ancient Kings
@@ -246,16 +185,11 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 28483, spellID = 34533 }, --Breastplate of Kings
 			{ itemID = 23563, spellID = 34529 }, --Nether Chain Shirt
 			{ itemID = 23507, spellID = 29606 }, --Adamantite Breastplate
-		},
-		{
 			{ itemID = 30074, spellID = 36129 }, --Heavy Earthforged Breastplate
 			{ itemID = 30076, spellID = 36130 }, --Stormforged Hauberk
 			{ itemID = 23489, spellID = 29550 }, --Fel Iron Breastplate
 			{ itemID = 23490, spellID = 29556 }, --Fel Iron Chain Tunic
-		}
-	},
-	{
-		Name = "Armor" .. color.WHITE .. " - Feet",
+		},
 		{
 			{ itemID = 30033, spellID = 36391 }, --Boots of the Protector
 			{ itemID = 30031, spellID = 36392 }, --Red Havoc Boots
@@ -263,10 +197,7 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 23525, spellID = 29630 }, --Khorium Boots
 			{ itemID = 23511, spellID = 29611 }, --Enchanted Adamantite Boots
 			{ itemID = 23487, spellID = 29548 }, --Fel Iron Plate Boots
-		}
-	},
-	{
-		Name = "Armor" .. color.WHITE .. " - Hands",
+		},
 		{
 			{ itemID = 23526, spellID = 29648 }, --Swiftsteel Gloves
 			{ itemID = 23531, spellID = 29658 }, --Felfury Gauntlets
@@ -280,10 +211,7 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 23508, spellID = 29605 }, --Adamantite Plate Gloves
 			{ itemID = 23491, spellID = 29552 }, --Fel Iron Chain Gloves
 			{ itemID = 23482, spellID = 29545 }, --Fel Iron Plate Gloves
-		}
-	},
-	{
-		Name = "Armor" .. color.WHITE .. " - Head",
+		},
 		{
 			{ itemID = 31371, spellID = 38479 }, --Iceguard Helm
 			{ itemID = 31368, spellID = 38476 }, --Wildguard Helm
@@ -294,10 +222,7 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 23521, spellID = 29643 }, --Ragesteel Helm
 			{ itemID = 23516, spellID = 29615 }, --Flamebane Helm
 			{ itemID = 23493, spellID = 29551 }, --Fel Iron Chain Coif
-		}
-	},
-	{
-		Name = "Armor" .. color.WHITE .. " - Legs",
+		},
 		{
 			{ itemID = 31370, spellID = 38478 }, --Iceguard Leggings
 			{ itemID = 32404, spellID = 40035 }, --Shadesteel Greaves
@@ -306,29 +231,20 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 23518, spellID = 29620 }, --Felsteel Leggings
 			{ itemID = 23523, spellID = 29629 }, --Khorium Pants
 			{ itemID = 23488, spellID = 29549 }, --Fel Iron Plate Pants
-		}
-	},
-	{
-		Name = "Armor" .. color.WHITE .. " - Shoulder",
+		},
 		{		
 			{ itemID = 32573, spellID = 41135 }, --Dawnsteel Shoulders
 			{ itemID = 33173, spellID = 42662 }, --Ragesteel Shoulders
 			{ itemID = 32570, spellID = 41133 }, --Swiftsteel Shoulders
-		}
-	},
-	{
-		Name = "Armor" .. color.WHITE .. " - Waist",
+		},
 		{
 			{ itemID = 30034, spellID = 36389 }, --Belt of the Guardian
-			{ itemID = 30032, spellID = 36390 }, --color.RED Belt of Battle
+			{ itemID = 30032, spellID = 36390 }, --Red Belt of Battle
 			{ itemID = 32401, spellID = 40036 }, --Shadesteel Girdle
 			{ itemID = 23524, spellID = 29628 }, --Khorium Belt
 			{ itemID = 23510, spellID = 29608 }, --Enchanted Adamantite Belt
 			{ itemID = 23484, spellID = 29547 }, --Fel Iron Plate Belt
-		}
-	},
-	{
-		Name = "Armor" .. color.WHITE .. " - Wrist",
+		},
 		{
 			{ itemID = 32571, spellID = 41134 }, --Dawnsteel Bracers
 			{ itemID = 32403, spellID = 40034 }, --Shadesteel Bracers
@@ -339,10 +255,7 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 23515, spellID = 29614 }, --Flamebane Bracers
 			{ itemID = 23506, spellID = 29603 }, --Adamantite Plate Bracers
 			{ itemID = 23494, spellID = 29553 }, --Fel Iron Chain Bracers
-		}
-	},
-	{
-		Name = "Weapon " .. color.WHITE .." - OneHanded",
+		},
 		{
 			{ itemID = 28432, spellID = 34542 }, --Black Planar Edge
 			{ itemID = 28427, spellID = 36258 }, --Blazefury
@@ -359,8 +272,6 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 28437, spellID = 34545 }, --Drakefist Hammer
 			{ itemID = 28425, spellID = 34535 }, --Fireguard
 			{ itemID = 28431, spellID = 34541 }, --The Planar Edge
-		},
-		{
 			{ itemID = 29204, spellID = 34983 }, --Felsteel Whisper Knives
 			{ itemID = 30089, spellID = 36136 }, --Lavaforged Warhammer
 			{ itemID = 30087, spellID = 36134 }, --Stormforged Axe
@@ -369,10 +280,7 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 23504, spellID = 29569 }, --Adamantite Dagger
 			{ itemID = 23498, spellID = 29558 }, --Fel Iron Hammer
 			{ itemID = 23497, spellID = 29557 }, --Fel Iron Hatchet
-		}
-	},
-	{
-		Name = "Weapon " .. color.WHITE .." - TwoHanded",
+		},
 		{
 			{ itemID = 28436, spellID = 36261 }, --Bloodmoon
 			{ itemID = 28441, spellID = 34548 }, --Deep Thunder
@@ -389,16 +297,11 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 28440, spellID = 34547 }, --Thunder
 			{ itemID = 30093, spellID = 36137 }, --Great Earthforged Hammer
 			{ itemID = 30088, spellID = 36135 }, --Skyforged Great Axe
-		},
-		{
 			{ itemID = 30086, spellID = 36133 }, --Stoneforged Claymore
 			{ itemID = 23503, spellID = 29568 }, --Adamantite Cleaver
 			{ itemID = 23502, spellID = 29566 }, --Adamantite Maul
 			{ itemID = 23499, spellID = 29565 }, --Fel Iron Greatsword
 		},
-	},
-	{
-		Name = "Item Enhancements",
 		{
 			{ itemID = 23530, spellID = 29657 }, --Felsteel Shield Spike
 			{ itemID = 23529, spellID = 29656 }, --Adamantite Sharpening Stone
@@ -414,19 +317,13 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 23559, spellID = 32284 }, --Lesser Rune of Warding
 			{ itemID = 23528, spellID = 29654 }, --Fel Sharpening Stone
 			{ itemID = 28420, spellID = 34607 }, --Fel Weightstone
-		}
-	},
-	{
-		Name = "Miscellaneous",
+		},
 		{
 			{ itemID = 15872, spellID = 19669 }, --Arcanite Skeleton Key
 			{ itemID = 25845, spellID = 32657 }, --Eternium Rod
 			{ itemID = 25844, spellID = 32656 }, --Adamantite Rod
 			{ itemID = 25843, spellID = 32655 }, --Fel Iron Rod
-		}
-	},
-	{
-		Name = ARMORSMITH,
+		},
 		{
 			{ itemID = 30074, spellID = 36129 }, --Heavy Earthforged Breastplate
 			{ itemID = 30076, spellID = 36130 }, --Stormforged Hauberk
@@ -436,18 +333,12 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 28485, spellID = 36257 }, --Bulwark of the Ancient Kings
 			{ itemID = 23565, spellID = 36256 }, --Embrace of the Twisting Nether
 			{ itemID = 23564, spellID = 34530 }, --Twisting Nether Chain Shirt
-		}
-	},
-	{
-		Name = WEAPONSMITH,
+		},
 		{
 			{ itemID = 30071, spellID = 36125 }, --Light Earthforged Blade
 			{ itemID = 30073, spellID = 36128 }, --Light Emberforged Hammer
 			{ itemID = 30072, spellID = 36126 }, --Light Skyforged Axe
-		}
-	},
-	{
-		Name = AXESMITH,
+		},
 		{
 			{ itemID = 30088, spellID = 36135 }, --Skyforged Great Axe
 			{ itemID = 30087, spellID = 36134 }, --Stormforged Axe
@@ -457,10 +348,7 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 28436, spellID = 36261 }, --Bloodmoon
 			{ itemID = 28435, spellID = 34544 }, --Mooncleaver
 			{ itemID = 28433, spellID = 36260 }, --Wicked Edge of the Planes
-		}
-	},
-	{
-		Name = HAMMERSMITH,
+		},
 		{
 			{ itemID = 30093, spellID = 36137 }, --Great Earthforged Hammer
 			{ itemID = 30089, spellID = 36136 }, --Lavaforged Warhammer
@@ -470,10 +358,7 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 28438, spellID = 34546 }, --Dragonmaw
 			{ itemID = 28439, spellID = 36262 }, --Dragonstrike
 			{ itemID = 28442, spellID = 36263 }, --Stormherald
-		}
-	},
-	{
-		Name = SWORDSMITH,
+		},
 		{
 			{ itemID = 30086, spellID = 36133 }, --Stoneforged Claymore
 			{ itemID = 30077, spellID = 36131 }, --Windforged Rapier
@@ -483,10 +368,7 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 28426, spellID = 34537 }, --Blazeguard
 			{ itemID = 28429, spellID = 34540 }, --Lionheart Champion
 			{ itemID = 28430, spellID = 36259 }, --Lionheart Executioner
-		}
-	},
-	{
-		Name = "High Risk",
+		},
 		{
 			{ name = "Rare", icon = "INV_Box_01"},
 			{ itemID = 1204033, spellID = 979534 }, --Hulking Belt Buckle
@@ -497,8 +379,6 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 1204043, spellID = 979544 }, --Priestly Belt Buckle
 			{ itemID = 1204045, spellID = 979546 }, --Champion\'s Belt Buckle
 			{ itemID = 1204047, spellID = 979548 }, --Guarded Belt Buckle
-		},
-		{
 			{ name = "Epic", icon = "INV_Box_01"},
 			{ itemID = 1204034, spellID = 979535 }, --Mastercraft Hulking Belt Buckle
 			{ itemID = 1204036, spellID = 979537 }, --Mastercraft Blade Master's Belt Buckle
@@ -510,18 +390,12 @@ AtlasLoot_Data["SmithingTBC"] = {
 			{ itemID = 1204048, spellID = 979549 }, --Mastercraft Guarded Belt Buckle
 		}
 	},
-}
 
----------------
---- Cooking ---
----------------
+	---------------
+	--- Cooking ---
+	---------------
 
-AtlasLoot_Data["CookingTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = COOKING,
-	Type = "BCCrafting",
-	{
-		Name = "Page 1",
+	["CookingTBC"] = {
 		{
 			{ itemID = 33052, spellID = 42302 }, --Fisherman's Feast
 			{ itemID = 33053, spellID = 42305 }, --Hot Buttered Trout
@@ -538,8 +412,6 @@ AtlasLoot_Data["CookingTBC"] = {
 			{ itemID = 27664, spellID = 33293 }, --Grilled Mudfish
 			{ itemID = 27665, spellID = 33294 }, --Poached Bluefish
 			{ itemID = 33048, spellID = 42296 }, --Stewed Trout
-		},
-		{
 			{ itemID = 27657, spellID = 33286 }, --Blackened Basilisk
 			{ itemID = 27663, spellID = 33292 }, --Blackened Sporefish
 			{ itemID = 27656, spellID = 33285 }, --Sporeling Snack
@@ -555,11 +427,6 @@ AtlasLoot_Data["CookingTBC"] = {
 			{ itemID = 100606, spellID = 966433 }, --Steamed Makrinni Claws
 			{ itemID = 100605, spellID = 966432 }, --Rubbed Ravasaur Ribss
 			{ itemID = 100604, spellID = 966431 }, --Hearty Stegodon Stews
-		}
-	},
-	{
-		Name = "Page 2",
-		{
 			{ itemID = 100603, spellID = 966430 }, --Crispy Pterrordax Wings
 			{ itemID = 100602, spellID = 966429 }, --Spicy Dino Jerkys
 			{ itemID = 100601, spellID = 966428 }, --Dirge's Nevermelt Ice Creams
@@ -570,10 +437,7 @@ AtlasLoot_Data["CookingTBC"] = {
 			{ itemID = 33874, spellID = 43772 }, --Kibler's Bits
 			{ itemID = 27655, spellID = 33284 }, --Ravager Dog
 			{ itemID = 33866, spellID = 43758 }, --Stormchops
-		}
-	},
-	{
-		Name = "High Risk",
+		},
 		{
 			{ name = "Rare", icon = "INV_Box_01"},
 			{ itemID = 1203280, spellID = 979384 }, --Infused Living Soup
@@ -590,35 +454,6 @@ AtlasLoot_Data["CookingTBC"] = {
 			{ itemID = 1203340, spellID = 979445 }, --Infused Subtle Steak
 			{ itemID = 1203342, spellID = 979447 }, --Infused Subtle Wontons
 			{ itemID = 1203344, spellID = 979449 }, --Infused Subtle Soup
-			{ itemID = 1203346, spellID = 979451 }, --Infused Bold Stew
-			{ itemID = 1203296, spellID = 979400 }, --Infused Piercing Chops
-			{ itemID = 1203298, spellID = 979402 }, --Infused Piercing Steak
-			{ itemID = 1203300, spellID = 979404 }, --Infused Seared Wontons
-			{ itemID = 1203302, spellID = 979406 }, --Infused Seared Chops
-			{ itemID = 1203316, spellID = 979421 }, --Infused Duck Stew
-			{ itemID = 1203318, spellID = 979423 }, --Infused Chunky Stew
-			{ itemID = 1203320, spellID = 979425 }, --Infused Simmered Stew
-			{ itemID = 1203322, spellID = 979427 }, --Infused Wizard Wontons
-			{ itemID = 1203324, spellID = 979429 }, --Infused Wizard Soup
-			{ itemID = 1203326, spellID = 979431 }, --Infused Heightened Wontons
-			{ itemID = 1203336, spellID = 979441 }, --Infused Vibrant Chops
-			{ itemID = 1203304, spellID = 979408 }, --Infused Savory Stew
-			{ itemID = 1203306, spellID = 979410 }, --Infused Savory Chops
-			{ itemID = 1203308, spellID = 979413 }, --Infused Savory Steak
-			{ itemID = 1203310, spellID = 979415 }, --Infused Savory Wontons
-			{ itemID = 1203312, spellID = 979417 }, --Infused color.RED-Hot Stew
-			{ itemID = 1203314, spellID = 979419 }, --Infused Blazing Stew
-			{ itemID = 1203328, spellID = 979433 }, --Infused Hearty Living Soup
-			{ itemID = 1203330, spellID = 979435 }, --Infused Hearty Air Fried Chops
-			{ itemID = 1203332, spellID = 979437 }, --Infused Hearty Charred Steak
-			{ itemID = 1203334, spellID = 979439 }, --Infused Hearty Steamed Wontons
-			{ itemID = 1203348, spellID = 979453 }, --Infused Mana Charged Roast
-			{ itemID = 1203350, spellID = 979455 }, --Infused Sizzling Roast
-			{ itemID = 1203352, spellID = 979457 }, --Infused Wild Roast
-			{ itemID = 1203354, spellID = 979459 }, --Infused Winter Roast
-			{ itemID = 1203356, spellID = 979461 }, --Infused Blackened Roast
-		},
-		{
 			{ name = "Epic", icon = "INV_Box_01"},
 			{ itemID = 1203281, spellID = 979385 }, --Charged Living Soup
 			{ itemID = 1203283, spellID = 979387 }, --Charged Charred Steak
@@ -634,6 +469,22 @@ AtlasLoot_Data["CookingTBC"] = {
 			{ itemID = 1203341, spellID = 979446 }, --Charged Subtle Steak
 			{ itemID = 1203343, spellID = 979448 }, --Charged Subtle Wontons
 			{ itemID = 1203345, spellID = 979450 }, --Charged Subtle Soup
+			{ name = "Rare", icon = "INV_Box_01"},
+			{ itemID = 1203346, spellID = 979451 }, --Infused Bold Stew
+			{ itemID = 1203296, spellID = 979400 }, --Infused Piercing Chops
+			{ itemID = 1203298, spellID = 979402 }, --Infused Piercing Steak
+			{ itemID = 1203300, spellID = 979404 }, --Infused Seared Wontons
+			{ itemID = 1203302, spellID = 979406 }, --Infused Seared Chops
+			{ itemID = 1203316, spellID = 979421 }, --Infused Duck Stew
+			{ itemID = 1203318, spellID = 979423 }, --Infused Chunky Stew
+			{ itemID = 1203320, spellID = 979425 }, --Infused Simmered Stew
+			{ itemID = 1203322, spellID = 979427 }, --Infused Wizard Wontons
+			{ itemID = 1203324, spellID = 979429 }, --Infused Wizard Soup
+			{ itemID = 1203326, spellID = 979431 }, --Infused Heightened Wontons
+			{ itemID = 1203336, spellID = 979441 }, --Infused Vibrant Chops
+			{ itemID = 1203304, spellID = 979408 }, --Infused Savory Stew
+			{ itemID = 1203306, spellID = 979410 }, --Infused Savory Chops
+			{ name = "Epic", icon = "INV_Box_01"},
 			{ itemID = 1203347, spellID = 979452 }, --Charged Bold Stew
 			{ itemID = 1203297, spellID = 979401 }, --Charged Piercing Chops
 			{ itemID = 1203299, spellID = 979403 }, --Charged Piercing Steak
@@ -648,9 +499,24 @@ AtlasLoot_Data["CookingTBC"] = {
 			{ itemID = 1203337, spellID = 979442 }, --Charged Vibrant Chops
 			{ itemID = 1203305, spellID = 979409 }, --Charged Savory Stew
 			{ itemID = 1203307, spellID = 979412 }, --Charged Savory Chops
+			{ name = "Rare", icon = "INV_Box_01"},
+			{ itemID = 1203308, spellID = 979413 }, --Infused Savory Steak
+			{ itemID = 1203310, spellID = 979415 }, --Infused Savory Wontons
+			{ itemID = 1203312, spellID = 979417 }, --Infused Red-Hot Stew
+			{ itemID = 1203314, spellID = 979419 }, --Infused Blazing Stew
+			{ itemID = 1203328, spellID = 979433 }, --Infused Hearty Living Soup
+			{ itemID = 1203330, spellID = 979435 }, --Infused Hearty Air Fried Chops
+			{ itemID = 1203332, spellID = 979437 }, --Infused Hearty Charred Steak
+			{ itemID = 1203334, spellID = 979439 }, --Infused Hearty Steamed Wontons
+			{ itemID = 1203348, spellID = 979453 }, --Infused Mana Charged Roast
+			{ itemID = 1203350, spellID = 979455 }, --Infused Sizzling Roast
+			{ itemID = 1203352, spellID = 979457 }, --Infused Wild Roast
+			{ itemID = 1203354, spellID = 979459 }, --Infused Winter Roast
+			{ itemID = 1203356, spellID = 979461 }, --Infused Blackened Roast
+			{ name = "Epic", icon = "INV_Box_01"},
 			{ itemID = 1203309, spellID = 979414 }, --Charged Savory Steak
 			{ itemID = 1203311, spellID = 979416 }, --Charged Savory Wontons
-			{ itemID = 1203313, spellID = 979418 }, --Charged color.RED-Hot Stew
+			{ itemID = 1203313, spellID = 979418 }, --Charged Red-Hot Stew
 			{ itemID = 1203315, spellID = 979420 }, --Charged Blazing Stew
 			{ itemID = 1203329, spellID = 979434 }, --Charged Hearty Living Soup
 			{ itemID = 1203331, spellID = 979436 }, --Charged Hearty Air Fried Chops
@@ -663,18 +529,12 @@ AtlasLoot_Data["CookingTBC"] = {
 			{ itemID = 1203357, spellID = 979462 }, --Charged Blackened Roast
 		}
 	},
-}
 
-------------------
---- Enchanting ---
-------------------
+	------------------
+	--- Enchanting ---
+	------------------
 
-AtlasLoot_Data["EnchantingTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = ENCHANTING,
-	Type = "BCCrafting",
-	{
-		Name = "Enchant Boots",
+	["EnchantingTBC"] = {
 		{
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27954 }, --Enchant Boots - Surefooted
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 34008 }, --Enchant Boots - Boar's Speed
@@ -682,10 +542,7 @@ AtlasLoot_Data["EnchantingTBC"] = {
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27951 }, --Enchant Boots - Dexterity
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27950 }, --Enchant Boots - Fortitude
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27948 }, --Enchant Boots - Vitality
-		}
-	},
-	{
-		Name = "Enchant Bracer",
+		},
 		{
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27917 }, --Enchant Bracers - Spellpower
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27914 }, --Enchant Bracers - Fortitude
@@ -697,9 +554,6 @@ AtlasLoot_Data["EnchantingTBC"] = {
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 34001 }, --Enchant Bracers - Major Intellect
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 34002 }, --Enchant Bracers - Assault
 		},
-	},
-	{
-		Name = "Enchant Chest",
 		{
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 46594 }, --Enchant Chest - Defense
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27960 }, --Enchant Chest - Exceptional Stats
@@ -708,9 +562,6 @@ AtlasLoot_Data["EnchantingTBC"] = {
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27957 }, --Enchant Chest - Exceptional Health
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 33991 }, --Enchant Chest - Restore Mana Prime
 		},
-	},
-	{
-		Name = "Enchant Cloak",
 		{
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 47051 }, --Enchant Cloak - Steelweave
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 351501 }, --Enchant Cloak - Crushing Wave
@@ -726,9 +577,6 @@ AtlasLoot_Data["EnchantingTBC"] = {
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 25084 }, --Enchant Cloak - Subtlety
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 25086 }, --Enchant Cloak - Dodge
 		},
-	},
-	{
-		Name = "Enchant Gloves",
 		{
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 33997 }, --Enchant Gloves - Major Spellpower
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 33994 }, --Enchant Gloves - Spell Strike
@@ -739,18 +587,12 @@ AtlasLoot_Data["EnchantingTBC"] = {
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 225080 }, --Enchant Gloves - Superior Agility
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 25072 }, --Enchant Gloves - Threat
 		},
-	},
-	{
-		Name = "Enchant Ring",
 		{
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27927 }, --Enchant Ring - Stats
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27926 }, --Enchant Ring - Healing Power
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27924 }, --Enchant Ring - Spellpower
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27920 }, --Enchant Ring - Striking
 		},
-	},
-	{
-		Name = "Enchant Shield",
 		{
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27947 }, --Enchant Shield - Resistance
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27946 }, --Enchant Shield - Shield Block
@@ -759,16 +601,10 @@ AtlasLoot_Data["EnchantingTBC"] = {
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 34009 }, --Enchant Shield - Major Stamina
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27944 }, --Enchant Shield - Tough Shield
 		},
-	},
-	{
-		Name = "Enchant 2H Weapon",
 		{
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27977 }, --Enchant 2H Weapon - Major Agility
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27971 }, --Enchant 2H Weapon - Savagery
 		},
-	},
-	{
-		Name = "Enchant Weapon",
 		{
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 351535 }, --Enchant Weapon - Witchdoctor
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 42974 }, --Enchant Weapon - Executioner
@@ -777,8 +613,6 @@ AtlasLoot_Data["EnchantingTBC"] = {
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27984 }, --Enchant Weapon - Mongoose
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27982 }, --Enchant Weapon - Soulfrost
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27981 }, --Enchant Weapon - Sunfire
-		},
-		{
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 28004 }, --Enchant Weapon - Battlemaster
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 28003 }, --Enchant Weapon - Spellsurge
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 46578 }, --Enchant Weapon - Deathfrost
@@ -789,9 +623,6 @@ AtlasLoot_Data["EnchantingTBC"] = {
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27968 }, --Enchant Weapon - Major Intellect
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 27967 }, --Enchant Weapon - Major Striking
 		},
-	},
-	{
-		Name = "Miscellaneous",
 		{
 			{ itemID = 22463, spellID = 32667 }, --Runed Eternium Rod
 			{ itemID = 22449, spellID = 45765 }, --Void Shatter
@@ -804,9 +635,6 @@ AtlasLoot_Data["EnchantingTBC"] = {
 			{ itemID = 22522, spellID = 28019 }, --Superior Wizard Oil
 			{ itemID = 22521, spellID = 28016 }, --Superior Mana Oil
 		},
-	},
-	{
-		Name = "High Risk",
 		{
 			{ name = "Rare", icon = "INV_Box_01"},
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968677 }, --Enchant Weapon - Void Assault
@@ -819,8 +647,6 @@ AtlasLoot_Data["EnchantingTBC"] = {
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968698 }, --Enchant Weapon - Void Blasting
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968701 }, --Enchant Weapon - Dread Precision
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968770 }, --Enchant Weapon - Twisted Crusader
-		},
-		{
 			{ name = "Epic", icon = "INV_Box_01"},
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968678 }, --Enchant Weapon - Overpowering Void Assault
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968681 }, --Enchant Weapon - Overpowering Dread Assault
@@ -834,27 +660,18 @@ AtlasLoot_Data["EnchantingTBC"] = {
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968771 }, --Enchant Weapon - Overpowering Twisted Crusader
 		},
 	},
-}
 
 
--------------------
---- Engineering ---
--------------------
+	-------------------
+	--- Engineering ---
+	-------------------
 
-AtlasLoot_Data["EngineeringTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = ENGINEERING,
-	Type = "BCCrafting",
-	{
-		Name = "Ammunition",
+	["EngineeringTBC"] = {
 		{
 			{ itemID = 20475, spellID = 43676 }, --Adamantite Arrow Maker
 			{ itemID = 34504, spellID = 30347 }, --Adamantite Shell Machine
 			{ itemID = 23772, spellID = 30346 }, --Fel Iron Shells
 		},
-	},
-	{
-		Name = "Armor",
 		{
 			{ itemID = 34847, spellID = 46111 }, --Annihilator Holo-Gogs
 			{ itemID = 23838, spellID = 30565 }, --Foreman's Enchanted Helmet
@@ -868,8 +685,6 @@ AtlasLoot_Data["EngineeringTBC"] = {
 			{ itemID = 34354, spellID = 46114 }, --Mayhem Projection Goggles
 			{ itemID = 35181, spellID = 46108 }, --Powerheal 9000 Lens
 			{ itemID = 35184, spellID = 46110 }, --Primal-Attuned Goggles
-		},
-		{
 			{ itemID = 34353, spellID = 46116 }, --Quad Deathblow X44 Goggles
 			{ itemID = 34356, spellID = 46113 }, --Surestrike Goggles v3.0
 			{ itemID = 35183, spellID = 46106 }, --Wonderheal XT68 Shades
@@ -883,9 +698,6 @@ AtlasLoot_Data["EngineeringTBC"] = {
 			{ itemID = 32480, spellID = 41319 }, --Magnified Moon Specs
 			{ itemID = 32473, spellID = 41312 }, --Tankatronic Goggles
 		},
-	},
-	{
-		Name = "Armor",
 		{
 			{ itemID = 23763, spellID = 30325 }, --Hyper-Vision Goggles
 			{ itemID = 23824, spellID = 30556 }, --Rocket Boots Xtreme
@@ -897,9 +709,6 @@ AtlasLoot_Data["EngineeringTBC"] = {
 			{ itemID = 23835, spellID = 30569 }, --Gnomish Poultryizer
 			{ itemID = 23761, spellID = 30317 }, --Power Amplification Goggles
 		},
-	},
-	{
-		Name = "Explosives",
 		{
 			{ itemID = 23819, spellID = 30547 }, --Elemental Seaforium Charge
 			{ itemID = 23827, spellID = 30560 }, --Super Sapper Charge
@@ -907,18 +716,12 @@ AtlasLoot_Data["EngineeringTBC"] = {
 			{ itemID = 23826, spellID = 30558 }, --The Bigger One
 			{ itemID = 23736, spellID = 30310 }, --Fel Iron Bomb
 		},
-	},
-	{
-		Name = "Item Enhancements",
 		{
 			{ itemID = 23766, spellID = 30334 }, --Stabilized Eternium Scope
 			{ itemID = 23765, spellID = 30332 }, --Khorium Scope
 			{ itemID = 23764, spellID = 30329 }, --Adamantite Scope
 			{ itemID = 18283, spellID = 22793 }, --Biznicks 247x128 Accurascope
 		},
-	},
-	{
-		Name = "Miscellaneous",
 		{
 			{ itemID = 34061, spellID = 44157 }, --Turbo-Charged Flying Machine
 			{ itemID = 34060, spellID = 44155 }, --Flying Machine
@@ -933,9 +736,6 @@ AtlasLoot_Data["EngineeringTBC"] = {
 			{ itemID = 23841, spellID = 30568 }, --Gnomish Flame Turret
 			{ itemID = 23821, spellID = 30548 }, --Zapthrottle Mote Extractor
 		},
-	},
-	{
-		Name = "Reagents",
 		{
 			{ itemID = 23787, spellID = 30309 }, --Felsteel Stabilizer
 			{ itemID = 23785, spellID = 30307 }, --Hardened Adamantite Tube
@@ -946,9 +746,6 @@ AtlasLoot_Data["EngineeringTBC"] = {
 			{ itemID = 23781, spellID = 30303 }, --Elemental Blasting Powder
 			{ itemID = 23782, spellID = 30304 }, --Fel Iron Casing
 		},
-	},
-	{
-		Name = "Weapon",
 		{
 			{ itemID = 32756, spellID = 41307 }, --Gyro-balanced Khorium Destroyer
 			{ itemID = 23748, spellID = 30315 }, --Ornate Khorium Rifle
@@ -956,24 +753,15 @@ AtlasLoot_Data["EngineeringTBC"] = {
 			{ itemID = 23746, spellID = 30313 }, --Adamantite Rifle
 			{ itemID = 23742, spellID = 30312 }, --Fel Iron Musket
 		},
-	},
-	{
-		Name = GNOMISH,
 		{
 			{ itemID = 23825, spellID = 30570 }, --Nigh-Invulnerability Belt
 			{ itemID = 23835, spellID = 30569 }, --Gnomish Poultryizer
 			{ itemID = 30544, spellID = 36955 }, --Ultrasafe Transporter - Toshley's Station
 		},
-	},
-	{
-		Name = GOBLIN,
 		{
 			{ itemID = 23836, spellID = 30563 }, --Goblin Rocket Launcher
 			{ itemID = 30542, spellID = 36954 }, --Dimensional Ripper - Area 52
 		},
-	},
-	{
-		Name = "High Risk",
 		{
 			{ name = "Rare", icon = "INV_Box_01"},
 			{ itemID = 1204101, spellID = 979550 }, --Gnomish Magnification Polish
@@ -982,8 +770,6 @@ AtlasLoot_Data["EngineeringTBC"] = {
 			{ itemID = 1204107, spellID = 979556 }, --Felfire Scope
 			{ itemID = 1204109, spellID = 979558 }, --Sighted Scope
 			{ itemID = 1204111, spellID = 979560 }, --Quickshot Scope
-		},
-		{
 			{ name = "Epic", icon = "INV_Box_01"},
 			{ itemID = 1204102, spellID = 979551 }, --Fine Gnomish Magnification Polish
 			{ itemID = 1204104, spellID = 979553 }, --Fine Gnomish Sharpening Polish
@@ -993,18 +779,12 @@ AtlasLoot_Data["EngineeringTBC"] = {
 			{ itemID = 1204112, spellID = 979561 }, --Focused Quickshot Scope
 		},
 	},
-}
 
------------------
---- First Aid ---
------------------
+	-----------------
+	--- First Aid ---
+	-----------------
 
-AtlasLoot_Data["FirstAid"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = FIRSTAID,
-	Type = "BCCrafting",
-	{
-		Name = FIRSTAID,
+	["FirstAid"] = {
 		{
 			{ itemID = 34722, spellID = 45546 }, --Heavy Frostweave Bandage
 			{ itemID = 34721, spellID = 45545 }, --Frostweave Bandage
@@ -1025,18 +805,12 @@ AtlasLoot_Data["FirstAid"] = {
 			{ itemID = 1251, spellID = 3275 }, --Linen Bandage
 		},
 	},
-}
 
----------------------
---- Jewelcrafting ---
----------------------
+	---------------------
+	--- Jewelcrafting ---
+	---------------------
 
-AtlasLoot_Data["JewelcraftingTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = JEWELCRAFTING,
-	Type = "BCCrafting",
-	{
-		Name = "Red Gems",
+	["JewelcraftingTBC"] = {
 		{
 			{ itemID = 32193, spellID = 39705 }, --Bold Crimson Spinel
 			{ itemID = 32197, spellID = 39712 }, --Bright Crimson Spinel
@@ -1048,8 +822,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 33131, spellID = 42589 }, --Crimson Sun
 			{ itemID = 33133, spellID = 42558 }, --Don Julio's Heart
 			{ itemID = 33134, spellID = 42588 }, --Kailee's Rose
-		},
-		{
 			{ itemID = 24027, spellID = 31084 }, --Bold Living Ruby
 			{ itemID = 24031, spellID = 31089 }, --Bright Living Ruby
 			{ itemID = 24028, spellID = 31085 }, --Delicate Living Ruby
@@ -1063,9 +835,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 28595, spellID = 34590 }, --Bright Blood Garnet
 			{ itemID = 23094, spellID = 28903 }, --Teardrop Blood Garnet
 		},
-	},
-	{
-		Name = "Blue Gems",
 		{
 			{ itemID = 32202, spellID = 39717 }, --Lustrous Empyrean Sapphire
 			{ itemID = 32200, spellID = 39715 }, --Solid Empyrean Sapphire
@@ -1081,9 +850,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 23119, spellID = 28953 }, --Sparkling Azure Moonstone
 			{ itemID = 23118, spellID = 28950 }, --Solid Azure Moonstone
 		},
-	},
-	{
-		Name = "Yellow Gems",
 		{
 			{ itemID = 32204, spellID = 39719 }, --Brilliant Lionseye
 			{ itemID = 32207, spellID = 39722 }, --Gleaming Lionseye
@@ -1096,8 +862,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 33140, spellID = 42592 }, --Blood of Amber
 			{ itemID = 33144, spellID = 42593 }, --Facet of Eternity
 			{ itemID = 33143, spellID = 42591 }, --Stone of Blades
-		},
-		{
 			{ itemID = 24047, spellID = 31096 }, --Brilliant Dawnstone
 			{ itemID = 24050, spellID = 31099 }, --Gleaming Dawnstone
 			{ itemID = 31861, spellID = 39452 }, --Great Dawnstone
@@ -1113,9 +877,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 23114, spellID = 28944 }, --Gleaming Golden Draenite
 			{ itemID = 23113, spellID = 28938 }, --Brilliant Golden Draenite
 		},
-	},
-	{
-		Name = "Green Gems",
 		{
 			{ itemID = 32225, spellID = 39741 }, --Dazzling Seaspray Emerald
 			{ itemID = 32223, spellID = 39739 }, --Enduring Seaspray Emerald
@@ -1123,8 +884,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 32226, spellID = 39742 }, --Jagged Seaspray Emerald
 			{ itemID = 32224, spellID = 39740 }, --Radiant Seaspray Emerald
 			{ itemID = 35758, spellID = 47054 }, --Steady Seaspray Emerald
-		},
-		{
 			{ itemID = 24065, spellID = 31112 }, --Dazzling Talasite
 			{ itemID = 24062, spellID = 31110 }, --Enduring Talasite
 			{ itemID = 35318, spellID = 46405 }, --Forceful Talasite
@@ -1136,9 +895,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 23104, spellID = 28917 }, --Jagged Deep Peridot
 			{ itemID = 23103, spellID = 28916 }, --Radiant Deep Peridot
 		},
-	},
-	{
-		Name = "Orange Gems",
 		{
 			{ itemID = 32220, spellID = 39736 }, --Glinting Pyrestone
 			{ itemID = 32217, spellID = 39733 }, --Inscribed Pyrestone
@@ -1147,8 +903,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 35760, spellID = 47055 }, --Reckless Pyrestone
 			{ itemID = 32221, spellID = 39737 }, --Veiled Pyrestone
 			{ itemID = 32222, spellID = 39738 }, --Wicked Pyrestone
-		},
-		{
 			{ itemID = 24061, spellID = 31109 }, --Glinting Noble Topaz
 			{ itemID = 24058, spellID = 31106 }, --Inscribed Noble Topaz
 			{ itemID = 24060, spellID = 31108 }, --Luminous Noble Topaz
@@ -1163,9 +917,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 23098, spellID = 28910 }, --Inscribed Flame Spessarite
 			{ itemID = 23101, spellID = 28915 }, --Potent Flame Spessarite
 		},
-	},
-	{
-		Name = "Purple Gems",
 		{
 			{ itemID = 32213, spellID = 39729 }, --Balanced Shadowsong Amethyst
 			{ itemID = 32215, spellID = 39731 }, --Glowing Shadowsong Amethyst
@@ -1178,8 +929,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 24056, spellID = 31104 }, --Glowing Nightseye
 			{ itemID = 31865, spellID = 39462 }, --Infused Nightseye
 			{ itemID = 35707, spellID = 46803 }, --Regal Nightseye
-		},
-		{
 			{ itemID = 24057, spellID = 31105 }, --Royal Nightseye
 			{ itemID = 24055, spellID = 31103 }, --Shifting Nightseye
 			{ itemID = 24054, spellID = 31102 }, --Sovereign Nightseye
@@ -1191,9 +940,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 23109, spellID = 28927 }, --Royal Shadow Draenite
 			{ itemID = 23108, spellID = 28925 }, --Glowing Shadow Draenite
 		},
-	},
-	{
-		Name = "Meta Gems",
 		{
 			{ itemID = 35503, spellID = 46601 }, --Ember Skyfire Diamond
 			{ itemID = 34220, spellID = 44794 }, --Chaotic Skyfire Diamond
@@ -1210,17 +956,11 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 32409, spellID = 39961 }, --Relentless Earthstorm Diamond
 			{ itemID = 25898, spellID = 32868 }, --Tenacious Earthstorm Diamond
 		},
-	},
-	{
-		Name = "Prismatic Gems",
 		{
 			{ itemID = 22459, spellID = 28028 }, --Void Sphere
 			{ itemID = 22460, spellID = 28027 }, --Prismatic Sphere
 			{ itemID = 42701, spellID = 62941 }, --Prismatic Black Diamond
 		},
-	},
-	{
-		Name = "Trinkets",
 		{
 			{ itemID = 35700, spellID = 46777 }, --Figurine - Crimson Serpent
 			{ itemID = 35693, spellID = 46775 }, --Figurine - Empyrean Tortoise
@@ -1232,8 +972,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 24126, spellID = 31081 }, --Figurine - Living Ruby Serpent
 			{ itemID = 24128, spellID = 31083 }, --Figurine - Nightseye Panther
 			{ itemID = 24127, spellID = 31082 }, --Figurine - Talasite Owl
-		},
-		{
 			{ itemID = 21784, spellID = 26912 }, --Figurine - Black Diamond Crab
 			{ itemID = 21789, spellID = 26914 }, --Figurine - Dark Iron Scorpid
 			{ itemID = 21777, spellID = 26909 }, --Figurine - Emerald Owl
@@ -1244,9 +982,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 21748, spellID = 26872 }, --Figurine - Jade Owl
 			{ itemID = 21758, spellID = 26875 }, --Figurine - Black Pearl Panther
 		},
-	},
-	{
-		Name = "Rings"..color.WHITE.." - Page 1",
 		{
 			{ itemID = 24086, spellID = 31057 }, --Arcane Khorium Band
 			{ itemID = 24089, spellID = 31061 }, --Blazing Eternium Band
@@ -1257,8 +992,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 24082, spellID = 31055 }, --Khorium Inferno Band
 			{ itemID = 24079, spellID = 31053 }, --Khorium Band of Shadows
 			{ itemID = 24087, spellID = 31058 }, --Heavy Felsteel Ring
-		},
-		{
 			{ itemID = 24078, spellID = 31052 }, --Heavy Adamantite Ring
 			{ itemID = 32774, spellID = 41415 }, --The Black Pearl
 			{ itemID = 32772, spellID = 41414 }, --Brilliant Pearl Band
@@ -1270,18 +1003,13 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 21778, spellID = 26910 }, --Ring of Bitter Shadows
 			{ itemID = 29159, spellID = 34960 }, --Glowing Thorium Band
 			{ itemID = 21775, spellID = 26907 }, --Onslaught Ring
-		},
-	},
-	{
-		Name = "Rings"..color.WHITE.." - Page 2",
-		{
 			{ itemID = 21768, spellID = 26903 }, --Sapphire Signet
 			{ itemID = 30422, spellID = 36526 }, --Diamond Focus Ring
 			{ itemID = 21767, spellID = 26902 }, --Simple Opal Ring
 			{ itemID = 21753, spellID = 26896 }, --Gem Studded Band
 			{ itemID = 21754, spellID = 26887 }, --The Aquamarine Ward
 			{ itemID = 21765, spellID = 26885 }, --Truesilver Healing Ring
-			{ itemID = 30421, spellID = 36525 }, --color.RED Ring of Destruction
+			{ itemID = 30421, spellID = 36525 }, --Red Ring of Destruction
 			{ itemID = 20964, spellID = 26874 }, --Aquamarine Signet
 			{ itemID = 29158, spellID = 34959 }, --Truesilver Commander's Ring
 			{ itemID = 29157, spellID = 34955 }, --Golden Ring of Power
@@ -1290,8 +1018,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 20959, spellID = 25619 }, --The Jade Eye
 			{ itemID = 20958, spellID = 25617 }, --Blazing Citrine Ring
 			{ itemID = 20955, spellID = 25613 }, --Golden Dragon Ring
-		},
-		{
 			{ itemID = 20833, spellID = 25323 }, --Wicked Moonstone Ring
 			{ itemID = 30420, spellID = 36524 }, --Heavy Jade Ring
 			{ itemID = 20828, spellID = 25318 }, --Ring of Twilight Shadows
@@ -1308,9 +1034,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 20906, spellID = 25493 }, --Braided Copper Ring
 			{ itemID = 21931, spellID = 26925 }, --Woven Copper Ring
 		},
-	},
-	{
-		Name = "Necks"..color.WHITE.." - Page 1",
 		{
 			{ itemID = 24117, spellID = 31072 }, --Embrace of the Dawn
 			{ itemID = 24114, spellID = 31070 }, --Braided Eternium Chain
@@ -1325,11 +1048,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 32508, spellID = 40514 }, --Necklace of the Deep
 			{ itemID = 24077, spellID = 31051 }, --Thick Adamantite Necklace
 			{ itemID = 21792, spellID = 26915 }, --Necklace of the Diamond Tower
-		},
-	},
-	{
-		Name = "Necks"..color.WHITE.." - Page 2",
-		{
 			{ itemID = 21791, spellID = 26911 }, --Living Emerald Pendant
 			{ itemID = 21790, spellID = 26908 }, --Sapphire Pendant of Winter Night
 			{ itemID = 21766, spellID = 26897 }, --Opal Necklace of Impact
@@ -1339,8 +1057,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 20967, spellID = 25622 }, --Citrine Pendant of Golden Healing
 			{ itemID = 20966, spellID = 25618 }, --Jade Pendant of Blasting
 			{ itemID = 20831, spellID = 25320 }, --Heavy Golden Necklace of Battle
-		},
-		{
 			{ itemID = 20950, spellID = 25610 }, --Pendant of the Agate Shield
 			{ itemID = 20830, spellID = 25339 }, --Amulet of the Moon
 			{ itemID = 20909, spellID = 25498 }, --Barbaric Iron Collar
@@ -1350,9 +1066,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 21934, spellID = 26928 }, --Ornate Tigerseye Necklace
 			{ itemID = 25438, spellID = 32178 }, --Malachite Pendant
 		},
-	},
-	{
-		Name = "Miscellaneous",
 		{
 			{ itemID = 24123, spellID = 31078 }, --Circlet of Arcane Might
 			{ itemID = 24122, spellID = 31077 }, --Coronet of the Verdant Flame
@@ -1361,8 +1074,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 31079, spellID = 38068 }, --Mercurial Adamantite
 			{ itemID = 21774, spellID = 26906 }, --Emerald Crown of Destruction
 			{ itemID = 20969, spellID = 26878 }, --Ruby Crown of Restoration
-		},
-		{
 			{ itemID = 21752, spellID = 26880 }, --Thorium Setting
 			{ itemID = 25883, spellID = 32809 }, --Dense Stone Statue
 			{ itemID = 25882, spellID = 32808 }, --Solid Stone Statue
@@ -1375,9 +1086,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 20816, spellID = 25255 }, --Delicate Copper Wire
 			{ itemID = 25498, spellID = 32259 }, --Rough Stone Statue
 		},
-	},
-	{
-		Name = "High Risk",
 		{
 			{ name = "Rare", icon = "INV_Box_01"},
 			{ itemID = 1204165, spellID = 979639 }, --Deep Gold Twisted Pendant
@@ -1389,8 +1097,6 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 1204177, spellID = 979651 }, --Living Night Void Pendant
 			{ itemID = 1204179, spellID = 979653 }, --Dawnstar Void Pendant
 			{ itemID = 1204181, spellID = 979655 }, --Noble Talasite Void Pendant
-		},
-		{
 			{ name = "Epic", icon = "INV_Box_01"},
 			{ itemID = 1204166, spellID = 979640 }, --Engraved Deep Gold Twisted Pendant
 			{ itemID = 1204168, spellID = 979642 }, --Engraved Bloodshadow Twisted Pendant
@@ -1403,23 +1109,14 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 			{ itemID = 1204182, spellID = 979656 }, --Engraved Noble Talasite Void Pendant
 		},
 	},
-}
 
-----------------------
---- Leatherworking ---
-----------------------
-AtlasLoot_Data["LeatherworkingTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = LEATHERWORKING,
-	Type = "BCCrafting",
-	{
-		Name = "Leather Armor" .. color.WHITE .. " - Back",
+	----------------------
+	--- Leatherworking ---
+	----------------------
+	["LeatherworkingTBC"] = {
 		{
 			{ itemID = 33122, spellID = 42546 }, --Cloak of Darkness
 		},
-	},
-	{
-		Name = "Leather Armor" .. color.WHITE .. " - Chest",
 		{
 			{ itemID = 29525, spellID = 35589 }, --Primalstrike Vest
 			{ itemID = 29522, spellID = 35585 }, --Windhawk Hauberk
@@ -1432,9 +1129,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 25671, spellID = 32473 }, --Thick Draenic Vest
 			{ itemID = 25676, spellID = 32481 }, --Wild Draenish Vest
 		},
-	},
-	{
-		Name = "Leather Armor" .. color.WHITE .. " - Feet",
 		{
 			{ itemID = 30041, spellID = 36355 }, --Boots of Natural Grace
 			{ itemID = 30039, spellID = 36357 }, --Boots of Utter Darkness
@@ -1447,9 +1141,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 25668, spellID = 32472 }, --Thick Draenic Boots
 			{ itemID = 25673, spellID = 32478 }, --Wild Draenish Boots
 		},
-	},
-	{
-		Name = "Leather Armor" .. color.WHITE .. " - Hands",
 		{
 			{ itemID = 29503, spellID = 35559 }, --Cobrascale Gloves
 			{ itemID = 34370, spellID = 46134 }, --Gloves of Immortal Dusk
@@ -1461,9 +1152,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 25674, spellID = 32479 }, --Wild Draenish Gloves
 			{ itemID = 25669, spellID = 32470 }, --Thick Draenic Gloves
 		},
-	},
-	{
-		Name = "Leather Armor" .. color.WHITE .. " - Head",
 		{
 			{ itemID = 29502, spellID = 35558 }, --Cobrascale Hood
 			{ itemID = 29505, spellID = 35561 }, --Hood of Primal Life
@@ -1471,9 +1159,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 25682, spellID = 32489 }, --Stylin' Jungle Hat
 			{ itemID = 25680, spellID = 32485 }, --Stylin' Purple Hat
 		},
-	},
-	{
-		Name = "Leather Armor" .. color.WHITE .. " - Legs",
 		{
 			{ itemID = 32396, spellID = 40005 }, --Redeemed Soul Legguards
 			{ itemID = 25690, spellID = 32496 }, --Heavy Clefthoof Leggings
@@ -1483,16 +1168,10 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 25675, spellID = 32480 }, --Wild Draenish Leggings
 			{ itemID = 25670, spellID = 32471 }, --Thick Draenic Pants
 		},
-	},
-	{
-		Name = "Leather Armor" .. color.WHITE .. " - Shoulder",
 		{
 			{ itemID = 32583, spellID = 41157 }, --Shoulderpads of Renewed Life
 			{ itemID = 32581, spellID = 41160 }, --Swiftstrike Shoulders
 		},
-	},
-	{
-		Name = "Leather Armor" .. color.WHITE .. " - Waist",
 		{
 			{ itemID = 30040, spellID = 36351 }, --Belt of Deep Shadow
 			{ itemID = 30042, spellID = 36349 }, --Belt of Natural Power
@@ -1500,9 +1179,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 32393, spellID = 40006 }, --Redeemed Soul Cinch
 			{ itemID = 29524, spellID = 35587 }, --Windhawk Belt
 		},
-	},
-	{
-		Name = "Leather Armor" .. color.WHITE .. " - Wrist",
 		{
 			{ itemID = 32582, spellID = 41156 }, --Bracers of Renewed Life
 			{ itemID = 29527, spellID = 35591 }, --Primalstrike Bracers
@@ -1510,9 +1186,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 32580, spellID = 41158 }, --Swiftstrike Bracers
 			{ itemID = 29523, spellID = 35588 }, --Windhawk Bracers
 		},
-	},
-	{
-		Name = "Mail Armor" .. color.WHITE .. " - Chest",
 		{
 			{ itemID = 29519, spellID = 35580 }, --Netherstrike Breastplate
 			{ itemID = 29515, spellID = 35575 }, --Ebon Netherscale Breastplate
@@ -1524,9 +1197,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 25657, spellID = 32465 }, --Felscale Breastplate
 			{ itemID = 25660, spellID = 32468 }, --Scaled Draenic Vest
 		},
-	},
-	{
-		Name = "Mail Armor" .. color.WHITE .. " - Feet",
 		{
 			{ itemID = 30043, spellID = 36359 }, --Hurricane Boots
 			{ itemID = 32398, spellID = 39997 }, --Boots of Shackled Souls
@@ -1538,9 +1208,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 25659, spellID = 32469 }, --Scaled Draenic Boots
 			{ itemID = 25655, spellID = 32463 }, --Felscale Boots
 		},
-	},
-	{
-		Name = "Mail Armor" .. color.WHITE .. " - Hands",
 		{
 			{ itemID = 34376, spellID = 46135 }, --Sun-Drenched Scale Gloves
 			{ itemID = 34374, spellID = 46133 }, --Fletcher's Gloves of the Phoenix
@@ -1549,9 +1216,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 25661, spellID = 32467 }, --Scaled Draenic Gloves
 			{ itemID = 25654, spellID = 32462 }, --Felscale Gloves
 		},
-	},
-	{
-		Name = "Mail Armor" .. color.WHITE .. " - Head",
 		{
 			{ itemID = 29508, spellID = 35564 }, --Living Dragonscale Helm
 			{ itemID = 29510, spellID = 35572 }, --Netherdrake Helm
@@ -1559,9 +1223,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 25683, spellID = 32488 }, --Stylin' Crimson Hat
 			{ itemID = 29490, spellID = 35526 }, --Enchanted Felscale Gloves
 		},
-	},
-	{
-		Name = "Mail Armor" .. color.WHITE .. " - Legs",
 		{
 			{ itemID = 32400, spellID = 40001 }, --Greaves of Shackled Souls
 			{ itemID = 29492, spellID = 35529 }, --Flamescale Leggings
@@ -1570,16 +1231,10 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 25656, spellID = 32464 }, --Felscale Pants
 			{ itemID = 25662, spellID = 32466 }, --Scaled Draenic Pants
 		},
-	},
-	{
-		Name = "Mail Armor" .. color.WHITE .. " - Shoulder",
 		{
 			{ itemID = 32575, spellID = 41162 }, --Shoulders of Lightning Reflexes
 			{ itemID = 32579, spellID = 41164 }, --Living Earth Shoulders
 		},
-	},
-	{
-		Name = "Mail Armor" .. color.WHITE .. " - Waist",
 		{
 			{ itemID = 32397, spellID = 40002 }, --Waistguard of Shackled Souls
 			{ itemID = 29520, spellID = 35582 }, --Netherstrike Belt
@@ -1591,9 +1246,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 29500, spellID = 35537 }, --Blastguard Belt
 			{ itemID = 25694, spellID = 32501 }, --Netherfury Belt
 		},
-	},
-	{
-		Name = "Mail Armor" .. color.WHITE .. " - Wrist",
 		{
 			{ itemID = 29521, spellID = 35584 }, --Netherstrike Bracers
 			{ itemID = 32399, spellID = 52733 }, --Bracers of Shackled Souls
@@ -1602,9 +1254,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 32574, spellID = 41161 }, --Bindings of Lightning Reflexes
 			{ itemID = 25697, spellID = 32499 }, --Felstalker Bracer
 		},
-	},
-	{
-		Name = "Item Enhancements",
 		{
 			{ itemID = 29536, spellID = 35557 }, --Nethercleft Leg Armor
 			{ itemID = 29535, spellID = 35554 }, --Nethercobra Leg Armor
@@ -1613,8 +1262,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 18251, spellID = 22727 }, --Core Armor Kit
 			{ itemID = 38376, spellID = 50963 }, --Heavy Borean Armor Kit
 			{ itemID = 34207, spellID = 44770 }, --Glove Reinforcements
-		},
-		{
 			{ itemID = 29488, spellID = 35524 }, --Arcane Armor Kit
 			{ itemID = 29485, spellID = 35521 }, --Flame Armor Kit
 			{ itemID = 29486, spellID = 35522 }, --Frost Armor Kit
@@ -1627,18 +1274,12 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 25650, spellID = 32456 }, --Knothide Armor Kit
 			{ itemID = 25679, spellID = 32482 }, --Comfortable Insoles
 		},
-	},
-	{
-		Name = "Quivers and Ammo Pouches",
 		{
 			{ itemID = 34106, spellID = 44768 }, --Netherscale Ammo Pouch
 			{ itemID = 34105, spellID = 44359 }, --Quiver of a Thousand Feathers
 			{ itemID = 34099, spellID = 44343 }, --Knothide Ammo Pouch
 			{ itemID = 34100, spellID = 44344 }, --Knothide Quiver
 		},
-	},
-	{
-		Name = "Drums, Bags and Misc.",
 		{
 			{ itemID = 29529, spellID = 35543 }, --Drums of Battle
 			{ itemID = 34490, spellID = 45117 }, --Bag of Many Hides
@@ -1650,16 +1291,10 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 29540, spellID = 35530 }, --Reinforced Mining Bag
 			{ itemID = 34482, spellID = 45100 }, --Leatherworker's Satchel
 		},
-	},
-	{
-		Name = "Leather",
 		{
 			{ itemID = 23793, spellID = 32455 }, --Heavy Knothide Leather
 			{ itemID = 21887, spellID = 32454 }, --Knothide Leather
 		},
-	},
-	{
-		Name = DRAGONSCALE,
 		{
 			{ itemID = 29516, spellID = 35576 }, --Ebon Netherscale Belt
 			{ itemID = 29517, spellID = 35577 }, --Ebon Netherscale Bracers
@@ -1669,27 +1304,18 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 29519, spellID = 35580 }, --Netherstrike Breastplate
 			{ itemID = 29975, spellID = 36079 }, --Golden Dragonstrike Breastplate
 		},
-	},
-	{
-		Name = ELEMENTAL,
 		{
 			{ itemID = 29526, spellID = 35590 }, --Primalstrike Belt
 			{ itemID = 29527, spellID = 35591 }, --Primalstrike Bracers
 			{ itemID = 29525, spellID = 35589 }, --Primalstrike Vest
 			{ itemID = 29973, spellID = 36077 }, --Primalstorm Breastplate
 		},
-	},
-	{
-		Name = TRIBAL,
 		{
 			{ itemID = 29524, spellID = 35587 }, --Windhawk Belt
 			{ itemID = 29523, spellID = 35588 }, --Windhawk Bracers
 			{ itemID = 29522, spellID = 35585 }, --Windhawk Hauberk
 			{ itemID = 29974, spellID = 36078 }, --Living Crystal Breastplate
 		},
-	},
-	{
-		Name = "High Risk",
 		{
 			{ name = "Rare", icon = "INV_Box_01"},
 			{ itemID = 1204021, spellID = 979522 }, --Cobra Strike Gambeson
@@ -1698,8 +1324,6 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 1204027, spellID = 979528 }, --True Strike Gambeson
 			{ itemID = 1204029, spellID = 979530 }, --Clefthoof Gambeson
 			{ itemID = 1204031, spellID = 979532 }, --Subtle Gambeson
-		},
-		{
 			{ name = "Epic", icon = "INV_Box_01"},
 			{ itemID = 1204022, spellID = 979523 }, --Mastercraft Cobra Strike Gambeson
 			{ itemID = 1204024, spellID = 979525 }, --Mastercraft Fel Strike Gambeson
@@ -1709,14 +1333,7 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 			{ itemID = 1204032, spellID = 979533 }, --Mastercraft Subtle Gambeson
 		},
 	},
-}
-
-AtlasLoot_Data["MiningTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = MINING,
-	Type = "BCCrafting",
-	{
-		Name = MINING,
+	["MiningTBC"] = {
 		{
 			{ itemID = 35128, spellID = 46353 }, --Smelt Hardened Khorium
 			{ itemID = 23573, spellID = 29686 }, --Smelt Hardened Adamantite
@@ -1729,32 +1346,16 @@ AtlasLoot_Data["MiningTBC"] = {
 			{ itemID = 22573, spellID = 35750 }, --Earth Shatter
 		},
 	},
-}
-
-AtlasLoot_Data["FirstAidTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = FIRSTAID,
-	Type = "BCCrafting",
-	{
-		Name = FIRSTAID,
+	["FirstAidTBC"] = {
 		{
 			{ itemID = 21991, spellID = 27033 }, --Heavy Netherweave Bandage
 			{ itemID = 21990, spellID = 27032 }, --Netherweave Bandage
 		},
 	},
-}
------------------
---- Tailoring ---
------------------
-
-
-
-AtlasLoot_Data["TailoringTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = TAILORING,
-	Type = "BCCrafting",
-	{
-		Name = "Cloth Armor" .. color.WHITE .. " - Back",
+	-----------------
+	--- Tailoring ---
+	-----------------
+	["TailoringTBC"] = {
 		{
 			{ itemID = 32420, spellID = 40060 }, --Night's End
 			{ itemID = 24260, spellID = 31450 }, --Manaweave Cloak
@@ -1763,9 +1364,6 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 24253, spellID = 31440 }, --Cloak of Eternity
 			{ itemID = 24252, spellID = 31438 }, --Cloak of the Black Void
 		},
-	},
-	{
-		Name = "Cloth Armor" .. color.WHITE .. " - Chest",
 		{
 			{ itemID = 21871, spellID = 26758 }, --Frozen Shadoweave Robe
 			{ itemID = 21875, spellID = 26762 }, --Primal Mooncloth Robe
@@ -1780,9 +1378,6 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 21855, spellID = 26774 }, --Netherweave Tunic
 			{ itemID = 21854, spellID = 26773 }, --Netherweave Robe
 		},
-	},
-	{
-		Name = "Cloth Armor" .. color.WHITE .. " - Feet",
 		{
 			{ itemID = 30037, spellID = 36317 }, --Boots of Blasting
 			{ itemID = 30035, spellID = 36318 }, --Boots of the Long Road
@@ -1792,9 +1387,6 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 21860, spellID = 26776 }, --Imbued Netherweave Boots
 			{ itemID = 21853, spellID = 26772 }, --Netherweave Boots
 		},
-	},
-	{
-		Name = "Cloth Armor" .. color.WHITE .. " - Hands",
 		{
 			{ itemID = 32584, spellID = 41207 }, --Swiftheal Wraps
 			{ itemID = 34367, spellID = 46129 }, --Hands of Eternal Light
@@ -1804,9 +1396,6 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 30838, spellID = 37883 }, --Flameheart Gloves
 			{ itemID = 21851, spellID = 26770 }, --Netherweave Gloves
 		},
-	},
-	{
-		Name = "Cloth Armor" .. color.WHITE .. " - Head",
 		{
 			{ itemID = 24267, spellID = 31456 }, --Battlecast Hood
 			{ itemID = 24266, spellID = 31455 }, --Spellstrike Hood
@@ -1814,9 +1403,6 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 24258, spellID = 31448 }, --Resolute Cape
 			{ itemID = 24254, spellID = 31441 }, --color.WHITE Remedy Cape
 		},
-	},
-	{
-		Name = "Cloth Armor" .. color.WHITE .. " - Legs",
 		{
 			{ itemID = 24263, spellID = 31453 }, --Battlecast Pants
 			{ itemID = 32389, spellID = 40023 }, --Soulguard Leggings
@@ -1825,9 +1411,6 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 21859, spellID = 26775 }, --Imbued Netherweave Pants
 			{ itemID = 21852, spellID = 26771 }, --Netherweave Pants
 		},
-	},
-	{
-		Name = "Cloth Armor" .. color.WHITE .. " - Shoulder",
 		{
 			{ itemID = 32587, spellID = 41206 }, --Mantle of Nimble Thought
 			{ itemID = 32585, spellID = 41208 }, --Swiftheal Mantle
@@ -1835,9 +1418,6 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 21864, spellID = 26780 }, --Soulcloth Shoulders
 			{ itemID = 21869, spellID = 26756 }, --Frozen Shadoweave Shoulders
 		},
-	},
-	{
-		Name = "Cloth Armor" .. color.WHITE .. " - Waist",
 		{
 			{ itemID = 30038, spellID = 36315 }, --Belt of Blasting
 			{ itemID = 30036, spellID = 36316 }, --Belt of the Long Road
@@ -1849,9 +1429,6 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 21846, spellID = 26752 }, --Spellfire Belt
 			{ itemID = 21850, spellID = 26765 }, --Netherweave Belt
 		},
-	},
-	{
-		Name = "Cloth Armor" .. color.WHITE .. " - Wrist",
 		{
 			{ itemID = 32586, spellID = 41205 }, --Bracers of Nimble Thought
 			{ itemID = 32392, spellID = 40021 }, --Soulguard Bracers
@@ -1862,9 +1439,6 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 24250, spellID = 31435 }, --Bracers of Havok
 			{ itemID = 21849, spellID = 26764 }, --Netherweave Bracers
 		},
-	},
-	{
-		Name = "Bags",
 		{
 			{ itemID = 21872, spellID = 26759 }, --Ebon Shadowbag
 			{ itemID = 38225, spellID = 50194 }, --Mycah's Botanical Bag
@@ -1875,18 +1449,12 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 21843, spellID = 26749 }, --Imbued Netherweave Bag
 			{ itemID = 21841, spellID = 26746 }, --Netherweave Bag
 		},
-	},
-	{
-		Name = "Item Enhancements",
 		{
 			{ itemID = 24276, spellID = 31433 }, --Golden Spellthread
 			{ itemID = 24274, spellID = 31432 }, --Runic Spellthread
 			{ itemID = 24273, spellID = 31430 }, --Mystic Spellthread
 			{ itemID = 24275, spellID = 31431 }, --Silver Spellthread
 		},
-	},
-	{
-		Name = "Cloth",
 		{
 			{ itemID = 21845, spellID = 26751 }, --Primal Mooncloth
 			{ itemID = 24272, spellID = 36686 }, --Shadowcloth
@@ -1895,40 +1463,25 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 21844, spellID = 26750 }, --Bolt of Soulcloth
 			{ itemID = 21840, spellID = 26745 }, --Bolt of Netherweave
 		},
-	},
-	{
-		Name = "Miscellaneous",
 		{
 			{itemID = 44554, spellID = 60969 }, --Flying Carpet
 			{ itemID = 24268, spellID = 31460 }, --Netherweave Net
 		},
-	},
-	{
-		Name = MOONCLOTH,
 		{
 			{ itemID = 21875, spellID = 26762 }, --Primal Mooncloth Robe
 			{ itemID = 21874, spellID = 26761 }, --Primal Mooncloth Shoulders
 			{ itemID = 21873, spellID = 26760 }, --Primal Mooncloth Belt
 		},
-	},
-	{
-		Name = SHADOWEAVE,
 		{
 			{ itemID = 21871, spellID = 26758 }, --Frozen Shadoweave Robe
 			{ itemID = 21870, spellID = 26757 }, --Frozen Shadoweave Boots
 			{ itemID = 21869, spellID = 26756 }, --Frozen Shadoweave Shoulders
 		},
-	},
-	{
-		Name = SPELLFIRE,
 		{
 			{ itemID = 21848, spellID = 26754 }, --Spellfire Robe
 			{ itemID = 21847, spellID = 26753 }, --Spellfire Gloves
 			{ itemID = 21846, spellID = 26752 }, --Spellfire Belt
 		},
-	},
-	{
-		Name = "High Risk",
 		{
 			{ name = "Rare", icon = "INV_Box_01"},
 			{ itemID = 1967813, spellID = 1968496 }, --Wrist Wraps of Twisted Might
@@ -1937,8 +1490,6 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 1967819, spellID = 1968502 }, --Wrist Wraps of Twisted Efficiency
 			{ itemID = 1967821, spellID = 1968504 }, --Wrist Wraps of Twisted Crushing
 			{ itemID = 1967823, spellID = 1968506 }, --Wrist Wraps of Twisted Glory
-		},
-		{
 			{ name = "Epic", icon = "INV_Box_01"},
 			{ itemID = 1967814, spellID = 1968497 }, --Fitted Wrist Wraps of Twisted Might
 			{ itemID = 1967816, spellID = 1968499 }, --Fitted Wrist Wraps of Twisted Fury
@@ -1947,5 +1498,5 @@ AtlasLoot_Data["TailoringTBC"] = {
 			{ itemID = 1967822, spellID = 1968505 }, --Fitted Wrist Wraps of Twisted Crushing
 			{ itemID = 1967824, spellID = 1968507 }, --Fitted Wrist Wraps of Twisted Glory
 		},
-	},
-}
+	}
+})
