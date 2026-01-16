@@ -1,10 +1,8 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-function AtlasLoot:InitializeTBCInstanceMenu()
-    local menu = self.ui.menus.data
-
+AtlasLoot:AddNewMenus({
 	--TBC Instances
-	menu["AuchCrypts"] = {
+	["AuchCrypts"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Auchindoun" .. ": " .. "Auchenai Crypts",
 		DisplayName = "Auchenai Crypts",
@@ -13,9 +11,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Shirrak the Dead Watcher", { 18371 } },
 		{ "Exarch Maladaar", { 18373 } },
 		{ "Avatar of the Martyred" },
-	}
+	},
 
-	menu["AuchManaTombs"] = {
+	["AuchManaTombs"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Auchindoun" .. ": " .. "Mana-Tombs",
 		DisplayName = "Mana-Tombs",
@@ -25,9 +23,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Tavarok", { 40112 } },
 		{ "Nexus-Prince Shaffar", { 40115 } },
 		{ "Yor" .. " (" .. "Heroic" .. ")", { 22930 } },
-	}
+	},
 
-	menu["AuchSethekk"] = {
+	["AuchSethekk"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Auchindoun" .. ": " .. "Sethekk Halls",
 		DisplayName = "Sethekk Halls",
@@ -37,9 +35,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Anzu" .. " (" .. "Heroic" .. ")", { 23035 } },
 		{ "Talon King Ikiss", { 25006 } },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["AuchShadowLab"] = {
+	["AuchShadowLab"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Auchindoun" .. ": " .. "Shadow Labyrinth",
 		DisplayName = "Shadow Labyrinth",
@@ -50,9 +48,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Grandmaster Vorpil", { 40142 } },
 		{ "Murmur", { 40143 } },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["BlackTemple"] = {
+	["BlackTemple"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Black Temple",
 		Type = "BCRaid",
@@ -69,9 +67,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Trash Mobs" },
 		{ "Reputation Trinkets" },
 		{ "BT Patterns/Plans" },
-	}
+	},
 
-	menu["CoTOldHillsbrad"] = {
+	["CoTOldHillsbrad"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Caverns of Time" .. ": " .. "Old Hillsbrad Foothills",
 		DisplayName = "Old Hillsbrad Foothills",
@@ -81,9 +79,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Captain Skarloc" },
 		{ "Epoch Hunter" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["CoTBlackMorass"] = {
+	["CoTBlackMorass"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Caverns of Time" .. ": " .. "The Black Morass",
 		DisplayName = "The Black Morass",
@@ -92,9 +90,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Chrono Lord Deja" },
 		{ "Temporus" },
 		{ "Aeonus" },
-	}
+	},
 
-	menu["CoTHyjal"] = {
+	["CoTHyjal"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Caverns of Time" .. ": " .. "Hyjal Summit",
 		DisplayName = "Hyjal Summit",
@@ -109,9 +107,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Trash Mobs - Items" },
 		{ "Crafting Recipe Drops Page 1" },
 		{ "Crafting Recipe Drops Page 2" },
-	}
+	},
 
-	menu["CFRSlavePens"] = {
+	["CFRSlavePens"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Coilfang Reservoir" .. ": " .. "The Slave Pens",
 		DisplayName = "The Slave Pens",
@@ -120,9 +118,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Mennu the Betrayer" },
 		{ "Rokmar the Crackler" },
 		{ "Quagmirran" },
-	}
+	},
 
-	menu["CFRSteamvault"] = {
+	["CFRSteamvault"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Coilfang Reservoir" .. ": " .. "The Steamvault",
 		DisplayName = "The Steamvault",
@@ -132,9 +130,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Mekgineer Steamrigger" },
 		{ "Warlord Kalithresh" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["CFRUnderbog"] = {
+	["CFRUnderbog"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Coilfang Reservoir" .. ": " .. "The Underbog",
 		DisplayName = "The Underbog",
@@ -144,9 +142,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Ghaz'an" },
 		{ "Swamplord Musel'ek" },
 		{ "The Black Stalker" },
-	}
+	},
 
-	menu["CFRSerpentshrine"] = {
+	["CFRSerpentshrine"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Coilfang Reservoir" .. ": " .. "Serpentshrine Cavern",
 		DisplayName = "Serpentshrine Cavern",
@@ -159,18 +157,18 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Morogrim Tidewalker" },
 		{ "Lady Vashj" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["GruulsLair"] = {
+	["GruulsLair"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Gruul's Lair",
 		Type = "BCRaid",
 		Map = "GruulsLair",
 		{ "High King Maulgar" },
 		{ "Gruul the Dragonkiller" },
-	}
+	},
 
-	menu["HCRamparts"] = {
+	["HCRamparts"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Hellfire Citadel" .. ": " .. "Hellfire Ramparts",
 		DisplayName = "Hellfire Ramparts",
@@ -179,9 +177,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Watchkeeper Gargolmar" },
 		{ "Omor the Unscarred" },
 		{ "Vazruden" },
-	}
+	},
 
-	menu["HCFurnace"] = {
+	["HCFurnace"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Hellfire Citadel" .. ": " .. "The Blood Furnace",
 		DisplayName = "The Blood Furnace",
@@ -190,9 +188,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "The Maker" },
 		{ "Broggok" },
 		{ "Keli'dan the Breaker" },
-	}
+	},
 
-	menu["HCShatteredHalls"] = {
+	["HCShatteredHalls"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Hellfire Citadel" .. ": " .. "The Shattered Halls",
 		DisplayName = "The Shattered Halls",
@@ -203,18 +201,18 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Warbringer O'mrogg" },
 		{ "Warchief Kargath Bladefist" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["HCMagtheridon"] = {
+	["HCMagtheridon"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Hellfire Citadel" .. ": " .. "Magtheridon's Lair",
 		DisplayName = "Magtheridon's Lair",
 		Type = "BCRaid",
 		Map = "HCMagtheridonsLair",
 		{ "Magtheridon", { 17257 } },
-	}
+	},
 
-	menu["Karazhan"] = {
+	["Karazhan"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Karazhan",
 		Type = "BCRaid",
@@ -233,9 +231,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Chess Event", { 16816 } },
 		{ "Prince Malchezaar", { 15690 } },
 		--{ "Trash Mobs" },
-	}
+	},
 
-	menu["MagistersTerrace"] = {
+	["MagistersTerrace"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Sunwell Isle" .. ": " .. "Magisters' Terrace",
 		DisplayName = "Magisters' Terrace",
@@ -246,9 +244,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Priestess Delrissa" },
 		{ "Kael'thas Sunstrider" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["TKArc"] = {
+	["TKArc"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Tempest Keep" .. ": " .. "The Arcatraz",
 		DisplayName = "The Arcatraz",
@@ -259,9 +257,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Dalliah the Doomsayer" },
 		{ "Harbinger Skyriss" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["TKBot"] = {
+	["TKBot"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Tempest Keep" .. ": " .. "The Botanica",
 		DisplayName = "The Botanica",
@@ -272,9 +270,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Thorngrin the Tender" },
 		{ "Laj" },
 		{ "Warp Splinter" },
-	}
+	},
 
-	menu["TKMech"] = {
+	["TKMech"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Tempest Keep" .. ": " .. "The Mechanar",
 		DisplayName = "The Mechanar",
@@ -284,9 +282,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Mechano-Lord Capacitus" },
 		{ "Nethermancer Sepethrea" },
 		{ "Pathaleon the Calculator" },
-	}
+	},
 
-	menu["TKEye"] = {
+	["TKEye"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Tempest Keep" .. ": " .. "The Eye",
 		DisplayName = "The Eye",
@@ -298,9 +296,9 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Kael'thas Sunstrider" },
 		{ "Trash Mobs" },
 		{ "Legendary Items for Kael'thas Fight" },
-	}
+	},
 
-	menu["SunwellPlateau"] = {
+	["SunwellPlateau"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Sunwell Isle" .. ": " .. "Sunwell Plateau",
 		DisplayName = "Sunwell Plateau",
@@ -318,4 +316,4 @@ function AtlasLoot:InitializeTBCInstanceMenu()
 		{ "Patterns/Plans" },
 }
 
-end
+})

@@ -24,10 +24,8 @@ local MOONCLOTH = GetSpellInfo(26798)
 local SHADOWEAVE = GetSpellInfo(26801)
 local SPELLFIRE = GetSpellInfo(26797)
 
-function AtlasLoot:InitializeClassicCraftingMenu()
-    local menu = self.ui.menus.data
-
-	menu["AlchemyCLASSIC"] = {
+AtlasLoot:AddNewMenus({
+	["AlchemyCLASSIC"] = {
 		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = ALCHEMY,
 		Type = "ClassicCrafting",
@@ -38,11 +36,11 @@ function AtlasLoot:InitializeClassicCraftingMenu()
 		{ "Transmutes", {} },
 		{ "Miscellaneous", {} },
 		{ "High Risk", {} },
-	}
+	},
 	---------------------
 	--- Blacksmithing ---
 	---------------------
-	menu["SmithingCLASSIC"] = {
+	["SmithingCLASSIC"] = {
 		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = BLACKSMITHING,
 		Type = "ClassicCrafting",
@@ -63,22 +61,22 @@ function AtlasLoot:InitializeClassicCraftingMenu()
 		{ ARMORSMITH, {} },
 		{ WEAPONSMITH, {} },
 		{ "High Risk", {} },
-	}
+	},
 	---------------
 	--- Cooking ---
 	---------------
-	menu["CookingCLASSIC"] = {
+	["CookingCLASSIC"] = {
 		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = COOKING,
 		Type = "ClassicCrafting",
 		{ "Cooking", {} },
 		{ "High Risk", {} },
 		{ "High Risk".." - ".."Miscellaneous", {} },
-	}
+	},
 	------------------
 	--- Enchanting ---
 	------------------
-	menu["EnchantingCLASSIC"] = {
+	["EnchantingCLASSIC"] = {
 		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = ENCHANTING,
 		Type = "ClassicCrafting",
@@ -92,11 +90,11 @@ function AtlasLoot:InitializeClassicCraftingMenu()
 		{ "Weapon", {} },
 		{ "Miscellaneous", {} },
 		{ "High Risk", {} },
-	}
+	},
 	-------------------
 	--- Engineering ---
 	-------------------
-	menu["EngineeringCLASSIC"] = {
+	["EngineeringCLASSIC"] = {
 		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = ENGINEERING,
 		Type = "ClassicCrafting",
@@ -111,20 +109,20 @@ function AtlasLoot:InitializeClassicCraftingMenu()
 		{ GNOMISH, {} },
 		{ GOBLIN, {} },
 		{ "High Risk", {} },
-	}
+	},
 	-----------------
 	--- First Aid ---
 	-----------------
-	menu["FirstAidCLASSIC"] = {
+	["FirstAidCLASSIC"] = {
 		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = FIRSTAID,
 		Type = "ClassicCrafting",
 		{ FIRSTAID, {} },
-	}
+	},
 	----------------------
 	--- Leatherworking ---
 	----------------------
-	menu["LeatherworkingCLASSIC"] = {
+	["LeatherworkingCLASSIC"] = {
 		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = LEATHERWORKING,
 		Type = "ClassicCrafting",
@@ -153,21 +151,21 @@ function AtlasLoot:InitializeClassicCraftingMenu()
 		{ ELEMENTAL, {} },
 		{ TRIBAL, {} },
 		{ "High Risk", {} },
-	}
+	},
 	--------------
 	--- Mining ---
 	--------------
-	menu["MiningCLASSIC"] = {
+	["MiningCLASSIC"] = {
 		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = MINING,
 		Type = "ClassicCrafting",
 		{ "Smelting", {} },
 		{ "Materials", {} },
-	}
+	},
 	-----------------
 	--- Tailoring ---
 	-----------------
-	menu["TailoringCLASSIC"] = {
+	["TailoringCLASSIC"] = {
 		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = TAILORING,
 		Type = "ClassicCrafting",
@@ -185,4 +183,4 @@ function AtlasLoot:InitializeClassicCraftingMenu()
 		{ "Shirts", {} },
 		{ "High Risk", {} },
 	}
-end
+})

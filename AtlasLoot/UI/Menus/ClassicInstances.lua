@@ -1,10 +1,8 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-function AtlasLoot:InitializeClassicInstanceMenu()
-    local menu = self.ui.menus.data
-
+AtlasLoot:AddNewMenus({
 	-- ClassicRaid
-    menu["ZulGurub"] = {
+    ["ZulGurub"] = {
         Module = "AtlasLoot_OriginalWoW",
         Name = "Zul'Gurub",
         Type = "ClassicRaid",
@@ -18,17 +16,17 @@ function AtlasLoot:InitializeClassicInstanceMenu()
         { "High Priestess Arlokk", { 14515 } },
         { "Jin'do the Hexxer", { 11380 } },
         { "Hakkar", { 14834 } },
-    }
+    },
 
-	menu["Onyxia60"] = {
+	["Onyxia60"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Onyxia's Lair",
 		Type = "ClassicRaid",
 		Map = "Onyxia60",
 		{ "Onyxia's Lair", { 10184 } },
-	}
+	},
 
-	menu["RuinsofAQ"] = {
+	["RuinsofAQ"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Ruins of Ahn'Qiraj",
 		Type = "ClassicRaid",
@@ -41,9 +39,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Ossirian the Unscarred", { 15339 } },
 		{ "Trash Mobs" },
 		{ "AQ Enchants" },
-	}
+	},
 
-	menu["TempleofAQ"] = {
+	["TempleofAQ"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Temple of Ahn'Qiraj",
 		Type = "ClassicRaid",
@@ -60,15 +58,15 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Trash Mobs" },
 		{ "Shoulder Enchants" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["AQOpening"] = {
+	["AQOpening"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "AQOpening",
 		{ "AQOpening" },
-	}
+	},
 
-	menu["Naxxramas60"] = {
+	["Naxxramas60"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Naxxramas",
 		Type = "ClassicRaid",
@@ -90,10 +88,10 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Kel'Thuzad", { 15990 } },
 		{ "Shared Frost Resistance Gear" },
 		{ "Trash Mobs" },
-	}
+	},
 
 	-- ClassicDungeons
-	menu["BlackfathomDeeps"] = {
+	["BlackfathomDeeps"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Blackfathom Deeps",
 		Type = "ClassicDungeon",
@@ -106,9 +104,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Old Serra'kis", { 4830 } },
 		{ "Aku'mai", { 4829 } },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["BlackrockDepths"] = {
+	["BlackrockDepths"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Blackrock Depths",
 		Type = "ClassicDungeonExt",
@@ -142,9 +140,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Princess Moira Bronzebeard" },
 		{ "Blacksmith Plans" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["BlackrockCaverns"] = {
+	["BlackrockCaverns"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Blackrock Caverns",
 		Type = "ClassicDungeonExt",
@@ -153,9 +151,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Corla, Herald of Twilight", { 39679 } },
 		{ "Karsh Steelbender <Twilight Armorer>", { 39698 } },
 		{ "Rom'ogg Bonecrusher", { 39665 } },
-	}
+	},
 
-	menu["LowerBlackrock"] = {
+	["LowerBlackrock"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Lower Blackrock Spire",
 		Type = "ClassicDungeonExt",
@@ -181,9 +179,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Overlord Wyrmthalak", { 9568 } },
 		{ "Burning Felguard (Rare, Random)" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["UpperBlackrock"] = {
+	["UpperBlackrock"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Upper Blackrock Spire",
 		Type = "ClassicDungeonExt",
@@ -200,9 +198,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Lord Valthalak (Summon)" },
 		{ "General Drakkisath", { 10363 } },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["MoltenCore"] = {
+	["MoltenCore"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Molten Core",
 		Type = "ClassicRaid",
@@ -219,9 +217,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Ragnaros", { 11502 } },
 		{ "Random Boss Drops" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["BlackwingLair"] = {
+	["BlackwingLair"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Blackwing Lair",
 		Type = "ClassicRaid",
@@ -235,9 +233,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Chromaggus", { 14020 } },
 		{ "Nefarian", { 11583 } },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["DireMaulEast"] = {
+	["DireMaulEast"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Dire Maul East",
 		Type = "ClassicDungeonExt",
@@ -251,9 +249,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Isalien" },
 		{ "Trash Mobs" },
 		{ "Dire Maul Books" },
-	}
+	},
 
-	menu["DireMaulNorth"] = {
+	["DireMaulNorth"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Dire Maul North",
 		Type = "ClassicDungeonExt",
@@ -267,9 +265,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Cho'Rush the Observer", { 14324 } },
 		{ "King Gordok", { 11501 } },
 		{ "DM North Tribute Chest" },
-	}
+	},
 
-	menu["DireMaulWest"] = {
+	["DireMaulWest"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Dire Maul West",
 		Type = "ClassicDungeonExt",
@@ -283,9 +281,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Prince Tortheldrin", { 11486 } },
 		{ "Shen'dralar Provisioner" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["Gnomeregan"] = {
+	["Gnomeregan"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Gnomeregan",
 		Type = "ClassicDungeon",
@@ -299,9 +297,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Dark Iron Ambassador", { 6228 } },
 		{ "Mekgineer Thermaplugg", { 7800 } },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["KarazhanCrypts"] = {
+	["KarazhanCrypts"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "The Karazhan Crypts",
 		Type = "ClassicDungeonExt",
@@ -311,9 +309,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "The Judgement of Sinners", { 254405 } },
 		{ "Captain Taveir (Rare Spawn)", { 254495 } },
 		{ "Kelivex Autumnvale (Rare Spawn)", { 254493 } },
-	}
+	},
 
-	menu["Maraudon"] = {
+	["Maraudon"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Maraudon",
 		Type = "ClassicDungeon",
@@ -328,9 +326,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Rotgrip" },
 		{ "Princess Theradras", { 35009 } },
 		{ "Quest Item" },
-	}
+	},
 
-	menu["RagefireChasm"] = {
+	["RagefireChasm"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Ragefire Chasm",
 		Type = "ClassicDungeon",
@@ -339,9 +337,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Zelemar the Wrathful", { 17830 } },
 		{ "Jergosh the Invoker", { 11518 } },
 		{ "Oggleflint" },
-	}
+	},
 
-	menu["RazorfenDowns"] = {
+	["RazorfenDowns"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Razorfen Downs",
 		Type = "ClassicDungeon",
@@ -355,9 +353,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Amnennar the Coldbringer" },
 		{ "Plaguemaw the Rotting" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["RazorfenKraul"] = {
+	["RazorfenKraul"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Razorfen Kraul",
 		Type = "ClassicDungeon",
@@ -372,9 +370,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Charlga Razorflank", { 4421 } },
 		{ "Earthcaller Halmgar", { 4842 } },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["ScarletMonastery"] = {
+	["ScarletMonastery"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Scarlet Monastery",
 		Type = "ClassicDungeon",
@@ -391,9 +389,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Library - Houndmaster Loksey" },
 		{ "Arcanist Doan" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["Scholomance"] = {
+	["Scholomance"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Scholomance",
 		Type = "ClassicDungeonExt",
@@ -417,9 +415,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Lady Illucia Barov", { 10502 } },
 		{ "Darkmaster Gandling" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["ShadowfangKeep"] = {
+	["ShadowfangKeep"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Shadowfang Keep",
 		Type = "ClassicDungeon",
@@ -437,9 +435,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Wolf Master Nandos", { 3927 } },
 		{ "Archmage Arugal", { 4275 } },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["Stratholme"] = {
+	["Stratholme"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Stratholme",
 		Type = "ClassicDungeonExt",
@@ -468,9 +466,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Ramstein the Gorger" },
 		{ "Baron Rivendare", { 10440 } },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["TheDeadmines"] = {
+	["TheDeadmines"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "The Deadmines",
 		Type = "ClassicDungeon",
@@ -487,9 +485,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Mr. Smite", { 646 } },
 		{ "Cookie", { 645 } },
 		{ "Edwin VanCleef", { 639 } },
-	}
+	},
 
-	menu["TheStockade"] = {
+	["TheStockade"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "The Stockade",
 		Type = "ClassicDungeon",
@@ -501,9 +499,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Dextren Ward", { 1663 } },
 		{ "Bruegal Ironknuckle", { 1720 } },
 		{ "Quest Item's" },
-	}
+	},
 
-	menu["SunkenTemple"] = {
+	["SunkenTemple"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Sunken Temple",
 		Type = "ClassicDungeon",
@@ -520,9 +518,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Hazzas" },
 		{ "Shade of Eranikus", { 5709 } },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["Uldaman"] = {
+	["Uldaman"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Uldaman",
 		Type = "ClassicDungeon",
@@ -543,9 +541,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Grimlok" },
 		{ "Archaedas" },
 		{ "Trash Mobs" },
-	}
+	},
 
-	menu["WailingCaverns"] = {
+	["WailingCaverns"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Wailing Caverns",
 		Type = "ClassicDungeon",
@@ -563,9 +561,9 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Verdan the Everliving", { 5775 } },
 		{ "Mutanus the Devourer", { 3654 } },
 		{ "Deviate Faerie Dragon" },
-	}
+	},
 
-	menu["ZulFarrak"] = {
+	["ZulFarrak"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Zul'Farrak",
 		Type = "ClassicDungeon",
@@ -584,4 +582,4 @@ function AtlasLoot:InitializeClassicInstanceMenu()
 		{ "Zerillis", { 24081 } },
 		{ "Trash Mobs" },
 	}
-end
+})

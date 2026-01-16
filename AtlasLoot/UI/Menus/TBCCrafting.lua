@@ -1,5 +1,4 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local color = AtlasLoot.Colors
 
 local ALCHEMY = GetSpellInfo(2259)
 local BLACKSMITHING = GetSpellInfo(2018)
@@ -25,201 +24,195 @@ local MOONCLOTH = GetSpellInfo(26798)
 local SHADOWEAVE = GetSpellInfo(26801)
 local SPELLFIRE = GetSpellInfo(26797)
 
-function AtlasLoot:InitializeTBCCraftingMenu()
-    local menu = self.ui.menus.data
+AtlasLoot:AddNewMenus({
+	---------------
+	--- Alchemy ---
+	---------------
+	["AlchemyTBC"] = {
+		Module = "AtlasLoot_Crafting_TBC",
+		Name = ALCHEMY,
+		Type = "BCCrafting",
+		{ "Battle Elixirs", {} },
+		{ "Guardian Elixirs", {} },
+		{ "Potions", {} },
+		{ "Flasks", {} },
+		{ "Transmutes", {} },
+		{ "Miscellaneous", {} },
+		{ "High Risk", {} },
+	},
 
----------------
---- Alchemy ---
----------------
-menu["AlchemyTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = ALCHEMY,
-	Type = "BCCrafting",
-	{ "Battle Elixirs", {} },
-	{ "Guardian Elixirs", {} },
-	{ "Potions", {} },
-	{ "Flasks", {} },
-	{ "Transmutes", {} },
-	{ "Miscellaneous", {} },
-	{ "High Risk", {} },
-}
+	---------------------
+	--- Blacksmithing ---
+	---------------------
+	["SmithingTBC"] = {
+		Module = "AtlasLoot_Crafting_TBC",
+		Name = BLACKSMITHING,
+		Type = "BCCrafting",
+		{ "Armor - Chest", {} },
+		{ "Armor - Feet", {} },
+		{ "Armor - Hands", {} },
+		{ "Armor - Head", {} },
+		{ "Armor - Legs", {} },
+		{ "Armor - Shoulder", {} },
+		{ "Armor - Waist", {} },
+		{ "Armor - Wrist", {} },
+		{ "Weapon - One Handed", {} },
+		{ "Weapon - Two Handed", {} },
+		{ "Item Enhancements", {} },
+		{ "Miscellaneous", {} },
+		{ ARMORSMITH, {} },
+		{ WEAPONSMITH, {} },
+		{ AXESMITH, {} },
+		{ HAMMERSMITH, {} },
+		{ SWORDSMITH, {} },
+		{ "High Risk", {} },
+	},
 
----------------------
---- Blacksmithing ---
----------------------
+	---------------
+	--- Cooking ---
+	---------------
+	["CookingTBC"] = {
+		Module = "AtlasLoot_Crafting_TBC",
+		Name = COOKING,
+		Type = "BCCrafting",
+		{ "Cooking", {} },
+		{ "High Risk", {} },
+	},
 
-menu["SmithingTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = BLACKSMITHING,
-	Type = "BCCrafting",
-	{ "Armor - Chest", {} },
-	{ "Armor - Feet", {} },
-	{ "Armor - Hands", {} },
-	{ "Armor - Head", {} },
-	{ "Armor - Legs", {} },
-	{ "Armor - Shoulder", {} },
-	{ "Armor - Waist", {} },
-	{ "Armor - Wrist", {} },
-	{ "Weapon - One Handed", {} },
-	{ "Weapon - Two Handed", {} },
-	{ "Item Enhancements", {} },
-	{ "Miscellaneous", {} },
-	{ ARMORSMITH, {} },
-	{ WEAPONSMITH, {} },
-	{ AXESMITH, {} },
-	{ HAMMERSMITH, {} },
-	{ SWORDSMITH, {} },
-	{ "High Risk", {} },
-}
+	------------------
+	--- Enchanting ---
+	------------------
+	["EnchantingTBC"] = {
+		Module = "AtlasLoot_Crafting_TBC",
+		Name = ENCHANTING,
+		Type = "BCCrafting",
+		{ "Boots", {} },
+		{ "Bracer", {} },
+		{ "Chest", {} },
+		{ "Cloak", {} },
+		{ "Gloves", {} },
+		{ "Rings", {} },
+		{ "Shield", {} },
+		{ "2H Weapon", {} },
+		{ "Weapon", {} },
+		{ "Miscellaneous", {} },
+		{ "High Risk", {} },
+	},
 
----------------
---- Cooking ---
----------------
+	-------------------
+	--- Engineering ---
+	-------------------
+	["EngineeringTBC"] = {
+		Module = "AtlasLoot_Crafting_TBC",
+		Name = ENGINEERING,
+		Type = "BCCrafting",
+		{ "Ammunition", {} },
+		{ "Armor", {} },
+		{ "Explosives", {} },
+		{ "Item Enhancements", {} },
+		{ "Miscellaneous", {} },
+		{ "Miscellaneous", {} },
+		{ "Reagents", {} },
+		{ "Weapon", {} },
+		{ GNOMISH, {} },
+		{ GOBLIN, {} },
+		{ "High Risk", {} },
+	},
 
-menu["CookingTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = COOKING,
-	Type = "BCCrafting",
-	{ "Cooking", {} },
-	{ "High Risk", {} },
-}
+	---------------------
+	--- Jewelcrafting ---
+	---------------------
+	["JewelcraftingTBC"] = {
+		Module = "AtlasLoot_Crafting_TBC",
+		Name = JEWELCRAFTING,
+		Type = "BCCrafting",
+		{ "Red Gems", {} },
+		{ "Blue Gems", {} },
+		{ "Yellow Gems", {} },
+		{ "Green Gems", {} },
+		{ "Orange Gems", {} },
+		{ "Purple Gems", {} },
+		{ "Meta Gems", {} },
+		{ "Prismatic Gems",	{} },
+		{ "Trinkets", {} },
+		{ "Rings", {} },
+		{ "Necks", {} },
+		{ "Miscellaneous", {} },
+		{ "High Risk", {} },
+	},
 
-------------------
---- Enchanting ---
-------------------
+	----------------------
+	--- Leatherworking ---
+	----------------------
+	["LeatherworkingTBC"] = {
+		Module = "AtlasLoot_Crafting_TBC",
+		Name = LEATHERWORKING,
+		Type = "BCCrafting",
+		{ "Leather Armor - Back", {} },
+		{ "Leather Armor - Chest", {} },
+		{ "Leather Armor - Feet", {} },
+		{ "Leather Armor - Hands", {} },
+		{ "Leather Armor - Head", {} },
+		{ "Leather Armor - Legs", {} },
+		{ "Leather Armor - Shoulder", {} },
+		{ "Leather Armor - Waist", {} },
+		{ "Leather Armor - Wrist", {} },
+		{ "Mail Armor - Chest", {} },
+		{ "Mail Armor - Feet", {} },
+		{ "Mail Armor - Hands", {} },
+		{ "Mail Armor - Head", {} },
+		{ "Mail Armor - Legs", {} },
+		{ "Mail Armor - Shoulder", {} },
+		{ "Mail Armor - Waist", {} },
+		{ "Mail Armor - Wrist", {} },
+		{ "Item Enhancements", {} },
+		{ "Quivers and Ammo Pouches", {} },
+		{ "Drums, Bags and Misc.", {} },
+		{ "Leather", {} },
+		{ DRAGONSCALE, {} },
+		{ ELEMENTAL, {} },
+		{ TRIBAL, {} },
+		{ "High Risk", {} },
+	},
 
-menu["EnchantingTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = ENCHANTING,
-	Type = "BCCrafting",
-	{ "Boots", {} },
-	{ "Bracer", {} },
-	{ "Chest", {} },
-	{ "Cloak", {} },
-	{ "Gloves", {} },
-	{ "Rings", {} },
-	{ "Shield", {} },
-	{ "2H Weapon", {} },
-	{ "Weapon", {} },
-	{ "Miscellaneous", {} },
-	{ "High Risk", {} },
-}
+	["MiningTBC"] = {
+		Module = "AtlasLoot_Crafting_TBC",
+		Name = MINING,
+		Type = "BCCrafting",
+		{ "Smelting", {} },
+	},
 
--------------------
---- Engineering ---
--------------------
+	["FirstAidTBC"] = {
+		Module = "AtlasLoot_Crafting_TBC",
+		Name = FIRSTAID,
+		Type = "BCCrafting",
+		{ FIRSTAID, {} },
+	},
 
-menu["EngineeringTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = ENGINEERING,
-	Type = "BCCrafting",
-	{ "Ammunition", {} },
-	{ "Armor", {} },
-	{ "Explosives", {} },
-	{ "Item Enhancements", {} },
-	{ "Miscellaneous", {} },
-	{ "Miscellaneous", {} },
-	{ "Reagents", {} },
-	{ "Weapon", {} },
-	{ GNOMISH, {} },
-	{ GOBLIN, {} },
-	{ "High Risk", {} },
-}
+	-----------------
+	--- Tailoring ---
+	-----------------
+	["TailoringTBC"] = {
+		Module = "AtlasLoot_Crafting_TBC",
+		Name = TAILORING,
+		Type = "BCCrafting",
+		{ "Cloth Armor - Back", {} },
+		{ "Cloth Armor - Chest", {} },
+		{ "Cloth Armor - Feet", {} },
+		{ "Cloth Armor - Hands", {} },
+		{ "Cloth Armor - Head", {} },
+		{ "Cloth Armor - Legs", {} },
+		{ "Cloth Armor - Shoulder", {} },
+		{ "Cloth Armor - Waist", {} },
+		{ "Cloth Armor - Wrist", {} },
+		{ "Bags", {} },
+		{ "Item Enhancements", {} },
+		{ "Cloth", {} },
+		{ "Miscellaneous", {} },
+		{ MOONCLOTH, {} },
+		{ SHADOWEAVE, {} },
+		{ SPELLFIRE, {} },
+		{ "High Risk", {} },
+	}
 
----------------------
---- Jewelcrafting ---
----------------------
-menu["JewelcraftingTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = JEWELCRAFTING,
-	Type = "BCCrafting",
-	{ "Red Gems", {} },
-	{ "Blue Gems", {} },
-	{ "Yellow Gems", {} },
-	{ "Green Gems", {} },
-	{ "Orange Gems", {} },
-	{ "Purple Gems", {} },
-	{ "Meta Gems", {} },
-	{ "Prismatic Gems",	{} },
-	{ "Trinkets", {} },
-	{ "Rings", {} },
-	{ "Necks", {} },
-	{ "Miscellaneous", {} },
-	{ "High Risk", {} },
-}
-
-----------------------
---- Leatherworking ---
-----------------------
-menu["LeatherworkingTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = LEATHERWORKING,
-	Type = "BCCrafting",
-	{ "Leather Armor - Back", {} },
-	{ "Leather Armor - Chest", {} },
-	{ "Leather Armor - Feet", {} },
-	{ "Leather Armor - Hands", {} },
-	{ "Leather Armor - Head", {} },
-	{ "Leather Armor - Legs", {} },
-	{ "Leather Armor - Shoulder", {} },
-	{ "Leather Armor - Waist", {} },
-	{ "Leather Armor - Wrist", {} },
-	{ "Mail Armor - Chest", {} },
-	{ "Mail Armor - Feet", {} },
-	{ "Mail Armor - Hands", {} },
-	{ "Mail Armor - Head", {} },
-	{ "Mail Armor - Legs", {} },
-	{ "Mail Armor - Shoulder", {} },
-	{ "Mail Armor - Waist", {} },
-	{ "Mail Armor - Wrist", {} },
-	{ "Item Enhancements", {} },
-	{ "Quivers and Ammo Pouches", {} },
-	{ "Drums, Bags and Misc.", {} },
-	{ "Leather", {} },
-	{ DRAGONSCALE, {} },
-	{ ELEMENTAL, {} },
-	{ TRIBAL, {} },
-	{ "High Risk", {} },
-}
-
-menu["MiningTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = MINING,
-	Type = "BCCrafting",
-	{ "Smelting", {} },
-}
-
-menu["FirstAidTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = FIRSTAID,
-	Type = "BCCrafting",
-	{ FIRSTAID, {} },
-}
-
------------------
---- Tailoring ---
------------------
-menu["TailoringTBC"] = {
-	Module = "AtlasLoot_Crafting_TBC",
-	Name = TAILORING,
-	Type = "BCCrafting",
-	{ "Cloth Armor - Back", {} },
-	{ "Cloth Armor - Chest", {} },
-	{ "Cloth Armor - Feet", {} },
-	{ "Cloth Armor - Hands", {} },
-	{ "Cloth Armor - Head", {} },
-	{ "Cloth Armor - Legs", {} },
-	{ "Cloth Armor - Shoulder", {} },
-	{ "Cloth Armor - Waist", {} },
-	{ "Cloth Armor - Wrist", {} },
-	{ "Bags", {} },
-	{ "Item Enhancements", {} },
-	{ "Cloth", {} },
-	{ "Miscellaneous", {} },
-	{ MOONCLOTH, {} },
-	{ SHADOWEAVE, {} },
-	{ SPELLFIRE, {} },
-	{ "High Risk", {} },
-}
-
-end
+})

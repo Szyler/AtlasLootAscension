@@ -7,12 +7,15 @@ Defines the table listings for the dropdown lists.
 
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
+local menusTemp = {}
+function AtlasLoot:AddNewMenus(menus)
+	for menuName, menu in pairs(menus) do
+		menusTemp[menuName] = menu
+	end
+end
+
 function AtlasLoot:InitializeMenus()
-	self.ui.menus = {collection = {}, data = {}}
-	self:InitializeClassicCraftingMenu()
-	self:InitializeClassicInstanceMenu()
-	self:InitializeTBCCraftingMenu()
-	self:InitializeTBCInstanceMenu()
+	self.ui.menus = {collection = {}, data = menusTemp}
 	local menus = self.ui.menus
 	local collection = menus.collection
 
