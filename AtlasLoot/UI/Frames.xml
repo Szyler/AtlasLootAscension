@@ -138,12 +138,12 @@
         	</OnLoad>
 		</Scripts>
     </Frame>
-    
+    <Script file="Menus.lua"/>
     <Script file="Menus\ClassicInstances.lua"/>
     <Script file="Menus\ClassicCrafting.lua"/>
     <Script file="Menus\TBCInstances.lua"/>
     <Script file="Menus\TBCCrafting.lua"/>
-    <Script file="Menus.lua"/>
+    <Script file="Menus\WorldEvents.lua"/>
     <Script file="UI.lua"/>
     <Script file="UI_Functions.lua"/>
     <Script file="Search_UI.lua"/>
