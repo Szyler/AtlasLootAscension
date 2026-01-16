@@ -1,10 +1,4 @@
 ﻿local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-
-
-
-
-
-
 -- Index
 --- Permanent Events
 ---- Argent Tournament
