@@ -135,7 +135,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 6370, spellID = 7836 }, --Blackmouth Oil
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1203258, spellID = 979362 }, --Impure Flask of Manifesting Power
 			{ itemID = 1203260, spellID = 979364 }, --Impure Flask of the Warsong
 			{ itemID = 1203262, spellID = 979366 }, --Impure Flask of the Kirin Tor
@@ -147,7 +147,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 1203274, spellID = 979378 }, --Impure Flask of the Executioner
 			{ itemID = 1203276, spellID = 979380 }, --Impure Flask of Deep Meditation
 			{ itemID = 1203278, spellID = 979382 }, --Impure Flask of Adept Striking
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1203259, spellID = 979363 }, --Pure Flask of Manifesting Power
 			{ itemID = 1203261, spellID = 979365 }, --Pure Flask of the Warsong
 			{ itemID = 1203263, spellID = 979367 }, --Pure Flask of the Kirin Tor
@@ -370,7 +370,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 28430, spellID = 36259 }, --Lionheart Executioner
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1204033, spellID = 979534 }, --Hulking Belt Buckle
 			{ itemID = 1204035, spellID = 979536 }, --Blade Master's Belt Buckle
 			{ itemID = 1204037, spellID = 979538 }, --Agile Belt Buckle
@@ -379,7 +379,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 1204043, spellID = 979544 }, --Priestly Belt Buckle
 			{ itemID = 1204045, spellID = 979546 }, --Champion\'s Belt Buckle
 			{ itemID = 1204047, spellID = 979548 }, --Guarded Belt Buckle
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1204034, spellID = 979535 }, --Mastercraft Hulking Belt Buckle
 			{ itemID = 1204036, spellID = 979537 }, --Mastercraft Blade Master's Belt Buckle
 			{ itemID = 1204038, spellID = 979539 }, --Mastercraft Agile Belt Buckle
@@ -439,7 +439,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 33866, spellID = 43758 }, --Stormchops
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1203280, spellID = 979384 }, --Infused Living Soup
 			{ itemID = 1203282, spellID = 979386 }, --Infused Charred Steak
 			{ itemID = 1203284, spellID = 979388 }, --Infused Steamed Wontons
@@ -454,7 +454,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 1203340, spellID = 979445 }, --Infused Subtle Steak
 			{ itemID = 1203342, spellID = 979447 }, --Infused Subtle Wontons
 			{ itemID = 1203344, spellID = 979449 }, --Infused Subtle Soup
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1203281, spellID = 979385 }, --Charged Living Soup
 			{ itemID = 1203283, spellID = 979387 }, --Charged Charred Steak
 			{ itemID = 1203285, spellID = 979389 }, --Charged Steamed Wontons
@@ -469,7 +469,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 1203341, spellID = 979446 }, --Charged Subtle Steak
 			{ itemID = 1203343, spellID = 979448 }, --Charged Subtle Wontons
 			{ itemID = 1203345, spellID = 979450 }, --Charged Subtle Soup
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1203346, spellID = 979451 }, --Infused Bold Stew
 			{ itemID = 1203296, spellID = 979400 }, --Infused Piercing Chops
 			{ itemID = 1203298, spellID = 979402 }, --Infused Piercing Steak
@@ -484,7 +484,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 1203336, spellID = 979441 }, --Infused Vibrant Chops
 			{ itemID = 1203304, spellID = 979408 }, --Infused Savory Stew
 			{ itemID = 1203306, spellID = 979410 }, --Infused Savory Chops
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1203347, spellID = 979452 }, --Charged Bold Stew
 			{ itemID = 1203297, spellID = 979401 }, --Charged Piercing Chops
 			{ itemID = 1203299, spellID = 979403 }, --Charged Piercing Steak
@@ -499,7 +499,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 1203337, spellID = 979442 }, --Charged Vibrant Chops
 			{ itemID = 1203305, spellID = 979409 }, --Charged Savory Stew
 			{ itemID = 1203307, spellID = 979412 }, --Charged Savory Chops
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1203308, spellID = 979413 }, --Infused Savory Steak
 			{ itemID = 1203310, spellID = 979415 }, --Infused Savory Wontons
 			{ itemID = 1203312, spellID = 979417 }, --Infused Red-Hot Stew
@@ -513,7 +513,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 1203352, spellID = 979457 }, --Infused Wild Roast
 			{ itemID = 1203354, spellID = 979459 }, --Infused Winter Roast
 			{ itemID = 1203356, spellID = 979461 }, --Infused Blackened Roast
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1203309, spellID = 979414 }, --Charged Savory Steak
 			{ itemID = 1203311, spellID = 979416 }, --Charged Savory Wontons
 			{ itemID = 1203313, spellID = 979418 }, --Charged Red-Hot Stew
@@ -636,7 +636,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 22521, spellID = 28016 }, --Superior Mana Oil
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968677 }, --Enchant Weapon - Void Assault
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968680 }, --Enchant Weapon - Dread Assault
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968683 }, --Enchant Weapon - Twisted Evoker
@@ -647,7 +647,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968698 }, --Enchant Weapon - Void Blasting
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968701 }, --Enchant Weapon - Dread Precision
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968770 }, --Enchant Weapon - Twisted Crusader
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968678 }, --Enchant Weapon - Overpowering Void Assault
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968681 }, --Enchant Weapon - Overpowering Dread Assault
 			{ icon = "Spell_Holy_GreaterHeal", spellID = 1968684 }, --Enchant Weapon - Overpowering Twisted Evoker
@@ -763,14 +763,14 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 30542, spellID = 36954 }, --Dimensional Ripper - Area 52
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1204101, spellID = 979550 }, --Gnomish Magnification Polish
 			{ itemID = 1204103, spellID = 979552 }, --Gnomish Sharpening Polish
 			{ itemID = 1204105, spellID = 979554 }, --Gnomish Prismatic Polish
 			{ itemID = 1204107, spellID = 979556 }, --Felfire Scope
 			{ itemID = 1204109, spellID = 979558 }, --Sighted Scope
 			{ itemID = 1204111, spellID = 979560 }, --Quickshot Scope
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1204102, spellID = 979551 }, --Fine Gnomish Magnification Polish
 			{ itemID = 1204104, spellID = 979553 }, --Fine Gnomish Sharpening Polish
 			{ itemID = 1204106, spellID = 979555 }, --Fine Gnomish Prismatic Polish
@@ -1087,7 +1087,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 25498, spellID = 32259 }, --Rough Stone Statue
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1204165, spellID = 979639 }, --Deep Gold Twisted Pendant
 			{ itemID = 1204167, spellID = 979641 }, --Bloodshadow Twisted Pendant
 			{ itemID = 1204169, spellID = 979643 }, --Azureflame Twisted Pendant
@@ -1097,7 +1097,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 1204177, spellID = 979651 }, --Living Night Void Pendant
 			{ itemID = 1204179, spellID = 979653 }, --Dawnstar Void Pendant
 			{ itemID = 1204181, spellID = 979655 }, --Noble Talasite Void Pendant
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1204166, spellID = 979640 }, --Engraved Deep Gold Twisted Pendant
 			{ itemID = 1204168, spellID = 979642 }, --Engraved Bloodshadow Twisted Pendant
 			{ itemID = 1204170, spellID = 979644 }, --Engraved Azureflame Twisted Pendant
@@ -1317,14 +1317,14 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 29974, spellID = 36078 }, --Living Crystal Breastplate
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1204021, spellID = 979522 }, --Cobra Strike Gambeson
 			{ itemID = 1204023, spellID = 979524 }, --Fel Strike Gambeson
 			{ itemID = 1204025, spellID = 979526 }, --Wind Gambeson
 			{ itemID = 1204027, spellID = 979528 }, --True Strike Gambeson
 			{ itemID = 1204029, spellID = 979530 }, --Clefthoof Gambeson
 			{ itemID = 1204031, spellID = 979532 }, --Subtle Gambeson
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1204022, spellID = 979523 }, --Mastercraft Cobra Strike Gambeson
 			{ itemID = 1204024, spellID = 979525 }, --Mastercraft Fel Strike Gambeson
 			{ itemID = 1204026, spellID = 979527 }, --Mastercraft Wind Gambeson
@@ -1483,14 +1483,14 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 21846, spellID = 26752 }, --Spellfire Belt
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1967813, spellID = 1968496 }, --Wrist Wraps of Twisted Might
 			{ itemID = 1967815, spellID = 1968498 }, --Wrist Wraps of Twisted Fury
 			{ itemID = 1967817, spellID = 1968500 }, --Wrist Wraps of Twisted Precision
 			{ itemID = 1967819, spellID = 1968502 }, --Wrist Wraps of Twisted Efficiency
 			{ itemID = 1967821, spellID = 1968504 }, --Wrist Wraps of Twisted Crushing
 			{ itemID = 1967823, spellID = 1968506 }, --Wrist Wraps of Twisted Glory
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 1967814, spellID = 1968497 }, --Fitted Wrist Wraps of Twisted Might
 			{ itemID = 1967816, spellID = 1968499 }, --Fitted Wrist Wraps of Twisted Fury
 			{ itemID = 1967818, spellID = 1968501 }, --Fitted Wrist Wraps of Twisted Precision

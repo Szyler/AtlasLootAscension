@@ -407,7 +407,7 @@ local function sortItemData(dataSource, dataID, tablenum)
 		end
 	else
 		for itemNum, item in ipairs(AtlasLoot.itemData[lootTableName]) do
-			if (#newTable[#newTable] ~= 0 and item.name and item.icon) then
+			if (#newTable[#newTable] ~= 0 and item.pageBreak) then
 				if #newTable[#newTable] < 16 then
 					for i = 1, (15 - #newTable[#newTable]) do
 						table.insert(newTable[#newTable], {"blankLine"})

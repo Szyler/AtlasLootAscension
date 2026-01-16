@@ -180,7 +180,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 6370, spellID = 7836 }, --Blackmouth Oil
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967444, spellID = 968403 }, --Potent Flask of Manifesting Power
 			{ itemID = 967447, spellID = 968406 }, --Potent Flask of the Warsong
 			{ itemID = 967450, spellID = 968409 }, --Potent Flask of the Kirin Tor
@@ -192,7 +192,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 967468, spellID = 968427 }, --Potent Flask of the Executioner
 			{ itemID = 967471, spellID = 968430 }, --Potent Flask of Deep Meditation
 			{ itemID = 967474, spellID = 968433 }, --Potent Flask of Adept Striking
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967445, spellID = 968404 }, --Distilled Flask of Manifesting Power
 			{ itemID = 967448, spellID = 968407 }, --Distilled Flask of the Warsong
 			{ itemID = 967451, spellID = 968410 }, --Distilled Flask of the Kirin Tor
@@ -495,7 +495,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 30072, spellID = 36126 }, --Light Skyforged Axe
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967173, spellID = 968019 }, --Sturdy Living Belt Buckle
 			{ itemID = 967176, spellID = 968022 }, --Sturdy Deflecting Belt Buckle
 			{ itemID = 967179, spellID = 968025 }, --Sturdy Roguish Belt Buckle
@@ -505,7 +505,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 967191, spellID = 968037 }, --Sturdy Warlord's Belt Buckle
 			{ itemID = 967194, spellID = 968040 }, --Sturdy Gaurdian's Belt Buckle
 			{ itemID = 967681, spellID = 968481 }, --Homicite Key
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967174, spellID = 968020 }, --Mastercraft Living Belt Buckle
 			{ itemID = 967177, spellID = 968023 }, --Mastercraft Deflecting Belt Buckle
 			{ itemID = 967180, spellID = 968026 }, --Mastercraft Roguish Belt Buckle
@@ -636,7 +636,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 46691, spellID = 65454 }, --Bread of the Dead
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967510, spellID = 968280 }, --Animated Soup for the Soul
 			{ itemID = 967513, spellID = 968283 }, --Volcanic Sandwich
 			{ itemID = 967516, spellID = 968286 }, --Winter Wontons
@@ -651,7 +651,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 967543, spellID = 968313 }, --Scorching Hot Steak
 			{ itemID = 967546, spellID = 968316 }, --Lively Stew
 			{ itemID = 967549, spellID = 968319 }, --Crawling Steak
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967511, spellID = 968281 }, --Animated Soup for the Soul
 			{ itemID = 967514, spellID = 968284 }, --Volcanic Sandwich
 			{ itemID = 967517, spellID = 968287 }, --Winter Wontons
@@ -666,7 +666,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 967544, spellID = 968314 }, --Scorching Hot Steak
 			{ itemID = 967547, spellID = 968317 }, --Lively Stew
 			{ itemID = 967550, spellID = 968320 }, --Crawling Steak
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967600, spellID = 968370 }, --Subtle Sandwich
 			{ itemID = 967603, spellID = 968373 }, --Subtle Wontons
 			{ itemID = 967606, spellID = 968376 }, --Subtle Sulferous Soup
@@ -680,7 +680,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 967630, spellID = 968400 }, --Slick-fil-A Sandwich
 			{ itemID = 967552, spellID = 968322 }, --Breakonator Sandwich
 			{ itemID = 967600, spellID = 968370 }, --Subtle Steak
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967601, spellID = 968371 }, --Subtle Sandwich
 			{ itemID = 967604, spellID = 968374 }, --Subtle Wontons
 			{ itemID = 967607, spellID = 968377 }, --Subtle Sulferous Soup
@@ -694,7 +694,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 967631, spellID = 968401 }, --Slick-fil-A Sandwich
 			{ itemID = 967553, spellID = 968323 }, --Breakonator Sandwich
 			{ itemID = 967598, spellID = 968368 }, --Subtle Steak
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967555, spellID = 968325 }, --Master Wontons
 			{ itemID = 967558, spellID = 968328 }, --Big Whack Sandwich
 			{ itemID = 967561, spellID = 968331 }, --Warping Wontons
@@ -709,7 +709,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 967588, spellID = 968358 }, --Stormwich Sandwich
 			{ itemID = 967591, spellID = 968361 }, --Warding Wontons
 			{ itemID = 967594, spellID = 968364 }, --Rolling Meatballs
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967556, spellID = 968326 }, --Master Wontons
 			{ itemID = 967559, spellID = 968329 }, --Big Whack Sandwich
 			{ itemID = 967562, spellID = 968332 }, --Warping Wontons
@@ -905,7 +905,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 11287, spellID = 14293 }, --Lesser Magic Wand
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968677 }, --Enchant Weapon - Unstoppable Assault
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968680 }, --Enchant Weapon - Lucid Assault
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968683 }, --Enchant Weapon - Spellbinder's Rage
@@ -916,7 +916,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968698 }, --Enchant Weapon - Arcane Artillery
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968701 }, --Enchant Weapon - Arcane Precision
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968770 }, --Enchant Weapon - Crusader II
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968678 }, --Enchant Weapon - Greater Unstoppable Assault
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968681 }, --Enchant Weapon - Greater Lucid Assualt
 			{icon = "Spell_Holy_GreaterHeal", spellID = 968684 }, --Enchant Weapon - Greater Spellbinder's Rage
@@ -1133,14 +1133,14 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 10577, spellID = 13240 }, --The Mortar: Reloaded
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967197, spellID = 968043 }, --Focused Gnomish Magnifying Lense
 			{ itemID = 967200, spellID = 968046 }, --Focused Gnomish Focusing Lense
 			{ itemID = 967203, spellID = 968049 }, --Focused Gnomish Prismatic Lense
 			{ itemID = 967206, spellID = 968052 }, --Focused Hipfire Scope
 			{ itemID = 967209, spellID = 968055 }, --Focused Precision Scope
 			{ itemID = 967212, spellID = 968058 }, --Focused Reflex Scope
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967198, spellID = 968044 }, --Polished Gnomish Magnifying Lense
 			{ itemID = 967201, spellID = 968047 }, --Polished Gnomish Focusing Lense
 			{ itemID = 967204, spellID = 968050 }, --Polished Gnomish Prismatic Lense
@@ -1471,14 +1471,14 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 29970, spellID = 36075 }, --Wildfeather Leggings
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967155, spellID = 968001 }, --Sturdy Yeti Gambeson
 			{ itemID = 967158, spellID = 968004 }, --Sturdy Devilsaur Gambeson
 			{ itemID = 967161, spellID = 968007 }, --Sturdy Plaguebat Gambeson
 			{ itemID = 967164, spellID = 968010 }, --Sturdy Sandworm Gambeson
 			{ itemID = 967167, spellID = 968013 }, --Sturdy Black Scale Gambeson
 			{ itemID = 967170, spellID = 968016 }, --Sturdy Blue Scale Gambeson
-			{ name = "Epic", icon = "INV_Box_01"},
+			{ name = "Epic", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967156, spellID = 968002 }, --Mastercraft Yeti Gambeson
 			{ itemID = 967159, spellID = 968005 }, --Mastercraft Devilsaur Gambeson
 			{ itemID = 967162, spellID = 968008 }, --Mastercraft Plaguebat Gambeson
@@ -1781,7 +1781,7 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 4344, spellID = 3915 }, --Brown Linen Shirt
 		},
 		{
-			{ name = "Rare", icon = "INV_Box_01"},
+			{ name = "Rare", icon ="INV_Box_01", pageBreak = true },
 			{ itemID = 967215, spellID = 968061 }, --Chain Cloak Lining
 			{ itemID = 967218, spellID = 968064 }, --Sustaining Cloak Lining
 			{ itemID = 967221, spellID = 968067 }, --Flowing Cloak Lining
