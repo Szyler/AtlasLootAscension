@@ -17,5 +17,8 @@
 ## LoadOnDemand: 1
 
 MapData.lua
-burningcrusade.lua
+Instances.lua
+Factions.lua
+Pvp.lua
+Collections.lua
 

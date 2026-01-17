@@ -17,5 +17,7 @@
 ## LoadOnDemand: 1
 
 MapData.lua
-originalwow.lua
-
+Instances.lua
+Factions.lua
+Pvp.lua
+Collections.lua
