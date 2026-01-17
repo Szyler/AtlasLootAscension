@@ -115,8 +115,9 @@ local itemEquipLocConversion = {
 
 -- custom getiteminfo returns same formate as getiteminfo but will use info from either getiteminfo or getiteminfoinstant
 function AtlasLoot:GetItemInfo(item, dontCache)
-	if not item then return end
+	if not item or item == 0 then return end
 	item = tonumber(item) and Item:CreateFromID(item) or Item:CreateFromLink(item)
+	if not item then return end
 	local itemDescription
 	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = GetItemInfo(item.itemID)
 	if not dontCache and not item:GetInfo() then
