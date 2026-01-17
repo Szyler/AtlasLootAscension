@@ -87,22 +87,17 @@ AtlasLoot_CraftingData["Seasonal"] = {
 [6] = { "Day of the Dead" }, -- Day of the Dead
 }
 
+AtlasLoot:AddSecondaryLootTable({
 ----------------------
 --- Heirloom Items ---
 ----------------------
-AtlasLoot_Data["Heirloom"] = {
-	Name = "Heirloom",
-	{
-		Name = "Trinkets",
+	["Heirloom"] = {
 		{
 			{ itemID = 1642992, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }, --Discerning Eye of the Beast
 			{ itemID = 1642991, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }, --Swift Hand of Justice
 			{ itemID = 1644098, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }, --Inherited Insignia of the Alliance
 			{ itemID = 1644097, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }, --Inherited Insignia of the Horde
 		},
-	},
-	{
-		Name = "Necks",
 		{
 			{ itemID = 1339077, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },
 			{ itemID = 1339076, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },
@@ -110,9 +105,6 @@ AtlasLoot_Data["Heirloom"] = {
 			{ itemID = 339076, price = ""  }, --Pendant of Adventure
 			{ itemID = 339100, price = ""  }, --Pendant of Discovery
 		},
-	},
-	{
-		Name = "Rings",
 		{
 			{ itemID = 1339079, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },
 			{ itemID = 1339080, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },
@@ -121,9 +113,6 @@ AtlasLoot_Data["Heirloom"] = {
 			{ itemID = 1339083, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },
 			{ itemID = 50255 }, --Dread Pirate Ring
 		},
-	},
-	{
-		Name = "Weapons",
 		{
 			{ itemID = 1642944, price = "600 #tokenofprestige# | 96000 #marks# | 600 #bazaar#"  }, --Balanced Heartseeker
 			{ itemID = 1642945, price = "600 #tokenofprestige# | 96000 #marks# | 600 #bazaar#"  }, --Venerable Dal'Rend's Sacred Charge
@@ -146,9 +135,6 @@ AtlasLoot_Data["Heirloom"] = {
 			{ itemID = 1644093, price = "1000 #tokenofprestige# | 160000 #marks# | 800 #bazaar#"  }, --Upgraded Dwarven Hand Cannon
 			{ itemID = 1642846, price = "1000 #tokenofprestige# | 160000 #marks# | 800 #bazaar#"  }, --Wand of the Forgotten Lich
 		},
-	},
-	{
-		Name = "Might",
 		{
 			{ itemID = 1339126, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" }, --Head
 			{ itemID = 3142949, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  },	--Shoulders
@@ -160,9 +146,6 @@ AtlasLoot_Data["Heirloom"] = {
 			{ itemID = 1339119, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" },	--Legs
 			{ itemID = 1339105, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Boots
 		},
-	},
-	{
-		Name = "Shadowcraft",
 		{
 			{ itemID = 1339121, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" }, --Head
 			{ itemID = 1642952, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#" }, --Shoulders
@@ -174,9 +157,6 @@ AtlasLoot_Data["Heirloom"] = {
 			{ itemID = 1339114, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" }, --Legs
 			{ itemID = 1339100, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" }, --Boots
 		},
-	},
-	{
-		Name = "Dreadmist",
 		{
 			{ itemID = 1339120, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Head
 			{ itemID = 1642985, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#" },	--Shoulders
@@ -188,9 +168,6 @@ AtlasLoot_Data["Heirloom"] = {
 			{ itemID = 1339113, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" },	--Legs
 			{ itemID = 1339099, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Boots
 		},
-	},
-	{
-		Name = "Herods",
 		{
 			{ itemID = 1339124, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Head
 			{ itemID = 1642950, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#" },	--Shoulders
@@ -202,9 +179,6 @@ AtlasLoot_Data["Heirloom"] = {
 			{ itemID = 1339117, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" },	--Legs
 			{ itemID = 1339103, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Boots
 		},
-	},
-	{
-		Name = "Elements",
 		{
 			{ itemID = 1339123, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Head
 			{ itemID = 1642951, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#" },	--Shoulders
@@ -216,9 +190,6 @@ AtlasLoot_Data["Heirloom"] = {
 			{ itemID = 1339116, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" },	--Legs
 			{ itemID = 1339102, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Boots
 		},
-	},
-	{
-		Name = "Valor",
 		{
 			{ itemID = 1339125, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Head
 			{ itemID = 1642949, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#" },	--Shoulders
@@ -230,9 +201,6 @@ AtlasLoot_Data["Heirloom"] = {
 			{ itemID = 1339118, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" },	--Legs
 			{ itemID = 1339104, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Boots		
 		},
-	},
-	{
-		Name = "IronFeather",
 		{
 			{ itemID = 1339122, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Head
 			{ itemID = 1642984, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#" },	--Shoulders
@@ -244,9 +212,6 @@ AtlasLoot_Data["Heirloom"] = {
 			{ itemID = 1339115, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" },	--Legs
 			{ itemID = 1339101, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Boots
 		},
-	},
-	{
-		Name = "Pvp Shoulders",
 		{
 			{ itemID = 1644107, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }, --Exquisite Sunderseer Mantle
 			{ itemID = 1644103, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }, --Exceptional Stormshroud Shoulders
@@ -257,7 +222,7 @@ AtlasLoot_Data["Heirloom"] = {
 			{ itemID = 1644099, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }, --Strengthened Stockade Pauldrons
 		},
 	},
-}
+})
 
 WorldforgedClassic = {
 	{ itemID = 202555 }, --Rusty Blunderbuss
