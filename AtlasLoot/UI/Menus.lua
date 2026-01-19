@@ -208,17 +208,17 @@ function AtlasLoot:InitializeMenus()
 		{ "", "WorldEpicsCLASSIC"},
 		{ "", "MarkOfTriumph"},
 		{ "Worldforged Items", "WorldforgedClassic", OnDamand = {"WorldforgedClassic", false}},
-		{ "Dungeon Sets", "T1", "Header"},
-		{ "", "T0"},
-		{ "", "T0.5"},
-		{ "Raid Sets", "T1", "Header"},
+		{ "Dungeon Sets", "TONE", "Header"},
+		{ "", "DungeonSetsCLASSIC"},
+		{ "", "DungeonSetsUpgradedCLASSIC"},
+		{ "Raid Sets", "TONE", "Header"},
 		{ "", "ZGSets"},
 		{ "", "AQ20Sets"},
-		{ "Tier Sets", "T1", "Header"},
-		{ "", "T1"},
-		{ "", "T2"},
+		{ "Tier Sets", "TONE", "Header"},
+		{ "", "TONE"},
+		{ "", "TTWO"},
 		{ "", "T2.5"},
-		{ "", "T3"},
+		{ "", "TTHREE"},
 	}
 
 	collection.CollectionsTBC = {
@@ -232,10 +232,10 @@ function AtlasLoot:InitializeMenus()
 		{ "", "BadgeShatt"},
 		{ "", "BadgeSunwell"},
 		{ "", "SunmoteSunwell"},
-		{ "Tier Sets", "T4", "Header"},
-		{ "", "T4"},
-		{ "", "T5"},
-		{ "", "T6"},
+		{ "Tier Sets", "TFOUR", "Header"},
+		{ "", "TFOUR"},
+		{ "", "TFIVE"},
+		{ "", "TSIX"},
 	}
 	collection.CollectionsWRATH = {
 		Module = "AtlasLootWotLK",
@@ -248,11 +248,11 @@ function AtlasLoot:InitializeMenus()
 		{ "", "EmblemofConquest"},
 		{ "", "EmblemofTriumph"},
 		{ "", "EmblemofFrost"},
-		{ "Tier Sets", "T7", "Header"},
-		{ "", "T7"},
-		{ "", "T8"},
-		{ "", "T9"},
-		{ "", "T10"},
+		{ "Tier Sets", "TSEVEN", "Header"},
+		{ "", "TSEVEN"},
+		{ "", "TEIGHT"},
+		{ "", "TNINE"},
+		{ "", "TTEN"},
 	}
 
 	------------------------------------- Vanity Menus -------------------------------------

@@ -143,7 +143,7 @@ AtlasLoot:AddSecondaryLootTable({
 ---Tier 4 ---
 --------------
 
-	["T4"] = {
+	["TFOUR"] = {
 			{
 				{ itemID = 29098, desc = {"Karazhan", "Prince Malchezaar"} }, --Stag-Helm of Malorne
 				{ itemID = 29100, desc = {"Gruul's Lair", "High King Maulgar"} }, --Mantle of Malorne
@@ -276,7 +276,7 @@ AtlasLoot:AddSecondaryLootTable({
 	---Tier 5 ---
 	--------------
 
-	["T5"] = {
+	["TFIVE"] = {
 			{
 				{ itemID = 30228, desc = {"Serpentshrine Cavern", "Lady Vashj"} }, --Nordrassil Headdress
 				{ itemID = 30230, desc = {"The Eye", "Void Reaver"} }, --Nordrassil Feral-Mantle
@@ -409,7 +409,7 @@ AtlasLoot:AddSecondaryLootTable({
 ---Tier 6 ---
 --------------
 
-	["T6"] = {
+	["TSIX"] = {
 			{
 				{ itemID = 31039, desc = {"Hyjal Summit", "Archimonde"} }, --Thunderheart Cover
 				{ itemID = 31048, desc = {"Black Temple", "Mother Shahraz"} }, --Thunderheart Pauldrons

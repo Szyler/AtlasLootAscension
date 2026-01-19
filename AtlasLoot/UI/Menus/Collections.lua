@@ -28,7 +28,7 @@ AtlasLoot:AddNewMenus({
 		{ "Mark of Triumph Vendor", {} },
 	},
 
-    ["T0"] = {
+    ["DungeonSetsCLASSIC"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Dungeon Sets",
         Type = "ClassicDungeonExt",
@@ -52,7 +52,7 @@ AtlasLoot:AddNewMenus({
         { "Deathbone Guardian", {} },
 	},
 
-    ["T0.5"] = {
+    ["DungeonSetsUpgradedCLASSIC"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Dungeon Sets Quest Upgrades",
         Type = "ClassicDungeonExt",
@@ -67,7 +67,7 @@ AtlasLoot:AddNewMenus({
         { "Battlegear of Heroism", {} },
 	},
 
-    ["T1"] = {
+    ["TONE"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Tier 1",
         Type = "ClassicRaid",
@@ -91,7 +91,7 @@ AtlasLoot:AddNewMenus({
         { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Dps", {} },
 	},
 
-    ["T2"] = {
+    ["TTWO"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Tier 2",
         Type = "ClassicRaid",
@@ -116,7 +116,7 @@ AtlasLoot:AddNewMenus({
         { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Dps", {} },
 	},
 
-	["T3"] = {
+	["TTHREE"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Tier 3",
         Type = "ClassicRaid",
@@ -258,7 +258,7 @@ AtlasLoot:AddNewMenus({
 		{ "Verdant's Regalia", {} },
 	},
 
-	["T4"] = {
+	["TFOUR"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Tier 4",
         Type = "BCRaid",
@@ -283,7 +283,7 @@ AtlasLoot:AddNewMenus({
         { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Dps", {} },
 	},
 
-	["T5"] = {
+	["TFIVE"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Tier 5",
         Type = "BCRaid",
@@ -308,7 +308,7 @@ AtlasLoot:AddNewMenus({
         { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Dps", {} },
 	},
 
-	["T6"] = {
+	["TSIX"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Tier 6",
         Type = "BCRaid",

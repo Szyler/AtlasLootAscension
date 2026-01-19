@@ -8725,7 +8725,7 @@ AtlasLoot_Data["VentureBay"] = {
 ---------- Naxx Sets (T7) -------------
 ---------------------------------------
 
-AtlasLoot_Data["T7"] = {
+AtlasLoot_Data["TSEVEN"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = "Tier 7",
 	Type = "WrathRaid",
@@ -9059,7 +9059,7 @@ AtlasLoot_Data["T7"] = {
 ---------- Ulduar Sets (T8) -----------
 ---------------------------------------
 
-AtlasLoot_Data["T8"] = {
+AtlasLoot_Data["TEIGHT"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = "Tier 8",
 	Type = "WrathRaid",
@@ -9390,7 +9390,7 @@ AtlasLoot_Data["T8"] = {
 ------------------------
 --- Tier 9 Sets (T9) ---
 ------------------------
-AtlasLoot_Data["T9"] = {
+AtlasLoot_Data["TNINE"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = "Tier 9",
 	Type = "WrathRaid",
@@ -10350,7 +10350,7 @@ AtlasLoot_Data["T9"] = {
 --------------------------
 --- Tier 10 Sets (T10) ---
 --------------------------
-AtlasLoot_Data["T10"] = {
+AtlasLoot_Data["TTEN"] = {
 	Module = "AtlasLoot_WrathoftheLichKing",
 	Name = "Tier 10",
 	Type = "WrathRaid",

@@ -51,7 +51,7 @@ AtlasLoot:AddSecondaryLootTable({
 	------------------------------------
 	--- Dungeon 1 and 2 Sets (D1/D2) ---
 	------------------------------------
-	["T0"] = {
+	["DungeonSetsCLASSIC"] = {
 		{
 			{ itemID = 16720, desc = "Darkmaster Gandling - Scholo" }, --Wildheart Cowl
 			{ itemID = 16718, desc = "Gizrul the Slavener - LBRS" }, --Wildheart Spaulders
@@ -234,7 +234,7 @@ AtlasLoot:AddSecondaryLootTable({
 		},
 	},
 
-	["T0.5"] = {
+	["DungeonSetsUpgradedCLASSIC"] = {
 		{
 			{ itemID = 22109, maxDifficulty = "Normal" },  --Feralheart Cowl
 			{ itemID = 22112, maxDifficulty = "Normal" },  --Feralheart Spaulders
@@ -331,7 +331,7 @@ AtlasLoot:AddSecondaryLootTable({
 	--- Tier 1/2 Sets (T1/T2) ---
 	-----------------------------
 
-	["T1"] = {
+	["TONE"] = {
 		{
 			{ itemID = 16834, desc = "Garr" }, --Cenarion Helm
 			{ itemID = 16836, desc = "Baron Geddon" }, --Cenarion Spaulders
@@ -515,7 +515,7 @@ AtlasLoot:AddSecondaryLootTable({
 	},
 
 	-- T2 Sets
-	["T2"] = {
+	["TTWO"] = {
 		{
 			{ itemID = 16900, desc = "Onyxia" },--Stormrage Cover
 			{ itemID = 16902, desc = "Chromaggus" },--Stormrage Pauldrons
@@ -692,7 +692,7 @@ AtlasLoot:AddSecondaryLootTable({
 	--- Tier 3 Sets (T3) ---
 	------------------------
 
-	["T3"] = {
+	["TTHREE"] = {
 		{
 			{ itemID = 22490 }, --Dreamwalker Headpiece
 			{ itemID = 22491 }, --Dreamwalker Spaulders
