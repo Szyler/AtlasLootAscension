@@ -114,6 +114,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
         self.ui.currentInstanceButton:Show()
         self.ui.favoritesButton:Show()
 	else
+		self.ui.tabs.Search:Show()
 		self.ui.tabs.Loot.TableScrollFrame:Hide()
         self.ui.currentInstanceButton:Hide()
         self.ui.favoritesButton:Hide()

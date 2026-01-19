@@ -441,3 +441,21 @@ function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 	if not itemData then return end
 	return dataSource, itemData, #itemData
 end
+
+local sourceKeyTable
+function AtlasLoot:GetSourcesExtendedInfo()
+	if not sourceKeyTable then
+		sourceKeyTable = {}
+		local collections = self.ui.menus.data
+			for collectionName, collection in pairs(collections) do
+				for i, collectionNum in ipairs(collection) do
+					if collectionNum[2] and collectionNum[2][1] then
+						sourceKeyTable[collectionNum[2][1]] = {collection, i, collectionName}
+					else
+						sourceKeyTable[collectionName..i] = {collection, i, collectionName}
+					end
+				end
+			end
+	end
+	return sourceKeyTable
+end

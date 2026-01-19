@@ -642,27 +642,19 @@ function AtlasLoot:InitializeSearch()
         wipe(itemList)
 
         local searchTerms = parseQuery(searchText)
-        for dataID, data in pairs(AtlasLoot_Data) do
-            if self.selectedProfile.SearchOn[data.Type] and self.selectedProfile.SearchOn[data.Type][1] or (self.selectedProfile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
-                for tableNum, t in ipairs(data) do
-                    if type(t) == "table" then
-                        for _, side in pairs(t) do
-                            if type(side) == "table" then
-                                for _, itemData in pairs(side) do
-                                    if type(itemData) == "table" then
-                                        if itemData.itemID or itemData.spellID then
-                                            if data.Type then
-                                                itemData.Type = data.Type
-                                            end
-                                            if self.selectedProfile.showdropLocationOnSearch then
-                                                itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
-                                            end
-                                            tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
-                                        end
-                                    end
-                                end
-                            end
+        local extendedInfoTable = self:GetSourcesExtendedInfo()
+        for dataID, data in pairs(self.itemData) do
+            local extendedInfo = extendedInfoTable[dataID]
+            if extendedInfo and extendedInfo[1] and self.selectedProfile.SearchOn[extendedInfo[1].Type] and self.selectedProfile.SearchOn[extendedInfo[1].Type][1] or (self.selectedProfile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
+                for _, itemData in ipairs(data) do
+                    if itemData.itemID or itemData.spellID then
+                        if extendedInfo[1].Type then
+                            itemData.Type = extendedInfo[1].Type
                         end
+                        if self.selectedProfile.showdropLocationOnSearch then
+                            itemData.dropLoc = {extendedInfo[1].DisplayName or extendedInfo[1].Name, extendedInfo[1][extendedInfo[2]][1]}
+                        end
+                        tinsert(itemList, {{itemData, extendedInfo[3], extendedInfo[2], searchTerms, searchText}})
                     end
                 end
             end
