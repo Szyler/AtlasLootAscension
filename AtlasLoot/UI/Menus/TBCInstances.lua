@@ -4,7 +4,7 @@ AtlasLoot:AddNewMenus({
 	--TBC Instances
 	["AuchCrypts"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Auchindoun" .. ": " .. "Auchenai Crypts",
+		Name = "Auchindoun - Auchenai Crypts",
 		DisplayName = "Auchenai Crypts",
 		Type = "BCDungeon",
 		Map = "AuchAuchenaiCrypts",
@@ -15,7 +15,7 @@ AtlasLoot:AddNewMenus({
 
 	["AuchManaTombs"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Auchindoun" .. ": " .. "Mana-Tombs",
+		Name = "Auchindoun - Mana-Tombs",
 		DisplayName = "Mana-Tombs",
 		Type = "BCDungeon",
 		Map = "AuchManaTombs",
@@ -27,7 +27,7 @@ AtlasLoot:AddNewMenus({
 
 	["AuchSethekk"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Auchindoun" .. ": " .. "Sethekk Halls",
+		Name = "Auchindoun - Sethekk Halls",
 		DisplayName = "Sethekk Halls",
 		Type = "BCDungeon",
 		Map = "AuchSethekkHalls",
@@ -39,7 +39,7 @@ AtlasLoot:AddNewMenus({
 
 	["AuchShadowLab"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Auchindoun" .. ": " .. "Shadow Labyrinth",
+		Name = "Auchindoun - Shadow Labyrinth",
 		DisplayName = "Shadow Labyrinth",
 		Type = "BCDungeon",
 		Map = "AuchShadowLabyrinth",
@@ -71,7 +71,7 @@ AtlasLoot:AddNewMenus({
 
 	["CoTOldHillsbrad"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Caverns of Time" .. ": " .. "Old Hillsbrad Foothills",
+		Name = "Caverns of Time - Old Hillsbrad Foothills",
 		DisplayName = "Old Hillsbrad Foothills",
 		Type = "BCDungeon",
 		Map = "CoTOldHillsbrad",
@@ -83,7 +83,7 @@ AtlasLoot:AddNewMenus({
 
 	["CoTBlackMorass"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Caverns of Time" .. ": " .. "The Black Morass",
+		Name = "Caverns of Time - The Black Morass",
 		DisplayName = "The Black Morass",
 		Type = "BCDungeon",
 		Map = "CoTBlackMorass",
@@ -94,7 +94,7 @@ AtlasLoot:AddNewMenus({
 
 	["CoTHyjal"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Caverns of Time" .. ": " .. "Hyjal Summit",
+		Name = "Caverns of Time - Hyjal Summit",
 		DisplayName = "Hyjal Summit",
 		Type = "BCRaid",
 		Map = "CoTHyjal",
@@ -111,7 +111,7 @@ AtlasLoot:AddNewMenus({
 
 	["CFRSlavePens"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Coilfang Reservoir" .. ": " .. "The Slave Pens",
+		Name = "Coilfang Reservoir - The Slave Pens",
 		DisplayName = "The Slave Pens",
 		Type = "BCDungeon",
 		Map = "CFRTheSlavePens",
@@ -122,7 +122,7 @@ AtlasLoot:AddNewMenus({
 
 	["CFRSteamvault"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Coilfang Reservoir" .. ": " .. "The Steamvault",
+		Name = "Coilfang Reservoir - The Steamvault",
 		DisplayName = "The Steamvault",
 		Type = "BCDungeon",
 		Map = "CFRTheSteamvault",
@@ -134,7 +134,7 @@ AtlasLoot:AddNewMenus({
 
 	["CFRUnderbog"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Coilfang Reservoir" .. ": " .. "The Underbog",
+		Name = "Coilfang Reservoir - The Underbog",
 		DisplayName = "The Underbog",
 		Type = "BCDungeon",
 		Map = "CFRTheUnderbog",
@@ -146,7 +146,7 @@ AtlasLoot:AddNewMenus({
 
 	["CFRSerpentshrine"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Coilfang Reservoir" .. ": " .. "Serpentshrine Cavern",
+		Name = "Coilfang Reservoir - Serpentshrine Cavern",
 		DisplayName = "Serpentshrine Cavern",
 		Type = "BCRaid",
 		Map = "CFRSerpentshrineCavern",
@@ -170,7 +170,7 @@ AtlasLoot:AddNewMenus({
 
 	["HCRamparts"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Hellfire Citadel" .. ": " .. "Hellfire Ramparts",
+		Name = "Hellfire Citadel - Hellfire Ramparts",
 		DisplayName = "Hellfire Ramparts",
 		Type = "BCDungeon",
 		Map = "HCHellfireRamparts",
@@ -181,7 +181,7 @@ AtlasLoot:AddNewMenus({
 
 	["HCFurnace"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Hellfire Citadel" .. ": " .. "The Blood Furnace",
+		Name = "Hellfire Citadel - The Blood Furnace",
 		DisplayName = "The Blood Furnace",
 		Type = "BCDungeon",
 		Map = "HCBloodFurnace",
@@ -192,7 +192,7 @@ AtlasLoot:AddNewMenus({
 
 	["HCShatteredHalls"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Hellfire Citadel" .. ": " .. "The Shattered Halls",
+		Name = "Hellfire Citadel - The Shattered Halls",
 		DisplayName = "The Shattered Halls",
 		Type = "BCDungeon",
 		Map = "HCTheShatteredHalls",
@@ -205,7 +205,7 @@ AtlasLoot:AddNewMenus({
 
 	["HCMagtheridon"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Hellfire Citadel" .. ": " .. "Magtheridon's Lair",
+		Name = "Hellfire Citadel - Magtheridon's Lair",
 		DisplayName = "Magtheridon's Lair",
 		Type = "BCRaid",
 		Map = "HCMagtheridonsLair",
@@ -235,7 +235,7 @@ AtlasLoot:AddNewMenus({
 
 	["MagistersTerrace"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Sunwell Isle" .. ": " .. "Magisters' Terrace",
+		Name = "Sunwell Isle - Magisters' Terrace",
 		DisplayName = "Magisters' Terrace",
 		Type = "BCDungeon",
 		Map = "MagistersTerrace",
@@ -248,7 +248,7 @@ AtlasLoot:AddNewMenus({
 
 	["TKArc"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Tempest Keep" .. ": " .. "The Arcatraz",
+		Name = "Tempest Keep - The Arcatraz",
 		DisplayName = "The Arcatraz",
 		Type = "BCDungeon",
 		Map = "TempestKeepArcatraz",
@@ -261,7 +261,7 @@ AtlasLoot:AddNewMenus({
 
 	["TKBot"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Tempest Keep" .. ": " .. "The Botanica",
+		Name = "Tempest Keep - The Botanica",
 		DisplayName = "The Botanica",
 		Type = "BCDungeon",
 		Map = "TempestKeepBotanica",
@@ -274,7 +274,7 @@ AtlasLoot:AddNewMenus({
 
 	["TKMech"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Tempest Keep" .. ": " .. "The Mechanar",
+		Name = "Tempest Keep - The Mechanar",
 		DisplayName = "The Mechanar",
 		Type = "BCDungeon",
 		Map = "TempestKeepMechanar",
@@ -286,7 +286,7 @@ AtlasLoot:AddNewMenus({
 
 	["TKEye"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Tempest Keep" .. ": " .. "The Eye",
+		Name = "Tempest Keep - The Eye",
 		DisplayName = "The Eye",
 		Type = "BCRaid",
 		Map = "TempestKeepTheEye",
@@ -300,7 +300,7 @@ AtlasLoot:AddNewMenus({
 
 	["SunwellPlateau"] = {
 		Module = "AtlasLoot_BurningCrusade",
-		Name = "Sunwell Isle" .. ": " .. "Sunwell Plateau",
+		Name = "Sunwell Isle - Sunwell Plateau",
 		DisplayName = "Sunwell Plateau",
 		Type = "BCRaid",
 		Map = "SunwellPlateau",
