@@ -2,6 +2,12 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
 AtlasLoot:AddNewMenus({
 	--TBC Instances
+	["BCKeys"] = {
+		Module = "AtlasLoot_BurningCrusade",
+		Name = "BCKeys",
+		{ "BCKeys", {} },
+	},
+
 	["AuchCrypts"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		Name = "Auchindoun - Auchenai Crypts",

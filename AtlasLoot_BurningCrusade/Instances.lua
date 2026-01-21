@@ -1,11 +1,7 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-
 local color = AtlasLoot.Colors
-
-
-
-
 local gap = {"gap"}
+
 --Index
 ---Dungeons & BCRaids
 ----Keys
@@ -102,40 +98,34 @@ AtlasLoot:AddSecondaryLootTable({
 			{ itemID = 29309, rep = "Exalted", maxDifficulty = "Normal" }, --Flawless Band of the Eternal Restorer
 		},
 
-	}
+	},
+
+	------------
+	---Keys ---
+	------------
+	["BCKeys"] = {
+			{
+				{ itemID = 27991 }, --Shadow Labyrinth Key
+				{ itemID = 28395 }, --Shattered Halls Key
+				{ itemID = 31084 }, --Key to the Arcatraz
+				{ itemID = 30622, minDifficulty = "Heroic" }, --Flamewrought Key
+				{ itemID = 30637, minDifficulty = "Heroic" }, --Flamewrought Key
+				{ itemID = 30623, minDifficulty = "Heroic" }, --Reservoir Key
+				{ itemID = 30633, minDifficulty = "Heroic" }, --Auchenai Key
+				{ itemID = 30635, minDifficulty = "Heroic" }, --Key of Time
+				{ itemID = 30634, minDifficulty = "Heroic" }, --Warpforged Key
+				{ icon = "INV_Box_01", name = color.WHITE.."Raid", minDifficulty = "Heroic" },
+				{ itemID = 24490, minDifficulty = "Heroic" }, --The Master's Key
+				{ icon = "INV_Box_01", name = color.WHITE.."Misc", minDifficulty = "Heroic" },
+				{ itemID = 32092, minDifficulty = "Heroic" }, --The Eye of Haramad
+				{ itemID = 32449, minDifficulty = "Heroic" }, --Essence-Infused Moonstone
+			},
+	},
 })
 
 ------------------------
----Dungeons & BCRaids ---
+-- Dungeons & BCRaids --
 ------------------------
-
-------------
----Keys ---
-------------
-
-AtlasLoot_Data["BCKeys"] = {
-	Module = "AtlasLoot_BurningCrusade",
-	Name = "BCKeys",
-	{
-		Name = "BCKeys",
-		{
-			{ itemID = 27991 }, --Shadow Labyrinth Key
-			{ itemID = 28395 }, --Shattered Halls Key
-			{ itemID = 31084 }, --Key to the Arcatraz
-			{ itemID = 30622, minDifficulty = "Heroic" }, --Flamewrought Key
-			{ itemID = 30637, minDifficulty = "Heroic" }, --Flamewrought Key
-			{ itemID = 30623, minDifficulty = "Heroic" }, --Reservoir Key
-			{ itemID = 30633, minDifficulty = "Heroic" }, --Auchenai Key
-			{ itemID = 30635, minDifficulty = "Heroic" }, --Key of Time
-			{ itemID = 30634, minDifficulty = "Heroic" }, --Warpforged Key
-			{ icon = "INV_Box_01", name = color.WHITE.."Raid", minDifficulty = "Heroic" },
-			{ itemID = 24490, minDifficulty = "Heroic" }, --The Master's Key
-			{ icon = "INV_Box_01", name = color.WHITE.."Misc", minDifficulty = "Heroic" },
-			{ itemID = 32092, minDifficulty = "Heroic" }, --The Eye of Haramad
-			{ itemID = 32449, minDifficulty = "Heroic" }, --Essence-Infused Moonstone
-		},
-	},
-}
 
 -----------------------------------
 ---Auchindoun: Auchenai Crypts ---
