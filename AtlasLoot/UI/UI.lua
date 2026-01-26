@@ -216,10 +216,14 @@ function AtlasLoot:InitializeUI()
     end
 
     -- Learn Unknown vanity spells button
-    self.ui.learnSpellbtn = CreateFrame("Button", "AtlasLoot_LearnUnknownSpells", self.itemframe, "OptionsButtonTemplate")
-    self.ui.learnSpellbtn:SetPoint("BOTTOM", self.itemframe, "BOTTOM",0,5)
-    self.ui.learnSpellbtn:SetText("Learn All Unknown")
-    self.ui.learnSpellbtn:SetWidth(150)
+    self.ui.learnSpellbtn = CreateFrame("Button", "AtlasLoot_LearnUnknownSpells", self.itemframe)
+    self.ui.learnSpellbtn:SetPoint("BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",35,0)
+    self.ui.learnSpellbtn:SetSize(55,55)
+    self.ui.learnSpellbtn.IconAtlas = self.ui.learnSpellbtn:CreateTexture(nil, "ARTWORK")
+    self.ui.learnSpellbtn.IconAtlas:SetPoint("CENTER", 0, 0)
+    self.ui.learnSpellbtn.IconAtlas:SetSize(35,35)
+    self.ui.learnSpellbtn.IconAtlas:SetAtlas("bonusloot-chest")
+    self.ui.learnSpellbtn:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
     self.ui.learnSpellbtn:SetScript("OnClick", function() self:LearnAllUnknownVanitySpells() end)
     self.ui.learnSpellbtn:SetScript("OnEnter", function(button)
         self:SetGameTooltip(button,"Learn all the vanity items and spells that you currently don't know on this character")

@@ -48,28 +48,42 @@ end
 
 
 function AtlasLoot:CreateVanityCollection()
+	local itemData = self.itemData
+
+	local function createCatagory(cat, name)
+		cat = gsub(cat, "Vanity", "")
+		if itemData["Vanity"..cat] then return end
+		itemData["Vanity"..cat] = {dontSort = true}
+		self:AddNewMenus({["Vanity"..cat] = {
+			Name = name,
+			vanity = true,
+			Module = "AtlasLoot_Ascension_Vanity",
+			{name, {"Vanity"..cat}}
+		}})
+	end
+
 	local function findGroup(group)
 		for cat, flag in pairs(Enum.VanityCategory) do
 			if type(flag) == "table" then
 				for subcat, subflag in pairs(flag) do
-					if not AtlasLoot_Data["Vanity"..subcat] then AtlasLoot_Data["Vanity"..subcat] = { Name = CollectionNames(subcat), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
+					createCatagory(subcat, CollectionNames(subcat))
 					if bit.contains(subflag, group) then
 						return "Vanity"..subcat
 					end
 				end
 			else
-				if not AtlasLoot_Data["Vanity"..cat] then AtlasLoot_Data["Vanity"..cat] = { Name = CollectionNames(cat), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
+				createCatagory(cat, CollectionNames(cat))
 				if bit.contains(flag, group) then
 					return "Vanity"..cat
 				end
 			end
 		end
-		if not AtlasLoot_Data["VanityUncategorized"] then AtlasLoot_Data["VanityUncategorized"] = { Name = CollectionNames("Uncategorized"), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
+		createCatagory("VanityUncategorized", "Uncategorized")
 		return "VanityUncategorized"
 	end
 
     local function setGroup(group, name)
-       	if not AtlasLoot_Data["Vanity"..group] then AtlasLoot_Data["Vanity"..group] = { Name = name or group, vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
+		createCatagory(group, name or group)
 		return "Vanity"..group
     end
 
@@ -131,7 +145,7 @@ function AtlasLoot:CreateVanityCollection()
 		if item.contentsPreview and #item.contentsPreview > 1 then
 			contentsPreview = {}
 			for _,itemID in pairs(item.contentsPreview) do
-				tinsert(contentsPreview, { itemID = itemID })
+				table.insert(contentsPreview, { itemID = itemID })
 			end
 		end
 		local description
@@ -140,26 +154,22 @@ function AtlasLoot:CreateVanityCollection()
 		end
 		local price = item.btCost > 0 and item.btCost .. " #bazaar#" or nil
 		if not categorieList[group] then categorieList[group] = {} end
-		tinsert(categorieList[group], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, price = price })
+		table.insert(categorieList[group], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, price = price })
 	end
+
 	for groupName, categorie in pairs(categorieList) do
-		for i, item in ipairs(categorie) do
-			if not AtlasLoot_Data[groupName][1] then
-				AtlasLoot_Data[groupName][1] = {Name = groupName, {}, {}}
-			end
-			local pageSide = AtlasLoot_Data[groupName][1][1]
-			if i > 15 and i > (#categorie/2) then
-				pageSide = AtlasLoot_Data[groupName][1][2]
-			end
-			tinsert(pageSide, item)
+		createCatagory(groupName, groupName)
+		for _, item in ipairs(categorie) do
+			table.insert(itemData[groupName], item)
 		end
 	end
+	
 end
 
 function AtlasLoot:LearnAllUnknownVanitySpells()
 	local unknownSpells = {}
 	local function parseCollection(group)
-		for _, catagory in ipairs(AtlasLoot_Data[group]) do
+		for _, catagory in ipairs(self.itemData[group]) do
 			for _, side in ipairs(catagory) do
 				if type(catagory) == "table" then
 					for _, item in ipairs(side) do
@@ -189,7 +199,7 @@ function AtlasLoot:LearnAllUnknownVanitySpells()
 	end
 	local newSpellList = {}
 	for _, itemID in pairs(unknownSpells) do
-		tinsert(newSpellList, itemID)
+		table.insert(newSpellList, itemID)
 	end
 	self:BatchRequestVanity(newSpellList)
 end
@@ -206,7 +216,7 @@ function AtlasLoot:BatchRequestVanity(itemList)
 			RequestDeliverVanityCollectionItem(task)
             local count = GetItemCount(task)
 			if not CA_IsSpellKnown(VANITY_ITEMS[task].learnedSpell) and (not count or (count and count < duplicateList[task])) then
-				tinsert(itemList, task)
+				table.insert(itemList, task)
 			end
 			return Timer.After(.2, nextItem)
         end
