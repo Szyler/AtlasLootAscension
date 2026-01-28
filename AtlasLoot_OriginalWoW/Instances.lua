@@ -6683,34 +6683,32 @@ AtlasLoot_Data["WorldBossesCLASSIC"] = {
 ------------------------
 -- Item Sacks Classic --
 ------------------------
-
-AtlasLoot_ExtraData[22637] = {
-	{ itemID = 19790 }, --Animist's Caress
-	{ itemID = 19785 }, --Falcon's Call
-	{ itemID = 19787 }, --Presence of Sight
-	{ itemID = 19783 }, --Syncretist's Sigil
-	{ itemID = 19789 }, --Prophetic Aura
-	{ itemID = 19784 }, --Death's Embrace
-	{ itemID = 19786 }, --Vodouisant's Vigilant Embrace
-	{ itemID = 19788 }, --Hoodoo Hex
-	{ itemID = 19782 }, --Presence of Might
-}
-
-AtlasLoot_ExtraData[21232] = {
-	{ itemID = 21242 }, --Blessed Qiraji War Axe
-	{ itemID = 21272 }, --Blessed Qiraji Musket
-	{ itemID = 21244 }, --Blessed Qiraji Pugio
-	{ itemID = 21269 }, --Blessed Qiraji Bulwark
-}
-
-AtlasLoot_ExtraData[21237] = {
-	{ itemID = 21273 }, --Blessed Qiraji Acolyte Staff
-	{ itemID = 21275 }, --Blessed Qiraji Augur Staff
-	{ itemID = 21268 }, --Blessed Qiraji War Hammer
-}
-
-AtlasLoot_ExtraData[21221] = {
-	{ itemID = 21710 }, --Cloak of the Fallen God
-	{ itemID = 21712 }, --Amulet of the Fallen God
-	{ itemID = 21709 }, --Ring of the Fallen God
-}
+AtlasLoot:AddNewDataTable("extraItemInfo", {
+	[22637] = {
+		{ itemID = 19790 }, --Animist's Caress
+		{ itemID = 19785 }, --Falcon's Call
+		{ itemID = 19787 }, --Presence of Sight
+		{ itemID = 19783 }, --Syncretist's Sigil
+		{ itemID = 19789 }, --Prophetic Aura
+		{ itemID = 19784 }, --Death's Embrace
+		{ itemID = 19786 }, --Vodouisant's Vigilant Embrace
+		{ itemID = 19788 }, --Hoodoo Hex
+		{ itemID = 19782 }, --Presence of Might
+	},
+	[21232] = {
+		{ itemID = 21242 }, --Blessed Qiraji War Axe
+		{ itemID = 21272 }, --Blessed Qiraji Musket
+		{ itemID = 21244 }, --Blessed Qiraji Pugio
+		{ itemID = 21269 }, --Blessed Qiraji Bulwark
+	},
+	[21237] = {
+		{ itemID = 21273 }, --Blessed Qiraji Acolyte Staff
+		{ itemID = 21275 }, --Blessed Qiraji Augur Staff
+		{ itemID = 21268 }, --Blessed Qiraji War Hammer
+	},
+	[21221] = {
+		{ itemID = 21710 }, --Cloak of the Fallen God
+		{ itemID = 21712 }, --Amulet of the Fallen God
+		{ itemID = 21709 }, --Ring of the Fallen God
+	},
+})

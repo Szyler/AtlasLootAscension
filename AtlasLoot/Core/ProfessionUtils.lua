@@ -184,7 +184,7 @@ end
 -- returns table of all the recipe source information
 function AtlasLoot:GetRecipeSource(spellID)
 	if not spellID then return end
-	local cData = AtlasLoot_CraftingData
+	local cData = self.data.crafting
 	local data = {}
 	-- extra information on where to find the recipe
 	-- trainer learnt
@@ -200,7 +200,7 @@ function AtlasLoot:GetRecipeSource(spellID)
 	if vendor then
 		tinsert(data, {"Source"..": "..self.Colors.WHITE.."Vendor"})
 		for _,v in pairs(vendor) do
-			local vendor = AtlasLoot_CraftingData["VendorList"][v]
+			local vendor = self.data.crafting["VendorList"][v]
 			tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5]})
 		end
 	end
@@ -208,7 +208,7 @@ function AtlasLoot:GetRecipeSource(spellID)
 	local recipeRepVendor = cData["RecipeRepVendor"][spellID]
 	if recipeRepVendor then
 		tinsert(data, {"Source"..": "..self.Colors.WHITE.."Vendor"})
-		local vendor = AtlasLoot_CraftingData["VendorList"][spellID]
+		local vendor = self.data.crafting["VendorList"][spellID]
 		for	i = 3, 6 do
 			if vendor and vendor[i] then
 			tinsert(data, {vendor[1], vendor[2], fac = vendor[i]})
@@ -231,7 +231,7 @@ function AtlasLoot:GetRecipeSource(spellID)
 			 end
 		end
 		for _,v in pairs(sort) do
-			 local vendor = AtlasLoot_CraftingData["VendorList"][v[1]]
+			 local vendor = self.data.crafting["VendorList"][v[1]]
 			 tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5], limited = v[2]})
 		end
 	end
@@ -240,7 +240,7 @@ function AtlasLoot:GetRecipeSource(spellID)
 	if mobDrop then
 		tinsert(data, {"Source"..": "..self.Colors.WHITE.."Mob Drop"})
 		for _,v in pairs(mobDrop) do
-			local mob = AtlasLoot_CraftingData["MobList"][v]
+			local mob = self.data.crafting["MobList"][v]
 			local cords = nil
 			if mob[3] ~= 0 and mob[4] ~= 0 then
 				cords = {mob[3], mob[4]}
@@ -263,7 +263,7 @@ function AtlasLoot:GetRecipeSource(spellID)
 	if questDrop then
 		tinsert(data, {"Source"..": "..self.Colors.WHITE.."Quest"})
 		for _,v in pairs(questDrop) do
-			local quest = AtlasLoot_CraftingData["QuestList"][v]
+			local quest = self.data.crafting["QuestList"][v]
 			tinsert(data, {quest[1],  quest[2], cords = {quest[3], quest[4]}, fac = quest[5]})
 		end
 	end
@@ -281,7 +281,7 @@ function AtlasLoot:GetRecipeSource(spellID)
 					 elseif i == 2 then
 						 line2 = "Required Reputation"..": "..self.Colors.WHITE..v
 					 else
-						 tinsert(list,AtlasLoot_CraftingData["VendorList"][v])
+						 tinsert(list,self.data.crafting["VendorList"][v])
 					 end
 				 end
 			 else
@@ -290,7 +290,7 @@ function AtlasLoot:GetRecipeSource(spellID)
 				 elseif i == 2 then
 					 line2 = "Required Reputation"..": "..self.Colors.WHITE..v
 				 else
-					 tinsert(list,AtlasLoot_CraftingData["VendorList"][v])
+					 tinsert(list,self.data.crafting["VendorList"][v])
 				 end
 			 end
 		end

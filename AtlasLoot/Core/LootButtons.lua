@@ -34,7 +34,7 @@ end
 function AtlasLoot:SetQuestTooltip(data)
     if not data.quest then return end
     for _,v in ipairs(data.quest) do
-        local quest = AtlasLoot_CraftingData["QuestList"][v]
+        local quest = self.data.crafting["QuestList"][v]
         local text = data.quest.text or ""
         GameTooltip:AddDoubleLine(quest[1], self.Colors.WHITE..text)
         GameTooltip:AddDoubleLine(quest[5][1]..quest[2], self.Colors.WHITE.." ("..self.Colors.GOLD..quest[3]..self.Colors.WHITE..", "..self.Colors.GOLD..quest[4]..self.Colors.WHITE..")")
@@ -198,14 +198,14 @@ function AtlasLoot:ItemOnClick(item, button)
             end
         elseif item.sourcePage and item.sourcePage[2] == "Token" then
             --Create token table if there isnt one
-            if AtlasLoot_TokenData[item.sourcePage[1]] == nil then
+            if self.data.token[item.sourcePage[1]] == nil then
                 self:CreateToken(item.sourcePage[1])
             end
-            dataID, dataSource, dataPage = item.sourcePage[1], "AtlasLoot_TokenData", 1
+            dataID, dataSource, dataPage = item.sourcePage[1], "token", 1
             --Show token table
             self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
-        elseif button == "LeftButton" and itemID and AtlasLoot_ExtraData[itemID] then
-            self:PopoupItemFrame(item, _G["AtlasLoot_ExtraData"][itemID] )
+        elseif button == "LeftButton" and itemID and self.data.extraItemInfo[itemID] then
+            self:PopoupItemFrame(item, self.data.extraItemInfo[itemID] )
             self.ui.itemPopupframe:Show()
         elseif button == "LeftButton" and item.contentsPreview then
             self:PopoupItemFrame(item, item.contentsPreview )
@@ -235,10 +235,10 @@ function AtlasLoot:ItemOnClick(item, button)
             end       
         elseif item.sourcePage and item.sourcePage[2] == "Token" then
             --Create token table if there isnt one
-            if AtlasLoot_TokenData[item.sourcePage[1]] == nil then
+            if self.data.token[item.sourcePage[1]] == nil then
                 self:CreateToken(item.sourcePage[1])
             end
-            dataID, dataSource, dataPage = item.sourcePage[1], "AtlasLoot_TokenData", 1
+            dataID, dataSource, dataPage = item.sourcePage[1], "token", 1
             --Show token table
             self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
         elseif button == "LeftButton" and recipeData then

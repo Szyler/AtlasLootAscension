@@ -505,7 +505,7 @@ end)
     function self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
         local dataSource, maxValue
         if dataSource_backup == "AtlasLoot_MapData" then
-            dataSource = _G[dataSource_backup][dataID][tablenum]
+            dataSource = self.data.map[dataID][tablenum]
             maxValue = #dataSource
         else
             dataSource = self:GetSourceData(dataSource_backup, dataID, tablenum)

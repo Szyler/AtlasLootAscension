@@ -316,7 +316,6 @@ function AtlasLoot:IsLootTableAvailable(dataSource)
 		LoadAddOn(moduleName)
 		loadedModules[moduleName] = true
 	end
-	self:CreateMainLootTable()
 end
 
 --------- rate limited item frame refresh ---------
@@ -436,8 +435,8 @@ end
 function AtlasLoot:GetDropRate(refLootEntry, groupID)
 	if not refLootEntry or not groupID then return end
 
-	if AtlasLoot_ItemDropRates[refLootEntry] and AtlasLoot_ItemDropRates[refLootEntry][groupID] then
-		return string.format("%.2f%%",(AtlasLoot_ItemDropRates[refLootEntry][groupID])*100) or nil
+	if self.data.itemDropRates[refLootEntry] and self.data.itemDropRates[refLootEntry][groupID] then
+		return string.format("%.2f%%",(self.data.itemDropRates[refLootEntry][groupID])*100) or nil
 	end
 end
 

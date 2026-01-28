@@ -48,7 +48,8 @@ end
 
 
 function AtlasLoot:CreateVanityCollection()
-	local itemData = self.itemData
+	self:InitializeDataTables()
+	local itemData = self.data.item
 
 	local function createCatagory(cat, name)
 		cat = gsub(cat, "Vanity", "")
@@ -169,7 +170,7 @@ end
 function AtlasLoot:LearnAllUnknownVanitySpells()
 	local unknownSpells = {}
 	local function parseCollection(group)
-		for _, catagory in ipairs(self.itemData[group]) do
+		for _, catagory in ipairs(self.data.item[group]) do
 			for _, side in ipairs(catagory) do
 				if type(catagory) == "table" then
 					for _, item in ipairs(side) do

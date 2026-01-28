@@ -1,6 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-AtlasLoot:AddSecondaryLootTable({
+AtlasLoot:AddNewItemDataTable({
 
     ----------------
     ---Factions ---
@@ -588,7 +588,7 @@ AtlasLoot:AddSecondaryLootTable({
     ---The Scale of the Sands ---
     ------------------------------
     ["ScaleSands"] = {
-	    AtlasLoot.itemData.scaleOfSandsRings1,
+	    AtlasLoot.data.item.scaleOfSandsRings1,
 		{
 			{ itemID = 32274 }, --Design: Bold Crimson Spinel
 			{ itemID = 32283 }, --Design: Bright Crimson Spinel

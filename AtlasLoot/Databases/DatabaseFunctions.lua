@@ -1,5 +1,13 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
+--Table holding all loot tables is initialised here as it loads early
+AtlasLoot_Data = {
+	["EmptyTable"] = {
+		Name = "Select a Loot Table...",
+		{Name = "Select a Loot Table..."},
+	}
+}
+
 local difficultys = {
 	{"Heroic Bloodforged", 2},
 	{"Bloodforged", 1},
@@ -235,25 +243,46 @@ replace with this
 
 ]]
 
-function AtlasLoot:CreateMainLootTable()
-	local function addItem(item)
-		if item.refLootEntry then
-			if not self.itemData[item.refLootEntry] then self.itemData[item.refLootEntry] = {} end
-			table.insert(self.itemData[item.refLootEntry], item)
-		end
-	end
-	self:RateLimitLoadTable(AtlasLoot_ItemData, addItem)
+function AtlasLoot:InitializeDataTables()
+	if self.data then return end
+	self.data = {
+		item = { EmptyTable = {}},
+		token = {},
+		map = {},
+		crafting = {},
+		extraItemInfo = {},
+		itemDropRates = {}
+	}
 end
 
-function AtlasLoot:AddSecondaryLootTable(data)
+function AtlasLoot:AddReferenceLootTable(lootTable)
+	self:InitializeDataTables()
+	local function addItem(item)
+		if item.refLootEntry then
+			if not self.data.item[item.refLootEntry] then self.data.item[item.refLootEntry] = {} end
+			table.insert(self.data.item[item.refLootEntry], item)
+		end
+	end
+	self:RateLimitLoadTable(lootTable, addItem)
+end
+
+function AtlasLoot:AddNewItemDataTable(data)
+	self:InitializeDataTables()
 	for tableName, tableParent in pairs(data) do
 		for i, table in ipairs(tableParent) do
-			self.itemData[tableName..i] = table
-			self.itemData[tableName..i].dontSort = true
-			for _, item in ipairs(self.itemData[tableName..i]) do
+			self.data.item[tableName..i] = table
+			self.data.item[tableName..i].dontSort = true
+			for _, item in ipairs(self.data.item[tableName..i]) do
 				item.refLootEntry = tableName..i
 			end
 		end
+	end
+end
+
+function AtlasLoot:AddNewDataTable(dataTableName, data)
+	self:InitializeDataTables()
+	for tableName, table in pairs(data) do
+		self.data[dataTableName][tableName] = table
 	end
 end
 
@@ -354,7 +383,6 @@ local function createItemCatagoiresTable()
 end
 
 local displayData = {}
-AtlasLootDisplaydata = displayData
 -- Sorts a lootTables items based on the order of the above lists and adds any spacers between groups
 local function sortItemData(dataSource, dataID, tablenum)
 	local lootTables = dataSource[tablenum][2]
@@ -363,10 +391,10 @@ local function sortItemData(dataSource, dataID, tablenum)
 	if displayData[lootTableName] then return displayData[lootTableName] end
 	local newTable = {{}}
 
-	if not AtlasLoot.itemData[lootTableName].dontSort then
+	if not AtlasLoot.data.item[lootTableName].dontSort then
 		local itemCatagories = createItemCatagoiresTable()
 		for _, lootTableSelection in ipairs(lootTables) do
-			for _, itemData in pairs(AtlasLoot.itemData[lootTableSelection]) do
+			for _, itemData in pairs(AtlasLoot.data.item[lootTableSelection]) do
 				local itemType, itemSubType, _, itemEquipLoc = select(6, AtlasLoot:GetItemInfo(itemData.itemID, true))
 				local iType = itemCatagories[baseType[itemType]]
 				if iType and iType[subType[itemSubType]] then
@@ -406,7 +434,7 @@ local function sortItemData(dataSource, dataID, tablenum)
 			end
 		end
 	else
-		for itemNum, item in ipairs(AtlasLoot.itemData[lootTableName]) do
+		for itemNum, item in ipairs(AtlasLoot.data.item[lootTableName]) do
 			if (#newTable[#newTable] ~= 0 and item.pageBreak) then
 				if #newTable[#newTable] < 16 then
 					for i = 1, (15 - #newTable[#newTable]) do
@@ -417,7 +445,7 @@ local function sortItemData(dataSource, dataID, tablenum)
 				end
 			end
 			table.insert(newTable[#newTable], item)
-			if #newTable[#newTable] >= 30 and itemNum ~= #AtlasLoot.itemData[lootTableName] then
+			if #newTable[#newTable] >= 30 and itemNum ~= #AtlasLoot.data.item[lootTableName] then
 				table.insert(newTable, {})
 			end
 		end

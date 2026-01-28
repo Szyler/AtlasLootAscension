@@ -3,7 +3,7 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 ---------------
 --- Tabards ---
 ---------------
-AtlasLoot:AddSecondaryLootTable({
+AtlasLoot:AddNewItemDataTable({
 	["Tabards"] = {
 		{
 			{ itemID = 51534 }, --Wrathful Gladiator's Tabard

@@ -1,6 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-AtlasLoot:AddSecondaryLootTable({
+AtlasLoot:AddNewItemDataTable({
 
 --------------------------
 ---Sets & Collections ---

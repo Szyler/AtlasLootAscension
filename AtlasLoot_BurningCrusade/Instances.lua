@@ -71,7 +71,7 @@ local gap = {"gap"}
 
 
 
-AtlasLoot:AddSecondaryLootTable({
+AtlasLoot:AddNewItemDataTable({
 
 	--The scale of the sand rep rings
 	["scaleOfSandsRings"] = {
@@ -123,10 +123,10 @@ AtlasLoot:AddSecondaryLootTable({
 	},
 })
 
-------------------------
--- Dungeons & BCRaids --
-------------------------
+-- AtlasLoot:AddReferenceLootTable({
 
+
+-- })
 -----------------------------------
 ---Auchindoun: Auchenai Crypts ---
 -----------------------------------
@@ -4155,58 +4155,57 @@ AtlasLoot_Data["WorldBossesTBC"] = {
 ------------------------
 ----Item Sacks TBC ----
 ------------------------
-
-AtlasLoot_ExtraData[34846] = {
-	{itemID = 23437 },
-	{itemID = 23438 },
-	{itemID = 23439 },
-	{itemID = 23441 },
-	{itemID = 23436 },
-	{itemID = 23440 },
-	{itemID = 32230 },
-	{itemID = 32249 },
-	{itemID = 32231 },
-	{itemID = 32229 },
-	{itemID = 32228 },
-	{itemID = 32227 },
-}
-
-AtlasLoot_ExtraData[222637] = {
-	{ itemID = 229194 }, --The Krakmon Wand
-	{ itemID = 229193 }, --Massacre Cloak
-	{ itemID = 229196 }, --Throat Crushers
-	{ itemID = 229192 }, --Seal of the Amani'shi Berserker
-	{ itemID = 229195 }, --Staff of Blazing Glory
-}
-
-AtlasLoot_ExtraData[229739] = {
-	Faction = {"The Scryers", "The Aldor"},
-	["The Scryers"] = {
-		{ itemID = 228910, desc = "Shoulder Enchants" }, --Masters Inscription of the Blade
-		{ itemID = 228911, desc = "Shoulder Enchants" }, --Masters Inscription of the Knight
-		{ itemID = 228912, desc = "Shoulder Enchants" }, --Masters Inscription of the Oracle
-		{ itemID = 228909, desc = "Shoulder Enchants" }, --Masters Inscription of the Orb
-		{ itemID = 2228886, desc = "Shoulder Enchants" }, --Masters Inscription of Discipline
-		{ itemID = 2228887, desc = "Shoulder Enchants" }, --Masters Inscription of Faith
-		{ itemID = 2228888, desc = "Shoulder Enchants" }, --Masters Inscription of Vengeance
-		{ itemID = 2228889, desc = "Shoulder Enchants" }, --Masters Inscription of Warding
-		{ itemID = 228913, desc = "Shoulder Enchants" }, --Masters Inscription of Guardian
-		{ itemID = 228914, desc = "Shoulder Enchants" }, --Masters Inscription of Phalanx
-		{ itemID = 2228891, desc = "Shoulder Enchants" }, --Masters Inscription of Protection
-		{ itemID = 2228890, desc = "Shoulder Enchants" }, --Masters Inscription of Vigilance
+AtlasLoot:AddNewDataTable("extraItemInfo",{
+	[34846] = {
+		{itemID = 23437 },
+		{itemID = 23438 },
+		{itemID = 23439 },
+		{itemID = 23441 },
+		{itemID = 23436 },
+		{itemID = 23440 },
+		{itemID = 32230 },
+		{itemID = 32249 },
+		{itemID = 32231 },
+		{itemID = 32229 },
+		{itemID = 32228 },
+		{itemID = 32227 },
 	},
-	["The Aldor"] = {
-		{ itemID = 2228910, desc = "Shoulder Enchants" }, --Masters Inscription of the Blade
-		{ itemID = 2228911, desc = "Shoulder Enchants" }, --Masters Inscription of the Knight
-		{ itemID = 2228912, desc = "Shoulder Enchants" }, --Masters Inscription of the Oracle
-		{ itemID = 2228909, desc = "Shoulder Enchants" }, --Masters Inscription of the Orb
-		{ itemID = 228886, desc = "Shoulder Enchants" }, --Masters Inscription of Discipline
-		{ itemID = 228887, desc = "Shoulder Enchants" }, --Masters Inscription of Faith
-		{ itemID = 228888, desc = "Shoulder Enchants" }, --Masters Inscription of Vengeance
-		{ itemID = 228889, desc = "Shoulder Enchants" }, --Masters Inscription of Warding
-		{ itemID = 2228913, desc = "Shoulder Enchants" }, --Masters Inscription of Guardian
-		{ itemID = 2228914, desc = "Shoulder Enchants" }, --Masters Inscription of Phalanx
-		{ itemID = 228891, desc = "Shoulder Enchants" }, --Masters Inscription of Protection
-		{ itemID = 228890, desc = "Shoulder Enchants" }, --Masters Inscription of Vigilance
-	}
-}
+	[222637] = {
+		{ itemID = 229194 }, --The Krakmon Wand
+		{ itemID = 229193 }, --Massacre Cloak
+		{ itemID = 229196 }, --Throat Crushers
+		{ itemID = 229192 }, --Seal of the Amani'shi Berserker
+		{ itemID = 229195 }, --Staff of Blazing Glory
+	},
+	[229739] = {
+		Faction = {"The Scryers", "The Aldor"},
+		["The Scryers"] = {
+			{ itemID = 228910, desc = "Shoulder Enchants" }, --Masters Inscription of the Blade
+			{ itemID = 228911, desc = "Shoulder Enchants" }, --Masters Inscription of the Knight
+			{ itemID = 228912, desc = "Shoulder Enchants" }, --Masters Inscription of the Oracle
+			{ itemID = 228909, desc = "Shoulder Enchants" }, --Masters Inscription of the Orb
+			{ itemID = 2228886, desc = "Shoulder Enchants" }, --Masters Inscription of Discipline
+			{ itemID = 2228887, desc = "Shoulder Enchants" }, --Masters Inscription of Faith
+			{ itemID = 2228888, desc = "Shoulder Enchants" }, --Masters Inscription of Vengeance
+			{ itemID = 2228889, desc = "Shoulder Enchants" }, --Masters Inscription of Warding
+			{ itemID = 228913, desc = "Shoulder Enchants" }, --Masters Inscription of Guardian
+			{ itemID = 228914, desc = "Shoulder Enchants" }, --Masters Inscription of Phalanx
+			{ itemID = 2228891, desc = "Shoulder Enchants" }, --Masters Inscription of Protection
+			{ itemID = 2228890, desc = "Shoulder Enchants" }, --Masters Inscription of Vigilance
+		},
+		["The Aldor"] = {
+			{ itemID = 2228910, desc = "Shoulder Enchants" }, --Masters Inscription of the Blade
+			{ itemID = 2228911, desc = "Shoulder Enchants" }, --Masters Inscription of the Knight
+			{ itemID = 2228912, desc = "Shoulder Enchants" }, --Masters Inscription of the Oracle
+			{ itemID = 2228909, desc = "Shoulder Enchants" }, --Masters Inscription of the Orb
+			{ itemID = 228886, desc = "Shoulder Enchants" }, --Masters Inscription of Discipline
+			{ itemID = 228887, desc = "Shoulder Enchants" }, --Masters Inscription of Faith
+			{ itemID = 228888, desc = "Shoulder Enchants" }, --Masters Inscription of Vengeance
+			{ itemID = 228889, desc = "Shoulder Enchants" }, --Masters Inscription of Warding
+			{ itemID = 2228913, desc = "Shoulder Enchants" }, --Masters Inscription of Guardian
+			{ itemID = 2228914, desc = "Shoulder Enchants" }, --Masters Inscription of Phalanx
+			{ itemID = 228891, desc = "Shoulder Enchants" }, --Masters Inscription of Protection
+			{ itemID = 228890, desc = "Shoulder Enchants" }, --Masters Inscription of Vigilance
+		}
+	},
+})

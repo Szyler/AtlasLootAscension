@@ -7,7 +7,7 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 ------------
 --- Misc ---
 ------------
-AtlasLoot:AddSecondaryLootTable({
+AtlasLoot:AddNewItemDataTable({
     ["DesolaceCentaurClans"] = {
         {
             { itemID = 6789 }, --Ceremonial Centaur Blanket

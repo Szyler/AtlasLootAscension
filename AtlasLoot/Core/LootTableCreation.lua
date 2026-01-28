@@ -20,8 +20,8 @@ function AtlasLoot:CreateToken(dataID)
 		end
 	end
 	--Creates data set of the item type
-	if (AtlasLoot_TokenData[orgID] == nil) then
-		AtlasLoot_TokenData[orgID] = {
+	if (self.data.token[orgID] == nil) then
+		self.data.token[orgID] = {
 			Name = itemName,
 			Type = AtlasLoot_Data[dataID].Type,
 			Back = true,
@@ -35,9 +35,9 @@ function AtlasLoot:CreateToken(dataID)
 	end
 	local count = 1
 	local function addItem(itemID, desc)
-		local pageSide = AtlasLoot_TokenData[orgID][1][1]
+		local pageSide = self.data.token[orgID][1][1]
 		if count >= 16 then
-			pageSide = AtlasLoot_TokenData[orgID][1][2]
+			pageSide = self.data.token[orgID][1][2]
 		end
 		if itemType == select(9, AtlasLoot:GetItemInfo(itemID)) or itemType2 == select(9, AtlasLoot:GetItemInfo(itemID)) then
 			table.insert(pageSide, {itemID = itemID, desc = desc})

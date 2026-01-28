@@ -643,7 +643,7 @@ function AtlasLoot:InitializeSearch()
 
         local searchTerms = parseQuery(searchText)
         local extendedInfoTable = self:GetSourcesExtendedInfo()
-        for dataID, data in pairs(self.itemData) do
+        for dataID, data in pairs(self.data.item) do
             local extendedInfo = extendedInfoTable[dataID]
             if extendedInfo and extendedInfo[1] and self.selectedProfile.SearchOn[extendedInfo[1].Type] and self.selectedProfile.SearchOn[extendedInfo[1].Type][1] or (self.selectedProfile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
                 for _, itemData in ipairs(data) do

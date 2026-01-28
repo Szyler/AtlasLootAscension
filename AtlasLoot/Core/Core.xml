@@ -2,7 +2,6 @@
 
 	<!--Default Files-->
 	<Script file="Difficultys.lua"/>
-	<Script file="Utils.lua"/>
 	<Script file="Filter.lua"/>
     <Script file="TextParsing.lua"/>
     <Script file="Options.lua"/>

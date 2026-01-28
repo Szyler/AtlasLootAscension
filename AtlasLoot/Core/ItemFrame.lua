@@ -290,7 +290,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 		end
 	end
 
-	if tablenum ~= 1 or pageNumber ~= 1 and dataSource_backup ~= "AtlasLoot_TokenData" then
+	if tablenum ~= 1 or pageNumber ~= 1 and dataSource_backup ~= "token" then
 		local dataSourcePrev , _, numberPagesPrev = self:GetSourceData(dataSource_backup, dataID, (tablenum == 1 and 1 or tablenum-1))
 		self.ui.prevbutton:Show()
 		self.ui.prevbutton.dataID = dataID
@@ -450,8 +450,8 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	elseif itemNumber.dropLoc and (self.dataSourceBackup == "AtlasLoot_OnDemand" or (self.selectedProfile.showdropLocationOnSearch and dataID == "SearchResult")) then
 		local location, boss = self:FixText(itemNumber.dropLoc[1]), self:FixText(itemNumber.dropLoc[2])
 		extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss
-	elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
-		local lvls = AtlasLoot_CraftingData["CraftingLevels"][spellID]
+	elseif self.data.crafting["CraftingLevels"] and spellID and self.data.crafting["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
+		local lvls = self.data.crafting["CraftingLevels"][spellID]
 		local name = self:FixText(dataSource.Name)
 		extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
 	elseif itemNumber.lootTable and itemNumber.lootTable[2] == "Token" then
@@ -464,7 +464,7 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 		extra = ""
 	end
 
-	if AtlasLoot_ExtraData[itemNumber.itemID]and dataID ~= "SearchResult" then
+	if self.data.extraItemInfo[itemNumber.itemID]and dataID ~= "SearchResult" then
 		extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
 	end
 
@@ -483,8 +483,8 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	end
 
 	local recipe = self:GetRecipeData(itemID, "item")
-	if recipe and AtlasLoot_CraftingData["CraftingLevels"] and AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID] then
-		local lvls = AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID]
+	if recipe and self.data.crafting["CraftingLevels"] and self.data.crafting["CraftingLevels"][recipe.spellID] then
+		local lvls = self.data.crafting["CraftingLevels"][recipe.spellID]
 		extra = extra ..self.Colors.WHITE.." ( "..lvls[1].." )"
 	end
 

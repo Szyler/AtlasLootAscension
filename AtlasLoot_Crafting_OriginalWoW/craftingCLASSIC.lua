@@ -51,7 +51,7 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 --- Tradeskill List ---
 -----------------------
 
-AtlasLoot:AddSecondaryLootTable({
+AtlasLoot:AddNewItemDataTable({
 	---------------
 	--- Alchemy ---
 	---------------

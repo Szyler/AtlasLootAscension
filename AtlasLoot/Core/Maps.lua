@@ -87,7 +87,7 @@ function AtlasLoot:GetCursorCords()
 end
 
 function AtlasLoot:PlayerPin(firstSet)
-    if self.ui.tabs.Map:IsVisible() and AtlasLoot_MapData[self.CurrentMap].ZoneName[1] == GetRealZoneText() and self.MapNum == GetCurrentMapDungeonLevel() then
+    if self.ui.tabs.Map:IsVisible() and self.data.map[self.CurrentMap].ZoneName[1] == GetRealZoneText() and self.MapNum == GetCurrentMapDungeonLevel() then
         _G["AtlasLoot_PlayerMapPin"]:Show()
     else
         return
@@ -108,7 +108,7 @@ function AtlasLoot:SetNavButtons(mapID, mapNum)
     --Hide navigation buttons by default, only show what we need
     self:ToggleNavigationButtonsVisibility()
 
-        if mapNum ~= #_G["AtlasLoot_MapData"][mapID] then
+        if mapNum ~= #self.data.map[mapID] then
             	--Set the parent frame and anchor points
             local nextSet = {self.ui.tabs.Map, {"BOTTOMRIGHT", self.ui.tabs.Map, "BOTTOMRIGHT",-10,10}}
             self:SetNavigationButtonsPoints(nextSet)
@@ -143,7 +143,7 @@ function AtlasLoot:MapOnShow(mapID, mapNum, refresh)
         SetMapToCurrentZone()
         if mapNum and mapID then
             self.CurrentMap = mapID
-        elseif AtlasLoot_MapData[self.CurrentMap].ZoneName[1] == GetRealZoneText() then
+        elseif self.data.map[self.CurrentMap].ZoneName[1] == GetRealZoneText() then
             if GetCurrentMapDungeonLevel() == 0 then
                 mapNum = 1
             else
@@ -159,7 +159,7 @@ end
 
 --called to change the current displayed map
 function AtlasLoot:MapSelect(mapID, mapNum)
-    local map = AtlasLoot_MapData[mapID]
+    local map = self.data.map[mapID]
     if map.MapName then
         for i = 1, 12 do
             local texture = _G["AtlasLoot_MapDetailTile"..i]:SetTexture("Interface\\Worldmap\\"..map.MapName.."\\"..map.MapName..mapNum.."_"..i)
@@ -205,7 +205,7 @@ end
 --drop down map menu
 function AtlasLoot:MapMenuOpen(frame)
     local mapID = self.CurrentMap
-    local map = AtlasLoot_MapData[mapID]
+    local map = self.data.map[mapID]
     local zones = {[1] = {}}
         for i,v in ipairs(map) do
             local text
@@ -218,7 +218,7 @@ function AtlasLoot:MapMenuOpen(frame)
         end
     local menuList = { 
     {
-        {text = self.Colors.ORANGE.."Open AscensionDB To Zone Map", divider = true, func = function() self:OpenDBURL(AtlasLoot_MapData[self.CurrentMap].ZoneName[2] , "zone") end},
+        {text = self.Colors.ORANGE.."Open AscensionDB To Zone Map", divider = true, func = function() self:OpenDBURL(self.data.map[self.CurrentMap].ZoneName[2] , "zone") end},
     }}
 
     self:OpenDewdropMenu(frame, zones, menuList)
