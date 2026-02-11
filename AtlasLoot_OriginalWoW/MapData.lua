@@ -73,9 +73,10 @@ local boss = "dungeonskull"
         PlayerLimit = "10/25";
         [1] = {
         { BabbleZone["Onyxia's Lair"], SubZone = true };
-        { AL["Whelp Eggs"] , cords = {78,43} };
-        { AL["Whelp Eggs"] , cords = {56,44} };
-        { AL["Onyxia"], cords = {67,30}, pinType = boss };
+        { AL["Basalthane"], cords = {45,66}, pinType = boss };
+        { AL["Whelp Eggs"] , cords = {66,43} };
+        { AL["Whelp Eggs"] , cords = {73,44} };
+        { AL["Onyxia"], cords = {70,24}, pinType = boss };
         };
     };
 

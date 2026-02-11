@@ -6425,6 +6425,28 @@ AtlasLoot_Data["Onyxia60"] = {
 	Type = "ClassicRaid",
 	Map = "Onyxia60",
 	{
+		Name = "Basalthane",
+		{
+			{ itemID = 18549 }, -- Molten Visor (Plate Head)
+			{ itemID = 18124 }, -- Basalt Pauldrons (Plate Shoulders)
+			{ itemID = 18107 }, -- Ashen Drape (Back)
+			{ itemID = 18087 }, -- Fissured Warplate (Plate Chest)
+			{ itemID = 18108 }, -- Ash Stitched Gauntlets (Mail Hands)
+			{ itemID = 18112 }, -- Eruption Cord (Leather Waist)
+			{ itemID = 18109 }, -- Obsidian Signet (Ring)
+			{ itemID = 15717 }, -- Drakon Soul Shard (Trinket)
+			{ itemID = 18548 }, -- Wyrmguard Talisman (Trinket)
+		},
+		{
+			{ itemID = 18126 }, -- Infernos, the Extinguished (Two-handed Axe)
+			{ itemID = 18110 }, -- Obsidian Emberlance (Polearm)
+			{ itemID = 18571 }, -- Living Lavastone Conduit (Staff)
+			{ itemID = 18125 }, -- Emberthorn (Thrown)
+			{ itemID = 18572 }, -- Corelit Igneous (Shield)
+			{ itemID = 18086 }, -- Dreadshot (Gun)
+		}
+	},
+	{
 		Name = BabbleZone["Onyxia's Lair"],
 		WebID = {10184,"npc"},
 		{
@@ -10542,39 +10564,17 @@ AtlasLoot_Data["Hydraxian"] = {
 	Module = "AtlasLoot_OriginalWoW",
 	Name = BabbleFaction["Hydraxian Waterlords"],
 	{
-		Name = BabbleFaction["Honored"],
+		Name = BabbleFaction["Hydraxian Waterlords"],
 		WebID = {749,"faction"},
 		{
-			{ itemID = 277936 }, -- Hound Scale Cloak
-			{ itemID = 277937 }, -- Hydro-Pendant
-			{ itemID = 277938 }, -- Firelord Cuff
+			{ icon = "Spell_Frost_SummonWaterElemental_2", name = color.WHITE..BabbleFaction["Honored"] },
+			{ itemID = 18399}, --Ocean's Breeze 
+			{ itemID = 18398}, --Tidal Loop 
+			{ itemID = 17333}, --Aqual Quintessence
 		},
-	},
-	{
-		Name = BabbleFaction["Revered"],
-		WebID = {749,"faction"},
 		{
-			{ itemID = 277939 }, -- Etched Sapphire Ring
-			{ itemID = 277940 }, -- Etched Emerald Ring
-			{ itemID = 277941 }, -- Etched Amethyst Ring
-			{ itemID = 277942 }, -- Etched Ruby Ring
-		},
-	},
-	{
-		Name = BabbleFaction["Exalted"],
-		WebID = {749,"faction"},
-		{
-			{ itemID = 22754 }, -- Eternal Quintessence
-			{ itemID = 277927 }, -- Hydrothermal Pauldrons
-			{ itemID = 277928 }, -- Dark Iron Greathelm
-			{ itemID = 277929 }, -- Lavacast Greaves
-			{ itemID = 277930 }, -- Thermal Gauntlets
-			{ itemID = 277931 }, -- Serpentine Cord
-			{ itemID = 277932 }, -- Hydraxian Pearl
-			{ itemID = 277933 }, -- Flamewaker Sash
-			{ itemID = 277934 }, -- Magus Spaulders
-			{ itemID = 277935 }, -- Tide-stitched Vest
-			{ itemID = 277986 }, -- Shimmering Coastline Crystal		},
+			{ icon = "Spell_Frost_SummonWaterElemental_2", name = color.WHITE..BabbleFaction["Revered"] },
+			{ itemID = 22754}, --Eternal Quintessence
 		},
 	},
 }
@@ -10782,7 +10782,6 @@ AtlasLoot_Data["Thorium"] = {
 		{
 			{ itemID = 1519907 }, -- Thorium Linked Wristsguards
 			{ itemID = 1519908 }, -- Brawlers Totem
-			{ itemID = 1519909 }, -- Thorium Threaded Boots
 		},
 		{
 			{ itemID = 17060}, --Plans: Dark Iron Destroyer
@@ -10803,8 +10802,6 @@ AtlasLoot_Data["Thorium"] = {
 			{ itemID = 1519905 }, -- Thorium Reinforced Buckler
 			{ itemID = 1519906 }, -- Thorium Studded Pants
 			{ itemID = 1519904 }, -- Rust Covered Belt
-			{ itemID = 856006 }, -- Black Visor of the Brotherhood
-			{ itemID = 1519806 }, -- Thorium Studded Cowl
 		},
 		{
 			{ itemID = 18592}, --Plans: Sulfuron Hammer
@@ -10814,7 +10811,6 @@ AtlasLoot_Data["Thorium"] = {
 			{ itemID = 19208}, --Plans: Black Amnesty
 			{ itemID = 19207}, --Plans: Dark Iron Gauntlets
 			{ itemID = 19449}, --Formula: Enchant Weapon - Mighty Intellect
-			{ itemID = 46519}, -- Formula: Enchant Cloak - Lesser Armor Penetration
 			{ itemID = 19331}, --Pattern: Chromatic Gauntlets
 			{ itemID = 19332}, --Pattern: Corehound Belt
 			{ itemID = 19333}, --Pattern: Molten Belt
@@ -10828,11 +10824,6 @@ AtlasLoot_Data["Thorium"] = {
 			{ itemID = 1519900 }, -- Thorium Staff
 			{ itemID = 1519902 }, -- Thorium Throwing Knives
 			{ itemID = 1519901 }, -- Thorium Rifle
-			{ itemID = 856007 }, -- Crystalline Gavel
-			{ itemID = 856008 }, -- Blackscale Encrusted Gloves
-			{ itemID = 1519805 }, -- Thorium Linked Spaulders
-			{ itemID = 1519903 }, -- Darkbargainer "Gemstone"
-			{ itemID = 1519804 }, -- Brotherhoods Special Whetstone
 		},
 		{
 			{ itemID = 19211}, --Plans: Blackguard
