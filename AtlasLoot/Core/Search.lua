@@ -584,8 +584,8 @@ function AtlasLoot:InitializeSearch()
 
     local showSearch
     local function processItem(data)
-        if not data then return end
-        local itemData, dataID, tableNum, searchTerms, searchText = unpack(data)
+        if not data and not data[1] then return end
+        local itemData, dataID, tableNum, searchTerms, searchText = unpack(data[1])
         if type(itemData) == "table" then
             local itemID = itemData.itemID
             local spellID = itemData.spellID
@@ -661,22 +661,7 @@ function AtlasLoot:InitializeSearch()
         end
         -- rate limit tied to half the current frame rate
         self:ItemsLoading(#itemList)
-        local maxDuration = (self.selectedProfile.ItemLoadingSpeed*500)/GetFramerate()
-        local startTime = debugprofilestop()
-        local function continue()
-            startTime = debugprofilestop()
-            local task = tremove(itemList)
-            while (task) do
-                processItem(task[1])
-                if (debugprofilestop() - startTime > maxDuration) then
-                    Timer.After(0, continue)
-                    return
-                end
-                task = tremove(itemList)
-            end
-        end
-
-        return continue()
+        self:RateLimitLoadTable(itemList, processItem)
     end
 
     -- Search Options Menu
