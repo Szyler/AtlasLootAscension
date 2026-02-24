@@ -753,7 +753,7 @@ AtlasLoot_Data["BlackTemple"] = {
 			{ itemID = 32369, groupID = 2, refLootEntry = 22947 }; --Blade of Savagery
 		},
 		{
-			{ itemID = 31101, lootTable = {"T6SHOULDER","Token"} }, --Pauldrons of the Forgotten Conqueror
+			{ itemID = 31101, lootTable = {"TSIXSHOULDER","Token"} }, --Pauldrons of the Forgotten Conqueror
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
@@ -773,10 +773,10 @@ AtlasLoot_Data["BlackTemple"] = {
 			{ itemID = 32326 }, --Twisted Blades of Zarak
 		},
 		{
-			{ itemID = 31101, lootTable = {"T6SHOULDER","Token"} }, --Pauldrons of the Forgotten Conqueror
-			{ itemID = 31098, lootTable = {"T6LEGS","Token"} }, --Leggings of the Forgotten Conqueror
-			{ itemID = 31097, lootTable = {"T6HEAD","Token"} }, --Helm of the Forgotten Conqueror
-			{ itemID = 31092, lootTable = {"T6HAND","Token"} }, --Gloves of the Forgotten Conqueror
+			{ itemID = 31101, lootTable = {"TSIXSHOULDER","Token"} }, --Pauldrons of the Forgotten Conqueror
+			{ itemID = 31098, lootTable = {"TSIXLEGS","Token"} }, --Leggings of the Forgotten Conqueror
+			{ itemID = 31097, lootTable = {"TSIXHEAD","Token"} }, --Helm of the Forgotten Conqueror
+			{ itemID = 31092, lootTable = {"TSIXHAND","Token"} }, --Gloves of the Forgotten Conqueror
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
@@ -808,7 +808,7 @@ AtlasLoot_Data["BlackTemple"] = {
 			{ itemID = 32497, groupID = 4, refLootEntry = 22917 }; --Stormrage Signet Ring			
 		},
 		{
-			{ itemID = 31089, lootTable = {"T6CHEST","Token"} }, --Chestguard of the Forgotten Conqueror
+			{ itemID = 31089, lootTable = {"TSIXCHEST","Token"} }, --Chestguard of the Forgotten Conqueror
 			gap,
 			{ itemID = 32837 }, --Warglaive of Azzinoth
 			{ itemID = 32838 }, --Warglaive of Azzinoth
@@ -1184,7 +1184,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 			{ itemID = 30915 }, --Belt of Seething Fury"
 			{ itemID = 30918 }, --Hammer of Atonement"
 			gap,
-			{ itemID = 31092, lootTable = {"T6HAND","Token"} },
+			{ itemID = 31092, lootTable = {"TSIXHAND","Token"} },
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
@@ -1204,7 +1204,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 			{ itemID = 12309 }, --Plates of Eternal Fury
 		},
 		{
-			{ itemID = 31098, lootTable = {"T6LEGS","Token"} }, --Leggings of the Forgotten Conqueror
+			{ itemID = 31098, lootTable = {"TSIXLEGS","Token"} }, --Leggings of the Forgotten Conqueror
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
@@ -1232,7 +1232,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 			{ itemID = 12313 }, --The Defiler's Cudgel
 		},
 		{
-			{ itemID = 31097, lootTable = {"T6HEAD","Token"} }, --Helm of the Forgotten Conqueror
+			{ itemID = 31097, lootTable = {"TSIXHEAD","Token"} }, --Helm of the Forgotten Conqueror
 			gap,
 			{ itemID = 450009, desc = "Quest Requirements", contentsPreview = {{450009},{450010},{34334}}}, --The String of Time
 			gap,
@@ -1781,7 +1781,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 			{ itemID = 30627, groupID = 2, refLootEntry = 21215 }; --Tsunami Talismanic
 		},
 		{
-			{ itemID = 30240, lootTable = {"T5HAND","Token"} }, --Gloves of the Vanquished Defender
+			{ itemID = 30240, lootTable = {"TFIVEHAND","Token"} }, --Gloves of the Vanquished Defender
 			gap,
 			{ itemID = 63326, droprate = "1%" }, --Pet Sigil
 		},
@@ -1800,7 +1800,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 			{ itemID = 30090, groupID = 2, refLootEntry = 21214 }; --World Breaker
 		},
 		{
-			{ itemID = 30246, lootTable = {"T5LEGS","Token"} }, --Leggings of the Vanquished Defender
+			{ itemID = 30246, lootTable = {"TFIVELEGS","Token"} }, --Leggings of the Vanquished Defender
 			gap,
 			{ itemID = 63325, droprate = "1%" }, --Pet Sigil
 		},
@@ -1847,7 +1847,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 			{ itemID = 30105, groupID = 4, refLootEntry = 21212 }; --Serpent Spine Longbow
 			{ itemID = 12151, groupID = 4, refLootEntry = 21212 }; --Tidebound Bows
 			gap,
-			{ itemID = 30243, lootTable = {"T5HEAD","Token"} }, --Helm of the Vanquished Defender
+			{ itemID = 30243, lootTable = {"TFIVEHEAD","Token"} }, --Helm of the Vanquished Defender
 			gap,
 			{ itemID = 29906 }, --Vashj's Vial Remnant
 			{ itemID = 450000 }, --Intact Vial of Lady Vashj
@@ -1918,7 +1918,7 @@ AtlasLoot_Data["GruulsLair"] = {
 			{ itemID = 12090, groupID = 2, refLootEntry = 18831 }; --Spellbreaker’s Edge
 		},
 		{
-			{ itemID = 29764, lootTable = {"T4SHOULDER","Token"} }, --Pauldrons of the Fallen Defender
+			{ itemID = 29764, lootTable = {"TFOURSHOULDER","Token"} }, --Pauldrons of the Fallen Defender
 			gap,
 			{ itemID = 816252, droprate = { nil, "2%", "5%", "7%", "10%" } }, --Formula: Enchant Weapon - Undaunted Might
 			gap,
@@ -1942,7 +1942,7 @@ AtlasLoot_Data["GruulsLair"] = {
 			{ itemID = 11688, groupID = 3, refLootEntry = 19044 }; --Signet of Elemental Savagery
 		},
 		{
-			{ itemID = 29767, lootTable = {"T4LEGS","Token"} }, --Leggings of the Fallen Defender
+			{ itemID = 29767, lootTable = {"TFOURLEGS","Token"} }, --Leggings of the Fallen Defender
 			gap,
 			{ itemID = 28802, groupID = 3, refLootEntry = 19044 }; --Bloodmaw Magus-Blade
 			{ itemID = 28794, groupID = 3, refLootEntry = 19044 }; --Axe of the Gronn Lords
@@ -2347,7 +2347,7 @@ AtlasLoot_Data["HCMagtheridon"] = {
 			{ itemID = 11687, groupID = 4, refLootEntry = 17257 }; --Ring of Hellfire Mighty
 		},
 		{
-			{ itemID = 29753, lootTable = {"T4CHEST","Token"} }, --Chestguard of the Fallen Defender
+			{ itemID = 29753, lootTable = {"TFOURCHEST","Token"} }, --Chestguard of the Fallen Defender
 			gap,
 			{ itemID = 34845 }, --Pit Lord's Satchel
 			{ itemID = 34846 }, --Black Sack of Gems
@@ -2560,7 +2560,7 @@ AtlasLoot_Data["Karazhan"] = {
 			{ itemID = 28621, groupID = 2, refLootEntry = 15691 }; --Wrynn Dynasty Greaves
 		},
 		{
-			{ itemID = 29758, lootTable = {"T4HAND","Token"} }, --Gloves of the Fallen Defender
+			{ itemID = 29758, lootTable = {"TFOURHAND","Token"} }, --Gloves of the Fallen Defender
 			gap,
 			{ itemID = 229739 }, --Tome of Untold Secrets
 			gap,
@@ -2691,7 +2691,7 @@ AtlasLoot_Data["Karazhan"] = {
 			{ itemID = 12123, groupID = 3, refLootEntry = 15690 }; --Razorwind
 		},
 		{
-			{ itemID = 29761, lootTable = {"T4HEAD","Token"} }, --Helm of the Fallen Defender
+			{ itemID = 29761, lootTable = {"TFOURHEAD","Token"} }, --Helm of the Fallen Defender
 			gap,
 			{ itemID = 229739 }, --Tome of Untold Secrets
 			gap,
@@ -3055,7 +3055,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			{ itemID = 34164, groupID = 2 }, --Dragonscale-Encrusted Longblade
 		},
 		{
-			{ itemID = 34848, lootTable = {"T6WRIST","Token"}}, --Bracers of the Forgotten Conqueror
+			{ itemID = 34848, lootTable = {"TSIXWRIST","Token"}}, --Bracers of the Forgotten Conqueror
 			gap,
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
@@ -3079,7 +3079,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			--{ itemID = 34381, groupID = 99, refLootEntry = 24882 }, --Felstrength Legplates
 		},
 		{			
-			{ itemID = 34853, lootTable = {"T6WAIST","Token"}, groupID = 1 }, --Belt of the Forgotten Conqueror
+			{ itemID = 34853, lootTable = {"TSIXWAIST","Token"}, groupID = 1 }, --Belt of the Forgotten Conqueror
 			gap,
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
@@ -3106,7 +3106,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			{ itemID = 34182, groupID = 2, refLootEntry = 25038 }, --Grand Magister's Staff of Torrents
 		},
 		{
-			{ itemID = 34856, lootTable = {"T6FEET","Token"}, groupID = 1 }, --Boots of the Forgotten Conqueror
+			{ itemID = 34856, lootTable = {"TSIXFEET","Token"}, groupID = 1 }, --Boots of the Forgotten Conqueror
 			gap,
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
@@ -3162,9 +3162,9 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			{ itemID = 35292, groupID = 2, refLootEntry = 25837 }, --Sin'dorei Pendant of Triumphs
 		},
 		{
-			{ itemID = 34848, lootTable = {"T6WRIST","Token"}, groupID = 1}, --Bracers of the Forgotten Conqueror
-			{ itemID = 34853, lootTable = {"T6WAIST","Token"}, groupID = 1 }, --Belt of the Forgotten Conqueror
-			{ itemID = 34856, lootTable = {"T6FEET","Token"}, groupID = 1 }, --Boots of the Forgotten Conqueror
+			{ itemID = 34848, lootTable = {"TSIXWRIST","Token"}, groupID = 1}, --Bracers of the Forgotten Conqueror
+			{ itemID = 34853, lootTable = {"TSIXWAIST","Token"}, groupID = 1 }, --Belt of the Forgotten Conqueror
+			{ itemID = 34856, lootTable = {"TSIXFEET","Token"}, groupID = 1 }, --Boots of the Forgotten Conqueror
 			gap,
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
@@ -3299,7 +3299,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			{ itemID = 35187, droprate = "0.06%" }, --Schematic: Justicebringer 3000 Specs
 			{ itemID = 35189, droprate = "0.06%" }, --Schematic: Powerheal 9000 Lens
 			{ itemID = 35190, droprate = "0.06%" }, --Schematic: Hyper-Magnified Moon Specs
-			{ itemID = 35191, droprate = "0.06%" }, --Schematic: Wonderheal XT68 Shades
+			{ itemID = 35191, droprate = "0.06%" }, --Schematic: Wonderheal XTSIX8 Shades
 			{ itemID = 35192, droprate = "0.06%" }, --Schematic: Primal-Attuned Goggles
 			{ itemID = 35193, droprate = "0.06%" }, --Schematic: Lightning Etched Specs
 			{ itemID = 35194, droprate = "0.06%" }, --Schematic: Surestrike Goggles v3.0
@@ -3765,7 +3765,7 @@ AtlasLoot_Data["TKEye"] = {
 			{ itemID = 32515, groupID = 2, refLootEntry = 19516 }; --Wristguards of Determination
 		},
 		{
-			{ itemID = 30249, lootTable = {"T5SHOULDER","Token"} }, --Pauldrons of the Vanquished Defender
+			{ itemID = 30249, lootTable = {"TFIVESHOULDER","Token"} }, --Pauldrons of the Vanquished Defender
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
@@ -3828,7 +3828,7 @@ AtlasLoot_Data["TKEye"] = {
 			}, --Verdant Sphere
 			gap,
 			{ itemID = 450001 }, --Intact Vial of Kael'thas Sunstrider
-			{ itemID = 30237, lootTable = {"T5CHEST","Token"} }, --Chestguard of the Vanquished Defender
+			{ itemID = 30237, lootTable = {"TFIVECHEST","Token"} }, --Chestguard of the Vanquished Defender
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
@@ -4208,4 +4208,9 @@ AtlasLoot:AddNewDataTable("extraItemInfo",{
 			{ itemID = 228890, desc = "Shoulder Enchants" }, --Masters Inscription of Vigilance
 		}
 	},
+	
+})
+
+AtlasLoot:AddNewDataTable("lootableLinks", {
+	[29758] = {"TFOURHAND","Token"}, --Gloves of the Fallen Defender
 })

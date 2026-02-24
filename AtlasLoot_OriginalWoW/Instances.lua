@@ -263,7 +263,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 			{ itemID = 22222 }, --Plans: Thick Obsidian Breastplate
 			{ itemID = 22196 }, --Thick Obsidian Breastplate
 			gap,
-			{ itemID = 20928, lootTable = {"T2.5FEET","Token"} }, --Bindings of the Lost Nomad
+			{ itemID = 20928, lootTable = {"TTWO.5FEET","Token"} }, --Bindings of the Lost Nomad
 		},
 	},
 	{
@@ -295,7 +295,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 			{ itemID = 21683 }, --Mantle of the Desert Crusade
 			{ itemID = 21687 }, --Ukko's Ring of Darkness
 			gap,
-			{ itemID = 20928, lootTable = {"T2.5FEET","Token"} }, --Bindings of the Lost Nomad
+			{ itemID = 20928, lootTable = {"TTWO.5FEET","Token"} }, --Bindings of the Lost Nomad
 		},
 	},
 	{
@@ -318,7 +318,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 			{ itemID = 21237 }, --Imperial Qiraji Regalia
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
 		   	gap,
-			{ itemID = 20932, lootTable = {"T2.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
+			{ itemID = 20932, lootTable = {"TTWO.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
 		},
 	},
 	{
@@ -341,7 +341,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 			{ itemID = 21237 }, --Imperial Qiraji Regalia
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
 			gap,
-			{ itemID = 20932, lootTable = {"T2.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
+			{ itemID = 20932, lootTable = {"TTWO.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
 		},
 	},
 	{
@@ -362,10 +362,10 @@ AtlasLoot_Data["TempleofAQ"] = {
 			{ itemID = 21237 }, --Imperial Qiraji Regalia
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
 			gap,
-			{ itemID = 20932, lootTable = {"T2.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
-			{ itemID = 20931, lootTable = {"T2.5LEGS","Token"} }, --Hardened Qiraj Chitin
-			{ itemID = 20930, lootTable = {"T2.5HEAD","Token"} }, --Diadem of the Desert Prince
-			{ itemID = 20928, lootTable = {"T2.5FEET","Token"} }, --Bindings of the Lost Nomad
+			{ itemID = 20932, lootTable = {"TTWO.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
+			{ itemID = 20931, lootTable = {"TTWO.5LEGS","Token"} }, --Hardened Qiraj Chitin
+			{ itemID = 20930, lootTable = {"TTWO.5HEAD","Token"} }, --Diadem of the Desert Prince
+			{ itemID = 20928, lootTable = {"TTWO.5FEET","Token"} }, --Bindings of the Lost Nomad
 		},
 	},
 	{ 
@@ -387,8 +387,8 @@ AtlasLoot_Data["TempleofAQ"] = {
 			{ itemID = 21237 }, --Imperial Qiraji Regalia
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
 			gap,
-			{ itemID = 20932, lootTable = {"T2.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
-			{ itemID = 20931, lootTable = {"T2.5LEGS","Token"} }, --Hardened Qiraj Chitin
+			{ itemID = 20932, lootTable = {"TTWO.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
+			{ itemID = 20931, lootTable = {"TTWO.5LEGS","Token"} }, --Hardened Qiraj Chitin
 		},
 	},
 	{
@@ -411,7 +411,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
 			{ itemID = 21237 }, --Imperial Qiraji Regalia
 			gap,
-			{ itemID = 20930, lootTable = {"T2.5HEAD","Token"} }, --Diadem of the Desert Prince
+			{ itemID = 20930, lootTable = {"TTWO.5HEAD","Token"} }, --Diadem of the Desert Prince
 			gap,
 			{ itemID = 20726 }, --Formula: Enchant Gloves - Threat
 			{ itemID = 20735 }, --Formula: Enchant Cloak - Subtlety
@@ -437,7 +437,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
 
 		gap,
-			{ itemID = 20931, lootTable = {"T2.5LEGS","Token"} }, --Hardened Qiraj Chitin
+			{ itemID = 20931, lootTable = {"TTWO.5LEGS","Token"} }, --Hardened Qiraj Chitin
 		},
 	},
 	{
@@ -460,7 +460,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{
 			{ itemID = 21221 }, --Eye of C'Thun
 			gap,
-			{ itemID = 20933, lootTable = {"T2.5CHEST","Token"} }, --Husk of the Old God
+			{ itemID = 20933, lootTable = {"TTWO.5CHEST","Token"} }, --Husk of the Old God
 			gap,
 			{ itemID = 22734, contentsPreview = { 22632, 22589, 22631, 22630} }, --Base of Atiesh
 		},
@@ -1768,7 +1768,7 @@ AtlasLoot_Data["MoltenCore"] = {
 			{ itemID = 19146, groupID = 1, refLootEntry = 12056 }, --Wristguards of Stability
 		},
 		{
-			{ itemID = 2522362, lootTable = {"T1WRIST","Token"} }, --Molten Wristguards
+			{ itemID = 2522362, lootTable = {"TONEWRIST","Token"} }, --Molten Wristguards
 			{ itemID = 17329 }, --Hand of Lucifron
 		},
 	},
@@ -1787,7 +1787,7 @@ AtlasLoot_Data["MoltenCore"] = {
 			{ itemID = 17065, groupID = 1, refLootEntry = 11982 }, --Medallion of Steadfast Might
 		},
 		{
-			{ itemID = 2522359, lootTable = {"T1LEGS","Token"} }, --Molten Leggaurds
+			{ itemID = 2522359, lootTable = {"TONELEGS","Token"} }, --Molten Leggaurds
 		},
 	},
 	{
@@ -1804,7 +1804,7 @@ AtlasLoot_Data["MoltenCore"] = {
 			{ itemID = 18878, groupID = 1, refLootEntry = 12259 }, --Sorcerous Dagger
 		},
 		{
-			{ itemID = 2522364, lootTable = {"T1HAND","Token"} }, --Molten Girdle
+			{ itemID = 2522364, lootTable = {"TONEHAND","Token"} }, --Molten Girdle
 		gap,
 			{ itemID = 17331 }, --Hand of Gehennas
 		},
@@ -1823,7 +1823,7 @@ AtlasLoot_Data["MoltenCore"] = {
 			{ itemID = 17065, groupID = 1, refLootEntry = 12057 }, --Medallion of Steadfast Mighty
 		},
 		{
-			{ itemID = 2522360, lootTable = {"T1HEAD","Token"} }, --Molten Headpiece
+			{ itemID = 2522360, lootTable = {"TONEHEAD","Token"} }, --Molten Headpiece
 		gap,
 			{ itemID = 18564 }, --Bindings of the Windseeker
 			{ itemID = 19019 }, --Thunderfury, Blessed Blade of the Windseeker
@@ -1847,7 +1847,7 @@ AtlasLoot_Data["MoltenCore"] = {
 			{ itemID = 18820, groupID = 1, refLootEntry = 12264 }, --Talisman of Ephemeral Power
 		},
 		{
-			{ itemID = 2522363, lootTable = {"T1WAIST","Token"} }, --Molten Handgaurds
+			{ itemID = 2522363, lootTable = {"TONEWAIST","Token"} }, --Molten Handgaurds
 		gap,
 			{ itemID = 17332 }, --Hand of Shazzrah
 		},
@@ -1866,7 +1866,7 @@ AtlasLoot_Data["MoltenCore"] = {
 			{ itemID = 19146, groupID = 1, refLootEntry = 12056 }, --Wristguards of Stability
 		},
 		{
-			{ itemID = 2522361, lootTable = {"T1SHOULDER","Token"} }, --Molten Spaulders
+			{ itemID = 2522361, lootTable = {"TONESHOULDER","Token"} }, --Molten Spaulders
 		gap,
 			{ itemID = 18563 }, --Bindings of the Windseeker
 			{ itemID = 19019 }, --Thunderfury, Blessed Blade of the Windseeker
@@ -1887,7 +1887,7 @@ AtlasLoot_Data["MoltenCore"] = {
 			{ itemID = 19146, groupID = 1, refLootEntry = 11988 }, --Wristguards of Stability
 		},
 		{
-			{ itemID = 2522350, lootTable = {"T1CHEST","Token"} }, --Molten Tunic
+			{ itemID = 2522350, lootTable = {"TONECHEST","Token"} }, --Molten Tunic
 		gap,
 			{ itemID = 17203 }, --Sulfuron Ingot
 			{ itemID = 17182 }, --Sulfuras, Hand of Ragnaros
@@ -1908,7 +1908,7 @@ AtlasLoot_Data["MoltenCore"] = {
 			{ itemID = 18820, groupID = 1, refLootEntry = 12098 }, --Talisman of Ephemeral Power
 		},
 		{
-			{ itemID = 2522365, lootTable = {"T1FEET","Token"} }, --Molten Boots
+			{ itemID = 2522365, lootTable = {"TONEFEET","Token"} }, --Molten Boots
 		gap,
 			{ itemID = 17330 }, --Hand of Sulfuron
 		},
@@ -1952,7 +1952,7 @@ AtlasLoot_Data["MoltenCore"] = {
 			{ itemID = 17104, groupID = 2, refLootEntry = 11502 }, --Spinal Reaper
 		},
 		{
-			{ itemID = 2522459, lootTable = {"T2LEGS","Token"} }, --Chromatic Leggaurds
+			{ itemID = 2522459, lootTable = {"TTWOLEGS","Token"} }, --Chromatic Leggaurds
 		gap,
 			{ itemID = 21110 }, --Draconic for Dummies
 		gap,
@@ -2025,7 +2025,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 			{ itemID = 19438, groupID = 1, refLootEntry = 400469 }, --Ringo's Blizzard Boots
 		},
 		{
-			{ itemID = 2522462, lootTable = {"T2WRIST","Token"} }, --Chromatic Wristguards
+			{ itemID = 2522462, lootTable = {"TTWOWRIST","Token"} }, --Chromatic Wristguards
 			gap,
 			{ itemID = 53144, droprate = 5 }, --Formula: Enchant Cloak - Blazing
 		},
@@ -2047,7 +2047,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 			{ itemID = 19343, groupID = 2, refLootEntry = 13020 }, --Scrolls of Blinding Light
 		},
 		{
-			{ itemID = 2522463, lootTable = {"T2WAIST","Token"} }, --Chromatic Girdle
+			{ itemID = 2522463, lootTable = {"TTWOWAIST","Token"} }, --Chromatic Girdle
 		},
 	},
 	{
@@ -2067,7 +2067,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 			{ itemID = 19342, groupID = 2, refLootEntry = 12017 }, --Venomous Totem
 		},
 		{
-			{ itemID = 2522465, lootTable = {"T2FEET","Token"} }, --Chromatic Boots
+			{ itemID = 2522465, lootTable = {"TTWOFEET","Token"} }, --Chromatic Boots
 		gap,
 			{ itemID = 53142, droprate = 5 }, -- Formula: Enchant Cloak - Draconic Might
 		gap,
@@ -2091,7 +2091,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 			{ itemID = 19396, groupID = 2, refLootEntry = 11983 }, --Taut Dragonhide Belt
 		},
 		{
-			{ itemID = 2522464, lootTable = {"T2HAND","Token"} }, --Chromatic Handgaurds
+			{ itemID = 2522464, lootTable = {"TTWOHAND","Token"} }, --Chromatic Handgaurds
 		},
 	},
 	{
@@ -2111,7 +2111,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 			{ itemID = 19396, groupID = 1, refLootEntry = 34036 }, --Taut Dragonhide Belt
 		},
 		{
-			{ itemID = 2522464, lootTable = {"T2HAND","Token"} }, --Chromatic Handgaurds
+			{ itemID = 2522464, lootTable = {"TTWOHAND","Token"} }, --Chromatic Handgaurds
 		},
 	},
 	{
@@ -2133,7 +2133,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 
 		},
 		{
-			{ itemID = 2522464, lootTable = {"T2HAND","Token"} }, --Chromatic Handgaurds
+			{ itemID = 2522464, lootTable = {"TTWOHAND","Token"} }, --Chromatic Handgaurds
 		},
 	},
 	{
@@ -2154,7 +2154,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 			{ itemID = 19389, groupID = 2, refLootEntry = 14020 }, --Taut Dragonhide Shoulderpads
 		},
 		{
-			{ itemID = 2522461, lootTable = {"T2SHOULDER","Token"} }, --Chromatic Spaulders
+			{ itemID = 2522461, lootTable = {"TTWOSHOULDER","Token"} }, --Chromatic Spaulders
 		},
 	},
 	{
@@ -2175,7 +2175,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 			{ itemID = 19380, groupID = 2, refLootEntry = 11583 }, --Therazane's Link
 		},
 		{
-			{ itemID = 2522450, lootTable = {"T2CHEST","Token"} }, --Chromatic Tunic
+			{ itemID = 2522450, lootTable = {"TTWOCHEST","Token"} }, --Chromatic Tunic
 		gap,
 			{ itemID = 19003, contentsPreview = {19383, 19384, 19366, 21138} }, --Head of Nefarian
 			{ itemID = 21138 }, --Red Scepter Shard
@@ -6009,7 +6009,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 22820, groupID = 2, refLootEntry = 16028 }, --Wand of Fates
 		},
 		{
-			{ itemID = 22354, lootTable = {"T3SHOULDER","Token"} }, --Desecrated Pauldrons
+			{ itemID = 22354, lootTable = {"TTHREESHOULDER","Token"} }, --Desecrated Pauldrons
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6026,7 +6026,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 22810, groupID = 2, refLootEntry = 15931 }, --Toxin Injector
 		},
 		{
-			{ itemID = 22354, lootTable = {"T3SHOULDER","Token"} }, --Desecrated Pauldrons
+			{ itemID = 22354, lootTable = {"TTHREESHOULDER","Token"} }, --Desecrated Pauldrons
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6044,10 +6044,10 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 22983, groupID = 2, refLootEntry = 15932 }, --Rime Covered Mantle
 		},
 		{
-			{ itemID = 22354, lootTable = {"T3SHOULDER","Token"} }, --Desecrated Pauldrons
-			{ itemID = 22355, lootTable = {"T3WRIST","Token"} }, --Desecrated Bracers
-			{ itemID = 22356, lootTable = {"T3WAIST","Token"} }, --Desecrated Waistguard
-			{ itemID = 22358, lootTable = {"T3FEET","Token"} }, --Desecrated Sabatons
+			{ itemID = 22354, lootTable = {"TTHREESHOULDER","Token"} }, --Desecrated Pauldrons
+			{ itemID = 22355, lootTable = {"TTHREEWRIST","Token"} }, --Desecrated Bracers
+			{ itemID = 22356, lootTable = {"TTHREEWAIST","Token"} }, --Desecrated Waistguard
+			{ itemID = 22358, lootTable = {"TTHREEFEET","Token"} }, --Desecrated Sabatons
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6066,7 +6066,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 22808, groupID = 2, refLootEntry = 15928 }, --The Castigator
 		},
 		{
-			{ itemID = 22353, lootTable = {"T3HEAD","Token"} }, --Desecrated Helmet
+			{ itemID = 22353, lootTable = {"TTHREEHEAD","Token"} }, --Desecrated Helmet
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6084,7 +6084,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 22936, groupID = 2, refLootEntry = 15956 }, --Wristguards of Vengeance
 		},
 		{
-			{ itemID = 22355, lootTable = {"T3WRIST","Token"} }, --Desecrated Bracers
+			{ itemID = 22355, lootTable = {"TTHREEWRIST","Token"} }, --Desecrated Bracers
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6101,7 +6101,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 22806, groupID = 2, refLootEntry = 15953 }, --Widow's Remorse
 		},
 		{
-			{ itemID = 22355, lootTable = {"T3WRIST","Token"} }, --Desecrated Bracers
+			{ itemID = 22355, lootTable = {"TTHREEWRIST","Token"} }, --Desecrated Bracers
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6120,7 +6120,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 22807, groupID = 2, refLootEntry = 15952 }, --Wraith Blade
 		},
 		{
-			{ itemID = 22357, lootTable = {"T3HAND","Token"} }, --Desecrated Gauntlets
+			{ itemID = 22357, lootTable = {"TTHREEHAND","Token"} }, --Desecrated Gauntlets
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6142,7 +6142,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 23009, groupID = 2, refLootEntry = 16061 }, --Wand of the Whispering Dead
 		},
 		{
-			{ itemID = 22358, lootTable = {"T3FEET","Token"} }, --Desecrated Sabatons
+			{ itemID = 22358, lootTable = {"TTHREEFEET","Token"} }, --Desecrated Sabatons
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6159,7 +6159,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 23021, groupID = 2, refLootEntry = 16060 }, --The Soul Harvester's Bindings
 		},
 		{
-			{ itemID = 22358, lootTable = {"T3SHOULDER","Token"} }, --Desecrated Sabatons
+			{ itemID = 22358, lootTable = {"TTHREESHOULDER","Token"} }, --Desecrated Sabatons
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6179,7 +6179,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 23027 }, --Warmth of Forgiveness
 		},
 		{
-			{ itemID = 22349, lootTable = {"T3CHEST","Token"} }, --Desecrated Breastplate
+			{ itemID = 22349, lootTable = {"TTHREECHEST","Token"} }, --Desecrated Breastplate
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6197,7 +6197,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 23005, groupID = 2, refLootEntry = 15954 }, --Totem of Flowing Water
 		},
 		{
-			{ itemID = 22356, lootTable = {"T3WAIST","Token"} }, --Desecrated Waistguard
+			{ itemID = 22356, lootTable = {"TTHREEWAIST","Token"} }, --Desecrated Waistguard
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6213,7 +6213,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 23035, groupID = 2, refLootEntry = 15936 }, --Preceptor's Hat
 		},
 		{
-			{ itemID = 22356, lootTable = {"T3WAIST","Token"} }, --Desecrated Waistguard
+			{ itemID = 22356, lootTable = {"TTHREEWAIST","Token"} }, --Desecrated Waistguard
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6231,7 +6231,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 23039, groupID = 2, refLootEntry = 16011 }, --The Eye of Nerub
 		},
 		{
-			{ itemID = 22352, lootTable = {"T3LEGS","Token"} }, --Desecrated Legplates
+			{ itemID = 22352, lootTable = {"TTHREELEGS","Token"} }, --Desecrated Legplates
 		gap,
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
@@ -6291,7 +6291,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 			{ itemID = 23207 }, --Mark of the Champion
 			{ itemID = 23206 }, --Mark of the Champion
 		gap,
-			{ itemID = 1510496, lootTable = {"T3FINGER","Token"} }, --Desecrated Ring
+			{ itemID = 1510496, lootTable = {"TTHREEFINGER","Token"} }, --Desecrated Ring
 		gap,
 			{ itemID = 22733 }, --Staff Head of Atiesh
 			{ itemID = 22632 }, --Atiesh, Greatstaff of the Guardian
@@ -6375,7 +6375,7 @@ AtlasLoot_Data["Onyxia60"] = {
 			{ itemID = 18211, groupID = 2, refLootEntry = 10184 }, --Wand of the Noble
 		},
 		{
-			{ itemID = 2522460, lootTable = {"T2HEAD","Token"} }, --Chromatic Headpiece
+			{ itemID = 2522460, lootTable = {"TTWOHEAD","Token"} }, --Chromatic Headpiece
 			gap,
 			{ itemID = 97269 }, --Head of Onyxia
 			{ itemID = 18404 }, -- Onyxia Tooth Pendant
