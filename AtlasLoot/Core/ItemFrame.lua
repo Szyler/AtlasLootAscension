@@ -541,8 +541,8 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	itemButton.quest = itemNumber.quest or nil
 	itemButton.item = itemNumber
 
-	if itemNumber.lootTable then
-		itemButton.sourcePage = itemNumber.lootTable
+	if self.data.lootableLinks[itemID] then
+		itemButton.sourcePage = self.data.lootableLinks[itemID]
 	else
 		itemButton.sourcePage = nil
 	end
