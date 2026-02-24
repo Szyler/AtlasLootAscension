@@ -99,13 +99,13 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 
 	local dataSource, itemData, numberPages = self:GetSourceData(dataSource_backup, dataID, tablenum)
 
-	pageNumber = (pageNumber and pageNumber > numberPages and (pageNumber - (pageNumber - numberPages)))  or pageNumber or 1
-
     --If the loot table name has not been passed, throw up a debugging statement
-	if not dataID or not dataSource then
-		DEFAULT_CHAT_FRAME:AddMessage("No data!")
+	if not dataID or not dataSource or not numberPages then
+		DEFAULT_CHAT_FRAME:AddMessage("No data for this category or selection exists")
         return
 	end
+
+	pageNumber = (pageNumber and pageNumber > numberPages and (pageNumber - (pageNumber - numberPages)))  or pageNumber or 1
 
 	--Hide search for normal loot tables
 	if dataID ~= "SearchResult"  then
