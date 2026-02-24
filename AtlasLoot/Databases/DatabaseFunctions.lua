@@ -251,7 +251,8 @@ function AtlasLoot:InitializeDataTables()
 		map = {},
 		crafting = {},
 		extraItemInfo = {},
-		itemDropRates = {}
+		itemDropRates = {},
+		lootableLinks = {}
 	}
 end
 
@@ -459,6 +460,9 @@ function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 	if dataSource_backup == "currentWishList" then
 		dataSource = self.currentWishList[dataID]
 		itemData = self.currentWishList[dataID][tablenum]
+	elseif dataSource_backup == "token" then
+		dataSource = self.data.token[dataID]
+		itemData = self.data.token[dataID]
 	elseif dataID == "SearchResult" then
 		dataSource = AtlasLootCharDB[dataID]
 		itemData = AtlasLootCharDB[dataID][1]

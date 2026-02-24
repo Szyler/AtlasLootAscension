@@ -201,9 +201,8 @@ function AtlasLoot:ItemOnClick(item, button)
             if self.data.token[item.sourcePage[1]] == nil then
                 self:CreateToken(item.sourcePage[1])
             end
-            dataID, dataSource, dataPage = item.sourcePage[1], "token", 1
             --Show token table
-            self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
+            self:ShowItemsFrame(item.sourcePage[1], "token", 1)
         elseif button == "LeftButton" and itemID and self.data.extraItemInfo[itemID] then
             self:PopoupItemFrame(item, self.data.extraItemInfo[itemID] )
             self.ui.itemPopupframe:Show()
@@ -238,9 +237,8 @@ function AtlasLoot:ItemOnClick(item, button)
             if self.data.token[item.sourcePage[1]] == nil then
                 self:CreateToken(item.sourcePage[1])
             end
-            dataID, dataSource, dataPage = item.sourcePage[1], "token", 1
             --Show token table
-            self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
+            self:ShowItemsFrame(item.sourcePage[1], "token", 1)
         elseif button == "LeftButton" and recipeData then
             self:PopoupItemFrame(item, recipeData)
             self.ui.itemPopupframe:Show()

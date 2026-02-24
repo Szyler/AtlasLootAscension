@@ -23,38 +23,27 @@ function AtlasLoot:CreateToken(dataID)
 	if (self.data.token[orgID] == nil) then
 		self.data.token[orgID] = {
 			Name = itemName,
-			Type = AtlasLoot_Data[dataID].Type,
+			Type = self:GetDataType(dataID),
 			Back = true,
 			NoSubt = true,
-			{
-				Name = itemName,
-				{},
-				{},
-			},
+			[1] = {}
 		}
 	end
-	local count = 1
 	local function addItem(itemID, desc)
-		local pageSide = self.data.token[orgID][1][1]
-		if count >= 16 then
-			pageSide = self.data.token[orgID][1][2]
-		end
-		if itemType == select(9, AtlasLoot:GetItemInfo(itemID)) or itemType2 == select(9, AtlasLoot:GetItemInfo(itemID)) then
-			table.insert(pageSide, {itemID = itemID, desc = desc})
-			count = count + 1
+		local itemT = select(9, self:GetItemInfo(itemID))
+		if itemType == itemT or itemType2 == itemT then
+			table.insert(self.data.token[orgID][1], {itemID = itemID, desc = desc})
 		end
 	end
+	local count = 1
 	--Fills table with items
-	for _, t in ipairs(AtlasLoot_Data[dataID]) do
-		for _, side in ipairs(t) do
-			for _, v in ipairs(side) do
-				if type(v) == "table" then
-					if v.itemID then
-						addItem(v.itemID, t.Name)
-					end
-				end
+	while self.data.item[dataID..count] do
+		for _, item in ipairs(self.data.item[dataID..count]) do
+			if item.itemID then
+				addItem(item.itemID, self:GetDataPageName(dataID, count))
 			end
 		end
+		count = count + 1
 	end
 	self:ShowItemsFrame("refresh")
 end
