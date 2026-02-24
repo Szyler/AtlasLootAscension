@@ -22,6 +22,10 @@ function AtlasLoot:GetDataName(iD)
 	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Name or nil
 end
 
+function AtlasLoot:GetDataPageName(iD, i)
+	return self.ui.menus.data[iD] and self.ui.menus.data[iD][i][1] or nil
+end
+
 function AtlasLoot:GetDataModule(iD)
 	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Module or nil
 end
