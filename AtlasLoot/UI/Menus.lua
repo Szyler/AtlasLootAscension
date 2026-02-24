@@ -14,6 +14,22 @@ function AtlasLoot:AddNewMenus(menus)
 	end
 end
 
+function AtlasLoot:GetDataType(iD)
+	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Type or nil
+end
+
+function AtlasLoot:GetDataName(iD)
+	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Name or nil
+end
+
+function AtlasLoot:GetDataModule(iD)
+	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Module or nil
+end
+
+function AtlasLoot:GetDataMap(iD)
+	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Map or nil
+end
+
 function AtlasLoot:InitializeMenus()
 	self.ui.menus = {collection = {}, data = menusTemp}
 	local menus = self.ui.menus
