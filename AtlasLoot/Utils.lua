@@ -633,20 +633,20 @@ function AtlasLoot:DewdropToggle(button)
 	end
 end
 
-function AtlasLoot:RateLimitLoadTable(table, taskFunction)
+function AtlasLoot:RateLimitLoadTable(taskData, taskFunction)
 	-- rate limit tied to half the current frame rate
 	local maxDuration = (self.selectedProfile.ItemLoadingSpeed*500)/GetFramerate()
 	local startTime = debugprofilestop()
 	local function continue()
 		startTime = debugprofilestop()
-		local task = tremove(table)
+		local task = table.remove(taskData)
 		while (task) do
 			taskFunction(task)
 			if (debugprofilestop() - startTime > maxDuration) then
 				Timer.After(0, continue)
 				return
 			end
-			task = tremove(table)
+			task = table.remove(taskData)
 		end
 	end
 
