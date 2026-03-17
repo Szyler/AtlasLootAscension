@@ -252,7 +252,8 @@ function AtlasLoot:InitializeDataTables()
 		crafting = {},
 		extraItemInfo = {},
 		itemDropRates = {},
-		lootableLinks = {}
+		lootableLinks = {},
+		onDemand = {}
 	}
 end
 
@@ -463,6 +464,12 @@ function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 	elseif dataSource_backup == "token" then
 		dataSource = self.data.token[dataID]
 		itemData = self.data.token[dataID]
+	elseif dataSource_backup == "AtlasLoot_OnDemand" then
+		dataSource = self.data.onDemand[dataID]
+		itemData = self.data.onDemand[dataID][tablenum]
+	elseif dataSource_backup == "AtlasLoot_Data_Cache" then
+		dataSource = AtlasLoot_Data_Cache[dataID]
+		itemData = AtlasLoot_Data_Cache[dataID]
 	elseif dataID == "SearchResult" then
 		dataSource = AtlasLootCharDB[dataID]
 		itemData = AtlasLootCharDB[dataID][1]

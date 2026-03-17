@@ -522,8 +522,9 @@ end)
             self.ui.tabs.Loot.TableScrollFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
             if value <= maxValue and (dataSource and dataSource[value] or dataSource[tablenum][value]) and dataID ~= "SearchMENU" then
                 local row = self.ui.tabs.Loot.TableScrollFrame.rows[i]
-                    row.tableInfo = {dataID, dataSource_backup, value}
+                    row.tableNum = value
                     row.dataSource = dataSource
+                    row.dataSourceBackup = dataSource_backup
                 if dataSource_backup == "AtlasLoot_MapData" then
                     local text = dataSource[value][1]
                     if dataSource[value][2] then text = text..dataSource[value][2] end
@@ -562,7 +563,8 @@ end)
     self.ui.tabs.Loot.TableScrollFrame.scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8)
     self.ui.tabs.Loot.TableScrollFrame.scrollSlider:SetScript("OnVerticalScroll", function(slider, offset)
         slider.offset = math.floor(offset / ROW_HEIGHT + 0.5)
-            self:SubTableScrollFrameUpdate(unpack(self.ui.tabs.Loot.TableScrollFrame.tableInfo))
+        local sFrame = self.ui.tabs.Loot.TableScrollFrame
+            self:SubTableScrollFrameUpdate(sFrame.dataID, sFrame.dataSource, sFrame.tableNum or 1)
     end)
 
 local rows2 = setmetatable({}, { __index = function(t, i)
@@ -581,8 +583,9 @@ local rows2 = setmetatable({}, { __index = function(t, i)
         if buttonClick == "RightButton" and webID then
             row:SetChecked(not row:GetChecked())
             self:OpenDB(button, webID[2], webID[1])
-        elseif row.tableInfo[2] ~= "AtlasLoot_MapData" then
-            self:ShowItemsFrame(unpack(row.tableInfo))
+        elseif row.dataSourceBackup ~= "AtlasLoot_MapData" then
+            local sFrame = self.ui.tabs.Loot.TableScrollFrame
+            self:ShowItemsFrame(sFrame.dataID, sFrame.dataSource, row.tableNum)
         else
             row:SetChecked(false)
         end

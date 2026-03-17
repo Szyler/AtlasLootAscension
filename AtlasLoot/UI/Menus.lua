@@ -15,11 +15,16 @@ function AtlasLoot:AddNewMenus(menus)
 end
 
 function AtlasLoot:GetDataType(iD)
-	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Type or nil
+	local sourceInfo = self:GetSourcesExtendedInfo()
+	return sourceInfo[iD] and sourceInfo[iD][1].Type or nil
 end
 
 function AtlasLoot:GetDataName(iD)
 	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Name or nil
+end
+
+function AtlasLoot:GetDataDisplayName(iD)
+	return (self.ui.menus.data[iD] and (self.ui.menus.data[iD].DisplayName or self.ui.menus.data[iD].Name)) or nil
 end
 
 function AtlasLoot:GetDataPageName(iD, i)
