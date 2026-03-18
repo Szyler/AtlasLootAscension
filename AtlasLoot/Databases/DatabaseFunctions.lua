@@ -387,6 +387,7 @@ end
 local displayData = {}
 -- Sorts a lootTables items based on the order of the above lists and adds any spacers between groups
 local function sortItemData(dataSource, dataID, tablenum)
+	if not dataSource then return end
 	local lootTables = dataSource[tablenum][2]
 	if not lootTables then return end
 	local lootTableName = lootTables[1] or dataID..tablenum
