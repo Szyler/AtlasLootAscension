@@ -485,6 +485,7 @@ local MAX_ROWS2 = 24      -- How many rows can be shown at once?
 --------------------Subtable Frame--------------------
     self.ui.tabs.Loot.TableScrollFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", self.ui, "AtlasLootFrameTemplate")
     self.ui.tabs.Loot.TableScrollFrame:EnableMouse(true)
+    self.ui.tabs.Loot.TableScrollFrame.maxRows = MAX_ROWS2
     self.ui.tabs.Loot.TableScrollFrame:EnableMouseWheel(true)
     self.ui.tabs.Loot.TableScrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS2 + 23)
     self.ui.tabs.Loot.TableScrollFrame:SetPoint("TOP","Atlasloot_Difficulty_ScrollFrame","BOTTOM",0,-5.5)

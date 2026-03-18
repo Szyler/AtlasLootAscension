@@ -587,9 +587,11 @@ function AtlasLoot:NavButton_OnClick(btn)
 	if self.ui.tabs.Map:IsVisible() then
 		self:MapSelect(btn.mapID, btn.mapNum)
 	else
-		if #btn.dataSource > 26 then
+		if #btn.dataSource > self.ui.tabs.Loot.TableScrollFrame.maxRows and btn.tablenum ~= 1 then
 			local min, max = AtlasLootSubTableScrollScrollBar:GetMinMaxValues()
 			AtlasLootSubTableScrollScrollBar:SetValue(btn.tablenum * (max / #btn.dataSource))
+		else
+			AtlasLootSubTableScrollScrollBar:SetValue(1)
 		end
 		self:ShowItemsFrame(btn.dataID, btn.dataSource_backup, btn.tablenum, btn.numberPages)
 	end
