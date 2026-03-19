@@ -38,6 +38,59 @@ local equipSlot = {
     Consumable = {"Consumable"},
 }
 
+	local extraCategories = {
+		Weapons = {
+			VanityAxe1H = "One-Handed Axes",
+			VanityAxe2H = "Two-Handed Axes",
+			VanitySword1H = "One-Handed Swords",
+			VanitySword2H = "Two-Handed Swords",
+			VanityMace1H = "One-Handed Maces",
+			VanityMace2H = "Two-Handed Maces",
+			VanityDagger = "Daggers",
+			VanityFist = "Fist Weapons",
+			VanityShield = "Shields",
+			VanityPolearm = "Polearms",
+			VanityBows = "Bows",
+			VanityGuns = "Guns",
+			VanityCrossbows = "Crossbows",
+			VanityThrown = "Thrown",
+			VanityWands = "Wands",
+			VanityStaves = "Staves",
+			VanityFishingPole = "Fishing Poles",
+			VanityOffHand = "Off Hands",
+		},
+		Armor = {
+			VanityHead = "Head",
+			VanityShoulder = "Shoulders",
+			VanityChest = "Chests",
+			VanityWaist = "Waist",
+			VanityLegs = "Legs",
+			VanityFeet = "Feet",
+			VanityWrist = "Wrist",
+			VanityHands = "Hands",
+			VanityBack = "Back",
+			VanitySets = "Sets",
+		},
+		Miscellaneous = {
+			VanityShirt = "Shirts",
+			VanityTabard = "Tabards",
+			VanityBackpack = "Backpacks",
+			VanityIllusion = "Illusions",
+		},
+		Spells = {
+			VanityVisual = "Spell Visuals",
+			VanityEffect = "Effects",
+			VanityIncarnation = "Incarnations",
+		},
+		TamedPets = {
+			VanityWhistle = "Whistles",
+			VanitySummonStone = "Summon Stones",
+			VanityVellum = "Vellums",
+			VanityWarhorn = "Warhorns",
+			VanityLodestone = "Lodestones",
+		}
+	}
+
 -- Combind robes with chest
 local function getEquipSlot(equipLoc, equipeType)
 	if equipLoc == "INVTYPE_ROBE" then
@@ -46,7 +99,6 @@ local function getEquipSlot(equipLoc, equipeType)
 	return equipSlot[equipLoc] or equipSlot[equipeType]
 end
 
-
 function AtlasLoot:CreateVanityCollection()
 	self:InitializeDataTables()
 	local itemData = self.data.item
@@ -54,13 +106,23 @@ function AtlasLoot:CreateVanityCollection()
 	local function createCatagory(cat, name)
 		cat = gsub(cat, "Vanity", "")
 		if itemData["Vanity"..cat] then return end
-		itemData["Vanity"..cat] = {dontSort = true}
-		self:AddNewMenus({["Vanity"..cat] = {
-			Name = name,
-			vanity = true,
-			Module = "AtlasLoot_Ascension_Vanity",
-			{name, {"Vanity"..cat}}
-		}})
+		local menuData = {}
+		for mainCatName, mainCat in pairs(extraCategories) do
+			if mainCat["Vanity"..cat] then
+				menuData["Vanity"..mainCatName] = menuData["Vanity"..mainCatName] or {Name = mainCatName, vanity = true, Module = "AtlasLoot_Ascension_Vanity"}
+				for catName, catDisplayName in pairs (mainCat) do
+					itemData[catName] = { dontSort = true, vanityCollection = true, {} }
+					table.insert(menuData["Vanity"..mainCatName], {catDisplayName, {catName}})
+				end
+				break
+			end
+		end
+		if #menuData == 0 then
+			itemData["Vanity"..cat] = { dontSort = true, vanityCollection = true, {} }
+			menuData["Vanity"..cat] = menuData["Vanity"..cat] or {Name = cat, vanity = true, Module = "AtlasLoot_Ascension_Vanity"}
+			table.insert(menuData["Vanity"..cat], {name, {"Vanity"..cat}})
+		end
+		self:AddNewMenus(menuData)
 	end
 
 	local function findGroup(group)
@@ -161,7 +223,11 @@ function AtlasLoot:CreateVanityCollection()
 	for groupName, categorie in pairs(categorieList) do
 		createCatagory(groupName, groupName)
 		for _, item in ipairs(categorie) do
-			table.insert(itemData[groupName], item)
+			local group = itemData[groupName]
+			if #group[#group] >= 30 then
+				table.insert(group, {})
+			end
+			table.insert(group[#group], item)
 		end
 	end
 	

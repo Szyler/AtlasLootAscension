@@ -436,6 +436,8 @@ local function sortItemData(dataSource, dataID, tablenum)
 				table.insert(newTable[#newTable], {"blankLine"})
 			end
 		end
+	elseif AtlasLoot.data.item[lootTableName].vanityCollection then
+		newTable = AtlasLoot.data.item[lootTableName]
 	else
 		for itemNum, item in ipairs(AtlasLoot.data.item[lootTableName]) do
 			if (#newTable[#newTable] ~= 0 and item.pageBreak) then
@@ -454,6 +456,7 @@ local function sortItemData(dataSource, dataID, tablenum)
 		end
 	end
 	displayData[lootTableName] = newTable
+	if AtlasLoot.selectedProfile.isAdmin then AtlaslootDisplaydata = displayData end
 	return displayData[lootTableName]
 end
 
