@@ -921,7 +921,7 @@ AtlasLoot:AddNewItemDataTable({
 			{ itemID = 10332, desc = "Trash Mobs" }, --Scarlet Boots
 		},
 		{
-			{ itemID = 11729, desc = "=ds==q2=#brd3#, ".."Hedrum the Creeper" }, --Savage Gladiator Helm
+			{ itemID = 11729, desc = "#brd3#, ".."Hedrum the Creeper" }, --Savage Gladiator Helm
 			{ itemID = 11726, desc = "Gorosh the Dervish" }, --Savage Gladiator Chain
 			{ itemID = 11730, desc = "Eviscerator" }, --Savage Gladiator Grips
 			{ itemID = 11728, desc = "Ok'thor the Breaker" }, --Savage Gladiator Leggings

@@ -19,17 +19,17 @@ AtlasLoot:AddNewItemDataTable({
 
 	["PVPHellfire"] = {
 		{
-			{ itemID = 27833, desc = "=ds=15 #markthrallmarhhold#" }, --Band of the Victor
-			{ itemID = 27786, desc = "=ds=10 #markthrallmarhhold#" }, --Barbed Deep Peridot
-			{ itemID = 28360, desc = "=ds=10 #markthrallmarhhold#" }, --Mighty Blood Garnet
+			{ itemID = 27833, desc = "15 #markthrallmarhhold#" }, --Band of the Victor
+			{ itemID = 27786, desc = "10 #markthrallmarhhold#" }, --Barbed Deep Peridot
+			{ itemID = 28360, desc = "10 #markthrallmarhhold#" }, --Mighty Blood Garnet
 			{ icon = "INV_BannerPVP_02", name = "Alliance", pageBreak = true },
-			{ itemID = 24520, desc = "=ds=5 #markhhold#" }, --Honor Hold Favor
+			{ itemID = 24520, desc = "5 #markhhold#" }, --Honor Hold Favor
 			{ itemID = 24579, desc = "Currency (Alliance)" }, --Mark of Honor Hold
-			{ itemID = 27830, desc = "=ds=15 #markthrallmarhhold#" }, --Circlet of the Victor
-			{ itemID = 27785, desc = "=ds=10 #markthrallmarhhold#" }, --Notched Deep Peridot
-			{ itemID = 27777, desc = "=ds=10 #markthrallmarhhold#" }, --Stark Blood Garnet
+			{ itemID = 27830, desc = "15 #markthrallmarhhold#" }, --Circlet of the Victor
+			{ itemID = 27785, desc = "10 #markthrallmarhhold#" }, --Notched Deep Peridot
+			{ itemID = 27777, desc = "10 #markthrallmarhhold#" }, --Stark Blood Garnet
 			{ icon = "INV_BannerPVP_01", name = "Horde" },
-			{ itemID = 24522, desc = "=ds=5 #markthrallmar#" }, --Thrallmar Favor
+			{ itemID = 24522, desc = "5 #markthrallmar#" }, --Thrallmar Favor
 			{ itemID = 24581, desc = "Currency (Horde)" }, --Mark of Thrallmar
 		},
 	},

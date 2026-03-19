@@ -401,7 +401,7 @@ AtlasLoot:AddNewItemDataTable({
 			{ itemID = 31831 }, --Reins of the Silver Riding Talbuk
 			{ itemID = 31833 }, --Reins of the Tan Riding Talbuk
 			{ itemID = 31835 }, --Reins of the Green Riding Talbuk
-			{ icon = "INV_BannerPVP_02", name = "=q6=Ravasaur Trainers ", "Alliance" },
+			{ icon = "INV_BannerPVP_02", name = "Ravasaur Trainers ", "Alliance" },
 			{ itemID = 46102 }, --Whistle of the Venomhide Ravasaur
 			{ icon = "INV_BannerPVP_02", name =  "The Sunreavers", desc = "Alliance" },
 			{ itemID = 46816 }, --Sunreaver Hawkstrider

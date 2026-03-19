@@ -1804,9 +1804,9 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 43582, spellID = 58954 }, --Titanium Frostguard Ring
 			{ itemID = 31398, spellID = 38503 }, --The Frozen Eye
 			{ itemID = 31399, spellID = 38504 }, --The Natural Ward
-			{ itemID = 34361, spellID = 46124 }, --Hard Khorium Band", "=ds=".."Skill Required:".." 365
-			{ itemID = 34362, spellID = 46122 }, --Loop of Forged Power", "=ds=".."Skill Required:".." 365
-			{ itemID = 34363, spellID = 46123 }, --Ring of Flowing Life", "=ds=".."Skill Required:".." 365
+			{ itemID = 34361, spellID = 46124 }, --Hard Khorium Band
+			{ itemID = 34362, spellID = 46122 }, --Loop of Forged Power
+			{ itemID = 34363, spellID = 46123 }, --Ring of Flowing Life
 			{ itemID = 45808, spellID = 64727 }, --Runed Mana Band
 			{ itemID = 45809, spellID = 64728 }, --Scarlet Signet
 			{ itemID = 43250, spellID = 58147 }, --Ring of Earthern Might
@@ -1830,9 +1830,9 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 42646, spellID = 56500 }, --Titanium Earthguard Chain
 			{ itemID = 42645, spellID = 56499 }, --Titanium Impact Choker
 			{ itemID = 42647, spellID = 56501 }, --Titanium Spellshock Necklace
-			{ itemID = 34360, spellID = 46126 }, --Amulet of Flowing Life", "=ds=".."Skill Required:".." 365
-			{ itemID = 34358, spellID = 46127 }, --Hard Khorium Choker", "=ds=".."Skill Required:".." 365
-			{ itemID = 34359, spellID = 46125 }, --Pendant of Sunfire", "=ds=".."Skill Required:".." 365
+			{ itemID = 34360, spellID = 46126 }, --Amulet of Flowing Life
+			{ itemID = 34358, spellID = 46127 }, --Hard Khorium Choker
+			{ itemID = 34359, spellID = 46125 }, --Pendant of Sunfire
 			{ itemID = 45812, spellID = 64725 }, --Emerald Choker
 			{ itemID = 45813, spellID = 64726 }, --Sky Sapphire Amulet
 			{ itemID = 42339, spellID = 56196 }, --Blood Sun Necklace
@@ -1844,8 +1844,8 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 	{
 		Name = "Miscellaneous",
 		{
-			{ itemID = 24123, spellID = 31078 }, --Circlet of Arcane Might", "=ds=".."Skill Required:".." 370
-			{ itemID = 24122, spellID = 31077 }, --Coronet of the Verdant Flame", "=ds=".."Skill Required:".." 370
+			{ itemID = 24123, spellID = 31078 }, --Circlet of Arcane Might
+			{ itemID = 24122, spellID = 31077 }, --Coronet of the Verdant Flame
 			{ itemID = 44943, spellID = 62242 }, --Icy Prism
 			{ itemID = 42421, spellID = 56208 }, --Shadow Jade Focusing Lens
 			{ itemID = 42420, spellID = 56206 }, --Shadow Crystal Focusing Lens
@@ -2091,13 +2091,13 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 44963, spellID = 62448 }, --Earthen Leg Armor
 			{ itemID = 38373, spellID = 50965 }, --Frosthide Leg Armor
 			{ itemID = 38374, spellID = 50967 }, --Icescale Leg Armor
-			{ itemID = 29536, spellID = 35557 }, --Nethercleft Leg Armor", "=ds=".."Skill Required:".." 365
-			{ itemID = 29535, spellID = 35554 }, --Nethercobra Leg Armor", "=ds=".."Skill Required:".." 365
+			{ itemID = 29536, spellID = 35557 }, --Nethercleft Leg Armor", 
+			{ itemID = 29535, spellID = 35554 }, --Nethercobra Leg Armor", 
 			{ itemID = 38371, spellID = 50964 }, --Jormungar Leg Armor
 			{ itemID = 38372, spellID = 50966 }, --Nerubian Leg Armor
 			{ itemID = 29534, spellID = 35555 }, --Clefthide Leg Armor
 			{ itemID = 29533, spellID = 35549 }, --Cobrahide Leg Armor
-			{ itemID = 18251, spellID = 22727 }, --Core Armor Kit", "=ds=".."Skill Required:".." 300
+			{ itemID = 18251, spellID = 22727 }, --Core Armor Kit", "Skill Required:".." 300
 			{ itemID = 38376, spellID = 50963 }, --Heavy Borean Armor Kit
 		},
 		{

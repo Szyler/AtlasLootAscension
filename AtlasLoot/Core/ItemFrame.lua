@@ -457,9 +457,9 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	elseif itemNumber.lootTable and itemNumber.lootTable[2] == "Token" then
 		extra = self:FixText("Set Token (Click)")
 	elseif itemEquipLoc and itemEquipLoc ~= "" and itemSubType then
-		extra = "=ds="..itemEquipLoc..", "..itemSubType
+		extra = itemEquipLoc..", "..itemSubType
 	elseif itemSubType then
-		extra = "=ds="..itemSubType
+		extra = itemSubType
 	else
 		extra = ""
 	end

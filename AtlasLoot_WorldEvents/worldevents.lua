@@ -91,18 +91,18 @@ local brewfest = {
 	{ itemID = 34020 }, --Jungle River Water
 	{ itemID = 34021 }, --Brewdoo Magic
 	{ itemID = 34022 }, --Stout Shrunken Head
-	{ itemID = 37488, desc = "=ds=".."January" }, --Wild Winter Pilsner
-	{ itemID = 37489, desc = "=ds=".."February" }, --Izzard's Ever Flavor
-	{ itemID = 37490, desc = "=ds=".."March" }, --Aromatic Honey Brew
-	{ itemID = 37491, desc = "=ds=".."April" }, --Metok's Bubble Bock
-	{ itemID = 37492, desc = "=ds=".."May" }, --Springtime Stout
-	{ itemID = 37493, desc = "=ds=".."June" }, --Blackrock Lager
-	{ itemID = 37494, desc = "=ds=".."July" }, --Stranglethorn Brew
-	{ itemID = 37495, desc = "=ds=".."August" }, --Draenic Pale Ale
-	{ itemID = 37496, desc = "=ds=".."September" }, --Binary Brew
-	{ itemID = 37497, desc = "=ds=".."October" }, --Autumnal Acorn Ale
-	{ itemID = 37498, desc = "=ds=".."November" }, --Bartlett's Bitter Brew
-	{ itemID = 37499, desc = "=ds=".."December" }, --Lord of Frost's Private Label
+	{ itemID = 37488, desc = "January" }, --Wild Winter Pilsner
+	{ itemID = 37489, desc = "February" }, --Izzard's Ever Flavor
+	{ itemID = 37490, desc = "March" }, --Aromatic Honey Brew
+	{ itemID = 37491, desc = "April" }, --Metok's Bubble Bock
+	{ itemID = 37492, desc = "May" }, --Springtime Stout
+	{ itemID = 37493, desc = "June" }, --Blackrock Lager
+	{ itemID = 37494, desc = "July" }, --Stranglethorn Brew
+	{ itemID = 37495, desc = "August" }, --Draenic Pale Ale
+	{ itemID = 37496, desc = "September" }, --Binary Brew
+	{ itemID = 37497, desc = "October" }, --Autumnal Acorn Ale
+	{ itemID = 37498, desc = "November" }, --Bartlett's Bitter Brew
+	{ itemID = 37499, desc = "December" }, --Lord of Frost's Private Label
 }
 local corenCLASSIC = {
 	{ itemID = 2037128 }, --Balebrew Charm
@@ -202,7 +202,7 @@ local HallowsEnd = {
 	{ itemID = 37583 }, --G.N.E.R.D.S.
 	{ itemID = 37582 }, --Pyroblast Cinnamon Ball
 	{ itemID = 37584 }, --Soothing Spearmint Candy
-	{ icon = "INV_Misc_Bag_11", name = "=q6=#".."Treat Bag", pageBreak = true },
+	{ icon = "INV_Misc_Bag_11", name = "Treat Bag", pageBreak = true },
 	{ itemID = 33292 }, --Hallowed Helm
 	{ itemID = 33154 }, --Sinister Squashling
 	{ itemID = 20410 }, --Hallowed Wand - Bat
@@ -301,7 +301,7 @@ AtlasLoot:AddNewItemDataTable({
 				{ itemID = 45716, price = "1 #champwrit#" }, --Gnomeregan Commendation Badge
 				{ itemID = 45717, price = "1 #champwrit#" }, --Ironforge Commendation Badge
 				{ itemID = 45718, price = "1 #champwrit#" }, --Stormwind Commendation Badge
-				{ itemID = 46114, desc = "=ds=".."Currency" }, --Champion's Writ
+				{ itemID = 46114, desc = "Currency" }, --Champion's Writ
 				{ icon = "INV_BannerPVP_01", name = "Horde" },
 				{ itemID = 45719, price = "1 #champwrit#" }, --Orgrimmar Commendation Badge
 				{ itemID = 45723, price = "1 #champwrit#" }, --Undercity Commendation Badge
@@ -436,7 +436,7 @@ AtlasLoot:AddNewItemDataTable({
 				{ itemID = 46743, price = "500 #gold# 5 #champseal#" }, --Swift Purple Raptor
 				{ itemID = 46751, price = "500 #gold# 5 #champseal#" }, --Swift Red Hawkstrider
 				{ itemID = 46746, price = "500 #gold# 5 #champseal#" }, --AtlasLoot.Colors.WHITE Skeletal Warhorse
-				{ icon = "inv_misc_tabardpvp_01", name =  "The Silver Covenant", "=ec1=".."Alliance" },
+				{ icon = "inv_misc_tabardpvp_01", name =  "The Silver Covenant", "Alliance" },
 				{ itemID = 46815, price = "100 #champseal#" }, --Quel'dorei Steed
 				{ itemID = 46813, price = "150 #champseal#" }, --Silver Covenant Hippogryph
 				{ icon = "INV_Jewelry_Talisman_08", name =  "Argent Crusade" },
@@ -444,7 +444,7 @@ AtlasLoot:AddNewItemDataTable({
 				{ itemID = 47180, price = "100 #champseal#" }, --Argent Warhorse
 				{ itemID = 45725, price = "150 #champseal#" }, --Argent Hippogryph
 				{ itemID = 44990 }, --Champion's Seal
-				{ icon = "inv_misc_tabardpvp_02", name =  "The Sunreavers", "=ec1=".."Horde" },
+				{ icon = "inv_misc_tabardpvp_02", name =  "The Sunreavers", "Horde" },
 				{ itemID = 46816, price = "100 #champseal#" }, --Sunreaver Hawkstrider
 				{ itemID = 46814, price = "150 #champseal#" }, --Sunreaver Dragonhawk
 			},
@@ -941,7 +941,7 @@ AtlasLoot:AddNewItemDataTable({
 			{ itemID = 18710 }, --Arena Bracers
 			{ itemID = 18711 }, --Arena Bands
 			{ itemID = 18712 }, --Arena Vambraces
-			{ itemID = 18706, desc = ", =q1=".."This Item Begins a Quest", pageBreak = true }, --Arena Master
+			{ itemID = 18706, desc = ", This Item Begins a Quest", pageBreak = true }, --Arena Master
 			{ itemID = 19024 }, --Arena Grand Master
 		},
 	},
@@ -1265,8 +1265,8 @@ AtlasLoot:AddNewItemDataTable({
 			{ itemID = 32535 }, --Gift of the Talonpriests
 			{ itemID = 32534, price = "11.2%" }, --Brooch of the Immortal King
 			{ itemID = 32782 }, --Time-Lost Figurine
-			{ itemID = 32536, desc = "=ds= =q2=".."(has random enchantment)" }, --Terokk's Gavel
-			{ itemID = 32537, desc = "=ds= =q2=".."(has random enchantment)" }, --Terokk's Gavel
+			{ itemID = 32536, desc = "(has random enchantment)" }, --Terokk's Gavel
+			{ itemID = 32537, desc = "(has random enchantment)" }, --Terokk's Gavel
 		},
 		{
 			{ itemID = 32523 }, --Ishaal's Almanac
@@ -1294,9 +1294,9 @@ AtlasLoot:AddNewItemDataTable({
 			{ itemID = 22999 }, --Tabard of the Argent Dawn
 			{ itemID = 43531 }, --Argent Healing Potion
 			{ itemID = 43530 }, --Argent Mana Potion
-			{ itemID = 22484, desc = "=ds=".."Currency" }, --Necrotic Rune
+			{ itemID = 22484, desc = "Currency" }, --Necrotic Rune
 			{ itemID = 40110, pageBreak = true }, --Haunted Memento
-			{ icon = "INV_Box_01", name =  "Prince Tenris Mirkblood", "=q5=" .. "Karazhan" },
+			{ icon = "INV_Box_01", name =  "Prince Tenris Mirkblood", "Karazhan" },
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 39769 }, --Arcanite Ripper
 			{ itemID = 38658 }, --Vampiric Batling

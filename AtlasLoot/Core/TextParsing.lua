@@ -113,17 +113,6 @@ local txtSubstitution = {
     { "Orange", "Orange Gem" },
     { "Green", "Green Gem" },
 
-    -- Text Colouring
-    { "=q0=", "|cff9d9d9d" },
-    { "=q1=", "|cffFFFFFF" },
-    { "=q2=", "|cff1eff00" },
-    { "=q3=", "|cff0070dd" },
-    { "=q4=", "|cffa335ee" },
-    { "=q5=", "|cffFF8000" },
-    { "=q6=", "|cffFF0000" },
-    { "=q7=", "|cffe6cc80" },
-    { "=ec1=", "|cffFF8400" },
-    { "=ds=", "|cffFFd200" },
 
     -- Currency Icons
     { "#gold#", "|TInterface\\AddOns\\AtlasLoot\\Images\\gold:0|t" },

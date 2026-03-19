@@ -549,22 +549,22 @@ AtlasLoot_Data["AuchShadowLab"] = {
 	{
 		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. "Trash Mobs", "=q5=" .. "Mana-Tombs" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Trash Mobs", "Mana-Tombs" },
 			{ itemID = 23615 }, --Plans: Swiftsteel Gloves
 			{ itemID = 22543 }, --Formula: Enchant Boots - Fortitude
-			{ icon = "INV_Box_01", name = color.WHITE.. "Trash Mobs", "=q5=" .. "Sethekk Halls" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Trash Mobs", "Sethekk Halls" },
 			{ itemID = 25731 }, --Pattern: Stylin' Crimson Hat
 			{ itemID = 29669 }, --Pattern: Shadow Armor Kit
-			{ icon = "INV_Box_01", name = color.WHITE.. "The Saga of Terokk", "=q5=" .. "Sethekk Halls" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "The Saga of Terokk", "Sethekk Halls" },
 			{ itemID = 27634 }, --The Saga of Terokk
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. "Trash Mobs", "=q5=" .. "Auchenai Crypts" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Trash Mobs", "Auchenai Crypts" },
 			{ itemID = 23605 }, --Plans: Felsteel Gloves
 			{ itemID = 22544 }, --Formula: Enchant Boots - Dexterity
-			{ icon = "INV_Box_01", name = color.WHITE.. "Trash Mobs", "=q5=" .. "Shadow Labyrinth" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Trash Mobs", "Shadow Labyrinth" },
 			{ itemID = 23607 }, --Plans: Felsteel Helm
-			{ icon = "INV_Box_01", name = color.WHITE.. "First Fragment Guardian", "=q5=" .. "Shadow Labyrinth" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "First Fragment Guardian", "Shadow Labyrinth" },
 			{ itemID = 24514 }, --First Key Fragment
 		},
 	}
@@ -998,22 +998,22 @@ AtlasLoot_Data["CoTOldHillsbrad"] = {
 	{
 		Name = "Trash Mobs",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. "Trash Mobs", "=q5=" .. "Old Hillsbrad Foothills" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Trash Mobs", "Old Hillsbrad Foothills" },
 			{ itemID = 25729 }, --Pattern: Stylin' Adventure Hat
 			gap,
-			{ icon = "INV_Box_01", name = color.WHITE.. "Don Carlos", "=q5=" .. "Old Hillsbrad Foothills" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Don Carlos", "Old Hillsbrad Foothills" },
 			{ itemID = 38506 }, --Don Carlos' Famous Hat
 			{ itemID = 38329 }, --Don Carlos' Hat
 			{ itemID = 38276 }, --Haliscan Brimmed Hat
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. "Trash Mobs", "=q5=" .. "The Black Morass" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Trash Mobs", "The Black Morass" },
 			{ itemID = 25730 }, --Pattern: Stylin' Jungle Hat
 			gap,
-			{ icon = "INV_Box_01", name = color.WHITE.. "Thomas Yance", "=q5=" .. "Old Hillsbrad Foothills" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Thomas Yance", "Old Hillsbrad Foothills" },
 			{ itemID = 25725 },
 			gap,
-			{ icon = "INV_Box_01", name = color.WHITE.. "Aged Dalaran Wizard", "=q5=" .. "Old Hillsbrad Foothills" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Aged Dalaran Wizard", "Old Hillsbrad Foothills" },
 			{ itemID = 22539 },
 		},
 	}
@@ -1564,7 +1564,7 @@ AtlasLoot_Data["CFRSteamvault"] = {
 			{ itemID = 22533 }, --Formula: Enchant Bracer - Fortitude
 			{ itemID = 24367 }, --Orders from Lady Vashj
 			{ itemID = 24368 }, --Coilfang Armaments
-			{ icon = "INV_Box_01", name = color.WHITE.. "Second Fragment Guardian", "=q5=" .. "The Steamvault" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Second Fragment Guardian", "The Steamvault" },
 			{ itemID = 24487 }, --Second Key Fragment
 		},
 	}
@@ -2384,20 +2384,20 @@ AtlasLoot_Data["Karazhan"] = {
 	{
 		Name = "Servant's Quarter Animal Bosses",
 		{
-			{ icon = "Ability_Hunter_Pet_Spider", name = color.WHITE.. "Hyakiss the Lurker", "=q5=" .. "Spider" },
+			{ icon = "Ability_Hunter_Pet_Spider", name = color.WHITE.. "Hyakiss the Lurker", "Spider" },
 			{ itemID = 30675 }, --Lurker's Cord
 			{ itemID = 30676 }, --Lurker's Grasp
 			{ itemID = 30677 }, --Lurker's Belt
 			{ itemID = 30678 }, --Lurker's Girdle
 			gap,
-			{ icon = "Ability_Hunter_Pet_Hyena", name = color.WHITE.. "Rokad the Ravager", "=q5=" .. "Darkhound" },
+			{ icon = "Ability_Hunter_Pet_Hyena", name = color.WHITE.. "Rokad the Ravager", "Darkhound" },
 			{ itemID = 30684 }, --Ravager's Cuffs
 			{ itemID = 30685 }, --Ravager's Wrist-Wraps
 			{ itemID = 30686 }, --Ravager's Bands
 			{ itemID = 30687 }, --Ravager's Bracers
 		},
 		{
-			{ icon = "Ability_Hunter_Pet_Bat", name = color.WHITE.. "Shadikith the Glider", "=q5=" .. "Bat" },
+			{ icon = "Ability_Hunter_Pet_Bat", name = color.WHITE.. "Shadikith the Glider", "Bat" },
 			{ itemID = 30680 }, --Glider's Foot-Wraps
 			{ itemID = 30681 }, --Glider's Boots
 			{ itemID = 30682 }, --Glider's Sabatons
@@ -2490,14 +2490,14 @@ AtlasLoot_Data["Karazhan"] = {
 	{
 		Name = "Opera Event",
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. "The Crone", "=q5=" .. "Wizard of Oz" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "The Crone", "Wizard of Oz" },
 			{ itemID = 28586 }, --Wicked Witch's Hat
 			{ itemID = 28585 }, --Ruby Slippers
 			{ itemID = 28587 }, --Legacy
 			{ itemID = 28588 }, --Blue Diamond Witchwand
 			{ itemID = 61590 }, --Sigil
 			gap,
-			{ icon = "INV_Box_01", name = color.WHITE.. "Romulo & Julianne", "=q5=" .. "Romulo & Julianne" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "Romulo & Julianne", "Romulo & Julianne" },
 			{ itemID = 28578 }, --Masquerade Gown
 			{ itemID = 28579 }, --Romulo's Poison Vial
 			{ itemID = 28572 }, --Blade of the Unrequited
@@ -2506,7 +2506,7 @@ AtlasLoot_Data["Karazhan"] = {
 			{ itemID = 60992 }, --Sigil
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.. "The Big Bad Wolf", "=q5=" .. "color.RED Riding Hood" },
+			{ icon = "INV_Box_01", name = color.WHITE.. "The Big Bad Wolf", "color.RED Riding Hood" },
 			{ itemID = 28582 }, --Red Riding Hood's Cloak
 			{ itemID = 28583 }, --Big Bad Wolf's Head
 			{ itemID = 28584 }, --Big Bad Wolf's Paw
