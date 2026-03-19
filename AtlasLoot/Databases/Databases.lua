@@ -1,7 +1,7 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
 function AtlasLoot:InitializeDatabases()
-	self:AddNewDataTable("crafting", {
+	self:AddItemData("crafting", {
 		Custom = {
 			{ "DISCOVERY_ALCH_ELIXIRFLASK" },
 			{ "DISCOVERY_ALCH_POTION" },
@@ -52,7 +52,7 @@ function AtlasLoot:InitializeDatabases()
 		}
 	})
 
-	self:AddNewDataTable("crafting", {
+	self:AddItemData("crafting", {
 		Seasonal = {
 			{ GetCategoryInfo(156) }, -- Winter's Veil
 			{ GetCategoryInfo(160) }, -- Lunar Festival
@@ -63,7 +63,7 @@ function AtlasLoot:InitializeDatabases()
 		}
 	})
 
-	self:AddNewItemDataTable({
+	self:AddItemData({
 	----------------------
 	--- Heirloom Items ---
 	----------------------
@@ -2064,7 +2064,7 @@ function AtlasLoot:InitializeDatabases()
 		{ itemID = 4050653 }, --Pristine Tortoise Carapace
 	}
 
-	self:AddReferenceLootTable({
+	self:AddItemData("sort", {
 
 		{ itemID = 229739, refLootEntry = "Huntsman" }, --Tome of Untold Secrets
 		{ itemID = 30480, refLootEntry = "Huntsman" }, --Fiery Warhorse's Reins

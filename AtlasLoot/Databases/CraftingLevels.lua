@@ -1,5 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-AtlasLoot:AddNewDataTable("crafting", {
+AtlasLoot:AddItemData("crafting", {
     ["CraftingLevels"] = {
         -- Alchemy
         [2329] = { 1, 55, 75, 95 }, --  Elixir of Lion's Strength -- 2329

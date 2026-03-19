@@ -6,7 +6,7 @@ local _RED = "|cffcc6666"
 local quest = "questturnin"
 local boss = "dungeonskull"
 
-AtlasLoot:AddNewDataTable("map",{
+AtlasLoot:AddItemData("map",{
     --Classic Raids
     ["ZulGurub"] = {
         ZoneName = { "Zul'Gurub", 19 },

@@ -8,7 +8,7 @@ local PURP = "|cff9900ff"
     --************************************************
     -- Wrath of the Lich King Instances
     --************************************************
-AtlasLoot:AddNewDataTable("map",{
+AtlasLoot:AddItemData("map",{
     ["AhnKahet"] = {
         ZoneName = { "Ahn'kahet: The Old Kingdom", 4494 },
         Location = { "Dragonblight", 65 },

@@ -6,7 +6,7 @@ local SEASONAL = "Seasonal"
 local TRAINER = "Trainer/Book of Artisans"
 local REPUTATION = "Reputation"
 
-AtlasLoot:AddNewDataTable("crafting", {
+AtlasLoot:AddItemData("crafting", {
     AquireType = { 
         [2329] = { CUSTOM, 8}, -- Elixir of Lion's Strength -- 2329
         [2330] = { CUSTOM, 8}, -- Minor Healing Potion -- 2330

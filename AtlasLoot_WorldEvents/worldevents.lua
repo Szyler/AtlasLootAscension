@@ -292,7 +292,7 @@ local midSummerMain = {
 -------------------------
 --- Argent Tournament ---
 -------------------------
-AtlasLoot:AddNewItemDataTable({
+AtlasLoot:AddItemData({
 	["ArgentTournament"] = {
 			{
 				{ icon = "INV_BannerPVP_02", name = "Alliance" },

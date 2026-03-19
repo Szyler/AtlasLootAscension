@@ -1,6 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-AtlasLoot:AddNewDataTable("itemDropRates", {
+AtlasLoot:AddItemData("itemDropRates", {
     --Raid Drop Rates
     [10184] = {[4] = 0.0714},
     [10185] = {[1] = 0.0588},

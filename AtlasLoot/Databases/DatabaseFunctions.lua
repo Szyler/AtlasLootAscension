@@ -257,35 +257,40 @@ function AtlasLoot:InitializeDataTables()
 	}
 end
 
-function AtlasLoot:AddReferenceLootTable(lootTable)
-	self:InitializeDataTables()
-	local function addItem(item)
-		if item.refLootEntry then
-			if not self.data.item[item.refLootEntry] then self.data.item[item.refLootEntry] = {} end
-			table.insert(self.data.item[item.refLootEntry], item)
-		end
+function AtlasLoot:AddItemData(var1, var2)
+	local dataType, data
+	if type(var1) == "table" then
+		data = var1
+	else
+		dataType = var1
+		data = var2
 	end
-	self:RateLimitLoadTable(lootTable, addItem)
-end
 
-function AtlasLoot:AddNewItemDataTable(data)
 	self:InitializeDataTables()
-	for tableName, tableParent in pairs(data) do
-		for i, table in ipairs(tableParent) do
-			self.data.item[tableName..i] = table
-			self.data.item[tableName..i].dontSort = true
-			for _, item in ipairs(self.data.item[tableName..i]) do
-				item.refLootEntry = tableName..i
+	if dataType == "sort" then
+		local function addItem(item)
+			if item.refLootEntry then
+				if not self.data.item[item.refLootEntry] then self.data.item[item.refLootEntry] = {} end
+				table.insert(self.data.item[item.refLootEntry], item)
+			end
+		end
+		self:RateLimitLoadTable(data, addItem)
+	elseif dataType then
+		for tableName, table in pairs(data) do
+			self.data[dataType][tableName] = table
+		end
+	else
+		for tableName, tableParent in pairs(data) do
+			for i, table in ipairs(tableParent) do
+				self.data.item[tableName..i] = table
+				self.data.item[tableName..i].dontSort = true
+				for _, item in ipairs(self.data.item[tableName..i]) do
+					item.refLootEntry = tableName..i
+				end
 			end
 		end
 	end
-end
 
-function AtlasLoot:AddNewDataTable(dataTableName, data)
-	self:InitializeDataTables()
-	for tableName, table in pairs(data) do
-		self.data[dataTableName][tableName] = table
-	end
 end
 
 local equipLocType = {

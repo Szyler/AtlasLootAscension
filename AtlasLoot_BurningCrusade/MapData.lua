@@ -10,7 +10,7 @@ local boss = "dungeonskull"
     --************************************************
 
     -- Raids
-AtlasLoot:AddNewDataTable("map",{
+AtlasLoot:AddItemData("map",{
     Karazhan = {
         ZoneName = { "Karazhan".." [A] (".."Start"..")", 3457 },
         Location = { "Deadwind Pass", 41 },

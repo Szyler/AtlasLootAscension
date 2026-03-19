@@ -6,7 +6,7 @@ local HORDE = { "|cffff0000", "Horde" }
 local ALLIANCE = { "|cff1eff00", "Alliance" }
 local NEUTRAL = { "|cffFF8400", "Neutral" }
 
-AtlasLoot:AddNewDataTable("crafting", {
+AtlasLoot:AddItemData("crafting", {
     VendorList = {
         [66] = { "Tharynn Bouden", "Elwynn Forest", 41.9, 67.1, ALLIANCE },
         [340] = { "Kendor Kabonka", "Stormwind City", 77.5, 53.5, ALLIANCE },

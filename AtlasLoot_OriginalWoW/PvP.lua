@@ -6,7 +6,7 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 ----------------------
 --- Alterac Valley ---
 ----------------------
-AtlasLoot:AddNewItemDataTable({
+AtlasLoot:AddItemData({
 	["AVMisc"] = {
 		{
 			{ icon = "INV_BannerPVP_02", name = "Alliance", desc = "Stormpike Guard" },
