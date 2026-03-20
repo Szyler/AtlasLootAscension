@@ -16,7 +16,7 @@ AtlasLoot:AddNewMenus({
 		Map = "AuchAuchenaiCrypts",
 		{ "Shirrak the Dead Watcher", { 18371 } },
 		{ "Exarch Maladaar", { 18373 } },
-		{ "Avatar of the Martyred" },
+		{ "Avatar of the Martyred", {} },
 	},
 
 	["AuchManaTombs"] = {
@@ -40,7 +40,7 @@ AtlasLoot:AddNewMenus({
 		{ "Darkweaver Syth", { 40130 } },
 		{ "Anzu" .. " (" .. "Heroic" .. ")", { 23035 } },
 		{ "Talon King Ikiss", { 25006 } },
-		{ "Trash Mobs" },
+		{ "Trash Mobs", {} },
 	},
 
 	["AuchShadowLab"] = {
@@ -53,7 +53,7 @@ AtlasLoot:AddNewMenus({
 		{ "Blackheart the Inciter", { 40141 } },
 		{ "Grandmaster Vorpil", { 40142 } },
 		{ "Murmur", { 40143 } },
-		{ "Trash Mobs" },
+		{ "Trash Mobs", {} },
 	},
 
 	["BlackTemple"] = {
@@ -70,9 +70,9 @@ AtlasLoot:AddNewMenus({
 		{ "Mother Shahraz", { 22947 } },
 		{ "The Illidari Council" },
 		{ "Illidan Stormrage", { 22917 } },
-		{ "Trash Mobs" },
-		{ "Reputation Trinkets" },
-		{ "BT Patterns/Plans" },
+		{ "Trash Mobs", {} },
+		{ "Reputation Trinkets", {} },
+		{ "BT Patterns/Plans", {} },
 	},
 
 	["CoTOldHillsbrad"] = {
@@ -81,10 +81,10 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "Old Hillsbrad Foothills",
 		Type = "BCDungeon",
 		Map = "CoTOldHillsbrad",
-		{ "Lieutenant Drake" },
-		{ "Captain Skarloc" },
-		{ "Epoch Hunter" },
-		{ "Trash Mobs" },
+		{ "Lieutenant Drake", {} },
+		{ "Captain Skarloc", {} },
+		{ "Epoch Hunter", {} },
+		{ "Trash Mobs", {} },
 	},
 
 	["CoTBlackMorass"] = {
@@ -93,9 +93,9 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "The Black Morass",
 		Type = "BCDungeon",
 		Map = "CoTBlackMorass",
-		{ "Chrono Lord Deja" },
-		{ "Temporus" },
-		{ "Aeonus" },
+		{ "Chrono Lord Deja", {} },
+		{ "Temporus", {} },
+		{ "Aeonus", {} },
 	},
 
 	["CoTHyjal"] = {
@@ -104,15 +104,15 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "Hyjal Summit",
 		Type = "BCRaid",
 		Map = "CoTHyjal",
-		{ "Rage Winterchill" },
-		{ "Anetheron" },
-		{ "Kaz'rogal" },
-		{ "Azgalor" },
-		{ "Archimonde" },
-		{ "Chromius" },
-		{ "Trash Mobs - Items" },
-		{ "Crafting Recipe Drops Page 1" },
-		{ "Crafting Recipe Drops Page 2" },
+		{ "Rage Winterchill", {} },
+		{ "Anetheron", {} },
+		{ "Kaz'rogal", {} },
+		{ "Azgalor", {} },
+		{ "Archimonde", {} },
+		{ "Chromius", {} },
+		{ "Rep Rings", {} },
+		{ "Trash Mobs - Items", {} },
+		{ "Crafting Recipes", {} },
 	},
 
 	["CFRSlavePens"] = {
@@ -121,9 +121,9 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "The Slave Pens",
 		Type = "BCDungeon",
 		Map = "CFRTheSlavePens",
-		{ "Mennu the Betrayer" },
-		{ "Rokmar the Crackler" },
-		{ "Quagmirran" },
+		{ "Mennu the Betrayer", {} },
+		{ "Rokmar the Crackler", {} },
+		{ "Quagmirran", {} },
 	},
 
 	["CFRSteamvault"] = {
@@ -132,10 +132,10 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "The Steamvault",
 		Type = "BCDungeon",
 		Map = "CFRTheSteamvault",
-		{ "Hydromancer Thespia" },
-		{ "Mekgineer Steamrigger" },
-		{ "Warlord Kalithresh" },
-		{ "Trash Mobs" },
+		{ "Hydromancer Thespia", {} },
+		{ "Mekgineer Steamrigger", {} },
+		{ "Warlord Kalithresh", {} },
+		{ "Trash Mobs", {} },
 	},
 
 	["CFRUnderbog"] = {
@@ -144,10 +144,10 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "The Underbog",
 		Type = "BCDungeon",
 		Map = "CFRTheUnderbog",
-		{ "Hungarfen" },
-		{ "Ghaz'an" },
-		{ "Swamplord Musel'ek" },
-		{ "The Black Stalker" },
+		{ "Hungarfen", {} },
+		{ "Ghaz'an", {} },
+		{ "Swamplord Musel'ek", {} },
+		{ "The Black Stalker", {} },
 	},
 
 	["CFRSerpentshrine"] = {
@@ -156,13 +156,13 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "Serpentshrine Cavern",
 		Type = "BCRaid",
 		Map = "CFRSerpentshrineCavern",
-		{ "Hydross the Unstable" },
-		{ "The Lurker Below" },
-		{ "Leotheras the Blind" },
-		{ "Fathom-Lord Karathress" },
-		{ "Morogrim Tidewalker" },
-		{ "Lady Vashj" },
-		{ "Trash Mobs" },
+		{ "Hydross the Unstable", {} },
+		{ "The Lurker Below", {} },
+		{ "Leotheras the Blind", {} },
+		{ "Fathom-Lord Karathress", {} },
+		{ "Morogrim Tidewalker", {} },
+		{ "Lady Vashj", {} },
+		{ "Trash Mobs", {} },
 	},
 
 	["GruulsLair"] = {
@@ -170,8 +170,8 @@ AtlasLoot:AddNewMenus({
 		Name = "Gruul's Lair",
 		Type = "BCRaid",
 		Map = "GruulsLair",
-		{ "High King Maulgar" },
-		{ "Gruul the Dragonkiller" },
+		{ "High King Maulgar", {} },
+		{ "Gruul the Dragonkiller", {} },
 	},
 
 	["HCRamparts"] = {
@@ -180,9 +180,9 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "Hellfire Ramparts",
 		Type = "BCDungeon",
 		Map = "HCHellfireRamparts",
-		{ "Watchkeeper Gargolmar" },
-		{ "Omor the Unscarred" },
-		{ "Vazruden" },
+		{ "Watchkeeper Gargolmar", {} },
+		{ "Omor the Unscarred", {} },
+		{ "Vazruden", {} },
 	},
 
 	["HCFurnace"] = {
@@ -191,9 +191,9 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "The Blood Furnace",
 		Type = "BCDungeon",
 		Map = "HCBloodFurnace",
-		{ "The Maker" },
-		{ "Broggok" },
-		{ "Keli'dan the Breaker" },
+		{ "The Maker", {} },
+		{ "Broggok", {} },
+		{ "Keli'dan the Breaker", {} },
 	},
 
 	["HCShatteredHalls"] = {
@@ -202,11 +202,11 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "The Shattered Halls",
 		Type = "BCDungeon",
 		Map = "HCTheShatteredHalls",
-		{ "Grand Warlock Nethekurse" },
-		{ "Blood Guard Porung" },
-		{ "Warbringer O'mrogg" },
-		{ "Warchief Kargath Bladefist" },
-		{ "Trash Mobs" },
+		{ "Grand Warlock Nethekurse", {} },
+		{ "Blood Guard Porung", {} },
+		{ "Warbringer O'mrogg", {} },
+		{ "Warchief Kargath Bladefist", {} },
+		{ "Trash Mobs", {} },
 	},
 
 	["HCMagtheridon"] = {
@@ -224,7 +224,7 @@ AtlasLoot:AddNewMenus({
 		Type = "BCRaid",
 		Map = "Karazhan",
 		Loadfirst = 1,
-		--{ "Servant's Quarter Animal Bosses" },
+		{ "Servant's Quarter Animal Bosses", {} },
 		{ "Attumen the Huntsman", {16152, "Huntsman"} },
 		{ "Moroes", { 15687 } },
 		{ "Maiden of Virtue", { 16457 } },
@@ -236,7 +236,7 @@ AtlasLoot:AddNewMenus({
 		{ "Netherspite", { 15689 } },
 		{ "Chess Event", { 16816 } },
 		{ "Prince Malchezaar", { 15690 } },
-		--{ "Trash Mobs" },
+		{ "Trash Mobs", {} },
 	},
 
 	["MagistersTerrace"] = {
@@ -245,11 +245,11 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "Magisters' Terrace",
 		Type = "BCDungeon",
 		Map = "MagistersTerrace",
-		{ "Selin Fireheart" },
-		{ "Vexallus" },
-		{ "Priestess Delrissa" },
-		{ "Kael'thas Sunstrider" },
-		{ "Trash Mobs" },
+		{ "Selin Fireheart", {} },
+		{ "Vexallus", {} },
+		{ "Priestess Delrissa", {} },
+		{ "Kael'thas Sunstrider", {} },
+		{ "Trash Mobs", {} },
 	},
 
 	["TKArc"] = {
@@ -258,11 +258,11 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "The Arcatraz",
 		Type = "BCDungeon",
 		Map = "TempestKeepArcatraz",
-		{ "Zereketh the Unbound" },
-		{ "Wrath-Scryer Soccothrates" },
-		{ "Dalliah the Doomsayer" },
-		{ "Harbinger Skyriss" },
-		{ "Trash Mobs" },
+		{ "Zereketh the Unbound", {} },
+		{ "Wrath-Scryer Soccothrates", {} },
+		{ "Dalliah the Doomsayer", {} },
+		{ "Harbinger Skyriss", {} },
+		{ "Trash Mobs", {} },
 	},
 
 	["TKBot"] = {
@@ -271,11 +271,11 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "The Botanica",
 		Type = "BCDungeon",
 		Map = "TempestKeepBotanica",
-		{ "Commander Sarannis" },
-		{ "High Botanist Freywinn" },
-		{ "Thorngrin the Tender" },
-		{ "Laj" },
-		{ "Warp Splinter" },
+		{ "Commander Sarannis", {} },
+		{ "High Botanist Freywinn", {} },
+		{ "Thorngrin the Tender", {} },
+		{ "Laj", {} },
+		{ "Warp Splinter", {} },
 	},
 
 	["TKMech"] = {
@@ -284,10 +284,10 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "The Mechanar",
 		Type = "BCDungeon",
 		Map = "TempestKeepMechanar",
-		{ "Cache of the Legion" },
-		{ "Mechano-Lord Capacitus" },
-		{ "Nethermancer Sepethrea" },
-		{ "Pathaleon the Calculator" },
+		{ "Cache of the Legion", {} },
+		{ "Mechano-Lord Capacitus", {} },
+		{ "Nethermancer Sepethrea", {} },
+		{ "Pathaleon the Calculator", {} },
 	},
 
 	["TKEye"] = {
@@ -296,12 +296,12 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "The Eye",
 		Type = "BCRaid",
 		Map = "TempestKeepTheEye",
-		{ "Al'ar" },
-		{ "Void Reaver" },
-		{ "High Astromancer Solarian" },
-		{ "Kael'thas Sunstrider" },
-		{ "Trash Mobs" },
-		{ "Legendary Items for Kael'thas Fight" },
+		{ "Al'ar", {} },
+		{ "Void Reaver", {} },
+		{ "High Astromancer Solarian", {} },
+		{ "Kael'thas Sunstrider", {} },
+		{ "Trash Mobs", {} },
+		{ "Legendary Items for Kael'thas Fight", {} },
 	},
 
 	["SunwellPlateau"] = {
@@ -310,16 +310,16 @@ AtlasLoot:AddNewMenus({
 		DisplayName = "Sunwell Plateau",
 		Type = "BCRaid",
 		Map = "SunwellPlateau",
-		{ "Kalecgos" },
-		{ "Brutallus" },
-		{ "Felmyst" },
-		{ "Grand Warlock Alythess" },
-		{ "High Commander Arynyes <Shadowsword Captain>" },
-		{ "M'uru" },
-		{ "Kil'jaeden" },
-		{ "Trash Mobs" },
-		{ "Jewelcrafting" },
-		{ "Patterns/Plans" },
+		{ "Kalecgos", {} },
+		{ "Brutallus", {} },
+		{ "Felmyst", {} },
+		{ "Grand Warlock Alythess", {} },
+		{ "High Commander Arynyes <Shadowsword Captain>", {} },
+		{ "M'uru", {} },
+		{ "Kil'jaeden", {} },
+		{ "Trash Mobs", {} },
+		{ "Jewelcrafting", {} },
+		{ "Patterns/Plans", {} },
 }
 
 })
