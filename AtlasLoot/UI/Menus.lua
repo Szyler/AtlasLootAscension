@@ -105,6 +105,7 @@ function AtlasLoot:InitializeMenus()
 		{ "", "WailingCaverns", "", "Wailing Caverns" },
 		{ "", "ZulFarrak", "", "Zul'Farrak" },
 		{ "", "VaultsOfTheInquisition", "", "Vaults of the Inquisition" },
+		{ "", "RoadToDeOtherSide", "", "Road to De Other Side" },
 		{ "", "SharedDungeonLoot", "", "Shared Dungeon Loot" },
 		{ "Manastorm:", "BCKeys", "Header" },
 		{ "", "FrozenReach", "", "Frozen Reach" },

@@ -597,11 +597,20 @@ AtlasLoot:AddNewMenus({
 
 	["VaultsOfTheInquisition"] = {
 		Module = "AtlasLoot_OriginalWoW",
-		Name = "Vaults of the Inquisition ",
+		Name = "Vaults of the Inquisition",
 		Type = "ClassicDungeonExt",
 		{ "His Majesty Darkandle", { 162703 } },
 		{ "Merciless Echo", { 162700 } },
 		{ "The Deceiver's Presence", { 162704 } },
+	},
+
+	["RoadToDeOtherSide"] = {
+		Module = "AtlasLoot_OriginalWoW",
+		Name = "Road to De Other Side",
+		Type = "ClassicDungeonExt",
+		{ "Chimeric Embryo", { 162716 } },
+		{ "Drak'math the Sinister King", { 162715 } },
+		{ "Muzah, the Shadow Hunter", { 162711 } },
 	},
 
 	["SharedDungeonLoot"] = {
