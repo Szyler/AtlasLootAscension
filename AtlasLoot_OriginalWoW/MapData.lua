@@ -74,9 +74,10 @@ AtlasLoot:AddItemData("map",{
         PlayerLimit = "10/25",
         [1] = {
         { "Onyxia's Lair", SubZone = true },
-        { "Whelp Eggs" , cords = {78,43} },
-        { "Whelp Eggs" , cords = {56,44} },
-        { "Onyxia", cords = {67,30}, pinType = boss },
+        { "Whelp Eggs" , cords = {63.2,32} },
+        { "Whelp Eggs" , cords = {77,32} },
+        { "Basalthane", cords = {44.5,65}, pinType = boss },
+        { "Onyxia", cords = {70,23}, pinType = boss },
         },
     },
 
