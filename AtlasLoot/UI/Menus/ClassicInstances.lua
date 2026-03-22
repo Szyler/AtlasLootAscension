@@ -95,10 +95,11 @@ AtlasLoot:AddNewMenus({
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "World Bosses",
 		Type = "ClassicRaid",
-		{ "Weapons/Trinkets", {} },
-		{ "Physical Gear", {} },
-		{ "Caster Gear", {} },
-		{ "Tank Gear", {} }
+		{ "Azuregos", {64601} },
+		{ "Lord Kazzak", {64604} },
+		{ "Setis", {64600} },
+		{ "Snowgrave", {64627} },
+		{ "Atal'zul, the Soulreaver", {67529} },
 	},
 
 	-- ClassicDungeons
