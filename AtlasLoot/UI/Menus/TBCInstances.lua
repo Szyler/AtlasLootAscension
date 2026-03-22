@@ -320,6 +320,60 @@ AtlasLoot:AddNewMenus({
 		{ "Trash Mobs", {} },
 		{ "Jewelcrafting", {} },
 		{ "Patterns/Plans", {} },
-}
+	},
 
+	["ZulAman"] = {
+		Module = "AtlasLoot_BurningCrusade",
+		Name = "Zul'Aman",
+		Type = "BCRaid",
+		Map = "ZulAman",
+		{ "Nalorakk", {} },
+		{ "Akil'zon", {} },
+		{ "Jan'alai", {} },
+		{ "Halazzi", {} },
+		{ "Hex Lord Malacrass", {} },
+		{ "Zul'jin", {} },
+		{ "Trash Mobs", {} },
+		{ "Enchants", {} },
+	},
+
+	["WorldBossesTBC"] = {
+		Module = "AtlasLoot_BurningCrusade",
+		Name = "World Bosses",
+		Type = "BCRaid",
+		{ "Doom Lord Kazzak", {} },
+		{ "Doomwalker", {} },
+	},
+
+	["KarazhanCryptsTBC"] = {
+		Module = "AtlasLoot_BurningCrusade",
+		Name = "The Karazhan Crypts",
+		Type = "BCkarazhanCrypts",
+		Index = 5,
+		{ "Cynfael", {}, WebID = {254401,"npc"} },
+		{ "Dryn Miel <The Second Eidolon>", {}, WebID = {254413,"npc"} },
+		{ "Kurgoth Doomreaver", {}, WebID = {254406,"npc"} },
+		{ "The Judgement of Sinners", {}, WebID = {254405,"npc"} },
+		{ "Takan Velor <The Hero of Deadwind>", {}, WebID = {654564,"npc"} },
+		{ "Captain Taveir (Rare Spawn)", {}, WebID = {254495,"npc"} },
+		{ "Kelivex Autumnvale (Rare Spawn)", {}, WebID = {254493,"npc"} },
+	},
+
+	["BlackrockCavernsTBC"] = {
+		Module = "AtlasLoot_BurningCrusade",
+		Name = "Blackrock Caverns",
+		Type = "BCDungeon",
+		{ "Ascendant Lord Obsidius", {}, WebID = {39705,"npc"} },
+		{ "Beauty", {}, WebID = {39700,"npc"} },
+		{ "Corla, Herald of Twilight", {}, WebID = {39679,"npc"} },
+		{ "Karsh Steelbender <Twilight Armorer>", {}, WebID = {39698,"npc"} },
+		{ "Rom'ogg Bonecrusher", {}, WebID = {39665,"npc"} },
+	},
+
+	["FrozenReachTBC"] = {
+		Module = "AtlasLoot_OriginalWoW",
+		Name = "Frozen Reach",
+		Type = "ManastormTBC",
+		{ "Frozen Reach", {}, WebID = {1298888,"item"} },
+	},
 })

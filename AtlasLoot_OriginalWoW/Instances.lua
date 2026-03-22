@@ -4525,8 +4525,6 @@ AtlasLoot:AddItemData({
 			{ itemID = 1552912 }, --Claw of the Shadowmancer
 			{ itemID = 1554090 }, --Mug O' Hurt
 			{ itemID = 1554091 }, --Widowmaker
-		},
-		{
 			{ itemID = 1559359 }, --Wirt's Third Leg
 			{ itemID = 1562974 }, --The Black Knight
 			{ itemID = 1563024 }, --Beazel's Basher
@@ -4557,8 +4555,6 @@ AtlasLoot:AddItemData({
 			{ itemID = 1523170 }, --The Frozen Clutch
 			{ itemID = 1550720 }, --Brawler Gloves
 			{ itemID = 1563071 }, --Plated Fist of Hakoo
-		},
-		{
 			{ itemID = 1559405 }, --Girdle of Golem Strength
 			{ itemID = 1563011 }, --Silver-lined Belt
 			{ itemID = 1563134 }, --Belt of the Gladiator
@@ -4607,8 +4603,6 @@ AtlasLoot:AddItemData({
 			{ itemID = 2431149 }, --Gloves of Pandemonium
 			{ itemID = 2431150 }, --Gloves of Piety
 			{ itemID = 2431180 }, --Gauntlets of the Skullsplitter
-		},
-		{
 			{ itemID = 2431131 }, --Sash of Silent Blades
 			{ itemID = 2431138 }, --Storm Lord's Girdle
 			{ itemID = 2431151 }, --Girdle of Siege

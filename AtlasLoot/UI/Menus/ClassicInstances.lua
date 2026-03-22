@@ -23,7 +23,8 @@ AtlasLoot:AddNewMenus({
 		Name = "Onyxia's Lair",
 		Type = "ClassicRaid",
 		Map = "Onyxia60",
-		{ "Onyxia's Lair", { 10184 } },
+		{ "Basalthane", { 10185 } },
+		{ "Onyxia", { 10184 } },
 	},
 
 	["RuinsofAQ"] = {
@@ -88,6 +89,16 @@ AtlasLoot:AddNewMenus({
 		{ "Kel'Thuzad", { 15990 } },
 		{ "Shared Frost Resistance Gear", {} },
 		{ "Trash Mobs", {} },
+	},
+
+	["WorldBossesCLASSIC"] = {
+		Module = "AtlasLoot_OriginalWoW",
+		Name = "World Bosses",
+		Type = "ClassicRaid",
+		{ "Weapons/Trinkets", {} },
+		{ "Physical Gear", {} },
+		{ "Caster Gear", {} },
+		{ "Tank Gear", {} }
 	},
 
 	-- ClassicDungeons
@@ -581,5 +592,30 @@ AtlasLoot:AddNewMenus({
 		{ "Chief Ukorz Sandscalp", {} },
 		{ "Zerillis", { 24081 } },
 		{ "Trash Mobs", {} },
-	}
+	},
+
+	["VaultsOfTheInquisition"] = {
+		Module = "AtlasLoot_OriginalWoW",
+		Name = "Vaults of the Inquisition ",
+		Type = "ClassicDungeonExt",
+		{ "His Majesty Darkandle", { 162703 } },
+		{ "Merciless Echo", { 162700 } },
+		{ "The Deceiver's Presence", { 162704 } },
+	},
+
+	["SharedDungeonLoot"] = {
+		Module = "AtlasLoot_OriginalWoW",
+		Name = "Shared Dungeon Loot",
+		Type = "ClassicDungeonExt",
+		{ "Heroic", {} },
+		{ "Mythic", {} },
+	},
+
+	["FrozenReach"] = {
+		Module = "AtlasLoot_OriginalWoW",
+		Name = "Frozen Reach",
+		Type = "Manastorm",
+		WebID = { 98888,"item" },
+		{ "Frozen Reach", {} },
+	},
 })
