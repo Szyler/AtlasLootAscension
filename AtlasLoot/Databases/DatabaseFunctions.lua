@@ -275,7 +275,7 @@ function AtlasLoot:AddItemData(var1, var2)
 			end
 		end
 		self:RateLimitLoadTable(data, addItem)
-	elseif dataType then
+	elseif dataType and dataType ~= "dontSort" then
 		for tableName, table in pairs(data) do
 			self.data[dataType][tableName] = table
 		end
@@ -283,7 +283,7 @@ function AtlasLoot:AddItemData(var1, var2)
 		for tableName, tableParent in pairs(data) do
 			for i, table in ipairs(tableParent) do
 				self.data.item[tableName..i] = table
-				self.data.item[tableName..i].dontSort = true
+				if dataType == "dontSort" then self.data.item[tableName..i].dontSort = true end
 				for _, item in ipairs(self.data.item[tableName..i]) do
 					item.refLootEntry = tableName..i
 				end
@@ -393,7 +393,7 @@ local displayData = {}
 -- Sorts a lootTables items based on the order of the above lists and adds any spacers between groups
 local function sortItemData(dataSource, dataID, tablenum)
 	if not dataSource then return end
-	local lootTables = dataSource[tablenum][2]
+	local lootTables = #dataSource[tablenum][2] > 0 and dataSource[tablenum][2] or {dataID..tablenum}
 	if not lootTables then return end
 	local lootTableName = lootTables[1] or dataID..tablenum
 	if displayData[lootTableName] then return displayData[lootTableName] end
@@ -437,7 +437,6 @@ local function sortItemData(dataSource, dataID, tablenum)
 			if #newTable[#newTable] >= 30 then
 				table.insert(newTable, {})
 			end
-			if #newTable[#newTable] ~= 15 then
 			if #newTable[#newTable] ~= 15 and (newTable[#newTable][#newTable[#newTable]] and newTable[#newTable][#newTable[#newTable]][1] ~="blankLine") then
 				table.insert(newTable[#newTable], {"blankLine"})
 			end

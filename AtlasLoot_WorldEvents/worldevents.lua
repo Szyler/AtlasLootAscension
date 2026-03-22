@@ -292,7 +292,7 @@ local midSummerMain = {
 -------------------------
 --- Argent Tournament ---
 -------------------------
-AtlasLoot:AddItemData({
+AtlasLoot:AddItemData("dontSort", {
 	["ArgentTournament"] = {
 			{
 				{ icon = "INV_BannerPVP_02", name = "Alliance" },

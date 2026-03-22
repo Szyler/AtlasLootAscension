@@ -1,6 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-AtlasLoot:AddItemData({
+AtlasLoot:AddItemData("dontSort", {
 
 --------------------------
 ---Sets & Collections ---

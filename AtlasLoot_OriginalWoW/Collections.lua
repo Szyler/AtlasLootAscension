@@ -7,7 +7,7 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 ------------------------------------
 ------ Mark of Triumph Vendor ------
 ------------------------------------
-AtlasLoot:AddItemData({
+AtlasLoot:AddItemData("dontSort", {
 	["MarkOfTriumph"] = {
 		{
 			{ itemID = 212827 }, -- Corla's Baton

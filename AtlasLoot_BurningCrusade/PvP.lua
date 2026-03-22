@@ -6,7 +6,7 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 ----------------------
 --- Alterac Valley ---
 ----------------------
-AtlasLoot:AddItemData({
+AtlasLoot:AddItemData("dontSort", {
 	
 	
 -----------

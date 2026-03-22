@@ -228,7 +228,7 @@ AtlasLoot:AddNewMenus({
 		{ "Attumen the Huntsman", {16152, "Huntsman"} },
 		{ "Moroes", { 15687 } },
 		{ "Maiden of Virtue", { 16457 } },
-		--{ "Opera Event" },
+		{ "Opera Event", {} },
 		{ "Nightbane", { 17225 } },
 		{ "The Curator", { 15691 } },
 		{ "Terestian Illhoof", { 15688 } },
