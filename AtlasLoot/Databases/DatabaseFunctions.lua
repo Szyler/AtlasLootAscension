@@ -438,6 +438,7 @@ local function sortItemData(dataSource, dataID, tablenum)
 				table.insert(newTable, {})
 			end
 			if #newTable[#newTable] ~= 15 then
+			if #newTable[#newTable] ~= 15 and (newTable[#newTable][#newTable[#newTable]] and newTable[#newTable][#newTable[#newTable]][1] ~="blankLine") then
 				table.insert(newTable[#newTable], {"blankLine"})
 			end
 		end
