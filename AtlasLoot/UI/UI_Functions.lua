@@ -129,14 +129,14 @@ function AtlasLoot:InitializeUIFunctions()
                             if submenu.Header then
                                 table.insert(menuList[2], {text = self.Colors.GREEN..submenu.Header, func = function() subMenuClick(submenu[1], submenu.OnDamand) end, isTitle = true, show = menu[1], divider = true} )
                             elseif type(submenu) == "table" then
-                                local name = self.ui.menus.data[submenu[1]] and self.ui.menus.data[submenu[1]].name or ""
+                                local name = self.ui.menus.data[submenu[1]] and self.ui.menus.data[submenu[1]].name or submenu.OnDamand[3] or ""
                                 table.insert(menuList[2], {text = name, func = function() subMenuClick(submenu[1], submenu.OnDamand) end, show = menu[1]})
                             end
                         end
                     elseif menu.Header then
                         table.insert(menuList[1], {text = self.Colors.GREEN..menu.Header, func = function() subMenuClick(menu[1]) end, isTitle = true, divider = true})
                     else
-                        local name = self.ui.menus.data[menu[1]] and self.ui.menus.data[menu[1]].Name or ""
+                        local name = self.ui.menus.data[menu[1]] and self.ui.menus.data[menu[1]].Name or menu.OnDamand[3] or ""
                         table.insert(menuList[1], {text = name, func = function() subMenuClick(menu[1], menu.OnDamand) end})
                     end
                 end
