@@ -232,7 +232,7 @@ function AtlasLoot:InitializeMenus()
 		{ "JewelcraftingWRATH" },
 		{ "LeatherworkingWRATH" },
 		{ "TailoringWRATH" },
-		{ "Inscription" },
+		{ "InscriptionWRATH" },
 		{ "MiningWRATH" },
 		{ "CookingWRATH" },
 		{ "FirstAidWRATH" },

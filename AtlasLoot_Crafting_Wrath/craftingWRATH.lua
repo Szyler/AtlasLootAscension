@@ -1,8 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-
-local gap = {"gap"}
-
 local ALCHEMY = GetSpellInfo(2259)
 local BLACKSMITHING = GetSpellInfo(2018)
 local ARMORSMITH = GetSpellInfo(9788)
@@ -70,6 +67,7 @@ local TAILORING = GetSpellInfo(3908)
 --- Other
 ---- Crafted Epic Weapons
 
+AtlasLoot:AddItemData("dontSort", {
 -----------------------
 --- Tradeskill List ---
 -----------------------
@@ -78,12 +76,7 @@ local TAILORING = GetSpellInfo(3908)
 --- Alchemy ---
 ---------------
 
-AtlasLoot_Data["AlchemyWRATH"] = {
-	Module = "AtlasLoot_Crafting_Wrath",
-	Name = ALCHEMY,
-	Type = "WrathCrafting",
-	{
-		Name = "Battle Elixirs",
+	["AlchemyWRATH"] = {
 		{
 			{ itemID = 44330, spellID = 60365 }, --Elixir of Armor Piercing
 			{ itemID = 44327, spellID = 60355 }, --Elixir of Deadly Strikes
@@ -96,9 +89,6 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 			{ itemID = 40070, spellID = 53842 }, --Spellpower Elixir
 			{ itemID = 40068, spellID = 53841 }, --WRATH Elixir
 		},
-	},
-	{
-		Name = "Guardian Elixirs",
 		{
 			{ itemID = 44328, spellID = 60356 }, --Elixir of Mighty Defense
 			{ itemID = 40109, spellID = 56519 }, --Elixir of Mighty Mageblood
@@ -108,9 +98,6 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 			{ itemID = 44332, spellID = 60367 }, --Elixir of Mighty Thoughts
 			{ itemID = 40072, spellID = 53847 }, --Elixir of Spirit
 		},
-	},
-	{
-		Name = "Potions",
 		{
 			{ itemID = 40211, spellID = 54221 }, --Potion of Speed
 			{ itemID = 40212, spellID = 54222 }, --Potion of Wild Magic
@@ -127,14 +114,9 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 			{ itemID = 40093, spellID = 53905 }, --Indestructible Potion
 			{ itemID = 40081, spellID = 53900 }, --Potion of Nightmares
 			{ itemID = 40077, spellID = 53895 }, --Crazy Alchemist's Potion
-		},
-		{
 			{ itemID = 40067, spellID = 53839 }, --Icy Mana Potion
 			{ itemID = 39671, spellID = 53838 }, --Resurgent Healing Potion
 		},
-	},
-	{
-		Name = "Flasks",
 		{
 			{ itemID = 47499, spellID = 67025 }, --Flask of the North
 			{ itemID = 46377, spellID = 53903 }, --Flask of Endless Rage
@@ -144,9 +126,6 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 			{ itemID = 44939, spellID = 62213 }, --Lesser Flask of Resistance
 			{ itemID = 40079, spellID = 53899 }, --Lesser Flask of Toughness
 		},
-	},
-	{
-		Name = "Transmutes",
 		{
 			{ itemID = 35624, spellID = 53777 }, --Transmute: Eternal Air to Earth
 			{ itemID = 35622, spellID = 53776 }, --Transmute: Eternal Air to Water
@@ -161,8 +140,6 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 			{ itemID = 35623, spellID = 53783 }, --Transmute: Eternal Water to Air
 			{ itemID = 36860, spellID = 53784 }, --Transmute: Eternal Water to Fire
 			{ itemID = 41163, spellID = 60350 }, --Transmute: Titanium
-		},
-		{
 			{ itemID = 36919, spellID = 66659 }, --Transmute: Cardinal Ruby
 			{ itemID = 36931, spellID = 66658 }, --Transmute: Ametrine
 			{ itemID = 36928, spellID = 66662 }, --Transmute: Dreadstone
@@ -173,9 +150,6 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 			{ itemID = 41334, spellID = 57427 }, --Transmute: Earthsiege Diamond
 			{ itemID = 41266, spellID = 57425 }, --Transmute: Skyflare Diamond
 		},
-	},
-	{
-		Name = "Miscellaneous",
 		{
 			{ itemID = 35751, spellID = 47050 }, --Assassin's Alchemist Stone
 			{ itemID = 35748, spellID = 47046 }, --Guardian's Alchemist Stone
@@ -190,18 +164,12 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 			{ itemID = 40195, spellID = 53812 }, --Pygmy Oil
 		},
 	},
-}
 
----------------------
---- Blacksmithing ---
----------------------
+	---------------------
+	--- Blacksmithing ---
+	---------------------
 
-AtlasLoot_Data["SmithingWRATH"] = {
-	Module = "AtlasLoot_Crafting_Wrath",
-	Name = BLACKSMITHING,
-	Type = "WrathCrafting",
-	{
-		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Chest",
+	["SmithingWRATH"] = {
 		{
 			{ spellID = 67130, itemID = 47592 },
 			{ spellID = 67091, itemID = 47591 },
@@ -219,8 +187,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 39085, spellID = 52570 }, --Cobalt Chestpiece
 		},
 	},
-	{ Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Feet",
-		{
+	{ 		{
 			{ itemID = 49907, spellID = 70568 }, --Boots of Kingly Upheaval
 			{ itemID = 49906, spellID = 70566 }, --Hellfrozen Bonegrinders
 			{ itemID = 45559, spellID = 63188 }, --Battlelord's Plate Boots
@@ -236,13 +203,8 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 40671, spellID = 54552 }, --Tempered Saronite Boots
 			{ itemID = 40949, spellID = 54918 }, --Spiked Cobalt Boots
 			{ itemID = 39088, spellID = 52569 }, --Cobalt Boots
-		},
-		{
 			{ itemID = 49905, spellID = 70563 }, --Protectors of Life
 		},
-	},
-	{
-		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Hands",
 		{
 			{ itemID = 41357, spellID = 55301 }, --Daunting Handguards
 			{ itemID = 42724, spellID = 56553 }, --Ornate Saronite Gauntlets
@@ -253,9 +215,6 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 40952, spellID = 54945 }, --Spiked Cobalt Gauntlets
 			{ itemID = 41975, spellID = 55835 }, --Cobalt Gauntlets
 		},
-	},
-	{
-		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Head",
 		{
 			{ itemID = 41388, spellID = 55374 }, --Brilliant Titansteel Helm
 			{ itemID = 41386, spellID = 55372 }, --Spiked Titansteel Helm
@@ -270,9 +229,6 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 40942, spellID = 54917 }, --Spiked Cobalt Helm
 			{ itemID = 39084, spellID = 52571 }, --Cobalt Helm
 		},
-	},
-	{
-		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Legs",
 		{
 			{ itemID = 49903, spellID = 70565 }, --Legplates of Painful Death
 			{ itemID = 49904, spellID = 70567 }, --Pillars of Might
@@ -288,9 +244,6 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 40958, spellID = 54980 }, --Reinforced Cobalt Legplates
 			{ itemID = 39086, spellID = 52567 }, --Cobalt Legplates
 		},
-	},
-	{
-		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Shoulder",
 		{
 			{ itemID = 42727, spellID = 56550 }, --Ornate Saronite Pauldrons
 			{ itemID = 41351, spellID = 55306 }, --Savage Saronite Pauldrons
@@ -300,9 +253,6 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 40956, spellID = 54978 }, --Reinforced Cobalt Shoulders
 			{ itemID = 39083, spellID = 52572 }, --Cobalt Shoulders
 		},
-	},
-	{
-		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Waist",
 		{
 			{ itemID = 45550, spellID = 63187 }, --Belt of the Titans
 			{ itemID = 45551, spellID = 63191 }, --Indestructible Plate Girdle
@@ -315,9 +265,6 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 40953, spellID = 54946 }, --Spiked Cobalt Belt
 			{ itemID = 39087, spellID = 52568 }, --Cobalt Belt
 		},
-	},
-	{
-		Name = "Armor" .. AtlasLoot.Colors.WHITE .. " - Wrist",
 		{
 			{ itemID = 47571, spellID = 67131 }, --Saronite Swordbreakers
 			{ itemID = 47570, spellID = 67092 }, --Saronite Swordbreakers
@@ -333,9 +280,6 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 40954, spellID = 54948 }, --Spiked Cobalt Bracers
 			{ itemID = 41974, spellID = 55834 }, --Cobalt Bracers
 		},
-	},
-	{
-		Name = "Weapon " .. AtlasLoot.Colors.WHITE .." - OneHanded",
 		{
 			{ itemID = 45085, spellID = 63182 }, --Titansteel Spellblade
 			{ itemID = 41383, spellID = 55370 }, --Titansteel Bonecrusher
@@ -353,25 +297,16 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 41240, spellID = 55201 }, --Cobalt Tenderizer
 			{ itemID = 41239, spellID = 55200 }, --Sturdy Cobalt Quickblade
 		},
-	},
-	{
-		Name = "Weapon " .. AtlasLoot.Colors.WHITE .." - TwoHanded",
 		{
 			{ itemID = 41257, spellID = 55369 }, --Titansteel Destroyer
 			{ itemID = 41188, spellID = 55185 }, --Saronite Mindcrusher
 			{ itemID = 41181, spellID = 55174 }, --Honed Cobalt Cleaver
 			{ itemID = 41242, spellID = 55203 }, --Forged Cobalt Claymore
 		},
-	},
-	{
-		Name = "Weapon " .. AtlasLoot.Colors.WHITE .." - Thrown",
 		{
 			{ itemID = 41245, spellID = 55206 }, --Deadly Saronite Dirk
 			{ itemID = 41241, spellID = 55202 }, --Sure-fire Shuriken
 		},
-	},
-	{
-		Name = "Shield",
 		{
 			{ itemID = 42508, spellID = 56400 }, --Titansteel Shield Wall
 			{ itemID = 41113, spellID = 55014 }, --Saronite Bulwark
@@ -379,9 +314,6 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 40668, spellID = 54550 }, --Cobalt Triangle Shield
 			{ itemID = 41117, spellID = 55013 }, --Saronite Protector
 		},
-	},
-	{
-		Name = "Item Enhancements",
 		{
 			{ spellID = 55628, icon = "INV_Jewelcrafting_ThoriumSetting" },
 			{ spellID = 55641, icon = "INV_GAUNTLETS_61" },
@@ -390,17 +322,11 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 42500, spellID = 56357 }, --Titanium Shield Spike
 			{ itemID = 41976, spellID = 55839 }, --Titanium Weapon Chain
 		},
-	},
-	{
-		Name = "Miscellaneous",
 		{
 			{ itemID = 43853, spellID = 59406 }, --Titanium Skeleton Key
 			{ itemID = 43854, spellID = 59405 }, --Cobalt Skeleton Key
 			{ itemID = 41745, spellID = 55732 }, --Titanium Rod
 		},
-	},
-	{
-		Name = ARMORSMITH,
 		{
 			{ itemID = 41189, spellID = 55186 }, --Chestplate of Conquest
 			{ itemID = 41190, spellID = 55187 }, --Legplates of Conquest
@@ -417,9 +343,6 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 30070, spellID = 36124 }, --Windforged Leggings
 		},
 
-	},
-	{
-		Name = WEAPONSMITH,
 		{
 			{ itemID = 30071, spellID = 36125 }, --Light Earthforged Blade
 			{ itemID = 30073, spellID = 36128 }, --Light Emberforged Hammer
@@ -428,9 +351,6 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 41187, spellID = 55184 }, --Corroded Saronite Woundbringer
 			{ itemID = 41188, spellID = 55185 }, --Saronite Mindcrusher
 		},
-	},
-	{
-		Name = AXESMITH,
 		{
 			{ itemID = 30088, spellID = 36135 }, --Skyforged Great Axe
 			{ itemID = 30087, spellID = 36134 }, --Stormforged Axe
@@ -441,9 +361,6 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 28435, spellID = 34544 }, --Mooncleaver
 			{ itemID = 28433, spellID = 36260 }, --Wicked Edge of the Planes
 		},
-	},
-	{
-		Name = HAMMERSMITH,
 		{
 			{ itemID = 30093, spellID = 36137 }, --Great Earthforged Hammer
 			{ itemID = 30089, spellID = 36136 }, --Lavaforged Warhammer
@@ -454,9 +371,6 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 28439, spellID = 36262 }, --Dragonstrike
 			{ itemID = 28442, spellID = 36263 }, --Stormherald
 		},
-	},
-	{
-		Name = SWORDSMITH,
 		{
 			{ itemID = 30086, spellID = 36133 }, --Stoneforged Claymore
 			{ itemID = 30077, spellID = 36131 }, --Windforged Rapier
@@ -468,18 +382,12 @@ AtlasLoot_Data["SmithingWRATH"] = {
 			{ itemID = 28430, spellID = 36259 }, --Lionheart Executioner
 		},
 	},
-}
 
----------------
---- Cooking ---
----------------
+	---------------
+	--- Cooking ---
+	---------------
 
-AtlasLoot_Data["CookingWRATH"] = {
-	Module = "AtlasLoot_Crafting_Wrath",
-	Name = COOKING,
-	Type = "WrathCrafting",
-	{
-		Name = "Page 1",
+	["CookingWRATH"] = {
 		{
 			{ itemID = 43015, spellID = 57423 }, --Fish Feast
 			{ itemID = 43478, spellID = 58527 }, --Gigantic Feast
@@ -496,8 +404,6 @@ AtlasLoot_Data["CookingWRATH"] = {
 			{ itemID = 34754, spellID = 45555 }, --Mega Mammoth Meal
 			{ itemID = 34758, spellID = 45559 }, --Mighty Rhino Dogs
 			{ itemID = 34766, spellID = 45567 }, --Poached Northern Sculpin
-		},
-		{
 			{ itemID = 42994, spellID = 57434 }, --Rhinolicious Wyrmsteak
 			{ itemID = 42996, spellID = 57437 }, --Snapper Extreme
 			{ itemID = 43005, spellID = 57440 }, --Spiced Mammoth Treats
@@ -513,11 +419,6 @@ AtlasLoot_Data["CookingWRATH"] = {
 			{ itemID = 43491, spellID = 58523 }, --Bad Clams
 			{ itemID = 42942, spellID = 45569 }, --Baked Manta Ray
 			{ itemID = 43268, spellID = 58065 }, --Dalaran Clam Chowder
-		},
-	},
-	{
-		Name = "Page 2",
-		{
 			{ itemID = 34760, spellID = 45561 }, --Grilled Bonescale
 			{ itemID = 34762, spellID = 45563 }, --Grilled Sculpin
 			{ itemID = 43492, spellID = 58525 }, --Haunted Herring
@@ -533,23 +434,15 @@ AtlasLoot_Data["CookingWRATH"] = {
 			{ itemID = 34759, spellID = 45560 }, --Smoked Rockfin
 			{ itemID = 34763, spellID = 45564 }, --Smoked Salmon
 			{ itemID = 43490, spellID = 58512 }, --Tasty Cupcake
-		},
-		{
 			{ itemID = 34750, spellID = 45551 }, --Worm Delight
 		},
-	}
-}
+	},
 
-------------------
---- Enchanting ---
-------------------
+	------------------
+	--- Enchanting ---
+	------------------
 
-AtlasLoot_Data["EnchantingWRATH"] = {
-	Module = "AtlasLoot_Crafting_Wrath",
-	Name = ENCHANTING,
-	Type = "WrathCrafting",
-	{
-		Name = "Enchant Boots",
+	["EnchantingWRATH"] = {
 		{
 			{ spellID = 60763, icon = "Spell_Holy_GreaterHeal" }, --Enchant Boots - Greater Assault
 			{ spellID = 47901, icon = "Spell_Holy_GreaterHeal" }, --Enchant Boots - Tuskarr's Vitality
@@ -560,9 +453,6 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 			{ spellID = 44528, icon = "Spell_Holy_GreaterHeal" }, --Enchant Boots - Greater Fortitude
 			{ spellID = 60623, icon = "Spell_Holy_GreaterHeal" }, --Enchant Boots - Icewalker
 		},
-	},
-	{
-		Name = "Enchant Bracer",
 		{
 			{ spellID = 62256, icon = "Spell_Holy_GreaterHeal" }, --Enchant Bracers - Major Stamina
 			{ spellID = 60767, icon = "Spell_Holy_GreaterHeal" }, --Enchant Bracers - Superior Spellpower
@@ -574,9 +464,6 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 			{ spellID = 44555, icon = "Spell_Holy_GreaterHeal" }, --Enchant Bracers - Exceptional Intellect
 			{ spellID = 60616, icon = "Spell_Holy_GreaterHeal" }, --Enchant Bracers - Striking
 		},
-	},
-	{
-		Name = "Enchant Chest",
 		{
 			{ spellID = 27958, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Exceptional Mana
 			{ spellID = 44588, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Exceptional Resilience
@@ -587,9 +474,6 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 			{ spellID = 44492, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Mighty Health
 			{ spellID = 44623, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Super Stats
 		},
-	},
-	{
-		Name = "Enchant Cloak",
 		{
 			{ spellID = 60609, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Speed
 			{ spellID = 44631, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Shadow Armor
@@ -606,9 +490,6 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 			{ spellID = 44500, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Superior Agility
 			{ spellID = 44582, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Spell Piercing
 		},
-	},
-	{
-		Name = "Enchant Gloves",
 		{
 			{ spellID = 71692, icon = "Spell_Holy_GreaterHeal" }, --Enchant Gloves - Angler
 			{ spellID = 44625, icon = "Spell_Holy_GreaterHeal" }, --Enchant Gloves - Armsman
@@ -620,32 +501,20 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 			{ spellID = 44506, icon = "Spell_Holy_GreaterHeal" }, --Enchant Gloves - Gatherer
 			{ spellID = 44592, icon = "Spell_Holy_GreaterHeal" }, --Enchant Gloves - Exceptional Spellpower
 		},
-	},
-	{
-		Name = "Enchant Ring",
 		{
 			{ spellID = 44645, icon = "Spell_Holy_GreaterHeal" }, --Enchant Ring - Assault
 			{ spellID = 44636, icon = "Spell_Holy_GreaterHeal" }, --Enchant Ring - Greater Spellpower
 			{ spellID = 59636, icon = "Spell_Holy_GreaterHeal" }, --Enchant Ring - Stamina
 		},
-	},
-	{
-		Name = "Enchant Shield",
 		{
 			{ spellID = 44489, icon = "Spell_Holy_GreaterHeal" }, --Enchant Shield - Defense
 			{ spellID = 60653, icon = "Spell_Holy_GreaterHeal" }, --Enchant Shield - Greater Intellect
 		},
-	},
-	{
-		Name = "Enchant 2H Weapon",
 		{
 			{ spellID = 60691, icon = "Spell_Holy_GreaterHeal" }, --Enchant 2H Weapon - Massacre
 			{ spellID = 44595, icon = "Spell_Holy_GreaterHeal" }, --Enchant 2H Weapon - Scourgebane
 			{ spellID = 44630, icon = "Spell_Holy_GreaterHeal" }, --Enchant 2H Weapon - Greater Savagery
 		},
-	},
-	{
-		Name = "Enchant Weapon",
 		{
 			{ spellID = 64441, icon = "Spell_Holy_GreaterHeal" }, --Enchant Weapon - Blade Ward
 			{ spellID = 64579, icon = "Spell_Holy_GreaterHeal" }, --Enchant Weapon - Blood Draining
@@ -662,42 +531,27 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 			{ spellID = 44629, icon = "Spell_Holy_GreaterHeal" }, --Enchant Weapon - Exceptional Spellpower
 			{ spellID = 60621, icon = "Spell_Holy_GreaterHeal" }, --Enchant Weapon - Greater Potency
 		},
-	},
-	{
-		Name = "Enchant Staff",
 		{
 			{ spellID = 62948, icon = "Spell_Holy_GreaterHeal" }, --Enchant Staff - Greater Spellpower
 			{ spellID = 62959, icon = "Spell_Holy_GreaterHeal" }, --Enchant Staff - Spellpower
 		},
-	},
-	{
-		Name = "Miscellaneous",
 		{
 			{ itemID = 22459, spellID = 28028 }, --Void Sphere
 			{ itemID = 44452, spellID = 60619 }, --Runed Titanium Rod
 		},
 	},
-}
 
--------------------
---- Engineering ---
--------------------
+	-------------------
+	--- Engineering ---
+	-------------------
 
-AtlasLoot_Data["EngineeringWRATH"] = {
-	Module = "AtlasLoot_Crafting_Wrath",
-	Name = ENGINEERING,
-	Type = "WrathCrafting",
-	{
-		Name = "Ammo",
+	["EngineeringWRATH"] = {
 		{
 			{ itemID = 52021, spellID = 72953 }, --Iceblade Arrow
 			{ itemID = 52020, spellID = 72952 }, --Shatter Rounds
 			{ itemID = 41165, spellID = 56475 }, --Saronite Arrow Maker
 			{ itemID = 41164, spellID = 56474 }, --Ultrasafe Bullet Machine
 		},
-	},
-	{
-		Name = "Armor",
 		{
 			{ itemID = 42549, spellID = 56480 }, --Armored Titanium Goggles
 			{ itemID = 42552, spellID = 56483 }, --Charged Titanium Specs
@@ -713,9 +567,6 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 			{ itemID = 40865, spellID = 56467 }, --Noise Machine
 			{ itemID = 40767, spellID = 56466 }, --Sonic Booster
 		},
-	},
-	{
-		Name = "Explosives",
 		{
 			{ itemID = 42641, spellID = 56514 }, --Global Thermal Sapper Charge
 			{ itemID = 44951, spellID = 56468 }, --Box of Bombs
@@ -723,15 +574,10 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 			{ itemID = 40771, spellID = 56460 }, --Cobalt Frag Bomb
 			{ itemID = 32413, spellID = 39973 }, --Frost Grenades
 		},
-	},
-	{
-		Name = "Item Enhancements",
 		{
 			{ itemID = 41167, spellID = 56478 }, --Heartseeker Scope
 			{ itemID = 41146, spellID = 56470 }, --Sun Scope
 			{ itemID = 44739, spellID = 61471 }, --Diamond-cut Refractor Scope
-		},
-		{
 			{ spellID = 55016, icon = "Trade_Engineering" }, --Nitro Boosts
 			{ spellID = 54998, icon = "Trade_Engineering" }, --Hand-Mounted Pyro Rocket
 			{ spellID = 54999, icon = "Trade_Engineering" }, --Hyperspeed Accelerators
@@ -741,17 +587,11 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 			{ spellID = 55002, icon = "Trade_Engineering" }, --Flexweave Underlay
 			{ spellID = 63765, icon = "Trade_Engineering" }, --Springy Arachnoweave
 		},
-	},
-	{
-		Name = "Weapon",
 		{
 			{ itemID = 41168, spellID = 56479 }, --Armor Plated Combat Shotgun
 			{ itemID = 44504, spellID = 60874 }, --Nesingwary 4000
 			{ itemID = 39688, spellID = 54353 }, --Mark \"S\" Boomstick
 		},
-	},
-	{
-		Name = "Miscellaneous",
 		{
 			{ itemID = 49040, spellID = 68067 }, --Jeeves
 			{ itemID = 41508, spellID = 60866 }, --Mechano-hog
@@ -761,18 +601,12 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 			{ itemID = 23775, spellID = 30349 }, --Titanium Toolbox
 			{ itemID = 40892, spellID = 56459 }, --Hammer Pick
 		},
-	},
-	{
-		Name = "Reagents",
 		{
 			{ itemID = 39681, spellID = 56349 }, --Handful of Cobalt Bolts
 			{ itemID = 39683, spellID = 56471 }, --Froststeel Tube
 			{ itemID = 39682, spellID = 56464 }, --Overcharged Capacitor
 			{ itemID = 39690, spellID = 53281 }, --Volatile Blasting Trigger
 		},
-	},
-	{
-		Name = GNOMISH,
 		{
 			{ itemID = 52021, spellID = 72953 }, --Iceblade Arrow
 			{ itemID = 23829, spellID = 30575 }, --Gnomish Battle Goggles
@@ -789,17 +623,12 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 			{ itemID = 10545, spellID = 12897 }, --Gnomish Goggles
 			{ itemID = 23841, spellID = 30568 }, --Gnomish Flame Turret
 			{ itemID = 18645, spellID = 23096 }, --Alarm-O-Bot
-		},
-		{
 			{ itemID = 10645, spellID = 12759 }, --Gnomish Death Ray
 			{ itemID = 10725, spellID = 12906 }, --Gnomish Battle Chicken
 			{ itemID = 10720, spellID = 12902 }, --Gnomish Net-o-Matic Projector
 			{ itemID = 10716, spellID = 12899 }, --Gnomish Shrink Ray
 			{ itemID = 10713, spellID = 12895 }, --Inlaid Mithril Cylinder Plans
 		},
-	},
-	{
-		Name = GOBLIN,
 		{
 			{ itemID = 52020, spellID = 72952 }, --Shatter Rounds
 			{ itemID = 23838, spellID = 30565 }, --Foreman's Enchanted Helmet
@@ -816,8 +645,6 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 			{ itemID = 23826, spellID = 30558 }, --The Bigger One
 			{ itemID = 18587, spellID = 23078 }, --Goblin Jumper Cables XL
 			{ itemID = 10727, spellID = 12908 }, --Goblin Dragon Gun
-		},
-		{
 			{ itemID = 10586, spellID = 12754 }, --The Big One
 			{ itemID = 10587, spellID = 12755 }, --Goblin Bomb Dispenser
 			{ itemID = 10577, spellID = 12716 }, --Goblin Mortar
@@ -826,18 +653,12 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 			{ itemID = 10577, spellID = 13240 }, --The Mortar: Reloaded
 		},
 	},
-}
 
--------------------
---- Inscription ---
--------------------
+	-------------------
+	--- Inscription ---
+	-------------------
 
-AtlasLoot_Data["Inscription"] = {
-	Module = "AtlasLoot_Crafting_Wrath",
-	Name = INSCRIPTION,
-	Type = "WrathCrafting",
-	{
-		Name = "Off-Hand Items",
+	["InscriptionWRATH"] = {
 		{
 			{ itemID = 44210, spellID = 59498 }, --Faces of Doom
 			{ itemID = 38322, spellID = 59497 }, --Iron-bound Tome
@@ -855,9 +676,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43654, spellID = 59475 }, --Tome of the Dawn
 			{ itemID = 43515, spellID = 58565 }, --Mystic Tome
 		},
-	},
-	{
-		Name = "Reagents",
 		{
 			{ itemID = 43127, spellID = 57716 }, --Snowfall Ink
 			{ itemID = 43125, spellID = 57714 }, --Darkflame Ink
@@ -874,13 +692,8 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43116, spellID = 57704 }, --Lion's Ink
 			{ itemID = 39774, spellID = 53462 }, --Midnight Ink
 			{ itemID = 39469, spellID = 52843 }, --Moonglow Ink
-		},
-		{
 			{ itemID = 37101, spellID = 52738 }, --Ivory Ink
 		},
-	},
-	{
-		Name = "Scrolls",
 		{
 			{ itemID = 49632, spellID = 69385 }, --Runescroll of Fortitude
 			{ itemID = 44315, spellID = 60337 }, --Scroll of Recall III
@@ -896,8 +709,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 3012, spellID = 58472 }, --Scroll of Agility
 			{ itemID = 955, spellID = 50604 }, --Scroll of Intellect VIII
 			{ itemID = 955, spellID = 50603 }, --Scroll of Intellect VII
-		},
-		{
 			{ itemID = 955, spellID = 50602 }, --Scroll of Intellect VI
 			{ itemID = 955, spellID = 50601 }, --Scroll of Intellect V
 			{ itemID = 955, spellID = 50600 }, --Scroll of Intellect IV
@@ -912,11 +723,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 955, spellID = 50606 }, --Scroll of Spirit III
 			{ itemID = 955, spellID = 50605 }, --Scroll of Spirit II
 			{ itemID = 955, spellID = 48116 }, --Scroll of Spirit
-		},
-	},
-	{
-		Name = "Scrolls",
-		{
 			{ itemID = 1180, spellID = 50620 }, --Scroll of Stamina VIII
 			{ itemID = 1180, spellID = 50619 }, --Scroll of Stamina VII
 			{ itemID = 1180, spellID = 50618 }, --Scroll of Stamina VI
@@ -925,8 +731,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 1180, spellID = 50614 }, --Scroll of Stamina III
 			{ itemID = 1180, spellID = 50612 }, --Scroll of Stamina II
 			{ itemID = 1180, spellID = 45382 }, --Scroll of Stamina
-		},
-		{
 			{ itemID = 3012, spellID = 58491 }, --Scroll of Strength VIII
 			{ itemID = 3012, spellID = 58490 }, --Scroll of Strength VII
 			{ itemID = 3012, spellID = 58489 }, --Scroll of Strength VI
@@ -936,9 +740,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 3012, spellID = 58485 }, --Scroll of Strength II
 			{ itemID = 3012, spellID = 58484 }, --Scroll of Strength
 		},
-	},
-	{
-		Name = "Miscellaneous",
 		{
 			{ spellID = 59504, icon = "INV_Feather_05" }, --Darkmoon Card of the North
 			{ spellID = 59503, icon = "INV_Feather_05" }, --Greater Darkmoon Card
@@ -952,8 +753,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ spellID = 61119, icon = "INV_Inscription_Tradeskill01" }, --Master's Inscription of the Pinnacle
 			{ spellID = 61120, icon = "INV_Inscription_Tradeskill01" }, --Master's Inscription of the Storm
 			{ spellID = 52175, icon = "INV_Misc_Book_11" }, --Decipher
-		},
-		{
 			{ itemID = 43145, spellID = 59500 }, --Armor Vellum III
 			{ itemID = 37602, spellID = 59499 }, --Armor Vellum II
 			{ itemID = 38682, spellID = 52739 }, --Armor Vellum
@@ -962,9 +761,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 39349, spellID = 52840 }, --Weapon Vellum
 			{ itemID = 43850, spellID = 59387 }, --Certificate of Ownership
 		},
-	},
-	{
-		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"],
 		{
 			{ itemID = 43533, spellID = 57207 }, --Glyph of Anti-Magic Shell
 			{ itemID = 43826, spellID = 59339 }, --Glyph of Blood Strike
@@ -981,8 +777,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43534, spellID = 57208 }, --Glyph of Heart Strike
 			{ itemID = 45806, spellID = 64300 }, --Glyph of Howling Blast
 			{ itemID = 45800, spellID = 64298 }, --Glyph of Hungering Cold
-		},
-		{
 			{ itemID = 43545, spellID = 57218 }, --Glyph of Icebound Fortitude
 			{ itemID = 43546, spellID = 57219 }, --Glyph of Icy Touch
 			{ itemID = 43547, spellID = 57220 }, --Glyph of Obliterate
@@ -996,9 +790,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 45803, spellID = 64299 }, --Glyph of Unholy Blight
 			{ itemID = 43554, spellID = 57227 }, --Glyph of Vampiric Blood
 		},
-	},
-	{
-		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"],
 		{
 			{ itemID = 43535, spellID = 57209 }, --Glyph of Blood Tap
 			{ itemID = 43671, spellID = 57229 }, --Glyph of Corpse Explosion
@@ -1007,9 +798,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43672, spellID = 57230 }, --Glyph of Pestilence
 			{ itemID = 43673, spellID = 57228 }, --Glyph of Raise Dead
 		},
-	},
-	{
-		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DRUID"],
 		{
 			{ itemID = 45623, spellID = 64256 }, --Glyph of Barkskin
 			{ itemID = 45601, spellID = 64268 }, --Glyph of Berserk
@@ -1026,8 +814,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 40900, spellID = 56950 }, --Glyph of Mangle
 			{ itemID = 40897, spellID = 56961 }, --Glyph of Maul
 			{ itemID = 45622, spellID = 64258 }, --Glyph of Monsoon
-		},
-		{
 			{ itemID = 40923, spellID = 56951 }, --Glyph of Moonfire
 			{ itemID = 45603, spellID = 64313 }, --Glyph of Nourish
 			{ itemID = 40903, spellID = 56952 }, --Glyph of Rake
@@ -1044,9 +830,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 40906, spellID = 56960 }, --Glyph of Swiftmend
 			{ itemID = 40922, spellID = 56963 }, --Glyph of WRATH
 		},
-	},
-	{
-		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DRUID"],
 		{
 			{ itemID = 45602, spellID = 64270 }, --Glyph of Wild Growth
 			{ itemID = 43316, spellID = 58286 }, --Glyph of Aquatic Form
@@ -1057,9 +840,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 44922, spellID = 56965 }, --Glyph of Typhoon
 			{ itemID = 43331, spellID = 58288 }, --Glyph of Unburdened Rebirth
 		},
-	},
-	{
-		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{
 			{ itemID = 42897, spellID = 56994 }, --Glyph of Aimed Shot
 			{ itemID = 42898, spellID = 56995 }, --Glyph of Arcane Shot
@@ -1076,8 +856,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 42906, spellID = 57003 }, --Glyph of Frost Trap
 			{ itemID = 42907, spellID = 57004 }, --Glyph of Hunter's Mark
 			{ itemID = 42908, spellID = 57005 }, --Glyph of Immolation Trap
-		},
-		{
 			{ itemID = 42909, spellID = 57006 }, --Glyph of Improved Aspect of the Hawk
 			{ itemID = 45732, spellID = 64304 }, --Glyph of Kill Shot
 			{ itemID = 42910, spellID = 57007 }, --Glyph of Multi-Shot
@@ -1091,9 +869,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 42916, spellID = 57013 }, --Glyph of Volley
 			{ itemID = 42917, spellID = 57014 }, --Glyph of Wyvern Sting
 		},
-	},
-	{
-		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{
 			{ itemID = 43351, spellID = 58302 }, --Glyph of Feign Death
 			{ itemID = 43350, spellID = 58301 }, --Glyph of Mend Pet
@@ -1102,9 +877,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43356, spellID = 58298 }, --Glyph of Scare Beast
 			{ itemID = 43355, spellID = 58297 }, --Glyph of the Pack
 		},
-	},
-	{
-		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{
 			{ itemID = 45738, spellID = 64276 }, --Glyph of Arcane Barrage
 			{ itemID = 44955, spellID = 56991 }, --Glyph of Arcane Blast
@@ -1121,8 +893,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 42742, spellID = 56977 }, --Glyph of Frostbolt
 			{ itemID = 44684, spellID = 61677 }, --Glyph of Frostfire
 			{ itemID = 42743, spellID = 56978 }, --Glyph of Ice Armor
-		},
-		{
 			{ itemID = 45740, spellID = 64257 }, --Glyph of Ice Barrier
 			{ itemID = 42744, spellID = 56979 }, --Glyph of Ice Block
 			{ itemID = 42745, spellID = 56980 }, --Glyph of Ice Lance
@@ -1138,9 +908,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 42753, spellID = 56988 }, --Glyph of Remove Curse
 			{ itemID = 42754, spellID = 56989 }, --Glyph of Water Elemental
 		},
-	},
-	{
-		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{
 			{ itemID = 43339, spellID = 58303 }, --Glyph of Arcane Intellect
 			{ itemID = 44920, spellID = 56990 }, --Glyph of Blast Wave
@@ -1150,9 +917,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43364, spellID = 58308 }, --Glyph of Slow Fall
 			{ itemID = 43361, spellID = 58310 }, --Glyph of the Penguin
 		},
-	},
-	{
-		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PALADIN"],
 		{
 			{ itemID = 41101, spellID = 57019 }, --Glyph of Avenger's Shield
 			{ itemID = 41107, spellID = 57021 }, --Glyph of Avenging WRATH
@@ -1169,8 +933,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 45742, spellID = 64278 }, --Glyph of Hammer of the Righteous
 			{ itemID = 41097, spellID = 57028 }, --Glyph of Hammer of WRATH
 			{ itemID = 41106, spellID = 57029 }, --Glyph of Holy Light
-		},
-		{
 			{ itemID = 45746, spellID = 64254 }, --Glyph of Holy Shock
 			{ itemID = 41092, spellID = 57030 }, --Glyph of Judgement
 			{ itemID = 41100, spellID = 57032 }, --Glyph of Righteous Defense
@@ -1185,9 +947,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 41096, spellID = 57022 }, --Glyph of Spiritual Attunement
 			{ itemID = 41102, spellID = 57036 }, --Glyph of Turn Evil
 		},
-	},
-	{
-		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PALADIN"],
 		{
 			{ itemID = 43365, spellID = 58311 }, --Glyph of Blessing of Kings
 			{ itemID = 43340, spellID = 58314 }, --Glyph of Blessing of Might
@@ -1196,9 +955,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43368, spellID = 58315 }, --Glyph of Sense Undead
 			{ itemID = 43369, spellID = 58316 }, --Glyph of the Wise
 		},
-	},
-	{
-		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
 		{
 			{ itemID = 42396, spellID = 57181 }, --Glyph of Circle of Healing
 			{ itemID = 42397, spellID = 57183 }, --Glyph of Dispel Magic
@@ -1215,8 +971,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 42405, spellID = 57191 }, --Glyph of Mind Control
 			{ itemID = 42406, spellID = 57192 }, --Glyph of Mind Flay
 			{ itemID = 45757, spellID = 64309 }, --Glyph of Mind Sear
-		},
-		{
 			{ itemID = 45760, spellID = 64259 }, --Glyph of Pain Suppression
 			{ itemID = 45756, spellID = 64282 }, --Glyph of Penance
 			{ itemID = 42408, spellID = 57194 }, --Glyph of Power Word: Shield
@@ -1230,9 +984,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 42416, spellID = 57201 }, --Glyph of Smite
 			{ itemID = 42417, spellID = 57202 }, --Glyph of Spirit of Redemption
 		},
-	},
-	{
-		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
 		{
 			{ itemID = 43342, spellID = 58317 }, --Glyph of Fading
 			{ itemID = 43371, spellID = 58318 }, --Glyph of Fortitude
@@ -1241,9 +992,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43372, spellID = 58321 }, --Glyph of Shadow Protection
 			{ itemID = 43374, spellID = 58322 }, --Glyph of Shadowfiend
 		},
-	},
-	{
-		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{
 			{ itemID = 42954, spellID = 57112 }, --Glyph of Adrenaline Rush
 			{ itemID = 42955, spellID = 57113 }, --Glyph of Ambush
@@ -1260,8 +1008,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 42964, spellID = 57123 }, --Glyph of Garrote
 			{ itemID = 42965, spellID = 57124 }, --Glyph of Ghostly Strike
 			{ itemID = 42966, spellID = 57125 }, --Glyph of Gouge
-		},
-		{
 			{ itemID = 42967, spellID = 57126 }, --Glyph of Hemorrhage
 			{ itemID = 45761, spellID = 64284 }, --Glyph of Hunger for Blood
 			{ itemID = 45762, spellID = 64285 }, --Glyph of Killing Spree
@@ -1276,9 +1022,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 45767, spellID = 64310 }, --Glyph of Tricks of the Trade
 			{ itemID = 42971, spellID = 57130 }, --Glyph of Vigor
 		},
-	},
-	{
-		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{
 			{ itemID = 43379, spellID = 58323 }, --Glyph of Blurred Speed
 			{ itemID = 43376, spellID = 58324 }, --Glyph of Distract
@@ -1287,9 +1030,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43378, spellID = 58327 }, --Glyph of Safe Fall
 			{ itemID = 43380, spellID = 58328 }, --Glyph of Vanish
 		},
-	},
-	{
-		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"],
 		{
 			{ itemID = 41517, spellID = 57232 }, --Glyph of Chain Heal
 			{ itemID = 41518, spellID = 57233 }, --Glyph of Chain Lightning
@@ -1306,8 +1046,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 41533, spellID = 57242 }, --Glyph of Healing Stream Totem
 			{ itemID = 41534, spellID = 57243 }, --Glyph of Healing Wave
 			{ itemID = 45777, spellID = 64316 }, --Glyph of Hex
-		},
-		{
 			{ itemID = 41524, spellID = 57234 }, --Glyph of Lava
 			{ itemID = 41540, spellID = 57249 }, --Glyph of Lava Lash
 			{ itemID = 41535, spellID = 57244 }, --Glyph of Lesser Healing Wave
@@ -1322,9 +1060,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 41541, spellID = 57251 }, --Glyph of Water Mastery
 			{ itemID = 41542, spellID = 57252 }, --Glyph of Windfury Weapon
 		},
-	},
-	{
-		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"],
 		{
 			{ itemID = 43381, spellID = 58329 }, --Glyph of Astral Recall
 			{ itemID = 43725, spellID = 59326 }, --Glyph of Ghost Wolf
@@ -1334,9 +1069,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43386, spellID = 58332 }, --Glyph of Water Shield
 			{ itemID = 43388, spellID = 58333 }, --Glyph of Water Walking
 		},
-	},
-	{
-		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{
 			{ itemID = 45781, spellID = 64294 }, --Glyph of Chaos Bolt
 			{ itemID = 42454, spellID = 57258 }, --Glyph of Conflagrate
@@ -1353,8 +1085,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 42463, spellID = 57267 }, --Glyph of Howl of Terror
 			{ itemID = 42464, spellID = 57268 }, --Glyph of Immolate
 			{ itemID = 42465, spellID = 57269 }, --Glyph of Imp
-		},
-		{
 			{ itemID = 42453, spellID = 57257 }, --Glyph of Incinerate
 			{ itemID = 45785, spellID = 64248 }, --Glyph of Life Tap
 			{ itemID = 45780, spellID = 64318 }, --Glyph of Metamorphosis
@@ -1370,9 +1100,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 42472, spellID = 57276 }, --Glyph of Unstable Affliction
 			{ itemID = 42473, spellID = 57277 }, --Glyph of Voidwalker
 		},
-	},
-	{
-		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{
 			{ itemID = 43392, spellID = 58338 }, --Glyph of Curse of Exhaustion
 			{ itemID = 43390, spellID = 58337 }, --Glyph of Drain Soul
@@ -1381,9 +1108,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43394, spellID = 58341 }, --Glyph of Souls
 			{ itemID = 43389, spellID = 58336 }, --Glyph of Unending Breath
 		},
-	},
-	{
-		Name = "Major Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"],
 		{
 			{ itemID = 43420, spellID = 57151 }, --Glyph of Barbaric Insults
 			{ itemID = 45790, spellID = 64295 }, --Glyph of Bladestorm
@@ -1400,8 +1124,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43421, spellID = 57160 }, --Glyph of Mortal Strike
 			{ itemID = 43422, spellID = 57161 }, --Glyph of Overpower
 			{ itemID = 43413, spellID = 57162 }, --Glyph of Rapid Charge
-		},
-		{
 			{ itemID = 43423, spellID = 57163 }, --Glyph of Rending
 			{ itemID = 43430, spellID = 57164 }, --Glyph of Resonating Power
 			{ itemID = 43424, spellID = 57165 }, --Glyph of Revenge
@@ -1415,9 +1137,6 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 45793, spellID = 64255 }, --Glyph of Vigilance
 			{ itemID = 43432, spellID = 57172 }, --Glyph of Whirlwind
 		},
-	},
-	{
-		Name = "Minor Glyph" .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"],
 		{
 			{ itemID = 43395, spellID = 58342 }, --Glyph of Battle
 			{ itemID = 43396, spellID = 58343 }, --Glyph of Bloodrage
@@ -1428,19 +1147,12 @@ AtlasLoot_Data["Inscription"] = {
 			{ itemID = 43399, spellID = 58346 }, --Glyph of Thunder Clap
 		},
 	},
-}
 
----------------------
---- Jewelcrafting ---
----------------------
+	---------------------
+	--- Jewelcrafting ---
+	---------------------
 
-
-AtlasLoot_Data["JewelcraftingWRATH"] = {
-	Module = "AtlasLoot_Crafting_Wrath",
-	Name = JEWELCRAFTING,
-	Type = "WrathCrafting",
-	{
-		Name = "AtlasLoot.Colors.RED Gems",
+	["JewelcraftingWRATH"] = {
 		{
 			{ itemID = 40111, spellID = 66447 }, --Bold Cardinal Ruby
 			{ itemID = 40114, spellID = 66449 }, --Bright Cardinal Ruby
@@ -1457,8 +1169,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 40002, spellID = 53950 }, --Fractured Scarlet Ruby
 			{ itemID = 40003, spellID = 53951 }, --Precise Scarlet Ruby
 			{ itemID = 39998, spellID = 53946 }, --Runed Scarlet Ruby
-		},
-		{
 			{ itemID = 39907, spellID = 53843 }, --Subtle Bloodstone
 			{ itemID = 39900, spellID = 53831 }, --Bold Bloodstone
 			{ itemID = 39906, spellID = 53835 }, --Bright Bloodstone
@@ -1468,9 +1178,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 39910, spellID = 54017 }, --Precise Bloodstone
 			{ itemID = 39911, spellID = 53834 }, --Runed Bloodstone
 		},
-	},
-	{
-		Name = "AtlasLoot.Colors.BLUE Gems",
 		{
 			{ itemID = 40121, spellID = 66500 }, --Lustrous Majestic Zircon
 			{ itemID = 40119, spellID = 66497 }, --Solid Majestic Zircon
@@ -1485,9 +1192,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 39920, spellID = 53940 }, --Sparkling Chalcedony
 			{ itemID = 39932, spellID = 53943 }, --Stormy Chalcedony
 		},
-	},
-	{
-		Name = "Yellow Gems",
 		{
 			{ itemID = 40123, spellID = 66503 }, --Brilliant King's Amber
 			{ itemID = 40127, spellID = 66505 }, --Mystic King's Amber
@@ -1501,8 +1205,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 40014, spellID = 53958 }, --Rigid Autumn's Glow
 			{ itemID = 40013, spellID = 53957 }, --Smooth Autumn's Glow
 			{ itemID = 40015, spellID = 53959 }, --Thick Autumn's Glow
-		},
-		{
 			{ itemID = 39912, spellID = 53852 }, --Brilliant Sun Crystal
 			{ itemID = 39917, spellID = 53857 }, --Mystic Sun Crystal
 			{ itemID = 39918, spellID = 53856 }, --Quick Sun Crystal
@@ -1510,9 +1212,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 39914, spellID = 53853 }, --Smooth Sun Crystal
 			{ itemID = 39916, spellID = 53855 }, --Thick Sun Crystal
 		},
-	},
-	{
-		Name = "AtlasLoot.Colors.GREEN Gems",
 		{
 			{ itemID = 40175, spellID = 66430 }, --Dazzling Eye of Zul
 			{ itemID = 40167, spellID = 66338 }, --Enduring Eye of Zul
@@ -1529,8 +1228,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 40172, spellID = 66437 }, --Shining Eye of Zul
 			{ itemID = 40168, spellID = 66428 }, --Steady Eye of Zul
 			{ itemID = 40176, spellID = 66436 }, --Sundered Eye of Zul
-		},
-		{
 			{ itemID = 40181, spellID = 66438 }, --Tense Eye of Zul
 			{ itemID = 40164, spellID = 66432 }, --Timeless Eye of Zul
 			{ itemID = 40173, spellID = 66445 }, --Turbid Eye of Zul
@@ -1547,9 +1244,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 40098, spellID = 54012 }, --Radiant Forest Emerald
 			{ itemID = 40092, spellID = 54002 }, --Seer's Forest Emerald
 		},
-	},
-	{
-		Name = "AtlasLoot.Colors.GREEN Gems",
 		{
 			{ itemID = 40106, spellID = 54014 }, --Shattered Forest Emerald
 			{ itemID = 40099, spellID = 54004 }, --Shining Forest Emerald
@@ -1566,8 +1260,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 39983, spellID = 53925 }, --Intricate Dark Jade
 			{ itemID = 39974, spellID = 53916 }, --Jagged Dark Jade
 			{ itemID = 39986, spellID = 53928 }, --Lambent Dark Jade
-		},
-		{
 			{ itemID = 39980, spellID = 53922 }, --Misty Dark Jade
 			{ itemID = 39988, spellID = 53929 }, --Opaque Dark Jade
 			{ itemID = 39990, spellID = 53931 }, --Radiant Dark Jade
@@ -1581,9 +1273,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 39982, spellID = 53924 }, --Turbid Dark Jade
 			{ itemID = 39975, spellID = 53917 }, --Vivid Dark Jade
 		},
-	},
-	{
-		Name = "AtlasLoot.Colors.ORANGE Gems",
 		{
 			{ itemID = 40162, spellID = 66576 }, --Accurate Ametrine
 			{ itemID = 40144, spellID = 66579 }, --Champion's Ametrine
@@ -1600,8 +1289,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 40151, spellID = 66566 }, --Luminous Ametrine
 			{ itemID = 40152, spellID = 66569 }, --Potent Ametrine
 			{ itemID = 40157, spellID = 66573 }, --Pristine Ametrine
-		},
-		{
 			{ itemID = 40155, spellID = 66574 }, --Reckless Ametrine
 			{ itemID = 40163, spellID = 66586 }, --Resolute Ametrine
 			{ itemID = 40145, spellID = 66582 }, --Resplendent Ametrine
@@ -1610,9 +1297,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 40153, spellID = 66570 }, --Veiled Ametrine
 			{ itemID = 40156, spellID = 66577 }, --Wicked Ametrine
 		},
-	},
-	{
-		Name = "AtlasLoot.Colors.ORANGE Gems",
 		{
 			{ itemID = 40058, spellID = 53994 }, --Accurate Monarch Topaz
 			{ itemID = 40039, spellID = 53977 }, --Champion's Monarch Topaz
@@ -1629,8 +1313,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 40047, spellID = 53983 }, --Luminous Monarch Topaz
 			{ itemID = 40048, spellID = 53984 }, --Potent Monarch Topaz
 			{ itemID = 40053, spellID = 53989 }, --Pristine Monarch Topaz
-		},
-		{
 			{ itemID = 40051, spellID = 53987 }, --Reckless Monarch Topaz
 			{ itemID = 40059, spellID = 54023 }, --Resolute Monarch Topaz
 			{ itemID = 40040, spellID = 53978 }, --Resplendent Monarch Topaz
@@ -1639,9 +1321,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 40049, spellID = 53985 }, --Veiled Monarch Topaz
 			{ itemID = 40052, spellID = 53988 }, --Wicked Monarch Topaz
 		},
-	},
-	{
-		Name = "AtlasLoot.Colors.ORANGE Gems",
 		{
 			{ itemID = 39965, spellID = 53891 }, --Glimmering Huge Citrine
 			{ itemID = 39966, spellID = 53892 }, --Accurate Huge Citrine
@@ -1658,8 +1337,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 39946, spellID = 53881 }, --Luminous Huge Citrine
 			{ itemID = 39956, spellID = 53882 }, --Potent Huge Citrine
 			{ itemID = 39961, spellID = 53887 }, --Pristine Huge Citrine
-		},
-		{
 			{ itemID = 39959, spellID = 53885 }, --Reckless Huge Citrine
 			{ itemID = 39967, spellID = 53893 }, --Resolute Huge Citrine
 			{ itemID = 39950, spellID = 53875 }, --Resplendent Huge Citrine
@@ -1668,9 +1345,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 39957, spellID = 53883 }, --Veiled Huge Citrine
 			{ itemID = 39960, spellID = 53886 }, --Wicked Huge Citrine
 		},
-	},
-	{
-		Name = "Purple Gems",
 		{
 			{ itemID = 40136, spellID = 66553 }, --Balanced Dreadstone
 			{ itemID = 40139, spellID = 66560 }, --Defender's Dreadstone
@@ -1687,8 +1361,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 40131, spellID = 66565 }, --Tenuous Dreadstone
 			{ itemID = 40029, spellID = 53969 }, --Balanced Twilight Opal
 			{ itemID = 40032, spellID = 53972 }, --Defender's Twilight Opal
-		},
-		{
 			{ itemID = 40025, spellID = 53965 }, --Glowing Twilight Opal
 			{ itemID = 40034, spellID = 53974 }, --Guardian's Twilight Opal
 			{ itemID = 40030, spellID = 53970 }, --Infused Twilight Opal
@@ -1701,9 +1373,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 40022, spellID = 53962 }, --Sovereign Twilight Opal
 			{ itemID = 40024, spellID = 53964 }, --Tenuous Twilight Opal
 		},
-	},
-	{
-		Name = "Purple Gems",
 		{
 			{ itemID = 39940, spellID = 53871 }, --Guardian's Shadow Crystal
 			{ itemID = 39944, spellID = 53867 }, --Infused Shadow Crystal
@@ -1720,9 +1389,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 39936, spellID = 53862 }, --Glowing Shadow Crystal
 			{ itemID = 32833, spellID = 41420 }, --Purified Jaggal Pearl
 		},
-	},
-	{
-		Name = "Meta Gems",
 		{
 			{ itemID = 41285, spellID = 55389 }, --Chaotic Skyflare Diamond
 			{ itemID = 41307, spellID = 55390 }, --Destructive Skyflare Diamond
@@ -1734,8 +1400,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 41339, spellID = 55394 }, --Swift Skyflare Diamond
 			{ itemID = 41400, spellID = 55395 }, --Thundering Skyflare Diamond
 			{ itemID = 41375, spellID = 55386 }, --Tireless Skyflare Diamond
-		},
-		{
 			{ itemID = 41380, spellID = 55401 }, --Austere Earthsiege Diamond
 			{ itemID = 41389, spellID = 55405 }, --Beaming Earthsiege Diamond
 			{ itemID = 41395, spellID = 55397 }, --Bracing Earthsiege Diamond
@@ -1747,9 +1411,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 41398, spellID = 55400 }, --Relentless Earthsiege Diamond
 			{ itemID = 41382, spellID = 55403 }, --Trenchant Earthsiege Diamond
 		},
-	},
-	{
-		Name = "Prismatic Gems",
 		{
 			{ itemID = 49110, spellID = 68253 }, --Nightmare Tear
 			{ itemID = 22459, spellID = 28028 }, --Void Sphere
@@ -1758,9 +1419,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 42701, spellID = 56530 }, --Enchanted Pearl
 			{ itemID = 42701, spellID = 62941 }, --Prismatic Black Diamond
 		},
-	},
-	{
-		Name = "Dragon's Eyes",
 		{
 			{ itemID = 42142, spellID = 56049 }, --Bold Dragon's Eye
 			{ itemID = 36766, spellID = 56054 }, --Bright Dragon's Eye
@@ -1777,16 +1435,11 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 42149, spellID = 56085 }, --Smooth Dragon's Eye
 			{ itemID = 36767, spellID = 56086 }, --Solid Dragon's Eye
 			{ itemID = 42145, spellID = 56087 }, --Sparkling Dragon's Eye
-		},
-		{
 			{ itemID = 42155, spellID = 56088 }, --Stormy Dragon's Eye
 			{ itemID = 42151, spellID = 56055 }, --Subtle Dragon's Eye
 			{ itemID = 42157, spellID = 56089 }, --Thick Dragon's Eye
 			{ itemID = 42225 }, --Dragon's Eye
 		},
-	},
-	{
-		Name = "Trinkets",
 		{
 			{ itemID = 42418, spellID = 56203 }, --Figurine - Emerald Boar
 			{ itemID = 44063, spellID = 59759 }, --Figurine - Monarch Crab
@@ -1794,9 +1447,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 42413, spellID = 56202 }, --Figurine - Sapphire Owl
 			{ itemID = 42395, spellID = 56201 }, --Figurine - Twilight Serpent
 		},
-	},
-	{
-		Name = "Rings",
 		{
 			{ itemID = 42643, spellID = 56497 }, --Titanium Earthguard Ring
 			{ itemID = 42642, spellID = 56496 }, --Titanium Impact Band
@@ -1813,8 +1463,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 43253, spellID = 58150 }, --Ring of Northern Tears
 			{ itemID = 43251, spellID = 58148 }, --Ring of Scarlet Shadows
 			{ itemID = 43498, spellID = 58507 }, --Savage Titanium Band
-		},
-		{
 			{ itemID = 43482, spellID = 58492 }, --Savage Titanium Ring
 			{ itemID = 43252, spellID = 58149 }, --Windfire Band
 			{ itemID = 42340, spellID = 56197 }, --Dream Signet
@@ -1823,9 +1471,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 42337, spellID = 56194 }, --Sun Rock Ring
 			{ itemID = 42336, spellID = 56193 }, --Bloodstone Band
 		},
-	},
-	{
-		Name = "Necks",
 		{
 			{ itemID = 42646, spellID = 56500 }, --Titanium Earthguard Chain
 			{ itemID = 42645, spellID = 56499 }, --Titanium Impact Choker
@@ -1840,9 +1485,6 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 			{ itemID = 43245, spellID = 58142 }, --Crystal Chalcedony Amulet
 			{ itemID = 43244, spellID = 58141 }, --Crystal Citrine Necklace
 		},
-	},
-	{
-		Name = "Miscellaneous",
 		{
 			{ itemID = 24123, spellID = 31078 }, --Circlet of Arcane Might
 			{ itemID = 24122, spellID = 31077 }, --Coronet of the Verdant Flame
@@ -1853,25 +1495,16 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		},
 
 	},
-}
 
-----------------------
---- Leatherworking ---
-----------------------
+	----------------------
+	--- Leatherworking ---
+	----------------------
 
-AtlasLoot_Data["LeatherworkingWRATH"] = {
-	Module = "AtlasLoot_Crafting_Wrath",
-	Name = LEATHERWORKING,
-	Type = "WrathCrafting",
-	{
-		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Back",
+	["LeatherworkingWRATH"] = {
 		{
 			{ itemID = 43565, spellID = 60640 }, --Durable Nerubhide Cape
 			{ itemID = 43566, spellID = 60637 }, --Ice Striker's Cloak
 		},
-	},
-	{
-		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Chest",
 		{
 			{ itemID = 47600, spellID = 67142 }, --Knightbane Carapace
 			{ itemID = 47599, spellID = 67086 }, --Knightbane Carapace
@@ -1886,9 +1519,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38400, spellID = 50944 }, --Arctic Chestpiece
 			{ itemID = 38408, spellID = 50938 }, --Iceborne Chestguard
 		},
-	},
-	{
-		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Feet",
 		{
 			{ itemID = 49894, spellID = 70555 }, --Blessed Cenarion Boots
 			{ itemID = 49895, spellID = 70557 }, --Footpads of Impending Death
@@ -1905,9 +1535,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38404, spellID = 50948 }, --Arctic Boots
 			{ itemID = 38407, spellID = 50942 }, --Iceborne Boots
 		},
-	},
-	{
-		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Hands",
 		{
 			{ itemID = 43436, spellID = 60705 }, --Eviscerator's Gauntlets
 			{ itemID = 43265, spellID = 60721 }, --Overcast Handwraps
@@ -1915,18 +1542,12 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38403, spellID = 50947 }, --Arctic Gloves
 			{ itemID = 38409, spellID = 50941 }, --Iceborne Gloves
 		},
-	},
-	{
-		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Head",
 		{
 			{ itemID = 43260, spellID = 60697 }, --Eviscerator's Facemask
 			{ itemID = 43261, spellID = 60715 }, --Overcast Headguard
 			{ itemID = 38437, spellID = 51572 }, --Arctic Helm
 			{ itemID = 38438, spellID = 60608 }, --Iceborne Helm
 		},
-	},
-	{
-		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Legs",
 		{
 			{ itemID = 49899, spellID = 70556 }, --Bladeborn Leggings
 			{ itemID = 49898, spellID = 70554 }, --Legwraps of Unleashed Nature
@@ -1940,9 +1561,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38401, spellID = 50945 }, --Arctic Leggings
 			{ itemID = 38410, spellID = 50939 }, --Iceborne Leggings
 		},
-	},
-	{
-		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Shoulder",
 		{
 			{ itemID = 43481, spellID = 60758 }, --Trollwoven Spaulders
 			{ itemID = 43433, spellID = 60702 }, --Eviscerator's Shoulderpads
@@ -1951,9 +1569,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38402, spellID = 50946 }, --Arctic Shoulderpads
 			{ itemID = 38411, spellID = 50940 }, --Iceborne Shoulderpads
 		},
-	},
-	{
-		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Waist",
 		{
 			{ itemID = 45556, spellID = 63200 }, --Belt of Arctic Life
 			{ itemID = 45555, spellID = 63198 }, --Death-warmed Belt
@@ -1964,9 +1579,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38405, spellID = 50949 }, --Arctic Belt
 			{ itemID = 38406, spellID = 50943 }, --Iceborne Belt
 		},
-	},
-	{
-		Name = "Leather Armor" .. AtlasLoot.Colors.WHITE .. " - Wrist",
 		{
 			{ itemID = 47581, spellID = 67087 }, --Bracers of Swift Death
 			{ itemID = 47582, spellID = 67139 }, --Bracers of Swift Death
@@ -1977,9 +1589,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 43264, spellID = 60720 }, --Overcast Bracers
 			{ itemID = 38433, spellID = 51571 }, --Arctic Wristguards
 		},
-	},
-	{
-		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Chest",
 		{
 			{ itemID = 47596, spellID = 67138 }, --Crusader's Dragonscale Breastplate
 			{ itemID = 47595, spellID = 67082 }, --Crusader's Dragonscale Breastplate
@@ -1995,9 +1604,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38414, spellID = 50950 }, --Frostscale Chestguard
 			{ itemID = 38420, spellID = 50956 }, --Nerubian Chestguard
 		},
-	},
-	{
-		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Feet",
 		{
 			{ itemID = 49896, spellID = 70559 }, --Earthsoul Boots
 			{ itemID = 49897, spellID = 70561 }, --Rock-Steady Treads
@@ -2012,9 +1618,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38413, spellID = 50954 }, --Frostscale Boots
 			{ itemID = 38419, spellID = 50960 }, --Nerubian Boots
 		},
-	},
-	{
-		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Hands",
 		{
 			{ itemID = 43446, spellID = 60732 }, --Swiftarrow Gauntlets
 			{ itemID = 43454, spellID = 60749 }, --Stormhide Grips
@@ -2022,9 +1625,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38421, spellID = 50959 }, --Nerubian Gloves
 		},
 
-	},
-	{
-		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Head",
 		{
 			{ itemID = 43447, spellID = 60728 }, --Swiftarrow Helm
 			{ itemID = 43455, spellID = 60743 }, --Stormhide Crown
@@ -2032,9 +1632,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38440, spellID = 60600 }, --Frostscale Helm
 			{ itemID = 38439, spellID = 60624 }, --Nerubian Helm
 		},
-	},
-	{
-		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Legs",
 		{
 			{ itemID = 49901, spellID = 70560 }, --Draconic Bonesplinter Legguards
 			{ itemID = 49900, spellID = 70558 }, --Lightning-Infused Leggings
@@ -2046,9 +1643,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38416, spellID = 50951 }, --Frostscale Leggings
 			{ itemID = 38422, spellID = 50957 }, --Nerubian Legguards
 		},
-	},
-	{
-		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Shoulder",
 		{
 			{ itemID = 43449, spellID = 60729 }, --Swiftarrow Shoulderguards
 			{ itemID = 43457, spellID = 60746 }, --Stormhide Shoulders
@@ -2056,9 +1650,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38424, spellID = 50952 }, --Frostscale Shoulders
 			{ itemID = 38417, spellID = 50958 }, --Nerubian Shoulders
 		},
-	},
-	{
-		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Waist",
 		{
 			{ itemID = 45553, spellID = 63194 }, --Belt of Dragons
 			{ itemID = 45554, spellID = 63196 }, --Blue Belt of Chaos
@@ -2069,9 +1660,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38412, spellID = 50955 }, --Frostscale Belt
 			{ itemID = 38418, spellID = 50961 }, --Nerubian Belt
 		},
-	},
-	{
-		Name = "Mail Armor" .. AtlasLoot.Colors.WHITE .. " - Wrist",
 		{
 			{ itemID = 47580, spellID = 67137 }, --Black Chitin Bracers
 			{ itemID = 47579, spellID = 67081 }, --Black Chitin Bracers
@@ -2084,9 +1672,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 38436, spellID = 60599 }, --Frostscale Bracers
 			{ itemID = 38435, spellID = 60622 }, --Nerubian Bracers
 		},
-	},
-	{
-		Name = "Item Enhancements",
 		{
 			{ itemID = 44963, spellID = 62448 }, --Earthen Leg Armor
 			{ itemID = 38373, spellID = 50965 }, --Frosthide Leg Armor
@@ -2099,8 +1684,6 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 29533, spellID = 35549 }, --Cobrahide Leg Armor
 			{ itemID = 18251, spellID = 22727 }, --Core Armor Kit", "Skill Required:".." 300
 			{ itemID = 38376, spellID = 50963 }, --Heavy Borean Armor Kit
-		},
-		{
 			{ spellID = 57683, icon = "Trade_LeatherWorking" }, --Fur Lining - Attack Power
 			{ spellID = 57701, icon = "Trade_LeatherWorking" }, --Fur Lining - Arcane Resist
 			{ spellID = 57692, icon = "Trade_LeatherWorking" }, --Fur Lining - Fire Resist
@@ -2112,16 +1695,10 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ spellID = 60583, icon = "Trade_LeatherWorking" }, --Jormungar Leg Reinforcements
 			{ spellID = 60584, icon = "Trade_LeatherWorking" }, --Nerubian Leg Reinforcements
 		},
-	},
-	{
-		Name = "Quivers and Ammo Pouches",
 		{
 			{ itemID = 44447, spellID = 60645 }, --Dragonscale Ammo Pouch
 			{ itemID = 44448, spellID = 60647 }, --Nerubian Reinforced Quiver
 		},
-	},
-	{
-		Name = "Drums, Bags and Misc.",
 		{
 			{ itemID = 44446, spellID = 60643 }, --Pack of Endless Pockets
 			{ itemID = 38399, spellID = 50970 }, --Trapper's Traveling Pack
@@ -2130,22 +1707,13 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 			{ itemID = 49634, spellID = 69388 }, --Drums of the Wild
 		},
 
-	},
-	{
-		Name = "Leather",
 		{
 			{ itemID = 38425, spellID = 50936 }, --Heavy Borean Leather
 			{ itemID = 33568, spellID = 64661 }, --Borean Leather
 		},
 	},
-}
 
-AtlasLoot_Data["MiningWRATH"] = {
-	Module = "AtlasLoot_Crafting_Wrath",
-	Name = MINING,
-	Type = "WrathCrafting",
-	{
-		Name = MINING,
+	["MiningWRATH"] = {
 		{
 			{ itemID = 37663, spellID = 55208 }, --Smelt Titansteel
 			{ itemID = 41163, spellID = 55211 }, --Smelt Titanium
@@ -2153,31 +1721,19 @@ AtlasLoot_Data["MiningWRATH"] = {
 			{ itemID = 36916, spellID = 49252 }, --Smelt Cobalt
 		},
 	},
-}
 
-AtlasLoot_Data["FirstAidWRATH"] = {
-	Module = "AtlasLoot_Crafting_Wrath",
-	Name = FIRSTAID,
-	Type = "WrathCrafting",
-	{
-		Name = FIRSTAID,
+	["FirstAidWRATH"] = {
 		{
 			{ itemID = 34722, spellID = 45546 }, --Heavy Frostweave Bandage
 			{ itemID = 34721, spellID = 45545 }, --Frostweave Bandage
 		},
 	},
-}
 
------------------
---- Tailoring ---
------------------
+	-----------------
+	--- Tailoring ---
+	-----------------
 
-AtlasLoot_Data["TailoringWRATH"] = {
-	Module = "AtlasLoot_Crafting_Wrath",
-	Name = TAILORING,
-	Type = "WrathCrafting",
-	{
-		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Back",
+	["TailoringWRATH"] = {
 		{
 			{ itemID = 41610, spellID = 56017 }, --Deathchill Cloak
 			{ itemID = 41609, spellID = 56016 }, --Wispcloak
@@ -2186,9 +1742,6 @@ AtlasLoot_Data["TailoringWRATH"] = {
 			{ itemID = 41608, spellID = 56015 }, --Cloak of Frozen Spirits
 			{ itemID = 41607, spellID = 56014 }, --Cloak of the Moon
 		},
-	},
-	{
-		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Chest",
 		{
 			{ itemID = 47603, spellID = 67066 }, --Merlin's Robe
 			{ itemID = 47604, spellID = 67146 }, --Merlin's Robe
@@ -2204,9 +1757,6 @@ AtlasLoot_Data["TailoringWRATH"] = {
 			{ itemID = 41549, spellID = 55921 }, --Duskweave Robe
 			{ itemID = 41515, spellID = 55903 }, --Frostwoven Robe
 		},
-	},
-	{
-		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Feet",
 		{
 			{ itemID = 49890, spellID = 70551 }, --Deathfrost Boots
 			{ itemID = 49893, spellID = 70553 }, --Sandals of Consecration
@@ -2219,10 +1769,6 @@ AtlasLoot_Data["TailoringWRATH"] = {
 			{ itemID = 41520, spellID = 55906 }, --Frostwoven Boots
 			{ itemID = 41985, spellID = 56019 }, --Silky Iceshard Boots
 		},
-
-	},
-	{
-		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Hands",
 		{
 			{ itemID = 42111, spellID = 56027 }, --Ebonweave Gloves
 			{ itemID = 42103, spellID = 56025 }, --Moonshroud Gloves
@@ -2232,18 +1778,12 @@ AtlasLoot_Data["TailoringWRATH"] = {
 			{ itemID = 41545, spellID = 55922 }, --Duskweave Gloves
 			{ itemID = 44211, spellID = 55904 }, --Frostwoven Gloves
 		},
-	},
-	{
-		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Head",
 		{
 			{ itemID = 41984, spellID = 56018 }, --Hat of Wintry Doom
 			{ itemID = 43971, spellID = 59589 }, --Frostsavage Cowl
 			{ itemID = 41546, spellID = 55919 }, --Duskweave Cowl
 			{ itemID = 41521, spellID = 55907 }, --Frostwoven Cowl
 		},
-	},
-	{
-		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Legs",
 		{
 			{ itemID = 49891, spellID = 70550 }, --Leggings of Woven Death
 			{ itemID = 49892, spellID = 70552 }, --Lightweave Leggings
@@ -2253,18 +1793,12 @@ AtlasLoot_Data["TailoringWRATH"] = {
 			{ itemID = 41548, spellID = 55901 }, --Duskweave Leggings
 			{ itemID = 41519, spellID = 56030 }, --Frostwoven Leggings
 		},
-	},
-	{
-		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Shoulder",
 		{
 			{ itemID = 43973, spellID = 59584 }, --Frostsavage Shoulders
 			{ itemID = 41523, spellID = 55910 }, --Mystic Frostwoven Shoulders
 			{ itemID = 41550, spellID = 55923 }, --Duskweave Shoulders
 			{ itemID = 41513, spellID = 55902 }, --Frostwoven Shoulders
 		},
-	},
-	{
-		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Waist",
 		{
 			{ itemID = 45558, spellID = 63205 }, --Cord of the AtlasLoot.Colors.WHITE Dawn
 			{ itemID = 45557, spellID = 63203 }, --Sash of Ancient Power
@@ -2274,9 +1808,6 @@ AtlasLoot_Data["TailoringWRATH"] = {
 			{ itemID = 41543, spellID = 55914 }, --Duskweave Belt
 			{ itemID = 41522, spellID = 55908 }, --Frostwoven Belt
 		},
-	},
-	{
-		Name = "Cloth Armor" .. AtlasLoot.Colors.WHITE .. " - Wrist",
 		{
 			{ itemID = 47586, spellID = 67145 }, --Bejeweled Wizard's Bracers
 			{ itemID = 47585, spellID = 67079 }, --Bejeweled Wizard's Bracers
@@ -2288,9 +1819,6 @@ AtlasLoot_Data["TailoringWRATH"] = {
 			{ itemID = 41551, spellID = 55920 }, --Duskweave Wriststraps
 			{ itemID = 41512, spellID = 56031 }, --Frostwoven Wriststraps
 		},
-	},
-	{
-		Name = "Bags",
 		{
 			{ itemID = 41600, spellID = 56005 }, --Glacial Bag
 			{ itemID = 41598, spellID = 56006 }, --Mysterious Bag
@@ -2298,25 +1826,17 @@ AtlasLoot_Data["TailoringWRATH"] = {
 			{ itemID = 45773, spellID = 63924 }, --Emerald Bag
 			{ itemID = 41599, spellID = 56007 }, --Frostweave Bag
 		},
-	},
-	{
-		Name = "Item Enhancements",
 		{
 			{ itemID = 41602, spellID = 56009 }, --Brilliant Spellthread
 			{ itemID = 41604, spellID = 56011 }, --Sapphire Spellthread
 			{ itemID = 41603, spellID = 56010 }, --Azure Spellthread
 			{ itemID = 41601, spellID = 56008 }, --Shining Spellthread
-		},
-		{
 			{ spellID = 56034, icon = "Spell_Nature_AstralRecalGroup" }, --Master's Spellthread
 			{ spellID = 56039, icon = "Spell_Nature_AstralRecalGroup" }, --Sanctified Spellthread
 			{ spellID = 55769, icon = "INV_Misc_Thread_01" }, --Darkglow Embroidery
 			{ spellID = 55642, icon = "INV_Misc_Thread_01" }, --Lightweave Embroidery
 			{ spellID = 55777, icon = "INV_Misc_Thread_01" }, --Swordguard Embroidery
 		},
-	},
-	{
-		Name = "Cloth/" .. "Miscellaneous",
 		{
 			{ itemID = 41593, spellID = 56002 }, --Ebonweave
 			{ itemID = 41594, spellID = 56001 }, --Moonshroud
@@ -2327,9 +1847,6 @@ AtlasLoot_Data["TailoringWRATH"] = {
 			{ itemID = 54797, spellID = 75597 }, --Frosty Flying Carpet
 			{ itemID = 41509, spellID = 55898 }, --Frostweave Net
 		},
-	},
-	{
-		Name = "Shirts",
 		{
 			{ itemID = 41249, spellID = 55994 }, --Blue Lumberjack Shirt
 			{ itemID = 41253, spellID = 55998 }, --Blue Workman's Shirt
@@ -2346,8 +1863,6 @@ AtlasLoot_Data["TailoringWRATH"] = {
 			{ itemID = 10056, spellID = 12061 }, --AtlasLoot.Colors.ORANGE Mageweave Shirt
 			{ itemID = 4336, spellID = 3873 }, --Black Swashbuckler's Shirt
 			{ itemID = 17723, spellID = 21945 }, --Green Holiday Shirt
-		},
-		{
 			{ itemID = 4335, spellID = 3872 }, --Rich Purple Silk Shirt
 			{ itemID = 6796, spellID = 8489 }, --Red Swashbuckler's Shirt
 			{ itemID = 4334, spellID = 3871 }, --Formal AtlasLoot.Colors.WHITE Shirt
@@ -2364,5 +1879,5 @@ AtlasLoot_Data["TailoringWRATH"] = {
 			{ itemID = 2576, spellID = 2393 }, --White Linen Shirt
 			{ itemID = 4344, spellID = 3915 }, --Brown Linen Shirt
 		},
-	},
-}
+	}
+})
