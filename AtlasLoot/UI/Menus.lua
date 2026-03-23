@@ -6,11 +6,18 @@ Defines the table listings for the dropdown lists.
 --Invoke all libraries
 
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-
+local menusKeyTable = {}
 local menusTemp = {}
 function AtlasLoot:AddNewMenus(menus)
 	for menuName, menu in pairs(menus) do
 		menusTemp[menuName] = menu
+		for i, menuKey in ipairs(menu) do
+			if menuKey[2] and #menuKey[2] > 0 then
+				menusKeyTable[menuKey[2][1]] = {menuName, i}
+			else
+				menusKeyTable[menuName..i] = {menuName, i}
+			end
+		end
 	end
 end
 
@@ -24,7 +31,11 @@ function AtlasLoot:GetDataName(iD)
 end
 
 function AtlasLoot:GetDataDisplayName(iD)
-	return (self.ui.menus.data[iD] and (self.ui.menus.data[iD].DisplayName or self.ui.menus.data[iD].Name)) or nil
+	return (self.ui.menus.data[menusKeyTable[iD][1]] and (self.ui.menus.data[menusKeyTable[iD][1]].DisplayName or self.ui.menus.data[menusKeyTable[iD][1]].Name)) or nil
+end
+
+function AtlasLoot:GetDataPageName(iD)
+	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]][menusKeyTable[iD][2]][1] or nil
 end
 
 function AtlasLoot:GetDataPageName(iD, i)
