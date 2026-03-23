@@ -38,8 +38,8 @@ function AtlasLoot:GetDataPageName(iD)
 	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]][menusKeyTable[iD][2]][1] or nil
 end
 
-function AtlasLoot:GetDataPageName(iD, i)
-	return self.ui.menus.data[iD] and self.ui.menus.data[iD][i][1] or nil
+function AtlasLoot:GetSourceLocation(iD)
+	return menusKeyTable[iD][1], menusKeyTable[iD][2]
 end
 
 function AtlasLoot:GetDataModule(iD)
