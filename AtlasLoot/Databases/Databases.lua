@@ -2065,12 +2065,6 @@ function AtlasLoot:InitializeDatabases()
 	}
 
 	self:AddItemData("sort", {
-
-		{ itemID = 229739, refLootEntry = "Huntsman" }, --Tome of Untold Secrets
-		{ itemID = 30480, refLootEntry = "Huntsman" }, --Fiery Warhorse's Reins
-		{ itemID = 23809, refLootEntry = "Huntsman" }, --Schematic: Stabilized Eternium Scope
-		{ itemID = 60198, droprate = "1%", refLootEntry = "Huntsman" }, --Pet Sigil
-		{ itemID = 29758, refLootEntry = "Huntsman" }, --Gloves of the Fallen Defender
 		{ itemID = 21669, groupID = 1, refLootEntry = 15516 }; --Creeping Vine Helm
 		{ itemID = 21676, groupID = 1, refLootEntry = 15516 }; --Leggings of the Festering Swarm
 		{ itemID = 21678, groupID = 1, refLootEntry = 15516 }; --Necklace of Purity
