@@ -70,8 +70,8 @@ function AtlasLoot:AddItemToWishList(typ, tableNum, data, show)
 		local tableCopy = self:CloneTable(data.item)
 		table.insert(AtlasLootWishList[typ][tableNum], tableCopy)
 		local tNum = #AtlasLootWishList[typ][tableNum]
-		AtlasLootWishList[typ][tableNum][tNum].lootTable = data.item.lootTable or {{data.dataID, data.dataSource, data.tablenum}, "Source"}
-		AtlasLootWishList[typ][tableNum][tNum].desc = _G[AtlasLootWishList[typ][tableNum][tNum].lootTable[1][2]][AtlasLootWishList[typ][tableNum][tNum].lootTable[1][1]].Name..": ".._G[AtlasLootWishList[typ][tableNum][tNum].lootTable[1][2]][AtlasLootWishList[typ][tableNum][tNum].lootTable[1][1]][AtlasLootWishList[typ][tableNum][tNum].lootTable[1][3]].Name
+		AtlasLootWishList[typ][tableNum][tNum].sourcePage = data.item.sourcePage or {{data.dataID, data.dataSource, data.tablenum}, "Source"}
+		AtlasLootWishList[typ][tableNum][tNum].desc = _G[AtlasLootWishList[typ][tableNum][tNum].sourcePage[1][2]][AtlasLootWishList[typ][tableNum][tNum].sourcePage[1][1]].Name..": ".._G[AtlasLootWishList[typ][tableNum][tNum].sourcePage[1][2]][AtlasLootWishList[typ][tableNum][tNum].sourcePage[1][1]][AtlasLootWishList[typ][tableNum][tNum].sourcePage[1][3]].Name
 		if AtlasLootWishList.Options[playerName].AutoSortWishlist then
 			self:SortWishList(nil,typ, tableNum)
 		end

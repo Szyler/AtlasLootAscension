@@ -574,7 +574,7 @@ function AtlasLoot:InitializeSearch()
             if #newTable[#newTable] >= 30 then
                 table.insert(newTable, {})
             end
-            itemData.lootTable = {{dataID, dataSource, tableNum}, "Source"}
+            itemData.sourcePage = {{dataID, dataSource, tableNum}, "Source"}
             table.insert(newTable[#newTable], itemData)
 
             searchIDs[item.itemID] = {newTable, #newTable}

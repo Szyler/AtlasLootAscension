@@ -40,7 +40,7 @@ function AtlasLoot:CreateToken(dataID)
 	while self.data.item[dataID..count] do
 		for _, item in ipairs(self.data.item[dataID..count]) do
 			if item.itemID then
-				addItem(item.itemID, self:GetDataPageName(dataID, count))
+				addItem(item.itemID, self:GetDataPageName(dataID..count))
 			end
 		end
 		count = count + 1
@@ -89,10 +89,11 @@ function AtlasLoot:CreateOnDemandLootTable(typeL, isDungeon, name)
 		for dataID, data in pairs(self.data.item) do
 			local dataType = self:GetDataType(dataID)
 			if dataType and dataType == typeL then
-				for tableNum, itemData in ipairs(data) do
+				for _, itemData in ipairs(data) do
 					if type(itemData) == "table" and itemData.itemID and not checkList[itemData.itemID] then
-						itemData.dropLoc = {self:GetDataDisplayName(dataID), self:GetDataPageName(dataID,tableNum)}
-						itemData.lootTable = {{dataID, "AtlasLoot_Data", tableNum}, "Source"}
+						itemData.dropLoc = {self:GetDataDisplayName(dataID), self:GetDataPageName(dataID)}
+						local dataSource, tableNum = self:GetSourceLocation(dataID)
+						itemData.sourcePage = {{dataSource, "AtlasLoot_Data", tableNum}, "Source"}
 						checkList[itemData.itemID] = true
 						table.insert(itemList, itemData)
 					end

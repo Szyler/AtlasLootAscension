@@ -454,7 +454,7 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 		local lvls = self.data.crafting["CraftingLevels"][spellID]
 		local name = self:FixText(dataSource.Name)
 		extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
-	elseif itemNumber.lootTable and itemNumber.lootTable[2] == "Token" then
+	elseif itemNumber.sourcePage and itemNumber.sourcePage[2] == "Token" then
 		extra = self:FixText("Set Token (Click)")
 	elseif itemEquipLoc and itemEquipLoc ~= "" and itemSubType then
 		extra = itemEquipLoc..", "..itemSubType
@@ -540,12 +540,7 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	itemButton.extraInfo = itemNumber.extraInfo or nil
 	itemButton.quest = itemNumber.quest or nil
 	itemButton.item = itemNumber
-
-	if self.data.lootableLinks[itemID] then
-		itemButton.sourcePage = self.data.lootableLinks[itemID]
-	else
-		itemButton.sourcePage = nil
-	end
+	itemButton.sourcePage = self.data.lootableLinks[itemID] and self.data.lootableLinks[itemID] or itemNumber.sourcePage
 
 	if itemNumber[self.Difficulties.DIF_SEARCH] then
 		itemButton.difficulty = itemNumber[self.Difficulties.DIF_SEARCH]
