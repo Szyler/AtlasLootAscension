@@ -102,10 +102,10 @@ function AtlasLoot:InitializeUIFunctions()
     tablename - Name of the loot table in the database
     Called when a button in AtlasLoot.DewdropSubMenu is clicked
     ]]
-    local function subMenuClick(tablename, onDamand, name)
+    local function subMenuClick(tablename, onDamand)
         self.backEnabled = false
         if  onDamand then
-            self:CreateOnDemandLootTable(onDamand[1], onDamand[2], name)
+            self:CreateOnDemandLootTable(onDamand[1], onDamand[2], onDamand[3])
         else
             --Show the select loot table
             local tablenum = self.ui.menus.data[tablename].Loadfirst or 1
@@ -123,19 +123,21 @@ function AtlasLoot:InitializeUIFunctions()
         local menuList = {dividerLength = 50, {{text = "Categorys", isTitle = true}}, {}}
             for _, menu in pairs(loottable) do
                 if type(menu) == "table" then
-                    if type(menu[3]) == "table" then
+                    if type(menu[2]) == "table" then
                         table.insert(menuList[1], {text = menu[1], value = menu[1], hasArrow = true})
                         for _,submenu in pairs(menu[3]) do
-                            if submenu[3] == "Header" then
-                                table.insert(menuList[2], {text = self.Colors.GREEN..submenu[1], func = function() subMenuClick(submenu[2], submenu.OnDamand, submenu[1]) end, isTitle = true, show = menu[1], divider = true} )
+                            if submenu.Header then
+                                table.insert(menuList[2], {text = self.Colors.GREEN..submenu.Header, func = function() subMenuClick(submenu[1], submenu.OnDamand) end, isTitle = true, show = menu[1], divider = true} )
                             elseif type(submenu) == "table" then
-                                table.insert(menuList[2], {text = self.ui.menus.data[submenu[2]] and self.ui.menus.data[submenu[2]].Name or submenu[1], func = function() subMenuClick(submenu[2], submenu.OnDamand, submenu[1]) end, show = menu[1]})
+                                local name = self.ui.menus.data[submenu[1]] and self.ui.menus.data[submenu[1]].name or ""
+                                table.insert(menuList[2], {text = name, func = function() subMenuClick(submenu[1], submenu.OnDamand) end, show = menu[1]})
                             end
                         end
-                    elseif menu[3] == "Header" then
-                        table.insert(menuList[1], {text = self.Colors.GREEN..menu[1], func = function() subMenuClick(menu[2]) end, isTitle = true, divider = true})
+                    elseif menu.Header then
+                        table.insert(menuList[1], {text = self.Colors.GREEN..menu.Header, func = function() subMenuClick(menu[1]) end, isTitle = true, divider = true})
                     else
-                        table.insert(menuList[1], {text = self.ui.menus.data[menu[2]] and self.ui.menus.data[menu[2]].Name or menu[1], func = function() subMenuClick(menu[2], menu.OnDamand, menu[1]) end})
+                        local name = self.ui.menus.data[menu[1]] and self.ui.menus.data[menu[1]].Name or ""
+                        table.insert(menuList[1], {text = name, func = function() subMenuClick(menu[1], menu.OnDamand) end})
                     end
                 end
             end
