@@ -1,5 +1,4 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local color = AtlasLoot.Colors
 AtlasLoot:AddItemData({
 ------------------------
 --- Dungeons & Raids ---
@@ -9,7 +8,7 @@ AtlasLoot:AddItemData({
 ------------
 	["OldKeys"] = {
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.."Key".."s" },
+			{ icon = "INV_Box_01", name = "Keys" },
 			{ itemID = 7146 }, --The Scarlet Key
 			{ itemID = 12382 }, --Key to the City
 			{ itemID = 6893 }, --Workshop Key
@@ -17,10 +16,10 @@ AtlasLoot:AddItemData({
 			{ itemID = 11140 }, --Prison Cell Key
 			{ itemID = 18249 }, --Crescent Key
 			{ itemID = 13704 }, --Skeleton Key
-			{ icon = "INV_Box_01", name = color.WHITE.."Dungeon Set 2" },
+			{ icon = "INV_Box_01", name = "Dungeon Set 2" },
 			{ itemID = 22057 }, --Brazier of Invocation
 			{ itemID = 21986 }, --Banner of Provocation
-			{ icon = "INV_Box_01", name = color.WHITE.."Misc" },
+			{ icon = "INV_Box_01", name = "Misc" },
 			{ itemID = 19931 }, --Gurubashi Mojo Madness
 			{ itemID = 13523 }, --Blood of Innocents
 			{ itemID = 18746 }, --Divination Scryer
@@ -56,14 +55,14 @@ AtlasLoot:AddItemData({
 			{ itemID = 21477, groupID = 1, refLootEntry = 15341 }, --Ring of Fury
 			{ itemID = 21494, groupID = 1, refLootEntry = 15341 }, --Southwind's Grasps
 			{ itemID = 21495 }, --Legplates of the Qiraji Command
-			{ icon = "INV_Box_01", name = color.WHITE.."Rajaxx's Captains" },
+			{ icon = "INV_Box_01", name = "Rajaxx's Captains" },
 			{ itemID = 21810 }, --Treads of the Wandering Nomad
 			{ itemID = 21809 }, --Fury of the Forgotten Swarm
 			{ itemID = 21806 }, --Gavel of Qiraji Authority
 		},
 		{
 			{ itemID = 1506051, sourcePage = {"AQ20SetsBACK","Token"} }, --Ceremonial Qiraji Drape
-			{ icon = "INV_Box_01", name = color.WHITE.."Lieutenant General Andorov" },
+			{ icon = "INV_Box_01", name = "Lieutenant General Andorov" },
 			{ itemID = 22221 }, --Plans: Obsidian Mail Tunic
 			{ itemID = 22219 }, --Plans: Jagged Obsidian Shield
 		},
@@ -531,7 +530,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 11824 }, --Cyclopean Band
 		},
 		{
-			{ icon = "INV_Misc_Bag_09", name = color.WHITE.."Dungeon Set 2 Summonable", desc = "Theldren" },
+			{ icon = "INV_Misc_Bag_09", name = "Dungeon Set 2 Summonable", desc = "Theldren" },
 			{ itemID = 22330 }, --Shroud of Arcane Mastery
 			{ itemID = 22305 }, --Ironweave Mantle
 			{ itemID = 22317 }, --Lefty's Brass Knuckle
@@ -571,9 +570,9 @@ AtlasLoot:AddItemData({
 			{ itemID = 11207 }, --Formula: Enchant Weapon - Fiery Weapon
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.."The Vault" },
+			{ icon = "INV_Box_01", name = "The Vault" },
 			{ itemID = 11309 }, --The Heart of the Mountain
-			{ icon = "INV_Box_01", name = color.WHITE.."The Secret Safe" },
+			{ icon = "INV_Box_01", name = "The Secret Safe" },
 			{ itemID = 22256 }, --Mana Shaping Handwraps
 			{ itemID = 11929 }, --Haunting Specter Leggings
 			{ itemID = 11926 }, --Deathdealer Breastplate
@@ -582,7 +581,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 11920 }, --Wraith Scythe
 			{ itemID = 11923 }, --The Hammer of Grace
 			{ itemID = 22254 }, --Wand of Eternal Light
-			{ icon = "INV_Box_01", name = color.WHITE.."Dark Coffer" },
+			{ icon = "INV_Box_01", name = "Dark Coffer" },
 			{ itemID = 11752 }, --Black Blood of the Tormented
 			{ itemID = 11751 }, --Burning Essence
 			{ itemID = 11753 }, --Eye of Kajal
@@ -734,7 +733,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 11786, groupID = 1, refLootEntry = 8923 }, --Stone of the Earthstorm
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.."Chest of The Seven" },
+			{ icon = "INV_Box_01", name = "Chest of The Seven" },
 			{ itemID = 11929 }, --Haunting Specter Leggings
 			{ itemID = 11925 }, --Ghostshroud
 			{ itemID = 11926 }, --Deathdealer Breastplate
@@ -745,7 +744,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 11921 }, --Impervious Giant
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.."Shadowforge Flame Keeper" },
+			{ icon = "INV_Box_01", name = "Shadowforge Flame Keeper" },
 			{ itemID = 11885 }, --Shadowforge Torch
 		},
 		{
@@ -1119,7 +1118,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 12834, contentsPreview = {12790} }, --Plans: Arcanite Champion
 			{ itemID = 18779 }, --Bottom Half of Advanced Armorsmithing: Volume I
 			{ itemID = 12727 }, --Plans: Enchanted Thorium Breastplate
-			{ icon = "INV_Box_01", name = color.WHITE.."Unforged Rune Covered Breastplate" },
+			{ icon = "INV_Box_01", name = "Unforged Rune Covered Breastplate" },
 			{ itemID = 12806 }, --Unforged Rune Covered Breastplate
 			{ itemID = 12696 }, --Plans: Demon Forged Breastplate
 		},
@@ -1180,7 +1179,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 19227 }, --Ace of Beasts
 		},
 		{
-			{ icon = "INV_Misc_Bag_09", name = color.WHITE.."Dungeon Set 2 Summonable", desc = "Lord Valthalak" },
+			{ icon = "INV_Misc_Bag_09", name = "Dungeon Set 2 Summonable", desc = "Lord Valthalak" },
 			{ itemID = 22336, groupID = 1, refLootEntry = 16042 }, --Draconian Aegis of the Legion
 			{ itemID = 22343, groupID = 1, refLootEntry = 16042 }, --Handguards of Savagery
 			{ itemID = 22302, groupID = 1, refLootEntry = 16042 }, --Ironweave Cowl
@@ -1606,7 +1605,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 18501 }, --Felvine Shard
 		},
 		{
-			{ icon = "INV_Misc_Bag_09", name = color.WHITE.."Dungeon Set 2 Summonable", desc = "Isalien" },
+			{ icon = "INV_Misc_Bag_09", name = "Dungeon Set 2 Summonable", desc = "Isalien" },
 			{ itemID = 22304 }, --Ironweave Gloves
 			{ itemID = 22472 }, --Boots of Ferocity
 			{ itemID = 22401 }, --Libram of Hope
@@ -1702,7 +1701,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 18497, groupID = 1, refLootEntry = 14321 }, --Sublime Wristguards
 			{ itemID = 18460, groupID = 1, refLootEntry = 14321 }, --Unsophisticated Hand Cannon
 			{ itemID = 2075990, groupID = 1, refLootEntry = 2075990 }, --Fengus's Warblade
-			{ icon = "INV_Box_01", name = color.WHITE.."Fengus's Chest" },
+			{ icon = "INV_Box_01", name = "Fengus's Chest" },
 			{ itemID = 18266 }, --Gordok Courtyard Key
 		},
 		{
@@ -1717,7 +1716,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 18514 }, --Pattern: Girdle of Insight
 			{ itemID = 18515 }, --Pattern: Mongoose Boots
 			{ itemID = 18516 }, --Pattern: Swift Flight Bracers
-			{ icon = "INV_Box_01", name = color.WHITE.."Ogre Tannin Basket" },
+			{ icon = "INV_Box_01", name = "Ogre Tannin Basket" },
 			{ itemID = 18240 }, --Ogre Tannin
 			{ itemID = 18509 }, --Chromatic Cloak
 			{ itemID = 18510 }, --Hide of the Wild
@@ -1888,7 +1887,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 2070380, groupID = 1, refLootEntry = 2060435 }, --Sabatons of Eternal Ambition
 			{ itemID = 2061469, groupID = 1, refLootEntry = 2060435 }, --Shoulderguards of Demonic Pacts
 			{ itemID = 2063093, groupID = 1, refLootEntry = 2060435 }, --Vestments of Eldre'Thalas
-			{ icon = "INV_Box_01", name = color.WHITE.."The Prince's Chest" },
+			{ icon = "INV_Box_01", name = "The Prince's Chest" },
 			{ itemID = 18336 }, --Gauntlet of Gordok Might
 		},
 		{
@@ -2163,7 +2162,7 @@ AtlasLoot:AddItemData({
 	----------------------
 	["RazorfenDowns"] = {
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.."Tuten'kash" },
+			{ icon = "INV_Box_01", name = "Tuten'kash" },
 			{ itemID = 10776 }, --Silky Spider Cape
 			{ itemID = 10777 }, --Arachnid Gloves
 			{ itemID = 10775 }, --Carapace of Tuten'kash
@@ -2294,7 +2293,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 7718 }, --Herod's Shoulder
 			{ itemID = 10330 }, --Scarlet Leggings
 			{ itemID = 7717 }, --Ravager
-			{ icon = "INV_Box_01", name = color.WHITE.."Scarlet Trainee" },
+			{ icon = "INV_Box_01", name = "Scarlet Trainee" },
 			{ itemID = 23192 }, --Tabard of the Scarlet Crusade
 		},
 		{
@@ -2400,7 +2399,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 7711 }, --Robe of Doan
 			{ itemID = 7714 }, --Hypnotic Blade
 			{ itemID = 7713 }, --Illusionary Rod
-			{ icon = "INV_Box_01", name = color.WHITE.."Doan's Strongbox" },
+			{ icon = "INV_Box_01", name = "Doan's Strongbox" },
 			{ itemID = 7146 }, --The Scarlet Key
 			{ itemID = 2065781, groupID = 1, refLootEntry = 2061226 }, --Cincture of Binding
 			{ itemID = 2069962, groupID = 1, refLootEntry = 2061226 }, --Footwraps of Detonation
@@ -2552,11 +2551,11 @@ AtlasLoot:AddItemData({
 			{ itemID = 13984 }, --Darrowspike
 			{ itemID = 13982 }, --Warblade of Caer Darrow
 			{ itemID = 14002 }, --Darrowshire Strongguard
-			{ icon = "INV_Box_01", name = color.WHITE.."Frostwhisper's Embalming Fluid" },
+			{ icon = "INV_Box_01", name = "Frostwhisper's Embalming Fluid" },
 			{ itemID = 12736 }, --Frostwhisper's Embalming Fluid
 		},
 		{
-			{ icon = "INV_Misc_Bag_09", name = color.WHITE.."Dungeon Set 2 Summonable", desc = "Kormok" },
+			{ icon = "INV_Misc_Bag_09", name = "Dungeon Set 2 Summonable", desc = "Kormok" },
 			{ itemID = 22303 }, --Ironweave Pants
 			{ itemID = 22326 }, --Amalgam's Band
 			{ itemID = 22331 }, --Band of the Steadfast Hero
@@ -2989,7 +2988,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 16724 }, --Lightforge Gauntlets
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.."Malor's Strongbox" },
+			{ icon = "INV_Box_01", name = "Malor's Strongbox" },
 			{ itemID = 12845 }, --Medallion of Faith
 		},
 		{
@@ -3042,7 +3041,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 2075680, groupID = 1, refLootEntry = 2060422 }, --Tome of Pyroclastic Knowledge
 			{ itemID = 22897 }, --Tome of Conjure Food VII
 			{ itemID = 12811 }, --Righteous Orb
-			{ icon = "INV_Box_01", name = color.WHITE.."Unfinished Painting" },
+			{ icon = "INV_Box_01", name = "Unfinished Painting" },
 			{ itemID = 14679 }, --Of Love and Family
 		},
 		{
@@ -3063,7 +3062,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 13250 }, --Head of Balnazzar
 		},
 		{
-			{ icon = "INV_Misc_Bag_09", name = color.WHITE.."Dungeon Set 2 Summonable", desc = "Sothos and Jarien" },
+			{ icon = "INV_Misc_Bag_09", name = "Dungeon Set 2 Summonable", desc = "Sothos and Jarien" },
 			{ itemID = 22301 }, --Ironweave Robe
 			{ itemID = 22328 }, --Legplates of Vigilance
 			{ itemID = 22327 }, --Amulet of the Redeemed
@@ -3500,7 +3499,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 10631 }, --Murkwater Gauntlets
 			{ itemID = 10633 }, --Silvershell Leggings
 			{ itemID = 10634 }, --Mindseye Circle
-			{ itemID = 15733 }, --Pattern: color.GREEN Dragonscale Leggings
+			{ itemID = 15733 }, --Pattern: Green Dragonscale Leggings
 			{ itemID = 16216 }, --Formula: Enchant Cloak - Greater Resistance
 			{ itemID = 11318 }, --Atal'ai Haze
 			{ itemID = 6181 }, --Fetish of Hakkar
@@ -3534,7 +3533,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 9382 }, --Tromping Miner's Boots
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.."Baelog" },
+			{ icon = "INV_Box_01", name = "Baelog" },
 			{ itemID = 9401 }, --Nordic Longshank
 			{ itemID = 9400 }, --Baelog's Shortbow
 			{ itemID = 9399 }, --Precision Arrow
@@ -3547,17 +3546,17 @@ AtlasLoot:AddItemData({
 			{ itemID = 2065792, groupID = 1, refLootEntry = 2060219 }, --Titanforged Girdle
 			{ itemID = 2064027, groupID = 1, refLootEntry = 2060219 }, --Uldaman Raider's Chestguard
 			{ itemID = 3595662, groupID = 1, refLootEntry = 3595662 }, --Dwarven Crossbow
-			{ icon = "INV_Box_01", name = color.WHITE.."Eric 'The Swift'" },
+			{ icon = "INV_Box_01", name = "Eric 'The Swift'" },
 			{ itemID = 9394 }, --Horned Viking Helmet
 			{ itemID = 9398 }, --Worn Running Boots
 			{ itemID = 2459 }, --Swiftness Potion
-			{ icon = "INV_Box_01", name = color.WHITE.."Olaf" },
+			{ icon = "INV_Box_01", name = "Olaf" },
 			{ itemID = 9404 }, --Olaf's All Purpose Shield
 			{ itemID = 9403 }, --Battered Viking Shield
 			{ itemID = 1177 }, --Oil of Olaf
-			{ icon = "INV_Box_01", name = color.WHITE.."Baelog's Chest" },
+			{ icon = "INV_Box_01", name = "Baelog's Chest" },
 			{ itemID = 7740 }, --Gni'kiv Medallion
-			{ icon = "INV_Box_01", name = color.WHITE.."Conspicuous Urn" },
+			{ icon = "INV_Box_01", name = "Conspicuous Urn" },
 			{ itemID = 7671 }, --Shattered Necklace Topaz
 		},
 		{
@@ -4027,19 +4026,19 @@ AtlasLoot:AddItemData({
 			{ itemID = 19943 }, --Massive Mojo
 		},
 		{
-			{ icon = "INV_Box_01", name = color.WHITE.."Gri'lek" },
+			{ icon = "INV_Box_01", name = "Gri'lek" },
 			{ itemID = 19961 }, --Gri'lek's Grinder
 			{ itemID = 19962 }, --Gri'lek's Carver
 			{ itemID = 19939 }, --Gri'lek's Blood
-			{ icon = "INV_Box_01", name = color.WHITE.."Hazza'rah" },
+			{ icon = "INV_Box_01", name = "Hazza'rah" },
 			{ itemID = 19968 }, --Fiery Retributer
 			{ itemID = 19967 }, --Thoughtblighter
 			{ itemID = 19942 }, --Hazza'rah's Dream Thread
-			{ icon = "INV_Box_01", name = color.WHITE.."Renataki" },
+			{ icon = "INV_Box_01", name = "Renataki" },
 			{ itemID = 19964 }, --Renataki's Soul Conduit
 			{ itemID = 19963 }, --Pitchfork of Madness
 			{ itemID = 19940 }, --Renataki's Tooth
-			{ icon = "INV_Box_01", name = color.WHITE.."Wushoolay" },
+			{ icon = "INV_Box_01", name = "Wushoolay" },
 			{ itemID = 19965 }, --Wushoolay's Poker
 			{ itemID = 19993 }, --Hoodoo Hunting Bow
 			{ itemID = 19941 }, --Wushoolay's Mane
@@ -4191,7 +4190,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 19713 }, --Bronze Hakkari Bijou
 			{ itemID = 19715 }, --Gold Hakkari Bijou
 			{ itemID = 19711 }, --Green Hakkari Bijou
-			{ itemID = 19710 }, --color.ORANGE Hakkari Bijou
+			{ itemID = 19710 }, --Orange Hakkari Bijou
 			{ itemID = 19712 }, --Purple Hakkari Bijou
 			{ itemID = 19707 }, --Red Hakkari Bijou
 			{ itemID = 19714 }, --Silver Hakkari Bijou
@@ -4563,7 +4562,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 1563010 }, --Dreamsinger Legguards
 			{ itemID = 1563074 }, --Golem Shard Leggings
 			{ itemID = 1563114 }, --Troll's Bane Leggings
-			{ itemID = 1563099 }, --Moccasins of the color.WHITE Hare
+			{ itemID = 1563099 }, --Moccasins of the White Hare
 			{ itemID = 1563100 }, --Furen's Boots
 			{ itemID = 2248085 }, --Gordok Knuckleband
 			{ itemID = 2448085 }, --Flattened Elven Ring
@@ -4631,7 +4630,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 20636 }, --Hibernation Crystal
 			{ itemID = 20582 }, --Trance Stone
 			{ itemID = 18665 }, --The Eye of Shadow
-			{ itemID = 18704 }, --Mature color.BLUE Dragon Sinew
+			{ itemID = 18704 }, --Mature Blue Dragon Sinew
 			{ itemID = 18714 }, --Ancient Sinew Wrapped Lamina
 			{ itemID = 20580 }, --Hammer of Bestial Fury
 			{ itemID = 20599 }, --Polished Ironwood Crossbow
