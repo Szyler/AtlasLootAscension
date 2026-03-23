@@ -393,9 +393,16 @@ local displayData = {}
 -- Sorts a lootTables items based on the order of the above lists and adds any spacers between groups
 local function sortItemData(dataSource, dataID, tablenum)
 	if not dataSource then return end
-	local lootTables = #dataSource[tablenum][2] > 0 and dataSource[tablenum][2] or {dataID..tablenum}
-	if not lootTables then return end
-	local lootTableName = lootTables[1] or dataID..tablenum
+	local lootTables = { AtlasLoot.data.item[dataID..tablenum] and dataID..tablenum }
+	local lootTableName = dataID..tablenum
+	if #dataSource[tablenum][2] > 0 then
+		for _, ref in pairs(dataSource[tablenum][2]) do
+			table.insert(lootTables, ref)
+		end
+		lootTableName = dataSource[tablenum][2][1]
+	end
+	if #lootTables == 0 then return end
+
 	if displayData[lootTableName] then return displayData[lootTableName] end
 	local newTable = {{}}
 
