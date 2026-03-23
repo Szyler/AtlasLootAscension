@@ -532,7 +532,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 32263, groupID = 2, refLootEntry = 22947 }, --Praetorian's Legguards
 			{ itemID = 32366, groupID = 2, refLootEntry = 22947 }, --Shadowmaster's Boots
 			{ itemID = 32369, groupID = 2, refLootEntry = 22947 }, --Blade of Savagery
-			{ itemID = 31101, lootTable = {"TSIXSHOULDER","Token"} }, --Pauldrons of the Forgotten Conqueror
+			{ itemID = 31101, sourcePage = {"TSIXSHOULDER","Token"} }, --Pauldrons of the Forgotten Conqueror
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
@@ -545,10 +545,10 @@ AtlasLoot:AddItemData({
 			{ itemID = 32376 }, --Forest Prowler's Helm
 			{ itemID = 32373 }, --Helm of the Illidari Shatterer
 			{ itemID = 32326 }, --Twisted Blades of Zarak
-			{ itemID = 31101, lootTable = {"TSIXSHOULDER","Token"} }, --Pauldrons of the Forgotten Conqueror
-			{ itemID = 31098, lootTable = {"TSIXLEGS","Token"} }, --Leggings of the Forgotten Conqueror
-			{ itemID = 31097, lootTable = {"TSIXHEAD","Token"} }, --Helm of the Forgotten Conqueror
-			{ itemID = 31092, lootTable = {"TSIXHAND","Token"} }, --Gloves of the Forgotten Conqueror
+			{ itemID = 31101, sourcePage = {"TSIXSHOULDER","Token"} }, --Pauldrons of the Forgotten Conqueror
+			{ itemID = 31098, sourcePage = {"TSIXLEGS","Token"} }, --Leggings of the Forgotten Conqueror
+			{ itemID = 31097, sourcePage = {"TSIXHEAD","Token"} }, --Helm of the Forgotten Conqueror
+			{ itemID = 31092, sourcePage = {"TSIXHAND","Token"} }, --Gloves of the Forgotten Conqueror
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
@@ -573,7 +573,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 32501, groupID = 4, refLootEntry = 22917 }, --Shadowmoon Insignia
 			{ itemID = 32471, groupID = 4, refLootEntry = 22917 }, --Shard of Azzinoth
 			{ itemID = 32497, groupID = 4, refLootEntry = 22917 }, --Stormrage Signet Ring			
-			{ itemID = 31089, lootTable = {"TSIXCHEST","Token"} }, --Chestguard of the Forgotten Conqueror
+			{ itemID = 31089, sourcePage = {"TSIXCHEST","Token"} }, --Chestguard of the Forgotten Conqueror
 			{ itemID = 32837 }, --Warglaive of Azzinoth
 			{ itemID = 32838 }, --Warglaive of Azzinoth
 			{ itemID = 29434 }, --Badge of Justice
@@ -828,7 +828,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 30900 }, --Bow-stitched Leggings"
 			{ itemID = 30915 }, --Belt of Seething Fury"
 			{ itemID = 30918 }, --Hammer of Atonement"
-			{ itemID = 31092, lootTable = {"TSIXHAND","Token"} },
+			{ itemID = 31092, sourcePage = {"TSIXHAND","Token"} },
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
@@ -842,7 +842,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 30917 }, --Razorfury Mantle"
 			{ itemID = 12308 }, --Infernal Stalker’s Hauberk
 			{ itemID = 12309 }, --Plates of Eternal Fury
-			{ itemID = 31098, lootTable = {"TSIXLEGS","Token"} }, --Leggings of the Forgotten Conqueror
+			{ itemID = 31098, sourcePage = {"TSIXLEGS","Token"} }, --Leggings of the Forgotten Conqueror
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
@@ -864,7 +864,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 12387 }, --Signet of Shattered Valor
 			{ itemID = 12386 }, --Ring of the Stormborn
 			{ itemID = 12313 }, --The Defiler's Cudgel
-			{ itemID = 31097, lootTable = {"TSIXHEAD","Token"} }, --Helm of the Forgotten Conqueror
+			{ itemID = 31097, sourcePage = {"TSIXHEAD","Token"} }, --Helm of the Forgotten Conqueror
 			{ itemID = 450009, desc = "Quest Requirements", contentsPreview = {{450009},{450010},{34334}}}, --The String of Time
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
@@ -1257,7 +1257,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 30092, groupID = 2, refLootEntry = 21215 }, --Orca-Hide Boots
 			{ itemID = 30091, groupID = 2, refLootEntry = 21215 }, --True-Aim Stalker Bands
 			{ itemID = 30627, groupID = 2, refLootEntry = 21215 }, --Tsunami Talismanic
-			{ itemID = 30240, lootTable = {"TFIVEHAND","Token"} }, --Gloves of the Vanquished Defender
+			{ itemID = 30240, sourcePage = {"TFIVEHAND","Token"} }, --Gloves of the Vanquished Defender
 			{ itemID = 63326, droprate = "1%" }, --Pet Sigil
 		},
 		{
@@ -1269,7 +1269,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 30626, groupID = 2, refLootEntry = 21214 }, --Sextant of Unstable Currents
 			{ itemID = 30100, groupID = 2, refLootEntry = 21214 }, --Soul-Strider Boots
 			{ itemID = 30090, groupID = 2, refLootEntry = 21214 }, --World Breaker
-			{ itemID = 30246, lootTable = {"TFIVELEGS","Token"} }, --Leggings of the Vanquished Defender
+			{ itemID = 30246, sourcePage = {"TFIVELEGS","Token"} }, --Leggings of the Vanquished Defender
 			{ itemID = 63325, droprate = "1%" }, --Pet Sigil
 		},
 		{
@@ -1304,7 +1304,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 30103, groupID = 4, refLootEntry = 21212 }, --Fang of Vashj
 			{ itemID = 30105, groupID = 4, refLootEntry = 21212 }, --Serpent Spine Longbow
 			{ itemID = 12151, groupID = 4, refLootEntry = 21212 }, --Tidebound Bows
-			{ itemID = 30243, lootTable = {"TFIVEHEAD","Token"} }, --Helm of the Vanquished Defender
+			{ itemID = 30243, sourcePage = {"TFIVEHEAD","Token"} }, --Helm of the Vanquished Defender
 			{ itemID = 29906 }, --Vashj's Vial Remnant
 			{ itemID = 450000 }, --Intact Vial of Lady Vashj
 			{ itemID = 63320, droprate = "1%" }, --Pet Sigil
@@ -1354,7 +1354,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 28796, groupID = 2, refLootEntry = 18831 }, --Malefic Mask of the Shadows
 			{ itemID = 28801, groupID = 2, refLootEntry = 18831 }, --Maulgar's Warhelm
 			{ itemID = 12090, groupID = 2, refLootEntry = 18831 }, --Spellbreaker’s Edge
-			{ itemID = 29764, lootTable = {"TFOURSHOULDER","Token"} }, --Pauldrons of the Fallen Defender
+			{ itemID = 29764, sourcePage = {"TFOURSHOULDER","Token"} }, --Pauldrons of the Fallen Defender
 			{ itemID = 816252, droprate = { nil, "2%", "5%", "7%", "10%" } }, --Formula: Enchant Weapon - Undaunted Might
 			{ itemID = 62311, droprate = "1%" }, --Pet Sigil
 		},
@@ -1370,7 +1370,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 28830, groupID = 3, refLootEntry = 19044 }, --Dragonspine Trophy
 			{ itemID = 28823, groupID = 3, refLootEntry = 19044 }, --Eye of Gruul
 			{ itemID = 11688, groupID = 3, refLootEntry = 19044 }, --Signet of Elemental Savagery
-			{ itemID = 29767, lootTable = {"TFOURLEGS","Token"} }, --Leggings of the Fallen Defender
+			{ itemID = 29767, sourcePage = {"TFOURLEGS","Token"} }, --Leggings of the Fallen Defender
 			{ itemID = 28802, groupID = 3, refLootEntry = 19044 }, --Bloodmaw Magus-Blade
 			{ itemID = 28794, groupID = 3, refLootEntry = 19044 }, --Axe of the Gronn Lords
 			{ itemID = 28825, groupID = 3, refLootEntry = 19044 }, --Aldori Legacy Defender
@@ -1642,7 +1642,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 28774, groupID = 4, refLootEntry = 17257 }, --Glaive of the Pit
 			{ itemID = 28781, groupID = 4, refLootEntry = 17257 }, --Karaborian Talisman
 			{ itemID = 11687, groupID = 4, refLootEntry = 17257 }, --Ring of Hellfire Mighty
-			{ itemID = 29753, lootTable = {"TFOURCHEST","Token"} }, --Chestguard of the Fallen Defender
+			{ itemID = 29753, sourcePage = {"TFOURCHEST","Token"} }, --Chestguard of the Fallen Defender
 			{ itemID = 34845 }, --Pit Lord's Satchel
 			{ itemID = 34846 }, --Black Sack of Gems
 			{ itemID = 32385, contentsPreview = {
@@ -1783,7 +1783,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 28633, groupID = 2, refLootEntry = 15691 }, --Staff of Infinite Mysteries
 			{ itemID = 11251, groupID = 2, refLootEntry = 15691 }, --Stormfury Pendant
 			{ itemID = 28621, groupID = 2, refLootEntry = 15691 }, --Wrynn Dynasty Greaves
-			{ itemID = 29758, lootTable = {"TFOURHAND","Token"} }, --Gloves of the Fallen Defender
+			{ itemID = 29758, sourcePage = {"TFOURHAND","Token"} }, --Gloves of the Fallen Defender
 			{ itemID = 229739 }, --Tome of Untold Secrets
 			{ itemID = 60170 }, --Sigil of The Curator
 		},
@@ -1875,7 +1875,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 28771, groupID = 3, refLootEntry = 15690 }, --Light's Justice
 			{ itemID = 28772, groupID = 3, refLootEntry = 15690 }, --Sunfury Bow of the Phoenix
 			{ itemID = 12123, groupID = 3, refLootEntry = 15690 }, --Razorwind
-			{ itemID = 29761, lootTable = {"TFOURHEAD","Token"} }, --Helm of the Fallen Defender
+			{ itemID = 29761, sourcePage = {"TFOURHEAD","Token"} }, --Helm of the Fallen Defender
 			{ itemID = 229739 }, --Tome of Untold Secrets
 			{ itemID = 138255 }, --Summoner's Stone: Prince Malchezaar
 			{ itemID = 60169, droprate = "1%" }, --Pet Sigil
@@ -2113,7 +2113,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 34166, groupID = 2 }, --Band of Lucent Beams
 			{ itemID = 34165, groupID = 2 }, --Fang of Kalecgos
 			{ itemID = 34164, groupID = 2 }, --Dragonscale-Encrusted Longblade
-			{ itemID = 34848, lootTable = {"TSIXWRIST","Token"}}, --Bracers of the Forgotten Conqueror
+			{ itemID = 34848, sourcePage = {"TSIXWRIST","Token"}}, --Bracers of the Forgotten Conqueror
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
@@ -2129,7 +2129,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 34176, groupID = 2, refLootEntry = 24882 }, --Reign of Misery
 			{ itemID = 11523, groupID = 2, refLootEntry = 24882 }, --Trophy Scar Band
 			--{ itemID = 34381, groupID = 99, refLootEntry = 24882 }, --Felstrength Legplates
-			{ itemID = 34853, lootTable = {"TSIXWAIST","Token"}, groupID = 1 }, --Belt of the Forgotten Conqueror
+			{ itemID = 34853, sourcePage = {"TSIXWAIST","Token"}, groupID = 1 }, --Belt of the Forgotten Conqueror
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
@@ -2146,7 +2146,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 34184, groupID = 2, refLootEntry = 25038 }, --Brooch of the Highborne
 			{ itemID = 34185, groupID = 2, refLootEntry = 25038 }, --Sword Breaker's Bulwark
 			{ itemID = 34182, groupID = 2, refLootEntry = 25038 }, --Grand Magister's Staff of Torrents
-			{ itemID = 34856, lootTable = {"TSIXFEET","Token"}, groupID = 1 }, --Boots of the Forgotten Conqueror
+			{ itemID = 34856, sourcePage = {"TSIXFEET","Token"}, groupID = 1 }, --Boots of the Forgotten Conqueror
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
@@ -2187,9 +2187,9 @@ AtlasLoot:AddItemData({
 			{ itemID = 35290, groupID = 2, refLootEntry = 25837 }, --Sin'dorei Pendant of Conquest
 			{ itemID = 35291, groupID = 2, refLootEntry = 25837 }, --Sin'dorei Pendant of Salvation
 			{ itemID = 35292, groupID = 2, refLootEntry = 25837 }, --Sin'dorei Pendant of Triumphs
-			{ itemID = 34848, lootTable = {"TSIXWRIST","Token"}, groupID = 1}, --Bracers of the Forgotten Conqueror
-			{ itemID = 34853, lootTable = {"TSIXWAIST","Token"}, groupID = 1 }, --Belt of the Forgotten Conqueror
-			{ itemID = 34856, lootTable = {"TSIXFEET","Token"}, groupID = 1 }, --Boots of the Forgotten Conqueror
+			{ itemID = 34848, sourcePage = {"TSIXWRIST","Token"}, groupID = 1}, --Bracers of the Forgotten Conqueror
+			{ itemID = 34853, sourcePage = {"TSIXWAIST","Token"}, groupID = 1 }, --Belt of the Forgotten Conqueror
+			{ itemID = 34856, sourcePage = {"TSIXFEET","Token"}, groupID = 1 }, --Boots of the Forgotten Conqueror
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
@@ -2603,7 +2603,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 12150, groupID = 2, refLootEntry = 19516 }, --Voidforged Band
 			{ itemID = 30450, groupID = 2, refLootEntry = 19516 }, --Warp-Spring Coil
 			{ itemID = 32515, groupID = 2, refLootEntry = 19516 }, --Wristguards of Determination
-			{ itemID = 30249, lootTable = {"TFIVESHOULDER","Token"} }, --Pauldrons of the Vanquished Defender
+			{ itemID = 30249, sourcePage = {"TFIVESHOULDER","Token"} }, --Pauldrons of the Vanquished Defender
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
@@ -2652,7 +2652,7 @@ AtlasLoot:AddItemData({
 				}
 			}, --Verdant Sphere
 			{ itemID = 450001 }, --Intact Vial of Kael'thas Sunstrider
-			{ itemID = 30237, lootTable = {"TFIVECHEST","Token"} }, --Chestguard of the Vanquished Defender
+			{ itemID = 30237, sourcePage = {"TFIVECHEST","Token"} }, --Chestguard of the Vanquished Defender
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb

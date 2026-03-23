@@ -44,7 +44,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 21810, groupID = 1, refLootEntry = 15348 }, --Treads of the Wandering Nomad
 			{ itemID = 21499, groupID = 1, refLootEntry = 15348 }, --Vestments of the Shifting Sands
 			{ itemID = 22217 }, --Kurinnaxx's Venom Sac
-			{ itemID = 1506051, lootTable = {"AQ20SetsBACK","Token"} }, --Ceremonial Qiraji Drape
+			{ itemID = 1506051, sourcePage = {"AQ20SetsBACK","Token"} }, --Ceremonial Qiraji Drape
 		},
 		{
 			{ itemID = 21497, groupID = 1, refLootEntry = 15341 }, --Boots of the Qiraji General
@@ -62,7 +62,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 21806 }, --Gavel of Qiraji Authority
 		},
 		{
-			{ itemID = 1506051, lootTable = {"AQ20SetsBACK","Token"} }, --Ceremonial Qiraji Drape
+			{ itemID = 1506051, sourcePage = {"AQ20SetsBACK","Token"} }, --Ceremonial Qiraji Drape
 			{ icon = "INV_Box_01", name = color.WHITE.."Lieutenant General Andorov" },
 			{ itemID = 22221 }, --Plans: Obsidian Mail Tunic
 			{ itemID = 22219 }, --Plans: Jagged Obsidian Shield
@@ -77,7 +77,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 21476, groupID = 1, refLootEntry = 15340 }, --Obsidian Scaled Leggings
 			{ itemID = 21471, groupID = 1, refLootEntry = 15340 }, --Talon of Furious Concentration
 			{ itemID = 21467, groupID = 1, refLootEntry = 15340 }, --Thick Silithid Chestguard
-			{ itemID = 1506053, lootTable = {"AQ20SetsNECK","Token"} }, --Ceremonial Qiraji Pendant
+			{ itemID = 1506053, sourcePage = {"AQ20SetsNECK","Token"} }, --Ceremonial Qiraji Pendant
 			{ itemID = 22220, contentsPreview = {22194} }, --Plans: Black Grasp of the Destroyer
 		},
 		{
@@ -90,7 +90,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 21490, groupID = 1, refLootEntry = 15370 }, --Slime Kickers
 			{ itemID = 21487, groupID = 1, refLootEntry = 15370 }, --Slimy Scaled Gauntlets
 			{ itemID = 21455, groupID = 1, refLootEntry = 15370 }, --Southwind Helm
-			{ itemID = 1506052, lootTable = {"AQ20SetsFINGER","Token"} }, --Ceremonial Qiraji Ring
+			{ itemID = 1506052, sourcePage = {"AQ20SetsFINGER","Token"} }, --Ceremonial Qiraji Ring
 		},
 		{
 			{ itemID = 21481, groupID = 1, refLootEntry = 15369 }, --Boots of the Desert Protector
@@ -102,7 +102,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 21483, groupID = 1, refLootEntry = 15369 }, --Ring of the Desert Winds
 			{ itemID = 21480, groupID = 1, refLootEntry = 15369 }, --Scaled Silithid Gauntlets
 			{ itemID = 21466, groupID = 1, refLootEntry = 15369 }, --Stinger of Ayamiss
-			{ itemID = 1506052, lootTable = {"AQ20SetsFINGER","Token"} }, --Ceremonial Qiraji Ring
+			{ itemID = 1506052, sourcePage = {"AQ20SetsFINGER","Token"} }, --Ceremonial Qiraji Ring
 		},
 		{
 			{ itemID = 21457, groupID = 1, refLootEntry = 15339 }, --Bracers of Brutality
@@ -125,7 +125,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 21507 }, --Amulet of the Shifting Sands
 			{ itemID = 21505 }, --Choker of the Shifting Sands
 			{ itemID = 21506 }, --Pendant of the Shifting Sands
-			{ itemID = 1506053, lootTable = {"AQ20SetsNECK","Token"} }, --Ceremonial Qiraji Pendant
+			{ itemID = 1506053, sourcePage = {"AQ20SetsNECK","Token"} }, --Ceremonial Qiraji Pendant
 		},
 		{
 			{ itemID = 20873 }, --Alabaster Idol
@@ -187,7 +187,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
 			{ itemID = 22222 }, --Plans: Thick Obsidian Breastplate
 			{ itemID = 22196 }, --Thick Obsidian Breastplate
-			{ itemID = 20928, lootTable = {"TTWO.5FEET","Token"} }, --Bindings of the Lost Nomad
+			{ itemID = 20928, sourcePage = {"TTWO.5FEET","Token"} }, --Bindings of the Lost Nomad
 		},
 		{
 			{ itemID = 21697 }, --Cape of the Trinity
@@ -211,7 +211,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 21684 }, --Mantle of the Desert's Fury
 			{ itemID = 21683 }, --Mantle of the Desert Crusade
 			{ itemID = 21687 }, --Ukko's Ring of Darkness
-			{ itemID = 20928, lootTable = {"TTWO.5FEET","Token"} }, --Bindings of the Lost Nomad
+			{ itemID = 20928, sourcePage = {"TTWO.5FEET","Token"} }, --Bindings of the Lost Nomad
 		},
 		{
 			{ itemID = 21669, groupID = 1, refLootEntry = 15516 }, --Creeping Vine Helm
@@ -228,7 +228,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 21675, groupID = 2, refLootEntry = 15516 }, --Thick Qirajihide Belt
 			{ itemID = 21237 }, --Imperial Qiraji Regalia
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 20932, lootTable = {"TTWO.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
+			{ itemID = 20932, sourcePage = {"TTWO.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
 		},
 		{
 			{ itemID = 21627, groupID = 1, refLootEntry = 15510 }, --Cloak of Untold Secrets
@@ -245,7 +245,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 21652, groupID = 2, refLootEntry = 15510 }, --Silithid Carapace Chestguard
 			{ itemID = 21237 }, --Imperial Qiraji Regalia
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 20932, lootTable = {"TTWO.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
+			{ itemID = 20932, sourcePage = {"TTWO.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
 		},
 		{
 			{ itemID = 21688, groupID = 1, refLootEntry = 15299 }, --Boots of the Fallen Hero
@@ -260,10 +260,10 @@ AtlasLoot:AddItemData({
 			{ itemID = 21626, groupID = 2, refLootEntry = 15299 }, --Slime-coated Leggings
 			{ itemID = 21237 }, --Imperial Qiraji Regalia
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 20932, lootTable = {"TTWO.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
-			{ itemID = 20931, lootTable = {"TTWO.5LEGS","Token"} }, --Hardened Qiraj Chitin
-			{ itemID = 20930, lootTable = {"TTWO.5HEAD","Token"} }, --Diadem of the Desert Prince
-			{ itemID = 20928, lootTable = {"TTWO.5FEET","Token"} }, --Bindings of the Lost Nomad
+			{ itemID = 20932, sourcePage = {"TTWO.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
+			{ itemID = 20931, sourcePage = {"TTWO.5LEGS","Token"} }, --Hardened Qiraj Chitin
+			{ itemID = 20930, sourcePage = {"TTWO.5HEAD","Token"} }, --Diadem of the Desert Prince
+			{ itemID = 20928, sourcePage = {"TTWO.5FEET","Token"} }, --Bindings of the Lost Nomad
 		},
 		{
 			{ itemID = 21619, groupID = 1, refLootEntry = 15509 }, --Gloves of the Messiah
@@ -279,8 +279,8 @@ AtlasLoot:AddItemData({
 			{ itemID = 21680, groupID = 2, refLootEntry = 15509 }, --Vest of Swift Executioner
 			{ itemID = 21237 }, --Imperial Qiraji Regalia
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 20932, lootTable = {"TTWO.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
-			{ itemID = 20931, lootTable = {"TTWO.5LEGS","Token"} }, --Hardened Qiraj Chitin
+			{ itemID = 20932, sourcePage = {"TTWO.5SHOULDER","Token"} }, --Spaulders of the Imperial Guard
+			{ itemID = 20931, sourcePage = {"TTWO.5LEGS","Token"} }, --Hardened Qiraj Chitin
 		},
 		{
 			{ itemID = 21608, groupID = 1, refLootEntry = 15275 }, --Amulet of Vek'nilash
@@ -297,7 +297,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 21599, groupID = 1, refLootEntry = 15275 }, --Vek'lor's Gloves of Devastation
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
 			{ itemID = 21237 }, --Imperial Qiraji Regalia
-			{ itemID = 20930, lootTable = {"TTWO.5HEAD","Token"} }, --Diadem of the Desert Prince
+			{ itemID = 20930, sourcePage = {"TTWO.5HEAD","Token"} }, --Diadem of the Desert Prince
 			{ itemID = 20726 }, --Formula: Enchant Gloves - Threat
 			{ itemID = 20735 }, --Formula: Enchant Cloak - Subtlety
 		},
@@ -314,7 +314,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 23558, groupID = 2, refLootEntry = 15517 }, --The Burrower's Shells
 			{ itemID = 21237 }, --Imperial Qiraji Regalia
 			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 20931, lootTable = {"TTWO.5LEGS","Token"} }, --Hardened Qiraj Chitin
+			{ itemID = 20931, sourcePage = {"TTWO.5LEGS","Token"} }, --Hardened Qiraj Chitin
 		},
 		{
 			{ itemID = 21583, groupID = 1, refLootEntry = 15727 }, --Cloak of Clarity
@@ -331,7 +331,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 21596, groupID = 2, refLootEntry = 15727 }, --Ring of the Godslayer
 			{ itemID = 21579, groupID = 2, refLootEntry = 15727 }, --Vanquished Tentacle of C'Thunder
 			{ itemID = 21221 }, --Eye of C'Thun
-			{ itemID = 20933, lootTable = {"TTWO.5CHEST","Token"} }, --Husk of the Old God
+			{ itemID = 20933, sourcePage = {"TTWO.5CHEST","Token"} }, --Husk of the Old God
 			{ itemID = 22734, contentsPreview = { 22632, 22589, 22631, 22630} }, --Base of Atiesh
 		},
 		{
@@ -1237,7 +1237,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 17110, groupID = 1, refLootEntry = 12056 }, --Seal of the Archmagus
 			{ itemID = 18842, groupID = 1, refLootEntry = 12056 }, --Staff of Dominance
 			{ itemID = 19146, groupID = 1, refLootEntry = 12056 }, --Wristguards of Stability
-			{ itemID = 2522362, lootTable = {"TONEWRIST","Token"} }, --Molten Wristguards
+			{ itemID = 2522362, sourcePage = {"TONEWRIST","Token"} }, --Molten Wristguards
 			{ itemID = 17329 }, --Hand of Lucifron
 		},
 		{
@@ -1251,7 +1251,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 18879, groupID = 1, refLootEntry = 11982 }, --Heavy Dark Iron Ring
 			{ itemID = 18870, groupID = 1, refLootEntry = 11982 }, --Helm of the Lifegiver
 			{ itemID = 17065, groupID = 1, refLootEntry = 11982 }, --Medallion of Steadfast Might
-			{ itemID = 2522359, lootTable = {"TONELEGS","Token"} }, --Molten Leggaurds
+			{ itemID = 2522359, sourcePage = {"TONELEGS","Token"} }, --Molten Leggaurds
 		},
 		{
 			{ itemID = 18832, groupID = 1, refLootEntry = 12259 }, --Brutality Blade
@@ -1263,7 +1263,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 18821, groupID = 1, refLootEntry = 12259 }, --Quick Strike Ring
 			{ itemID = 19144, groupID = 1, refLootEntry = 12259 }, --Sabatons of the Flamewalker
 			{ itemID = 18878, groupID = 1, refLootEntry = 12259 }, --Sorcerous Dagger
-			{ itemID = 2522364, lootTable = {"TONEHAND","Token"} }, --Molten Girdle
+			{ itemID = 2522364, sourcePage = {"TONEHAND","Token"} }, --Molten Girdle
 			{ itemID = 17331 }, --Hand of Gehennas
 		},
 		{
@@ -1276,7 +1276,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 18879, groupID = 1, refLootEntry = 12057 }, --Heavy Dark Iron Ring
 			{ itemID = 18870, groupID = 1, refLootEntry = 12057 }, --Helm of the Lifegiver
 			{ itemID = 17065, groupID = 1, refLootEntry = 12057 }, --Medallion of Steadfast Mighty
-			{ itemID = 2522360, lootTable = {"TONEHEAD","Token"} }, --Molten Headpiece
+			{ itemID = 2522360, sourcePage = {"TONEHEAD","Token"} }, --Molten Headpiece
 			{ itemID = 18564 }, --Bindings of the Windseeker
 			{ itemID = 19019 }, --Thunderfury, Blessed Blade of the Windseeker
 			{ itemID = 17782 }, --Talisman of Binding Shard
@@ -1293,7 +1293,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 17074, groupID = 1, refLootEntry = 12264 }, --Shadowstrike
 			{ itemID = 17069, groupID = 1, refLootEntry = 12264 }, --Striker's Mark
 			{ itemID = 18820, groupID = 1, refLootEntry = 12264 }, --Talisman of Ephemeral Power
-			{ itemID = 2522363, lootTable = {"TONEWAIST","Token"} }, --Molten Handgaurds
+			{ itemID = 2522363, sourcePage = {"TONEWAIST","Token"} }, --Molten Handgaurds
 			{ itemID = 17332 }, --Hand of Shazzrah
 		},
 		{
@@ -1306,7 +1306,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 17110, groupID = 1, refLootEntry = 12056 }, --Seal of the Archmagus
 			{ itemID = 18842, groupID = 1, refLootEntry = 12056 }, --Staff of Dominance
 			{ itemID = 19146, groupID = 1, refLootEntry = 12056 }, --Wristguards of Stability
-			{ itemID = 2522361, lootTable = {"TONESHOULDER","Token"} }, --Molten Spaulders
+			{ itemID = 2522361, sourcePage = {"TONESHOULDER","Token"} }, --Molten Spaulders
 			{ itemID = 18563 }, --Bindings of the Windseeker
 			{ itemID = 19019 }, --Thunderfury, Blessed Blade of the Windseeker
 		},
@@ -1321,7 +1321,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 17110, groupID = 1, refLootEntry = 11988 }, --Seal of the Archmagus
 			{ itemID = 18842, groupID = 1, refLootEntry = 11988 }, --Staff of Dominance
 			{ itemID = 19146, groupID = 1, refLootEntry = 11988 }, --Wristguards of Stability
-			{ itemID = 2522350, lootTable = {"TONECHEST","Token"} }, --Molten Tunic
+			{ itemID = 2522350, sourcePage = {"TONECHEST","Token"} }, --Molten Tunic
 			{ itemID = 17203 }, --Sulfuron Ingot
 			{ itemID = 17182 }, --Sulfuras, Hand of Ragnaros
 		},
@@ -1336,7 +1336,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 17074, groupID = 1, refLootEntry = 12098 }, --Shadowstrike
 			{ itemID = 17069, groupID = 1, refLootEntry = 12098 }, --Striker's Mark
 			{ itemID = 18820, groupID = 1, refLootEntry = 12098 }, --Talisman of Ephemeral Power
-			{ itemID = 2522365, lootTable = {"TONEFEET","Token"} }, --Molten Boots
+			{ itemID = 2522365, sourcePage = {"TONEFEET","Token"} }, --Molten Boots
 			{ itemID = 17330 }, --Hand of Sulfuron
 		},
 		{
@@ -1371,7 +1371,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 18816, groupID = 2, refLootEntry = 11502 }, --Perdition's Blade
 			{ itemID = 17082, groupID = 2, refLootEntry = 11502 }, --Shard of the Flame
 			{ itemID = 17104, groupID = 2, refLootEntry = 11502 }, --Spinal Reaper
-			{ itemID = 2522459, lootTable = {"TTWOLEGS","Token"} }, --Chromatic Leggaurds
+			{ itemID = 2522459, sourcePage = {"TTWOLEGS","Token"} }, --Chromatic Leggaurds
 			{ itemID = 21110 }, --Draconic for Dummies
 			{ itemID = 17204 }, --Eye of Sulfuras
 			{ itemID = 17182 }, --Sulfuras, Hand of Ragnaros
@@ -1424,7 +1424,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 19435, groupID = 1, refLootEntry = 400469 }, --Essence Gatherer
 			{ itemID = 19439, groupID = 1, refLootEntry = 400469 }, --Interlaced Shadow Jerkin
 			{ itemID = 19438, groupID = 1, refLootEntry = 400469 }, --Ringo's Blizzard Boots
-			{ itemID = 2522462, lootTable = {"TTWOWRIST","Token"} }, --Chromatic Wristguards
+			{ itemID = 2522462, sourcePage = {"TTWOWRIST","Token"} }, --Chromatic Wristguards
 			{ itemID = 53144, droprate = 5 }, --Formula: Enchant Cloak - Blazing
 		},
 		{
@@ -1440,7 +1440,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 14000, groupID = 2, refLootEntry = 13020 }, --Ring of Trinity Force
 			{ itemID = 19340, groupID = 2, refLootEntry = 13020 }, --Rune of Metamorphosis
 			{ itemID = 19343, groupID = 2, refLootEntry = 13020 }, --Scrolls of Blinding Light
-			{ itemID = 2522463, lootTable = {"TTWOWAIST","Token"} }, --Chromatic Girdle
+			{ itemID = 2522463, sourcePage = {"TTWOWAIST","Token"} }, --Chromatic Girdle
 		},
 		{
 			{ itemID = 19345, groupID = 1, refLootEntry = 12017 }, --Aegis of Preservation
@@ -1455,7 +1455,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 19341, groupID = 2, refLootEntry = 12017 }, --Lifegiving Gem
 			{ itemID = 19351, groupID = 2, refLootEntry = 12017 }, --Maladath, Runed Blade of the Black Flight
 			{ itemID = 19342, groupID = 2, refLootEntry = 12017 }, --Venomous Totem
-			{ itemID = 2522465, lootTable = {"TTWOFEET","Token"} }, --Chromatic Boots
+			{ itemID = 2522465, sourcePage = {"TTWOFEET","Token"} }, --Chromatic Boots
 			{ itemID = 53142, droprate = 5 }, -- Formula: Enchant Cloak - Draconic Might
 			{ itemID = 20383 }, --Head of the Broodlord Lashlayer
 		},
@@ -1472,7 +1472,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 19353, groupID = 2, refLootEntry = 11983 }, --Drake Talon Cleaver
 			{ itemID = 19431, groupID = 2, refLootEntry = 11983 }, --Styleen's Impeding Scarab
 			{ itemID = 19396, groupID = 2, refLootEntry = 11983 }, --Taut Dragonhide Belt
-			{ itemID = 2522464, lootTable = {"TTWOHAND","Token"} }, --Chromatic Handgaurds
+			{ itemID = 2522464, sourcePage = {"TTWOHAND","Token"} }, --Chromatic Handgaurds
 		},
 		{
 			{ itemID = 19345, groupID = 1, refLootEntry = 34036 }, --Aegis of Preservation
@@ -1487,7 +1487,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 19397, groupID = 1, refLootEntry = 34036 }, --Ring of Blackrock
 			{ itemID = 19355, groupID = 1, refLootEntry = 34036 }, --Shadow Wing Focus Staff
 			{ itemID = 19396, groupID = 1, refLootEntry = 34036 }, --Taut Dragonhide Belt
-			{ itemID = 2522464, lootTable = {"TTWOHAND","Token"} }, --Chromatic Handgaurds
+			{ itemID = 2522464, sourcePage = {"TTWOHAND","Token"} }, --Chromatic Handgaurds
 		},
 		{
 			{ itemID = 19432, groupID = 1, refLootEntry = 34037 }, --Circle of Applied Force
@@ -1503,7 +1503,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 19430, groupID = 1, refLootEntry = 34037 }, --Shroud of Pure Thought
 			{ itemID = 19431, groupID = 1, refLootEntry = 34037 }, --Styleen's Impeding Scarab
 			{ itemID = 19396, groupID = 1, refLootEntry = 34037 }, --Taut Dragonhide Belt
-			{ itemID = 2522464, lootTable = {"TTWOHAND","Token"} }, --Chromatic Handgaurds
+			{ itemID = 2522464, sourcePage = {"TTWOHAND","Token"} }, --Chromatic Handgaurds
 		},
 		{
 			{ itemID = 19388, groupID = 1, refLootEntry = 14020 }, --Angelista's Grasp
@@ -1519,7 +1519,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 19386, groupID = 2, refLootEntry = 14020 }, --Elementium Threaded Cloak
 			{ itemID = 19390, groupID = 2, refLootEntry = 14020 }, --Taut Dragonhide Gloves
 			{ itemID = 19389, groupID = 2, refLootEntry = 14020 }, --Taut Dragonhide Shoulderpads
-			{ itemID = 2522461, lootTable = {"TTWOSHOULDER","Token"} }, --Chromatic Spaulders
+			{ itemID = 2522461, sourcePage = {"TTWOSHOULDER","Token"} }, --Chromatic Spaulders
 		},
 		{
 			{ itemID = 19378, groupID = 1, refLootEntry = 11583 }, --Cloak of the Brood Lord
@@ -1535,7 +1535,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 19363, groupID = 2, refLootEntry = 11583 }, --Crul'shorukh, Edge of Chaos
 			{ itemID = 19377, groupID = 2, refLootEntry = 11583 }, --Prestor's Talisman of Connivery
 			{ itemID = 19380, groupID = 2, refLootEntry = 11583 }, --Therazane's Link
-			{ itemID = 2522450, lootTable = {"TTWOCHEST","Token"} }, --Chromatic Tunic
+			{ itemID = 2522450, sourcePage = {"TTWOCHEST","Token"} }, --Chromatic Tunic
 			{ itemID = 19003, contentsPreview = {19383, 19384, 19366, 21138} }, --Head of Nefarian
 			{ itemID = 21138 }, --Red Scepter Shard
 		},
@@ -3961,7 +3961,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 22722, groupID = 2, refLootEntry = 14517 }, --Seal of the Gurubashi Berserker
 			{ itemID = 22720, groupID = 2, refLootEntry = 14517 }, --Zulian Headdress
 			{ itemID = 22713, groupID = 2, refLootEntry = 14517 }, --Zulian Scepter of Rites
-			{ icon = "INV_Banner_01", name = "ZG Sets", lootTable = {{"ZGSets", "	", 1},"Source"} },
+			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
 			{ itemID = 19943 }, --Massive Mojo
 			{ itemID = 19881 }, --Channeler's Head
 		},
@@ -3982,7 +3982,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 22722, groupID = 2, refLootEntry = 14507 }, --Seal of the Gurubashi Berserker
 			{ itemID = 22720, groupID = 2, refLootEntry = 14507 }, --Zulian Headdress
 			{ itemID = 22713, groupID = 2, refLootEntry = 14507 }, --Zulian Scepter of Rites
-			{ icon = "INV_Banner_01", name = "ZG Sets", lootTable = {{"ZGSets", "	", 1},"Source"} },
+			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
 			{ itemID = 19943 }, --Massive Mojo
 			{ itemID = 19881 }, --Channeler's Head
 			{ itemID = 22216 }, --Venoxis's Venom Sac
@@ -4004,7 +4004,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 22722, groupID = 2, refLootEntry = 14510 }, --Seal of the Gurubashi Berserker
 			{ itemID = 22720, groupID = 2, refLootEntry = 14510 }, --Zulian Headdress
 			{ itemID = 22713, groupID = 2, refLootEntry = 14510 }, --Zulian Scepter of Rites
-			{ icon = "INV_Banner_01", name = "ZG Sets", lootTable = {{"ZGSets", "	", 1},"Source"} },
+			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
 			{ itemID = 19943 }, --Massive Mojo
 			{ itemID = 19881 }, --Channeler's Head
 		},
@@ -4022,7 +4022,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 19863, groupID = 2, refLootEntry = 11382 }, --Primalist's Seal
 			{ itemID = 19893, groupID = 2, refLootEntry = 11382 }, --Zanzil's Seal
 				{ itemID = 19872 }, --Swift Razzashi Raptor
-			{ icon = "INV_Banner_01", name = "ZG Sets", lootTable = {{"ZGSets", "	", 1},"Source"} },
+			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
 			{ itemID = 22637 }, --Primal Hakkari Idol
 			{ itemID = 19943 }, --Massive Mojo
 		},
@@ -4070,7 +4070,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 22720, groupID = 2, refLootEntry = 14509 }, --Zulian Headdress
 			{ itemID = 22713, groupID = 2, refLootEntry = 14509 }, --Zulian Scepter of Rites
 			{ itemID = 19902 }, --Swift Zulian Tiger
-			{ icon = "INV_Banner_01", name = "ZG Sets", lootTable = {{"ZGSets", "	", 1},"Source"} },
+			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
 			{ itemID = 19943 }, --Massive Mojo
 			{ itemID = 19881 }, --Channeler's Head
 			{ itemID = 60101, droprate = "1%" }, --Pet Sigil
@@ -4092,7 +4092,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 22720, groupID = 2, refLootEntry = 14515 }, --Zulian Headdress
 			{ itemID = 22713, groupID = 2, refLootEntry = 14515 }, --Zulian Scepter of Rites
 			{ itemID = 19914 }, --Panther Hide Sack
-			{ icon = "INV_Banner_01", name = "ZG Sets", lootTable = {{"ZGSets", "	", 1},"Source"} },
+			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
 			{ itemID = 19943 }, --Massive Mojo
 			{ itemID = 19881 }, --Channeler's Head
 		},
@@ -4109,7 +4109,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 19929, groupID = 2, refLootEntry = 11380 }, --Bloodtinged Gloves
 			{ itemID = 19888, groupID = 2, refLootEntry = 11380 }, --Overlord's Embrace
 			{ itemID = 19886, groupID = 2, refLootEntry = 11380 }, --The Hexxer's Cover
-			{ icon = "INV_Banner_01", name = "ZG Sets", lootTable = {{"ZGSets", "	", 1},"Source"} },
+			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
 			{ itemID = 22637 }, --Primal Hakkari Idol
 			{ itemID = 19943 }, --Massive Mojo
 		},
@@ -4232,7 +4232,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 22815, groupID = 2, refLootEntry = 16028 }, --Severance
 			{ itemID = 22818, groupID = 2, refLootEntry = 16028 }, --The Plague Bearer
 			{ itemID = 22820, groupID = 2, refLootEntry = 16028 }, --Wand of Fates
-			{ itemID = 22354, lootTable = {"TTHREESHOULDER","Token"} }, --Desecrated Pauldrons
+			{ itemID = 22354, sourcePage = {"TTHREESHOULDER","Token"} }, --Desecrated Pauldrons
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 			{ itemID = 60187 }, --Sigil of Patchwerk
@@ -4241,7 +4241,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 22803, groupID = 2, refLootEntry = 15931 }, --Midnight Haze
 			{ itemID = 22988, groupID = 2, refLootEntry = 15931 }, --The End of Dreams
 			{ itemID = 22810, groupID = 2, refLootEntry = 15931 }, --Toxin Injector
-			{ itemID = 22354, lootTable = {"TTHREESHOULDER","Token"} }, --Desecrated Pauldrons
+			{ itemID = 22354, sourcePage = {"TTHREESHOULDER","Token"} }, --Desecrated Pauldrons
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 			{ itemID = 60176 }, --Sigil of Grobbulus
@@ -4252,10 +4252,10 @@ AtlasLoot:AddItemData({
 			{ itemID = 22994, groupID = 2, refLootEntry = 15932 }, --Digested Hand of Power
 			{ itemID = 22981, groupID = 2, refLootEntry = 15932 }, --Gluth's Missing Collar
 			{ itemID = 22983, groupID = 2, refLootEntry = 15932 }, --Rime Covered Mantle
-			{ itemID = 22354, lootTable = {"TTHREESHOULDER","Token"} }, --Desecrated Pauldrons
-			{ itemID = 22355, lootTable = {"TTHREEWRIST","Token"} }, --Desecrated Bracers
-			{ itemID = 22356, lootTable = {"TTHREEWAIST","Token"} }, --Desecrated Waistguard
-			{ itemID = 22358, lootTable = {"TTHREEFEET","Token"} }, --Desecrated Sabatons
+			{ itemID = 22354, sourcePage = {"TTHREESHOULDER","Token"} }, --Desecrated Pauldrons
+			{ itemID = 22355, sourcePage = {"TTHREEWRIST","Token"} }, --Desecrated Bracers
+			{ itemID = 22356, sourcePage = {"TTHREEWAIST","Token"} }, --Desecrated Waistguard
+			{ itemID = 22358, sourcePage = {"TTHREEFEET","Token"} }, --Desecrated Sabatons
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 			{ itemID = 60177 }, --Sigil of Gluth
@@ -4266,7 +4266,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 23070, groupID = 2, refLootEntry = 15928 }, --Leggings of Polarity
 			{ itemID = 23000, groupID = 2, refLootEntry = 15928 }, --Plated Abomination Ribcage
 			{ itemID = 22808, groupID = 2, refLootEntry = 15928 }, --The Castigator
-			{ itemID = 22353, lootTable = {"TTHREEHEAD","Token"} }, --Desecrated Helmet
+			{ itemID = 22353, sourcePage = {"TTHREEHEAD","Token"} }, --Desecrated Helmet
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 			{ itemID = 60173 }, -- Sigil of Thaddius
@@ -4276,7 +4276,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 22938, groupID = 2, refLootEntry = 15956 }, --Cryptfiend Silk Cloak
 			{ itemID = 22937, groupID = 2, refLootEntry = 15956 }, --Gem of Nerubis
 			{ itemID = 22936, groupID = 2, refLootEntry = 15956 }, --Wristguards of Vengeance
-			{ itemID = 22355, lootTable = {"TTHREEWRIST","Token"} }, --Desecrated Bracers
+			{ itemID = 22355, sourcePage = {"TTHREEWRIST","Token"} }, --Desecrated Bracers
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 			{ itemID = 60182 }, --Sigil of Anub'Rekhan
@@ -4285,7 +4285,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 22943, groupID = 2, refLootEntry = 15953 }, --Malice Stone Pendant
 			{ itemID = 22942, groupID = 2, refLootEntry = 15953 }, --The Widow's Embrace
 			{ itemID = 22806, groupID = 2, refLootEntry = 15953 }, --Widow's Remorse
-			{ itemID = 22355, lootTable = {"TTHREEWRIST","Token"} }, --Desecrated Bracers
+			{ itemID = 22355, sourcePage = {"TTHREEWRIST","Token"} }, --Desecrated Bracers
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 			{ itemID = 60180 }, --Sigil of Grand Widow Faerlina
@@ -4295,7 +4295,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 22954, groupID = 2, refLootEntry = 15952 }, --Kiss of the Spider
 			{ itemID = 22804, groupID = 2, refLootEntry = 15952 }, --Maexxna's Fang
 			{ itemID = 22807, groupID = 2, refLootEntry = 15952 }, --Wraith Blade
-			{ itemID = 22357, lootTable = {"TTHREEHAND","Token"} }, --Desecrated Gauntlets
+			{ itemID = 22357, sourcePage = {"TTHREEHAND","Token"} }, --Desecrated Gauntlets
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 			{ itemID = 60179 }, --Sigil of Maexxna
@@ -4309,7 +4309,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 23328, groupID = 2, refLootEntry = 16061 }, --The Unholy Blade
 			{ itemID = 23017, groupID = 2, refLootEntry = 16061 }, --Veil of Eclipse
 			{ itemID = 23009, groupID = 2, refLootEntry = 16061 }, --Wand of the Whispering Dead
-			{ itemID = 22358, lootTable = {"TTHREEFEET","Token"} }, --Desecrated Sabatons
+			{ itemID = 22358, sourcePage = {"TTHREEFEET","Token"} }, --Desecrated Sabatons
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 			{ itemID = 60190 }, --Sigil of Instructor Razuvious
@@ -4318,7 +4318,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 23073, groupID = 2, refLootEntry = 16060 }, --Boots of Displacement
 			{ itemID = 23023, groupID = 2, refLootEntry = 16060 }, --Sadist's Collar
 			{ itemID = 23021, groupID = 2, refLootEntry = 16060 }, --The Soul Harvester's Bindings
-			{ itemID = 22358, lootTable = {"TTHREESHOULDER","Token"} }, --Desecrated Sabatons
+			{ itemID = 22358, sourcePage = {"TTHREESHOULDER","Token"} }, --Desecrated Sabatons
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 			{ itemID = 60189 }, --Sigil of Gothik the Harvester
@@ -4330,7 +4330,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 22811 }, --Soulstring
 			{ itemID = 23025 }, --Seal of the Damned
 			{ itemID = 23027 }, --Warmth of Forgiveness
-			{ itemID = 22349, lootTable = {"TTHREECHEST","Token"} }, --Desecrated Breastplate
+			{ itemID = 22349, sourcePage = {"TTHREECHEST","Token"} }, --Desecrated Breastplate
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 		},
@@ -4341,7 +4341,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 23006, groupID = 2, refLootEntry = 15954 }, --Libram of Light
 			{ itemID = 23029, groupID = 2, refLootEntry = 15954 }, --Noth's Frigid Heart
 			{ itemID = 23005, groupID = 2, refLootEntry = 15954 }, --Totem of Flowing Water
-			{ itemID = 22356, lootTable = {"TTHREEWAIST","Token"} }, --Desecrated Waistguard
+			{ itemID = 22356, sourcePage = {"TTHREEWAIST","Token"} }, --Desecrated Waistguard
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 			{ itemID = 60181 }, --Sigil of Noth the Plaguebringer
@@ -4350,7 +4350,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 23068, groupID = 2, refLootEntry = 15936 }, --Legplates of Carnage
 			{ itemID = 23036, groupID = 2, refLootEntry = 15936 }, --Necklace of Necropsy
 			{ itemID = 23035, groupID = 2, refLootEntry = 15936 }, --Preceptor's Hat
-			{ itemID = 22356, lootTable = {"TTHREEWAIST","Token"} }, --Desecrated Waistguard
+			{ itemID = 22356, sourcePage = {"TTHREEWAIST","Token"} }, --Desecrated Waistguard
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 			{ itemID = 60178 }, --Sigil of Heigan the Unclean
@@ -4361,7 +4361,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 23042, groupID = 2, refLootEntry = 16011 }, --Loatheb's Reflection
 			{ itemID = 23037, groupID = 2, refLootEntry = 16011 }, --Ring of Spiritual Fervor
 			{ itemID = 23039, groupID = 2, refLootEntry = 16011 }, --The Eye of Nerub
-			{ itemID = 22352, lootTable = {"TTHREELEGS","Token"} }, --Desecrated Legplates
+			{ itemID = 22352, sourcePage = {"TTHREELEGS","Token"} }, --Desecrated Legplates
 			{ itemID = 22726 }, --Splinter of Atiesh
 			{ itemID = 22727 }, --Frame of Atiesh
 			{ itemID = 60186 }, --Sigil of Loatheb
@@ -4404,7 +4404,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 22520 }, --The Phylactery of Kel'Thuzad
 			{ itemID = 23207 }, --Mark of the Champion
 			{ itemID = 23206 }, --Mark of the Champion
-			{ itemID = 1510496, lootTable = {"TTHREEFINGER","Token"} }, --Desecrated Ring
+			{ itemID = 1510496, sourcePage = {"TTHREEFINGER","Token"} }, --Desecrated Ring
 			{ itemID = 22733 }, --Staff Head of Atiesh
 			{ itemID = 22632 }, --Atiesh, Greatstaff of the Guardian
 			{ itemID = 22589 }, --Atiesh, Greatstaff of the Guardian
@@ -4464,7 +4464,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 17064, groupID = 2, refLootEntry = 10184 }, --Shard of the Scale
 			{ itemID = 17075, groupID = 2, refLootEntry = 10184 }, --Vis'kag the Bloodletter
 			{ itemID = 18211, groupID = 2, refLootEntry = 10184 }, --Wand of the Noble
-			{ itemID = 2522460, lootTable = {"TTWOHEAD","Token"} }, --Chromatic Headpiece
+			{ itemID = 2522460, sourcePage = {"TTWOHEAD","Token"} }, --Chromatic Headpiece
 			{ itemID = 97269 }, --Head of Onyxia
 			{ itemID = 18404 }, -- Onyxia Tooth Pendant
 			{ itemID = 18403 }, -- Dragonslayer's Signet
