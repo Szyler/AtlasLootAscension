@@ -6,8 +6,10 @@ Defines the table listings for the dropdown lists.
 --Invoke all libraries
 
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
+
 local menusKeyTable = {}
 local menusTemp = {}
+
 function AtlasLoot:AddNewMenus(menus)
 	for menuName, menu in pairs(menus) do
 		menusTemp[menuName] = menu
@@ -21,29 +23,45 @@ function AtlasLoot:AddNewMenus(menus)
 	end
 end
 
+function AtlasLoot:GetSourcesExtendedInfo(iD)
+	local sourceInfo = {
+		Type = self:GetDataType(iD),
+		SourceName = self:GetDataDisplayName(iD),
+		Source = {self:GetSourceLocation(iD)},
+		Module = self:GetDataModule(iD),
+		Name = self:GetDataPageName(iD)
+	}
+	return sourceInfo
+end
+
 function AtlasLoot:GetDataType(iD)
-	local sourceInfo = self:GetSourcesExtendedInfo()
-	return sourceInfo[iD] and sourceInfo[iD][1].Type or nil
+	if not menusKeyTable[iD] then return end
+	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Type or nil
 end
 
 function AtlasLoot:GetDataName(iD)
-	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Name or nil
+	if not menusKeyTable[iD] then return end
+	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Name or nil
 end
 
 function AtlasLoot:GetDataDisplayName(iD)
+	if not menusKeyTable[iD] then return end
 	return (self.ui.menus.data[menusKeyTable[iD][1]] and (self.ui.menus.data[menusKeyTable[iD][1]].DisplayName or self.ui.menus.data[menusKeyTable[iD][1]].Name)) or nil
 end
 
 function AtlasLoot:GetDataPageName(iD)
+	if not menusKeyTable[iD] then return end
 	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]][menusKeyTable[iD][2]][1] or nil
 end
 
 function AtlasLoot:GetSourceLocation(iD)
+	if not menusKeyTable[iD] then return end
 	return menusKeyTable[iD][1], menusKeyTable[iD][2]
 end
 
 function AtlasLoot:GetDataModule(iD)
-	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Module or nil
+	if not menusKeyTable[iD] then return end
+	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Module or nil
 end
 
 function AtlasLoot:GetDataMap(iD)
@@ -54,6 +72,7 @@ function AtlasLoot:InitializeMenus()
 	self.ui.menus = {collection = {}, data = menusTemp}
 	local menus = self.ui.menus
 	local collection = menus.collection
+	if self.selectedProfile.isAdmin then AtlasLoot_SourceKeyTable = menusKeyTable end
 
 
 	--This is a multi-layer table defining the main loot listing.
@@ -521,8 +540,3 @@ function AtlasLoot:InitializeMenus()
 	collection.CollectionsAscensionWRATH = collection.CollectionsAscensionCLASSIC
 
 end
-
-AtlasLoot_Data["EmptyTable"] = {
-	Name = "Select a Loot Table...",
-	{Name = "Select a Loot Table... " },
-}
