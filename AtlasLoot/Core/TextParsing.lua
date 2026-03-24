@@ -91,6 +91,7 @@ local txtSubstitution = {
     { "INVTYPE_RELIC, Idols", "Idol" },
     { "INVTYPE_RELIC, Totem", "Totem" },
     { "INVTYPE_RELIC, Libram", "Libram" },
+    { "INVTYPE_RELIC, Sigils", "Sigil" },
     { "INVTYPE_BAG, Bag", "Bag" },
     { "INVTYPE_BAG, Soul Bag", "Soul Bag" },
     { "INVTYPE_BAG, Quiver", "Quiver" },
