@@ -219,7 +219,7 @@ function AtlasLoot:ShowWishListTab(button, buttonclick, show)
 end
 
 local function wishListSettings()
-	local allowShare = AtlasLootWishList.Options[playerName].AllowShareWishlist or false	
+	local allowShare = AtlasLootWishList.Options[playerName].AllowShareWishlist or false
 	local settings = {
 	{isRadio = true, text = "Mark items in loot tables", checked = AtlasLootWishList.Options[playerName].Mark or false, show = "Settings",
 		func = function()
@@ -255,6 +255,8 @@ local function wishListSettings()
 	func = function() AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat = not AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat end},
 	{isRadio = true, text = "Auto Sort WishLists", checked = AtlasLootWishList.Options[playerName].AutoSortWishlist or false, show = "Settings",
 	func = function() AtlasLootWishList.Options[playerName].AutoSortWishlist = not AtlasLootWishList.Options[playerName].AutoSortWishlist end},
+	{isRadio = true, text = "Use default icon when adding a a WishList", checked = AtlasLootWishList.Options[playerName].UseDefaultWishlistIcon or false, show = "Settings",
+	func = function() AtlasLootWishList.Options[playerName].UseDefaultWishlistIcon = not AtlasLootWishList.Options[playerName].UseDefaultWishlistIcon end},
 	}
 	return settings
 
@@ -562,9 +564,11 @@ function AtlasLoot:CreateWishlistOptions()
 		AddWishlistFr:SetText("Add Wishlist")
 		AddWishlistFr:SetScript("OnClick", function()
 			curaddname = AtlasLootWishListNewName:GetText()
+			if AtlasLootWishList.Options[playerName].UseDefaultWishlistIcon then curaddicon = "Interface\\Icons\\INV_Misc_QuestionMark" end
 			if editName then
 				if curaddicon == "" then
 					curaddicon = "Interface\\Icons\\INV_Misc_QuestionMark"
+					DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot"..": "..self.Colors.WHITE.."Please select an icon")
 				elseif curaddicon ~= "" then
 					AtlasLootWishList[self.currentWishList.Show.ListType][self.ui.tabs.Loot.TableScrollFrame.tablenum].Name = curaddname
 					AtlasLootWishList[self.currentWishList.Show.ListType][self.ui.tabs.Loot.TableScrollFrame.tablenum].Icon = curaddicon
@@ -574,6 +578,7 @@ function AtlasLoot:CreateWishlistOptions()
 			else
 				if curaddicon == "" then
 					curaddicon = "Interface\\Icons\\INV_Misc_QuestionMark"
+					DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot"..": "..self.Colors.WHITE.."Please select an icon")
 				elseif curaddicon ~= "" then
 					table.insert( AtlasLootWishList.Own,{Name = curaddname, Icon = curaddicon})
 					WishListAddFrame:Hide()
