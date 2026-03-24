@@ -642,19 +642,18 @@ function AtlasLoot:InitializeSearch()
         wipe(itemList)
 
         local searchTerms = parseQuery(searchText)
-        local extendedInfoTable = self:GetSourcesExtendedInfo()
         for dataID, data in pairs(self.data.item) do
-            local extendedInfo = extendedInfoTable[dataID]
-            if extendedInfo and extendedInfo[1] and self.selectedProfile.SearchOn[extendedInfo[1].Type] and self.selectedProfile.SearchOn[extendedInfo[1].Type][1] or (self.selectedProfile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
+            local extendedInfo = self:GetSourcesExtendedInfo(dataID)
+            if extendedInfo and self.selectedProfile.SearchOn[extendedInfo.Type] and self.selectedProfile.SearchOn[extendedInfo.Type][1] or (self.selectedProfile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
                 for _, itemData in ipairs(data) do
                     if itemData.itemID or itemData.spellID then
-                        if extendedInfo[1].Type then
-                            itemData.Type = extendedInfo[1].Type
+                        if extendedInfo.Type then
+                            itemData.Type = extendedInfo.Type
                         end
                         if self.selectedProfile.showdropLocationOnSearch then
-                            itemData.dropLoc = {extendedInfo[1].DisplayName or extendedInfo[1].Name, extendedInfo[1][extendedInfo[2]][1]}
+                            itemData.dropLoc = {extendedInfo.SourceName, extendedInfo.SourceName}
                         end
-                        tinsert(itemList, {{itemData, extendedInfo[3], extendedInfo[2], searchTerms, searchText}})
+                        tinsert(itemList, {{itemData, extendedInfo.Source[1], extendedInfo.Source[2], searchTerms, searchText}})
                     end
                 end
             end
