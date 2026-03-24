@@ -747,10 +747,10 @@ function AtlasLoot:InitializeSearch()
         },
 
         ["ArmorType"] = {
-            [1] = {{"Cloth", "type", "Cloth"}},
-            [2] = {{"Leather", "type", "Leather"}},
-            [3] = {{"Mail", "type", "Mail"}},
-            [4] = {{"Plate", "type", "Plate"}},
+            [1] = {{"Cloth", "type", "cloth"}},
+            [2] = {{"Leather", "type", "leather"}},
+            [3] = {{"Mail", "type", "mail"}},
+            [4] = {{"Plate", "type", "plate"}},
             [5] = {{self.Colors.RED .. "Reset", "type", "reset"}}
         },
 
