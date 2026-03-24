@@ -47,8 +47,9 @@ AtlasLoot:AddNewMenus({
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Hydraxian Waterlords",
 		WebID = {749,"faction"},
-		{ "Hydraxian Waterlords", {} },
-
+		{ "Honored", {} },
+		{ "Revered", {} },
+		{ "Exalted", {} },
 	},
 
 	["AQBroodRings"] = {

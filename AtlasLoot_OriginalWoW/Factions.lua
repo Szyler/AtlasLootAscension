@@ -139,14 +139,30 @@ AtlasLoot:AddItemData("dontSort", {
     },
 
     ["Hydraxian"] = {
-        {
-            { icon = "Spell_Frost_SummonWaterElemental_2", name = "Honored" },
-            { itemID = 18399 }, --Ocean's Breeze
-            { itemID = 18398 }, --Tidal Loop
-            { itemID = 17333 }, --Aqual Quintessence
-            { icon = "Spell_Frost_SummonWaterElemental_2", name = "Revered", pageBreak = true },
-            { itemID = 22754 }, --Eternal Quintessence
-        },
+		{
+			{ itemID = 277936 }, -- Hound Scale Cloak
+			{ itemID = 277937 }, -- Hydro-Pendant
+			{ itemID = 277938 }, -- Firelord Cuff
+		},
+		{
+			{ itemID = 277939 }, -- Etched Sapphire Ring
+			{ itemID = 277940 }, -- Etched Emerald Ring
+			{ itemID = 277941 }, -- Etched Amethyst Ring
+			{ itemID = 277942 }, -- Etched Ruby Ring
+		},
+		{
+			{ itemID = 22754 }, -- Eternal Quintessence
+			{ itemID = 277927 }, -- Hydrothermal Pauldrons
+			{ itemID = 277928 }, -- Dark Iron Greathelm
+			{ itemID = 277929 }, -- Lavacast Greaves
+			{ itemID = 277930 }, -- Thermal Gauntlets
+			{ itemID = 277931 }, -- Serpentine Cord
+			{ itemID = 277932 }, -- Hydraxian Pearl
+			{ itemID = 277933 }, -- Flamewaker Sash
+			{ itemID = 277934 }, -- Magus Spaulders
+			{ itemID = 277935 }, -- Tide-stitched Vest
+			{ itemID = 277986 }, -- Shimmering Coastline Crystal		},
+		},
     },
     -------------------------
     --- Brood of Nozdormu ---
