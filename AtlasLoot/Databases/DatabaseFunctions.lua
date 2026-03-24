@@ -411,7 +411,7 @@ local function sortItemData(dataSource, dataID, tablenum)
 	if not AtlasLoot.data.item[lootTableName].dontSort then
 		local itemCatagories = createItemCatagoiresTable()
 		for _, lootTableSelection in ipairs(lootTables) do
-			for _, itemData in pairs(AtlasLoot.data.item[lootTableSelection]) do
+			for _, itemData in ipairs(AtlasLoot.data.item[lootTableSelection]) do
 				local itemType, itemSubType, _, itemEquipLoc = select(6, AtlasLoot:GetItemInfo(itemData.itemID, true))
 				local iType = itemCatagories[baseType[itemType]]
 				if iType and iType[subType[itemSubType]] then
