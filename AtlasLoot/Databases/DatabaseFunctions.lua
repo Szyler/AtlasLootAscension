@@ -91,38 +91,40 @@ function AtlasLoot:GetSourceList()
 	self:IsLootTableAvailable("AtlasLootOriginalWoW")
 	self:IsLootTableAvailable("AtlasLootBurningCrusade")
 	self:IsLootTableAvailable("AtlasLootWotLK")
-	self:IsLootTableAvailable("AtlasLoot_Crafting_OriginalWoW")
-    for _, data in pairs(AtlasLoot_Data) do
-		if data.Type then
-			for _, t in ipairs(data) do
-				for _, side in ipairs(t) do
-					for _, itemData in pairs(side) do
-						if type(itemData) == "table" then
-							if itemData.itemID then
-								for _, dif in ipairs(self.Difficulties[data.Type]) do
-									local itemType = GetItemInfoInstant(itemData.itemID) or nil
-									if dif[2] ~= 3 and itemType then
-										itemSource[dif[1]] = itemSource[dif[1]] or {}
-										local name = itemType.name:gsub( "%W", "" )..itemType.inventoryType
-										itemSource[dif[1]][name] = itemSource[dif[1]][name] or {}
-										local itemTable = itemSource[dif[1]][name]
-											local function checkForDuplicate(itemID)
-												for _ , item in pairs(itemTable) do
-													if item[1] == itemID then return true end
-												end
-											end
-										if not checkForDuplicate(itemData.itemID) then
-											tinsert(itemTable, {itemData.itemID, itemType.itemLevel})
-										end
-									end
+
+	local function addItem(itemData, dataType)
+		if type(itemData) == "table" then
+			local typeData = self:GetDataType(dataType)
+			if typeData and itemData.itemID then
+				for _, dif in ipairs(self.Difficulties[typeData]) do
+					local itemType = GetItemInfoInstant(itemData.itemID) or nil
+					if dif[2] ~= 3 and itemType then
+						itemSource[dif[1]] = itemSource[dif[1]] or {}
+						local name = itemType.name:gsub( "%W", "" )..itemType.inventoryType
+						itemSource[dif[1]][name] = itemSource[dif[1]][name] or {}
+						local itemTable = itemSource[dif[1]][name]
+							local function checkForDuplicate(itemID)
+								for _ , item in pairs(itemTable) do
+									if item[1] == itemID then return true end
 								end
 							end
+						if not checkForDuplicate(itemData.itemID) then
+							tinsert(itemTable, {itemData.itemID, itemType.itemLevel})
 						end
 					end
 				end
+			else
+				for _, nextData in pairs(itemData) do
+					addItem(nextData, dataType)
+				end
 			end
 		end
-    end
+	end
+
+	for dataType, data in pairs(self.data.item) do
+		addItem(data, dataType)
+	end
+
 	if self:CheckIfEmptyTable(itemSource) then return end
 	return itemSource
 end
@@ -495,22 +497,4 @@ function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 	end
 	if not itemData then return end
 	return dataSource, itemData, #itemData
-end
-
-local sourceKeyTable
-function AtlasLoot:GetSourcesExtendedInfo()
-	if not sourceKeyTable then
-		sourceKeyTable = {}
-		local collections = self.ui.menus.data
-			for collectionName, collection in pairs(collections) do
-				for i, collectionNum in ipairs(collection) do
-					if collectionNum[2] and collectionNum[2][1] then
-						sourceKeyTable[collectionNum[2][1]] = {collection, i, collectionName}
-					else
-						sourceKeyTable[collectionName..i] = {collection, i, collectionName}
-					end
-				end
-			end
-	end
-	return sourceKeyTable
 end
