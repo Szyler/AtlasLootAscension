@@ -35,37 +35,37 @@ function AtlasLoot:GetSourcesExtendedInfo(iD)
 end
 
 function AtlasLoot:GetDataType(iD)
-	if not menusKeyTable[iD] then return end
-	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Type or nil
+	if not menusKeyTable[iD] then return "" end
+	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Type or ""
 end
 
 function AtlasLoot:GetDataName(iD)
-	if not menusKeyTable[iD] then return end
-	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Name or nil
+	if not menusKeyTable[iD] then return "" end
+	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Name or ""
 end
 
 function AtlasLoot:GetDataDisplayName(iD)
-	if not menusKeyTable[iD] then return end
-	return (self.ui.menus.data[menusKeyTable[iD][1]] and (self.ui.menus.data[menusKeyTable[iD][1]].DisplayName or self.ui.menus.data[menusKeyTable[iD][1]].Name)) or nil
+	if not menusKeyTable[iD] then return "" end
+	return (self.ui.menus.data[menusKeyTable[iD][1]] and (self.ui.menus.data[menusKeyTable[iD][1]].DisplayName or self.ui.menus.data[menusKeyTable[iD][1]].Name)) or ""
 end
 
 function AtlasLoot:GetDataPageName(iD)
-	if not menusKeyTable[iD] then return end
-	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]][menusKeyTable[iD][2]][1] or nil
+	if not menusKeyTable[iD] then return "" end
+	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]][menusKeyTable[iD][2]][1] or ""
 end
 
 function AtlasLoot:GetSourceLocation(iD)
-	if not menusKeyTable[iD] then return end
+	if not menusKeyTable[iD] then return "" end
 	return menusKeyTable[iD][1], menusKeyTable[iD][2]
 end
 
 function AtlasLoot:GetDataModule(iD)
-	if not menusKeyTable[iD] then return end
-	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Module or nil
+	if not menusKeyTable[iD] then return "" end
+	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Module or ""
 end
 
 function AtlasLoot:GetDataMap(iD)
-	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Map or nil
+	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Map or ""
 end
 
 function AtlasLoot:InitializeMenus()
