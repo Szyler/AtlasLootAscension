@@ -2309,6 +2309,8 @@ AtlasLoot:AddItemData({
 	--- Onyxia's Lair 60 ---
 	------------------------
 	["Onyxia60"] = {
+		{},
+		{
 			{ itemID = 2522460, sourcePage = {"TTWOHEAD","Token"} }, --Chromatic Headpiece
 			{ itemID = 97269 }, --Head of Onyxia
 			{ itemID = 18404 }, -- Onyxia Tooth Pendant
@@ -2319,6 +2321,7 @@ AtlasLoot:AddItemData({
 			{ itemID = 53140, droprate = 5 }, --Formula: Enchant Cloak - Dragon Fire
 			{ itemID = 1180299 }, -- Draconic Warhorn: Onyxia
 			{ itemID = 49636, minDifficulty = "Heroic" }, -- Reins of the Onyxian Drake
+		},
 	},
 	["FrozenReach"] = {
 		{
