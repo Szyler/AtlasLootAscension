@@ -34,18 +34,30 @@ function AtlasLoot:GetSourcesExtendedInfo(iD)
 end
 
 function AtlasLoot:GetDataType(iD)
-	if not menusKeyTable[iD] then return "" end
-	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Type or ""
+	if self.ui.menus.data[iD] then
+		return self.ui.menus.data[iD].Type or ""
+	elseif menusKeyTable[iD] then
+		return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Type or ""
+	end
+	return ""
 end
 
 function AtlasLoot:GetDataName(iD)
-	if not menusKeyTable[iD] then return "" end
-	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Name or ""
+	if self.ui.menus.data[iD] then
+		return self.ui.menus.data[iD].Name or ""
+	elseif menusKeyTable[iD] then
+		return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Name or ""
+	end
+	return ""
 end
 
 function AtlasLoot:GetDataDisplayName(iD)
-	if not menusKeyTable[iD] then return "" end
-	return (self.ui.menus.data[menusKeyTable[iD][1]] and (self.ui.menus.data[menusKeyTable[iD][1]].DisplayName or self.ui.menus.data[menusKeyTable[iD][1]].Name)) or ""
+	if self.ui.menus.data[iD] then
+		return (self.ui.menus.data[iD].DisplayName or self.ui.menus.data[iD].Name) or ""
+	elseif menusKeyTable[iD] then
+		return (self.ui.menus.data[menusKeyTable[iD][1]] and (self.ui.menus.data[menusKeyTable[iD][1]].DisplayName or self.ui.menus.data[menusKeyTable[iD][1]].Name)) or ""
+	end
+	return ""
 end
 
 function AtlasLoot:GetDataPageName(iD)
