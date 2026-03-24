@@ -99,8 +99,6 @@ function AtlasLoot:InitializeDatabases()
 				{ itemID = 1644094, price = "600 #tokenofprestige# | 96000 #marks# | 600 #bazaar#"  }, --The Blessed Hammer of Grace
 				{ itemID = 3140350, price = "600 #tokenofprestige# | 96000 #marks# | 600 #bazaar#"  }, --Urn of Aspiring Light
 				{ itemID = 3148335, price = "600 #tokenofprestige# | 96000 #marks# | 600 #bazaar#"  }, --Polished Observer's Shield
-			},
-			{
 				{ itemID = 1642943, price = "1000 #tokenofprestige# | 160000 #marks# | 800 #bazaar#"  }, --Bloodied Arcanite Reaper
 				{ itemID = 3142943, price = "1000 #tokenofprestige# | 160000 #marks# | 800 #bazaar#"  }, --Sturdied Arcanite Spear
 				{ itemID = 1648718, price = "1000 #tokenofprestige# | 160000 #marks# | 800 #bazaar#"  }, --Repurposed Lava Dredger
