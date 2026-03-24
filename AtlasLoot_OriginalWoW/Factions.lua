@@ -364,8 +364,6 @@ AtlasLoot:AddItemData("dontSort", {
             { itemID = 1519802 },     -- Timbermaw Fur Cloak
             { itemID = 1519893 },     -- Ring of Mending
             { itemID = 1519895 },     -- Timbermaw Talisman
-        },
-        {
             { itemID = 19218, pageBreak = true },     -- Pattern: Mantle of the Timbermaw
             { itemID = 19204 },                       -- Plans: Heavy Timbermaw Boots
             { itemID = 46520 },                       -- Formula: Enchant Cloak - Lesser Spell Penetration
