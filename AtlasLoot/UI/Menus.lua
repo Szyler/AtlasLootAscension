@@ -16,9 +16,8 @@ function AtlasLoot:AddNewMenus(menus)
 		for i, menuKey in ipairs(menu) do
 			if menuKey[2] and #menuKey[2] > 0 then
 				menusKeyTable[menuKey[2][1]] = {menuName, i}
-			else
-				menusKeyTable[menuName..i] = {menuName, i}
 			end
+			menusKeyTable[menuName..i] = {menuName, i}
 		end
 	end
 end
