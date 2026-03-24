@@ -143,6 +143,7 @@
     <Script file="Menus\ClassicCrafting.lua"/>
     <Script file="Menus\TBCInstances.lua"/>
     <Script file="Menus\TBCCrafting.lua"/>
+    <Script file="Menus\WRATHInstances.lua"/>
     <Script file="Menus\WRATHCrafting.lua"/>
     <Script file="Menus\WorldEvents.lua"/>
     <Script file="Menus\Vanity.lua"/>

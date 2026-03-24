@@ -138,7 +138,7 @@ function AtlasLoot:InitializeMenus()
 		{ "WorldBossesTBC", },
 		---- Dungeons -----
 		{ "BCKeys", Header = "Dungeons:" },
-		{ "All Dungeon Items", "BCDungeon", OnDamand = {"BCDungeon", true, "All Dungeon Items"}},
+		{ "BCDungeon", OnDamand = {"BCDungeon", true, "All Dungeon Items"}},
 		{ "HCRamparts" },
 		{ "HCShatteredHalls" },
 		{ "HCFurnace" },
@@ -176,7 +176,7 @@ function AtlasLoot:InitializeMenus()
 		{ "Halion" },
 		---- Dungeons -----
 		{ "WrathKeys", Header = "Dungeons:" },
-		{ "All Dungeon Items", "WrathDungeon", OnDamand = {"WrathDungeon", true, "All Dungeon Items"}},
+		{ "WrathDungeon", OnDamand = {"WrathDungeon", true, "All Dungeon Items"}},
 		{ "Ahnkahet" },
 		{ "AzjolNerub" },
 		{ "CoTStratholme" },
@@ -207,7 +207,7 @@ function AtlasLoot:InitializeMenus()
 		{ "MiningCLASSIC" },
 		{ "CookingCLASSIC" },
 		{ "FirstAidCLASSIC" },
-	};
+	}
 
 	collection.CraftingTBC = {
 		Module = "AtlasLootCraftingBurningCrusade",
@@ -221,7 +221,7 @@ function AtlasLoot:InitializeMenus()
 		{ "MiningTBC" },
 		{ "CookingTBC" },
 		{ "FirstAidTBC" },
-	};
+	}
 
 	collection.CraftingWRATH = {
 		Module = "AtlasLootCraftingWotLK",
@@ -236,7 +236,7 @@ function AtlasLoot:InitializeMenus()
 		{ "MiningWRATH" },
 		{ "CookingWRATH" },
 		{ "FirstAidWRATH" },
-	};
+	}
 
 	------------------------------------- Collections Menus -------------------------------------
 	collection.CollectionsCLASSIC = {
@@ -306,18 +306,18 @@ function AtlasLoot:InitializeMenus()
 	------------------------------------- Faction Menus -------------------------------------
 	collection.FactionsCLASSIC = {
 	Module = "AtlasLootOriginalWoW",
-	{ "Argent" },
-	{ "AQBroodRings" },
-	{ "AlteracFactions" },
-	{ "ArathiBasinFactions" },
-	{ "Timbermaw" },
-	{ "Zandalar" },
-	{ "Bloodsail" },
-	{ "Cenarion" },
-	{ "Hydraxian" },
-	{ "DesolaceCentaurClans" },
-	{ "Thorium" },
-	{ "Wintersaber" },
+		{ "Argent" },
+		{ "AQBroodRings" },
+		{ "AlteracFactions" },
+		{ "ArathiBasinFactions" },
+		{ "Timbermaw" },
+		{ "Zandalar" },
+		{ "Bloodsail" },
+		{ "Cenarion" },
+		{ "Hydraxian" },
+		{ "DesolaceCentaurClans" },
+		{ "Thorium" },
+		{ "Wintersaber" },
 	}
 
 	collection.FactionsTBC = {
