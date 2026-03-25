@@ -111,9 +111,9 @@ AtlasLoot:AddNewMenus({
         { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - Elemental", {} },
 		{ LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - Enhancement", {} },
         { LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], {} },
+		{ LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Dps", {} },
         { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Protection", {} },
 		{ LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Avoidance Tank", {} },
-        { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Dps", {} },
 	},
 
 	["TTHREE"] = {
