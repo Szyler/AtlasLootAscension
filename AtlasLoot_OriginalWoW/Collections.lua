@@ -483,6 +483,16 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 10961, desc = "Lucifron" }, --Earthfury Treads
 		},
 		{
+			{ itemID = 12505, desc = "Garr" }, -- Charred Defender's Helm
+			{ itemID = 12506, desc = "Baron Geddon" }, -- Charred Defender's Spaulder
+			{ itemID = 12507, desc = "Golemagg the Incinerator" }, -- Charred Defender's Breastplate
+			{ itemID = 12569, desc = "Magmadar" }, -- Charred Defender's Legguards
+			{ itemID = 12508, desc = "Trash Mobs" }, -- Charred Defender's Vambraces
+			{ itemID = 12559, desc = "Gehennas" }, -- Charred Defender's Gauntlets
+			{ itemID = 12568, desc = "Trash Mobs" }, -- Charred Defender's Girdle
+			{ itemID = 12570, desc = "Lucifron" }, -- Charred Defender's Boots
+		},
+		{
 			{ itemID = 16808, desc = "Garr" }, --Felheart Horns
 			{ itemID = 16807, desc = "Baron Geddon" }, --Felheart Shoulder Pads
 			{ itemID = 16809, desc =  "Golemagg the Incinerator" },
@@ -531,7 +541,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 1517002, desc = "Chromaggus" },--Stormrage Pauldrons
 			{ itemID = 1516997, desc = "Nefarian" },--Stormrage Chestguard
 			{ itemID = 1517004, desc = "Razorgore the Untamed" },--Stormrage Bracers
-			{ itemID = 1516999, desc = " Firemaw, Ebonroc, Flamegor" },--Stormrage Handguards
+			{ itemID = 1516999, desc = "Firemaw, Ebonroc, Flamegor" },--Stormrage Handguards
 			{ itemID = 1517003, desc = "Vaelastrasz the Corrupt" },--Stormrage Belt
 			{ itemID = 1517001, desc = "Ragnaros" },--Stormrage Legguards
 			{ itemID = 1516998, desc = "Broodlord Lashlayer" },--Stormrage Boots
@@ -541,7 +551,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 1516894, desc = "Chromaggus" },--Stormrage Pauldrons
 			{ itemID = 1516889, desc = "Nefarian" },--Stormrage Chestguard
 			{ itemID = 1516896, desc = "Razorgore the Untamed" },--Stormrage Bracers
-			{ itemID = 1516891, desc = " Firemaw, Ebonroc, Flamegor" },--Stormrage Handguards
+			{ itemID = 1516891, desc = "Firemaw, Ebonroc, Flamegor" },--Stormrage Handguards
 			{ itemID = 1516895, desc = "Vaelastrasz the Corrupt" },--Stormrage Belt
 			{ itemID = 1516893, desc = "Ragnaros" },--Stormrage Legguards
 			{ itemID = 1516890, desc = "Broodlord Lashlayer" },--Stormrage Boots
@@ -551,7 +561,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 16937, desc = "Chromaggus" },--Dragonstalker's Spaulders
 			{ itemID = 16942, desc = "Nefarian" },--Dragonstalker's Breastplate
 			{ itemID = 16935, desc = "Razorgore the Untamed" },--Dragonstalker's Bracers
-			{ itemID = 16940, desc = " Firemaw, Ebonroc, Flamegor" },--Dragonstalker's Gauntlets
+			{ itemID = 16940, desc = "Firemaw, Ebonroc, Flamegor" },--Dragonstalker's Gauntlets
 			{ itemID = 16936, desc = "Vaelastrasz the Corrupt" },--Dragonstalker's Belt
 			{ itemID = 16938, desc = "Ragnaros" },--Dragonstalker's Legguards
 			{ itemID = 16941, desc = "Broodlord Lashlayer" },--Dragonstalker's Greaves
@@ -561,7 +571,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 16917, desc = "Chromaggus" },--Netherwind Mantle
 			{ itemID = 16916, desc = "Nefarian" },--Netherwind Robes
 			{ itemID = 16918, desc = "Razorgore the Untamed" },--Netherwind Bindings
-			{ itemID = 16913, desc = " Firemaw, Ebonroc, Flamegor" },--Netherwind Gloves
+			{ itemID = 16913, desc = "Firemaw, Ebonroc, Flamegor" },--Netherwind Gloves
 			{ itemID = 16818, desc = "Vaelastrasz the Corrupt" },--Netherwind Belt
 			{ itemID = 16915, desc = "Ragnaros" },--Netherwind Pants
 			{ itemID = 16912, desc = "Broodlord Lashlayer" },--Netherwind Boots
@@ -571,7 +581,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 16953, desc = "Chromaggus" },--Judgement Spaulders
 			{ itemID = 16958, desc = "Nefarian" },--Judgement Breastplate
 			{ itemID = 16951, desc = "Razorgore the Untamed" },--Judgement Bindings
-			{ itemID = 16956, desc = " Firemaw, Ebonroc, Flamegor" },--Judgement Gauntlets
+			{ itemID = 16956, desc = "Firemaw, Ebonroc, Flamegor" },--Judgement Gauntlets
 			{ itemID = 16952, desc = "Vaelastrasz the Corrupt" },--Judgement Belt
 			{ itemID = 16954, desc = "Ragnaros" },--Judgement Legplates
 			{ itemID = 16957, desc = "Broodlord Lashlayer" },--Judgement Sabatons
@@ -581,7 +591,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 1516953, desc = "Chromaggus" },--Judgement Spaulders
 			{ itemID = 1516958, desc = "Nefarian" },--Judgement Breastplate
 			{ itemID = 1516951, desc = "Razorgore the Untamed" },--Judgement Bindings
-			{ itemID = 1516956, desc = " Firemaw, Ebonroc, Flamegor" },--Judgement Gauntlets
+			{ itemID = 1516956, desc = "Firemaw, Ebonroc, Flamegor" },--Judgement Gauntlets
 			{ itemID = 1516952, desc = "Vaelastrasz the Corrupt" },--Judgement Belt
 			{ itemID = 1516954, desc = "Ragnaros" },--Judgement Legplates
 			{ itemID = 1516957, desc = "Broodlord Lashlayer" },--Judgement Sabatons
@@ -591,7 +601,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 16924, desc = "Chromaggus" },--Pauldrons of Transcendence
 			{ itemID = 16923, desc = "Nefarian" },--Robes of Transcendence
 			{ itemID = 16926, desc = "Razorgore the Untamed" },--Bindings of Transcendence
-			{ itemID = 16920, desc = " Firemaw, Ebonroc, Flamegor" },--Handguards of Transcendence
+			{ itemID = 16920, desc = "Firemaw, Ebonroc, Flamegor" },--Handguards of Transcendence
 			{ itemID = 16925, desc = "Vaelastrasz the Corrupt" },--Belt of Transcendence
 			{ itemID = 16922, desc = "Ragnaros" },--Leggings of Transcendence
 			{ itemID = 16919, desc = "Broodlord Lashlayer" },--Boots of Transcendence
@@ -601,7 +611,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 1516924, desc = "Chromaggus" },--Pauldrons of Transcendence
 			{ itemID = 1516923, desc = "Nefarian" },--Robes of Transcendence
 			{ itemID = 1516926, desc = "Razorgore the Untamed" },--Bindings of Transcendence
-			{ itemID = 1516920, desc = " Firemaw, Ebonroc, Flamegor" },--Handguards of Transcendence
+			{ itemID = 1516920, desc = "Firemaw, Ebonroc, Flamegor" },--Handguards of Transcendence
 			{ itemID = 1516925, desc = "Vaelastrasz the Corrupt" },--Belt of Transcendence
 			{ itemID = 1516922, desc = "Ragnaros" },--Leggings of Transcendence
 			{ itemID = 1516919, desc = "Broodlord Lashlayer" },--Boots of Transcendence
@@ -611,7 +621,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 16832, desc = "Chromaggus" },--Bloodfang Spaulders
 			{ itemID = 16905, desc = "Nefarian" },--Bloodfang Chestpiece
 			{ itemID = 16911, desc = "Razorgore the Untamed" },--Bloodfang Bracers
-			{ itemID = 16907, desc = " Firemaw, Ebonroc, Flamegor" },--Bloodfang Gloves
+			{ itemID = 16907, desc = "Firemaw, Ebonroc, Flamegor" },--Bloodfang Gloves
 			{ itemID = 16910, desc = "Vaelastrasz the Corrupt" },--Bloodfang Belt
 			{ itemID = 16909, desc = "Ragnaros" },--Bloodfang Pants
 			{ itemID = 16906, desc = "Broodlord Lashlayer" },--Bloodfang Boots
@@ -621,7 +631,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 16945, desc = "Chromaggus" },--Epaulets of Ten Storms
 			{ itemID = 16950, desc = "Nefarian" },--Breastplate of Ten Storms
 			{ itemID = 16943, desc = "Razorgore the Untamed" },--Bracers of Ten Storms
-			{ itemID = 16948, desc = " Firemaw, Ebonroc, Flamegor" },--Gauntlets of Ten Storms
+			{ itemID = 16948, desc = "Firemaw, Ebonroc, Flamegor" },--Gauntlets of Ten Storms
 			{ itemID = 16944, desc = "Vaelastrasz the Corrupt" },--Belt of Ten Storms
 			{ itemID = 16946, desc = "Ragnaros" },--Legplates of Ten Storms
 			{ itemID = 16949, desc = "Broodlord Lashlayer" },--Greaves of Ten Storms
@@ -631,7 +641,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 10963, desc = "Chromaggus" },--Epaulets of Ten Storms
 			{ itemID = 10964, desc = "Nefarian" },--Breastplate of Ten Storms
 			{ itemID = 10965, desc = "Razorgore the Untamed" },--Bracers of Ten Storms
-			{ itemID = 11001, desc = " Firemaw, Ebonroc, Flamegor" },--Gauntlets of Ten Storms
+			{ itemID = 11001, desc = "Firemaw, Ebonroc, Flamegor" },--Gauntlets of Ten Storms
 			{ itemID = 11002, desc = "Vaelastrasz the Corrupt" },--Belt of Ten Storms
 			{ itemID = 11003, desc = "Ragnaros" },--Legplates of Ten Storms
 			{ itemID = 11004, desc = "Broodlord Lashlayer" },--Greaves of Ten Storms
@@ -641,17 +651,27 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 1516945, desc = "Chromaggus" },--Epaulets of Ten Storms
 			{ itemID = 1516950, desc = "Nefarian" },--Breastplate of Ten Storms
 			{ itemID = 1516943, desc = "Razorgore the Untamed" },--Bracers of Ten Storms
-			{ itemID = 1516948, desc = " Firemaw, Ebonroc, Flamegor" },--Gauntlets of Ten Storms
+			{ itemID = 1516948, desc = "Firemaw, Ebonroc, Flamegor" },--Gauntlets of Ten Storms
 			{ itemID = 1516944, desc = "Vaelastrasz the Corrupt" },--Belt of Ten Storms
 			{ itemID = 1516946, desc = "Ragnaros" },--Legplates of Ten Storms
 			{ itemID = 1516949, desc = "Broodlord Lashlayer" },--Greaves of Ten Storms
+		},
+		{
+			{ itemID = 13563, desc = "Vaelastrasz the Corrupt" }, -- Dragonscale Girdle			
+			{ itemID = 13440, desc = "Broodlord Lashlayer" }, -- Dragonscale Boots
+			{ itemID = 13238, desc = "Razorgore the Untamed" }, -- Dragonscale Armguards
+			{ itemID = 13298, desc = "Firemaw, Ebonroc, Flamegor" }, -- Dragonscale Gauntlets
+			{ itemID = 13540, desc = "Onyxia" }, -- Dragonscale Helm
+			{ itemID = 13564, desc = "Chromaggus" }, -- Dragonscale Spaulders
+			{ itemID = 13239, desc = "Nefarian" }, -- Dragonscale Hauberk
+			{ itemID = 13240, desc = "Ragnaros" }, -- Dragonscale Greaves
 		},
 		{
 			{ itemID = 16929, desc = "Onyxia" },--Nemesis Skullcap
 			{ itemID = 16932, desc = "Chromaggus" },--Nemesis Spaulders
 			{ itemID = 16931, desc = "Nefarian" },--Nemesis Robes
 			{ itemID = 16934, desc = "Razorgore the Untamed" },--Nemesis Bracers
-			{ itemID = 16928, desc = " Firemaw, Ebonroc, Flamegor" },--Nemesis Gloves
+			{ itemID = 16928, desc = "Firemaw, Ebonroc, Flamegor" },--Nemesis Gloves
 			{ itemID = 16933, desc = "Vaelastrasz the Corrupt" },--Nemesis Belt
 			{ itemID = 16930, desc = "Ragnaros" },--Nemesis Leggings
 			{ itemID = 16927, desc = "Broodlord Lashlayer" },--Nemesis Boots
@@ -661,7 +681,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 10902, desc = "Chromaggus" },--Shoulderpads of Wrath
 			{ itemID = 10907, desc = "Nefarian" },--Chestplate of Wrath
 			{ itemID = 10900, desc = "Razorgore the Untamed" },--Wristguards of Wrath
-			{ itemID = 10905, desc = " Firemaw, Ebonroc, Flamegor" },--Grippers of Wrath
+			{ itemID = 10905, desc = "Firemaw, Ebonroc, Flamegor" },--Grippers of Wrath
 			{ itemID = 10901, desc = "Vaelastrasz the Corrupt" },--Belt of Wrath
 			{ itemID = 10903, desc = "Ragnaros" },--Legguards of Wrath
 			{ itemID = 10906, desc = "Broodlord Lashlayer" },--Stompers of Wrath
@@ -671,7 +691,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 16961, desc = "Chromaggus" },--Pauldrons of Wrath
 			{ itemID = 16966, desc = "Nefarian" },--Breastplate of Wrath
 			{ itemID = 16959, desc = "Razorgore the Untamed" },--Bracelets of Wrath
-			{ itemID = 16964, desc = " Firemaw, Ebonroc, Flamegor" },--Gauntlets of Wrath
+			{ itemID = 16964, desc = "Firemaw, Ebonroc, Flamegor" },--Gauntlets of Wrath
 			{ itemID = 16960, desc = "Vaelastrasz the Corrupt" },--Waistband of Wrath
 			{ itemID = 16962, desc = "Ragnaros" },--Legplates of Wrath
 			{ itemID = 16965, desc = "Broodlord Lashlayer" },--Sabatons of Wrath
@@ -681,7 +701,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 1516961, desc = "Chromaggus" },--Shoulderpads of Wrath
 			{ itemID = 1516966, desc = "Nefarian" },--Chestplate of Wrath
 			{ itemID = 1516959, desc = "Razorgore the Untamed" },--Wristguards of Wrath
-			{ itemID = 1516964, desc = " Firemaw, Ebonroc, Flamegor" },--Grippers of Wrath
+			{ itemID = 1516964, desc = "Firemaw, Ebonroc, Flamegor" },--Grippers of Wrath
 			{ itemID = 1516960, desc = "Vaelastrasz the Corrupt" },--Belt of Wrath
 			{ itemID = 1516962, desc = "Ragnaros" },--Legguards of Wrath
 			{ itemID = 1516965, desc = "Broodlord Lashlayer" },--Stompers of Wrath
