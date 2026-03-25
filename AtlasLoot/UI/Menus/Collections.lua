@@ -164,7 +164,7 @@ AtlasLoot:AddNewMenus({
 
     ["ZGSets"] = {
 		Module = "AtlasLoot_OriginalWoW",
-		Name = "CenarionCircle",
+		Name = "Zul'Gurub",
 		Type = "ClassicRaid",
 		{ "Haruspex's Garb", {} },
 		{ "Predator's Armor", {} },
