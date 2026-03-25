@@ -100,7 +100,7 @@ AtlasLoot:AddNewMenus({
 
     ["PVPPaladin"] = {
 		Module = "AtlasLoot_OriginalWoW",
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"],
 		{ "Rare Set - Alliance", {} },
 		{ "Superior Rare Set - Alliance", {} },
 		{ "Epic Set - Alliance", {} },
@@ -113,7 +113,7 @@ AtlasLoot:AddNewMenus({
 
     ["PVPPriest"] = {
 		Module = "AtlasLoot_OriginalWoW",
-		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
 		{ "Rare Set - Alliance", {} },
 		{ "Superior Rare Set - Alliance", {} },
 		{ "Epic Set - Alliance", {} },
