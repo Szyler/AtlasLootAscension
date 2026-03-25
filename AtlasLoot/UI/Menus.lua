@@ -60,9 +60,13 @@ function AtlasLoot:GetDataDisplayName(iD)
 	return ""
 end
 
-function AtlasLoot:GetDataPageName(iD)
-	if not menusKeyTable[iD] then return "" end
-	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]][menusKeyTable[iD][2]][1] or ""
+function AtlasLoot:GetDataPageName(iD, tableNum)
+	if tableNum then
+		return self.ui.menus.data[iD] and self.ui.menus.data[iD][tableNum] and self.ui.menus.data[iD][tableNum][1] or ""
+	elseif menusKeyTable[iD] then
+		return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]][menusKeyTable[iD][2]] and self.ui.menus.data[menusKeyTable[iD][1]][menusKeyTable[iD][2]][1] or ""
+	end
+	return ""
 end
 
 function AtlasLoot:GetSourceLocation(iD)

@@ -460,32 +460,33 @@ function AtlasLoot:CreateItemSourceList(overRide)
 		self:LoadAllModules()
 		AtlasLootDB.ItemSources = {Version = self.Version, List = {}}
 		local list = AtlasLootDB.ItemSources.List
-			for dataSource, instance in pairs(AtlasLoot_Data) do
-				for _, boss in pairs(instance) do
-					if type(boss) == "table" then
-						for _, side in pairs(boss) do
-							if type(side) == "table" then
-								for _, item in pairs(side) do
-									if type(item) == "table" and item.itemID and instance.Name and boss.Name and not IgnoreTables(dataSource) then
-										list[item.itemID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
-										if ItemIDsDatabase[item.itemID] then
-											for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
-												list[varID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
-											end
-										end
-										if item.spellID then
-											local recipeID = self:GetRecipeID(item.spellID) or nil
-											if recipeID and (list[recipeID] and not IgnoreTables(dataSource) or not list[recipeID]) then
-												list[recipeID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
-											end
-										end
-									end
-								end
-							end
+		local function addItem(itemData, dataType)
+			if type(itemData) == "table" then
+				local sourceData = self:GetSourcesExtendedInfo(dataType)
+				if sourceData and sourceData.Source and itemData.itemID then
+					list[itemData.itemID] = sourceData.Source
+					if ItemIDsDatabase[itemData.itemID] then
+						for _, varID in pairs(ItemIDsDatabase[itemData.itemID]) do
+							list[varID] = sourceData.Source
 						end
+					end
+					if itemData.spellID then
+						local recipeID = self:GetRecipeID(itemData.spellID) or nil
+						if recipeID and (list[recipeID] and not IgnoreTables(dataType) or not list[recipeID]) then
+							list[recipeID] = sourceData.Source
+						end
+					end
+				else
+					for _, nextData in pairs(itemData) do
+						addItem(nextData, dataType)
 					end
 				end
 			end
+		end
+
+		for dataType, data in pairs(self.data.item) do
+			addItem(data, dataType)
+		end
 	end
 	self.ItemSourceList = AtlasLootDB.ItemSources.List
 end
@@ -493,9 +494,11 @@ end
 function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
 	local button = GetMouseFocus()
 	if not self.selectedProfile.showdropLocationTooltips or not self.ItemSourceList or (button and button.isAtlasLoot) then return end
-	local text = self.ItemSourceList[itemID] and "Item Source: " .. self.ItemSourceList[itemID] or nil
-	if text and not CheckTooltipForDuplicate(tooltip, text) then
-		tooltip:AddLine(text)
+	if self.ItemSourceList[itemID] and self.ItemSourceList[itemID][1] and self.ItemSourceList[itemID][2] then
+		local text = "Item Source: " .. self.Colors.CYAN.. self:GetDataDisplayName(self.ItemSourceList[itemID][1]) .. self.Colors.WHITE .. " - " .. self:GetDataPageName(self.ItemSourceList[itemID][1], self.ItemSourceList[itemID][2]) or nil
+		if text and not CheckTooltipForDuplicate(tooltip, text) then
+			tooltip:AddLine(text)
+		end
 	end
 end
 
