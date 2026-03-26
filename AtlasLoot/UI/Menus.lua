@@ -178,7 +178,7 @@ function AtlasLoot:InitializeMenus()
 		{ "VaultsOfTheInquisition" },
 		{ "RoadToDeOtherSide" },
 		{ "SharedDungeonLoot" },
-		{ "BCKeys", Header = "Manastorm:" },
+		{ "FrozenReach", Header = "Manastorm:" },
 		{ "FrozenReach" },
 	}
 
@@ -217,7 +217,7 @@ function AtlasLoot:InitializeMenus()
 		{ "MagistersTerrace" },
 		{ "KarazhanCryptsTBC" },
 		{ "BlackrockCavernsTBC" },
-		{ "BCKeys", Header = "Manastorm:" },
+		{ "FrozenReachTBC", Header = "Manastorm:" },
 		{ "FrozenReachTBC" },
 	}
 
