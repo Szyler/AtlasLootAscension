@@ -9,10 +9,14 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
 local menusKeyTable = {}
 local menusTemp = {}
+local mapKeys = {}
 
 function AtlasLoot:AddNewMenus(menus)
 	for menuName, menu in pairs(menus) do
 		menusTemp[menuName] = menu
+		if menusTemp[menuName].Map then
+			mapKeys[menusTemp[menuName].Map] = menuName
+		end
 		for i, menuKey in ipairs(menu) do
 			if menuKey[2] and #menuKey[2] > 0 then
 				menusKeyTable[menuKey[2][1]] = {menuName, i}
@@ -28,9 +32,23 @@ function AtlasLoot:GetSourcesExtendedInfo(iD)
 		SourceName = self:GetDataDisplayName(iD),
 		Source = {self:GetSourceLocation(iD)},
 		Module = self:GetDataModule(iD),
-		Name = self:GetDataPageName(iD)
+		Name = self:GetDataPageName(iD),
+		CollectionModuleName = self:GetCollectionModuleName(iD)
 	}
 	return sourceInfo
+end
+
+local collectionKeys
+function AtlasLoot:GetCollectionModuleName(iD)
+	if not collectionKeys then
+		collectionKeys = {}
+		for moduleName, module in pairs(self.ui.menus.collection) do
+			for _, subMenu in ipairs(module) do
+				collectionKeys[subMenu[1]] = moduleName
+			end
+		end
+	end
+	return collectionKeys[iD]
 end
 
 function AtlasLoot:GetDataType(iD)
@@ -70,7 +88,7 @@ function AtlasLoot:GetDataPageName(iD, tableNum)
 end
 
 function AtlasLoot:GetSourceLocation(iD)
-	if not menusKeyTable[iD] then return "" end
+	if not menusKeyTable[iD] then return iD end
 	return menusKeyTable[iD][1], menusKeyTable[iD][2]
 end
 
@@ -80,7 +98,15 @@ function AtlasLoot:GetDataModule(iD)
 end
 
 function AtlasLoot:GetDataMap(iD)
-	return self.ui.menus.data[iD] and self.ui.menus.data[iD].Map or ""
+	if self.ui.menus.data[iD] then
+		return self.ui.menus.data[iD].Map
+	elseif menusKeyTable[iD] then
+		return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Map
+	end
+end
+
+function AtlasLoot:GetMapInstance(iD)
+	return mapKeys[iD] or nil
 end
 
 function AtlasLoot:InitializeMenus()
