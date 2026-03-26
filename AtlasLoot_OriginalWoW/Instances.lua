@@ -531,66 +531,54 @@ AtlasLoot:AddItemData({
 			{ itemID = 12741 }, --Sixth Mosh'aru Tablet
 			{ itemID = 12345 }, --Bijou's Belongings
 		},
-		{
-		},
-		{
+		[4] = {
 			{ itemID = 12336 }, --Gemstone of Spirestone
 			{ itemID = 12534 }, --Omokk's Head
 			{ itemID = 16670 }, --Boots of Elements
 		},
-		{
+		[5] = {
 			{ itemID = 13284 }, --Swiftdart Battleboots
 			{ itemID = 13285 }, --The Blackrock Slicer
 		},
-		{
+		[6] = {
 			{ itemID = 13282 }, --Ogreseer Tower Boots
 			{ itemID = 13283 }, --Magus Ring
 			{ itemID = 13261 }, --Globe of D'sak
 		},
-		{
+		[7] = {
 			{ itemID = 12654 }, --Doomshot
 			{ itemID = 13352 }, --Vosh'gajin's Snakestone
 			{ itemID = 12821 }, --Plans: Dawn's Edge
 			{ itemID = 16712 }, --Shadowcraft Gloves
 		},
-		{
+		[8] = {
 			{ itemID = 12335 }, --Gemstone of Smolderthorn
 		},
-		{
+		[9] = {
 			{ itemID = 21984 }, --Left Piece of Lord Valthalak's Amulet
 			{ itemID = 22046 }, --Right Piece of Lord Valthalak's Amulet
 		},
-		{
+		[10] = {
 			{ itemID = 12838, contentsPreview = {12784} }, --Plans: Arcanite Reaper
 		},
-		{
-		},
-		{
-		},
-		{
+		[13] = {
 			{ itemID = 18784 }, --Top Half of Advanced Armorsmithing: Volume III
 			{ itemID = 12725 }, --Plans: Enchanted Thorium Helm
 			{ itemID = 12712 }, --Warosh's Mojo
 			{ itemID = 15867 }, --Prismcharm
 		},
-		{
+		[14] = {
 			{ itemID = 12835, contentsPreview = {12798} }, --Plans: Annihilator
 			{ itemID = 21955 }, --Design: Black Diamond Crab
 		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
+		[18] = {
 			{ itemID = 12337 }, --Gemstone of Bloodaxe
 		},
-		{
+		[19] = {
 			{ itemID = 13181 }, --Demonskin Gloves
 			{ itemID = 13182 }, --Phase Blade
 		},
-		{
+		[20] = {
 			{ itemID = 14513 }, --Pattern: Robe of the Archmage
 			{ itemID = 14152 }, --Robe of the Archmage
 			{ itemID = 13494 }, --Recipe: Greater Fire Protection Potion
