@@ -154,15 +154,15 @@ AtlasLoot:AddNewMenus({
 		{ "Trash Mobs", {} },
 	},
 
-	["BlackrockCaverns"] = {
+	["BlackrockCavernsCLASSIC"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		Name = "Blackrock Caverns",
 		Type = "ClassicDungeonExt",
-		{ "Ascendant Lord Obsidius", { 39705 } },
-		{ "Beauty", { 39700 } },
-		{ "Corla, Herald of Twilight", { 39679 } },
-		{ "Karsh Steelbender <Twilight Armorer>", { 39698 } },
-		{ "Rom'ogg Bonecrusher", { 39665 } },
+		{ "Ascendant Lord Obsidius", {}, WebID = {39705, "npc"} },
+		{ "Beauty", {}, WebID = { 39700, "npc"} },
+		{ "Corla, Herald of Twilight", {}, WebID = {39679, "npc"} },
+		{ "Karsh Steelbender <Twilight Armorer>", {}, WebID = {39698, "npc"} },
+		{ "Rom'ogg Bonecrusher", {}, WebID = { 39665, "npc"} },
 	},
 
 	["LowerBlackrock"] = {

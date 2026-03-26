@@ -472,7 +472,7 @@ AtlasLoot:AddItemData({
 	--------------------------------------------
 	--- Blackrock Mountain: Blackrock Caverns ---
 	--------------------------------------------
-	["BlackrockCaverns"] = {
+	["BlackrockCavernsCLASSIC"] = {
 		{
 			{ itemID = 241661 }, -- Amber Messenger
 			{ itemID = 241833 }, -- Witching Hourglass

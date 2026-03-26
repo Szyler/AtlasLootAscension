@@ -157,7 +157,7 @@ function AtlasLoot:InitializeMenus()
 		{ "ClassicDungeonExt", OnDamand = {"ClassicDungeonExt", true, "All Dungeon Items"}},
 		{ "BlackfathomDeeps" },
 		{ "BlackrockDepths" },
-		{ "BlackrockCaverns" },
+		{ "BlackrockCavernsCLASSIC" },
 		{ "LowerBlackrock" },
 		{ "UpperBlackrock" },
 		{ "TheDeadmines" },
