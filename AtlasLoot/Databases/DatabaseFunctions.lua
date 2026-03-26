@@ -88,9 +88,9 @@ end
 
 function AtlasLoot:GetSourceList()
 	local itemSource = {}
-	self:IsLootTableAvailable("AtlasLootOriginalWoW")
-	self:IsLootTableAvailable("AtlasLootBurningCrusade")
-	self:IsLootTableAvailable("AtlasLootWotLK")
+	self:IsLootTableAvailable("AtlasLoot_OriginalWoW")
+	self:IsLootTableAvailable("AtlasLoot_BurningCrusade")
+	self:IsLootTableAvailable("AtlasLoot_WrathoftheLichKing")
 
 	local function addItem(itemData, dataType)
 		if type(itemData) == "table" then

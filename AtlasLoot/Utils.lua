@@ -308,8 +308,7 @@ Checks if a loot table is in memory and attempts to load the correct LoD module 
 dataID: Loot table dataID
 ]]
 local loadedModules = {}
-function AtlasLoot:IsLootTableAvailable(dataSource)
-	local moduleName = self.ModuleName[dataSource]
+function AtlasLoot:IsLootTableAvailable(moduleName)
 	if moduleName and IsAddOnLoaded(moduleName) and loadedModules[moduleName] then
 		return true
 	elseif moduleName then

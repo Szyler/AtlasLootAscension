@@ -141,7 +141,7 @@ function AtlasLoot:InitializeMenus()
 
 	-------------------------------------Dungeon and Raid Menus-------------------------------------
 	collection["Dungeons and RaidsCLASSIC"] = {
-		Module = "AtlasLootOriginalWoW",
+		Module = "AtlasLoot_OriginalWoW",
 		---- Raids ----
 		{ "OldKeys", Header = "Raids:" },
 		{ "ZulGurub" },
@@ -187,7 +187,7 @@ function AtlasLoot:InitializeMenus()
 	}
 
 	collection["Dungeons and RaidsTBC"] = {
-		Module = "AtlasLootBurningCrusade",
+		Module = "AtlasLoot_BurningCrusade",
 		---- Raids ----
 		{ "BCKeys", Header = "Raids:" },
 		{ "Karazhan" },
@@ -226,7 +226,7 @@ function AtlasLoot:InitializeMenus()
 	}
 
 	collection["Dungeons and RaidsWRATH"] = {
-		Module = "AtlasLootWotLK",
+		Module = "AtlasLoot_WrathoftheLichKing",
 		---- Raids ----
 		{ "WrathKeys", Header = "Raids:" },
 		{ "Naxxramas80" },
@@ -261,7 +261,7 @@ function AtlasLoot:InitializeMenus()
 
 	------------------------------------- Crafting Menus -------------------------------------
 	collection.CraftingCLASSIC = {
-		Module = "AtlasLootCraftingOriginalWoW",
+		Module = "AtlasLoot_Crafting_OriginalWoW",
 		{ "AlchemyCLASSIC" },
 		{ "SmithingCLASSIC" },
 		{ "EnchantingCLASSIC" },
@@ -274,7 +274,7 @@ function AtlasLoot:InitializeMenus()
 	}
 
 	collection.CraftingTBC = {
-		Module = "AtlasLootCraftingBurningCrusade",
+		Module = "AtlasLoot_Crafting_TBC",
 		{ "AlchemyTBC" },
 		{ "SmithingTBC" },
 		{ "EnchantingTBC" },
@@ -288,7 +288,7 @@ function AtlasLoot:InitializeMenus()
 	}
 
 	collection.CraftingWRATH = {
-		Module = "AtlasLootCraftingWotLK",
+		Module = "AtlasLoot_Crafting_Wrath",
 		{ "AlchemyWRATH" },
 		{ "SmithingWRATH" },
 		{ "EnchantingWRATH" },
@@ -304,7 +304,7 @@ function AtlasLoot:InitializeMenus()
 
 	------------------------------------- Collections Menus -------------------------------------
 	collection.CollectionsCLASSIC = {
-		Module = "AtlasLootOriginalWoW",
+		Module = "AtlasLoot_OriginalWoW",
 		{ "Heirloom" },
 		{ "ClassicSets" },
 		{ "WorldEpicsCLASSIC" },
@@ -324,7 +324,7 @@ function AtlasLoot:InitializeMenus()
 	}
 
 	collection.CollectionsTBC = {
-		Module = "AtlasLootBurningCrusade",
+		Module = "AtlasLoot_BurningCrusade",
 		{ "Heirloom" },
 		{ "DS3" },
 		{ "WorldRaresTBC" },
@@ -340,7 +340,7 @@ function AtlasLoot:InitializeMenus()
 		{ "TSIX" },
 	}
 	collection.CollectionsWRATH = {
-		Module = "AtlasLootWotLK",
+		Module = "AtlasLoot_WrathoftheLichKing",
 		{ "Heirloom" },
 		{ "WorldEpicsWrath" },
 		{ "Legendaries" },
@@ -359,7 +359,7 @@ function AtlasLoot:InitializeMenus()
 
 	------------------------------------- Vanity Menus -------------------------------------
 	collection.VanityCLASSIC = {
-		Module = "AtlasLootVanity",
+		Module = "AtlasLoot_Vanity",
 		{ "Tabards" },
 		{ "VanityPets" },
 		{ "Mounts" },
@@ -369,7 +369,7 @@ function AtlasLoot:InitializeMenus()
 	
 	------------------------------------- Faction Menus -------------------------------------
 	collection.FactionsCLASSIC = {
-	Module = "AtlasLootOriginalWoW",
+	Module = "AtlasLoot_OriginalWoW",
 		{ "Argent" },
 		{ "AQBroodRings" },
 		{ "AlteracFactions" },
@@ -385,7 +385,7 @@ function AtlasLoot:InitializeMenus()
 	}
 
 	collection.FactionsTBC = {
-		Module = "AtlasLootBurningCrusade",
+		Module = "AtlasLoot_BurningCrusade",
 		{ "ShattrathFlasks" },
 		{ "Aldor" },
 		{ "Scryer" },
@@ -410,7 +410,7 @@ function AtlasLoot:InitializeMenus()
 	}
 
 	collection.FactionsWRATH = {
-		Module = "AtlasLootWotLK",
+		Module = "AtlasLoot_WrathoftheLichKing",
 		{ "AllianceVanguard" },
 		{ "WinterfinRetreat" },
 		{ "TheWyrmrestAccord" },
@@ -428,7 +428,7 @@ function AtlasLoot:InitializeMenus()
 	------------------------------------- PvP Menus -------------------------------------
 
 	collection.PVPCLASSIC = {
-		Module = "AtlasLootOriginalWoW",
+		Module = "AtlasLoot_OriginalWoW",
 		{ "AVMisc", Header = "PVP Factions" },
 		{ "AVMisc" },
 		{ "AB_A" },
@@ -451,7 +451,7 @@ function AtlasLoot:InitializeMenus()
 	}
 
 	collection.PVPTBC = {
-		Module = "AtlasLootBurningCrusade",
+		Module = "AtlasLoot_BurningCrusade",
 		{ "PVPHellfire", Header = "PVP Factions" },
 		{ "PVPHellfire" },
 		{ "PVPHalaa" },
@@ -467,7 +467,7 @@ function AtlasLoot:InitializeMenus()
 	}
 
 	collection.PVPWRATH = {
-		Module = "AtlasLootWotLK",
+		Module = "AtlasLoot_WrathoftheLichKing",
 		{ "LakeWintergrasp", Header = "PVP Factions" },
 		{ "LakeWintergrasp" },
 		{ "VentureBay" },
@@ -490,7 +490,7 @@ function AtlasLoot:InitializeMenus()
 
 	------------------------------------- World Event Menus -------------------------------------
 	collection.WorldEventsCLASSIC = {
-		Module = "AtlasLootWorldEvents",
+		Module = "AtlasLoot_WorldEvents",
 		{ "BrewfestCLASSIC", Header = "Seasonal" },
 		{ "BrewfestCLASSIC" },
 		{ "DayoftheDead" },
@@ -513,7 +513,7 @@ function AtlasLoot:InitializeMenus()
 	}
 
 	collection.WorldEventsTBC = {
-		Module = "AtlasLootWorldEvents",
+		Module = "AtlasLoot_WorldEvents",
 		{ "BrewfestTBC", Header = "Seasonal" },
 		{ "BrewfestTBC" },
 		{ "DayoftheDead" },
@@ -538,7 +538,7 @@ function AtlasLoot:InitializeMenus()
 	}
 
 	collection.WorldEventsWRATH = {
-		Module = "AtlasLootWorldEvents",
+		Module = "AtlasLoot_WorldEvents",
 		{ "BrewfestWRATH", Header = "Seasonal" },
 		{ "BrewfestWRATH" },
 		{ "DayoftheDead" },

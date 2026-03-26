@@ -174,18 +174,6 @@ function AtlasLoot:SlashCommand(msg)
 	end
 end
 
--- List of Moduel Names
-AtlasLoot.ModuleName = {
-	["AtlasLootOriginalWoW"] = "AtlasLoot_OriginalWoW";
-	["AtlasLootBurningCrusade"] = "AtlasLoot_BurningCrusade";
-	["AtlasLootCraftingOriginalWoW"] = "AtlasLoot_Crafting_OriginalWoW";
-	["AtlasLootCraftingBurningCrusade"] = "AtlasLoot_Crafting_TBC";
-	["AtlasLootCraftingWotLK"] = "AtlasLoot_Crafting_Wrath";
-	["AtlasLootWorldEvents"] = "AtlasLoot_WorldEvents";
-	["AtlasLootWotLK"] = "AtlasLoot_WrathoftheLichKing";
-	["AtlasLootVanity"] = "AtlasLoot_Vanity";
-}
-
 AtlasLoot.dataModules = {
 	"AtlasLoot_OriginalWoW",
 	"AtlasLoot_BurningCrusade",
