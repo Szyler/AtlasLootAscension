@@ -397,18 +397,23 @@ local function sortItemData(dataSource, dataID, tablenum)
 	if not dataSource then return end
 	local lootTables = { AtlasLoot.data.item[dataID..tablenum] and dataID..tablenum }
 	local lootTableName = dataID..tablenum
+	if displayData[lootTableName] then return displayData[lootTableName] end
+	local dontSort, isVanity
 	if #dataSource[tablenum][2] > 0 then
 		for _, ref in pairs(dataSource[tablenum][2]) do
-			table.insert(lootTables, ref)
+			if AtlasLoot.data.item[ref] then
+				dontSort = dontSort or AtlasLoot.data.item[ref].dontSort
+				isVanity = isVanity or AtlasLoot.data.item[ref].vanityCollection
+				table.insert(lootTables, ref)
+			end
 		end
-		lootTableName = dataSource[tablenum][2][1]
 	end
+	dontSort = dontSort or AtlasLoot.data.item[lootTableName] and AtlasLoot.data.item[dataID..tablenum].dontSort or false
+	isVanity = isVanity or AtlasLoot.data.item[lootTableName] and AtlasLoot.data.item[lootTableName].vanityCollection or false
 	if #lootTables == 0 then return end
 
-	if displayData[lootTableName] then return displayData[lootTableName] end
 	local newTable = {{}}
-
-	if not AtlasLoot.data.item[lootTableName].dontSort then
+	if not dontSort then
 		local itemCatagories = createItemCatagoiresTable()
 		for _, lootTableSelection in ipairs(lootTables) do
 			for _, itemData in ipairs(AtlasLoot.data.item[lootTableSelection]) do
@@ -450,7 +455,7 @@ local function sortItemData(dataSource, dataID, tablenum)
 				table.insert(newTable[#newTable], {"blankLine"})
 			end
 		end
-	elseif AtlasLoot.data.item[lootTableName].vanityCollection then
+	elseif isVanity then
 		newTable = AtlasLoot.data.item[lootTableName]
 	else
 		for itemNum, item in ipairs(AtlasLoot.data.item[lootTableName]) do
@@ -469,9 +474,9 @@ local function sortItemData(dataSource, dataID, tablenum)
 			end
 		end
 	end
-	displayData[dataID..tablenum] = newTable
+	displayData[lootTableName] = newTable
 	if AtlasLoot.selectedProfile.isAdmin then AtlaslootDisplaydata = displayData end
-	return displayData[dataID..tablenum]
+	return displayData[lootTableName]
 end
 
 function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
