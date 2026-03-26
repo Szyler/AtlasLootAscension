@@ -565,73 +565,25 @@ AtlasLoot:AddItemData({
 	-------------------------------------
 	["CoTHyjal"] = {
 		{
-			{ itemID = 30871 }, --Bracers of Martyrdom
-			{ itemID = 30870 }, --Cuffs of Devastation
-			{ itemID = 30863 }, --Deadly Cuffs
-			{ itemID = 30868 }, --Rejuvenating Bracers
-			{ itemID = 30864 }, --Bracers of the Pathfinder
-			{ itemID = 30869 }, --Howling Wind Bracers
-			{ itemID = 30873 }, --Stillwater Boots
-			{ itemID = 30866 }, --Blood-stained Pauldrons
-			{ itemID = 30862 }, --Blessed Adamantite Bracers
-			{ itemID = 30861 }, --Furious Shackles
-			{ itemID = 12311 }, --Boneclad Girdle
 			{ itemID = 32459 }, --Time-Phased Phylactery
-			{ itemID = 30865 }, --Tracker's Blade
-			{ itemID = 30872 }, --Chronicle of Dark Secrets
-			{ itemID = 30891 }, --Black Featherlight Boots
-			{ itemID = 30914 }, --Belt of the Crescent Moon
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			{ itemID = 61196, droprate = "1%" }, --Pet Sigil
 		},
 		{
-			{ itemID = 30884 }, --Hatefury Mantle
-			{ itemID = 30888 }, --Anetheron's Noose
-			{ itemID = 30885 }, --Archbishop's Slippers
-			{ itemID = 30879 }, --Don Alejandro's Money Belt
-			{ itemID = 30886 }, --Enchanted Leather Sandals
-			{ itemID = 30887 }, --Golden Links of Restoration
-			{ itemID = 30880 }, --Quickstrider Moccasins
-			{ itemID = 30878 }, --Glimmering Steel Mantle
-			{ itemID = 12306 }, --Mantle of Glimmering Dreams
-			{ itemID = 12307 }, --Dreadforge Pauldrons
-			{ itemID = 30874 }, --The Unbreakable Will
-			{ itemID = 30881 }, --Blade of Infamy
-			{ itemID = 30883 }, --Pillar of Ferocity
-			{ itemID = 30882 }, --Bastion of Light
-			{ itemID = 30916 }, --Leggings of Channeled Elements
-			{ itemID = 30919 }, --Valestalker Girdle
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			{ itemID = 61287, droprate = "1%" }, --Pet Sigil
 		},
 		{
-			{ itemID = 30889 }, --Kaz\'rogal\'s Hardened Heart"
-			{ itemID = 30893 }, --Sun-touched Chain Leggings"
-			{ itemID = 30894 }, --Blue Suede Shoes"
-			{ itemID = 12310 }, --Felstrider Boots
-			{ itemID = 30895 }, --Angelista\'s Sash"
-			{ itemID = 30898 }, --Shady Dealer\'s Pantaloons"
-			{ itemID = 30900 }, --Bow-stitched Leggings"
-			{ itemID = 30915 }, --Belt of Seething Fury"
-			{ itemID = 30918 }, --Hammer of Atonement"
 			{ itemID = 31092, sourcePage = {"TSIXHAND","Token"} },
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 		},
 		{
-			{ itemID = 30892 }, --Beast-tamer\'s Shoulders"
-			{ itemID = 30896 }, --Glory of the Defender"
-			{ itemID = 30897 }, --Girdle of Hope"
-			{ itemID = 30899 }, --Don Rodrigo\'s Poncho"
-			{ itemID = 30901 }, --Boundless Agony"
-			{ itemID = 30917 }, --Razorfury Mantle"
-			{ itemID = 12308 }, --Infernal Stalker’s Hauberk
-			{ itemID = 12309 }, --Plates of Eternal Fury
 			{ itemID = 31098, sourcePage = {"TSIXLEGS","Token"} }, --Leggings of the Forgotten Conqueror
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
@@ -639,21 +591,6 @@ AtlasLoot:AddItemData({
 			{ itemID = 61289, droprate = "1%" }, --Pet Sigil
 		},
 		{
-			{ itemID = 30913 }, --Robes of Rhonin
-			{ itemID = 30912 }, --Leggings of Eternity
-			{ itemID = 30905 }, --Midnight Chestguard
-			{ itemID = 30907 }, --Mail of Fevered Pursuit
-			{ itemID = 30904 }, --Savior's Grasp
-			{ itemID = 30903 }, --Legguards of Endless Rage
-			{ itemID = 30911 }, --Scepter of Purification
-			{ itemID = 30910 }, --Tempest of Chaos
-			{ itemID = 30902 }, --Cataclysm's Edge
-			{ itemID = 30908 }, --Apostle of Argus
-			{ itemID = 30909 }, --Antonidas's Aegis of Rapt Concentration
-			{ itemID = 30906 }, --Bristleblitz Striker
-			{ itemID = 12387 }, --Signet of Shattered Valor
-			{ itemID = 12386 }, --Ring of the Stormborn
-			{ itemID = 12313 }, --The Defiler's Cudgel
 			{ itemID = 31097, sourcePage = {"TSIXHEAD","Token"} }, --Helm of the Forgotten Conqueror
 			{ itemID = 450009, desc = "Quest Requirements", contentsPreview = {{450009},{450010},{34334}}}, --The String of Time
 			{ itemID = 29434 }, --Badge of Justice
@@ -663,20 +600,6 @@ AtlasLoot:AddItemData({
 			{ itemID = 1001620 },
 		},
 		{
-			{ itemID = 15828 }, --Final Countdown Bands
-			{ itemID = 15831 }, --Girdle of Falling Sand
-			{ itemID = 15898 }, --Hourglass Casing
-			{ itemID = 15835 }, --Time Reaver's Gown
-			{ itemID = 15840 }, --Timewaker's Treads
-			{ itemID = 15896 }, --Cloak of the Final Hour
-			{ itemID = 15834 }, --Aetherflux Shroud
-			{ itemID = 15839 }, --Charm of the Chronomender
-			{ itemID = 15899 }, --Amulet of Futures Past
-			{ itemID = 15838 }, --Flickering Amulet
-			{ itemID = 15836 }, --Pendant of the Evil Twin
-			{ itemID = 15830 }, --Infinite Scale Talisman
-			{ itemID = 18764 }, --Echo of Eons
-			{ itemID = 15041 }, --Key of Time
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
