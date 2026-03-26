@@ -93,8 +93,12 @@ function AtlasLoot:GetSourceLocation(iD)
 end
 
 function AtlasLoot:GetDataModule(iD)
-	if not menusKeyTable[iD] then return "" end
-	return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Module or ""
+	if self.ui.menus.data[iD] then
+		return self.ui.menus.data[iD].Module or ""
+	elseif menusKeyTable[iD] then
+		return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Module or ""
+	end
+	return ""
 end
 
 function AtlasLoot:GetDataMap(iD)
