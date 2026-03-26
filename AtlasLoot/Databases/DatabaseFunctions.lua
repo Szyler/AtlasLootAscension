@@ -469,9 +469,9 @@ local function sortItemData(dataSource, dataID, tablenum)
 			end
 		end
 	end
-	displayData[lootTableName] = newTable
+	displayData[dataID..tablenum] = newTable
 	if AtlasLoot.selectedProfile.isAdmin then AtlaslootDisplaydata = displayData end
-	return displayData[lootTableName]
+	return displayData[dataID..tablenum]
 end
 
 function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
