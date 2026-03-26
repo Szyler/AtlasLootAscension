@@ -68,7 +68,7 @@ AtlasLoot:AddNewMenus({
 		{ "Gurtogg Bloodboil", { 22948 } },
 		{ "Reliquary of the Lost", { 22856 } },
 		{ "Mother Shahraz", { 22947 } },
-		{ "The Illidari Council" },
+		{ "The Illidari Council", {} },
 		{ "Illidan Stormrage", { 22917 } },
 		{ "Trash Mobs", {} },
 		{ "Reputation Trinkets", {} },
