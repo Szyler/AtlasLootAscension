@@ -37,17 +37,15 @@ function AtlasLoot:InitializeUIFunctions()
 
     -- Show the Instance you are in
     function self:ShowInstance()
-        for subMenu, v in pairs(self.ui.menus.collection) do
-            for _, t in ipairs(v) do
-                local zone = GetRealZoneText() or "noZone"
-                if t[4] == zone or (t[5] and t[5] == zone) then
-                    self.currentTable = subMenu
-                    self.lastModule = v.Module
-                    self:IsLootTableAvailable(self.lastModule)
-                    self:ShowItemsFrame(t[2], "AtlasLoot_Data", 1, 1)
-                    return true
-                end
-            end
+        local zone = GetMapInfo() or "noZone"
+        local instance = self:GetMapInstance(zone)
+        if instance then
+            local sourceData = self:GetSourcesExtendedInfo(instance)
+            self.currentTable = sourceData.CollectionModuleName
+            self.lastModule = sourceData.Module
+            self:IsLootTableAvailable(self.lastModule)
+            self:ShowItemsFrame(instance, "AtlasLoot_Data", 1, 1)
+            return true
         end
     end
 
