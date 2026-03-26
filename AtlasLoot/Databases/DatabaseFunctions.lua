@@ -283,7 +283,7 @@ function AtlasLoot:AddItemData(var1, var2)
 		end
 	else
 		for tableName, tableParent in pairs(data) do
-			for i, table in ipairs(tableParent) do
+			for i, table in pairs(tableParent) do
 				self.data.item[tableName..i] = table
 				if dataType == "dontSort" then self.data.item[tableName..i].dontSort = true end
 				for _, item in ipairs(self.data.item[tableName..i]) do
