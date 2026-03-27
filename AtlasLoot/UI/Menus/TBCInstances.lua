@@ -40,7 +40,6 @@ AtlasLoot:AddNewMenus({
 		{ "Darkweaver Syth", { 40130 } },
 		{ "Anzu" .. " (" .. "Heroic" .. ")", { 23035 } },
 		{ "Talon King Ikiss", { 25006 } },
-		{ "Trash Mobs", {} },
 	},
 
 	["AuchShadowLab"] = {
