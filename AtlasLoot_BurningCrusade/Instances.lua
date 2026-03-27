@@ -512,12 +512,6 @@ AtlasLoot:AddItemData({
 	-----------------------------------------
 	["CoTBlackMorass"] = {
 		{
-			{ itemID = 27988 }, --Burnoose of Shifting Ages
-			{ itemID = 27994 }, --Mantle of Three Terrors
-			{ itemID = 27995 }, --Sun-Gilded Shouldercaps
-			{ itemID = 27993 }, --Mask of Inner Fire
-			{ itemID = 27996 }, --Ring of Spiritual Precision
-			{ itemID = 27987 }, --Melmorta's Twilight Longbow
 			{ itemID = 29675 }, --Pattern: Arcane Armor Kit
 			{ itemID = 29434 }, --Badge of Justice
 			{ itemID = 30558 }, --Glimmering Fire Opal
@@ -525,39 +519,16 @@ AtlasLoot:AddItemData({
 			{ itemID = 30555 }, --Glowing Tanzanite
 		},
 		{
-			{ itemID = 28185 }, --Khadgar's Kilt of Abjuration
-			{ itemID = 28186 }, --Laughing Skull Battle-Harness
-			{ itemID = 28034 }, --Hourglass of the Unraveller
-			{ itemID = 28187 }, --Star-Heart Lamp
-			{ itemID = 28184 }, --Millennium Blade
-			{ itemID = 28033 }, --Epoch-Mender
 			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			{ itemID = 30558, minDifficulty = "Heroic" }, --Glimmering Fire Opal
 			{ itemID = 30556, minDifficulty = "Heroic" }, --Glinting Fire Opal
 			{ itemID = 30555, minDifficulty = "Heroic" }, --Glowing Tanzanite
 		},
 		{
-			{ itemID = 28193 }, --Mana-Etched Crown
-			{ itemID = 27509 }, --Handgrips of Assassination
-			{ itemID = 27873 }, --Moonglade Pants
-			{ itemID = 28192 }, --Helm of Desolation
-			{ itemID = 27977 }, --Legplates of the Bold
-			{ itemID = 27839 }, --Legplates of the Righteous
-			{ itemID = 28206 }, --Cowl of the Guiltless
-			{ itemID = 28194 }, --Primal Surge Bracers
-			{ itemID = 28207 }, --Pauldrons of the Crimson Flight
-			{ itemID = 28190 }, --Scarab of the Infinite Cycle
-			{ itemID = 28189 }, --Latro's Shifting Sword
-			{ itemID = 28188 }, --Bloodfire Greatstaff
 			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			{ itemID = 30558, minDifficulty = "Heroic" }, --Glimmering Fire Opal
 			{ itemID = 30556, minDifficulty = "Heroic" }, --Glinting Fire Opal
 			{ itemID = 30555, minDifficulty = "Heroic" }, --Glowing Tanzanite
-			{ itemID = 30531, minDifficulty = "Heroic" }, --Breeches of the Occultist
-			{ itemID = 29247, minDifficulty = "Heroic" }, --Girdle of the Deathdealer
-			{ itemID = 29253, minDifficulty = "Heroic" }, --Girdle of Valorous Deeds
-			{ itemID = 29356, minDifficulty = "Heroic" }, --Quantum Blade
-			{ itemID = 33858, minDifficulty = "Heroic" }, --Aeonus's Hourglass
 		},
 	},
 	-------------------------------------
