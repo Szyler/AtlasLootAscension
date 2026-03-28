@@ -2300,7 +2300,7 @@ AtlasLoot:AddItemData({
 		{},
 		{
 			{ itemID = 2522460, sourcePage = {"TTWOHEAD","Token"} }, --Chromatic Headpiece
-			{ itemID = 97269, contentsPreview ={18404,18403,18406} }, --Head of Onyxia
+			{ itemID = 97269, contentsPreview = {18404,18403,18406} }, --Head of Onyxia
 			{ itemID = 15410 }, -- Scale of Onyxia
 			{ itemID = 17966 }, --Onyxia Hide Backpack
 			{ itemID = 53140, droprate = 5 }, --Formula: Enchant Cloak - Dragon Fire
