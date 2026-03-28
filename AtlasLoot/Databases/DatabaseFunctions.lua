@@ -396,7 +396,7 @@ local displayData = {}
 local function sortItemData(dataSource, dataID, tablenum)
 	if not dataSource then return end
 	local lootTables = { AtlasLoot.data.item[dataID..tablenum] and dataID..tablenum }
-	local lootTableName = dataID..tablenum
+	local lootTableName = (AtlasLoot.data.item[dataID..tablenum] and dataID..tablenum) or (#dataSource[tablenum][2] > 0 and AtlasLoot.data.item[dataSource[tablenum][2][1]] and dataSource[tablenum][2][1])
 	if displayData[lootTableName] then return displayData[lootTableName] end
 	local dontSort, isVanity
 	if #dataSource[tablenum][2] > 0 then
@@ -408,8 +408,9 @@ local function sortItemData(dataSource, dataID, tablenum)
 			end
 		end
 	end
-	dontSort = dontSort or AtlasLoot.data.item[lootTableName] and AtlasLoot.data.item[dataID..tablenum].dontSort or false
+	dontSort = dontSort or AtlasLoot.data.item[lootTableName] and AtlasLoot.data.item[lootTableName].dontSort or false
 	isVanity = isVanity or AtlasLoot.data.item[lootTableName] and AtlasLoot.data.item[lootTableName].vanityCollection or false
+
 	if #lootTables == 0 then return end
 
 	local newTable = {{}}
