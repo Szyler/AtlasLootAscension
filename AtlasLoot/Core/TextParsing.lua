@@ -190,14 +190,22 @@ function AtlasLoot:FixText(text)
         end
     local wordList = {string.split(" ",text)}
     local newText
-    for _, text in pairs(wordList) do
-        text = BabbleBoss[text] or text
-        text = BabbleInventory[text] or text
-        text = BabbleZone[text] or text
-        text = BabbleFaction[text] or text
-        text = AL[text]
-        newText = newText and newText .. " " .. text or text
+    for _, textSub in pairs(wordList) do
+        local commaFound = ""
+        if string.find(textSub, ",%f[%W]") then
+            commaFound = ","
+            textSub = gsub(textSub, ",%f[%W]", "")
+        end
+            text = BabbleBoss[textSub] or text
+            text = BabbleInventory[textSub]
+            text = BabbleZone[textSub]
+            text = BabbleFaction[textSub]
+            text = AL[textSub]
+            newText = newText and newText .. " " .. text..commaFound or text
     end
+
     newText = gsub(newText, " %- ", WHITE.." - ")
+    newText = gsub(newText, "%: ", WHITE..": ")
+    newText = gsub(newText, "%(Click%)", WHITE.."(Click)")
     return newText
 end
