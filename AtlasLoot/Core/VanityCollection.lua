@@ -103,7 +103,7 @@ function AtlasLoot:CreateVanityCollection()
 	self:InitializeDataTables()
 	local itemData = self.data.item
 
-	local function createCatagory(cat, name)
+	local function createCategory(cat, name)
 		cat = gsub(cat, "Vanity", "")
 		if itemData["Vanity"..cat] then return end
 		local menuData = {}
@@ -129,24 +129,24 @@ function AtlasLoot:CreateVanityCollection()
 		for cat, flag in pairs(Enum.VanityCategory) do
 			if type(flag) == "table" then
 				for subcat, subflag in pairs(flag) do
-					createCatagory(subcat, CollectionNames(subcat))
+					createCategory(subcat, CollectionNames(subcat))
 					if bit.contains(subflag, group) then
 						return "Vanity"..subcat
 					end
 				end
 			else
-				createCatagory(cat, CollectionNames(cat))
+				createCategory(cat, CollectionNames(cat))
 				if bit.contains(flag, group) then
 					return "Vanity"..cat
 				end
 			end
 		end
-		createCatagory("VanityUncategorized", "Uncategorized")
+		createCategory("VanityUncategorized", "Uncategorized")
 		return "VanityUncategorized"
 	end
 
     local function setGroup(group, name)
-		createCatagory(group, name or group)
+		createCategory(group, name or group)
 		return "Vanity"..group
     end
 
@@ -169,8 +169,8 @@ function AtlasLoot:CreateVanityCollection()
         ["Incarnation:"] = {"Incarnation", "Incarnations"},
 		["Tome of"] = {"Tomes", "Tomes"},
     }
-        for Type, catagory in pairs(list) do
-            if item.name:find(Type, 1, true) then return catagory end
+        for Type, category in pairs(list) do
+            if item.name:find(Type, 1, true) then return category end
         end
     end
 
@@ -221,7 +221,7 @@ function AtlasLoot:CreateVanityCollection()
 	end
 
 	for groupName, categorie in pairs(categorieList) do
-		createCatagory(groupName, groupName)
+		createCategory(groupName, groupName)
 		for _, item in ipairs(categorie) do
 			local group = itemData[groupName]
 			if #group[#group] >= 30 then
