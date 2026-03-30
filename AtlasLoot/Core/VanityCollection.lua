@@ -119,7 +119,7 @@ function AtlasLoot:CreateVanityCollection()
 		end
 		if #menuData == 0 then
 			itemData["Vanity"..cat] = { dontSort = true, vanityCollection = true, {} }
-			menuData["Vanity"..cat] = menuData["Vanity"..cat] or {Name = cat, vanity = true, Module = "AtlasLoot_Ascension_Vanity"}
+			menuData["Vanity"..cat] = menuData["Vanity"..cat] or {Name = name, vanity = true, Module = "AtlasLoot_Ascension_Vanity"}
 			table.insert(menuData["Vanity"..cat], {name, {"Vanity"..cat}})
 		end
 		self:AddNewMenus(menuData)
