@@ -160,7 +160,7 @@ Constructs the Filter menu.
 function AtlasLoot:FilterMenuOpen(frame)
 	local menuList = {{},{}}
 	local db = AtlasLootFilterDB
-	if _G[self.itemframe.refresh[2]][self.itemframe.refresh[1]].vanity then
+	if self.ui.menus.data[self.itemframe.refresh[1]].vanity then
 		for _, filter in ipairs(VanityFilterTable) do
 			local db = db.VanityFilters
 			db[filter[1]] = db[filter[1]] or false
@@ -173,7 +173,7 @@ function AtlasLoot:FilterMenuOpen(frame)
 				end
 			end})
 		end
-	elseif _G[self.itemframe.refresh[2]][self.itemframe.refresh[1]].Type == "Crafting" then
+	elseif  self.ui.menus.data[self.itemframe.refresh[1]].Type == "Crafting" then
 		for _, filter in ipairs(CraftingFilterTable) do
 			local db = db.CraftingFilters
 			db[filter[1]] = db[filter[1]] or false
