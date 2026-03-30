@@ -159,7 +159,7 @@ function AtlasLoot:CreateVanityCollection()
     end
 
     local function setGroupByName(item)
-        local list = { 
+        local list = {
         ["Beastmaster's Whistle:"] = {"Whistle", "Whistles"} ,
         ["Elemental Lodestone:"] = {"Lodestone", "Lodestones"},
         ["Summoner's Stone:"] = {"SummonStone", "SummonStones"},
@@ -236,33 +236,25 @@ end
 function AtlasLoot:LearnAllUnknownVanitySpells()
 	local unknownSpells = {}
 	local function parseCollection(group)
-		for _, catagory in ipairs(self.data.item[group]) do
-			for _, side in ipairs(catagory) do
-				if type(catagory) == "table" then
-					for _, item in ipairs(side) do
-						if type(item) == "table" and item.itemID and C_VanityCollection.IsCollectionItemOwned(item.itemID) and VANITY_ITEMS[item.itemID] and
-						not CA_IsSpellKnown(VANITY_ITEMS[item.itemID].learnedSpell) and VANITY_ITEMS[item.itemID].learnedSpell ~= 0 then
-							local _, itemLink = self:GetItemInfo(item.itemID)
-							local spellName = GetSpellInfo(VANITY_ITEMS[item.itemID].learnedSpell)
-							local itemTooltipInfo = self:GetTooltipItemInfo(itemLink)
-							if (itemTooltipInfo and not itemTooltipInfo.isKnown) and not unknownSpells[spellName] or
-							(unknownSpells[spellName] and item.itemID > unknownSpells[spellName]) then
-								unknownSpells[spellName] = item.itemID
-							end
+		if self.data.item[group] then
+			for _, category in ipairs(self.data.item[group]) do
+				for _, item in ipairs(category) do
+					if type(item) == "table" and item.itemID and C_VanityCollection.IsCollectionItemOwned(item.itemID) and VANITY_ITEMS[item.itemID] and
+					not CA_IsSpellKnown(VANITY_ITEMS[item.itemID].learnedSpell) and VANITY_ITEMS[item.itemID].learnedSpell ~= 0 then
+						local _, itemLink = self:GetItemInfo(item.itemID)
+						local spellName = GetSpellInfo(VANITY_ITEMS[item.itemID].learnedSpell)
+						local itemTooltipInfo = self:GetTooltipItemInfo(itemLink)
+						if (itemTooltipInfo and not itemTooltipInfo.isKnown) and not unknownSpells[spellName] or
+						(unknownSpells[spellName] and item.itemID > unknownSpells[spellName]) then
+							unknownSpells[spellName] = item.itemID
 						end
 					end
 				end
 			end
 		end
 	end
-	for _, group in pairs(AtlasLoot.ui.menus.collection["CollectionsAscensionCLASSIC"]) do
-		if group[3] then
-			for _, subGroup in pairs(group[3]) do
-				parseCollection(subGroup[2])
-			end
-		else
-			parseCollection(group[2])
-		end
+	for _, group in pairs(self.ui.menus.collection["CollectionsAscensionCLASSIC"]) do
+		parseCollection(group[1])
 	end
 	local newSpellList = {}
 	for _, itemID in pairs(unknownSpells) do
