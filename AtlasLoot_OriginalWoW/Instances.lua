@@ -767,6 +767,19 @@ AtlasLoot:AddItemData({
 			{ itemID = 2522461, sourcePage = {"TTWOSHOULDER","Token"} }, --Chromatic Spaulders
 		},
 		{
+			{ itemID = 19378, groupID = 1, refLootEntry = 11583 }, --Cloak of the Brood Lord
+			{ itemID = 19360, groupID = 1, refLootEntry = 11583 }, --Lok'amir il Romathis
+			{ itemID = 19375, groupID = 1, refLootEntry = 11583 }, --Mish'undare, Circlet of the Mind Flayer
+			{ itemID = 19379, groupID = 1, refLootEntry = 11583 }, --Neltharion's Tear
+			{ itemID = 19382, groupID = 1, refLootEntry = 11583 }, --Pure Elementium Band
+			{ itemID = 19356, groupID = 1, refLootEntry = 11583 }, --Staff of the Shadow Flame
+			{ itemID = 14001, groupID = 2, refLootEntry = 11583 }, --Archimtiros' Ring of Armageddon
+			{ itemID = 19376, groupID = 2, refLootEntry = 11583 }, --Archimtiros' Ring of Reckoning
+			{ itemID = 19364, groupID = 2, refLootEntry = 11583 }, --Ashkandi, Greatsword of the Brotherhood
+			{ itemID = 19381, groupID = 2, refLootEntry = 11583 }, --Boots of the Shadow Flame
+			{ itemID = 19363, groupID = 2, refLootEntry = 11583 }, --Crul'shorukh, Edge of Chaos
+			{ itemID = 19377, groupID = 2, refLootEntry = 11583 }, --Prestor's Talisman of Connivery
+			{ itemID = 19380, groupID = 2, refLootEntry = 11583 }, --Therazane's Link
 			{ itemID = 2522450, sourcePage = {"TTWOCHEST","Token"} }, --Chromatic Tunic
 			{ itemID = 19003, contentsPreview = {19383, 19384, 19366, 21138} }, --Head of Nefarian
 			{ itemID = 21138 }, --Red Scepter Shard
