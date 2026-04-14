@@ -48,20 +48,8 @@ function AtlasLoot:CreateToken(dataID)
 	self:ShowItemsFrame("refresh")
 end
 
-local function checkForWorldforgedUpdate(typeL)
-	local currentNumber = 0
-	-- Check if cache exists and count items in it
-	if AtlasLoot_Data_Cache and AtlasLoot_Data_Cache[typeL] then
-		for _, t in ipairs(AtlasLoot_Data_Cache[typeL]) do
-				for _, v in ipairs(t) do
-					if type(v) == "table" and v.itemID then
-						currentNumber = currentNumber + 1
-					end
-				end
-		end
-	end
-	-- Check if the global list exists and compare item count
-	if _G[typeL] and #_G[typeL] ~= currentNumber then
+local function checkForWorldforgedUpdate(self, typeL)
+	if AtlasLoot_Data_Cache[typeL] and (not AtlasLoot_Data_Cache[typeL].Version or AtlasLoot_Data_Cache[typeL].Version ~= self.Version) then
 		return true
 	end
 end
@@ -73,7 +61,7 @@ function AtlasLoot:CreateOnDemandLootTable(typeL, isDungeon, name)
 		if self.data.onDemand and self.data.onDemand[typeL] then return self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1, 1) end
 	else
 		-- Return and show loot table if its already been created and up to date
-		if not AtlasLoot_Data_Cache or checkForWorldforgedUpdate(typeL) then
+		if not AtlasLoot_Data_Cache or checkForWorldforgedUpdate(self, typeL) then
 			AtlasLoot_Data_Cache = {}
 		elseif AtlasLoot_Data_Cache and AtlasLoot_Data_Cache[typeL] then
 			return self:ShowItemsFrame(typeL, "AtlasLoot_Data_Cache", 1, 1)
@@ -147,6 +135,7 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 		end
 		if not isDungeon then
 			AtlasLoot_Data_Cache[typeL] = self.data.onDemand[typeL]
+			AtlasLoot_Data_Cache[typeL].Version = self.Version
 		end
 	end
 

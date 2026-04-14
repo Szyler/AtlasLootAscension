@@ -493,7 +493,7 @@ function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 		itemData = self.data.onDemand[dataID][tablenum]
 	elseif dataSource_backup == "AtlasLoot_Data_Cache" then
 		dataSource = AtlasLoot_Data_Cache[dataID]
-		itemData = AtlasLoot_Data_Cache[dataID]
+		itemData = AtlasLoot_Data_Cache[dataID][tablenum]
 	elseif dataID == "SearchResult" then
 		dataSource = AtlasLootCharDB[dataID]
 		itemData = AtlasLootCharDB[dataID][1]
