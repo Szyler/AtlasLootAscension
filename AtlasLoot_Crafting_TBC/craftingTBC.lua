@@ -819,6 +819,7 @@ AtlasLoot:AddItemData("dontSort", {
 			{ itemID = 32196, spellID = 39711 }, --Runed Crimson Spinel
 			{ itemID = 32198, spellID = 39713 }, --Subtle Crimson Spinel
 			{ itemID = 32195, spellID = 39710 }, --Teardrop Crimson Spinel
+			{ itemID = 884037, spellID = 884037 }, --Fractured Crimson Spinel
 			{ itemID = 33131, spellID = 42589 }, --Crimson Sun
 			{ itemID = 33133, spellID = 42558 }, --Don Julio's Heart
 			{ itemID = 33134, spellID = 42588 }, --Kailee's Rose

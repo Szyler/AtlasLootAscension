@@ -3615,6 +3615,7 @@ AtlasLoot:AddItemData("crafting", {
         [47053] = { "Shattered Sun Offensive", "Revered", 25032, 25950, 27666},
         [47054] = { "The Scale of the Sands", "Honored", 23437},
         [47055] = { "Shattered Sun Offensive", "Revered", 25032, 25950, 27666},
+        [884037] = { "Shattered Sun Offensive", "Revered", 25032, 25950, 27666},
         [47056] = { "Shattered Sun Offensive", "Revered", 25032, 25950, 27666},
         [48789] = { "Shattered Sun Offensive", "Exalted", 25950, 27666}, -- Purified Shadowsong Amethyst -- 48789
         [53869] = { "The Kalu'ak", "Honored", 31916, 32763}, -- Defender's Shadow Crystal -- 53869
@@ -4045,6 +4046,7 @@ AtlasLoot:AddItemData("crafting", {
         [39711] = { "The Scale of the Sands", "Friendly", 23437}, -- Runed Crimson Spinel -- 39711
         [39712] = { "The Scale of the Sands", "Friendly", 23437}, -- Bright Crimson Spinel -- 39712
         [39713] = { "The Scale of the Sands", "Friendly", 23437}, -- Subtle Crimson Spinel -- 39713
+        [884037] = { "The Scale of the Sands", "Revered", 23437}, -- Fractured Crimson Spinel
         [39715] = { "The Scale of the Sands", "Friendly", 23437}, -- Solid Empyrean Sapphire -- 39715
         [39716] = { "The Scale of the Sands", "Friendly", 23437}, -- Sparkling Empyrean Sapphire -- 39716
         [39717] = { "The Scale of the Sands", "Friendly", 23437}, -- Lustrous Empyrean Sapphire -- 39717

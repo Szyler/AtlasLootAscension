@@ -2602,6 +2602,7 @@ AtlasLoot:AddItemData("crafting", {
         [39705] = { 375, 375, 380, 385 }, --  Bold Crimson Spinel -- 39705
         [39706] = { 375, 375, 380, 385 }, --  Delicate Crimson Spinel -- 39706
         [39710] = { 375, 375, 380, 385 }, --  Teardrop Crimson Spinel -- 39710
+        [884037] = { 375, 375, 380, 385 }, --  Fractured Crimson Spinel -- 884037
         [39711] = { 375, 375, 380, 385 }, --  Runed Crimson Spinel -- 39711
         [39712] = { 375, 375, 380, 385 }, --  Bright Crimson Spinel -- 39712
         [39713] = { 375, 375, 380, 385 }, --  Subtle Crimson Spinel -- 39713
