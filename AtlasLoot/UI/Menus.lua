@@ -60,6 +60,14 @@ function AtlasLoot:GetDataType(iD)
 	return ""
 end
 
+function AtlasLoot:GetDataVanity(iD)
+	if self.ui.menus.data[iD] then
+		return self.ui.menus.data[iD].vanity or nil
+	elseif menusKeyTable[iD] then
+		return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].vanity or nil
+	end
+end
+
 function AtlasLoot:GetDataName(iD)
 	if self.ui.menus.data[iD] then
 		return self.ui.menus.data[iD].Name or ""
