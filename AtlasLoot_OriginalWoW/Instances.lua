@@ -2495,76 +2495,83 @@ AtlasLoot:AddItemData({
 	--------------------
 	--- World Bosses ---
 	--------------------
-	----------------------------
-	--- Dragons of Nightmare ---
-	----------------------------
 	["WorldBossesCLASSIC"] = {
-		{
-			{ itemID = 20581 }, --Staff of Rampant Growth
-			{ itemID = 17070 }, --Fang of the Mystics
-			{ itemID = 19130 }, --Cold Snap
-			{ itemID = 17113 }, --Amberseal Keeper
-			{ itemID = 20636 }, --Hibernation Crystal
-			{ itemID = 20582 }, --Trance Stone
-			{ itemID = 18665 }, --The Eye of Shadow
-			{ itemID = 18704 }, --Mature Blue Dragon Sinew
-			{ itemID = 18714 }, --Ancient Sinew Wrapped Lamina
-			{ itemID = 20580 }, --Hammer of Bestial Fury
-			{ itemID = 20599 }, --Polished Ironwood Crossbow
-			{ itemID = 18202 }, --Eskhandar's Left Claw
-			{ itemID = 20577 }, --Nightmare Blade
-			{ itemID = 20578 }, --Emerald Dragonfang
-			{ itemID = 17112 }, --Empyrean Demolisher
-			{ itemID = 18542 }, --Typhoon
-			{ itemID = 20644 }, --Nightmare Engulfed Object
-			{ itemID = 20600 }, --Malfurion's Signet Ring
-		},
-		{
-			{ itemID = 20623 }, --Circlet of Restless Dreams
-			{ itemID = 20615 }, --Dragonspur Wraps
-			{ itemID = 122884 }, --Wristguards of the Shifting Sands
-			{ itemID = 122885 }, --Waistguard of the Shifting Sands
-			{ itemID = 18544 }, --Doomhide Gauntlets
-			{ itemID = 20627 }, --Dark Heart Pants
-			{ itemID = 20633 }, --Unnatural Leather Spaulders
-			{ itemID = 20617 }, --Ancient Corroded Leggings
-			{ itemID = 20624 }, --Ring of the Unliving
-			{ itemID = 20622 }, --Dragonheart Necklace
-			{ itemID = 18541 }, --Puissant Cape
-			{ itemID = 18204 }, --Eskhandar's Pelt
-		},
-		{
-			{itemID = 19132 }, --Crystal Adorned Crown
-			{ itemID = 18546 }, --Infernal Headcage
-			{ itemID = 20628 }, --Deviate Growth Cap
-			{ itemID = 18545 }, --Leggings of Arcane Supremacy
-			{ itemID = 19133 }, --Fel Infused Leggings
-			{ itemID = 20638 }, --Leggings of the Demented Mind
-			{ itemID = 20639 }, --Strangely Glyphed Legplates
-			{ itemID = 19131 }, --Snowblind Shoes
-			{ itemID = 20631 }, --Mendicant's Slippers
-			{ itemID = 20634 }, --Boots of Fright
-			{ itemID = 20621 }, --Boots of the Endless Moor
-			{ itemID = 20629 }, --Malignant Footguards
-			{ itemID = 20630 }, --Gauntlets of the Shining Light
-			{ itemID = 20618 }, --Gloves of Delusional Power
-			{ itemID = 20635 }, --Jade Inlaid Vestments
-			{ itemID = 19135 }, --Blacklight Bracer
-			{ itemID = 122886 }, --Bracers of the Sand Prince
-			{ itemID = 20626 }, --Black Bark Wristbands
-			{ itemID = 122887 }, --Belt of the Sand Prince
-			{ itemID = 19134 }, --Flayed Doomguard Belt
-			{ itemID = 20625 }, --Belt of the Dark Bog
+		----------------------------
+		--- Dragons of Nightmare ---
+		----------------------------
+		[6] = {
 			{ itemID = 20579 }, --Green Dragonskin Cloak
-			{ itemID = 18208 }, --Drape of Benediction
-			{ itemID = 20632 }, --Mindtear Band
-			{ itemID = 18543 }, --Ring of Entropy
-		},
-		{
-			{ itemID = 18547 }, --Unmelting Ice Girdle
+			{ itemID = 20618 }, --Gloves of Delusional Power
+			{ itemID = 20615 }, --Dragonspur Wraps
+			{ itemID = 20617 }, --Ancient Corroded Leggings
 			{ itemID = 20616 }, --Dragonbone Wristguards
 			{ itemID = 20619 }, --Acid Inscribed Greaves
+			{ itemID = 20582 }, --Trance Stone
+			{ itemID = 20580 }, --Hammer of Bestial Fury
+			{ itemID = 20581 }, --Staff of Rampant Growth
+			{ itemID = 20644 }, --Nightmare Engulfed Object
+			{ itemID = 20600 }, --Malfurion's Signet Ring
+			{ itemID = 20623 }, --Circlet of Restless Dreams
+			{ itemID = 20621 }, --Boots of the Endless Moor
+			{ itemID = 20622 }, --Dragonheart Necklace
+			{ itemID = 20624 }, --Ring of the Unliving
+			{ itemID = 20599 }, --Polished Ironwood Crossbow
+		},
+		[7] = {
+			{ itemID = 20579 }, --Green Dragonskin Cloak
+			{ itemID = 20618 }, --Gloves of Delusional Power
+			{ itemID = 20615 }, --Dragonspur Wraps
+			{ itemID = 20617 }, --Ancient Corroded Leggings
+			{ itemID = 20616 }, --Dragonbone Wristguards
+			{ itemID = 20619 }, --Acid Inscribed Greaves
+			{ itemID = 20582 }, --Trance Stone
+			{ itemID = 20580 }, --Hammer of Bestial Fury
+			{ itemID = 20581 }, --Staff of Rampant Growth
+			{ itemID = 20644 }, --Nightmare Engulfed Object
+			{ itemID = 20600 }, --Malfurion's Signet Ring
+			{ itemID = 20626 }, --Black Bark Wristbands
+			{ itemID = 20625 }, --Belt of the Dark Bog
+			{ itemID = 20628 }, --Deviate Growth Cap
+			{ itemID = 20627 }, --Dark Heart Pants
+			{ itemID = 20629 }, --Malignant Footguards
+			{ itemID = 20630 }, --Gauntlets of the Shining Light
+		},
+		[8] = {
+			{ itemID = 20579 }, --Green Dragonskin Cloak
+			{ itemID = 20618 }, --Gloves of Delusional Power
+			{ itemID = 20615 }, --Dragonspur Wraps
+			{ itemID = 20617 }, --Ancient Corroded Leggings
+			{ itemID = 20616 }, --Dragonbone Wristguards
+			{ itemID = 20619 }, --Acid Inscribed Greaves
+			{ itemID = 20582 }, --Trance Stone
+			{ itemID = 20580 }, --Hammer of Bestial Fury
+			{ itemID = 20581 }, --Staff of Rampant Growth
+			{ itemID = 20644 }, --Nightmare Engulfed Object
+			{ itemID = 20600 }, --Malfurion's Signet Ring
+			{ itemID = 20631 }, --Mendicant's Slippers
+			{ itemID = 20633 }, --Unnatural Leather Spaulders
+			{ itemID = 20634 }, --Boots of Fright
+			{ itemID = 20632 }, --Mindtear Band
+			{ itemID = 20577 }, --Nightmare Blade
+		},
+		[9] = {
+			{ itemID = 20579 }, --Green Dragonskin Cloak
+			{ itemID = 20618 }, --Gloves of Delusional Power
+			{ itemID = 20615 }, --Dragonspur Wraps
+			{ itemID = 20617 }, --Ancient Corroded Leggings
+			{ itemID = 20616 }, --Dragonbone Wristguards
+			{ itemID = 20619 }, --Acid Inscribed Greaves
+			{ itemID = 20582 }, --Trance Stone
+			{ itemID = 20580 }, --Hammer of Bestial Fury
+			{ itemID = 20581 }, --Staff of Rampant Growth
+			{ itemID = 20644 }, --Nightmare Engulfed Object
+			{ itemID = 20600 }, --Malfurion's Signet Ring
+			{ itemID = 20635 }, --Jade Inlaid Vestments
+			{ itemID = 20638 }, --Leggings of the Demented Mind
 			{ itemID = 20637 }, --Acid Inscribed Pauldrons
+			{ itemID = 20639 }, --Strangely Glyphed Legplates
+			{ itemID = 20636 }, --Hibernation Crystal
+			{ itemID = 20578 }, --Emerald Dragonfang
 		},
 	},
 })

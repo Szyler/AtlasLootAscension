@@ -100,6 +100,10 @@ AtlasLoot:AddNewMenus({
 		{ "Setis", {64600} },
 		{ "Snowgrave", {64627} },
 		{ "Atal'zul, the Soulreaver", {67529} },
+		{ "Emeriss", {} },
+		{ "Lethon", {} },
+		{ "Taerar", {} },
+		{ "Ysondre", {} },
 	},
 
 	-- ClassicDungeons
