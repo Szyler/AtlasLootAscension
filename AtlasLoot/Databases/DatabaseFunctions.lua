@@ -414,22 +414,26 @@ local function sortItemData(dataSource, dataID, tablenum)
 	if #lootTables == 0 then return end
 
 	local newTable = {{}}
+	local duplicateCheck = {}
 	if not dontSort then
 		local itemCatagories = createItemCatagoiresTable()
 		for _, lootTableSelection in ipairs(lootTables) do
 			for _, itemData in ipairs(AtlasLoot.data.item[lootTableSelection]) do
-				local itemType, itemSubType, _, itemEquipLoc = select(6, AtlasLoot:GetItemInfo(itemData.itemID, true))
-				local iType = itemCatagories[baseType[itemType]]
-				if iType and iType[subType[itemSubType]] then
-					local addType
-					if itemEquipLoc and equipLocType[itemEquipLoc] then
-						addType = iType[subType[itemSubType]][equipLocType[itemEquipLoc]]
+				if not duplicateCheck[itemData.itemID] then
+					local itemType, itemSubType, _, itemEquipLoc = select(6, AtlasLoot:GetItemInfo(itemData.itemID, true))
+					local iType = itemCatagories[baseType[itemType]]
+					if iType and iType[subType[itemSubType]] then
+						local addType
+						if itemEquipLoc and equipLocType[itemEquipLoc] then
+							addType = iType[subType[itemSubType]][equipLocType[itemEquipLoc]]
+						else
+							addType = iType[subType[itemSubType]]
+						end
+						table.insert(addType, itemData)
 					else
-						addType = iType[subType[itemSubType]]
+						table.insert(itemCatagories[5], itemData)
 					end
-					table.insert(addType, itemData)
-				else
-					table.insert(itemCatagories[5], itemData)
+					duplicateCheck[itemData.itemID] = true
 				end
 			end
 		end
