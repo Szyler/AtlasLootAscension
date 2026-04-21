@@ -677,6 +677,16 @@ AtlasLoot:AddItemData({
 			{ itemID = 17329 }, --Hand of Lucifron
 		},
 		{
+			{ itemID = 18823, groupID = 1, refLootEntry = 11982 }, --Aged Core Leather Gloves
+			{ itemID = 17105, groupID = 1, refLootEntry = 11982 }, --Aurastone Hammer
+			{ itemID = 12573, groupID = 1, refLootEntry = 11982 }, --Corebound Shoulders
+			{ itemID = 17066, groupID = 1, refLootEntry = 11982 }, --Drillborer Disk
+			{ itemID = 17073, groupID = 1, refLootEntry = 11982 }, --Earthshaker
+			{ itemID = 18203, groupID = 1, refLootEntry = 11982 }, --Eskhandar's Right Claw
+			{ itemID = 17071, groupID = 1, refLootEntry = 11982 }, --Gutgore Ripper
+			{ itemID = 18879, groupID = 1, refLootEntry = 11982 }, --Heavy Dark Iron Ring
+			{ itemID = 18870, groupID = 1, refLootEntry = 11982 }, --Helm of the Lifegiver
+			{ itemID = 17065, groupID = 1, refLootEntry = 11982 }, --Medallion of Steadfast Might
 			{ itemID = 2522359, sourcePage = {"TONELEGS","Token"} }, --Molten Leggaurds
 		},
 		{
@@ -700,11 +710,31 @@ AtlasLoot:AddItemData({
 			{ itemID = 19019 }, --Thunderfury, Blessed Blade of the Windseeker
 		},
 		{
+			{ itemID = 17072, groupID = 1, refLootEntry = 11988 }, --Blastershot Launcher
+			{ itemID = 18829, groupID = 1, refLootEntry = 11988 }, --Deep Earth Spaulders
+			{ itemID = 12908, groupID = 1, refLootEntry = 11988 }, --Magma Forged Walkers
+			{ itemID = 18824, groupID = 1, refLootEntry = 11988 }, --Magma Tempered Boots
+			{ itemID = 19136, groupID = 1, refLootEntry = 11988 }, --Mana Igniting Cord
+			{ itemID = 18872, groupID = 1, refLootEntry = 11988 }, --Manastorm Leggings
+			{ itemID = 18822, groupID = 1, refLootEntry = 11988 }, --Obsidian Edged Blade
+			{ itemID = 17110, groupID = 1, refLootEntry = 11988 }, --Seal of the Archmagus
+			{ itemID = 18842, groupID = 1, refLootEntry = 11988 }, --Staff of Dominance
+			{ itemID = 19146, groupID = 1, refLootEntry = 11988 }, --Wristguards of Stability
 			{ itemID = 2522350, sourcePage = {"TONECHEST","Token"} }, --Molten Tunic
 			{ itemID = 17203 }, --Sulfuron Ingot
 			{ itemID = 17182 }, --Sulfuras, Hand of Ragnaros
 		},
 		{
+			{ itemID = 17103, groupID = 1, refLootEntry = 12098 }, --Azuresong Mageblade
+			{ itemID = 12872, groupID = 1, refLootEntry = 12098 }, --Blazing Slippers
+			{ itemID = 17109, groupID = 1, refLootEntry = 12098 }, --Choker of Enlightenment
+			{ itemID = 12595, groupID = 1, refLootEntry = 12098 }, --Flamebound Harness
+			{ itemID = 19147, groupID = 1, refLootEntry = 12098 }, --Ring of Spell Power
+			{ itemID = 19145, groupID = 1, refLootEntry = 12098 }, --Robe of Volatile Power
+			{ itemID = 18875, groupID = 1, refLootEntry = 12098 }, --Salamander Scale Pants
+			{ itemID = 17074, groupID = 1, refLootEntry = 12098 }, --Shadowstrike
+			{ itemID = 17069, groupID = 1, refLootEntry = 12098 }, --Striker's Mark
+			{ itemID = 18820, groupID = 1, refLootEntry = 12098 }, --Talisman of Ephemeral Power
 			{ itemID = 2522365, sourcePage = {"TONEFEET","Token"} }, --Molten Boots
 			{ itemID = 17330 }, --Hand of Sulfuron
 		},
