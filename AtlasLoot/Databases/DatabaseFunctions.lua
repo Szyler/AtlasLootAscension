@@ -433,7 +433,7 @@ local function sortItemData(dataSource, dataID, tablenum)
 					else
 						table.insert(itemCatagories[5], itemData)
 					end
-					duplicateCheck[itemData.itemID] = true
+					if not itemData.name then duplicateCheck[itemData.itemID] = true end
 				end
 			end
 		end
