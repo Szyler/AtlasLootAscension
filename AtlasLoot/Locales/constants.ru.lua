@@ -87,7 +87,6 @@ if AL then
     AL["All modules"] = "Все модули";
     AL["If checked, AtlasLoot will load and search across all the modules."] = "Если включено, AtlasLoot будет загружать все модули и искать по ним.";
     AL["Search options"] = "Настройки поиска";
-    AL["Partial matching"] = "Частичное совпадение";
     AL["If checked, AtlasLoot search item names for a partial match."] = "Если включено, AtlasLoot будет искать названия предметов с частичным совпадением.";
     AL["You don't have any module selected to search on!"] = "Вы не выбрали ни одиного модуля для поиска!";
     AL["Treat Crafted Items:"] = "Обзор изготов. предметов:";

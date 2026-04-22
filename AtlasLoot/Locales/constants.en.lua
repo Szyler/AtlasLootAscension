@@ -117,7 +117,6 @@ if AL then
 	AL["All modules"] = true
 	AL["If checked, AtlasLoot will load and search across all the modules."] = true
 	AL["Search options"] = true
-	AL["Partial matching"] = true
 	AL["Ascension Vanity Collection"] = true
 	AL["If checked, AtlasLoot will search Ascension Vanity Collection"] = true
 	AL["Search AscensionDB"] = true

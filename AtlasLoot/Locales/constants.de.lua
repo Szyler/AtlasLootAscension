@@ -77,7 +77,6 @@ if AL then
 	AL["All modules"] = "Alle Module";
 	AL["If checked, AtlasLoot will load and search across all the modules."] = "Lässt AtlasLoot in allen Modulen suchen.";
 	AL["Search options"] = "Suchoptionen";
-	AL["Partial matching"] = "Teilweise Übereinstimmung";
 	AL["If checked, AtlasLoot search item names for a partial match."] = "Lässt AtlasLoot die Itemnamen mit teilweisen Übereinstimmungen durchsuchen.";
 	AL["You don't have any module selected to search on!"] = "Du hast kein Modul zur Suche ausgewählt";
 	AL["Treat Crafted Items:"] = "Herstellbare Gegenstände behandeln";

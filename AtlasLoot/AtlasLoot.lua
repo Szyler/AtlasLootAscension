@@ -37,7 +37,6 @@ AtlasLoot.DBDefaults = {
 		default = {
 			EquipCompare = false,
 			Opaque = false,
-			PartialMatching = true,
 			LootBrowserStyle = 1,
 			LootBrowserScale = 1.0,
 			MerchantGlow = false,

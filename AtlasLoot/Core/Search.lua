@@ -376,11 +376,7 @@ function AtlasLoot:InitializeSearch()
     end
 
     local function nameMatches(name, searchText)
-        if self.selectedProfile.PartialMatching then
-            return string.find(string.lower(name), string.lower(searchText))
-        else
-            return string.lower(name) == string.lower(searchText)
-        end
+        return string.find(string.lower(name), string.lower(searchText))
     end
 
     local RelationalFunctions = {
@@ -704,13 +700,7 @@ function AtlasLoot:InitializeSearch()
             { text = "Search options", isTitle = true },
             {
                 text = "Ascension Vanity Collection", isRadio = true, checked = profile.SearchAscensionVanity, dontCloseWhenClicked = true,
-                tooltip = "If checked, AtlasLoot will search Ascension Vanity Collection", func = function() profile.SearchAscensionVanity = not profile.SearchAscensionVanity end },
-            {
-                text = "Partial matching", isRadio = true, checked = profile.PartialMatching, dontCloseWhenClicked = true,
-                tooltip = "If checked, AtlasLoot search item names for a partial match.", func = function() profile.PartialMatching = not profile.PartialMatching end },
-            {
-                text = "Search AscensionDB", isRadio = true, checked = profile.SearchAscensionDB, dontCloseWhenClicked = true,
-                tooltip = "If checked, AtlasLoot will open a browser window and search AscensionDB", func = function() profile.SearchAscensionDB = not profile.SearchAscensionDB end 
+                tooltip = "If checked, AtlasLoot will search Ascension Vanity Collection", func = function() profile.SearchAscensionVanity = not profile.SearchAscensionVanity end
             },
         }}
 
@@ -1157,10 +1147,6 @@ function AtlasLoot:InitializeSearch()
                     searchString = AppendSearchString(searchString, searchPanel.searchOptions["arg" .. i] .. searchPanel.searchOptions["arg" .. i .. "op"] .. arg)
                 end
             end
-
-        if self.selectedProfile.SearchAscensionDB then
-            return OpenAscensionDBURL("?search="..searchString)
-        end
 
         -- Decide if we need load all modules or just specified ones
         local allDisabled = true
