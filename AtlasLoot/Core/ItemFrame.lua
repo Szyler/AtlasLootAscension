@@ -59,7 +59,7 @@ function AtlasLoot:InitializeItemFrame()
 		for _, item in pairs(itemData) do
 			local show, itemID, recipeID = self:GetItemConditionals(item, dataSource)
 			local newItemData = {}
-				if (show and self:FilterItem(item, dataSource)) then
+				if (show and self:FilterItem(item, itemID, dataSource)) then
 					newItemData.itemID = itemID
 					newItemData.recipeID = recipeID
 					table.insert(displayItems, {item, newItemData})
