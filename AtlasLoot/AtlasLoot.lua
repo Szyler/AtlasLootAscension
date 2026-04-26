@@ -52,7 +52,6 @@ AtlasLoot.DBDefaults = {
 
 local CharDefaultSettings = {
 	QuickLooks = {},
-	SearchResult = {Name = "Search Result" , Type = "Search", Back = true},
 }
 
 local LootFilterDefaultSettings = {

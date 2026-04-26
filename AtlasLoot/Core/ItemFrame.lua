@@ -99,13 +99,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 
 	local dataSource, itemData, numberPages = self:GetSourceData(dataSource_backup, dataID, tablenum)
 
-    --If the loot table name has not been passed, throw up a debugging statement
-	if not dataID or not dataSource or not numberPages then
-		DEFAULT_CHAT_FRAME:AddMessage("No data for this category or selection exists")
-        return
-	end
-
-	pageNumber = (pageNumber and pageNumber > numberPages and (pageNumber - (pageNumber - numberPages)))  or pageNumber or 1
+	self:HideItemButtons()
 
 	--Hide search for normal loot tables
 	if dataID ~= "SearchResult"  then
@@ -119,6 +113,14 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
         self.ui.currentInstanceButton:Hide()
         self.ui.favoritesButton:Hide()
 	end
+
+    --If the loot table name has not been passed, throw up a debugging statement
+	if not dataID or not dataSource or not numberPages then
+		DEFAULT_CHAT_FRAME:AddMessage("No data for this category or selection exists")
+        return
+	end
+
+	pageNumber = (pageNumber and pageNumber > numberPages and (pageNumber - (pageNumber - numberPages)))  or pageNumber or 1
 
 	--Hide Map and reshow lootbackground
 	self.ui.tabs.Map:Hide()
@@ -204,7 +206,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 
 	-- Sets the main page lable
 	if dataSource[tablenum][1] then
-		local name = self:FixText(dataSource[tablenum].Name or dataSource[tablenum][1])
+		local name = self:FixText((dataID == "SearchResult" and "Search Results") or dataSource[tablenum].Name or dataSource[tablenum][1])
 		self.itemframe.Label:SetText(name)
 	else
 		self.itemframe.Label:SetText("This Is Empty")
