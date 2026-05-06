@@ -380,131 +380,131 @@ function AtlasLoot:InitializeSearch()
     end
 
     local RelationalFunctions = {
-        ["ilvl"] = {isItemLevelFilterMatch, 3},
-        ["minlvl"] = {isMinLevelFilterMatch, 4},
-        ["type"] = {isItemTypeMatch, 6},
-        ["slot"] = {isItemSlotMatch, 5},
-        ["quality"] = {isItemQualityMatch, 2},
+        ilvl = {isItemLevelFilterMatch, 3},
+        minlvl = {isMinLevelFilterMatch, 4},
+        type = {isItemTypeMatch, 6},
+        slot = {isItemSlotMatch, 5},
+        quality = {isItemQualityMatch, 2},
 
-        ["gem"] = {isItemSocketMatch, 7},
-        ["gems"] = {isItemSocketMatch, 7},
-        ["socket"] = {isItemSocketMatch, 7},
-        ["sockets"] = {isItemSocketMatch, 7},
+        gem = {isItemSocketMatch, 7},
+        gems = {isItemSocketMatch, 7},
+        socket = {isItemSocketMatch, 7},
+        sockets = {isItemSocketMatch, 7},
 
         -- Base Stats
-        ["stamina"] = {isItemStatMatch, 7},
-        ["stam"] = {isItemStatMatch, 7},
-        ["sta"] = {isItemStatMatch, 7},
+        stamina = {isItemStatMatch, 7},
+        stam = {isItemStatMatch, 7},
+        sta = {isItemStatMatch, 7},
 
-        ["strength"] = {isItemStatMatch, 7},
-        ["str"] = {isItemStatMatch, 7},
+        strength = {isItemStatMatch, 7},
+        str = {isItemStatMatch, 7},
 
-        ["agility"] = {isItemStatMatch, 7},
-        ["agi"] = {isItemStatMatch, 7},
+        agility = {isItemStatMatch, 7},
+        agi = {isItemStatMatch, 7},
 
-        ["intellect"] = {isItemStatMatch, 7},
-        ["int"] = {isItemStatMatch, 7},
+        intellect = {isItemStatMatch, 7},
+        int = {isItemStatMatch, 7},
 
-        ["spirit"] = {isItemStatMatch, 7},
-        ["spir"] = {isItemStatMatch, 7},
-        ["spi"] = {isItemStatMatch, 7},
+        spirit = {isItemStatMatch, 7},
+        spir = {isItemStatMatch, 7},
+        spi = {isItemStatMatch, 7},
 
-        ["health"] = {isItemStatMatch, 7},
-        ["mana"] = {isItemStatMatch, 7},
+        health = {isItemStatMatch, 7},
+        mana = {isItemStatMatch, 7},
 
-        ["mp5"] = {isItemStatMatch, 7},
-        ["mpr"] = {isItemStatMatch, 7},
+        mp5 = {isItemStatMatch, 7},
+        mpr = {isItemStatMatch, 7},
 
-        ["hp5"] = {isItemStatMatch, 7},
-        ["hpr"] = {isItemStatMatch, 7},
+        hp5 = {isItemStatMatch, 7},
+        hpr = {isItemStatMatch, 7},
 
         -- Sockets
-        ["socketblue"] = {isItemStatMatch, 7},
-        ["socketred"] = {isItemStatMatch, 7},
-        ["socketyellow"] = {isItemStatMatch, 7},
+        socketblue = {isItemStatMatch, 7},
+        socketred = {isItemStatMatch, 7},
+        socketyellow = {isItemStatMatch, 7},
 
-        ["socketnocolor"] = {isItemStatMatch, 7},
-        ["socketwhite"] = {isItemStatMatch, 7},
+        socketnocolor = {isItemStatMatch, 7},
+        socketwhite = {isItemStatMatch, 7},
 
-        ["socketmeta"] = {isItemStatMatch, 7},
-        ["meta"] = {isItemStatMatch, 7},
+        socketmeta = {isItemStatMatch, 7},
+        meta = {isItemStatMatch, 7},
 
         -- Secondary Stats
-        ["attackpowerferal"] = {isItemStatMatch, 7},
-        ["attackpowferal"] = {isItemStatMatch, 7},
-        ["apferal"] = {isItemStatMatch, 7},
+        attackpowerferal = {isItemStatMatch, 7},
+        attackpowferal = {isItemStatMatch, 7},
+        apferal = {isItemStatMatch, 7},
 
-        ["attackpower"] = {isItemStatMatch, 7},
-        ["attackpow"] = {isItemStatMatch, 7},
-        ["ap"] = {isItemStatMatch, 7},
+        attackpower = {isItemStatMatch, 7},
+        attackpow = {isItemStatMatch, 7},
+        ap = {isItemStatMatch, 7},
 
-        ["spellpower"] = {isItemStatMatch, 7},
-        ["spellpow"] = {isItemStatMatch, 7},
-        ["sp"] = {isItemStatMatch, 7},
+        spellpower = {isItemStatMatch, 7},
+        spellpow = {isItemStatMatch, 7},
+        sp = {isItemStatMatch, 7},
 
-        ["spellpenetration"] = {isItemStatMatch, 7},
-        ["spellpen"] = {isItemStatMatch, 7},
-        ["spp"] = {isItemStatMatch, 7},
+        spellpenetration = {isItemStatMatch, 7},
+        spellpen = {isItemStatMatch, 7},
+        spp = {isItemStatMatch, 7},
 
-        ["crit"] = {isItemStatMatch, 7},
-        ["haste"] = {isItemStatMatch, 7},
+        crit = {isItemStatMatch, 7},
+        haste = {isItemStatMatch, 7},
 
-        ["hit"] = {isItemStatMatch, 7},
+        hit = {isItemStatMatch, 7},
 
-        ["armorpenetration"] = {isItemStatMatch, 7},
-        ["armourpenetration"] = {isItemStatMatch, 7},
-        ["armorpen"] = {isItemStatMatch, 7},
-        ["armourpen"] = {isItemStatMatch, 7},
-        ["arp"] = {isItemStatMatch, 7},
+        armorpenetration = {isItemStatMatch, 7},
+        armourpenetration = {isItemStatMatch, 7},
+        armorpen = {isItemStatMatch, 7},
+        armourpen = {isItemStatMatch, 7},
+        arp = {isItemStatMatch, 7},
 
-        ["dps"] = {isItemStatMatch, 7},
+        dps = {isItemStatMatch, 7},
 
-        ["resilience"] = {isItemStatMatch, 7},
-        ["resil"] = {isItemStatMatch, 7},
-        ["res"] = {isItemStatMatch, 7},
+        resilience = {isItemStatMatch, 7},
+        resil = {isItemStatMatch, 7},
+        res = {isItemStatMatch, 7},
 
-        ["defense"] = {isItemStatMatch, 7},
-        ["def"] = {isItemStatMatch, 7},
+        defense = {isItemStatMatch, 7},
+        def = {isItemStatMatch, 7},
 
-        ["dodge"] = {isItemStatMatch, 7},
-        ["dod"] = {isItemStatMatch, 7},
+        dodge = {isItemStatMatch, 7},
+        dod = {isItemStatMatch, 7},
 
-        ["block"] = {isItemStatMatch, 7},
+        block = {isItemStatMatch, 7},
 
-        ["blockvalue"] = {isItemStatMatch, 7},
-        ["blockval"] = {isItemStatMatch, 7},
-        ["bv"] = {isItemStatMatch, 7},
+        blockvalue = {isItemStatMatch, 7},
+        blockval = {isItemStatMatch, 7},
+        bv = {isItemStatMatch, 7},
 
-        ["parry"] = {isItemStatMatch, 7},
+        parry = {isItemStatMatch, 7},
 
         -- Resistances
-        ["armor"] = {isItemStatMatch, 7},
-        ["armour"] = {isItemStatMatch, 7},
-        ["arm"] = {isItemStatMatch, 7},
-        ["resistancephysical"] = {isItemStatMatch, 7},
-        ["resistancephys"] = {isItemStatMatch, 7},
-        ["resphys"] = {isItemStatMatch, 7},
+        armor = {isItemStatMatch, 7},
+        armour = {isItemStatMatch, 7},
+        arm = {isItemStatMatch, 7},
+        resistancephysical = {isItemStatMatch, 7},
+        resistancephys = {isItemStatMatch, 7},
+        resphys = {isItemStatMatch, 7},
 
-        ["resistanceholy"] = {isItemStatMatch, 7},
-        ["resholy"] = {isItemStatMatch, 7},
+        resistanceholy = {isItemStatMatch, 7},
+        resholy = {isItemStatMatch, 7},
 
-        ["resistancefire"] = {isItemStatMatch, 7},
-        ["resfire"] = {isItemStatMatch, 7},
+        resistancefire = {isItemStatMatch, 7},
+        resfire = {isItemStatMatch, 7},
 
-        ["resistancenature"] = {isItemStatMatch, 7},
-        ["resnature"] = {isItemStatMatch, 7},
-        ["resnat"] = {isItemStatMatch, 7},
+        resistancenature = {isItemStatMatch, 7},
+        resnature = {isItemStatMatch, 7},
+        resnat = {isItemStatMatch, 7},
 
-        ["resistanceforst"] = {isItemStatMatch, 7},
-        ["resfrost"] = {isItemStatMatch, 7},
+        resistanceforst = {isItemStatMatch, 7},
+        resfrost = {isItemStatMatch, 7},
 
-        ["resistanceshadow"] = {isItemStatMatch, 7},
-        ["resshadow"] = {isItemStatMatch, 7},
-        ["resshad"] = {isItemStatMatch, 7},
+        resistanceshadow = {isItemStatMatch, 7},
+        resshadow = {isItemStatMatch, 7},
+        resshad = {isItemStatMatch, 7},
 
-        ["resistancearcane"] = {isItemStatMatch, 7},
-        ["resarcane"] = {isItemStatMatch, 7},
-        ["resarc"] = {isItemStatMatch, 7},
+        resistancearcane = {isItemStatMatch, 7},
+        resarcane = {isItemStatMatch, 7},
+        resarc = {isItemStatMatch, 7},
 
     }
 
