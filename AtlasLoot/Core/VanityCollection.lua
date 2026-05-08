@@ -175,7 +175,7 @@ function AtlasLoot:CreateVanityCollection()
     end
 
 	local categorieList = {}
-	for _, item in pairs(VANITY_ITEMS) do
+	for _, item in pairs(self:GetVanityItems()) do
         local group
 		local flavor = GetItemFlavorText(item.itemid)
         local itemInfo = {self:GetItemInfo(item.itemid, true)}
@@ -239,10 +239,10 @@ function AtlasLoot:LearnAllUnknownVanitySpells()
 		if self.data.item[group] then
 			for _, category in ipairs(self.data.item[group]) do
 				for _, item in ipairs(category) do
-					if type(item) == "table" and item.itemID and C_VanityCollection.IsCollectionItemOwned(item.itemID) and VANITY_ITEMS[item.itemID] and
-					not CA_IsSpellKnown(VANITY_ITEMS[item.itemID].learnedSpell) and VANITY_ITEMS[item.itemID].learnedSpell ~= 0 then
+					if type(item) == "table" and item.itemID and C_VanityCollection.IsCollectionItemOwned(item.itemID) and self:GetVanityItemInfo(item.itemID) and
+					not CA_IsSpellKnown(self:GetVanityItemInfo(item.itemID).learnedSpell) and self:GetVanityItemInfo(item.itemID).learnedSpell ~= 0 then
 						local _, itemLink = self:GetItemInfo(item.itemID)
-						local spellName = GetSpellInfo(VANITY_ITEMS[item.itemID].learnedSpell)
+						local spellName = GetSpellInfo(self:GetVanityItemInfo(item.itemID).learnedSpell)
 						local itemTooltipInfo = self:GetTooltipItemInfo(itemLink)
 						if (itemTooltipInfo and not itemTooltipInfo.isKnown) and not unknownSpells[spellName] or
 						(unknownSpells[spellName] and item.itemID > unknownSpells[spellName]) then
@@ -272,9 +272,9 @@ function AtlasLoot:BatchRequestVanity(itemList)
 	local function nextItem()
         local task = tremove(itemList)
 		while task do
-			RequestDeliverVanityCollectionItem(task)
+			self:DeliverVanityItem(task)
             local count = GetItemCount(task)
-			if not CA_IsSpellKnown(VANITY_ITEMS[task].learnedSpell) and (not count or (count and count < duplicateList[task])) then
+			if not CA_IsSpellKnown(self:GetVanityItemInfo(task).learnedSpell) and (not count or (count and count < duplicateList[task])) then
 				table.insert(itemList, task)
 			end
 			return Timer.After(.2, nextItem)
@@ -282,4 +282,22 @@ function AtlasLoot:BatchRequestVanity(itemList)
 		DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot"..": "..self.Colors.YELLOW.."Retrieving Vanity Items Completed!")
     end
     return nextItem()
+end
+
+local vanityItems
+function AtlasLoot:GetVanityItems()
+	if not vanityItems then vanityItems = C_VanityCollection.GetAllItems() end
+	return vanityItems
+end
+
+function AtlasLoot:GetVanityItemInfo(id)
+	return self:GetVanityItems()[id]
+end
+
+function AtlasLoot:DeliverVanityItem(item)
+  if RequestDeliverVanityCollectionItem then
+    RequestDeliverVanityCollectionItem(item)
+  elseif C_VanityCollection.RequestDelivery then
+    C_VanityCollection.RequestDelivery(item)
+  end
 end

@@ -306,9 +306,9 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                     {text = "Shared Wishlists", value = "SharedWishlists", hasArrow = true, showOnCondition = notWishlist},
                     {text = "Add Wishlist", func = function() self:AddWishList() end, showOnCondition = notWishlist},
                     {text = "Vanity Collection", isTitle = true, showOnCondition = isCollectionItem},
-                    {text = "Learn/Recive Vanity Item", func = function() RequestDeliverVanityCollectionItem(itemID) end, showOnCondition = isCollectionItem}
+                    {text = "Learn/Recive Vanity Item", func = function() self:DeliverVanityItem(itemID) end, showOnCondition = isCollectionItem}
             },{}}
-            
+
         table.insert(wishList[2], {text = "OwnWishlists", isTitle = true, show = "OwnWishlists"})
         for i,v in pairs(AtlasLootWishList.Own) do
             if type(v) == "table" then

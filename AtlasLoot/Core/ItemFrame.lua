@@ -400,13 +400,13 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 			text = ""
 		end
 
-		if C_VanityCollection.IsCollectionItemOwned(itemID) and VANITY_ITEMS[itemID] and CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell) and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
+		if C_VanityCollection.IsCollectionItemOwned(itemID) and self:GetVanityItemInfo(itemID) and CA_IsSpellKnown(self:GetVanityItemInfo(itemID).learnedSpell) and self:GetVanityItemInfo(itemID).learnedSpell ~= 0 then
 			hightlightFrame:SetTexture(itemHighlightGreen)
 			hightlightFrame:Show()
 		elseif C_VanityCollection.IsCollectionItemOwned(itemID) then
 			hightlightFrame:SetTexture(itemHighlightBlue)
 			hightlightFrame:Show()
-			if dataSource_backup == "currentWishList" or (VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell ~= 0 and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell)) then
+			if dataSource_backup == "currentWishList" or (self:GetVanityItemInfo(itemID) and self:GetVanityItemInfo(itemID).learnedSpell ~= 0 and not CA_IsSpellKnown(self:GetVanityItemInfo(itemID).learnedSpell)) then
 				table.insert(self.vanityItems, itemID)
 			end
 		end
@@ -528,8 +528,8 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	--learned spell id is used for items that are part of the ascension vanity collection
 	itemButton.learnedSpellID = nil
 
-	if VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
-		itemButton.learnedSpellID = VANITY_ITEMS[itemID].learnedSpell
+	if self:GetVanityItemInfo(itemID) and self:GetVanityItemInfo(itemID).learnedSpell and self:GetVanityItemInfo(itemID).learnedSpell ~= 0 then
+		itemButton.learnedSpellID = self:GetVanityItemInfo(itemID).learnedSpell
 	end
 
 	itemButton.craftingData = self:GetRecipeSource(spellID)

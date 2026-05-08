@@ -484,6 +484,7 @@ local function sortItemData(dataSource, dataID, tablenum)
 	return displayData[lootTableName]
 end
 
+-- Main function for retrieval of a loot tables display data and item data
 function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 	local itemData, dataSource
 	if dataSource_backup == "currentWishList" then

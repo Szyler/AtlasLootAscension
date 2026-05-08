@@ -119,7 +119,7 @@ function AtlasLoot:GetWishListVanityItems(name)
 		if wishlist.Name == name then
 			if type(wishlist) == "table" then
 				for _, item in pairs(wishlist) do
-					local vanityData = VANITY_ITEMS[item.itemID]
+					local vanityData = self:GetVanityItemInfo(item.itemID)
 					if item.itemID and vanityData and C_VanityCollection.IsCollectionItemOwned(item.itemID) and (vanityData.learnedSpell == 0 or not CA_IsSpellKnown(vanityData.learnedSpell)) then
 						table.insert(itemList, item.itemID)
 					end
@@ -272,7 +272,7 @@ function AtlasLoot:DeleteFromWishList(item)
 		if item.name then
 			name = item.name
 		elseif item.itemID then
-			name = GetItemInfo(item.itemID)
+			name = self:GetItemInfo(item.itemID)
 		elseif item.spellID then
 			name = GetSpellInfo(item.spellID)
 		else
