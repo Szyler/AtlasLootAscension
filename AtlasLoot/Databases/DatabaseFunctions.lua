@@ -16,14 +16,30 @@ local difficultys = {
 	{"Ascended", 6}
 }
 
+local excludeList = {
+	"Ancient"
+}
+
+-- checks exclusion list for unwanted item difficultys
+local function checkExclude(discription)
+	for _, exclude in pairs(excludeList) do
+		if string.match(discription, exclude) then
+			return false
+		end
+	end
+	return true
+end
+
+-- returns correct difficultys
 local function getNormalLevel(discription)
 	for _, match in ipairs(difficultys) do
-		if string.match(discription, match[1]) then
+		if string.match(discription, match[1]) and checkExclude(discription) then
 			return match[1], match[2]
 		end
 	end
 end
 
+-- returns the correct mythic level
 local function getMythicLevel(description)
 	for i = 1, 40 do
   		local mythicNumber = string.match(description, "Mythic (%d+)")
