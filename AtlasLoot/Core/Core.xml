@@ -6,6 +6,7 @@
     <Script file="TextParsing.lua"/>
     <Script file="Options.lua"/>
     <Script file="LootButtons.lua"/>
+	<Script file="MapWapPoints.lua"/>
 	<Script file="MapData.lua"/>
     <Script file="Maps.lua"/>
 	<Script file="Launchers.lua"/>

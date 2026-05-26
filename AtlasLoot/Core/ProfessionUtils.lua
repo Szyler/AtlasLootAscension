@@ -148,17 +148,15 @@ local professionTable = {
 
 local craftingXpac = { ClassicCrafting = 1, BCCrafting = 2, WrathCrafting = 3 }
 
--- Sets pins on the map for all unknown tradeskill recipes if tomtom is installed 
+-- Sets pins on the map for all unknown tradeskill recipes 
 function AtlasLoot:SetRecipeMapPins()
 	local xpac = GetAccountExpansionLevel()+1
 	self:LoadAllModules()
 	for profKey, _ in pairs(self.db.profile.professions) do
 		if professionTable[profKey] then
 			for _, profTable in pairs(professionTable[profKey]) do
-				if craftingXpac[AtlasLoot_Data[profTable].Type] <= xpac then
-					for _, profType in pairs(AtlasLoot_Data[profTable]) do
-						if type(profType) == "table" then
-							for _, recipeData in pairs(profType) do
+				if craftingXpac[self:GetDataType(profTable)] <= xpac then
+					for _, recipeData in ipairs(self.data.item[profTable.."1"]) do
 								if recipeData.spellID and not CA_IsSpellKnown(recipeData.spellID) then
 									local craftingData = self:GetRecipeSource(recipeData.spellID)
 									if craftingData then
@@ -167,13 +165,11 @@ function AtlasLoot:SetRecipeMapPins()
 												local line1 = v[1]
 												local line2 = v[2]
 												if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
-												self:AddWayPoint({ line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1})
+												self:AddWayPoint(line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1)
 											end
 										end
 									end
 								end
-							end
-						end
 					end
 				end
 			end

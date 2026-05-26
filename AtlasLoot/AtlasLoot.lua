@@ -98,9 +98,6 @@ function AtlasLoot:OnEnable()
 	self:InitializeWishlistMerchantGlow()
 	self:PatchNotes()
 
-
-	if IsAddOnLoaded("TomTom") then self.TomTomLoaded = true end
-
 	collectgarbage("collect")
 end
 

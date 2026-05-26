@@ -246,24 +246,6 @@ function AtlasLoot:ItemOnClick(item, button)
     end
 end
 
-local zoneList
---Creates a zone list for use in adding vendor and mob drop waypoints to tomtom
-function AtlasLoot:AddWayPoint(waypoint)
-    if not zoneList then
-    zoneList = {}
-        for continentN , _ in ipairs{GetMapContinents()} do
-            for zoneNum, zoneName in ipairs{GetMapZones(continentN)} do
-                zoneList[zoneName:lower()] = {continentN, zoneNum, zoneName:lower()}
-            end
-        end
-    end
-    local zoneName = waypoint[1]:lower()
-    --Adds a waypoint to tomtom
-    if zoneList[zoneName] then
-        TomTom:AddZWaypoint(zoneList[zoneName][1], zoneList[zoneName][2], tonumber(waypoint[2]), tonumber(waypoint[3]), waypoint[4])
-    end
-end
-
 function AtlasLoot:ItemContextMenu(data, Type, recipeData)
     local craftingData = data.craftingData
     local itemID = data.itemID
@@ -322,7 +304,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
             end
         end
 
-        if self.TomTomLoaded and data.spellID then
+        if data.spellID then
             if not self.db.profile.waypointList then self.db.profile.waypointList = {} end
             local wayPoint
             if (craftingData and self.selectedProfile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not self.selectedProfile.recipeExtraInfoSwitch) then
@@ -333,7 +315,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                         local line2 = v[2]
                         if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
                         if not wayPoint then wayPoint = {} end
-                        table.insert(wayPoint, { line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1})
+                        table.insert(wayPoint, { line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1, (v.fac and v.fac[2])})
                     end
                 end
             end
@@ -343,7 +325,9 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                 {text = "Add pin to map",
                 func = function()
                     for _,v in pairs(wayPoint) do
-                        self:AddWayPoint(v)
+                        if not v[5] or (v[5] and (v[5] == playerFaction or v[5] == "Netural")) then
+                            self:AddWayPoint(unpack(v))
+                        end
                     end
                 end, showOnCondition = isWaypoint},
                 {text = "Add pin to map for every missing recipe", func = function() self:SetRecipeMapPins() end, showOnCondition = isWaypoint},
