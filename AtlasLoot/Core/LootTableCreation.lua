@@ -58,7 +58,7 @@ end
 function AtlasLoot:CreateOnDemandLootTable(typeL, isDungeon, name)
 	if isDungeon then
 		-- Return and show loot table if its already been created
-		if self.data.onDemand and self.data.onDemand[typeL] then return self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1, 1) end
+		if self.data.onDemand and self.data.onDemand[typeL] then return self:ShowItemsFrame(typeL, "onDemand", 1, 1) end
 	else
 		-- Return and show loot table if its already been created and up to date
 		if not AtlasLoot_Data_Cache or checkForWorldforgedUpdate(self, typeL) then
@@ -130,7 +130,7 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 		if firstLoad then
 			self:ShowItemsFrame("refresh")
 		else
-			self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1, 1)
+			self:ShowItemsFrame(typeL, "onDemand", 1, 1)
 			firstLoad = true
 		end
 		if not isDungeon then

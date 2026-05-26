@@ -133,7 +133,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 	self.ui.difficultyScrollFrame.Lable:Hide()
 
 	-- Enable map button if there is a map for this table.
-	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "currentWishList" then
+	if dataSource_backup ~= "onDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "currentWishList" then
 		if dataSource.Map then
 		-- Stops map reseting to default while still in the same raid/instance table
 			if self.itemframe.refresh == nil or dataID ~= self.itemframe.refresh[1] then
@@ -227,7 +227,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 		self.itemframe.refreshOri = {dataID, dataSource_backup, tablenum, pageNumber}
 	end
 
-	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "currentWishList" and
+	if dataSource_backup ~= "onDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "currentWishList" and
 	dataSource.Back ~= true and dataID ~= "EmptyTable" then
 		self.db.profile.LastBoss[self.Expac] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName, pageNumber}
 		self.db.profile.savedState[self.currentTable] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName, pageNumber}
@@ -449,7 +449,7 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 		else
 			extra = self:FixText(itemNumber.desc)
 		end
-	elseif itemNumber.dropLoc and (self.dataSourceBackup == "AtlasLoot_OnDemand" or (self.selectedProfile.showdropLocationOnSearch and dataID == "SearchResult")) then
+	elseif itemNumber.dropLoc and (self.dataSourceBackup == "onDemand" or (self.selectedProfile.showdropLocationOnSearch and dataID == "SearchResult")) then
 		local location, boss = self:FixText(itemNumber.dropLoc[1]), self:FixText(itemNumber.dropLoc[2])
 		extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss
 	elseif self.data.crafting["CraftingLevels"] and spellID and self.data.crafting["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
