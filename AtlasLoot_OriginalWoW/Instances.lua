@@ -1263,7 +1263,7 @@ AtlasLoot:AddItemData({
 	-------------------------
 	--- Scarlet Monastery ---
 	-------------------------
-	["Scarlet Monastery"] = {
+	["ScarletMonasteryArmory"] = {
 		{
 			{ itemID = 7719 }, --Raging Berserker's Helm
 			{ itemID = 7718 }, --Herod's Shoulder
@@ -1272,6 +1272,37 @@ AtlasLoot:AddItemData({
 			{ icon = "INV_Box_01", name = "Scarlet Trainee" },
 			{ itemID = 23192 }, --Tabard of the Scarlet Crusade
 		},
+		{
+			{ itemID = 7728 }, --Beguiler Robes
+			{ itemID = 7755 }, --Flintrock Shoulders
+			{ itemID = 7727 }, --Watchman Pauldrons
+			{ itemID = 7760 }, --Warchief Kilt
+			{ itemID = 7754 }, --Harbinger Boots
+			{ itemID = 5819 }, --Sunblaze Coif
+			{ itemID = 7759 }, --Archon Chestpiece
+			{ itemID = 10328 }, --Scarlet Chestpiece
+			{ itemID = 10332 }, --Scarlet Boots
+			{ itemID = 2262 }, --Mark of Kern
+			{ itemID = 1992 }, --Swampchill Fetish
+			{ itemID = 10333 }, --Scarlet Wristguards
+			{ itemID = 10331 }, --Scarlet Gauntlets
+			{ itemID = 10329 }, --Scarlet Belt
+			{ itemID = 5756 }, --Sliverblade
+			{ itemID = 8225 }, --Tainted Pierce
+			{ itemID = 8226 }, --The Butcher
+			{ itemID = 7786 }, --Headsplitter
+			{ itemID = 7761 }, --Steelclaw Reaver
+			{ itemID = 7753 }, --Bloodspiller
+			{ itemID = 7752 }, --Dreamslayer
+			{ itemID = 7736 }, --Fight Club
+			{ itemID = 7730 }, --Cobalt Crusher
+			{ itemID = 7758 }, --Ruthless Shiv
+			{ itemID = 7757 }, --Windweaver Staff
+			{ itemID = 7787 }, --Resplendent Guardian
+			{ itemID = 7729 }, --Chesterfall Musket
+		},
+	},
+	["ScarletMonasteryCathedral"] = {
 		{
 			{ itemID = 19507 }, --Inquisitor's Shawl
 			{ itemID = 19508 }, --Branded Leather Bracers
@@ -1289,6 +1320,37 @@ AtlasLoot:AddItemData({
 			{ itemID = 7721 }, --Hand of Righteousness
 			{ itemID = 20976 }, --Design: Citrine Pendant of Golden Healing
 		},
+		{
+			{ itemID = 7728 }, --Beguiler Robes
+			{ itemID = 7755 }, --Flintrock Shoulders
+			{ itemID = 7727 }, --Watchman Pauldrons
+			{ itemID = 7760 }, --Warchief Kilt
+			{ itemID = 7754 }, --Harbinger Boots
+			{ itemID = 5819 }, --Sunblaze Coif
+			{ itemID = 7759 }, --Archon Chestpiece
+			{ itemID = 10328 }, --Scarlet Chestpiece
+			{ itemID = 10332 }, --Scarlet Boots
+			{ itemID = 2262 }, --Mark of Kern
+			{ itemID = 1992 }, --Swampchill Fetish
+			{ itemID = 10333 }, --Scarlet Wristguards
+			{ itemID = 10331 }, --Scarlet Gauntlets
+			{ itemID = 10329 }, --Scarlet Belt
+			{ itemID = 5756 }, --Sliverblade
+			{ itemID = 8225 }, --Tainted Pierce
+			{ itemID = 8226 }, --The Butcher
+			{ itemID = 7786 }, --Headsplitter
+			{ itemID = 7761 }, --Steelclaw Reaver
+			{ itemID = 7753 }, --Bloodspiller
+			{ itemID = 7752 }, --Dreamslayer
+			{ itemID = 7736 }, --Fight Club
+			{ itemID = 7730 }, --Cobalt Crusher
+			{ itemID = 7758 }, --Ruthless Shiv
+			{ itemID = 7757 }, --Windweaver Staff
+			{ itemID = 7787 }, --Resplendent Guardian
+			{ itemID = 7729 }, --Chesterfall Musket
+		},
+	},
+	["ScarletMonasteryGraveyard"] = {
 		{
 			{ itemID = 7683 }, --Bloody Brass Knuckles
 			{ itemID = 7682 }, --Torturing Poker
@@ -1312,6 +1374,37 @@ AtlasLoot:AddItemData({
 			{ itemID = 7690 }, --Ebon Vise
 			{ itemID = 7689 }, --Morbid Dawn
 		},
+		{
+			{ itemID = 7728 }, --Beguiler Robes
+			{ itemID = 7755 }, --Flintrock Shoulders
+			{ itemID = 7727 }, --Watchman Pauldrons
+			{ itemID = 7760 }, --Warchief Kilt
+			{ itemID = 7754 }, --Harbinger Boots
+			{ itemID = 5819 }, --Sunblaze Coif
+			{ itemID = 7759 }, --Archon Chestpiece
+			{ itemID = 10328 }, --Scarlet Chestpiece
+			{ itemID = 10332 }, --Scarlet Boots
+			{ itemID = 2262 }, --Mark of Kern
+			{ itemID = 1992 }, --Swampchill Fetish
+			{ itemID = 10333 }, --Scarlet Wristguards
+			{ itemID = 10331 }, --Scarlet Gauntlets
+			{ itemID = 10329 }, --Scarlet Belt
+			{ itemID = 5756 }, --Sliverblade
+			{ itemID = 8225 }, --Tainted Pierce
+			{ itemID = 8226 }, --The Butcher
+			{ itemID = 7786 }, --Headsplitter
+			{ itemID = 7761 }, --Steelclaw Reaver
+			{ itemID = 7753 }, --Bloodspiller
+			{ itemID = 7752 }, --Dreamslayer
+			{ itemID = 7736 }, --Fight Club
+			{ itemID = 7730 }, --Cobalt Crusher
+			{ itemID = 7758 }, --Ruthless Shiv
+			{ itemID = 7757 }, --Windweaver Staff
+			{ itemID = 7787 }, --Resplendent Guardian
+			{ itemID = 7729 }, --Chesterfall Musket
+		},
+	},
+	["ScarletMonasteryLibrary"] = {
 		{
 			{ itemID = 7756 }, --Dog Training Gloves
 			{ itemID = 7710 }, --Loksey's Training Stick
