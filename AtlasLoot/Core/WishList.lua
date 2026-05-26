@@ -412,7 +412,7 @@ StaticPopupDialogs["ATLASLOOT_DELETE_WISHLIST"] = {
 		table.remove(AtlasLootWishList[AtlasLoot.currentWishList.Show.ListType], AtlasLoot.ui.tabs.Loot.TableScrollFrame.tablenum)
 		AtlasLootWishList.Options[playerName].DefaultWishList[3] = 1
 		if AtlasLootWishList[AtlasLoot.currentWishList.Show.ListType][1] == nil then
-			AtlasLoot:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1, 1)
+			AtlasLoot:ShowItemsFrame("EmptyTable", "itemData", 1, 1)
 		else
 			AtlasLoot:ShowWishList(1)
 		end
