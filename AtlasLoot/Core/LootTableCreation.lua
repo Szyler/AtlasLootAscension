@@ -81,7 +81,7 @@ function AtlasLoot:CreateOnDemandLootTable(typeL, isDungeon, name)
 					if type(itemData) == "table" and itemData.itemID and not checkList[itemData.itemID] then
 						itemData.dropLoc = {self:GetDataDisplayName(dataID), self:GetDataPageName(dataID)}
 						local dataSource, tableNum = self:GetSourceLocation(dataID)
-						itemData.sourcePage = {{dataSource, "AtlasLoot_Data", tableNum}, "Source"}
+						itemData.sourcePage = {{dataSource, "itemData", tableNum}, "Source"}
 						checkList[itemData.itemID] = true
 						table.insert(itemList, itemData)
 					end

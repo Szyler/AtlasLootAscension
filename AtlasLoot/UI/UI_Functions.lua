@@ -29,9 +29,9 @@ function AtlasLoot:InitializeUIFunctions()
             self.moduleName = lastboss[6]
             self:IsLootTableAvailable(lastboss[4])
             self.ui.moduelMenuButton:SetText(self.moduleName)
-            self:ShowItemsFrame(lastboss[1], "AtlasLoot_Data", lastboss[3], lastboss[7])
+            self:ShowItemsFrame(lastboss[1], "itemData", lastboss[3], lastboss[7])
         else
-            self:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1, 1)
+            self:ShowItemsFrame("EmptyTable", "itemData", 1, 1)
         end
     end
 
@@ -44,7 +44,7 @@ function AtlasLoot:InitializeUIFunctions()
             self.currentTable = sourceData.CollectionModuleName
             self.lastModule = sourceData.Module
             self:IsLootTableAvailable(self.lastModule)
-            self:ShowItemsFrame(instance, "AtlasLoot_Data", 1, 1)
+            self:ShowItemsFrame(instance, "itemData", 1, 1)
             return true
         end
     end
@@ -79,7 +79,7 @@ function AtlasLoot:InitializeUIFunctions()
             if lasttable then
                 self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3], lasttable[7])
             else
-                self:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum, 1)
+                self:ShowItemsFrame(tablename, "itemData", tablenum, 1)
             end
     end
 
@@ -108,7 +108,7 @@ function AtlasLoot:InitializeUIFunctions()
             --Show the select loot table
             local tablenum = self.ui.menus.data[tablename].Loadfirst or 1
             --Show the table that has been selected
-            self:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum, 1)
+            self:ShowItemsFrame(tablename, "itemData", tablenum, 1)
         end
     end
 
@@ -161,7 +161,7 @@ function AtlasLoot:InitializeUIFunctions()
                 self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3], lasttable[7])
             else
                 local tablenum = self.ui.menus.data[tablename].Loadfirst or 1
-                self:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum, 1)
+                self:ShowItemsFrame(tablename, "itemData", tablenum, 1)
             end
         end
     end

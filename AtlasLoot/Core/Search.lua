@@ -588,7 +588,7 @@ function AtlasLoot:InitializeSearch()
                 self:ItemsLoading(-1)
                 local spellName = GetSpellInfo(spellID)
                 if nameMatches(spellName, searchText) then
-                    addItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
+                    addItemToSearchResult(itemData, "itemData", dataID, tableNum)
                     if not showSearch then
                         showSearchResult()
                         showSearch = true
@@ -602,7 +602,7 @@ function AtlasLoot:InitializeSearch()
                     itemDetails[1] = item:GetName()
                     if not itemDetails[1] then return end
                     if itemMatchesAllTerms(searchTerms, itemDetails) then
-                        addItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
+                        addItemToSearchResult(itemData, "itemData", dataID, tableNum)
                         if not showSearch then
                             showSearchResult()
                             showSearch = true

@@ -1,13 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
---Table holding all loot tables is initialised here as it loads early
-AtlasLoot_Data = {
-	["EmptyTable"] = {
-		Name = "Select a Loot Table...",
-		{Name = "Select a Loot Table..."},
-	}
-}
-
 local difficultys = {
 	{"Heroic Bloodforged", 2},
 	{"Bloodforged", 1},
@@ -518,7 +510,7 @@ function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 	elseif dataID == "SearchResult" then
 		dataSource = AtlasLootCharDB[dataID]
 		itemData = AtlasLootCharDB[dataID][1]
-	elseif dataSource_backup == "AtlasLoot_Data" then
+	elseif dataSource_backup == "itemData" then
 		dataSource = self.ui.menus.data[dataID]
 		itemData = sortItemData(dataSource, dataID, tablenum)
 	end
