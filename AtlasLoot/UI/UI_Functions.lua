@@ -27,7 +27,6 @@ function AtlasLoot:InitializeUIFunctions()
             self.currentTable = lastboss[5]
             self.lastModule = lastboss[4]
             self.moduleName = lastboss[6]
-            self:IsLootTableAvailable(lastboss[4])
             self.ui.moduelMenuButton:SetText(self.moduleName)
             self:ShowItemsFrame(lastboss[1], "itemData", lastboss[3], lastboss[7])
         else
@@ -43,7 +42,6 @@ function AtlasLoot:InitializeUIFunctions()
             local sourceData = self:GetSourcesExtendedInfo(instance)
             self.currentTable = sourceData.CollectionModuleName
             self.lastModule = sourceData.Module
-            self:IsLootTableAvailable(self.lastModule)
             self:ShowItemsFrame(instance, "itemData", 1, 1)
             return true
         end
@@ -74,7 +72,6 @@ function AtlasLoot:InitializeUIFunctions()
         tablenum = tablenum or 1
         self.lastModule = AtlasLoot.ui.menus.collection[tablename].Module
         self.ui.moduelMenuButton:SetText(text)
-        self:IsLootTableAvailable(AtlasLoot.ui.menus.collection[tablename].Module)
             local lasttable = self.db.profile.savedState[self.currentTable]
             if lasttable then
                 self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3], lasttable[7])
@@ -154,7 +151,6 @@ function AtlasLoot:InitializeUIFunctions()
         self.Expac = expansion
         if self.currentTable then
             self.currentTable = cleanDataID(self.currentTable, 1) .. self.Expac
-            self:IsLootTableAvailable(AtlasLoot.ui.menus.collection[self.currentTable].Module)
             local tablename = AtlasLoot.ui.menus.collection[self.currentTable][1][2]
             local lasttable = self.db.profile.savedState[self.currentTable]
             if lasttable then
@@ -204,7 +200,7 @@ function AtlasLoot:InitializeUIFunctions()
             self:SetFavorites(button.num)
         else
             local favButton = AtlasLootCharDB.QuickLooks[button.num]
-            if favButton and self:IsLootTableAvailable(favButton[4]) then
+            if favButton then
                 button.lastModule = favButton[4]
                 button.currentTable = favButton[5]
                 if favButton[2] == "AtlasLootWishList" then

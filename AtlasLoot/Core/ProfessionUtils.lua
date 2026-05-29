@@ -151,7 +151,6 @@ local craftingXpac = { ClassicCrafting = 1, BCCrafting = 2, WrathCrafting = 3 }
 -- Sets pins on the map for all unknown tradeskill recipes 
 function AtlasLoot:SetRecipeMapPins()
 	local xpac = GetAccountExpansionLevel()+1
-	self:LoadAllModules()
 	for profKey, _ in pairs(self.db.profile.professions) do
 		if professionTable[profKey] then
 			for _, profTable in pairs(professionTable[profKey]) do

@@ -181,32 +181,6 @@ AtlasLoot.dataModules = {
 	"AtlasLoot_Vanity"
 }
 
---[[
-AtlasLoot:LoadAllModules()
-Used to load all available LoD modules
-]]
-function AtlasLoot:LoadAllModules()
-	local loadedModules = {}
-	local flag = 0
-	for _, module in pairs(self.dataModules) do
-		loadedModules[module] = LoadAddOn(module)
-	end
-
-	for module, state in pairs(loadedModules) do
-		if not state then
-			LoadAddOn(module)
-			flag = 1
-		end
-	end
-
-	if flag == 1 then
-		if self.DebugMessages then
-			DEFAULT_CHAT_FRAME:AddMessage(self.Colors.GREEN.."AtlasLoot"..": "..self.Colors.WHITE.."All Available Modules Loaded")
-		end
-		collectgarbage("collect")
-	end
-end
-
 function AtlasLoot:UNIT_SPELLCAST_SUCCEEDED(event, arg1, arg2 , arg3)
 	if arg1 == "player" and arg2 == "Learning" then
 		self:PopulateProfessions()

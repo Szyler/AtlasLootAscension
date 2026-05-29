@@ -1,0 +1,19 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+    <Script file="Classic\Collections.lua"/>
+    <Script file="Classic\Crafting.lua"/>
+    <Script file="Classic\Factions.lua"/>
+    <Script file="Classic\Instances.lua"/>
+    <Script file="Classic\MapData.lua"/>
+    <Script file="Classic\PvP.lua"/>
+
+    <Script file="TBC\Collections.lua"/>
+    <Script file="TBC\Crafting.lua"/>
+    <Script file="TBC\Factions.lua"/>
+    <Script file="TBC\Instances.lua"/>
+    <Script file="TBC\MapData.lua"/>
+    <Script file="TBC\PvP.lua"/>
+
+    <Script file="Vanity.lua"/>
+    <Script file="Worldevents.lua"/>
+</Ui>

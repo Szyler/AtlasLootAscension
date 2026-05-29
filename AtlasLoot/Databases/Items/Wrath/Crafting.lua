@@ -1,24 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-local ALCHEMY = GetSpellInfo(2259)
-local BLACKSMITHING = GetSpellInfo(2018)
-local ARMORSMITH = GetSpellInfo(9788)
-local WEAPONSMITH = GetSpellInfo(9787)
-local AXESMITH = GetSpellInfo(17041)
-local HAMMERSMITH = GetSpellInfo(17040)
-local SWORDSMITH = GetSpellInfo(17039)
-local COOKING = GetSpellInfo(2550)
-local ENCHANTING = GetSpellInfo(7411)
-local ENGINEERING = GetSpellInfo(4036)
-local GNOMISH = GetSpellInfo(20220)
-local GOBLIN = GetSpellInfo(20221)
-local FIRSTAID = GetSpellInfo(3273)
-local INSCRIPTION = GetSpellInfo(45357)
-local JEWELCRAFTING = GetSpellInfo(25229)
-local LEATHERWORKING = GetSpellInfo(2108)
-local MINING = GetSpellInfo(2575)
-local TAILORING = GetSpellInfo(3908)
-
 -- Index
 --- Tradeskill List
 ---- Alchemy

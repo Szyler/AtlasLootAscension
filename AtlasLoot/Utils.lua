@@ -302,21 +302,6 @@ function AtlasLoot:AddTooltip(frameb, tooltiptext)
 	frame:SetScript("OnLeave", function() GameTooltip:Hide() end)
  end
 
---[[
-AtlasLoot:IsLootTableAvailable(dataID):
-Checks if a loot table is in memory and attempts to load the correct LoD module if it isn't
-dataID: Loot table dataID
-]]
-local loadedModules = {}
-function AtlasLoot:IsLootTableAvailable(moduleName)
-	if moduleName and IsAddOnLoaded(moduleName) and loadedModules[moduleName] then
-		return true
-	elseif moduleName then
-		LoadAddOn(moduleName)
-		loadedModules[moduleName] = true
-	end
-end
-
 --------- rate limited item frame refresh ---------
 local refreshTimer
 function AtlasLoot:ItemRefreshTimer()
@@ -456,7 +441,6 @@ end
 function AtlasLoot:CreateItemSourceList(overRide)
 	if overRide then elseif not self.selectedProfile.showdropLocationTooltips then return end
 	if overRide or not AtlasLootDB.ItemSources or (AtlasLootDB.ItemSources.Version and AtlasLootDB.ItemSources.Version ~= self.Version) then
-		self:LoadAllModules()
 		AtlasLootDB.ItemSources = {Version = self.Version, List = {}}
 		local list = AtlasLootDB.ItemSources.List
 		local function addItem(itemData, dataType)

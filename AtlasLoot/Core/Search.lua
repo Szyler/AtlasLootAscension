@@ -1162,12 +1162,6 @@ function AtlasLoot:InitializeSearch()
             return
         end
 
-        for _, cat in pairs(self.selectedProfile.SearchOn) do
-            if type(cat) == "table" and cat[1] and not IsAddOnLoaded(cat[2]) then
-                LoadAddOn(cat[2])
-            end
-        end
-
         doSearch(searchString)
     end
 

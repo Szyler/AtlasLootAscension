@@ -96,9 +96,6 @@ end
 
 function AtlasLoot:GetSourceList()
 	local itemSource = {}
-	self:IsLootTableAvailable("AtlasLoot_OriginalWoW")
-	self:IsLootTableAvailable("AtlasLoot_BurningCrusade")
-	self:IsLootTableAvailable("AtlasLoot_WrathoftheLichKing")
 
 	local function addItem(itemData, dataType)
 		if type(itemData) == "table" then
@@ -241,6 +238,7 @@ function AtlasLoot:GetMerchantItems(missingOnly)
 		end
 	end
 end
+
 --[[ Regex used on the merchant data to put it in a better formate for atlasloot
 search with this
 \{(.*)
@@ -300,6 +298,7 @@ function AtlasLoot:AddItemData(var1, var2)
 			end
 		end
 	end
+	collectgarbage("collect")
 
 end
 
