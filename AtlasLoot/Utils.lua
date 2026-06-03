@@ -353,7 +353,7 @@ end
 -- finds and sets the tooltip for the itemID that it is sent
 local function SetTooltip(itemID, tooltip)
     local self = AtlasLoot
-	if not self.selectedProfile.showUnknownRecipeTooltip or UnitAffectingCombat("player") then return end
+	if not self.selectedProfile.showUnknownRecipeTooltip then return end
 	local text = self:IsRecipeUnknown(itemID)
 	if not text then return end
 	text = "Recipe could be learned by: "..self.Colors.GREEN..text
@@ -364,7 +364,7 @@ end
 
 -- item tooltip handler
 local function TooltipHandlerItem(tooltip)
-    --checks for combat less likley to cause a lag spike
+    --checks for combat less likely to cause a lag spike
     if UnitAffectingCombat("player") then return end
     --get item link and itemID
 	local link = select(2, tooltip:GetItem())
@@ -438,81 +438,68 @@ local function IgnoreTables(dataSource)
 	end
 end
 
-local idCache, itemSource
+function AtlasLoot:CreateItemSourceList()
+	self.ItemSourceList = {}
+	local function addItem(itemData, dataType)
+		if type(itemData) == "table" then
+			local sourceData = self:GetSourcesExtendedInfo(dataType)
+			if sourceData and sourceData.Source and itemData.itemID then
+				self.ItemSourceList[itemData.itemID] = sourceData.Source
+				if itemData.spellID then
+					local recipeID = self:GetRecipeID(itemData.spellID) or nil
+					if recipeID and (self.ItemSourceList[recipeID] and not IgnoreTables(dataType) or not self.ItemSourceList[recipeID]) then
+						self.ItemSourceList[recipeID] = sourceData.Source
+					end
+				end
+			else
+				for _, nextData in pairs(itemData) do
+					addItem(nextData, dataType)
+				end
+			end
+		end
+	end
+
+	for dataType, data in pairs(self.data.item) do
+		addItem(data, dataType)
+	end
+end
+
+local function findBaseItemID(id)
+	if ItemIDsDatabaseCorrectedIDs[id] or ItemIDsDatabase[id] then return id end
+	-- Corrected itemIDs database
+	-- Search's and returns the normal itemID
+	for normalID, item in pairs(ItemIDsDatabaseCorrectedIDs) do
+		for _, newID in pairs(item) do
+			if newID == id then
+				return normalID
+			end
+		end
+	end
+	-- Main itemIDs database
+	-- Search's and returns the normal itemID
+	for normalID, item in pairs(ItemIDsDatabase) do
+		for _, newID in pairs(item) do
+			if newID == id then
+				return normalID
+			end
+		end
+	end
+end
+
 -- Gets the drop source for an item
 function AtlasLoot:GetItemSource(itemID)
-
-	local function findBaseItemID(id)
-			if ItemIDsDatabaseCorrectedIDs[id] or ItemIDsDatabase[id] then return id end
-			-- Corrected itemIDs datatbase
-			-- Searchs the returns the itemID from any item difficulty to any item difficulty
-			for normalID, item in pairs(ItemIDsDatabaseCorrectedIDs) do
-				for _, newID in pairs(item) do
-					if newID == id then
-						return normalID
-					end
-				end
-			end
-			-- Main itemIDs database
-			-- Searchs the returns the itemID from any item difficulty to any item difficulty
-			for normalID, item in pairs(ItemIDsDatabase) do
-				for _, newID in pairs(item) do
-					if newID == id then
-						return normalID
-					end
-				end
-			end
-	end
-
-	local function getItemSource(itemID)
-		itemID = findBaseItemID(itemID)
-		local function addItem(itemData, dataType)
-			if type(itemData) == "table" then
-				local sourceData = self:GetSourcesExtendedInfo(dataType)
-				if sourceData and sourceData.Source and itemData.itemID and itemData.itemID == itemID then
-					return sourceData.Source
-	--[[ 				if itemData.spellID then
-						local recipeID = self:GetRecipeID(itemData.spellID) or nil
-						if recipeID and (list[recipeID] and not IgnoreTables(dataType) or not list[recipeID]) then
-							list[recipeID] = sourceData.Source
-						end
-					end ]]
-				else
-					for _, nextData in pairs(itemData) do
-						local source = addItem(nextData, dataType)
-						if source then return source end
-					end
-				end
-			end
-		end
-
-		for dataType, data in pairs(self.data.item) do
-			local source = addItem(data, dataType)
-			if source then return source end
-		end
-	end
-
-	-- Cache itemID so it doesn't needlessly loop if the same id gets repeated
-	if idCache and idCache == itemID and itemSource and itemSource[1] and itemSource[2] then
-		return itemSource[1], itemSource[2]
-	else
-		idCache = itemID
-		itemSource = getItemSource(itemID)
-		if itemSource then
-			return itemSource[1], itemSource[2]
-		end
+	local itemSource = self.ItemSourceList[findBaseItemID(itemID)]
+	if itemSource and itemSource[1] and itemSource[2] then
+		return "Item Source: " .. self.Colors.CYAN.. self:GetDataDisplayName(itemSource[1]) .. self.Colors.WHITE .. " - " .. self:GetDataPageName(itemSource[1], itemSource[2])
 	end
 end
 
 function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
 	local button = GetMouseFocus()
 	if not self.selectedProfile.showdropLocationTooltips or (button and button.isAtlasLoot) then return end
-	local mainSource, subSource = self:GetItemSource(itemID)
-	if not UnitAffectingCombat("player") and mainSource then
-		local text = "Item Source: " .. self.Colors.CYAN.. self:GetDataDisplayName(mainSource) .. self.Colors.WHITE .. " - " .. self:GetDataPageName(mainSource, subSource) or nil
-		if text and not CheckTooltipForDuplicate(tooltip, text) then
-			tooltip:AddLine(text)
-		end
+	local text = self:GetItemSource(itemID)
+	if text then
+		tooltip:AddLine(text)
 	end
 end
 
