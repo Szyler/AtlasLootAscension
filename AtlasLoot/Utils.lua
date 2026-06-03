@@ -438,6 +438,7 @@ local function IgnoreTables(dataSource)
 	end
 end
 
+local idCache, itemSource
 -- Gets the drop source for an item
 function AtlasLoot:GetItemSource(itemID)
 
@@ -491,9 +492,15 @@ function AtlasLoot:GetItemSource(itemID)
 		end
 	end
 
-	local itemSource = getItemSource(itemID)
-	if itemSource then
+	-- Cache itemID so it doesn't needlessly loop if the same id gets repeated
+	if idCache and idCache == itemID and itemSource and itemSource[1] and itemSource[2] then
 		return itemSource[1], itemSource[2]
+	else
+		idCache = itemID
+		itemSource = getItemSource(itemID)
+		if itemSource then
+			return itemSource[1], itemSource[2]
+		end
 	end
 end
 
