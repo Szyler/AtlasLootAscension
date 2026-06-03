@@ -438,47 +438,71 @@ local function IgnoreTables(dataSource)
 	end
 end
 
-function AtlasLoot:CreateItemSourceList(overRide)
-	if overRide then elseif not self.selectedProfile.showdropLocationTooltips then return end
-	if overRide or not AtlasLootDB.ItemSources or (AtlasLootDB.ItemSources.Version and AtlasLootDB.ItemSources.Version ~= self.Version) then
-		AtlasLootDB.ItemSources = {Version = self.Version, List = {}}
-		local list = AtlasLootDB.ItemSources.List
+-- Gets the drop source for an item
+function AtlasLoot:GetItemSource(itemID)
+
+	local function findBaseItemID(id)
+			if ItemIDsDatabaseCorrectedIDs[id] or ItemIDsDatabase[id] then return id end
+			-- Corrected itemIDs datatbase
+			-- Searchs the returns the itemID from any item difficulty to any item difficulty
+			for normalID, item in pairs(ItemIDsDatabaseCorrectedIDs) do
+				for _, newID in pairs(item) do
+					if newID == id then
+						return normalID
+					end
+				end
+			end
+			-- Main itemIDs database
+			-- Searchs the returns the itemID from any item difficulty to any item difficulty
+			for normalID, item in pairs(ItemIDsDatabase) do
+				for _, newID in pairs(item) do
+					if newID == id then
+						return normalID
+					end
+				end
+			end
+	end
+
+	local function getItemSource(itemID)
+		itemID = findBaseItemID(itemID)
 		local function addItem(itemData, dataType)
 			if type(itemData) == "table" then
 				local sourceData = self:GetSourcesExtendedInfo(dataType)
-				if sourceData and sourceData.Source and itemData.itemID then
-					list[itemData.itemID] = sourceData.Source
-					if ItemIDsDatabase[itemData.itemID] then
-						for _, varID in pairs(ItemIDsDatabase[itemData.itemID]) do
-							list[varID] = sourceData.Source
-						end
-					end
-					if itemData.spellID then
+				if sourceData and sourceData.Source and itemData.itemID and itemData.itemID == itemID then
+					return sourceData.Source
+	--[[ 				if itemData.spellID then
 						local recipeID = self:GetRecipeID(itemData.spellID) or nil
 						if recipeID and (list[recipeID] and not IgnoreTables(dataType) or not list[recipeID]) then
 							list[recipeID] = sourceData.Source
 						end
-					end
+					end ]]
 				else
 					for _, nextData in pairs(itemData) do
-						addItem(nextData, dataType)
+						local source = addItem(nextData, dataType)
+						if source then return source end
 					end
 				end
 			end
 		end
 
 		for dataType, data in pairs(self.data.item) do
-			addItem(data, dataType)
+			local source = addItem(data, dataType)
+			if source then return source end
 		end
 	end
-	self.ItemSourceList = AtlasLootDB.ItemSources.List
+
+	local itemSource = getItemSource(itemID)
+	if itemSource then
+		return itemSource[1], itemSource[2]
+	end
 end
 
 function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
 	local button = GetMouseFocus()
-	if not self.selectedProfile.showdropLocationTooltips or not self.ItemSourceList or (button and button.isAtlasLoot) then return end
-	if self.ItemSourceList[itemID] and self.ItemSourceList[itemID][1] and self.ItemSourceList[itemID][2] then
-		local text = "Item Source: " .. self.Colors.CYAN.. self:GetDataDisplayName(self.ItemSourceList[itemID][1]) .. self.Colors.WHITE .. " - " .. self:GetDataPageName(self.ItemSourceList[itemID][1], self.ItemSourceList[itemID][2]) or nil
+	if not self.selectedProfile.showdropLocationTooltips or (button and button.isAtlasLoot) then return end
+	local mainSource, subSource = self:GetItemSource(itemID)
+	if not UnitAffectingCombat("player") and mainSource then
+		local text = "Item Source: " .. self.Colors.CYAN.. self:GetDataDisplayName(mainSource) .. self.Colors.WHITE .. " - " .. self:GetDataPageName(mainSource, subSource) or nil
 		if text and not CheckTooltipForDuplicate(tooltip, text) then
 			tooltip:AddLine(text)
 		end

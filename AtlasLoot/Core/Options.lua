@@ -57,7 +57,7 @@ function AtlasLoot:InitializeOptionsFrame()
                         Type = "CheckButton",
                         Name = "showdropLocationTooltips",
                         Lable = "Show drop locations in tooltips",
-                        OnClick = function(button) self.selectedProfile.showdropLocationTooltips = button:GetChecked() self:CreateItemSourceList(true) end
+                        OnClick = function(button) self.selectedProfile.showdropLocationTooltips = button:GetChecked() end
                     },
                     {
                         Type = "CheckButton",
