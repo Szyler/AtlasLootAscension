@@ -2039,6 +2039,11 @@ function AtlasLoot:InitializeDatabases()
 		{ itemID = 4050653 }, --Pristine Tortoise Carapace
 	}
 
+	if AtlasLoot_Data_Cache.WorldforgedClassic and AtlasLoot_Data_Cache.WorldforgedClassic.Version and AtlasLoot_Data_Cache.WorldforgedClassic.Version == self.Version then
+		wipe(WorldforgedClassic)
+	end
+
+
 	self:AddItemData("sort", {
 		{ itemID = 0, groupID = 0, refLootEntry = 0 }; --Amulet of the Fallen God
 		{ itemID = 0, groupID = 0, refLootEntry = 0 }; --Amulet of the Shifting Sands
