@@ -1,6 +1,4 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0", "NewsFrame-1.0", "SettingsCreator-1.0", "AceSerializer-3.0", "AceComm-3.0")
-ATLASLOOT = AtlasLoot
-
 
 AtlasLoot.Version = GetAddOnMetadata("AtlasLoot", "Version")
 AtlasLoot.DebugMessages = false
@@ -8,6 +6,7 @@ AtlasLoot.Dewdrop = AceLibrary("Dewdrop-2.0")
 AtlasLoot.CurrentType = "Default"
 AtlasLoot.type = {}
 AtlasLoot.skin = { buttons = {}, frames = {} }
+AtlasLootGlobals = {skin = AtlasLoot.skin}
 
 -- Colours stored for code readability
 AtlasLoot.Colors = {
@@ -97,6 +96,10 @@ function AtlasLoot:OnEnable()
 	self:RegisterComm("AtlasLootWishlist")
 	self:InitializeWishlistMerchantGlow()
 	self:PatchNotes()
+
+	if self.selectedProfile.isAdmin then
+		ATLASLOOT = self
+	end
 
 	collectgarbage("collect")
 end

@@ -1,6 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-
 local playerName = UnitName("player")
 local playerFaction = UnitFactionGroup("player")
 
@@ -70,6 +69,7 @@ end
 -- Called when a loot item is moused over
 --------------------------------------------------------------------------------
 function AtlasLoot:ItemOnEnter(data)
+    self = AtlasLoot
     GameTooltip:ClearLines()
     local spellID = data.spellID
     local itemID = data.itemID
@@ -134,6 +134,7 @@ end
 -- Called when the mouse cursor leaves a loot item
 --------------------------------------------------------------------------------
 function AtlasLoot:ItemOnLeave(frame)
+    self = AtlasLoot
     --Hide the necessary tooltips
     if( self.selectedProfile.LootlinkTT ) then
         GameTooltip:Hide()
@@ -156,6 +157,7 @@ end
 -- Called when a loot item is clicked on
 --------------------------------------------------------------------------------
 function AtlasLoot:ItemOnClick(item, button)
+    self = AtlasLoot
     self.Dewdrop:Close()
     local spellID = item.spellID
     local itemID = item.itemID
@@ -245,6 +247,11 @@ function AtlasLoot:ItemOnClick(item, button)
         end
     end
 end
+
+AtlasLootGlobals.ItemOnEnter = AtlasLoot.ItemOnEnter
+AtlasLootGlobals.ItemOnLeave = AtlasLoot.ItemOnLeave
+AtlasLootGlobals.ItemOnClick = AtlasLoot.ItemOnClick
+
 
 function AtlasLoot:ItemContextMenu(data, Type, recipeData)
     local craftingData = data.craftingData

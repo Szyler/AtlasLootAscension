@@ -3,7 +3,7 @@
     <Button name="AtlasLootDropMenuTemplate" motionScriptsWhileDisabled="true" frameStrata="DIALOG" inherits="FilterDropDownMenuTemplate" virtual="true">
         <Scripts>
             <OnLoad> 
-                tinsert(ATLASLOOT.skin.buttons, self)
+                table.insert(AtlasLootGlobals.skin.buttons, self)
             </OnLoad>
             <OnMouseDown> </OnMouseDown>
             <OnMouseUp> </OnMouseUp>
@@ -32,9 +32,9 @@
             <OnMouseDown> </OnMouseDown>
             <OnMouseUp> </OnMouseUp>
             <OnShow> </OnShow>
-            <OnEnter> ATLASLOOT:ItemOnEnter(self) </OnEnter>
-            <OnLeave> ATLASLOOT:ItemOnLeave(self) </OnLeave>
-            <OnClick> ATLASLOOT:ItemOnClick(self, arg1) </OnClick>
+            <OnEnter> AtlasLootGlobals:ItemOnEnter(self) </OnEnter>
+            <OnLeave> AtlasLootGlobals:ItemOnLeave(self) </OnLeave>
+            <OnClick> AtlasLootGlobals:ItemOnClick(self, arg1) </OnClick>
         </Scripts>
         <Size x="236" y="29"/>
         <Layers>
@@ -80,9 +80,9 @@
             <OnMouseDown> </OnMouseDown>
             <OnMouseUp> </OnMouseUp>
             <OnShow> </OnShow>
-            <OnEnter> ATLASLOOT:FavoritesOnEnter(self) </OnEnter>
-            <OnLeave> ATLASLOOT:FavoritesOnLeave(self) </OnLeave>
-            <OnClick> ATLASLOOT:FavoritesOnClick(self, arg1) </OnClick>
+            <OnEnter> AtlasLootGlobals:FavoritesOnEnter(self) </OnEnter>
+            <OnLeave> AtlasLootGlobals:FavoritesOnLeave(self) </OnLeave>
+            <OnClick> AtlasLootGlobals:FavoritesOnClick(self, arg1) </OnClick>
         </Scripts>
         <Size x="30" y="30"/>
         <Layers>
@@ -100,7 +100,7 @@
 	<Frame name="AtlasLootFrameTemplate" virtual="true">
         <Scripts>
 			<OnLoad> 
-                tinsert(ATLASLOOT.skin.frames, self)
+                table.insert(AtlasLootGlobals.skin.frames, self)
         	</OnLoad>
 		</Scripts>
     </Frame>
@@ -134,7 +134,7 @@
     <Frame name="AtlasLootTapTemplate" virtual="true">
         <Scripts>
 			<OnLoad> 
-                tinsert(ATLASLOOT.skin.frames, self)
+                table.insert(AtlasLootGlobals.skin.frames, self)
         	</OnLoad>
 		</Scripts>
     </Frame>

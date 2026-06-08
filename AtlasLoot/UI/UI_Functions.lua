@@ -181,21 +181,24 @@ function AtlasLoot:InitializeUIFunctions()
     end
 
     function self:FavoritesOnLeave()
-            GameTooltip:Hide()
-            if not GetMouseFocus() then return end
-            local focus = GetMouseFocus():GetName()
-            if focus ~= "AtlasLoot_FavoritesPopupFrame" and focus ~= self.ui.favoritesButton and focus ~= "AtlasLoot_Preset1" and focus ~= "AtlasLoot_Preset2" and focus ~= "AtlasLoot_Preset3" and focus ~= "AtlasLoot_Preset4"  then
-                self.ui.favoritesPopupFrame:Hide()
-            end
+        self = AtlasLoot
+        GameTooltip:Hide()
+        if not GetMouseFocus() then return end
+        local focus = GetMouseFocus():GetName()
+        if focus ~= "AtlasLoot_FavoritesPopupFrame" and focus ~= self.ui.favoritesButton and focus ~= "AtlasLoot_Preset1" and focus ~= "AtlasLoot_Preset2" and focus ~= "AtlasLoot_Preset3" and focus ~= "AtlasLoot_Preset4"  then
+            self.ui.favoritesPopupFrame:Hide()
         end
-
+    end
+    
     function self:FavoritesOnEnter(button)
+        self = AtlasLoot
         if AtlasLootCharDB.QuickLooks[button.num] then
             self:SetGameTooltip(button,AtlasLootCharDB.QuickLooks[button.num][6])
         end
     end
 
     function self:FavoritesOnClick(button, buttonClick)
+        self = AtlasLoot
         if buttonClick == "RightButton" and IsAltKeyDown() then
             self:SetFavorites(button.num)
         else
@@ -211,6 +214,10 @@ function AtlasLoot:InitializeUIFunctions()
             end
         end
     end
+
+    AtlasLootGlobals.FavoritesOnEnter = self.FavoritesOnEnter
+    AtlasLootGlobals.FavoritesOnClick = self.FavoritesOnClick
+    AtlasLootGlobals.FavoritesOnLeave = self.FavoritesOnLeave
 
     function self:SetUITab()
         for _, tab in pairs(self.ui.tabs) do
