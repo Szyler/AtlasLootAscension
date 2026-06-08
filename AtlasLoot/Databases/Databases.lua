@@ -2039,7 +2039,7 @@ function AtlasLoot:InitializeDatabases()
 		{ itemID = 4050653 }, --Pristine Tortoise Carapace
 	}
 
-	if AtlasLoot_Data_Cache.WorldforgedClassic and AtlasLoot_Data_Cache.WorldforgedClassic.Version and AtlasLoot_Data_Cache.WorldforgedClassic.Version == self.Version then
+	if AtlasLoot_Data_Cache and AtlasLoot_Data_Cache.WorldforgedClassic and AtlasLoot_Data_Cache.WorldforgedClassic.Version and AtlasLoot_Data_Cache.WorldforgedClassic.Version == self.Version then
 		wipe(WorldforgedClassic)
 	end
 
