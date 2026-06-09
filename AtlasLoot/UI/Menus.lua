@@ -26,20 +26,22 @@ function AtlasLoot:AddNewMenus(menus)
 	end
 end
 
-function AtlasLoot:GetSourcesExtendedInfo(iD)
+function AtlasLoot:GetSourcesExtendedInfo(id)
 	local sourceInfo = {
-		Type = self:GetDataType(iD),
-		SourceName = self:GetDataDisplayName(iD),
-		Source = {self:GetSourceLocation(iD)},
-		Module = self:GetDataModule(iD),
-		Name = self:GetDataPageName(iD),
-		CollectionModuleName = self:GetCollectionModuleName(iD)
+		Type = self:GetDataType(id),
+		SourceName = self:GetDataDisplayName(id),
+		Source = {self:GetSourceLocation(id)},
+		Module = self:GetDataModule(id),
+		Name = self:GetDataPageName(id),
+		CollectionModuleName = self:GetCollectionModuleName(id),
+		collectionModule = self:GetCollectionModule(id)
 	}
 	return sourceInfo
 end
 
 local collectionKeys
-function AtlasLoot:GetCollectionModuleName(iD)
+
+function AtlasLoot:GetCollectionModule(id)
 	if not collectionKeys then
 		collectionKeys = {}
 		for moduleName, module in pairs(self.ui.menus.collection) do
@@ -48,77 +50,93 @@ function AtlasLoot:GetCollectionModuleName(iD)
 			end
 		end
 	end
-	return collectionKeys[iD]
+	return collectionKeys[id]
 end
 
-function AtlasLoot:GetDataType(iD)
-	if self.ui.menus.data[iD] then
-		return self.ui.menus.data[iD].Type or ""
-	elseif menusKeyTable[iD] then
-		return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Type or ""
+local moduleNames
+function AtlasLoot:GetCollectionModuleName(id)
+	if not moduleNames then
+		moduleNames = {}
+		for _, module in ipairs(self.ui.menus.modules) do
+			moduleNames[module[2]] = module[1]
+		end
+	end
+
+	if not moduleNames[id] then
+		id = self:GetCollectionModule(id)
+	end
+
+	return moduleNames[self:RemoveExpansionFromID(id)] or ""
+end
+
+function AtlasLoot:GetDataType(id)
+	if self.ui.menus.data[id] then
+		return self.ui.menus.data[id].Type or ""
+	elseif menusKeyTable[id] then
+		return self.ui.menus.data[menusKeyTable[id][1]] and self.ui.menus.data[menusKeyTable[id][1]].Type or ""
 	end
 	return ""
 end
 
-function AtlasLoot:GetDataVanity(iD)
-	if self.ui.menus.data[iD] then
-		return self.ui.menus.data[iD].vanity or nil
-	elseif menusKeyTable[iD] then
-		return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].vanity or nil
+function AtlasLoot:GetDataVanity(id)
+	if self.ui.menus.data[id] then
+		return self.ui.menus.data[id].vanity or nil
+	elseif menusKeyTable[id] then
+		return self.ui.menus.data[menusKeyTable[id][1]] and self.ui.menus.data[menusKeyTable[id][1]].vanity or nil
 	end
 end
 
-function AtlasLoot:GetDataName(iD)
-	if self.ui.menus.data[iD] then
-		return self.ui.menus.data[iD].Name or ""
-	elseif menusKeyTable[iD] then
-		return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Name or ""
-	end
-	return ""
-end
-
-function AtlasLoot:GetDataDisplayName(iD)
-	if self.ui.menus.data[iD] then
-		return (self.ui.menus.data[iD].DisplayName or self.ui.menus.data[iD].Name) or ""
-	elseif menusKeyTable[iD] then
-		return (self.ui.menus.data[menusKeyTable[iD][1]] and (self.ui.menus.data[menusKeyTable[iD][1]].DisplayName or self.ui.menus.data[menusKeyTable[iD][1]].Name)) or ""
+function AtlasLoot:GetDataName(id)
+	if self.ui.menus.data[id] then
+		return self.ui.menus.data[id].Name or ""
+	elseif menusKeyTable[id] then
+		return self.ui.menus.data[menusKeyTable[id][1]] and self.ui.menus.data[menusKeyTable[id][1]].Name or ""
 	end
 	return ""
 end
 
-function AtlasLoot:GetDataPageName(iD, tableNum)
+function AtlasLoot:GetDataDisplayName(id)
+	if self.ui.menus.data[id] then
+		return (self.ui.menus.data[id].DisplayName or self.ui.menus.data[id].Name) or ""
+	elseif menusKeyTable[id] then
+		return (self.ui.menus.data[menusKeyTable[id][1]] and (self.ui.menus.data[menusKeyTable[id][1]].DisplayName or self.ui.menus.data[menusKeyTable[id][1]].Name)) or ""
+	end
+	return ""
+end
+
+function AtlasLoot:GetDataPageName(id, tableNum)
 	if tableNum then
-		return self.ui.menus.data[iD] and self.ui.menus.data[iD][tableNum] and self.ui.menus.data[iD][tableNum][1] or ""
-	elseif menusKeyTable[iD] then
-		return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]][menusKeyTable[iD][2]] and self.ui.menus.data[menusKeyTable[iD][1]][menusKeyTable[iD][2]][1] or ""
+		return self.ui.menus.data[id] and self.ui.menus.data[id][tableNum] and self.ui.menus.data[id][tableNum][1] or ""
+	elseif menusKeyTable[id] then
+		return self.ui.menus.data[menusKeyTable[id][1]] and self.ui.menus.data[menusKeyTable[id][1]][menusKeyTable[id][2]] and self.ui.menus.data[menusKeyTable[id][1]][menusKeyTable[id][2]][1] or ""
 	end
 	return ""
 end
 
-function AtlasLoot:GetSourceLocation(iD)
-	if not menusKeyTable[iD] then return iD end
-	return menusKeyTable[iD][1], menusKeyTable[iD][2]
+function AtlasLoot:GetSourceLocation(id)
+	if not menusKeyTable[id] then return id end
+	return menusKeyTable[id][1], menusKeyTable[id][2]
 end
 
-function AtlasLoot:GetDataModule(iD)
-	if self.ui.menus.data[iD] then
-		return self.ui.menus.data[iD].Module or ""
-	elseif menusKeyTable[iD] then
-		return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Module or ""
+function AtlasLoot:GetDataModule(id)
+	if self.ui.menus.data[id] then
+		return self.ui.menus.data[id].Module or ""
+	elseif menusKeyTable[id] then
+		return self.ui.menus.data[menusKeyTable[id][1]] and self.ui.menus.data[menusKeyTable[id][1]].Module or ""
 	end
 	return ""
 end
 
-function AtlasLoot:GetDataMap(iD)
-	if self.ui.menus.data[iD] then
-		return self.ui.menus.data[iD].Map
-	elseif menusKeyTable[iD] then
-		return self.ui.menus.data[menusKeyTable[iD][1]] and self.ui.menus.data[menusKeyTable[iD][1]].Map
+function AtlasLoot:GetDataMap(id)
+	if self.ui.menus.data[id] then
+		return self.ui.menus.data[id].Map
+	elseif menusKeyTable[id] then
+		return self.ui.menus.data[menusKeyTable[id][1]] and self.ui.menus.data[menusKeyTable[id][1]].Map
 	end
 end
 
-function AtlasLoot:GetMapInstance(iD)
-	return mapKeys[iD] or nil
+function AtlasLoot:GetMapInstance(id)
+	return mapKeys[id] or nil
 end
 
 function AtlasLoot:InitializeMenus()
@@ -131,7 +149,7 @@ function AtlasLoot:InitializeMenus()
 	--This is a multi-layer table defining the main loot listing.
 	--Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
 	menus.modules = {
-		{"Dungeons and Raids", "Dungeons and Raids", 2},
+		{"Dungeons and Raids", "DungeonsAndRaids", 2},
 		{"Crafting", "Crafting" },
 		{"Sets/Collections", "Collections" },
 		{"PvP Rewards", "PVP" },
@@ -148,7 +166,7 @@ function AtlasLoot:InitializeMenus()
 	}
 
 	-------------------------------------Dungeon and Raid Menus-------------------------------------
-	collection["Dungeons and RaidsCLASSIC"] = {
+	collection["DungeonsAndRaidsCLASSIC"] = {
 		Module = "AtlasLoot_OriginalWoW",
 		---- Raids ----
 		{ "OldKeys", Header = "Raids:" },
@@ -197,7 +215,7 @@ function AtlasLoot:InitializeMenus()
 		{ "FrozenReach" },
 	}
 
-	collection["Dungeons and RaidsTBC"] = {
+	collection["DungeonsAndRaidsTBC"] = {
 		Module = "AtlasLoot_BurningCrusade",
 		---- Raids ----
 		{ "BCKeys", Header = "Raids:" },
@@ -236,7 +254,7 @@ function AtlasLoot:InitializeMenus()
 		{ "FrozenReachTBC" },
 	}
 
-	collection["Dungeons and RaidsWRATH"] = {
+	collection["DungeonsAndRaidsWRATH"] = {
 		Module = "AtlasLoot_WrathoftheLichKing",
 		---- Raids ----
 		{ "WrathKeys", Header = "Raids:" },

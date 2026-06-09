@@ -20,15 +20,13 @@ function AtlasLoot:InitializeUIFunctions()
         --Set the item table to the loot table
         --Show the last displayed loot table
         self.ui.tabs.currentTab = "Loot"
-        local lastboss = self.db.profile.LastBoss[self.Expac]
+        local dataID, dataSource, tablenum, pageNumber = unpack(self.db.profile.LastBoss[self.currentExpansion])
+        self.currentTable = self:GetCollectionModule(dataID)
         if self.selectedProfile.AutoCurrentInstance and self:ShowInstance() then
             return
-        elseif lastboss and (lastboss[4] or (lastboss[6] == "Ascension Vanity Collection")) then
-            self.currentTable = lastboss[5]
-            self.lastModule = lastboss[4]
-            self.moduleName = lastboss[6]
-            self.ui.moduelMenuButton:SetText(self.moduleName)
-            self:ShowItemsFrame(lastboss[1], "itemData", lastboss[3], lastboss[7])
+        elseif dataID then
+            self.ui.moduelMenuButton:SetText(self:GetCollectionModuleName(dataID))
+            self:ShowItemsFrame(dataID, dataSource, tablenum, pageNumber)
         else
             self:ShowItemsFrame("EmptyTable", "itemData", 1, 1)
         end
@@ -40,7 +38,7 @@ function AtlasLoot:InitializeUIFunctions()
         local instance = self:GetMapInstance(zone)
         if instance then
             local sourceData = self:GetSourcesExtendedInfo(instance)
-            self.currentTable = sourceData.CollectionModuleName
+            self.currentTable = sourceData.CollectionModule
             self.lastModule = sourceData.Module
             self:ShowItemsFrame(instance, "itemData", 1, 1)
             return true
@@ -48,12 +46,12 @@ function AtlasLoot:InitializeUIFunctions()
     end
 
     -- Used to strip the expansion out of the dataID
-    local function cleanDataID(newID, listnum)
-        local cleanlist = {	[1] = {"CLASSIC", "TBC", "WRATH"} }
-        for i = 1, #cleanlist[listnum] do
-            newID = gsub(newID, cleanlist[listnum][i], "")
+    function self:RemoveExpansionFromID(id)
+        if not id then return id end
+        for _, expansion in pairs(self.expansionList) do
+            id = gsub(id, expansion, "")
         end
-        return newID
+        return id
     end
 
     --[[
@@ -65,16 +63,15 @@ function AtlasLoot:InitializeUIFunctions()
     local function moduleMenuClick(tablename, text, tablenum)
         self.filterEnable = false
         self.backEnabled = false
-        self.moduleName = text
         self.ui.filterButton:SetChecked(false)
-        tablename = tablename .. self.Expac
+        tablename = tablename .. self.currentExpansion
         self.currentTable = tablename
         tablenum = tablenum or 1
         self.lastModule = AtlasLoot.ui.menus.collection[tablename].Module
         self.ui.moduelMenuButton:SetText(text)
             local lasttable = self.db.profile.savedState[self.currentTable]
             if lasttable then
-                self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3], lasttable[7])
+                self:ShowItemsFrame(unpack(lasttable))
             else
                 self:ShowItemsFrame(tablename, "itemData", tablenum, 1)
             end
@@ -147,14 +144,14 @@ function AtlasLoot:InitializeUIFunctions()
     ]]
     local function expansionMenuClick(expansion, name)
         self.backEnabled = false
-        AtlasLoot_ExpansionMenu:SetText(self:FixText(name))
-        self.Expac = expansion
+        self.ui.expansionMenuButton:SetText(self:FixText(name))
+        self.currentExpansion = expansion
         if self.currentTable then
-            self.currentTable = cleanDataID(self.currentTable, 1) .. self.Expac
+            self.currentTable = self:RemoveExpansionFromID(self.currentTable) .. self.currentExpansion
             local tablename = AtlasLoot.ui.menus.collection[self.currentTable][1][2]
             local lasttable = self.db.profile.savedState[self.currentTable]
             if lasttable then
-                self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3], lasttable[7])
+                self:ShowItemsFrame(unpack(lasttable))
             else
                 local tablenum = self.ui.menus.data[tablename].Loadfirst or 1
                 self:ShowItemsFrame(tablename, "itemData", tablenum, 1)

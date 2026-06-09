@@ -1,12 +1,15 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0", "NewsFrame-1.0", "SettingsCreator-1.0", "AceSerializer-3.0", "AceComm-3.0")
 
+
 AtlasLoot.Version = GetAddOnMetadata("AtlasLoot", "Version")
 AtlasLoot.DebugMessages = false
 AtlasLoot.Dewdrop = AceLibrary("Dewdrop-2.0")
 AtlasLoot.CurrentType = "Default"
 AtlasLoot.type = {}
 AtlasLoot.skin = { buttons = {}, frames = {} }
+AtlasLoot.expansionList = {"CLASSIC", "TBC", "WRATH"}
 AtlasLootGlobals = {skin = AtlasLoot.skin}
+
 
 -- Colours stored for code readability
 AtlasLoot.Colors = {
@@ -76,9 +79,9 @@ function AtlasLoot:OnInitialize()
 	self.selectedProfile.ItemLoadingSpeed = self.selectedProfile.ItemLoadingSpeed or 1
 	self:InitializeDatabases()
 	self:InitializeSlashCommands()
+
 	--Sets the default loot tables for the current expansion enabled on the server.
-	local xpaclist = {"CLASSIC", "TBC", "WRATH"}
-	self.Expac = xpaclist[GetAccountExpansionLevel()+1]
+	self.currentExpansion = self.expansionList[GetAccountExpansionLevel()+1]
 end
 
 --Runs after all addons have fully loaded

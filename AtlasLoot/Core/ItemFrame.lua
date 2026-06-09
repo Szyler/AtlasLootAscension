@@ -229,16 +229,16 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 
 	if dataSource_backup ~= "onDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "currentWishList" and
 	dataSource.Back ~= true and dataID ~= "EmptyTable" then
-		self.db.profile.LastBoss[self.Expac] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName, pageNumber}
-		self.db.profile.savedState[self.currentTable] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName, pageNumber}
+		self.db.profile.LastBoss[self.currentExpansion] = {dataID, dataSource_backup, tablenum, pageNumber}
+		self.db.profile.savedState[self.currentTable] = {dataID, dataSource_backup, tablenum, pageNumber}
 	end
 
 	-- Checks dataID with submenus to stop filter button loading on certain tables
 	local function filterCheck(find)
 		local mtype = { "Factions", "WorldEvents", "PVP", "Collections", "Vanity"}
 		for _, t in pairs (mtype) do
-			if AtlasLoot.ui.menus.collection[t..self.Expac] then
-				for _, v in ipairs (AtlasLoot.ui.menus.collection[t..self.Expac]) do
+			if AtlasLoot.ui.menus.collection[t..self.currentExpansion] then
+				for _, v in ipairs (AtlasLoot.ui.menus.collection[t..self.currentExpansion]) do
 					if v[3] and type(v[3]) == "table" then
 						for _, sub in ipairs(v[3]) do
 							if find == sub[2] then
