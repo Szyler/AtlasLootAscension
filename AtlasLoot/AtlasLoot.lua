@@ -29,7 +29,11 @@ AtlasLoot.Colors = {
 AtlasLoot.DBDefaults = {
     profile = {
 		savedState = {},
-		LastBoss = {},
+		LastBoss = {
+			CLASSIC = {"ZulGurub","ItemData", 1, 1},
+			TBC = {"HCMagtheridon","ItemData", 1, 1},
+			WRATH = {"HCMagtheridon","ItemData", 1, 1}
+		},
 		settingsProfile = "default",
 	},
 	settingsProfiles = {
