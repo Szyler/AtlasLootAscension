@@ -177,7 +177,9 @@ function AtlasLoot:InitializeUIFunctions()
         self.ui:SetScale(self.selectedProfile.LootBrowserScale)
     end
 
-    function self:FavoritesOnLeave()
+
+    ---------------------- Favorite Buttons Functions ---------------------- 
+    function AtlasLootGlobals:FavoritesOnLeave()
         self = AtlasLoot
         GameTooltip:Hide()
         if not GetMouseFocus() then return end
@@ -186,15 +188,15 @@ function AtlasLoot:InitializeUIFunctions()
             self.ui.favoritesPopupFrame:Hide()
         end
     end
-    
-    function self:FavoritesOnEnter(button)
+
+    function AtlasLootGlobals:FavoritesOnEnter(button)
         self = AtlasLoot
         if AtlasLootCharDB.QuickLooks[button.num] then
             self:SetGameTooltip(button,AtlasLootCharDB.QuickLooks[button.num][6])
         end
     end
 
-    function self:FavoritesOnClick(button, buttonClick)
+    function AtlasLootGlobals:FavoritesOnClick(button, buttonClick)
         self = AtlasLoot
         if buttonClick == "RightButton" and IsAltKeyDown() then
             self:SetFavorites(button.num)
@@ -211,10 +213,7 @@ function AtlasLoot:InitializeUIFunctions()
             end
         end
     end
-
-    AtlasLootGlobals.FavoritesOnEnter = self.FavoritesOnEnter
-    AtlasLootGlobals.FavoritesOnClick = self.FavoritesOnClick
-    AtlasLootGlobals.FavoritesOnLeave = self.FavoritesOnLeave
+    ----------------------------------------------------------------------------
 
     function self:SetUITab()
         for _, tab in pairs(self.ui.tabs) do
