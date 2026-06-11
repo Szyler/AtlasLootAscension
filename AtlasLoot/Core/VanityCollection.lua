@@ -1,42 +1,17 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
 
-local function CollectionNames(cat)
-	local C_names = {
-		["Axe1H"] = "One-Handed Axes",
-		["Axe2H"] = "Two-Handed Axes",
-		["Sword1H"] = "One-Handed Sword",
-		["Sword2H"] = "Two-Handed Sword",
-		["Mace1H"] = "One-Handed Mace",
-		["Mace2H"] = "Two-Handed Mace",
-	}
-	return C_names[cat] or cat
-end
-
--- Text Conversion
-local equipSlot = {
-	INVTYPE_HEAD = {"Head"}, INVTYPE_SHOULDER = {"Shoulder"}, INVTYPE_CHEST = {"Chest"},
-	INVTYPE_WRIST = {"Wrist"}, INVTYPE_HAND = {"Hands"}, INVTYPE_WAIST = {"Waist"},
-	INVTYPE_LEGS = {"Legs"}, INVTYPE_FEET = {"Feet"}, INVTYPE_FINGER = {"Ring"},
-	INVTYPE_CLOAK = {"Back"}, INVTYPE_NECK = {"Neck"},
-	INVTYPE_TRINKET = {"Trinket"}, INVTYPE_BODY = {"Shirt"}, INVTYPE_TABARD = {"Tarbard"},
-    ["One-Handed Axes"] = {"Axe1H","One-Handed Axes"}, ["Two-Handed Axes"] = {"Axe2H","Two-Handed Axes"},
-	["One-Handed Swords"] = {"Sword1H","One-Handed Swords"}, ["Two-Handed Swords"] = {"Sword2H","Two-Handed Swords"},
-	["One-Handed Maces"] = {"Mace1H","One-Handed Maces"}, ["Two-Handed Maces"] = {"Mace2H","Two-Handed Maces"},
-	Daggers = {"Dagger", "Daggers"},
-	["Fist Weapons"] = {"Fist", "Fist Weapons"},
-	Shields = {"Shield"},
-	Polearms = {"Polearm"},
-	Bows = {"Bows"},
-	Guns = {"Guns"},
-	Crossbows = {"Crossbows"},
-	Thrown = {"Thrown"},
-	Wands = {"Wands"},
-	Staves = {"Staves"},
-	["Fishing Poles"] = {"FishingPole", "Fishing Poles"},
-	OffHands = {"OffHand", "OffHands"},
-    Consumable = {"Consumable"},
-}
+	local function CollectionNames(cat)
+		local C_names = {
+			["Axe1H"] = "One-Handed Axes",
+			["Axe2H"] = "Two-Handed Axes",
+			["Sword1H"] = "One-Handed Sword",
+			["Sword2H"] = "Two-Handed Sword",
+			["Mace1H"] = "One-Handed Mace",
+			["Mace2H"] = "Two-Handed Mace",
+		}
+		return C_names[cat] or cat
+	end
 
 	local extraCategories = {
 		Weapons = {
@@ -92,11 +67,8 @@ local equipSlot = {
 	}
 
 -- Combind robes with chest
-local function getEquipSlot(equipLoc, equipeType)
-	if equipLoc == "INVTYPE_ROBE" then
-		equipLoc = "INVTYPE_CHEST"
-	end
-	return equipSlot[equipLoc] or equipSlot[equipeType]
+local function getEquipSlot(self, equipLoc, equipeType)
+	return self:GetEquipmentSlotInfo(equipLoc) or self:GetEquipmentSlotInfo(equipeType)
 end
 
 function AtlasLoot:CreateVanityCollection()
@@ -180,7 +152,7 @@ function AtlasLoot:CreateVanityCollection()
 		local flavor = GetItemFlavorText(item.itemid)
         local itemInfo = {self:GetItemInfo(item.itemid, true)}
         local itemType, itemSlot, itemDescription = itemInfo[7], itemInfo[9], itemInfo[12]
-        local isItemSlot = getEquipSlot(itemSlot, itemType)
+        local isItemSlot = getEquipSlot(self, itemSlot, itemType)
         local groupByName = setGroupByName(item)
 		if item.quality == 7 then
             group = setGroup("Heirlooms")

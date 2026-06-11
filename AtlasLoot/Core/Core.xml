@@ -3,6 +3,7 @@
 	<!--Default Files-->
 	<Script file="Difficultys.lua"/>
 	<Script file="Filter.lua"/>
+	<Script file="Equipment.lua"/>
     <Script file="TextParsing.lua"/>
     <Script file="Options.lua"/>
     <Script file="LootButtons.lua"/>
