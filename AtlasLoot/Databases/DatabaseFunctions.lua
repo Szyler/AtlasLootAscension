@@ -206,7 +206,6 @@ function AtlasLoot:GetItemDifficultyID(id, difficulty)
 	return id
 end
 
-local runOnce
 function AtlasLoot:GetMerchantItems(missingOnly)
 	AtlasLootOtherIds = AtlasLootOtherIds or {}
 	tinsert(AtlasLootOtherIds, {})
@@ -233,18 +232,6 @@ function AtlasLoot:GetMerchantItems(missingOnly)
 		end
 	end
 end
-
---[[ Regex used on the merchant data to put it in a better formate for atlasloot
-search with this
-\{(.*)
-(.+?),(.*)
-(.+?)"(.+?)"(.*)
-(.*)
-
-replace with this
-{ itemID = $2 }; --$5
-
-]]
 
 function AtlasLoot:InitializeDataTables()
 	if self.data then return end
@@ -295,7 +282,6 @@ function AtlasLoot:AddItemData(var1, var2)
 	end
 	wipe(data)
 	collectgarbage("collect")
-
 end
 
 local equipLocType = {
@@ -380,7 +366,7 @@ local baseType = {
 	Armor = 1, Weapon = 2, Recipe = 3, Quest = 4, Miscellaneous = 5
 }
 
-local function createItemCatagoiresTable()
+local function createItemCatagoiresTable(self)
 	local newTable = {}
 		for _, base in pairs(baseType) do
 			newTable[base] = {}
@@ -396,39 +382,52 @@ end
 
 local displayData = {}
 -- Sorts a lootTables items based on the order of the above lists and adds any spacers between groups
-local function sortItemData(dataSource, dataID, tablenum)
+local function getLootItem(newTable, cat)
+	if cat.refLootEntry then
+		if #newTable[#newTable] >= 30 then
+			table.insert(newTable, {})
+		end
+		table.insert(newTable[#newTable], cat)
+	else
+		for _, item in ipairs(cat) do
+			getLootItem(newTable, item)
+		end
+	end
+end
+
+local function sortItemData(self, dataSource, dataID, tablenum)
 	if not dataSource then return end
-	local lootTables = { AtlasLoot.data.item[dataID..tablenum] and dataID..tablenum }
-	local lootTableName = (AtlasLoot.data.item[dataID..tablenum] and dataID..tablenum) or (#dataSource[tablenum][2] > 0 and AtlasLoot.data.item[dataSource[tablenum][2][1]] and dataSource[tablenum][2][1])
+	local lootTables = { self.data.item[dataID..tablenum] and dataID..tablenum }
+	local lootTableName = (self.data.item[dataID..tablenum] and dataID..tablenum) or (#dataSource[tablenum][2] > 0 and self.data.item[dataSource[tablenum][2][1]] and dataSource[tablenum][2][1])
 	if displayData[lootTableName] then return displayData[lootTableName] end
 	local dontSort, isVanity
 	if #dataSource[tablenum][2] > 0 then
 		for _, ref in pairs(dataSource[tablenum][2]) do
-			if AtlasLoot.data.item[ref] then
-				dontSort = dontSort or AtlasLoot.data.item[ref].dontSort
-				isVanity = isVanity or AtlasLoot.data.item[ref].vanityCollection
+			if self.data.item[ref] then
+				dontSort = dontSort or self.data.item[ref].dontSort
+				isVanity = isVanity or self.data.item[ref].vanityCollection
 				table.insert(lootTables, ref)
 			end
 		end
 	end
-	dontSort = dontSort or AtlasLoot.data.item[lootTableName] and AtlasLoot.data.item[lootTableName].dontSort or false
-	isVanity = isVanity or AtlasLoot.data.item[lootTableName] and AtlasLoot.data.item[lootTableName].vanityCollection or false
+	dontSort = dontSort or self.data.item[lootTableName] and self.data.item[lootTableName].dontSort or false
+	isVanity = isVanity or self.data.item[lootTableName] and self.data.item[lootTableName].vanityCollection or false
 
 	if #lootTables == 0 then return end
 
 	local newTable = {{}}
 	local duplicateCheck = {}
 	if not dontSort then
-		local itemCatagories = createItemCatagoiresTable()
+		local itemCatagories = createItemCatagoiresTable(self)
 		for _, lootTableSelection in ipairs(lootTables) do
-			for _, itemData in ipairs(AtlasLoot.data.item[lootTableSelection]) do
+			for _, itemData in ipairs(self.data.item[lootTableSelection]) do
 				if not duplicateCheck[itemData.itemID] then
-					local itemType, itemSubType, _, itemEquipLoc = select(6, AtlasLoot:GetItemInfo(itemData.itemID, true))
+					local itemType, itemSubType, _, itemEquipLoc = select(6, self:GetItemInfo(itemData.itemID, true))
 					local iType = itemCatagories[baseType[itemType]]
 					if iType and iType[subType[itemSubType]] then
 						local addType
-						if itemEquipLoc and equipLocType[itemEquipLoc] then
-							addType = iType[subType[itemSubType]][equipLocType[itemEquipLoc]]
+						if itemEquipLoc and self:GetEquipmentSlotInfo(itemEquipLoc) then
+							addType = iType[subType[itemSubType]][self:GetEquipmentSlotInfo(itemEquipLoc)]
 						else
 							addType = iType[subType[itemSubType]]
 						end
@@ -441,21 +440,8 @@ local function sortItemData(dataSource, dataID, tablenum)
 			end
 		end
 
-		local function getLootItem(cat)
-			if cat.refLootEntry then
-				if #newTable[#newTable] >= 30 then
-					table.insert(newTable, {})
-				end
-				table.insert(newTable[#newTable], cat)
-			else
-				for _, item in ipairs(cat) do
-					getLootItem(item)
-				end
-			end
-		end
-
 		for _, itemCat in ipairs(itemCatagories) do
-			getLootItem(itemCat)
+			getLootItem(newTable, itemCat)
 			if #newTable[#newTable] >= 30 then
 				table.insert(newTable, {})
 			end
@@ -464,9 +450,9 @@ local function sortItemData(dataSource, dataID, tablenum)
 			end
 		end
 	elseif isVanity then
-		newTable = AtlasLoot.data.item[lootTableName]
+		newTable = self.data.item[lootTableName]
 	else
-		for itemNum, item in ipairs(AtlasLoot.data.item[lootTableName]) do
+		for itemNum, item in ipairs(self.data.item[lootTableName]) do
 			if (#newTable[#newTable] ~= 0 and item.pageBreak) then
 				if #newTable[#newTable] < 16 then
 					for i = 1, (15 - #newTable[#newTable]) do
@@ -477,13 +463,13 @@ local function sortItemData(dataSource, dataID, tablenum)
 				end
 			end
 			table.insert(newTable[#newTable], item)
-			if #newTable[#newTable] >= 30 and itemNum ~= #AtlasLoot.data.item[lootTableName] then
+			if #newTable[#newTable] >= 30 and itemNum ~= #self.data.item[lootTableName] then
 				table.insert(newTable, {})
 			end
 		end
 	end
 	displayData[lootTableName] = newTable
-	if AtlasLoot.selectedProfile.isAdmin then AtlaslootDisplaydata = displayData end
+	if self.selectedProfile.isAdmin then AtlaslootDisplaydata = displayData end
 	return displayData[lootTableName]
 end
 
@@ -507,7 +493,7 @@ function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 		itemData = AtlasLootCharDB[dataID][1]
 	elseif dataSource_backup == "itemData" then
 		dataSource = self.ui.menus.data[dataID]
-		itemData = sortItemData(dataSource, dataID, tablenum)
+		itemData = sortItemData(self, dataSource, dataID, tablenum)
 	end
 	if not itemData then return end
 	return dataSource, itemData, #itemData
