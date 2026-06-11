@@ -426,8 +426,8 @@ local function sortItemData(self, dataSource, dataID, tablenum)
 					local iType = itemCatagories[baseType[itemType]]
 					if iType and iType[subType[itemSubType]] then
 						local addType
-						if itemEquipLoc and self:GetEquipmentSlotInfo(itemEquipLoc) then
-							addType = iType[subType[itemSubType]][self:GetEquipmentSlotInfo(itemEquipLoc)]
+						if itemEquipLoc and equipLocType[itemEquipLoc] then
+							addType = iType[subType[itemSubType]][equipLocType[itemEquipLoc]]
 						else
 							addType = iType[subType[itemSubType]]
 						end
