@@ -66,11 +66,6 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 		}
 	}
 
--- Combind robes with chest
-local function getEquipSlot(self, equipLoc, equipeType)
-	return self:GetEquipmentSlotInfo(equipLoc) or self:GetEquipmentSlotInfo(equipeType)
-end
-
 function AtlasLoot:CreateVanityCollection()
 	self:InitializeDataTables()
 	local itemData = self.data.item
@@ -152,7 +147,7 @@ function AtlasLoot:CreateVanityCollection()
 		local flavor = GetItemFlavorText(item.itemid)
         local itemInfo = {self:GetItemInfo(item.itemid, true)}
         local itemType, itemSlot, itemDescription = itemInfo[7], itemInfo[9], itemInfo[12]
-        local isItemSlot = getEquipSlot(self, itemSlot, itemType)
+        local slotName, slotAltName = self:GetEquipmentSlotName(itemSlot) or self:GetEquipmentSlotName(itemType)
         local groupByName = setGroupByName(item)
 		if item.quality == 7 then
             group = setGroup("Heirlooms")
@@ -168,8 +163,8 @@ function AtlasLoot:CreateVanityCollection()
             group = setGroup("Keys")
         elseif itemType == "Mount" then
             group = setGroup("Mounts")
-        elseif isItemSlot then
-            group = setGroup(isItemSlot[1], isItemSlot[2] or isItemSlot[1])
+        elseif slotName then
+            group = setGroup(slotName, slotAltName or slotName)
 		else
 			group = findGroup(item.group)
 		end
