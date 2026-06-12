@@ -408,17 +408,18 @@ function self:ScrollFrameUpdate(hide,wishlist)
             end
         end
     else
-        maxValue = #self.Difficulties[self.CurrentType]
+        maxValue = self.Difficulties:GetCount(self.CurrentType)
         FauxScrollFrame_Update(self.ui.difficultyScrollFrame.scrollSlider, maxValue, MAX_ROWS, ROW_HEIGHT)
         offset = FauxScrollFrame_GetOffset(self.ui.difficultyScrollFrame.scrollSlider)
         for i = 1, MAX_ROWS do
             value = i + offset
             self.ui.difficultyScrollFrame.rows[i]:SetChecked(false)
             self.ui.difficultyScrollFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-            if value <= maxValue and self.Difficulties[self.CurrentType][value] and hide == nil then
+            local diff = self.Difficulties:GetInfo(self.CurrentType, value)
+            if value <= maxValue and diff and hide == nil then
                 row = self.ui.difficultyScrollFrame.rows[i]
-                row:SetText("|cffFFd200"..self.Difficulties[self.CurrentType][value][1])
-                row.itemIndex = self.Difficulties[self.CurrentType][value][2]
+                row:SetText("|cffFFd200"..diff[1])
+                row.itemIndex = diff[2]
                 if row.itemIndex == self.ItemindexID then
                     row:SetChecked(true)
                 end

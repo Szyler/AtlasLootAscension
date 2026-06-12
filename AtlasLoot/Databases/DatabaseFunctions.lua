@@ -100,8 +100,9 @@ function AtlasLoot:GetSourceList()
 	local function addItem(itemData, dataType)
 		if type(itemData) == "table" then
 			local typeData = self:GetDataType(dataType)
-			if typeData and self.Difficulties[typeData] and itemData.itemID then
-				for _, dif in ipairs(self.Difficulties[typeData]) do
+			local diffList = self.Difficulties:GetList(typeData)
+			if typeData and diffList and itemData.itemID then
+				for _, dif in ipairs(diffList) do
 					local itemType = GetItemInfoInstant(itemData.itemID) or nil
 					if dif[2] ~= 3 and itemType then
 						itemSource[dif[1]] = itemSource[dif[1]] or {}
