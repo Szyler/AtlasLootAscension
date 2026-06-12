@@ -213,7 +213,43 @@ function AtlasLoot:InitializeUIFunctions()
             end
         end
     end
+
+    --[[
+    AtlasLoot:SetFavorites(number)
+    sets the favorite when alt right clicked
+    ]]
+    function self:SetFavorites(num)
+        if self.itemframe.refresh[2] == "currentWishList" then
+            AtlasLootCharDB.QuickLooks[num]={self.currentWishList.Show.ListType, "AtlasLootWishList", self.currentWishList.Show.ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][self.currentWishList.Show.ListType][self.currentWishList.Show.ListNum].Name}
+        else
+            AtlasLootCharDB.QuickLooks[num]={self.itemframe.refreshOri[1], self.itemframe.refreshOri[2], self.itemframe.refreshOri[3], self.lastModule, self.currentTable, _G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]][self.itemframe.refreshOri[3]].Name}
+        end
+    end
+
     ----------------------------------------------------------------------------
+    --Called when 'Back'Button is pressed and calls up the appropriate loot page
+    function self:BackButton_OnClick()
+        self.backEnabled = false
+        self:ShowItemsFrame(unpack(self.itemframe.refreshBack))
+    end
+
+    --[[
+    AtlasLoot:NavButton_OnClick:
+    Called when <-, -> are pressed and calls up the appropriate loot page
+    ]]
+    function self:NavButton_OnClick(btn)
+        if self.ui.tabs.Map:IsVisible() then
+            self:MapSelect(btn.mapID, btn.mapNum)
+        else
+            if #btn.dataSource > self.ui.tabs.Loot.TableScrollFrame.maxRows and btn.tablenum ~= 1 then
+                local min, max = AtlasLootSubTableScrollScrollBar:GetMinMaxValues()
+                AtlasLootSubTableScrollScrollBar:SetValue(btn.tablenum * (max / #btn.dataSource))
+            else
+                AtlasLootSubTableScrollScrollBar:SetValue(1)
+            end
+            self:ShowItemsFrame(btn.dataID, btn.dataSource_backup, btn.tablenum, btn.numberPages)
+        end
+    end
 
     function self:SetUITab()
         for _, tab in pairs(self.ui.tabs) do
