@@ -131,6 +131,7 @@ function AtlasLoot:GetItemInfo(item, dontCache)
 			itemName = itemName or itemInstant.name
 			itemSubType = itemSubType or _G["ITEM_SUBCLASS_"..itemInstant.classID.."_"..itemInstant.subclassID]
 			itemEquipLoc = itemEquipLoc or itemEquipLocConversion[itemInstant.inventoryType]
+
 			itemTexture = itemTexture or itemInstant.icon
 			itemQuality = itemQuality or itemInstant.quality
 			itemLink = itemLink or item:GetLink()
@@ -438,17 +439,17 @@ local function IgnoreTables(dataSource)
 	end
 end
 
+local itemSourceList = {}
 function AtlasLoot:CreateItemSourceList()
-	self.ItemSourceList = {}
 	local function addItem(itemData, dataType)
 		if type(itemData) == "table" then
 			local sourceData = self:GetSourcesExtendedInfo(dataType)
 			if sourceData and sourceData.Source and itemData.itemID then
-				self.ItemSourceList[itemData.itemID] = sourceData.Source
+				itemSourceList[itemData.itemID] = sourceData.Source
 				if itemData.spellID then
 					local recipeID = self:GetRecipeID(itemData.spellID) or nil
-					if recipeID and (self.ItemSourceList[recipeID] and not IgnoreTables(dataType) or not self.ItemSourceList[recipeID]) then
-						self.ItemSourceList[recipeID] = sourceData.Source
+					if recipeID and (itemSourceList[recipeID] and not IgnoreTables(dataType) or not itemSourceList[recipeID]) then
+						itemSourceList[recipeID] = sourceData.Source
 					end
 				end
 			else
@@ -488,7 +489,7 @@ end
 
 -- Gets the drop source for an item
 function AtlasLoot:GetItemSource(itemID)
-	local itemSource = self.ItemSourceList[findBaseItemID(itemID)]
+	local itemSource = itemSourceList[findBaseItemID(itemID)]
 	if itemSource and itemSource[1] and itemSource[2] then
 		return "Item Source: " .. self.Colors.CYAN.. self:GetDataDisplayName(itemSource[1]) .. self.Colors.WHITE .. " - " .. self:GetDataPageName(itemSource[1], itemSource[2])
 	end
@@ -503,39 +504,12 @@ function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
 	end
 end
 
-local ArmorTypes = {
-	INVTYPE_NECK = {"24000 #faction#"},
-	INVTYPE_HEAD = {"30000 #faction#", "1500 #arena#"},
-	INVTYPE_SHOULDER = {"24000 #faction#", "1125 #arena#"},
-	INVTYPE_BODY = {"30000 #faction#", "1500 #arena#"},
-	INVTYPE_CHEST = {"30000 #faction#", "1500 #arena#"},
-	INVTYPE_WAIST = {"17000 #faction#"},
-	INVTYPE_LEGS = {"30000 #faction#", "1500 #arena#"},
-	INVTYPE_FEET = {"24000 #faction#"},
-	INVTYPE_WRIST = {"17000 #faction#"},
-	INVTYPE_HAND = {"20000 #faction#", "1000 #arena#"},
-	INVTYPE_FINGER = {"24000 #faction#"},
-	INVTYPE_TRINKET = {"30400 #faction#"},
-	INVTYPE_WEAPON = {"24000 #faction#", "1875 #arena#"},
-	INVTYPE_SHIELD = {"15000 #faction#", "1500 #arena#"},
-	INVTYPE_RANGED = {"15000 #faction#", "1500 #arena#"},
-	INVTYPE_CLOAK = {"30400 #faction#"},
-	INVTYPE_2HWEAPON = {"40000 #faction#", "2700 #arena#"},
-	INVTYPE_ROBE = {"30000 #faction#", "1500 #arena#"},
-    INVTYPE_WEAPONMAINHAND = {"24000 #faction#", "1875 #arena#"},
-	INVTYPE_WEAPONOFFHAND = {"24000 #faction#", "750 #arena#"},
-	INVTYPE_HOLDABLE = {"15000 #faction#", "1500 #arena#"},
-    INVTYPE_THROWN = {"15000 #faction#", "750 #arena#"},
-	INVTYPE_RANGEDRIGHT = {"15000 #faction#", "1500 #arena#"},
-	INVTYPE_RELIC = {"15000 #faction#", "750 #arena#"},
-}
-
 function AtlasLoot:ArenaCost(price, itemEquipLoc, itemQuality)
 	if price ~= "Arena" then return price end
-	if itemQuality == 3 or not ArmorTypes[itemEquipLoc][2] then
-		return ArmorTypes[itemEquipLoc][1]
+	if itemQuality == 3 then
+		return self:GetEquipmentSlotCost(itemEquipLoc, "pvp")
 	else
-		return ArmorTypes[itemEquipLoc][1]..ArmorTypes[itemEquipLoc][2]
+		return self:GetEquipmentSlotCost(itemEquipLoc)
 	end
 end
 
