@@ -4,7 +4,7 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 function AtlasLoot:CreateToken(dataID)
 	local newDataID, slotType = string.split("-", dataID, 2)
 	local itemType = "INVTYPE_"..slotType
-	local slotName = self:GetEquipmentSlotName(itemType)
+	local slotName = self.Equipment:GetSlotName(itemType)
 	
 	--Creates data set of the item type
 	if (self.data.token[dataID] == nil) then
@@ -132,7 +132,7 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 		for aType, v in pairs(unsorted) do
 			for eLoc, t in pairs(v) do
 				for i, items in ipairs(t) do
-					local slot = self:GetEquipmentSlotName(getEquip(eLoc))
+					local slot = self.Equipment:GetSlotName(getEquip(eLoc))
 					local name = slot and items[2] and aType.." "..items[2].." - "..slot or aType or ""
 					local lootType = self.data.onDemand[typeL]
 					if i == 1 then

@@ -147,7 +147,7 @@ function AtlasLoot:CreateVanityCollection()
 		local flavor = GetItemFlavorText(item.itemid)
         local itemInfo = {self:GetItemInfo(item.itemid, true)}
         local itemType, itemSlot, itemDescription = itemInfo[7], itemInfo[9], itemInfo[12]
-        local slotName, slotAltName = self:GetEquipmentSlotName(itemSlot) or self:GetEquipmentSlotName(itemType)
+        local slotName, slotAltName = self.Equipment:GetSlotName(itemSlot) or self.Equipment:GetSlotName(itemType)
         local groupByName = setGroupByName(item)
 		if item.quality == 7 then
             group = setGroup("Heirlooms")
