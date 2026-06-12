@@ -1,4 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
+local Equipment = {}
+AtlasLoot.Equipment = Equipment
 
 local equipmentSlots = {
 	INVTYPE_HEAD = {
@@ -222,16 +224,16 @@ local equipmentSlots = {
 	},
 }
 
-function AtlasLoot:GetEquipmentSlotName(slot)
+function Equipment:GetSlotName(slot)
 	if not equipmentSlots[slot] then return end
 	return equipmentSlots[slot].name, equipmentSlots[slot].altName
 end
 
-function AtlasLoot:GetEquipmentSlotCost(slot)
+function Equipment:GetSlotCost(slot)
 	if not equipmentSlots[slot] then return end
 	return equipmentSlots[slot].pvpCost, equipmentSlots[slot].arenaCost
 end
 
-function AtlasLoot:GetEquipmentList()
+function Equipment:GetList()
     return equipmentSlots
 end
