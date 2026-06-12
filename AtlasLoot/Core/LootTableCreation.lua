@@ -1,46 +1,31 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-
 --Creates tables for raid tokens from the collections tables
 function AtlasLoot:CreateToken(dataID)
-	local itemType, slotType, itemName, itemType2
-	--orginal dataID
-	local orgID = dataID
-	--list of item types to find
-	local names = { {"HEAD", "INVTYPE_HEAD", "Head"}, {"SHOULDER", "INVTYPE_SHOULDER", "Shoulders"}, {"CHEST", "INVTYPE_CHEST", "Chest", "INVTYPE_ROBE"}, {"WRIST", "INVTYPE_WRIST", "Wrists"}, {"HAND", "INVTYPE_HAND", "Hands"}, {"WAIST", "INVTYPE_WAIST", "Waist"}, {"LEGS", "INVTYPE_LEGS", "Legs"}, {"FEET", "INVTYPE_FEET", "Feet"}, {"FINGER", "INVTYPE_FINGER", "Rings"}, {"BACK", "INVTYPE_CLOAK", "Back"}, {"NECK", "INVTYPE_NECK", "Necklace"}}
-	--finds the item type to create a list of
-	for _, b in pairs(names) do
-		dataID = gsub(dataID, b[1], "")
-		slotType = gsub(orgID, dataID, "")
-		if slotType == b[1] then
-			itemType = b[2]
-			itemType2 = b[4]
-			itemName = b[3]
-			break
-		end
-	end
+	local newDataID, slotType = string.split("-", dataID, 2)
+	local itemType = "INVTYPE_"..slotType
+	local slotName = self:GetEquipmentSlotName(itemType)
+	
 	--Creates data set of the item type
-	if (self.data.token[orgID] == nil) then
-		self.data.token[orgID] = {
-			Name = itemName,
-			Type = self:GetDataType(dataID),
+	if (self.data.token[dataID] == nil) then
+		self.data.token[dataID] = {
+			Name = slotName,
+			Type = self:GetDataType(newDataID),
 			Back = true,
 			NoSubt = true,
 			[1] = {}
 		}
 	end
-	local function addItem(itemID, desc)
-		local itemT = select(9, self:GetItemInfo(itemID))
-		if itemType == itemT or itemType2 == itemT then
-			table.insert(self.data.token[orgID][1], {itemID = itemID, desc = desc})
-		end
-	end
+
 	local count = 1
 	--Fills table with items
-	while self.data.item[dataID..count] do
-		for _, item in ipairs(self.data.item[dataID..count]) do
+	while self.data.item[newDataID..count] do
+		for _, item in ipairs(self.data.item[newDataID..count]) do
 			if item.itemID then
-				addItem(item.itemID, self:GetDataPageName(dataID..count))
+				local itemT = gsub(select(9, self:GetItemInfo(item.itemID)), "INVTYPE_ROBE", "INVTYPE_CHEST")
+				if itemType == itemT then
+					table.insert(self.data.token[dataID][1], {itemID = item.itemID, desc = self:GetDataPageName(newDataID..count)})
+				end
 			end
 		end
 		count = count + 1
@@ -97,17 +82,6 @@ end
 
 
 function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
-	-- Text Conversion
-	local function getEquipSlot(slot)
-		local equipSlots = {
-			INVTYPE_HEAD = "Head", INVTYPE_SHOULDER = "Shoulder", INVTYPE_CHEST = "Chest",
-			INVTYPE_WRIST = "Wrist", INVTYPE_HAND = "Hands", INVTYPE_WAIST = "Waist",
-			INVTYPE_LEGS = "Legs", INVTYPE_FEET = "Feet", INVTYPE_FINGER = "Ring",
-			INVTYPE_CLOAK = "Back", INVTYPE_NECK = "Neck", INVTYPE_WEAPONOFFHAND = "Off Hand",
-			INVTYPE_WEAPONMAINHAND = "Mainhand", INVTYPE_TRINKET = "Trinket", INVTYPE_HOLDABLE = "Caster Offhand"}
-		return equipSlots[slot] and " - "..equipSlots[slot] or nil
-	end
-
 	local function correctText(text)
 		text = gsub(text, "Cloth Armor %- Back", "Back")
 		text = gsub(text, "Miscellaneous Armor %- " , "")
@@ -158,8 +132,8 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 		for aType, v in pairs(unsorted) do
 			for eLoc, t in pairs(v) do
 				for i, items in ipairs(t) do
-					local slot = getEquipSlot(getEquip(eLoc))
-					local name = slot and items[2] and aType.." "..items[2]..slot or aType or ""
+					local slot = self:GetEquipmentSlotName(getEquip(eLoc))
+					local name = slot and items[2] and aType.." "..items[2].." - "..slot or aType or ""
 					local lootType = self.data.onDemand[typeL]
 					if i == 1 then
 						table.insert(lootType,{Name = correctText(name), {}})
