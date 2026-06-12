@@ -156,19 +156,19 @@ function AtlasLoot:SetRecipeMapPins()
 			for _, profTable in pairs(professionTable[profKey]) do
 				if craftingXpac[self:GetDataType(profTable)] <= xpac then
 					for _, recipeData in ipairs(self.data.item[profTable.."1"]) do
-								if recipeData.spellID and not CA_IsSpellKnown(recipeData.spellID) then
-									local craftingData = self:GetRecipeSource(recipeData.spellID)
-									if craftingData then
-										for _,v in pairs(craftingData) do
-											if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then
-												local line1 = v[1]
-												local line2 = v[2]
-												if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
-												self:AddWayPoint(line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1)
-											end
-										end
+						if recipeData.spellID and not CA_IsSpellKnown(recipeData.spellID) then
+							local craftingData = self:GetRecipeSource(recipeData.spellID)
+							if craftingData then
+								for _,v in pairs(craftingData) do
+									if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then
+										local line1 = v[1]
+										local line2 = v[2]
+										if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
+										self:AddWayPoint(line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1)
 									end
 								end
+							end
+						end
 					end
 				end
 			end
