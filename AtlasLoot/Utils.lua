@@ -504,15 +504,6 @@ function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
 	end
 end
 
-function AtlasLoot:ArenaCost(price, itemEquipLoc, itemQuality)
-	if price ~= "Arena" then return price end
-	if itemQuality == 3 then
-		return self:GetEquipmentSlotCost(itemEquipLoc, "pvp")
-	else
-		return self:GetEquipmentSlotCost(itemEquipLoc)
-	end
-end
-
 function AtlasLoot:SetMerchantFrameGlow()
 	if not self.selectedProfile.MerchantGlow then return end
 	local num = 1

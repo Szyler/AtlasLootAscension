@@ -67,7 +67,6 @@ local equipmentSlots = {
 	INVTYPE_TABARD = {
 		name = "Tabard",
 	},
-	
 	-- Specific Weapon Slots from ArmorTypes
 	INVTYPE_WEAPON = {
 		name = "One-Handed Weapon",
@@ -120,30 +119,107 @@ local equipmentSlots = {
 		arenaCost = "750 #arena#",
 	},
 	-- Weapon Sub-Types
-	["One-Handed Axes"] = { 
+	["One-Handed Axes"] = {
 		name = "Axe1H",
 		altName = "One-Handed Axes",
 		pvpCost = "24000 #faction#",
 		arenaCost = "1875 #arena#"
 	},
-	["Two-Handed Axes"] = { name = "Axe2H", altName = "Two-Handed Axes", pvpCost = "40000 #faction#", arenaCost = "2700 #arena#" },
-	["One-Handed Swords"] = { name = "Sword1H", altName = "One-Handed Swords", pvpCost = "24000 #faction#", arenaCost = "1875 #arena#" },
-	["Two-Handed Swords"] = { name = "Sword2H", altName = "Two-Handed Swords", pvpCost = "40000 #faction#", arenaCost = "2700 #arena#" },
-	["One-Handed Maces"] = { name = "Mace1H", altName = "One-Handed Maces", pvpCost = "24000 #faction#", arenaCost = "1875 #arena#" },
-	["Two-Handed Maces"] = { name = "Mace2H", altName = "Two-Handed Maces", pvpCost = "40000 #faction#", arenaCost = "2700 #arena#" },
-	Daggers = { name = "Dagger", altName = "Daggers", pvpCost = "24000 #faction#", arenaCost = "1875 #arena#" },
-	["Fist Weapons"] = { name = "Fist", altName = "Fist Weapons", pvpCost = "24000 #faction#", arenaCost = "1875 #arena#" },
-	Shields = { name = "Shield", pvpCost = "15000 #faction#", arenaCost = "1500 #arena#" },
-	Polearms = { name = "Polearm", pvpCost = "40000 #faction#", arenaCost = "2700 #arena#" },
-	Bows = { name = "Bows", pvpCost = "15000 #faction#", arenaCost = "1500 #arena#" },
-	Guns = { name = "Guns", pvpCost = "15000 #faction#", arenaCost = "1500 #arena#" },
-	Crossbows = { name = "Crossbows", pvpCost = "15000 #faction#", arenaCost = "1500 #arena#" },
-	Thrown = { name = "Thrown", pvpCost = "15000 #faction#", arenaCost = "750 #arena#" },
-	Wands = { name = "Wands", pvpCost = "15000 #faction#", arenaCost = "1500 #arena#" },
-	Staves = { name = "Staves", pvpCost = "40000 #faction#", arenaCost = "2700 #arena#" },
-	["Fishing Poles"] = { name = "FishingPole", altName = "Fishing Poles" },
-	OffHands = { name = "OffHand", altName = "OffHands", pvpCost = "15000 #faction#", arenaCost = "1500 #arena#" },
-	Consumable = { name = "Consumable" },
+	["Two-Handed Axes"] = {
+		name = "Axe2H",
+		altName = "Two-Handed Axes",
+		pvpCost = "40000 #faction#",
+		arenaCost = "2700 #arena#"
+	},
+	["One-Handed Swords"] = {
+		name = "Sword1H",
+		altName = "One-Handed Swords",
+		pvpCost = "24000 #faction#",
+		arenaCost = "1875 #arena#"
+	},
+	["Two-Handed Swords"] = {
+		name = "Sword2H",
+		altName = "Two-Handed Swords",
+		pvpCost = "40000 #faction#",
+		arenaCost = "2700 #arena#"
+	},
+	["One-Handed Maces"] = {
+		name = "Mace1H",
+		altName = "One-Handed Maces",
+		pvpCost = "24000 #faction#",
+		arenaCost = "1875 #arena#"
+	},
+	["Two-Handed Maces"] = {
+		name = "Mace2H",
+		altName = "Two-Handed Maces",
+		pvpCost = "40000 #faction#",
+		arenaCost = "2700 #arena#"
+	},
+	Daggers = {
+		name = "Dagger",
+		altName = "Daggers",
+		pvpCost = "24000 #faction#",
+		arenaCost = "1875 #arena#"
+	},
+	["Fist Weapons"] = {
+		name = "Fist",
+		altName = "Fist Weapons",
+		pvpCost = "24000 #faction#",
+		arenaCost = "1875 #arena#"
+	},
+	Shields = {
+		name = "Shield",
+		pvpCost = "15000 #faction#",
+		arenaCost = "1500 #arena#"
+	},
+	Polearms = {
+		name = "Polearm",
+		pvpCost = "40000 #faction#",
+		arenaCost = "2700 #arena#"
+	},
+	Bows = {
+		name = "Bows",
+		pvpCost = "15000 #faction#",
+		arenaCost = "1500 #arena#"
+	},
+	Guns = {
+		name = "Guns",
+		pvpCost = "15000 #faction#",
+		arenaCost = "1500 #arena#"
+	},
+	Crossbows = {
+		name = "Crossbows",
+		pvpCost = "15000 #faction#",
+		arenaCost = "1500 #arena#"
+	},
+	Thrown = {
+		name = "Thrown",
+		pvpCost = "15000 #faction#",
+		arenaCost = "750 #arena#"
+	},
+	Wands = {
+		name = "Wands",
+		pvpCost = "15000 #faction#",
+		arenaCost = "1500 #arena#"
+	},
+	Staves = {
+		name = "Staves",
+		pvpCost = "40000 #faction#",
+		arenaCost = "2700 #arena#"
+	},
+	["Fishing Poles"] = {
+		name = "FishingPole",
+		altName = "Fishing Poles"
+	},
+	OffHands = {
+		name = "OffHand",
+		altName = "OffHands",
+		pvpCost = "15000 #faction#",
+		arenaCost = "1500 #arena#"
+	},
+	Consumable = {
+		name = "Consumable"
+	},
 }
 
 function AtlasLoot:GetEquipmentSlotName(slot)
@@ -151,16 +227,9 @@ function AtlasLoot:GetEquipmentSlotName(slot)
 	return equipmentSlots[slot].name, equipmentSlots[slot].altName
 end
 
-function AtlasLoot:GetEquipmentSlotCost(slot, type)
-	if type and type == "pvp" then
-		return equipmentSlots[slot].pvpCost
-	elseif type and type == "arena" then
-		return equipmentSlots[slot].arenaCost
-	elseif equipmentSlots[slot].arenaCost then
-		return equipmentSlots[slot].pvpCost .. equipmentSlots[slot].arenaCost
-	else
-		return equipmentSlots[slot].pvpCost
-	end
+function AtlasLoot:GetEquipmentSlotCost(slot)
+	if not equipmentSlots[slot] then return end
+	return equipmentSlots[slot].pvpCost, equipmentSlots[slot].arenaCost
 end
 
 function AtlasLoot:GetEquipmentList()

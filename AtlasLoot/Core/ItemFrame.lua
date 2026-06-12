@@ -480,7 +480,14 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 
 	local price = itemNumber.price
 	if price then
-		price = self:ArenaCost(price, itemEquipLoc, itemQuality)
+		if price == "Arena" then
+			local honorPrice, arenaPrice = self:GetEquipmentSlotCost(itemEquipLoc)
+			if arenaPrice then
+				price = honorPrice .. arenaPrice
+			else
+				price = honorPrice
+			end
+		end
 		extra = extra ..self.Colors.WHITE.." ("..price..")"
 	end
 
