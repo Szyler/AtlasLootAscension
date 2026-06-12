@@ -1,8 +1,9 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
+local Difficulties = {}
+AtlasLoot.Difficulties = Difficulties
 
-   -- table of difficulties and there itemID references
-
-AtlasLoot.Difficulties = {
+-- table of difficulties and there itemID references
+local difficultyList = {
     Default = {},
     ClassicDungeon = {
         {"Normal", 3},
@@ -167,11 +168,40 @@ AtlasLoot.Difficulties = {
     MAX_DIF = 20,
 }
 
-function AtlasLoot:GetMaxDifficulty(instanceType, max)
+function Difficulties:GetMax(instanceType, max)
     if not instanceType and not max then return end
-    return self.Difficulties[max] or self.Difficulties[instanceType].Max
+    return difficultyList[max] or difficultyList[instanceType].Max
 end
 
-function AtlasLoot:GetMinDifficulty(min)
-    return self.Difficulties[min]
+function Difficulties:GetMin(min)
+    return difficultyList[min]
 end
+
+function Difficulties:GetList(type)
+    return difficultyList[type]
+end
+
+function Difficulties:GetInfo(type, value)
+    return difficultyList[type][value]
+end
+
+function Difficulties:GetCount(type)
+    return difficultyList[type] and #difficultyList[type] or 0
+end
+
+function Difficulties:GetSearch()
+    return difficultyList.DIF_SEARCH
+end
+
+-- Finds the tablenumber to set where the difficulty slider should be.
+function Difficulties:GetMatch(type, match)
+	if not type and not difficultyList[type] then return end
+	for i, t in ipairs(difficultyList[type]) do
+		if t[2] == match then
+			return i
+		end
+	end
+    return 1
+end
+
+
