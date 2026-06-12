@@ -87,7 +87,7 @@ AtlasLoot:AddItemData("dontSort", {
 	--- Vanity Pets ---
 	-------------------
 
-	["VanityPets"] = {
+	["VanityPetsOld"] = {
 		{
 			{ itemID = 44984 }, --Ammen Vale Lashling
 			{ itemID = 54436 }, --Blue Clockwork Rocket Bot

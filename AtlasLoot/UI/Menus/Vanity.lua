@@ -10,7 +10,7 @@ AtlasLoot:AddNewMenus({
 		{ "Tabards", {} },
 	},
 
-	["VanityPets"] = {
+	["VanityPetsOld"] = {
 		Module = "AtlasLoot_Vanity",
 		Name = "Vanity Pets",
 		{ "Merchant Sold", {} },

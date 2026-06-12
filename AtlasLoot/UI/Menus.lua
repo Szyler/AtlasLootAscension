@@ -390,7 +390,7 @@ function AtlasLoot:InitializeMenus()
 	collection.VanityCLASSIC = {
 		Module = "AtlasLoot_Vanity",
 		{ "Tabards" },
-		{ "VanityPets" },
+		{ "VanityPetsOld" },
 		{ "Mounts" },
 	}
 	collection.VanityTBC = collection.VanityCLASSIC
