@@ -2,8 +2,8 @@
 ## Title: AtlasLoot Ascension Edition
 ## Notes: Shows the possible loot from the bosses
 ## Author: Anch - Area 52
-## Version: 7.6.13
-## X-Credits: Rvng, Skray, Szyler and others.
+## Version: 8.0.0
+## X-Credits: Original: Hegarol, Ascension: Skray,Szyler,Anch,Rvng and others.
 ## Dependencies: AtlasLoot_Cache
 ## X-Category: Map
 ## X-License: GPL v2

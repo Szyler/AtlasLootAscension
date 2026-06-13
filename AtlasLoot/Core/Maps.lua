@@ -1,5 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 local DefaultPin = "questlog-questtypeicon-daily"
 -- Map Functions
 local playerFaction = UnitFactionGroup("player")
@@ -21,7 +21,7 @@ function AtlasLoot:CreateMapPins(list)
         --create pin buttons
         if not _G["AtlasLoot_MapPin"..i] then
             -- Map Pins
-            local mapPin = CreateFrame("Button","AtlasLoot_MapPin"..i, self.mainUI.mapFrame)
+            local mapPin = CreateFrame("Button","AtlasLoot_MapPin"..i, self.ui.tabs.Map)
             mapPin:SetSize(25,25)
             mapPin:SetFrameStrata("HIGH")
             mapPin.text = mapPin:CreateFontString(nil, "OVERLAY","GameFontNormal")
@@ -34,8 +34,8 @@ function AtlasLoot:CreateMapPins(list)
             totalPins = totalPins + 1
         end
         -- converts a standard coordinate x,y to stardard anchor points
-        local x = ((self.mainUI.mapFrame:GetWidth()/100) * map[2][1]) - (_G["AtlasLoot_MapPin"..i]:GetWidth()/2)
-        local y = (-(self.mainUI.mapFrame:GetHeight()/100) * map[2][2]) + (_G["AtlasLoot_MapPin"..i]:GetHeight()/2)
+        local x = ((self.ui.tabs.Map:GetWidth()/100) * map[2][1]) - (_G["AtlasLoot_MapPin"..i]:GetWidth()/2)
+        local y = (-(self.ui.tabs.Map:GetHeight()/100) * map[2][2]) + (_G["AtlasLoot_MapPin"..i]:GetHeight()/2)
         _G["AtlasLoot_MapPin"..i]:SetScript("OnEnter", function(btn)
             self.showCords = true
             GameTooltip:SetOwner(btn, "ANCHOR_TOPLEFT")
@@ -66,7 +66,7 @@ function AtlasLoot:CreateMapPins(list)
         end
         _G["AtlasLoot_MapPin"..i].text:SetText(self.Colors.CYAN..map[1])
         _G["AtlasLoot_MapPin"..i]:ClearAllPoints()
-        _G["AtlasLoot_MapPin"..i]:SetPoint("TOPLEFT",self.mainUI.mapFrame,x ,y)
+        _G["AtlasLoot_MapPin"..i]:SetPoint("TOPLEFT",self.ui.tabs.Map,x ,y)
         _G["AtlasLoot_MapPin"..i]:Show()
     end
 end
@@ -74,100 +74,92 @@ end
 function AtlasLoot:MapOnEnter()
     local x, y = self:GetCursorCords()
     if self.showCords then
-        self.mainUI.mapFrame.cursorCords:SetText(self.Colors.WHITE.."Cursor: "..x.." , "..y)
+        self.ui.tabs.Map.cursorCords:SetText(self.Colors.WHITE.."Cursor: "..x.." , "..y)
     end
 end
 
 -- Track the coordinates off the mouse while it is on the map frame
 function AtlasLoot:GetCursorCords()
-    local scale,x, y = self.mainUI.mapFrame:GetEffectiveScale(), GetCursorPosition()
-    local width, height = self.mainUI.mapFrame:GetWidth()/100, self.mainUI.mapFrame:GetHeight()/100
-    x, y = math.ceil(((x/scale) - self.mainUI.mapFrame:GetLeft())/width), math.ceil((((y/scale) - self.mainUI.mapFrame:GetTop())/height) * -1)
+    local scale,x, y = self.ui.tabs.Map:GetEffectiveScale(), GetCursorPosition()
+    local width, height = self.ui.tabs.Map:GetWidth()/100, self.ui.tabs.Map:GetHeight()/100
+    x, y = math.ceil(((x/scale) - self.ui.tabs.Map:GetLeft())/width), math.ceil((((y/scale) - self.ui.tabs.Map:GetTop())/height) * -1)
     return x, y
 end
 
 function AtlasLoot:PlayerPin(firstSet)
-    if self.mainUI.mapFrame:IsVisible() and AtlasLoot_MapData[self.CurrentMap].ZoneName[1] == GetRealZoneText() and self.MapNum == GetCurrentMapDungeonLevel() then
+    if self.ui.tabs.Map:IsVisible() and self.data.map[self.CurrentMap].ZoneName[1] == GetRealZoneText() and self.MapNum == GetCurrentMapDungeonLevel() then
         _G["AtlasLoot_PlayerMapPin"]:Show()
     else
         return
     end
     if GetUnitSpeed("player") > 0 or firstSet then
         local x, y = GetPlayerMapPosition("player")
-        x = ((self.mainUI.mapFrame:GetWidth()/100) * (x * 100)) - (_G["AtlasLoot_PlayerMapPin"]:GetWidth()/2)
-        y = (-(self.mainUI.mapFrame:GetHeight()/100) * (y * 100)) + (_G["AtlasLoot_PlayerMapPin"]:GetHeight()/2)
+        x = ((self.ui.tabs.Map:GetWidth()/100) * (x * 100)) - (_G["AtlasLoot_PlayerMapPin"]:GetWidth()/2)
+        y = (-(self.ui.tabs.Map:GetHeight()/100) * (y * 100)) + (_G["AtlasLoot_PlayerMapPin"]:GetHeight()/2)
         _G["AtlasLoot_PlayerMapPin"]:ClearAllPoints()
-        _G["AtlasLoot_PlayerMapPin"]:SetPoint("TOPLEFT",self.mainUI.mapFrame, x, y )
+        _G["AtlasLoot_PlayerMapPin"]:SetPoint("TOPLEFT",self.ui.tabs.Map, x, y )
         _G["AtlasLoot_PlayerMapPin"].texture:SetRotation(GetPlayerFacing())
     end
     self.playerPinTimer = self:ScheduleTimer("PlayerPin", .1)
 end
 
 function AtlasLoot:SetNavButtons(mapID, mapNum)
-    if not self.mainUI.mapFrame:IsVisible() then return end
+    if not self.ui.tabs.Map:IsVisible() then return end
     --Hide navigation buttons by default, only show what we need
     self:ToggleNavigationButtonsVisibility()
 
-        if mapNum ~= #_G["AtlasLoot_MapData"][mapID] then
-            self.mainUI.nextbutton:SetParent(self.mainUI.mapFrame)
-            self.mainUI.nextbutton:Show()
-            self.mainUI.nextbutton.mapNum = mapNum + 1
-            self.mainUI.nextbutton.mapID = mapID
-            self.mainUI.nextbutton:ClearAllPoints()
-            self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.mainUI.mapFrame, "BOTTOMRIGHT",-30,5)
+        if mapNum ~= #self.data.map[mapID] then
+            	--Set the parent frame and anchor points
+            local nextSet = {self.ui.tabs.Map, {"BOTTOMRIGHT", self.ui.tabs.Map, "BOTTOMRIGHT",-10,10}}
+            self:SetNavigationButtonsPoints(nextSet)
+            self.ui.nextbutton:Show()
+            self.ui.nextbutton.mapNum = mapNum + 1
+            self.ui.nextbutton.mapID = mapID
         end
         if mapNum ~= 1 then
-            self.mainUI.prevbutton:SetParent(self.mainUI.mapFrame)
-            self.mainUI.prevbutton:Show()
-            self.mainUI.prevbutton.mapNum = mapNum - 1
-            self.mainUI.prevbutton.mapID = mapID
-            self.mainUI.prevbutton:ClearAllPoints()
-            self.mainUI.prevbutton:SetPoint("BOTTOMLEFT", self.mainUI.mapFrame, "BOTTOMLEFT",5,5)
+            local prevSet = {self.ui.tabs.Map, {"BOTTOMLEFT", self.ui.tabs.Map, "BOTTOMLEFT",10,10}}
+            self:SetNavigationButtonsPoints(nil, prevSet)
+            self.ui.prevbutton:Show()
+            self.ui.prevbutton.mapNum = mapNum - 1
+            self.ui.prevbutton.mapID = mapID
         end
 end
 
 --called everytime you open a map hiding the loot item buttons 
 function AtlasLoot:MapOnShow(mapID, mapNum, refresh)
-    if not refresh and self.mainUI.mapFrame:IsVisible() then
-        self.mainUI.mapFrame:Hide()
-        self.mainUI.lootBackground:Show()
-        self:BackButton_OnClick()
-        self.itemframe.Label:Show()
-        Atlasloot_HeaderLabel:Hide()
-        self:ScrollFrameUpdate()
-    else
-        if self.CurrentMap then
-            self.itemframe:Hide()
-            -- Hide the Filter Check-Box
-	        self.mainUI.filterButton:Hide()
-            self.mainUI.lootBackground:Hide()
+    if self.CurrentMap then
+        self.itemframe:Hide()
+        self.ui.tabs.Search:Hide()
+        self.ui.tabs.Loot.TableScrollFrame:Show()
+        -- Hide the Filter Check-Box
+	    self.ui.filterButton:Hide()
+        self.ui.tabs.Loot:Hide()
 
-                self.mainUI.mapFrame:Show()
-                Atlasloot_HeaderLabel:Show()
-                self:ScrollFrameUpdate(true)
-                AtlasLootDefaultFrameScroll:Hide()
-                
-                SetMapToCurrentZone()
-                if mapNum and mapID then
-                    self.CurrentMap = mapID
-                elseif AtlasLoot_MapData[self.CurrentMap].ZoneName[1] == GetRealZoneText() then
-                    if GetCurrentMapDungeonLevel() == 0 then
-                        mapNum = 1
-                    else
-                        mapNum = GetCurrentMapDungeonLevel()
-                    end
-                elseif lastMap == self.CurrentMap then
-                    mapNum = self.MapNum
-                end
-                lastMap = self.CurrentMap
-                self:MapSelect(self.CurrentMap, mapNum)
+        self.ui.tabs.Map:Show()
+        self.ui.difficultyScrollFrame.Lable:Show()
+        self:ScrollFrameUpdate(true)
+        self.ui.difficultyScrollFrame.scrollSlider:Hide()
+
+        SetMapToCurrentZone()
+        if mapNum and mapID then
+            self.CurrentMap = mapID
+        elseif self.data.map[self.CurrentMap].ZoneName[1] == GetRealZoneText() then
+            if GetCurrentMapDungeonLevel() == 0 then
+                mapNum = 1
+            else
+                mapNum = GetCurrentMapDungeonLevel()
+            end
+        elseif lastMap == self.CurrentMap then
+            mapNum = self.MapNum
         end
+        lastMap = self.CurrentMap
+        self:MapSelect(self.CurrentMap, mapNum)
     end
 end
 
 --called to change the current displayed map
 function AtlasLoot:MapSelect(mapID, mapNum)
-    local map = AtlasLoot_MapData[mapID]
+    local map = self.data.map[mapID]
     if map.MapName then
         for i = 1, 12 do
             local texture = _G["AtlasLoot_MapDetailTile"..i]:SetTexture("Interface\\Worldmap\\"..map.MapName.."\\"..map.MapName..mapNum.."_"..i)
@@ -203,30 +195,17 @@ function AtlasLoot:MapSelect(mapID, mapNum)
     self.Colors.GOLD .. "Player Limit: ".. self.Colors.WHITE..map.PlayerLimit
 
     if map.Reputation and type(map.Reputation) == "table" then
-        text = text .. "\n" .. self.Colors.GOLD .. AL["Reputation"] .. ": ".. self.Colors.WHITE .. map.Reputation[playerFaction]
+        text = text .. "\n" .. self.Colors.GOLD .. "Reputation" .. ": ".. self.Colors.WHITE .. map.Reputation[playerFaction]
     elseif map.Reputation then
-        text = text .. "\n" .. self.Colors.GOLD .. AL["Reputation"] .. ": ".. self.Colors.WHITE .. map.Reputation
+        text = text .. "\n" .. self.Colors.GOLD .. "Reputation" .. ": ".. self.Colors.WHITE .. map.Reputation
     end
-    Atlasloot_HeaderLabel:SetText(text)
-    self:SetMapButtonText(mapID, mapNum)
-end
-
-function AtlasLoot:SetMapButtonText(mapID, mapNum)
-    local map = AtlasLoot_MapData[mapID]
-    mapNum = mapNum or 1
-    local text
-    if map[mapNum][1].Zone then
-        text = map[mapNum][2][1]
-    else
-        text = map[mapNum][1][1]
-    end
-    self.mainUI.mapButton:SetText(text)
+    self.ui.difficultyScrollFrame.Lable:SetText(text)
 end
 
 --drop down map menu
 function AtlasLoot:MapMenuOpen(frame)
     local mapID = self.CurrentMap
-    local map = AtlasLoot_MapData[mapID]
+    local map = self.data.map[mapID]
     local zones = {[1] = {}}
         for i,v in ipairs(map) do
             local text
@@ -239,8 +218,17 @@ function AtlasLoot:MapMenuOpen(frame)
         end
     local menuList = { 
     {
-        {text = self.Colors.ORANGE..AL["Open AscensionDB To Zone Map"], divider = true, func = function() self:OpenDBURL(AtlasLoot_MapData[self.CurrentMap].ZoneName[2] , "zone") end},
+        {text = self.Colors.ORANGE.."Open AscensionDB To Zone Map", divider = true, func = function() self:OpenDBURL(self.data.map[self.CurrentMap].ZoneName[2] , "zone") end},
     }}
 
     self:OpenDewdropMenu(frame, zones, menuList)
+end
+
+function AtlasLoot:ShowMapTab(button, buttonClick)
+    if buttonClick == "RightButton" then
+        self:MapMenuOpen(button)
+    else
+        self.ui.tabs.currentTab = "Map"
+        self:MapOnShow(self.CurrentMap, self.MapNum or 1)
+    end
 end

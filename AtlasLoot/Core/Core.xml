@@ -2,16 +2,16 @@
 
 	<!--Default Files-->
 	<Script file="Difficultys.lua"/>
-	<Script file="Utils.lua"/>
 	<Script file="Filter.lua"/>
+	<Script file="Equipment.lua"/>
     <Script file="TextParsing.lua"/>
     <Script file="Options.lua"/>
     <Script file="LootButtons.lua"/>
+	<Script file="MapWapPoints.lua"/>
 	<Script file="MapData.lua"/>
     <Script file="Maps.lua"/>
 	<Script file="Launchers.lua"/>
 	<Script file="WishList.lua"/>
-	<Script file="SearchAdvanced.lua"/>
     <Script file="Search.lua"/>
 	<Script file="PatchNotes.lua"/>
 	<Script file="VanityCollection.lua"/>

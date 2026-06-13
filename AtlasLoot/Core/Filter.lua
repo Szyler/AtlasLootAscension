@@ -1,9 +1,9 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 
 local FilterTable = {
 	{
-		Name = AL["Primary Stats"],
+		Name = "Primary Stats",
 		Type = "PrimaryStat",
 		{"Strength", "ITEM_MOD_STRENGTH_SHORT"},
 		{"Agility", "ITEM_MOD_AGILITY_SHORT"},
@@ -11,7 +11,7 @@ local FilterTable = {
 		{"Spirit", "ITEM_MOD_SPIRIT_SHORT"},
 	},
 	{
-		Name = AL["Secondary Stats"],
+		Name = "Secondary Stats",
 		Type = "Stat",
 		{"Attack Power", "ITEM_MOD_ATTACK_POWER_SHORT"},
 		{"Spell Power", "ITEM_MOD_SPELL_POWER_SHORT"},
@@ -22,7 +22,7 @@ local FilterTable = {
 		{"Spell Pen", "ITEM_MOD_SPELL_PENETRATION_SHORT"}
 	},
 	{
-		Name = AL["Defensive Stats"],
+		Name = "Defensive Stats",
 		Type = "Stat",
 		{"Defense", "ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"},
 		{"Dodge", "ITEM_MOD_DODGE_RATING_SHORT"},
@@ -49,9 +49,8 @@ local CraftingFilterTable = {
 --	AtlasLoot:FilterItem()
 -- **********************************************************************
 
-function AtlasLoot:FilterItem(item, dataSource, dataID)
+function AtlasLoot:FilterItem(item, itemID, dataSource)
 	if not self.filterEnable then return true end
-	local source = dataSource[dataID]
 
 	-- returns true if item has the desired stats
 	local function checkStats(itemStats, sCheck)
@@ -92,8 +91,8 @@ function AtlasLoot:FilterItem(item, dataSource, dataID)
 
 	local function getVanityFilters(itemID, learnedSpellID)
 		local db = AtlasLootFilterDB.VanityFilters
-		if VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
-			learnedSpellID = VANITY_ITEMS[itemID].learnedSpell
+		if self:GetVanityItemInfo(itemID) and self:GetVanityItemInfo(itemID).learnedSpell and self:GetVanityItemInfo(itemID).learnedSpell ~= 0 then
+			learnedSpellID = self:GetVanityItemInfo(itemID).learnedSpell
 		end
 
 		if C_VanityCollection.IsCollectionItemOwned(itemID) then
@@ -116,15 +115,15 @@ function AtlasLoot:FilterItem(item, dataSource, dataID)
 	end
 
 	-- return true if item needs filtering
-	if source.vanity then
-		if not getVanityFilters(item.itemID, item.learnedSpellID) then
+	if dataSource.vanity then
+		if not getVanityFilters(itemID, item.learnedSpellID) then
 			return false
 		else
 			return true
 		end
-	elseif source.Type == "Crafting" and getCraftingFilters(item.spellID) then
+	elseif dataSource.Type == "Crafting" and getCraftingFilters(item.spellID) then
 		return true
-	elseif getFilterType(item.itemID) or item.icon then
+	elseif getFilterType(itemID) or item.icon then
 		return true
 	end
 
@@ -133,14 +132,14 @@ end
 function AtlasLoot:FilterEnableButton(frame, btnclick)
 	if btnclick == "RightButton" then
 		self:FilterMenuOpen(frame)
-		self.mainUI.filterButton:SetChecked(not self.mainUI.filterButton:GetChecked())
+		self.ui.filterButton:SetChecked(not self.ui.filterButton:GetChecked())
 	else
 		if self.filterEnable then
 			self.filterEnable = false
-			self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+			self:ShowItemsFrame("refresh")
 		else
 			self.filterEnable = true
-			self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+			self:ShowItemsFrame("refresh")
 		end
 	end
 end
@@ -161,7 +160,8 @@ Constructs the Filter menu.
 function AtlasLoot:FilterMenuOpen(frame)
 	local menuList = {{},{}}
 	local db = AtlasLootFilterDB
-	if _G[self.itemframe.refresh[2]][self.itemframe.refresh[1]].vanity then
+	local dataType = self:GetDataType(self.itemframe.refresh[1])
+	if self:GetDataVanity(self.itemframe.refresh[1]) then
 		for _, filter in ipairs(VanityFilterTable) do
 			local db = db.VanityFilters
 			db[filter[1]] = db[filter[1]] or false
@@ -170,11 +170,11 @@ function AtlasLoot:FilterMenuOpen(frame)
 				db[filter[1]] = not db[filter[1]]
 				disableFilters(filter[1])
 				if self.filterEnable then
-					self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+					self:ShowItemsFrame("refresh")
 				end
 			end})
 		end
-	elseif _G[self.itemframe.refresh[2]][self.itemframe.refresh[1]].Type == "Crafting" then
+	elseif dataType == "BCCrafting" or dataType == "ClassicCrafting" or dataType == "WrathCrafting"  then
 		for _, filter in ipairs(CraftingFilterTable) do
 			local db = db.CraftingFilters
 			db[filter[1]] = db[filter[1]] or false
@@ -183,7 +183,7 @@ function AtlasLoot:FilterMenuOpen(frame)
 				db[filter[1]] = not db[filter[1]]
 				disableFilters(filter[1])
 				if self.filterEnable then
-					self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+					self:ShowItemsFrame("refresh")
 				end
 			end
 			})
@@ -197,7 +197,7 @@ function AtlasLoot:FilterMenuOpen(frame)
 				func = function()
 					db[filters[2]][1] = not db[filters[2]][1]
 					if self.filterEnable then
-						self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+						self:ShowItemsFrame("refresh")
 					end
 				end})
 			end

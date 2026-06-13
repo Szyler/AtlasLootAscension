@@ -28,12 +28,44 @@ end
 --[[
 GetItemDifficultyID(id, difficulty)
 Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
+If the id is sent in a table it will search for the the right ID frist then return the difficulty
 ]]
 function GetItemDifficultyID(id, difficulty)
-	if not difficulty or difficulty == 3 then return id end
-	local correctID = ItemIDsDatabaseCorrectedIDs[id] or ItemIDsDatabase[id]
-	if correctID and correctID[difficulty] then
-		return correctID[difficulty]
+	if type(id) == "table" then
+		-- Corrected itemIDs datatbase
+		-- Searchs the returns the itemID from any item difficulty to any item difficulty
+		for normalID, item in pairs(ItemIDsDatabaseCorrectedIDs) do
+			for _, newID in pairs(item) do
+				if newID == id[1] then
+					if difficulty == 3 then
+						return normalID
+					else
+						return ItemIDsDatabaseCorrectedIDs[normalID][difficulty]
+					end
+				end
+			end
+		end
+		-- Main itemIDs database
+		-- Searchs the returns the itemID from any item difficulty to any item difficulty
+		for normalID, item in pairs(ItemIDsDatabase) do
+			for _, newID in pairs(item) do
+				if newID == id[1] then
+					if difficulty == 3 then
+						return normalID
+					else
+						return ItemIDsDatabase[normalID][difficulty]
+					end
+				end
+			end
+		end
+		return id[1]
+	else
+		-- Difficulty from the normalID
+		if not difficulty or difficulty == 3 then return id end
+		local correctID = ItemIDsDatabaseCorrectedIDs[id] or ItemIDsDatabase[id]
+		if correctID and correctID[difficulty] then
+			return correctID[difficulty]
+		end
+		return id
 	end
-	return id
 end

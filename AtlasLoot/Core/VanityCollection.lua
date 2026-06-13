@@ -1,75 +1,119 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
-local function CollectionNames(cat)
-	local C_names = {
-		["Axe1H"] = "One-Handed Axes",
-		["Axe2H"] = "Two-Handed Axes",
-		["Sword1H"] = AL["One-Handed Sword"],
-		["Sword2H"] = AL["Two-Handed Sword"],
-		["Mace1H"] = AL["One-Handed Mace"],
-		["Mace2H"] = AL["Two-Handed Mace"],
-	}
-	return C_names[cat] or cat
-end
 
--- Text Conversion
-local equipSlot = {
-	INVTYPE_HEAD = {"Head"}, INVTYPE_SHOULDER = {"Shoulder"}, INVTYPE_CHEST = {"Chest"},
-	INVTYPE_WRIST = {"Wrist"}, INVTYPE_HAND = {"Hands"}, INVTYPE_WAIST = {"Waist"},
-	INVTYPE_LEGS = {"Legs"}, INVTYPE_FEET = {"Feet"}, INVTYPE_FINGER = {"Ring"},
-	INVTYPE_CLOAK = {"Back"}, INVTYPE_NECK = {"Neck"},
-	INVTYPE_TRINKET = {"Trinket"}, INVTYPE_BODY = {"Shirt"}, INVTYPE_TABARD = {"Tarbard"},
-    ["One-Handed Axes"] = {"Axe1H","One-Handed Axes"}, ["Two-Handed Axes"] = {"Axe2H","Two-Handed Axes"},
-	["One-Handed Swords"] = {"Sword1H","One-Handed Swords"}, ["Two-Handed Swords"] = {"Sword2H","Two-Handed Swords"},
-	["One-Handed Maces"] = {"Mace1H","One-Handed Maces"}, ["Two-Handed Maces"] = {"Mace2H","Two-Handed Maces"},
-	Daggers = {"Dagger", "Daggers"},
-	["Fist Weapons"] = {"Fist", "Fist Weapons"},
-	Shields = {"Shield"},
-	Polearms = {"Polearm"},
-	Bows = {"Bows"},
-	Guns = {"Guns"},
-	Crossbows = {"Crossbows"},
-	Thrown = {"Thrown"},
-	Wands = {"Wands"},
-	Staves = {"Staves"},
-	["Fishing Poles"] = {"FishingPole", "Fishing Poles"},
-	OffHands = {"OffHand", "OffHands"},
-    Consumable = {"Consumable"},
-}
-
--- Combind robes with chest
-local function getEquipSlot(equipLoc, equipeType)
-	if equipLoc == "INVTYPE_ROBE" then
-		equipLoc = "INVTYPE_CHEST"
+	local function CollectionNames(cat)
+		local C_names = {
+			["Axe1H"] = "One-Handed Axes",
+			["Axe2H"] = "Two-Handed Axes",
+			["Sword1H"] = "One-Handed Sword",
+			["Sword2H"] = "Two-Handed Sword",
+			["Mace1H"] = "One-Handed Mace",
+			["Mace2H"] = "Two-Handed Mace",
+		}
+		return C_names[cat] or cat
 	end
-	return equipSlot[equipLoc] or equipSlot[equipeType]
-end
 
+	local extraCategories = {
+		Weapons = {
+			VanityAxe1H = "One-Handed Axes",
+			VanityAxe2H = "Two-Handed Axes",
+			VanitySword1H = "One-Handed Swords",
+			VanitySword2H = "Two-Handed Swords",
+			VanityMace1H = "One-Handed Maces",
+			VanityMace2H = "Two-Handed Maces",
+			VanityDagger = "Daggers",
+			VanityFist = "Fist Weapons",
+			VanityShield = "Shields",
+			VanityPolearm = "Polearms",
+			VanityBows = "Bows",
+			VanityGuns = "Guns",
+			VanityCrossbows = "Crossbows",
+			VanityThrown = "Thrown",
+			VanityWands = "Wands",
+			VanityStaves = "Staves",
+			VanityFishingPole = "Fishing Poles",
+			VanityOffHand = "Off Hands",
+		},
+		Armor = {
+			VanityHead = "Head",
+			VanityShoulder = "Shoulders",
+			VanityChest = "Chests",
+			VanityWaist = "Waist",
+			VanityLegs = "Legs",
+			VanityFeet = "Feet",
+			VanityWrist = "Wrist",
+			VanityHands = "Hands",
+			VanityBack = "Back",
+			VanitySets = "Sets",
+		},
+		Miscellaneous = {
+			VanityShirt = "Shirts",
+			VanityTabard = "Tabards",
+			VanityBackpack = "Backpacks",
+			VanityIllusion = "Illusions",
+		},
+		Spells = {
+			VanityVisual = "Spell Visuals",
+			VanityEffect = "Effects",
+			VanityIncarnation = "Incarnations",
+		},
+		TamedPets = {
+			VanityWhistle = "Whistles",
+			VanitySummonStone = "Summon Stones",
+			VanityVellum = "Vellums",
+			VanityWarhorn = "Warhorns",
+			VanityLodestone = "Lodestones",
+		}
+	}
 
 function AtlasLoot:CreateVanityCollection()
+	self:InitializeDataTables()
+	local itemData = self.data.item
+
+	local function createCategory(cat, name)
+		cat = gsub(cat, "Vanity", "")
+		if itemData["Vanity"..cat] then return end
+		local menuData = {}
+		for mainCatName, mainCat in pairs(extraCategories) do
+			if mainCat["Vanity"..cat] then
+				menuData["Vanity"..mainCatName] = menuData["Vanity"..mainCatName] or {Name = mainCatName, vanity = true, Module = "AtlasLoot_Ascension_Vanity"}
+				for catName, catDisplayName in pairs (mainCat) do
+					itemData[catName] = { dontSort = true, vanityCollection = true, {} }
+					table.insert(menuData["Vanity"..mainCatName], {catDisplayName, {catName}})
+				end
+				break
+			end
+		end
+		if #menuData == 0 then
+			itemData["Vanity"..cat] = { dontSort = true, vanityCollection = true, {} }
+			menuData["Vanity"..cat] = menuData["Vanity"..cat] or {Name = name, vanity = true, Module = "AtlasLoot_Ascension_Vanity"}
+			table.insert(menuData["Vanity"..cat], {name, {"Vanity"..cat}})
+		end
+		self:AddNewMenus(menuData)
+	end
+
 	local function findGroup(group)
 		for cat, flag in pairs(Enum.VanityCategory) do
 			if type(flag) == "table" then
 				for subcat, subflag in pairs(flag) do
-					if not AtlasLoot_Data["Vanity"..subcat] then AtlasLoot_Data["Vanity"..subcat] = { Name = CollectionNames(subcat), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
+					createCategory(subcat, CollectionNames(subcat))
 					if bit.contains(subflag, group) then
 						return "Vanity"..subcat
 					end
 				end
 			else
-				if not AtlasLoot_Data["Vanity"..cat] then AtlasLoot_Data["Vanity"..cat] = { Name = CollectionNames(cat), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
+				createCategory(cat, CollectionNames(cat))
 				if bit.contains(flag, group) then
 					return "Vanity"..cat
 				end
 			end
 		end
-		if not AtlasLoot_Data["VanityUncategorized"] then AtlasLoot_Data["VanityUncategorized"] = { Name = CollectionNames("Uncategorized"), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
+		createCategory("VanityUncategorized", "Uncategorized")
 		return "VanityUncategorized"
 	end
 
     local function setGroup(group, name)
-       	if not AtlasLoot_Data["Vanity"..group] then AtlasLoot_Data["Vanity"..group] = { Name = AL[name or group], vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
+		createCategory(group, name or group)
 		return "Vanity"..group
     end
 
@@ -82,7 +126,7 @@ function AtlasLoot:CreateVanityCollection()
     end
 
     local function setGroupByName(item)
-        local list = { 
+        local list = {
         ["Beastmaster's Whistle:"] = {"Whistle", "Whistles"} ,
         ["Elemental Lodestone:"] = {"Lodestone", "Lodestones"},
         ["Summoner's Stone:"] = {"SummonStone", "SummonStones"},
@@ -92,18 +136,18 @@ function AtlasLoot:CreateVanityCollection()
         ["Incarnation:"] = {"Incarnation", "Incarnations"},
 		["Tome of"] = {"Tomes", "Tomes"},
     }
-        for Type, catagory in pairs(list) do
-            if item.name:find(Type, 1, true) then return catagory end
+        for Type, category in pairs(list) do
+            if item.name:find(Type, 1, true) then return category end
         end
     end
 
 	local categorieList = {}
-	for _, item in pairs(VANITY_ITEMS) do
+	for _, item in pairs(self:GetVanityItems()) do
         local group
 		local flavor = GetItemFlavorText(item.itemid)
         local itemInfo = {self:GetItemInfo(item.itemid, true)}
         local itemType, itemSlot, itemDescription = itemInfo[7], itemInfo[9], itemInfo[12]
-        local isItemSlot = getEquipSlot(itemSlot, itemType)
+        local slotName, slotAltName = self.Equipment:GetSlotName(itemSlot) or self.Equipment:GetSlotName(itemType)
         local groupByName = setGroupByName(item)
 		if item.quality == 7 then
             group = setGroup("Heirlooms")
@@ -119,8 +163,8 @@ function AtlasLoot:CreateVanityCollection()
             group = setGroup("Keys")
         elseif itemType == "Mount" then
             group = setGroup("Mounts")
-        elseif isItemSlot then
-            group = setGroup(isItemSlot[1], isItemSlot[2] or isItemSlot[1])
+        elseif slotName then
+            group = setGroup(slotName, slotAltName or slotName)
 		else
 			group = findGroup(item.group)
 		end
@@ -131,7 +175,7 @@ function AtlasLoot:CreateVanityCollection()
 		if item.contentsPreview and #item.contentsPreview > 1 then
 			contentsPreview = {}
 			for _,itemID in pairs(item.contentsPreview) do
-				tinsert(contentsPreview, { itemID = itemID })
+				table.insert(contentsPreview, { itemID = itemID })
 			end
 		end
 		local description
@@ -140,56 +184,48 @@ function AtlasLoot:CreateVanityCollection()
 		end
 		local price = item.btCost > 0 and item.btCost .. " #bazaar#" or nil
 		if not categorieList[group] then categorieList[group] = {} end
-		tinsert(categorieList[group], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, price = price })
+		table.insert(categorieList[group], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, price = price })
 	end
+
 	for groupName, categorie in pairs(categorieList) do
-		for i, item in ipairs(categorie) do
-			if not AtlasLoot_Data[groupName][1] then
-				AtlasLoot_Data[groupName][1] = {Name = groupName, {}, {}}
+		createCategory(groupName, groupName)
+		for _, item in ipairs(categorie) do
+			local group = itemData[groupName]
+			if #group[#group] >= 30 then
+				table.insert(group, {})
 			end
-			local pageSide = AtlasLoot_Data[groupName][1][1]
-			if i > 15 and i > (#categorie/2) then
-				pageSide = AtlasLoot_Data[groupName][1][2]
-			end
-			tinsert(pageSide, item)
+			table.insert(group[#group], item)
 		end
 	end
+	
 end
 
 function AtlasLoot:LearnAllUnknownVanitySpells()
 	local unknownSpells = {}
 	local function parseCollection(group)
-		for _, catagory in ipairs(AtlasLoot_Data[group]) do
-			for _, side in ipairs(catagory) do
-				if type(catagory) == "table" then
-					for _, item in ipairs(side) do
-						if type(item) == "table" and item.itemID and C_VanityCollection.IsCollectionItemOwned(item.itemID) and VANITY_ITEMS[item.itemID] and
-						not CA_IsSpellKnown(VANITY_ITEMS[item.itemID].learnedSpell) and VANITY_ITEMS[item.itemID].learnedSpell ~= 0 then
-							local _, itemLink = self:GetItemInfo(item.itemID)
-							local spellName = GetSpellInfo(VANITY_ITEMS[item.itemID].learnedSpell)
-							local itemTooltipInfo = self:GetTooltipItemInfo(itemLink)
-							if (itemTooltipInfo and not itemTooltipInfo.isKnown) and not unknownSpells[spellName] or
-							(unknownSpells[spellName] and item.itemID > unknownSpells[spellName]) then
-								unknownSpells[spellName] = item.itemID
-							end
+		if self.data.item[group] then
+			for _, category in ipairs(self.data.item[group]) do
+				for _, item in ipairs(category) do
+					if type(item) == "table" and item.itemID and C_VanityCollection.IsCollectionItemOwned(item.itemID) and self:GetVanityItemInfo(item.itemID) and
+					not CA_IsSpellKnown(self:GetVanityItemInfo(item.itemID).learnedSpell) and self:GetVanityItemInfo(item.itemID).learnedSpell ~= 0 then
+						local _, itemLink = self:GetItemInfo(item.itemID)
+						local spellName = GetSpellInfo(self:GetVanityItemInfo(item.itemID).learnedSpell)
+						local itemTooltipInfo = self:GetTooltipItemInfo(itemLink)
+						if (itemTooltipInfo and not itemTooltipInfo.isKnown) and not unknownSpells[spellName] or
+						(unknownSpells[spellName] and item.itemID > unknownSpells[spellName]) then
+							unknownSpells[spellName] = item.itemID
 						end
 					end
 				end
 			end
 		end
 	end
-	for _, group in pairs(AtlasLoot_SubMenus["CollectionsAscensionCLASSIC"]) do
-		if group[3] then
-			for _, subGroup in pairs(group[3]) do
-				parseCollection(subGroup[2])
-			end
-		else
-			parseCollection(group[2])
-		end
+	for _, group in pairs(self.ui.menus.collection["CollectionsAscensionCLASSIC"]) do
+		parseCollection(group[1])
 	end
 	local newSpellList = {}
 	for _, itemID in pairs(unknownSpells) do
-		tinsert(newSpellList, itemID)
+		table.insert(newSpellList, itemID)
 	end
 	self:BatchRequestVanity(newSpellList)
 end
@@ -203,14 +239,32 @@ function AtlasLoot:BatchRequestVanity(itemList)
 	local function nextItem()
         local task = tremove(itemList)
 		while task do
-			RequestDeliverVanityCollectionItem(task)
+			self:DeliverVanityItem(task)
             local count = GetItemCount(task)
-			if not CA_IsSpellKnown(VANITY_ITEMS[task].learnedSpell) and (not count or (count and count < duplicateList[task])) then
-				tinsert(itemList, task)
+			if not CA_IsSpellKnown(self:GetVanityItemInfo(task).learnedSpell) and (not count or (count and count < duplicateList[task])) then
+				table.insert(itemList, task)
 			end
 			return Timer.After(.2, nextItem)
         end
-		DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.YELLOW..AL["Retrieving Vanity Items Completed!"])
+		DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot"..": "..self.Colors.YELLOW.."Retrieving Vanity Items Completed!")
     end
     return nextItem()
+end
+
+local vanityItems
+function AtlasLoot:GetVanityItems()
+	if not vanityItems then vanityItems = C_VanityCollection.GetAllItems() end
+	return vanityItems
+end
+
+function AtlasLoot:GetVanityItemInfo(id)
+	return self:GetVanityItems()[id]
+end
+
+function AtlasLoot:DeliverVanityItem(item)
+  if RequestDeliverVanityCollectionItem then
+    RequestDeliverVanityCollectionItem(item)
+  elseif C_VanityCollection.RequestDelivery then
+    C_VanityCollection.RequestDelivery(item)
+  end
 end

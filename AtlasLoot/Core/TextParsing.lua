@@ -1,140 +1,120 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
+local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
+local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
+-- Colours stored for code readability
+local GREY = "|cff999999"
+local RED = "|cffff0000"
+local WHITE = "|cffFFFFFF"
+local GREEN = "|cff1eff00"
+local LIMEGREEN = "|cFF32CD32"
+local BLUE = "|cff0070dd"
+local ORANGE = "|cffFF8400"
+local YELLOW = "|cffFFd200"
+local GOLD  = "|cffffcc00"
+local CYAN =  "|cff00ffff"
+local PURPLE = "|cff9F3FFF"
+local SPRINGGREEN = "|cFF00FF7F"
+local LIGHTBLUE = "|cFFADD8E6"
+local ORANGE2 = "|cFFFFA500"
 --------------------------------------------------------------------------------
 -- Text replacement function
 --------------------------------------------------------------------------------
 AtlasLoot.FixedItemText = {
     --Intact Vial of Lady Vashj
-    [450000] = BabbleInventory["Quest"],
-    [450002] = BabbleInventory["Quest"],
-    [1450002] = BabbleInventory["Quest"],
-    [450004] = BabbleInventory["Quest"],
+    [450000] = "Quest",
+    [450002] = "Quest",
+    [1450002] = "Quest",
+    [450004] = "Quest",
     --Intact Vial of Kael'thas Sunstrider
-    [450001] = BabbleInventory["Quest"],
-    [450003] = BabbleInventory["Quest"],
-    [1450003] = BabbleInventory["Quest"],
-    [450005] = BabbleInventory["Quest"],
+    [450001] = "Quest",
+    [450003] = "Quest",
+    [1450003] = "Quest",
+    [450005] = "Quest",
     -- Magtheridon's Head
-    [32385] = BabbleInventory["Quest"], 
-    [122561] = BabbleInventory["Quest"],
-    [1332385] = BabbleInventory["Quest"],
-    [232385] = BabbleInventory["Quest"],
-    [32405] = BabbleInventory["Quest"], -- Verdant Sphere
-    [29906] = BabbleInventory["Quest"], -- Vashj's Vial Remnant
-    [29905] = BabbleInventory["Quest"], -- Kael's Vial Remnant
-    [98570] = AL["Mystic Enchanting"],
-    [229739] = AL["Epic Shoulder Enchants"],
-    [222637] = AL["Head Enchants"],
-    [29434] = AL["Token"],
-    [400751] = AL["Token"],
+    [32385] = "Quest", 
+    [122561] = "Quest",
+    [1332385] = "Quest",
+    [232385] = "Quest",
+    [32405] = "Quest", -- Verdant Sphere
+    [29906] = "Quest", -- Vashj's Vial Remnant
+    [29905] = "Quest", -- Kael's Vial Remnant
+    [98570] = "Mystic Enchanting",
+    [229739] = "Epic Shoulder Enchants",
+    [222637] = "Head Enchants",
+    [29434] = "Token",
+    [400751] = "Token",
 }
 
 local txtSubstitution = {
     -- Body Slot
-    { "INVTYPE_HEAD", BabbleInventory["Head"] },
-    { "INVTYPE_NECK, Miscellaneous", BabbleInventory["Neck"] },
-    { "INVTYPE_SHOULDER", BabbleInventory["Shoulder"] },
-    { "INVTYPE_CLOAK, Cloth", BabbleInventory["Back"] },
-    { "INVTYPE_CLOAK, Miscellaneous", BabbleInventory["Back"] },
-    { "INVTYPE_CHEST", BabbleInventory["Chest"] },
-    { "INVTYPE_BODY", BabbleInventory["Shirt"] },
-    { "INVTYPE_ROBE", BabbleInventory["Chest"] },
-    { "INVTYPE_TABARD, Miscellaneous", BabbleInventory["Tabard"] },
-    { "INVTYPE_WRIST", BabbleInventory["Wrist"] },
-    { "INVTYPE_HAND", BabbleInventory["Hands"] },
-    { "INVTYPE_WAIST", BabbleInventory["Waist"] },
-    { "INVTYPE_LEGS", BabbleInventory["Legs"] },
-    { "INVTYPE_FEET", BabbleInventory["Feet"] },
-    { "INVTYPE_FINGER, Miscellaneous", BabbleInventory["Ring"] },
-    { "INVTYPE_TRINKET, Miscellaneous", BabbleInventory["Trinket"] },
-    { "INVTYPE_RELIC, Miscellaneous", BabbleInventory["Relic"] },
+    { "INVTYPE_HEAD", "Head" },
+    { "INVTYPE_NECK, Miscellaneous", "Neck" },
+    { "INVTYPE_SHOULDER", "Shoulder" },
+    { "INVTYPE_CLOAK, Cloth", "Back" },
+    { "INVTYPE_CLOAK, Miscellaneous", "Back" },
+    { "INVTYPE_CHEST", "Chest" },
+    { "INVTYPE_BODY", "Shirt" },
+    { "INVTYPE_ROBE", "Chest" },
+    { "INVTYPE_TABARD, Miscellaneous", "Tabard" },
+    { "INVTYPE_WRIST", "Wrist" },
+    { "INVTYPE_HAND", "Hands" },
+    { "INVTYPE_WAIST", "Waist" },
+    { "INVTYPE_LEGS", "Legs" },
+    { "INVTYPE_FEET", "Feet" },
+    { "INVTYPE_FINGER, Miscellaneous", "Ring" },
+    { "INVTYPE_TRINKET, Miscellaneous", "Trinket" },
+    { "INVTYPE_RELIC, Miscellaneous", "Relic" },
 
     -- Weapon Weilding
     { "INVTYPE_WEAPON, ", "" },
     { "INVTYPE_2HWEAPON, ", "" },
-    { "INVTYPE_WEAPONMAINHAND, One%-Handed Swords", AL["Main-Hand Sword"] },
-    { "INVTYPE_WEAPONMAINHAND, One%-Handed Maces", AL["Main-Hand Mace"] },
-    { "INVTYPE_WEAPONMAINHAND, Daggers", AL["Main-Hand Dagger"] },
-    { "INVTYPE_WEAPONMAINHAND, Fist Weapons", AL["Main-Hand Fist Weapon"] },
-    { "INVTYPE_WEAPONOFFHAND, One%-Handed Swords", AL["Off-Hand Sword"] },
-    { "INVTYPE_WEAPONOFFHAND, Fist Weapons", AL["Off-Hand Fist Weapon"] },
+    { "INVTYPE_WEAPONMAINHAND, One%-Handed Swords", "Main-Hand Sword" },
+    { "INVTYPE_WEAPONMAINHAND, One%-Handed Maces", "Main-Hand Mace" },
+    { "INVTYPE_WEAPONMAINHAND, Daggers", "Main-Hand Dagger" },
+    { "INVTYPE_WEAPONMAINHAND, Fist Weapons", "Main-Hand Fist Weapon" },
+    { "INVTYPE_WEAPONOFFHAND, One%-Handed Swords", "Off-Hand Sword" },
+    { "INVTYPE_WEAPONOFFHAND, Fist Weapons", "Off-Hand Fist Weapon" },
     { "INVTYPE_WEAPONOFFHAND, ", "" },
     { "INVTYPE_RANGED, ", "" },
     { "INVTYPE_SHIELD, ", "" },
-    { "INVTYPE_HOLDABLE, Miscellaneous", BabbleInventory["Off Hand"] },
+    { "INVTYPE_HOLDABLE, Miscellaneous", "Off Hand" },
     { "INVTYPE_THROWN, ", "" },
 
     -- Weapon Type
-    { "INVTYPE_RANGEDRIGHT, Crossbows", BabbleInventory["Crossbow"] },
-    { "INVTYPE_RANGEDRIGHT, Gun", BabbleInventory["Gun"] },
-    { "INVTYPE_RANGEDRIGHT, Wands", BabbleInventory["Wand"] },
-    { "INVTYPE_RELIC, Idols", BabbleInventory["Idol"] },
-    { "INVTYPE_RELIC, Totem", BabbleInventory["Totem"] },
-    { "INVTYPE_RELIC, Libram", BabbleInventory["Libram"] },
-    { "INVTYPE_BAG, Bag", BabbleInventory["Bag"] },
-    { "INVTYPE_BAG, Soul Bag", BabbleInventory["Soul Bag"] },
-    { "INVTYPE_AMMO, Junk", "Ammo (Obsolete)"},
-    { "INVTYPE_AMMO, Bullet", "Ammo (Obsolete)"},
-    { "Axes", BabbleInventory["Axe"] },
-    { "Bows", BabbleInventory["Bow"] },
-    { "Daggers", BabbleInventory["Dagger"] },
-    { "Guns", BabbleInventory["Gun"] },
-    { "One%-Handed Maces", AL["One-Handed Mace"] },
-    { "Two%-Handed Maces", AL["Two-Handed Mace"] },
-    { "Polearms", BabbleInventory["Polearm"] },
-    { "Shields", BabbleInventory["Shield"] },
-    { "Staves", BabbleInventory["Staff"] },
-    { "One%-Handed Swords", AL["One-Handed Sword"] },
-    { "Two%-Handed Swords", AL["Two-Handed Sword"] },
-    { "Fist Weapons", BabbleInventory["Fist Weapon"] },
-
-    { "Pet", BabbleInventory["Pet"] },
-    { "Money", AL["Currency"] },
-    { "Consumable", BabbleInventory["Consumable"] },
-    { "Mount", BabbleInventory["Mount"] },
-    { "Quest", BabbleInventory["Quest"] },
-    { "Key", BabbleInventory["Key"] },
-    { "Book", BabbleInventory["Book"] },
-    { "Materials", BabbleInventory["Reagent"] },
-    { "Flask", BabbleInventory["Flask"] },
-    { "Other", AL["Misc"] },
-    { "Junk", AL["Misc"] },
+    { "INVTYPE_RANGEDRIGHT, Crossbows", "Crossbow" },
+    { "INVTYPE_RANGEDRIGHT, Gun", "Gun" },
+    { "INVTYPE_RANGEDRIGHT, Wands", "Wand" },
+    { "INVTYPE_RELIC, Idols", "Idol" },
+    { "INVTYPE_RELIC, Totem", "Totem" },
+    { "INVTYPE_RELIC, Libram", "Libram" },
+    { "INVTYPE_RELIC, Sigils", "Sigil" },
+    { "INVTYPE_BAG, Bag", "Bag" },
+    { "INVTYPE_BAG, Soul Bag", "Soul Bag" },
+    { "INVTYPE_BAG, Quiver", "Quiver" },
+    { "INVTYPE_AMMO, Junk", "Ammo"},
+    { "INVTYPE_AMMO, Bullet", "Ammo"},
+    { "One%-Handed Maces", "One-Handed Mace" },
+    { "Two%-Handed Maces", "Two-Handed Mace" },
+    { "One%-Handed Swords", "One-Handed Sword" },
+    { "Two%-Handed Swords", "Two-Handed Sword" },
+    { "Money", "Currency" },
+    { "Materials", "Reagent" },
+    { "Other", "Misc" },
+    { "Junk", "Misc" },
     { "%(OBSOLETE%)", ""},
-    { "Food & Drink", BabbleInventory["Food & Drink"] },
-
-    -- Crafting
-    { "Jewelcrafting", BabbleInventory["Jewelcrafting"] },
-    { "Enchanting", BabbleInventory["Enchanting"] },
-    { "Tailoring", BabbleInventory["Tailoring"] },
-    { "Blacksmithing", BabbleInventory["Blacksmithing"] },
-    { "Leatherworking", BabbleInventory["Leatherworking"] },
-    { "Alchemy", BabbleInventory["Alchemy"] },
-    { "Engineering", BabbleInventory["Engineering"] },
-    { "Cooking", BabbleInventory["Cooking"] },
-    { "Mining", AL["Mining"] },
-    { "Herbalism", AL["Herbalism"] },
 
     -- Gems
-    { "Red", AL["Red Gem"] },
-    { "Blue", AL["Blue Gem"] },
-    { "Yellow", AL["Yellow Gem"] },
-    { "Purple", AL["Purple Gem"] },
-    { "Orange", AL["Orange Gem"] },
-    { "Green", AL["Green Gem"] },
+    { "Red", "Red Gem" },
+    { "Blue", "Blue Gem" },
+    { "Yellow", "Yellow Gem" },
+    { "Purple", "Purple Gem" },
+    { "Orange", "Orange Gem" },
+    { "Green", "Green Gem" },
 
-    -- Text Colouring
-    { "=q0=", "|cff9d9d9d" },
-    { "=q1=", "|cffFFFFFF" },
-    { "=q2=", "|cff1eff00" },
-    { "=q3=", "|cff0070dd" },
-    { "=q4=", "|cffa335ee" },
-    { "=q5=", "|cffFF8000" },
-    { "=q6=", "|cffFF0000" },
-    { "=q7=", "|cffe6cc80" },
-    { "=ec1=", "|cffFF8400" },
-    { "=ds=", "|cffFFd200" },
 
     -- Currency Icons
     { "#gold#", "|TInterface\\AddOns\\AtlasLoot\\Images\\gold:0|t" },
@@ -193,20 +173,39 @@ local txtSubstitution = {
 }
 
 function AtlasLoot:FixText(text)
+    if not text or (text and type(text) ~= "string") then return "" end
     for _, subTable in pairs (txtSubstitution) do
-        text = gsub(text, subTable[1], subTable[2])
+            text = gsub(text, subTable[1], subTable[2])
+        end
+
+        local englishFaction, _ = UnitFactionGroup("player")
+        if englishFaction == "Horde" then
+            text = gsub(text, "#faction#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Horde:14:14:0:-1|t")
+            text = gsub(text, "#factionoutlandPvP#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Horde:0|t")
+            text = gsub(text, "#markthrallmarhhold#", "|TInterface\\Icons\\INV_Misc_Token_Thrallmar:0|t")
+        else
+            text = gsub(text, "#faction#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Alliance:16:16:0:-2|t")
+            text = gsub(text, "#factionoutlandPvP#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Alliance:0|t")
+            text = gsub(text, "#markthrallmarhhold#", "|TInterface\\Icons\\INV_Misc_Token_HonorHold:0|t")
+        end
+    local wordList = {string.split(" ",text)}
+    local newText
+    for _, textSub in pairs(wordList) do
+        local commaFound = ""
+        if string.find(textSub, ",%f[%W]") then
+            commaFound = ","
+            textSub = gsub(textSub, ",%f[%W]", "")
+        end
+            text = BabbleBoss[textSub] or text
+            text = BabbleInventory[textSub]
+            text = BabbleZone[textSub]
+            text = BabbleFaction[textSub]
+            text = AL[textSub]
+            newText = newText and newText .. " " .. text..commaFound or text
     end
 
-    local englishFaction, _ = UnitFactionGroup("player")
-    if englishFaction == "Horde" then
-        text = gsub(text, "#faction#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Horde:14:14:0:-1|t")
-        text = gsub(text, "#factionoutlandPvP#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Horde:0|t")
-        text = gsub(text, "#markthrallmarhhold#", "|TInterface\\Icons\\INV_Misc_Token_Thrallmar:0|t")
-    else
-        text = gsub(text, "#faction#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Alliance:16:16:0:-2|t")
-        text = gsub(text, "#factionoutlandPvP#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Alliance:0|t")
-        text = gsub(text, "#markthrallmarhhold#", "|TInterface\\Icons\\INV_Misc_Token_HonorHold:0|t")
-    end
-
-    return text
+    newText = gsub(newText, " %- ", WHITE.." - ")
+    newText = gsub(newText, "%: ", WHITE..": ")
+    newText = gsub(newText, "%(Click%)", WHITE.."(Click)")
+    return newText
 end

@@ -90,7 +90,6 @@ if AL then
 	AL["All modules"] = "全部模块";
 	AL["If checked, AtlasLoot will load and search across all the modules."] = "如果选中，AtlasLoot会载入并扫描所有的模块。";
 	AL["Search options"] = "搜索选项";
-	AL["Partial matching"] = "部分匹配";
 	AL["If checked, AtlasLoot search item names for a partial match."] = "如果选中，AtlasLoot会将输入文字作为物品名称的一部分进行匹配。";
 	AL["You don't have any module selected to search on!"] = "你没有选择任何用于搜索的模块。";
 	AL["Treat Crafted Items:"] = "交易技能呈现方式:";

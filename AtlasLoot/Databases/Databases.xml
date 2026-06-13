@@ -1,10 +1,12 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
-    <Script file="Databases.lua"/>
     <Script file="DatabaseFunctions.lua"/>
+    <Script file="Databases.lua"/>
     <Script file="extraCraftingData.lua"/>
     <Script file="CraftingSource.lua"/>
     <Script file="CraftingLevels.lua"/>
     <Script file="npcs.lua"/>
     <Script file="ItemDropRates.lua"/>
+    <Script file="Data.lua"/>
+    <Include file="Items\Databases.xml"/>
 </Ui>

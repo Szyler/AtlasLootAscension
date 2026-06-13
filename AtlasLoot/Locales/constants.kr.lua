@@ -89,7 +89,6 @@ if AL then
 --	AL["All modules"] = true;
 --	AL["If checked, AtlasLoot will load and search across all the modules."] = true;
 --	AL["Search options"] = true;
---	AL["Partial matching"] = true;
 --	AL["If checked, AtlasLoot search item names for a partial match."] = true;
 --	AL["You don't have any module selected to search on!"] = true;
 --	AL["Treat Crafted Items:"] = true;

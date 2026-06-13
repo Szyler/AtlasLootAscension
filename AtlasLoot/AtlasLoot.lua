@@ -1,6 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0", "NewsFrame-1.0", "SettingsCreator-1.0", "AceSerializer-3.0", "AceComm-3.0")
-ATLASLOOT = AtlasLoot
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 
 AtlasLoot.Version = GetAddOnMetadata("AtlasLoot", "Version")
 AtlasLoot.DebugMessages = false
@@ -8,6 +7,9 @@ AtlasLoot.Dewdrop = AceLibrary("Dewdrop-2.0")
 AtlasLoot.CurrentType = "Default"
 AtlasLoot.type = {}
 AtlasLoot.skin = { buttons = {}, frames = {} }
+AtlasLoot.expansionList = {"CLASSIC", "TBC", "WRATH"}
+AtlasLootGlobals = {skin = AtlasLoot.skin}
+
 
 -- Colours stored for code readability
 AtlasLoot.Colors = {
@@ -30,14 +32,17 @@ AtlasLoot.Colors = {
 AtlasLoot.DBDefaults = {
     profile = {
 		savedState = {},
-		LastBoss = {},
+		LastBoss = {
+			CLASSIC = {"ZulGurub","ItemData", 1, 1},
+			TBC = {"HCMagtheridon","ItemData", 1, 1},
+			WRATH = {"HCMagtheridon","ItemData", 1, 1}
+		},
 		settingsProfile = "default",
 	},
 	settingsProfiles = {
 		default = {
 			EquipCompare = false,
 			Opaque = false,
-			PartialMatching = true,
 			LootBrowserStyle = 1,
 			LootBrowserScale = 1.0,
 			MerchantGlow = false,
@@ -51,31 +56,33 @@ AtlasLoot.DBDefaults = {
 	}
 }
 
-local CharDefaultSettings = {
-	QuickLooks = {},
-	SearchResult = {Name = "Search Result" , Type = "Search", Back = true},
-}
-
-local LootFilterDefaultSettings = {
-	VanityFilters = {},
-	CraftingFilters = {},
-}
-
 --[[
 AtlasLoot:OnInitialize()
 Performs inital setup of the mod and registers it for further setup when
 the required resources are in place
 ]]
 function AtlasLoot:OnInitialize()
+
+	local CharDefaultSettings = {
+		QuickLooks = {},
+		SearchResult = {Name = "Search Result" , Type = "Search", Back = true, {{}}},
+	}
+
+	local LootFilterDefaultSettings = {
+		VanityFilters = {},
+		CraftingFilters = {},
+	}
+
     self:SetupDB("AtlasLootCharDB", CharDefaultSettings)
 	self:SetupDB("AtlasLootFilterDB", LootFilterDefaultSettings)
 	self.db = self:SetupDB("AtlasLootDB", self.DBDefaults)
 	self.selectedProfile = self.db.settingsProfiles[self.db.profile.settingsProfile]
 	self.selectedProfile.ItemLoadingSpeed = self.selectedProfile.ItemLoadingSpeed or 1
+	self:InitializeDatabases()
 	self:InitializeSlashCommands()
+
 	--Sets the default loot tables for the current expansion enabled on the server.
-	local xpaclist = {"CLASSIC", "TBC", "WRATH"}
-	self.Expac = xpaclist[GetAccountExpansionLevel()+1]
+	self.currentExpansion = self.expansionList[GetAccountExpansionLevel()+1]
 end
 
 --Runs after all addons have fully loaded
@@ -83,32 +90,33 @@ function AtlasLoot:OnEnable()
 
 	self:SetSeverType()
 	LoadItemIDsDatabase()
-	self:WishlistSetup()
+	self:InitializeWishLists()
 	self:InitializeUI()
-	self:CreateAdvancedSearchFrame()
+	self:CreateItemSourceList()
+	self:CreateSearchFrame()
 	self:InitializeSkins()
 	self:MinimapIconSetup()
 	self:InitializeOptionsFrame()
 	self:LoadTradeskillRecipes()
 	self:PopulateProfessions()
 	self:CreateVanityCollection()
-	self:CreateItemSourceList()
 	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 	self:RegisterComm("AtlasLootWishlist")
 	self:InitializeWishlistMerchantGlow()
 	self:PatchNotes()
 
-
-	if IsAddOnLoaded("TomTom") then self.TomTomLoaded = true end
+	if self.selectedProfile.isAdmin then
+		ATLASLOOT = self
+	end
 
 	collectgarbage("collect")
 end
 
 function AtlasLoot:Reset(data)
-    self.mainUI:Hide()
+    self.ui:Hide()
     if data == "frames" then
-		self.mainUI:ClearAllPoints()
-		self.mainUI:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
+		self.ui:ClearAllPoints()
+		self.ui:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
         self.selectedProfile.LootBrowserScale = 1.0
         self:UpdateLootBrowserScale()
     elseif data == "quicklooks" then
@@ -116,18 +124,18 @@ function AtlasLoot:Reset(data)
     elseif data == "wishlist" then
 		AtlasLootWishList = {}
 		self:WishlistSetup()
-        AtlasLootCharDB["SearchResult"] = {}
+        AtlasLootCharDB.SearchResult = {}
     elseif data == "all" then
-		self.mainUI:ClearAllPoints()
-		self.mainUI:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
+		self.ui:ClearAllPoints()
+		self.ui:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
         self.selectedProfile.LootBrowserScale = 1.0
         self:UpdateLootBrowserScale()
         AtlasLootCharDB.QuickLooks = {}
-        AtlasLootCharDB["SearchResult"] = {}
+        AtlasLootCharDB.SearchResult = {}
 		AtlasLootWishList = {}
 		self:WishlistSetup()
     end
-    DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.RED..AL["Reset complete!"])
+    DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot"..": "..self.Colors.RED.."Reset complete!")
 end
 
 function AtlasLoot:InitializeSlashCommands()
@@ -167,23 +175,11 @@ function AtlasLoot:SlashCommand(msg)
 		self:GetMerchantItems(arg1)
 	elseif cmd == "admin" then
 		self.selectedProfile.isAdmin = not self.selectedProfile.isAdmin
-		DEFAULT_CHAT_FRAME:AddMessage(self.selectedProfile.isAdmin and AL["AtlasLoot Admin mode is now enabled"] or AL["AtlasLoot Admin is mode now disabled"])
+		DEFAULT_CHAT_FRAME:AddMessage(self.selectedProfile.isAdmin and "AtlasLoot Admin mode is now enabled" or "AtlasLoot Admin is mode now disabled")
 	else
-		self.mainUI:Show()
+		self.ui:Show()
 	end
 end
-
--- List of Moduel Names
-AtlasLoot.ModuleName = {
-	["AtlasLootOriginalWoW"] = "AtlasLoot_OriginalWoW";
-	["AtlasLootBurningCrusade"] = "AtlasLoot_BurningCrusade";
-	["AtlasLootCraftingOriginalWoW"] = "AtlasLoot_Crafting_OriginalWoW";
-	["AtlasLootCraftingBurningCrusade"] = "AtlasLoot_Crafting_TBC";
-	["AtlasLootCraftingWotLK"] = "AtlasLoot_Crafting_Wrath";
-	["AtlasLootWorldEvents"] = "AtlasLoot_WorldEvents";
-	["AtlasLootWotLK"] = "AtlasLoot_WrathoftheLichKing";
-	["AtlasLootVanity"] = "AtlasLoot_Vanity";
-}
 
 AtlasLoot.dataModules = {
 	"AtlasLoot_OriginalWoW",
@@ -195,32 +191,6 @@ AtlasLoot.dataModules = {
 	"AtlasLoot_WorldEvents",
 	"AtlasLoot_Vanity"
 }
-
---[[
-AtlasLoot:LoadAllModules()
-Used to load all available LoD modules
-]]
-function AtlasLoot:LoadAllModules()
-	local loadedModules = {}
-	local flag = 0
-	for _, module in pairs(self.dataModules) do
-		loadedModules[module] = LoadAddOn(module)
-	end
-
-	for module, state in pairs(loadedModules) do
-		if not state then
-			LoadAddOn(module)
-			flag = 1
-		end
-	end
-
-	if flag == 1 then
-		if self.DebugMessages then
-			DEFAULT_CHAT_FRAME:AddMessage(self.Colors.GREEN..AL["AtlasLoot"]..": "..self.Colors.WHITE..AL["All Available Modules Loaded"])
-		end
-		collectgarbage("collect")
-	end
-end
 
 function AtlasLoot:UNIT_SPELLCAST_SUCCEEDED(event, arg1, arg2 , arg3)
 	if arg1 == "player" and arg2 == "Learning" then

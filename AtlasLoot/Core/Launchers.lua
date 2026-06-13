@@ -11,10 +11,10 @@ function minimap.OnClick(frame, button)
 	if IsShiftKeyDown() then
         AtlasLoot:OptionsToggle();
     else
-        if AtlasLoot.mainUI:IsVisible() then
-            AtlasLoot.mainUI:Hide();
+        if AtlasLoot.ui:IsVisible() then
+            AtlasLoot.ui:Hide();
         else
-            AtlasLoot.mainUI:Show();
+            AtlasLoot.ui:Show();
         end
     end
 end

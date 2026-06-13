@@ -1,184 +1,89 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+
 local itemHighlightBlue = "Interface\\AddOns\\AtlasLoot\\Images\\knownBlue"
 local itemHighlightGreen = "Interface\\AddOns\\AtlasLoot\\Images\\knownGreen"
 
 function AtlasLoot:InitializeItemFrame()
-
 	----------------------------------- Item Loot Panel -------------------------------------------
-	self.itemframe = CreateFrame("Frame", nil, self.mainUI.lootBackground)
-	self.itemframe:SetSize(765,510)
-	self.itemframe:SetPoint("TOPLEFT", self.mainUI.lootBackground, "TOPLEFT", 2, -2)
+	self.itemframe = self.ui.tabs.Loot
 	self.itemframe.Label = self.itemframe:CreateFontString(nil,"OVERLAY","GameFontHighlightLarge")
-	self.itemframe.Label:SetPoint("TOP", self.itemframe, "TOP")
+	self.itemframe.Label:SetPoint("TOP", self.itemframe, "TOP", 0, -3)
 	self.itemframe.Label:SetSize(512,30)
 	self.itemframe.Label:SetJustifyH("CENTER")
 
-    local ROW_HEIGHT = 29   -- How tall is each row?
-    local MAX_ROWS = 15      -- How many rows can be shown at once?
-	local MAX_COLUMNS = 2
+	self.itemframe.PageNumber = self.itemframe:CreateFontString(nil,"OVERLAY","GameFontHighlightLarge")
+	self.itemframe.PageNumber:SetPoint("BOTTOM", self.itemframe, "BOTTOM", 0, 15)
+	self.itemframe.PageNumber:SetSize(100,20)
+	self.itemframe.PageNumber:SetJustifyH("LEFT")
 
-	local function hideButton(button)
-		if not button then return end
-		button:Hide()
-		button.itemID = nil
-		button.spellID = nil
-		button.Highlight:Hide()
-		button.hasTrade = false
-	end
-
-	function self:HideItemButtons()
-		for row = 1, MAX_ROWS do
-			for column = 1, MAX_COLUMNS do
-				hideButton(self.itemframe.buttons[column][row])
-			end
-		end
-	end
-
-	local function getMaxValue(itemList)
-		if itemList then
-			if itemList[2] and #itemList[2] > #itemList[1] then
-				return #itemList[2], #itemList[1] + #itemList[2]
-			elseif itemList[1] then
-				return #itemList[1], #itemList[1] + #itemList[2]
-			end
-		end
-	end
-
-	local storedData = {}
-	function self:ItemFrameUpdate(dataSource, dataID, tablenum, dataSource_backup)
-		if not dataSource then return end
-		storedData = {dataSource, dataID, tablenum, dataSource_backup}
-
-		local itemList = {{},{}}
-		for i, coloum in ipairs(dataSource[dataID][tablenum]) do
-			local lastWasGap = false
-			for _, item in ipairs(coloum) do
-				local show, itemID, recipeID = self:GetItemConditionals(item, dataSource, dataID)
-				if (show and self:FilterItem(item, dataSource, dataID)) or (item and item[1] == "gap" and #itemList[i] > 0 and not lastWasGap) then
-					table.insert(itemList[i], self:CloneTable(item))
-					if item[1] ~= "gap" then
-						itemList[i][#itemList[i]].itemID = itemID
-						itemList[i][#itemList[i]].recipeID = recipeID
-						lastWasGap = false
-					elseif item[1] == "gap" then
-						lastWasGap = true
-					end
-				end
-			end
-		end
-
-		local maxValue, totalItems = getMaxValue(itemList)
-		if not maxValue then return end
-		self.itemframe.scrollBar.totalItems = totalItems
-		FauxScrollFrame_Update(self.itemframe.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT, nil, nil, nil, nil, nil, nil, true)
-		local offset = FauxScrollFrame_GetOffset(self.itemframe.scrollBar)
-		for column = 1, MAX_COLUMNS do
-			for row = 1, MAX_ROWS do
-				local value = row + offset
-				local button = self.itemframe.buttons[column][row]
-				local item = itemList[column] and itemList[column][value]
-				local itemNumber = itemList[column] and itemList[column][value]
-				hideButton(button)
-				if item then
-					if maxValue ~= 0 and value <= maxValue then
-						local show = self:SetupButton(item.itemID or item.recipeID, itemNumber, button, dataSource, dataID, tablenum, dataSource_backup)
-						if show or (self.wishListLockState ~= "Locked" and item[1] == "gap") then
-							button:Show()
-						end
-					end
-				end
-			end
-        end
-	end
-
-	self.itemframe.scrollBar = CreateFrame("ScrollFrame","AtlasLootItemFrameScroll", self.itemframe, "FauxScrollFrameTemplate")
-	self.itemframe.scrollBar:SetPoint("TOPLEFT", 0, -8)
-	self.itemframe.scrollBar:SetPoint("BOTTOMRIGHT", -30, 8)
-	self.itemframe.scrollBar:SetScript("OnVerticalScroll", function(scroll, offset)
-		scroll.offset = math.floor(offset / ROW_HEIGHT + 0.5)
-			self:ItemFrameUpdate(unpack(storedData))
-	end)
-	self.itemframe.scrollBar:HookScript("OnMouseWheel", function(frame,delta)
-		if self.itemframe.scrollBar.totalItems > 30 then return end
-        if self.mainUI.nextbutton:IsVisible() and delta == -1 then
-            self.mainUI.nextbutton:Click()
-        end
-        if self.mainUI.prevbutton:IsVisible() and delta == 1 then
-            self.mainUI.prevbutton:Click()
-        end
-    end)
-
-	self.itemframe.scrollBar:SetScript("OnShow", function() self:ItemFrameUpdate(unpack(storedData)) end)
-
-	self.itemframe.buttons = {{},{}}
-
-	local function createButton(column, row)
-		self.itemframe.buttons[column][row] = CreateFrame("Button", "$parentColumn"..column.."Button"..row, self.itemframe , "AtlasLootItemTemplate")
-		local button = self.itemframe.buttons[column][row]
-		button:SetID(row)
+	self.itemframe.buttons = {}
+	local function createButton(i)
+		self.itemframe.buttons[i] = CreateFrame("Button", "$parentButton"..i, self.itemframe , "AtlasLootItemTemplate")
+		local button = self.itemframe.buttons[i]
+		button:SetID(i)
 		button.isAtlasLoot = true
-		if column == 1 and row == 1 then
+		if i == 1 then
 			button:SetPoint("TOP", self.itemframe, "TOP",-210,-35)
-		elseif column == 2 and row == 1 then
+		elseif i == 16 then
 			button:SetPoint("TOP", self.itemframe, "TOP",150,-35)
 		else
-			button:SetPoint("TOPLEFT", self.itemframe.buttons[column][row-1], "BOTTOMLEFT")
+			button:SetPoint("TOPLEFT", self.itemframe.buttons[i-1], "BOTTOMLEFT")
 		end
 	end
 
-	for column = 1, MAX_COLUMNS do
-		for row = 1, MAX_ROWS do
-			createButton(column, row)
-		end
+	for i = 1, 30 do
+		createButton(i)
 	end
+end
 
+local function hideButton(button)
+	if not button then return end
+	button:Hide()
+	button.itemID = nil
+	button.spellID = nil
+	button.Highlight:Hide()
+	button.hasTrade = false
+end
+
+local function hideAllButtons(self)
+	for i = 1, 30 do
+		hideButton(self.itemframe.buttons[i])
+	end
 end
 
 local faction = UnitFactionGroup("player")
 
 --Get whether the item should be displayed and get the itemID that needs to be displayed
-function AtlasLoot:GetItemConditionals(item, dataSource, dataID)
-	if (item and item.faction and item.faction ~= faction) or (item.Server and item.Server ~= self.serverType) or (item and item[1] == "gap") then return end
-
+local function getItemConditionals(self, item, dataSource)
+	if (item and item.faction and item.faction ~= faction) or (item.Server and item.Server ~= self.serverType) or (item and item[1] == "blankLine") then return end
 	local itemID, recipeID
 	local show = true
 	local itemDif = self.ItemindexID or 3
-
-	local itemType = item.Type or dataSource[dataID].Type
-	local maxDif = self:GetMaxDifficulty(itemType, item.maxDifficulty)
-	local minDif = self:GetMinDifficulty(item.minDifficulty)
-
+	local itemType = item.Type or dataSource.Type
+	local maxDif = self.Difficulties:GetMax(itemType, item.maxDifficulty)
+	local minDif = self.Difficulties:GetMin(item.minDifficulty)
 	if maxDif and maxDif < itemDif then
 		itemDif = maxDif
 	end
-
 	if minDif and minDif > itemDif then
 		show = false
 	end
-
 	itemID = item and item.itemID
 	if item and item.itemID then
 		itemID = self:GetItemDifficultyID(item.itemID, itemDif)
 	end
-
 	if item and item.spellID then
 		recipeID = self:GetRecipeID(item.spellID)
 	end
-
 	return show, itemID, recipeID
 end
 
 -- Setup the button for the to be displayed item/spell
-function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataID, tablenum, dataSource_backup)
+local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dataID, tablenum, dataSource_backup)
 
 	local show = true
 	local text, extra
-	local itemName, itemQuality, itemSubType, itemEquipLoc, itemIcon
-	if itemID then
-		itemName, _, itemQuality, _, _, _, itemSubType, _, itemEquipLoc, itemIcon = self:GetItemInfo(itemID)
-	end
-
+	local itemName, _, itemQuality, _, _, itemType, itemSubType, _, itemEquipLoc, itemIcon = self:GetItemInfo(itemID)
 	local spellName, spellIcon
 	--Use shortcuts for easier reference to parts of the item button
 	local iconFrame  = itemButton.Icon
@@ -225,13 +130,13 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 			text = ""
 		end
 
-		if C_VanityCollection.IsCollectionItemOwned(itemID) and VANITY_ITEMS[itemID] and CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell) and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
+		if C_VanityCollection.IsCollectionItemOwned(itemID) and self:GetVanityItemInfo(itemID) and CA_IsSpellKnown(self:GetVanityItemInfo(itemID).learnedSpell) and self:GetVanityItemInfo(itemID).learnedSpell ~= 0 then
 			hightlightFrame:SetTexture(itemHighlightGreen)
 			hightlightFrame:Show()
 		elseif C_VanityCollection.IsCollectionItemOwned(itemID) then
 			hightlightFrame:SetTexture(itemHighlightBlue)
 			hightlightFrame:Show()
-			if dataSource_backup == "AtlasLoot_CurrentWishList" or (VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell ~= 0 and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell)) then
+			if dataSource_backup == "currentWishList" or (self:GetVanityItemInfo(itemID) and self:GetVanityItemInfo(itemID).learnedSpell ~= 0 and not CA_IsSpellKnown(self:GetVanityItemInfo(itemID).learnedSpell)) then
 				table.insert(self.vanityItems, itemID)
 			end
 		end
@@ -269,28 +174,29 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 		extra = self.FixedItemText[itemNumber.itemID]
 	elseif itemNumber.desc then
 		if type(itemNumber.desc) == "table" then
-			local location, boss = itemNumber.desc[1], itemNumber.desc[2]
-			extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss	
+			local location, boss = self:FixText(itemNumber.desc[1]), self:FixText(itemNumber.desc[2])
+			extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss
 		else
-			extra = itemNumber.desc
+			extra = self:FixText(itemNumber.desc)
 		end
-	elseif itemNumber.dropLoc and (self.dataSourceBackup == "AtlasLoot_OnDemand" or (self.selectedProfile.showdropLocationOnSearch and dataID == "SearchResult")) then
-		local location, boss = itemNumber.dropLoc[1], itemNumber.dropLoc[2]
+	elseif itemNumber.dropLoc and (self.dataSourceBackup == "onDemand" or (self.selectedProfile.showdropLocationOnSearch and dataID == "SearchResult")) then
+		local location, boss = self:FixText(itemNumber.dropLoc[1]), self:FixText(itemNumber.dropLoc[2])
 		extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss
-	elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
-		local lvls = AtlasLoot_CraftingData["CraftingLevels"][spellID]
-		extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..dataSource[dataID].Name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
-	elseif itemNumber.lootTable and itemNumber.lootTable[2] == "Token" then
-		extra = AL["Set Token (Click)"]
+	elseif self.data.crafting["CraftingLevels"] and spellID and self.data.crafting["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
+		local lvls = self.data.crafting["CraftingLevels"][spellID]
+		local name = self:FixText(dataSource.Name)
+		extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
+	elseif itemNumber.sourcePage and itemNumber.sourcePage[2] == "Token" then
+		extra = self:FixText("Set Token (Click)")
 	elseif itemEquipLoc and itemEquipLoc ~= "" and itemSubType then
-		extra = "=ds="..itemEquipLoc..", "..itemSubType
+		extra = itemEquipLoc..", "..itemSubType
 	elseif itemSubType then
-		extra = "=ds="..itemSubType
+		extra = itemSubType
 	else
 		extra = ""
 	end
 
-	if AtlasLoot_ExtraData[itemNumber.itemID]and dataID ~= "SearchResult" then
+	if self.data.extraItemInfo[itemNumber.itemID]and dataID ~= "SearchResult" then
 		extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
 	end
 
@@ -304,13 +210,20 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 
 	local price = itemNumber.price
 	if price then
-		price = self:ArenaCost(price, itemEquipLoc, itemQuality)
+		if price == "Arena" then
+			local honorPrice, arenaPrice = self.Equipment:GetSlotCost(itemEquipLoc)
+			if arenaPrice then
+				price = honorPrice .. arenaPrice
+			else
+				price = honorPrice
+			end
+		end
 		extra = extra ..self.Colors.WHITE.." ("..price..")"
 	end
 
 	local recipe = self:GetRecipeData(itemID, "item")
-	if recipe and AtlasLoot_CraftingData["CraftingLevels"] and AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID] then
-		local lvls = AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID]
+	if recipe and self.data.crafting["CraftingLevels"] and self.data.crafting["CraftingLevels"][recipe.spellID] then
+		local lvls = self.data.crafting["CraftingLevels"][recipe.spellID]
 		extra = extra ..self.Colors.WHITE.." ( "..lvls[1].." )"
 	end
 
@@ -335,7 +248,7 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	itemButton.itemTexture = iconFrame:GetTexture()
 
 	--Highlight items in the wishlist
-	if itemID and dataSource_backup ~= "AtlasLoot_CurrentWishList" and (AtlasLootWishList.Options[UnitName("player")] and AtlasLootWishList.Options[UnitName("player")]["Mark"]) then
+	if itemID and dataSource_backup ~= "currentWishList" and (AtlasLootWishList.Options[UnitName("player")] and AtlasLootWishList.Options[UnitName("player")]["Mark"]) then
 		local xitemexistwish, itemwishicons = self:WishListCheck(itemID, true)
 		if xitemexistwish then
 			text = itemwishicons.." "..text
@@ -352,8 +265,8 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	--learned spell id is used for items that are part of the ascension vanity collection
 	itemButton.learnedSpellID = nil
 
-	if VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
-		itemButton.learnedSpellID = VANITY_ITEMS[itemID].learnedSpell
+	if self:GetVanityItemInfo(itemID) and self:GetVanityItemInfo(itemID).learnedSpell and self:GetVanityItemInfo(itemID).learnedSpell ~= 0 then
+		itemButton.learnedSpellID = self:GetVanityItemInfo(itemID).learnedSpell
 	end
 
 	itemButton.craftingData = self:GetRecipeSource(spellID)
@@ -366,18 +279,10 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	itemButton.extraInfo = itemNumber.extraInfo or nil
 	itemButton.quest = itemNumber.quest or nil
 	itemButton.item = itemNumber
+	itemButton.sourcePage = self.data.lootableLinks[itemID] and self.data.lootableLinks[itemID] or itemNumber.sourcePage
 
-	if itemNumber.lootTable then
-		itemButton.sourcePage = itemNumber.lootTable
-	else
-		itemButton.sourcePage = nil
-	end
-
-	if itemNumber[self.Difficulties.DIF_SEARCH] then
-		itemButton.difficulty = itemNumber[self.Difficulties.DIF_SEARCH]
-	else
-		itemButton.difficulty = self.ItemindexID
-	end
+	local searchDif = self.Difficulties:GetSearch()
+	itemButton.difficulty = searchDif and itemNumber[searchDif] or self.ItemindexID
 
 	if text == "" then
 		show = false
@@ -387,6 +292,36 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 
 end
 
+local function itemFrameUpdate(self, dataID, dataSource_backup, tablenum, pageNumber)
+	local dataSource, itemData = self:GetSourceData(dataSource_backup, dataID, tablenum)
+	if not dataSource or not itemData then return end
+	itemData = itemData[pageNumber]
+	local displayItems = {}
+	for _, item in pairs(itemData) do
+		local show, itemID, recipeID = getItemConditionals(self, item, dataSource)
+		local newItemData = {}
+			if (show and self:FilterItem(item, itemID, dataSource)) then
+				newItemData.itemID = itemID
+				newItemData.recipeID = recipeID
+				table.insert(displayItems, {item, newItemData})
+			elseif item[1] == "blankLine" then
+				table.insert(displayItems, {item})
+			end
+	end
+	for i = 1, 30 do
+		local button = self.itemframe.buttons[i]
+		hideButton(button)
+		if displayItems and displayItems[i] then
+			if displayItems[i][2] then
+				local show = setupButton(self, displayItems[i][2].itemID or displayItems[i][2].recipeID, displayItems[i][1], button, dataSource, dataID, tablenum, dataSource_backup)
+				if show or (self.wishListLockState ~= "Locked" and displayItems[i][1] == "blankLine") then
+					button:Show()
+				end
+			end
+		end
+	end
+end
+
 --[[
 AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum):
 dataID - Name of the loot table
@@ -394,135 +329,148 @@ dataSource - Table in the database where the loot table is stored
 tablenum - Number of the table with the loot in it
 It is the workhorse of the mod and allows the loot tables to be displayed any way anywhere in any mod.
 ]]
-function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
+function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumber)
+
+	if dataID == "refresh" then
+		dataID, dataSource_backup, tablenum, pageNumber = unpack(self.itemframe.refresh)
+	end
 
 	self.vanityItems = {}
 
+	local dataSource, itemData, numberPages = self:GetSourceData(dataSource_backup, dataID, tablenum)
+
+	hideAllButtons(self)
+
+	--Hide search for normal loot tables
+	if dataID ~= "SearchResult"  then
+		self.ui.tabs.Search:Hide()
+		self.ui.tabs.Loot.TableScrollFrame:Show()
+        self.ui.currentInstanceButton:Show()
+        self.ui.favoritesButton:Show()
+	else
+		self.ui.tabs.Search:Show()
+		self.ui.tabs.Loot.TableScrollFrame:Hide()
+        self.ui.currentInstanceButton:Hide()
+        self.ui.favoritesButton:Hide()
+	end
+
     --If the loot table name has not been passed, throw up a debugging statement
-	if dataID == nil then
-		DEFAULT_CHAT_FRAME:AddMessage("No dataID!")
+	if not dataID or not dataSource or not numberPages then
+		DEFAULT_CHAT_FRAME:AddMessage("No data for this category or selection exists")
         return
 	end
 
-	--Hide Advanced search if it is up and reshow Querybutton
-	self.searchPanel:Hide()
+	pageNumber = (pageNumber and pageNumber > numberPages and (pageNumber - (pageNumber - numberPages)))  or pageNumber or 1
 
 	--Hide Map and reshow lootbackground
-	self.mainUI.mapFrame:Hide()
-    self.mainUI.lootBackground:Show()
+	self.ui.tabs.Map:Hide()
 	self.itemframe:Show()
 
 	-- Hide the Filter Check-Box
-	self.mainUI.filterButton:Hide()
+	self.ui.filterButton:Hide()
 
 	-- Hide the map header lable
-	Atlasloot_HeaderLabel:Hide()
-	local dataSource = _G[dataSource_backup] or AtlasLoot_Data
-	if not dataSource[dataID] then return end
+	self.ui.difficultyScrollFrame.Lable:Hide()
+
 	-- Enable map button if there is a map for this table.
-	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID] and dataSource[dataID].Map then
-		self.mainUI.mapButton:Enable()
+	if dataSource_backup ~= "onDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "currentWishList" then
+		if dataSource.Map then
 		-- Stops map reseting to default while still in the same raid/instance table
-		if self.itemframe.refresh == nil or dataID ~= self.itemframe.refresh[1] then
-			self.MapNum = 1
-			self.CurrentMap = dataSource[dataID].Map
-			self:SetMapButtonText(self.CurrentMap)
+			if self.itemframe.refresh == nil or dataID ~= self.itemframe.refresh[1] then
+				self.MapNum = 1
+				self.CurrentMap = dataSource.Map
+			end
+		else
+			self.CurrentMap = nil
+			self.MapNum = nil
 		end
-	else
-		self.mainUI.mapButton:Disable()
-		self.mainUI.mapButton:SetText("No Map")
 	end
 
-	if dataSource_backup ~= "AtlasLoot_CurrentWishList" then
+	if self.CurrentMap then
+		self.ui.tabs.Map.tabButton:Enable()
+	else
+		self.ui.tabs.Map.tabButton:Disable()
+	end
+
+	if dataSource_backup ~= "currentWishList" then
 		self:WishListLockButtonReset()
 	end
 
 	local difType = false
 	-- Checks to see if type is the same
-	if self.CurrentType and dataSource[dataID].Type and self.CurrentType ~= dataSource[dataID].Type then
-		self.ItemindexID = self.type[dataSource[dataID].Type] or dataSource[dataID].Index or 3
+	if self.CurrentType and dataSource.Type and self.CurrentType ~= dataSource.Type then
+		self.ItemindexID = self.type[dataSource.Type] or dataSource.Index or 3
 		difType = true
 	end
 
 	-- Saves current types self.ItemindexID
-	if dataSource[dataID].Type then
-		self.type[dataSource[dataID].Type] = self.ItemindexID
+	if dataSource.Type then
+		self.type[dataSource.Type] = self.ItemindexID
 	end
 
 	-- Set current type
-	self.CurrentType = dataSource[dataID].Type or "Default"
+	self.CurrentType = dataSource.Type or "Default"
 
 	-- Loads the Difficulties into the scrollFrame
-	if dataSource[dataID].wishList then
-		self:ScrollFrameUpdate(nil,dataSource[dataID].wishList)
+	if dataSource.wishList then
+		self:ScrollFrameUpdate(nil,dataSource.wishList)
 	else
 		self:ScrollFrameUpdate()
 	end
 
 	self.dataSourceBackup = dataSource_backup
 
-	-- Finds the tablenumber to set where the difficulty slider should be.
-	local function findTypeNumber()
-		if not dataSource[dataID].Type and not self.Difficulties[dataSource[dataID].Type] then return end
-		for i,v in ipairs(self.Difficulties[dataSource[dataID].Type]) do
-			if v[2] == self.ItemindexID then
-				return i
-			end
-		end
-	end
-	local typeNumber = findTypeNumber() or 1
+	local typeNumber = self.Difficulties:GetMatch(dataSource.Type, self.ItemindexID)
 
 	-- Moves the difficulty scrollslider if the difficulty has changed
-	if dataSource[dataID].Type and difType and #self.Difficulties[dataSource[dataID].Type] > 5 and typeNumber > 5 then
-		local min, max = AtlasLootDefaultFrameScrollScrollBar:GetMinMaxValues()
-		AtlasLootDefaultFrameScrollScrollBar:SetValue(typeNumber * (max / #self.Difficulties[dataSource[dataID].Type]))
+	local count = self.Difficulties:GetCount(dataSource.Type)
+	if dataSource.Type and difType and count > 5 and typeNumber > 5 then
+		local min, max = AtlasLootScrollScrollBar:GetMinMaxValues()
+		AtlasLootScrollScrollBar:SetValue(typeNumber * (max / count))
 	end
 
 	--For stopping the subtable from changing if its a token table
-	if dataSource[dataID].NoSubt == nil then
-		local text = dataSource[dataID].DisplayName or dataSource[dataID].Name 
-		self.mainUI.submenuButton:SetText(text)
+	if dataSource.NoSubt == nil then
+		local text = dataSource.DisplayName or dataSource.Name
+		self.ui.submenuButton:SetText(self:FixText(text))
 		self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
 	end
 
 	-- Sets the main page lable
-	if dataSource[dataID][tablenum] and dataSource[dataID][tablenum].Name then
-		self.itemframe.Label:SetText(dataSource[dataID][tablenum].Name)
+	if dataSource[tablenum][1] then
+		local name = self:FixText((dataID == "SearchResult" and "Search Results") or dataSource[tablenum].Name or dataSource[tablenum][1])
+		self.itemframe.Label:SetText(name)
 	else
 		self.itemframe.Label:SetText("This Is Empty")
 		return
 	end
 
+	self.itemframe.PageNumber:SetText(self:FixText("Page")..": "..pageNumber.."/"..numberPages)
+
 	-- Create the loottable
-	self:ItemFrameUpdate(dataSource, dataID, tablenum, dataSource_backup)
+	itemFrameUpdate(self, dataID, dataSource_backup, tablenum, pageNumber)
 
 -----------------------------------------------------------------------------------------------------------------------------
 
 	--Store data about the state of the items frame to allow minor tweaks or a recall of the current loot page
-	self.itemframe.refresh = {dataID, dataSource_backup, tablenum}
+	self.itemframe.refresh = {dataID, dataSource_backup, tablenum, pageNumber}
 
-	if dataSource[dataID].Back ~= true then
-		self.itemframe.refreshOri = {dataID, dataSource_backup, tablenum}
+	if dataSource.Back ~= true then
+		self.itemframe.refreshOri = {dataID, dataSource_backup, tablenum, pageNumber}
 	end
 
-	if dataID == "SearchResult" then
-		self.itemframe.refreshSearch = {dataID, dataSource_backup, tablenum}
-	elseif not self.mainUI.backbutton:IsVisible() then
-		self.itemframe.refreshSearch = nil
-	end
-
-	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and
-	dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" then
-		self.db.profile.LastBoss[self.Expac] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
-		self.db.profile.savedState[self.currentTable] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
+	if dataSource_backup ~= "onDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "currentWishList" and
+	dataSource.Back ~= true and dataID ~= "EmptyTable" then
+		self.db.profile.LastBoss[self.currentExpansion] = {dataID, dataSource_backup, tablenum, pageNumber}
+		self.db.profile.savedState[self.currentTable] = {dataID, dataSource_backup, tablenum, pageNumber}
 	end
 
 	-- Checks dataID with submenus to stop filter button loading on certain tables
 	local function filterCheck(find)
-		local mtype = { "Reputations", "WorldEvents", "PVP", "Collections", "Vanity"}
+		local mtype = { "Factions", "WorldEvents", "PVP", "Collections", "Vanity"}
 		for _, t in pairs (mtype) do
-			if AtlasLoot_SubMenus[t..self.Expac] then
-				for _, v in ipairs (AtlasLoot_SubMenus[t..self.Expac]) do
+			if AtlasLoot.ui.menus.collection[t..self.currentExpansion] then
+				for _, v in ipairs (AtlasLoot.ui.menus.collection[t..self.currentExpansion]) do
 					if v[3] and type(v[3]) == "table" then
 						for _, sub in ipairs(v[3]) do
 							if find == sub[2] then
@@ -538,86 +486,62 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	-- Show the Filter Check-Box
-	if filterCheck(dataID) ~= true or dataSource[dataID].vanity or dataSource[dataID].filter then
-		self.mainUI.filterButton:Show()
+	if filterCheck(dataID) ~= true or dataSource.vanity or dataSource.filter then
+		self.ui.filterButton:Show()
 	end
 
-	--Hide navigation buttons by default, only show what we need
+	--Set the parent frame and anchor points
+	local nextSet = {self.itemframe, {"BOTTOMRIGHT", self.itemframe, "BOTTOMRIGHT",-10,10}}
+	local prevSet = {self.itemframe, {"BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",10,10}}
+	self:SetNavigationButtonsPoints(nextSet, prevSet)
 	self:ToggleNavigationButtonsVisibility()
-	self.mainUI.nextbutton:SetParent(self.itemframe)
-	self.mainUI.prevbutton:SetParent(self.itemframe)
-	self.mainUI.nextbutton:ClearAllPoints()
-	self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.itemframe, "BOTTOMRIGHT",-30,5)
-	self.mainUI.prevbutton:ClearAllPoints()
-	self.mainUI.prevbutton:SetPoint("BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",5,5)
+
 	self:ToogleWishListButtons()
-	self.mainUI.learnSpellbtn:Hide()
+	self.ui.learnSpellbtn:Hide()
 
 	-- Show Wishlist buttons when a wishlist in showing
-	if dataSource_backup == "AtlasLoot_CurrentWishList" then
+	if dataSource_backup == "currentWishList" then
 		self:ToogleWishListButtons(true)
 	end
 
-	if dataSource[dataID].vanity then
-		self.mainUI.learnSpellbtn:Show()
+	if dataSource.vanity then
+		self.ui.learnSpellbtn:Show()
 	end
 
-	local tablebase = {dataID, dataSource_backup}
-
-	if self.itemframe.refresh and self.itemframe.refreshOri and tablenum ~= #_G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]] and dataSource_backup ~= "AtlasLoot_TokenData" and dataID ~= "SearchResult" or tablenum ~= #_G[self.itemframe.refresh[2]][self.itemframe.refresh[1]] and dataID == "SearchResult" then
-		self.mainUI.nextbutton:Show()
-		self.mainUI.nextbutton.tablenum = tablenum + 1
-		self.mainUI.nextbutton.tablebase = tablebase
-	end
-
-	if tablenum ~= 1 and dataSource_backup ~= "AtlasLoot_TokenData" then
-		self.mainUI.prevbutton:Show()
-		self.mainUI.prevbutton.tablenum = tablenum - 1
-		self.mainUI.prevbutton.tablebase = tablebase
-	end
-
-	if dataSource[dataID].Back or self.backEnabled then
-		self.mainUI.backbutton:Show()
-	else
-		self.itemframe.refreshBack = {dataID, dataSource_backup, tablenum}
-	end
-end
-
---[[
-AtlasLoot:SetFavorites(number)
-sets the favorite when alt right clicked
-]]
-function AtlasLoot:SetFavorites(num)
-    if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
-        AtlasLootCharDB.QuickLooks[num]={AtlasLoot_CurrentWishList.Show.ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList.Show.ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum].Name}
-    else
-        AtlasLootCharDB.QuickLooks[num]={self.itemframe.refreshOri[1], self.itemframe.refreshOri[2], self.itemframe.refreshOri[3], self.lastModule, self.currentTable, _G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]][self.itemframe.refreshOri[3]].Name}
-    end
-end
-
---Called when 'Back'Button is pressed and calls up the appropriate loot page
-function AtlasLoot:BackButton_OnClick()
-	self.backEnabled = false
-	if self.itemframe.refreshSearch then
-		self:ShowItemsFrame(self.itemframe.refreshSearch[1], self.itemframe.refreshSearch[2], self.itemframe.refreshSearch[3])
-	else
-		self:ShowItemsFrame(self.itemframe.refreshBack[1], self.itemframe.refreshBack[2], self.itemframe.refreshBack[3])
-	end
-end
-
---[[
-AtlasLoot:NavButton_OnClick:
-Called when <-, -> are pressed and calls up the appropriate loot page
-]]
-function AtlasLoot:NavButton_OnClick(btn)
-	if self.mainUI.mapFrame:IsVisible() then
-		self:MapSelect(btn.mapID, btn.mapNum)
-	else
-		local tablenum, dataID, dataSource = btn.tablenum, btn.tablebase[1], btn.tablebase[2]
-		if #_G[dataSource][dataID] > 26 then
-			local min, max = AtlasLootDefaultFrameSubTableScrollScrollBar:GetMinMaxValues()
-			AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(tablenum * (max / #_G[dataSource][dataID]))
+	local refreshOri_dataSource = self:GetSourceData(self.itemframe.refreshOri[2], self.itemframe.refreshOri[1], tablenum)
+	local refresh_dataSource = self:GetSourceData(self.itemframe.refresh[2], self.itemframe.refresh[1], tablenum)
+	if (self.itemframe.refreshOri and tablenum ~= #refreshOri_dataSource) or (tablenum ~= #refresh_dataSource or pageNumber ~= numberPages) then
+		self.ui.nextbutton:Show()
+		self.ui.nextbutton.dataID = dataID
+		self.ui.nextbutton.dataSource = dataSource
+		self.ui.nextbutton.dataSource_backup = dataSource_backup
+		if  pageNumber == numberPages then
+			self.ui.nextbutton.tablenum = tablenum + 1
+			self.ui.nextbutton.numberPages = 1
+		else
+			self.ui.nextbutton.numberPages = pageNumber + 1
+			self.ui.nextbutton.tablenum = tablenum
 		end
-		self:ShowItemsFrame(dataID, dataSource, tablenum)
+	end
+
+	if tablenum ~= 1 or pageNumber ~= 1 and dataSource_backup ~= "token" then
+		local dataSourcePrev , _, numberPagesPrev = self:GetSourceData(dataSource_backup, dataID, (tablenum == 1 and 1 or tablenum-1))
+		self.ui.prevbutton:Show()
+		self.ui.prevbutton.dataID = dataID
+		self.ui.prevbutton.dataSource = dataSourcePrev
+		self.ui.prevbutton.dataSource_backup = dataSource_backup
+		if  pageNumber == 1 then
+			self.ui.prevbutton.tablenum = tablenum - 1
+			self.ui.prevbutton.numberPages = numberPagesPrev
+		else
+			self.ui.prevbutton.numberPages = pageNumber - 1
+			self.ui.prevbutton.tablenum = tablenum
+		end
+	end
+
+	if dataSource.Back or self.backEnabled then
+		self.ui.backbutton:Show()
+	else
+		self.itemframe.refreshBack = {dataID, dataSource_backup, tablenum, pageNumber}
 	end
 end

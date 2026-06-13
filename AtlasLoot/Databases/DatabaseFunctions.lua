@@ -3,18 +3,35 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local difficultys = {
 	{"Heroic Bloodforged", 2},
 	{"Bloodforged", 1},
+	{"Superior", 4},
 	{"Heroic", 4},
 	{"Ascended", 6}
 }
 
+local excludeList = {
+	"Ancient"
+}
+
+-- checks exclusion list for unwanted item difficultys
+local function checkExclude(discription)
+	for _, exclude in pairs(excludeList) do
+		if string.match(discription, exclude) then
+			return false
+		end
+	end
+	return true
+end
+
+-- returns correct difficultys
 local function getNormalLevel(discription)
 	for _, match in ipairs(difficultys) do
-		if string.match(discription, match[1]) then
+		if string.match(discription, match[1]) and checkExclude(discription) then
 			return match[1], match[2]
 		end
 	end
 end
 
+-- returns the correct mythic level
 local function getMythicLevel(description)
 	for i = 1, 40 do
   		local mythicNumber = string.match(description, "Mythic (%d+)")
@@ -79,40 +96,41 @@ end
 
 function AtlasLoot:GetSourceList()
 	local itemSource = {}
-	self:IsLootTableAvailable("AtlasLootOriginalWoW")
-	self:IsLootTableAvailable("AtlasLootBurningCrusade")
-	self:IsLootTableAvailable("AtlasLootWotLK")
-    for _, data in pairs(AtlasLoot_Data) do
-		if data.Type then
-			for _, t in ipairs(data) do
-				for _, side in ipairs(t) do
-					for _, itemData in pairs(side) do
-						if type(itemData) == "table" then
-							if itemData.itemID then
-								for _, dif in ipairs(self.Difficulties[data.Type]) do
-									local itemType = GetItemInfoInstant(itemData.itemID) or nil
-									if dif[2] ~= 3 and itemType then
-										itemSource[dif[1]] = itemSource[dif[1]] or {}
-										local name = itemType.name:gsub( "%W", "" )..itemType.inventoryType
-										itemSource[dif[1]][name] = itemSource[dif[1]][name] or {}
-										local itemTable = itemSource[dif[1]][name]
-											local function checkForDuplicate(itemID)
-												for _ , item in pairs(itemTable) do
-													if item[1] == itemID then return true end
-												end
-											end
-										if not checkForDuplicate(itemData.itemID) then
-											tinsert(itemTable, {itemData.itemID, itemType.itemLevel})
-										end
-									end
+
+	local function addItem(itemData, dataType)
+		if type(itemData) == "table" then
+			local typeData = self:GetDataType(dataType)
+			local diffList = self.Difficulties:GetList(typeData)
+			if typeData and diffList and itemData.itemID then
+				for _, dif in ipairs(diffList) do
+					local itemType = GetItemInfoInstant(itemData.itemID) or nil
+					if dif[2] ~= 3 and itemType then
+						itemSource[dif[1]] = itemSource[dif[1]] or {}
+						local name = itemType.name:gsub( "%W", "" )..itemType.inventoryType
+						itemSource[dif[1]][name] = itemSource[dif[1]][name] or {}
+						local itemTable = itemSource[dif[1]][name]
+							local function checkForDuplicate(itemID)
+								for _ , item in pairs(itemTable) do
+									if item[1] == itemID then return true end
 								end
 							end
+						if not checkForDuplicate(itemData.itemID) then
+							tinsert(itemTable, {itemData.itemID, itemType.itemLevel})
 						end
 					end
 				end
+			else
+				for _, nextData in pairs(itemData) do
+					addItem(nextData, dataType)
+				end
 			end
 		end
-    end
+	end
+
+	for dataType, data in pairs(self.data.item) do
+		addItem(data, dataType)
+	end
+
 	if self:CheckIfEmptyTable(itemSource) then return end
 	return itemSource
 end
@@ -189,7 +207,6 @@ function AtlasLoot:GetItemDifficultyID(id, difficulty)
 	return id
 end
 
-local runOnce
 function AtlasLoot:GetMerchantItems(missingOnly)
 	AtlasLootOtherIds = AtlasLootOtherIds or {}
 	tinsert(AtlasLootOtherIds, {})
@@ -203,12 +220,7 @@ function AtlasLoot:GetMerchantItems(missingOnly)
 			local currencyID = currency and GetItemInfoFromHyperlink(currency)
 
 			if missingOnly then
-				if not runOnce then
-					self:CreateItemSourceList(true)
-					runOnce = true
-				end
-
-				if not self.ItemSourceList[itemID] then
+				if not self:GetItemSource(itemID) then
 					tinsert(AtlasLootOtherIds[#AtlasLootOtherIds], { itemID, itemName })
 				end
 			elseif not missingOnly then
@@ -221,14 +233,269 @@ function AtlasLoot:GetMerchantItems(missingOnly)
 		end
 	end
 end
---[[ Regex used on the merchant data to put it in a better formate for atlasloot
-search with this
-\{(.*)
-(.+?),(.*)
-(.+?)"(.+?)"(.*)
-(.*)
 
-replace with this
-{ itemID = $2 }; --$5
+function AtlasLoot:InitializeDataTables()
+	if self.data then return end
+	self.data = {
+		item = { EmptyTable = {}},
+		token = {},
+		map = {},
+		crafting = {},
+		extraItemInfo = {},
+		itemDropRates = {},
+		lootableLinks = {},
+		onDemand = {}
+	}
+end
 
-]]
+function AtlasLoot:AddItemData(var1, var2)
+	local dataType, data
+	if type(var1) == "table" then
+		data = var1
+	else
+		dataType = var1
+		data = var2
+	end
+
+	self:InitializeDataTables()
+	if dataType == "sort" then
+		local function addItem(item)
+			if item.refLootEntry then
+				if not self.data.item[item.refLootEntry] then self.data.item[item.refLootEntry] = {} end
+				table.insert(self.data.item[item.refLootEntry], item)
+			end
+		end
+		self:RateLimitLoadTable(data, addItem)
+	elseif dataType and dataType ~= "dontSort" then
+		for tableName, table in pairs(data) do
+			self.data[dataType][tableName] = table
+		end
+	else
+		for tableName, tableParent in pairs(data) do
+			for i, table in pairs(tableParent) do
+				self.data.item[tableName..i] = table
+				if dataType == "dontSort" then self.data.item[tableName..i].dontSort = true end
+				for _, item in ipairs(self.data.item[tableName..i]) do
+					item.refLootEntry = tableName..i
+				end
+			end
+		end
+	end
+	wipe(data)
+	collectgarbage("collect")
+end
+
+local equipLocType = {
+    INVTYPE_HEAD = 1,
+	INVTYPE_SHOULDER = 2,
+	INVTYPE_BODY = 3,
+    INVTYPE_CHEST = 3,
+	INVTYPE_ROBE = 3,
+	INVTYPE_WRIST = 4,
+	INVTYPE_HAND = 5,
+    INVTYPE_WAIST = 6,
+    INVTYPE_LEGS = 7,
+    INVTYPE_FEET = 8,
+    INVTYPE_CLOAK = 9,
+	INVTYPE_FINGER = 10,
+	INVTYPE_NECK = 11,
+    INVTYPE_TRINKET = 12,
+    INVTYPE_RANGED = 13,
+	INVTYPE_RANGEDRIGHT = 14,
+	INVTYPE_THROWN = 15,
+	INVTYPE_WEAPON = 16,
+	INVTYPE_WEAPONMAINHAND = 17,
+    INVTYPE_WEAPONOFFHAND = 18,
+    INVTYPE_2HWEAPON = 19,
+    INVTYPE_SHIELD = 20,
+	INVTYPE_HOLDABLE = 21,
+    INVTYPE_RELIC = 22,
+	INVTYPE_BAG = 23,
+    INVTYPE_TABARD = 24,
+    INVTYPE_AMMO = 25,
+    INVTYPE_QUIVER = 26,
+	INVTYPE_NON_EQUIP = 27,
+}
+
+local subTypes = {
+	"Cloth",
+	"Leather",
+	"Mail",
+	"Plate",
+	"Bows",
+	"Guns",
+	"Crossbows",
+	"Wands",
+	"Thrown",
+	"One-Handed Axes",
+	"Two-Handed Axes",
+	"One-Handed Maces",
+	"Two-Handed Maces",
+	"One-Handed Swords",
+	"Two-Handed Swords",
+	"Polearms",
+	"Staves",
+	"Fist Weapons",
+	"Daggers",
+	"Shields",
+	"Miscellaneous",
+	"Librams",
+	"Idols",
+	"Totems",
+	"Sigils",
+	"Fishing Poles",
+	"Alchemy",
+	"Blacksmithing",
+	"Cooking",
+	"Enchanting",
+	"Engineering",
+	"Firstaid",
+	"Leatherworking",
+	"Mining",
+	"Tailoring",
+	"Quest",
+	"Pet",
+	"Mount"
+}
+local subType = {}
+--creates a key table for subtypes giving them a number value
+for i, sType in pairs(subTypes) do
+	subType[sType] = i
+end
+
+local baseType = {
+	Armor = 1, Weapon = 2, Recipe = 3, Quest = 4, Miscellaneous = 5
+}
+
+local function createItemCatagoiresTable(self)
+	local newTable = {}
+		for _, base in pairs(baseType) do
+			newTable[base] = {}
+			for _, sub in pairs(subType) do
+				newTable[base][sub] = {}
+				for _, loc in pairs(equipLocType) do
+					newTable[base][sub][loc] = {}
+				end
+			end
+		end
+	return newTable
+end
+
+local displayData = {}
+-- Sorts a lootTables items based on the order of the above lists and adds any spacers between groups
+local function getLootItem(newTable, cat)
+	if cat.refLootEntry then
+		if #newTable[#newTable] >= 30 then
+			table.insert(newTable, {})
+		end
+		table.insert(newTable[#newTable], cat)
+	else
+		for _, item in ipairs(cat) do
+			getLootItem(newTable, item)
+		end
+	end
+end
+
+local function sortItemData(self, dataSource, dataID, tablenum)
+	if not dataSource then return end
+	local lootTables = { self.data.item[dataID..tablenum] and dataID..tablenum }
+	local lootTableName = (self.data.item[dataID..tablenum] and dataID..tablenum) or (#dataSource[tablenum][2] > 0 and self.data.item[dataSource[tablenum][2][1]] and dataSource[tablenum][2][1])
+	if displayData[lootTableName] then return displayData[lootTableName] end
+	local dontSort, isVanity
+	if #dataSource[tablenum][2] > 0 then
+		for _, ref in pairs(dataSource[tablenum][2]) do
+			if self.data.item[ref] then
+				dontSort = dontSort or self.data.item[ref].dontSort
+				isVanity = isVanity or self.data.item[ref].vanityCollection
+				table.insert(lootTables, ref)
+			end
+		end
+	end
+	dontSort = dontSort or self.data.item[lootTableName] and self.data.item[lootTableName].dontSort or false
+	isVanity = isVanity or self.data.item[lootTableName] and self.data.item[lootTableName].vanityCollection or false
+
+	if #lootTables == 0 then return end
+
+	local newTable = {{}}
+	local duplicateCheck = {}
+	if not dontSort then
+		local itemCatagories = createItemCatagoiresTable(self)
+		for _, lootTableSelection in ipairs(lootTables) do
+			for _, itemData in ipairs(self.data.item[lootTableSelection]) do
+				if not duplicateCheck[itemData.itemID] then
+					local itemType, itemSubType, _, itemEquipLoc = select(6, self:GetItemInfo(itemData.itemID, true))
+					local iType = itemCatagories[baseType[itemType]]
+					if iType and iType[subType[itemSubType]] then
+						local addType
+						if itemEquipLoc and equipLocType[itemEquipLoc] then
+							addType = iType[subType[itemSubType]][equipLocType[itemEquipLoc]]
+						else
+							addType = iType[subType[itemSubType]]
+						end
+						table.insert(addType, itemData)
+					else
+						table.insert(itemCatagories[5], itemData)
+					end
+					if not itemData.name then duplicateCheck[itemData.itemID] = true end
+				end
+			end
+		end
+
+		for _, itemCat in ipairs(itemCatagories) do
+			getLootItem(newTable, itemCat)
+			if #newTable[#newTable] >= 30 then
+				table.insert(newTable, {})
+			end
+			if #newTable[#newTable] ~= 15 and (newTable[#newTable][#newTable[#newTable]] and newTable[#newTable][#newTable[#newTable]][1] ~="blankLine") then
+				table.insert(newTable[#newTable], {"blankLine"})
+			end
+		end
+	elseif isVanity then
+		newTable = self.data.item[lootTableName]
+	else
+		for itemNum, item in ipairs(self.data.item[lootTableName]) do
+			if (#newTable[#newTable] ~= 0 and item.pageBreak) then
+				if #newTable[#newTable] < 16 then
+					for i = 1, (15 - #newTable[#newTable]) do
+						table.insert(newTable[#newTable], {"blankLine"})
+					end
+				elseif #newTable[#newTable] > 15 then
+					table.insert(newTable, {})
+				end
+			end
+			table.insert(newTable[#newTable], item)
+			if #newTable[#newTable] >= 30 and itemNum ~= #self.data.item[lootTableName] then
+				table.insert(newTable, {})
+			end
+		end
+	end
+	displayData[lootTableName] = newTable
+	if self.selectedProfile.isAdmin then AtlaslootDisplaydata = displayData end
+	return displayData[lootTableName]
+end
+
+-- Main function for retrieval of a loot tables display data and item data
+function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
+	local itemData, dataSource
+	if dataSource_backup == "currentWishList" then
+		dataSource = self.currentWishList[dataID]
+		itemData = self.currentWishList[dataID][tablenum]
+	elseif dataSource_backup == "token" then
+		dataSource = self.data.token[dataID]
+		itemData = self.data.token[dataID]
+	elseif dataSource_backup == "onDemand" then
+		dataSource = self.data.onDemand[dataID]
+		itemData = self.data.onDemand[dataID][tablenum]
+	elseif dataSource_backup == "AtlasLoot_Data_Cache" then
+		dataSource = AtlasLoot_Data_Cache[dataID]
+		itemData = AtlasLoot_Data_Cache[dataID][tablenum]
+	elseif dataID == "SearchResult" then
+		dataSource = AtlasLootCharDB[dataID]
+		itemData = AtlasLootCharDB[dataID][1]
+	elseif dataSource_backup == "itemData" then
+		dataSource = self.ui.menus.data[dataID]
+		itemData = sortItemData(self, dataSource, dataID, tablenum)
+	end
+	if not itemData then return end
+	return dataSource, itemData, #itemData
+end
