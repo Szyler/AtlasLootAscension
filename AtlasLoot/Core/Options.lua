@@ -48,7 +48,6 @@ function AtlasLoot:InitializeOptionsFrame()
                     },
                     {
                         Type = "CheckButton",
-                        
                         Name = "recipeExtraInfoSwitch",
                         Lable = "Hide crafting source unless holding CTRL",
                         OnClick = function(button) self.selectedProfile.recipeExtraInfoSwitch = button:GetChecked() end
@@ -213,49 +212,49 @@ function AtlasLoot:InitializeOptionsFrame()
     end
 end
 
-local helpText = {
-    {"How to link an item to someone else:",
-    "Shift+Left Click the item like you would for any other in-game item",},
-    {"How to view an item in the Dressing Room:",
-    "Simply Ctrl+Left Click on the item.  Sometimes the dressing room window is hidden behind the AtlasLoot windows, so if nothing seems to happen move your Atlas or AtlasLoot windows and see if anything is hidden.",},
-    {"How to add an item to the wishlist:",
-    "Right Click any item and open the context menu and click add to wishlist.",
-    "Or Alt+Left Click any item to add it to the default wishlist.",},
-    {"How to delete an item from the wishlist:",
-    "While on the wishlist screen, just Alt+Left Click on an item to delete it.",},
-    {"What else does the wishlist do?",
-    "If you Left Click any item on the wishlist, you can jump to the loot page the item comes from.  Also, on a loot page any item already in your wishlist is marked with a yellow star.",},
-    {"How to set of change a page filter:",
-    "If you Right Click on the filter check box you will get a drop downmenu with a list of filters. Click the filter you want to use.",},
-    {"HELP!! I have broken the mod somehow!",
-    "Use the reset buttons available in the options menu, or type '/al reset' in your chat window.",},
-    "For further help, join us of discord: "..AtlasLoot.Colors.GREEN.."https://discord.gg/uYCE2X2FgA"
-}
-
 function AtlasLoot:DisplayHelp()
-        local help = self.options.frame.Help.frame
-		help.text = help:CreateFontString("AtlasLootHelpFrame_HelpText","OVERLAY","GameFontNormal")
-		help.text:SetPoint("TOPLEFT", help, "TOPLEFT", 15, 0)
-        help.text:SetWidth(help:GetWidth()-80)
-		help.text:SetJustifyH("LEFT")
-		help.text:SetJustifyV("TOP")
-        local text = ""
-        for num, value in pairs(helpText) do
-            if type(value) == "table" then
-                for i , newText in pairs(value) do
-                    if num == 1 and i == 1 then
-                        text = self.Colors.ORANGE..newText
-                    elseif i == 1 then
-                        text = text.."\n\n"..self.Colors.ORANGE..newText
-                    else
-                        text = text.."\n"..self.Colors.WHITE..newText
-                    end
+    local helpText = {
+        {"How to link an item to someone else:",
+        "Shift+Left Click the item like you would for any other in-game item",},
+        {"How to view an item in the Dressing Room:",
+        "Simply Ctrl+Left Click on the item.  Sometimes the dressing room window is hidden behind the AtlasLoot windows, so if nothing seems to happen move your Atlas or AtlasLoot windows and see if anything is hidden.",},
+        {"How to add an item to the wishlist:",
+        "Right Click any item and open the context menu and click add to wishlist.",
+        "Or Alt+Left Click any item to add it to the default wishlist.",},
+        {"How to delete an item from the wishlist:",
+        "While on the wishlist screen, just Alt+Left Click on an item to delete it.",},
+        {"What else does the wishlist do?",
+        "If you Left Click any item on the wishlist, you can jump to the loot page the item comes from.  Also, on a loot page any item already in your wishlist is marked with a yellow star.",},
+        {"How to set of change a page filter:",
+        "If you Right Click on the filter check box you will get a drop downmenu with a list of filters. Click the filter you want to use.",},
+        {"HELP!! I have broken the mod somehow!",
+        "Use the reset buttons available in the options menu, or type '/al reset' in your chat window.",},
+        "For further help, join us of discord: "..AtlasLoot.Colors.GREEN.."https://discord.gg/uYCE2X2FgA"
+    }
+
+    local help = self.options.frame.Help.frame
+	help.text = help:CreateFontString("AtlasLootHelpFrame_HelpText","OVERLAY","GameFontNormal")
+	help.text:SetPoint("TOPLEFT", help, "TOPLEFT", 15, 0)
+    help.text:SetWidth(help:GetWidth()-80)
+	help.text:SetJustifyH("LEFT")
+	help.text:SetJustifyV("TOP")
+    local text = ""
+    for num, value in pairs(helpText) do
+        if type(value) == "table" then
+            for i , newText in pairs(value) do
+                if num == 1 and i == 1 then
+                    text = self.Colors.ORANGE..newText
+                elseif i == 1 then
+                    text = text.."\n\n"..self.Colors.ORANGE..newText
+                else
+                    text = text.."\n"..self.Colors.WHITE..newText
                 end
-            else
-                text = text.."\n\n"..self.Colors.WHITE..value
             end
+        else
+            text = text.."\n\n"..self.Colors.WHITE..value
         end
-		help.text:SetText(text)
+    end
+	help.text:SetText(text)
 end
 
 function AtlasLoot:OpenSettingQuickMenu(button)

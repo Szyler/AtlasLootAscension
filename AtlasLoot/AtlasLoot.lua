@@ -56,22 +56,23 @@ AtlasLoot.DBDefaults = {
 	}
 }
 
-local CharDefaultSettings = {
-	QuickLooks = {},
-	SearchResult = {Name = "Search Result" , Type = "Search", Back = true, {{}}},
-}
-
-local LootFilterDefaultSettings = {
-	VanityFilters = {},
-	CraftingFilters = {},
-}
-
 --[[
 AtlasLoot:OnInitialize()
 Performs inital setup of the mod and registers it for further setup when
 the required resources are in place
 ]]
 function AtlasLoot:OnInitialize()
+
+	local CharDefaultSettings = {
+		QuickLooks = {},
+		SearchResult = {Name = "Search Result" , Type = "Search", Back = true, {{}}},
+	}
+
+	local LootFilterDefaultSettings = {
+		VanityFilters = {},
+		CraftingFilters = {},
+	}
+
     self:SetupDB("AtlasLootCharDB", CharDefaultSettings)
 	self:SetupDB("AtlasLootFilterDB", LootFilterDefaultSettings)
 	self.db = self:SetupDB("AtlasLootDB", self.DBDefaults)
