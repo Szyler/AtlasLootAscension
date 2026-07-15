@@ -304,7 +304,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                 table.insert(wishList[2],{text = v.Name, func = function() self:AddItemToWishList("Own", i, data) end, show = "OwnWishlists"})
             end
         end
-        table.insert(wishList[2], {text = AL["SharedWishlists"], isTitle = true, show = "SharedWishlists"})
+        table.insert(wishList[2], {text = "SharedWishlists", isTitle = true, show = "SharedWishlists"})
         for i,v in pairs(AtlasLootWishList["Shared"]) do
             if type(v) == "table" then
                 table.insert(wishList[2],{text = v.Name,func = function() self:AddItemToWishList("Shared", i, data) end, show = "SharedWishlists"})
