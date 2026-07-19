@@ -5,48 +5,39 @@ local playerName = UnitName("player")
 local realmName = GetRealmName()
 local playerFaction = UnitFactionGroup("player")
 
--- returns all the info about a recipe
-function AtlasLoot:GetRecipeData(recipeID, idType)
-	if not TRADESKILL_RECIPES then return end
-	for _,prof in pairs(TRADESKILL_RECIPES) do
-		for _,cat in pairs(prof) do
-		   for _,recipe in pairs(cat) do
-			  if (idType == "spell" and recipeID == recipe.SpellEntry) or (idType == "item" and recipeID == recipe.RecipeItemEntry) then
-				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank",spellID = recipe.SpellEntry, skillIndex = recipe.SkillIndex}
-				local bloodForgedID = self:GetItemDifficultyID(recipe.CreatedItemEntry, 1)
-				if bloodForgedID and bloodForgedID ~= recipe.CreatedItemEntry then
-					info[2] = {bloodForgedID}
-				end
-				if recipe.RecipeItemEntry and recipe.RecipeItemEntry ~= 0 then
-					local number = 3
-					if info[2] == "blank" then
-						number = 2
-					end
-					info[number] = {recipe.RecipeItemEntry}
-					info.Recipe = recipe.RecipeItemEntry
-				end
-				for _,v in pairs(recipe.Reagents) do
-					tinsert(info, v)
-				end
-				return info
-			  end
-		   end
+function AtlasLoot:GetReagentItems(id)
+	return id and C_TradeSkill.GetReagentItems(id) or {}
+end
+
+function AtlasLoot:GetCraftedItem(id)
+	return id and C_TradeSkill.GetCraftedItem(id) or {}
+end
+
+function AtlasLoot:GetAllTradeSkillSpellsBySkillIndex(skillIndex)
+	local spells = {}
+	for spellID, recipe in pairs(self.data.crafting.CraftingRecipes) do
+		if recipe.skillIndex == skillIndex then
+			table.insert(spellID)
 		end
-	 end
+	end
+	return #spells > 0 and spells
+end
+
+function AtlasLoot:GetTradeSkillIndexBySpellID(id)
+	return self.data.crafting.CraftingRecipes[id] and self.data.crafting.CraftingRecipes[id].SkillIndex or nil
+end
+
+function AtlasLoot:GetTradeSkillByRecipeID(id)
+	for spellID, recipe in pairs(self.data.crafting.CraftingRecipes) do
+		if recipe.RecipeItemEntry == id then
+			return spellID, recipe.SkillIndex
+		end
+	end
 end
 
 -- Returns the recipe itemID from a crafting spellID
-function AtlasLoot:GetRecipeID(spellID)
-	if not TRADESKILL_RECIPES then return end
-	for _,prof in pairs(TRADESKILL_RECIPES) do
-		for _,cat in pairs(prof) do
-			for _,recipe in pairs(cat) do
-				if spellID == recipe.SpellEntry and recipe.RecipeItemEntry ~= 0 then
-					return recipe.RecipeItemEntry
-				end
-			end
-		end
-	 end
+function AtlasLoot:GetRecipeID(id)
+	return self.data.crafting.CraftingRecipes[id] and self.data.crafting.CraftingRecipes[id].RecipeItemEntry or nil
 end
 
 -- return true if recipe is known
@@ -75,15 +66,15 @@ function AtlasLoot:IsProfessionKnown(skillID, profile)
 end
 
 -- create a list of every character that dosnt know this recipe
-function AtlasLoot:IsRecipeUnknown(ID)
-	if not ID then return end
-	local recipeData = self:GetRecipeData(ID, "item")
-	if not recipeData or not recipeData.skillIndex then return end
+function AtlasLoot:IsRecipeUnknown(itemID)
+	if not itemID then return end
+	local recipeSpellID, skillIndex = self:GetTradeSkillByRecipeID(itemID)
+	if not recipeSpellID then return end
 
 	local text
 	for key, profile in pairs(self.db.profiles) do
 		if gsub(key,"-",""):match(gsub(realmName,"-","")) and
-		self:IsProfessionKnown(recipeData.skillIndex, profile) and not self:IsRecipeKnown(recipeData.spellID, profile) then
+		self:IsProfessionKnown(skillIndex, profile) and not self:IsRecipeKnown(recipeSpellID, profile) then
 			local charName = strsplit("-", key, 5)
 			text = text and text..", "..gsub(charName, " ", "") or gsub(charName, " ", "")
 		end
@@ -316,75 +307,14 @@ function AtlasLoot:PopulateProfessions()
 			self.db.profile.professions[skillID] = self.db.profile.professions[skillID] or { knownRecipes = {} }
 		end
 	end
-	for prof, _ in pairs(self.db.profile.professions) do
-		if TRADESKILL_RECIPES[prof] then
-			for _,cat in pairs(TRADESKILL_RECIPES[prof]) do
-				for _,recipe in pairs(cat) do
-					if CA_IsSpellKnown(recipe.SpellEntry) then
-						self.db.profile.professions[prof].knownRecipes[recipe.SpellEntry] = true
-					end
+	for skillIndex, _ in pairs(self.db.profile.professions) do
+		local spells = self:GetAllTradeSkillSpellsBySkillIndex(skillIndex)
+		if spells then
+			for _,spellID in pairs(spells) do
+				if CA_IsSpellKnown(spellID) then
+					self.db.profile.professions[skillIndex].knownRecipes[spellID] = true
 				end
 			end
 		end
 	end
-end
-
--- Loads the tradeskill data .json
-function AtlasLoot:LoadTradeskillRecipes()
-	if TRADESKILL_RECIPES then return end
-		TRADESKILL_RECIPES = {}
-		TRADESKILL_CRAFTS = {}
-
-		local fmtSubClass = "ITEM_SUBCLASS_%d_%d"
-		local fmtTotem = "SPELL_TOTEM_%d"
-		local fmtObject = "SPELL_FOCUS_OBJECT_%d"
-
-		local content = C_ContentLoader:Load("TradeSkillRecipeData")
-
-		local function GetToolName(toolID)
-			return _G[format(fmtTotem, toolID)]
-		end
-
-		content:SetParser(function(_, data)
-			if not TRADESKILL_RECIPES[data.SkillIndex] then
-				TRADESKILL_RECIPES[data.SkillIndex] = {}
-			end
-
-			data.Category = _G[format(fmtSubClass, data.CreatedItemClass, data.CreatedItemSubClass)]
-
-			if not TRADESKILL_RECIPES[data.SkillIndex][data.Category] then
-				TRADESKILL_RECIPES[data.SkillIndex][data.Category] = {}
-			end
-
-			data.IsHighRisk = toboolean(data.IsHighRisk)
-
-			-- reformat reagents
-			data.Reagents = {}
-			local reagents = data.ReagentData:SplitToTable(",")
-			for _, reagentString in ipairs(reagents) do
-				local item, count = reagentString:match("(%d*):(%d*)")
-				item = tonumber(item)
-				count = tonumber(count)
-				if item and item ~= 0 and count and count ~= 0 then
-					tinsert(data.Reagents, {item, count})
-				end
-			end
-
-			if #data.Reagents > 0 then
-				data.ReagentData = nil
-
-				-- reformat tools (totems)
-				data.Tools = data.TotemCategories:SplitToTable(",", GetToolName)
-				data.TotemCategories = nil
-
-				data.SpellFocusObject = _G[format(fmtObject, data.SpellFocusObject)]
-
-				tinsert(TRADESKILL_RECIPES[data.SkillIndex][data.Category], data)
-				if data.CreatedItemEntry > 0 then
-					TRADESKILL_CRAFTS[data.CreatedItemEntry] = data
-				end
-			end
-		end)
-
-		content:Parse()
 end

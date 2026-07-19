@@ -141,9 +141,9 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 			end
 		end
 
-		local recipeData = self:GetRecipeData(itemID, "item")
-		if recipeData then
-			if CA_IsSpellKnown(recipeData.spellID) then
+		local recipeSpellID = self:GetTradeSkillByRecipeID(itemID)
+		if recipeSpellID then
+			if CA_IsSpellKnown(recipeSpellID) then
 				--Adds button highlights if you know a recipe or have a char that knows one
 				itemButton.hasTrade = true
 				hightlightFrame:SetTexture(itemHighlightGreen)
@@ -151,7 +151,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 			else
 				itemButton.hasTrade = false
 				hightlightFrame:Hide()
-				if self:GetKnownRecipes(recipeData.spellID) then
+				if self:GetKnownRecipes(recipeSpellID) then
 					hightlightFrame:SetTexture(itemHighlightBlue)
 					hightlightFrame:Show()
 				end
@@ -221,9 +221,9 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 		extra = extra ..self.Colors.WHITE.." ("..price..")"
 	end
 
-	local recipe = self:GetRecipeData(itemID, "item")
-	if recipe and self.data.crafting["CraftingLevels"] and self.data.crafting["CraftingLevels"][recipe.spellID] then
-		local lvls = self.data.crafting["CraftingLevels"][recipe.spellID]
+	local recipeSpellID = self:GetTradeSkillByRecipeID(itemID)
+	if recipeSpellID and self.data.crafting["CraftingLevels"] and self.data.crafting["CraftingLevels"][recipeSpellID] then
+		local lvls = self.data.crafting["CraftingLevels"][recipeSpellID]
 		extra = extra ..self.Colors.WHITE.." ( "..lvls[1].." )"
 	end
 

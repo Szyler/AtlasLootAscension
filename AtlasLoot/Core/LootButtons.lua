@@ -213,7 +213,7 @@ function AtlasLoot:ItemOnClick(item, button)
             self.ui.itemPopupframe:Show()
         end
     else
-        local recipeData = self:GetRecipeData(spellID, "spell")
+        local reagents = self:GetReagentItems(spellID)
         if IsShiftKeyDown() then
             ChatEdit_InsertLink(self:GetEnchantLink(spellID))
         elseif button == "RightButton" and self.wishListLockState == "Unlocked" then
@@ -221,7 +221,7 @@ function AtlasLoot:ItemOnClick(item, button)
         elseif button == "LeftButton" and self.wishListLockState == "Unlocked" then
             self:MoveWishlistItem("Up", item.item.positionNumber)
         elseif button == "RightButton" then
-            self:ItemContextMenu(item, "spell", recipeData)
+            self:ItemContextMenu(item, "spell")
         elseif IsAltKeyDown() then
             if self.itemframe.refresh[2] == "currentWishList" then
                 self:DeleteFromWishList(item.item)
@@ -241,8 +241,9 @@ function AtlasLoot:ItemOnClick(item, button)
             end
             --Show token table
             self:ShowItemsFrame(item.sourcePage[1], "token", 1)
-        elseif button == "LeftButton" and recipeData then
-            self:PopoupItemFrame(item, recipeData)
+        elseif button == "LeftButton" and reagents then
+            local craftedItem = self:GetCraftedItem(spellID)
+            self:PopoupItemFrame(item, reagents, craftedItem)
             self.ui.itemPopupframe:Show()
         end
     end
@@ -253,17 +254,21 @@ AtlasLootGlobals.ItemOnLeave = AtlasLoot.ItemOnLeave
 AtlasLootGlobals.ItemOnClick = AtlasLoot.ItemOnClick
 
 
-function AtlasLoot:ItemContextMenu(data, Type, recipeData)
+function AtlasLoot:ItemContextMenu(data, Type)
     local craftingData = data.craftingData
     local itemID = data.itemID
     local linkID = itemID
+    local spellID = data.spellID
 
     if Type == "spell" then
-        linkID = data.spellID
+        linkID = spellID
     end
-    local isAuction = AuctionFrame and AuctionFrame:IsVisible() or false
-    local isCrafted = isAuction and recipeData or false
-    local isRecipe = isCrafted and recipeData.data or false
+
+    local recipeID = self:GetRecipeID(spellID)
+    local craftedID = self:GetCraftedItem(spellID).ItemID
+    local isAuction = AuctionFrame and AuctionFrame:IsVisible() and true or false
+    local isCrafted = isAuction and craftedID or false
+    local isRecipe = isCrafted and recipeID or false
 
     local menuList = {
         {
@@ -273,8 +278,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                 {text = self.Colors.LIGHTBLUE.."Party", func = function() self:Chatlink(linkID,"PARTY",Type) end},
                 {text = self.Colors.ORANGE2.."Raid", func = function() self:Chatlink(linkID,"RAID",Type) end},
                 {text = "Auction House Search", isTitle = true, showOnCondition = isAuction, divider = true},
-                {text = "Created Item", func = function() self:SearchAuctionHouse(self:GetItemInfo(recipeData[1][1])) end, showOnCondition = isCrafted},
-                {text = "Recipe", func = function() self:SearchAuctionHouse(self:GetItemInfo(recipeData.Recipe)) end, showOnCondition = isRecipe},
+                {text = "Created Item", func = function() self:SearchAuctionHouse(self:GetItemInfo(craftedID)) end, showOnCondition = isCrafted},
+                {text = "Recipe", func = function() self:SearchAuctionHouse(self:GetItemInfo(recipeID)) end, showOnCondition = isRecipe},
                 {text = "Item", func = function() self:SearchAuctionHouse(self:GetItemInfo(itemID)) end, showOnCondition = isAuction},
         }, {}
     }

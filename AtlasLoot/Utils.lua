@@ -199,7 +199,7 @@ end
 AtlasLoot:PopoupItemFrame(item, data)
 Used to create a popup item frame for items like gem sacks to show what they contain
 ]] 
-function AtlasLoot:PopoupItemFrame(frame, data)
+function AtlasLoot:PopoupItemFrame(frame, data, craftedItem)
 	if not data then self.ui.itemPopupframe:Hide() return end
 	--hide the unused buttons
 	for i = 1, 15 do
@@ -243,6 +243,19 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 	end
 
 	local numberBtns
+	if craftedItem then
+		table.insert(data, 1, craftedItem)
+		local bloodforged = self:GetItemDifficultyID(craftedItem.ItemID, 1)
+		local firstBlank = 2
+		if bloodforged and bloodforged ~= craftedItem.ItemID then
+			table.insert(data, 2, {ItemID = bloodforged})
+			firstBlank = 3
+		end
+
+		for i = firstBlank, 6 do
+			table.insert(data, i, "blank")
+		end
+	end
 
 	for i, item in ipairs(data) do
 		createButton(i)
@@ -250,7 +263,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 		if item == "blank" then
 			button:Hide()
 		else
-			local correctID = (type(item) == "number" and item) or (type(item) == "table" and (item.itemID or item[1]))
+			local correctID = (type(item) == "number" and item) or (type(item) == "table" and (item.itemID or item.ItemID))
 			local itemID = self:GetItemDifficultyID(correctID, self.ItemindexID)
 			local itemData = {self:GetItemInfo(itemID)}
 			SetItemButtonTexture(button, itemData[10])
@@ -259,24 +272,22 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 			button.itemID = itemID
 			button.itemTexture = frame.itemTexture
 			button.isAtlasLoot = true
-			local recipe = self:GetRecipeData(itemID, "item")
-			if recipe then
-			button.craftingData = self:GetRecipeSource(recipe.spellID)
+			local recipeSpellID = self:GetTradeSkillByRecipeID(itemID)
+			if recipeSpellID then
+				button.craftingData = self:GetRecipeSource(recipeSpellID)
 			end
-			if type(item) == "table" and item[2] then
-				SetItemButtonCount(button, item[2])
-			else
-				SetItemButtonCount(button)
-			end
+			SetItemButtonCount(button, item.Count)
 			button:Show()
 		end
 		numberBtns = i
 	end
+
 	if numberBtns < 6 then
 		self.ui.itemPopupframe:SetWidth((numberBtns*33)+16)
 	else
 		self.ui.itemPopupframe:SetWidth(214)
 	end
+
 	if numberBtns > 6 then
 		self.ui.itemPopupframe:SetHeight(79)
 	elseif numberBtns > 12 then
@@ -284,6 +295,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 	else
 		self.ui.itemPopupframe:SetHeight(46)
 	end
+
 	self.ui.itemPopupframe:SetParent(frame)
 	self.ui.itemPopupframe:ClearAllPoints()
 	self.ui.itemPopupframe:SetPoint("TOPLEFT",frame,0,-25)
