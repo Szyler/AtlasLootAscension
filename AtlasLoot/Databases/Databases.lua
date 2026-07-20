@@ -2039,6 +2039,10 @@ function AtlasLoot:InitializeDatabases()
 		{ itemID = 4050653 }, --Pristine Tortoise Carapace
 	}
 
+	if AtlasLoot_Data_Cache and AtlasLoot_Data_Cache.WorldforgedClassic and AtlasLoot_Data_Cache.WorldforgedClassic.Version and AtlasLoot_Data_Cache.WorldforgedClassic.Version == self.Version then
+		wipe(WorldforgedClassic)
+	end
+
 	self:AddItemData("crafting", {
 		CraftingRecipes = {
 			[80000] = { SkillIndex =  40 },
@@ -6178,11 +6182,6 @@ function AtlasLoot:InitializeDatabases()
 			[71101] = { RecipeItemEntry =  50166, SkillIndex =  773 },
 			[71102] = { RecipeItemEntry = 50168, SkillIndex = 773 },
 	}})
-
-	if AtlasLoot_Data_Cache and AtlasLoot_Data_Cache.WorldforgedClassic and AtlasLoot_Data_Cache.WorldforgedClassic.Version and AtlasLoot_Data_Cache.WorldforgedClassic.Version == self.Version then
-		wipe(WorldforgedClassic)
-	end
-
 
 	self:AddItemData("sort", {
 		{ itemID = 0, groupID = 0, refLootEntry = 0 }; --Amulet of the Fallen God
