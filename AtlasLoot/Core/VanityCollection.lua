@@ -262,9 +262,5 @@ function AtlasLoot:GetVanityItemInfo(id)
 end
 
 function AtlasLoot:DeliverVanityItem(item)
-  if RequestDeliverVanityCollectionItem then
-    RequestDeliverVanityCollectionItem(item)
-  elseif C_VanityCollection.RequestDelivery then
     C_VanityCollection.RequestDelivery(item)
-  end
 end
