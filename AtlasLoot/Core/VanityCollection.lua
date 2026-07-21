@@ -142,7 +142,8 @@ function AtlasLoot:CreateVanityCollection()
     end
 
 	local categorieList = {}
-	for _, item in pairs(self:GetVanityItems()) do
+	local vanityItems = self:GetVanityItems()
+	for _, item in pairs(vanityItems) do
         local group
 		local flavor = GetItemFlavorText(item.itemid)
         local itemInfo = {self:GetItemInfo(item.itemid, true)}
@@ -202,14 +203,15 @@ end
 
 function AtlasLoot:LearnAllUnknownVanitySpells()
 	local unknownSpells = {}
+	local vanityItems = self:GetVanityItems()
 	local function parseCollection(group)
 		if self.data.item[group] then
 			for _, category in ipairs(self.data.item[group]) do
 				for _, item in ipairs(category) do
-					if type(item) == "table" and item.itemID and C_VanityCollection.IsCollectionItemOwned(item.itemID) and self:GetVanityItemInfo(item.itemID) and
-					not CA_IsSpellKnown(self:GetVanityItemInfo(item.itemID).learnedSpell) and self:GetVanityItemInfo(item.itemID).learnedSpell ~= 0 then
+					if type(item) == "table" and item.itemID and C_VanityCollection.IsCollectionItemOwned(item.itemID) and vanityItems[item.itemID] and
+					not CA_IsSpellKnown(vanityItems[item.itemID].learnedSpell) and vanityItems[item.itemID].learnedSpell ~= 0 then
 						local _, itemLink = self:GetItemInfo(item.itemID)
-						local spellName = GetSpellInfo(self:GetVanityItemInfo(item.itemID).learnedSpell)
+						local spellName = GetSpellInfo(vanityItems[item.itemID].learnedSpell)
 						local itemTooltipInfo = self:GetTooltipItemInfo(itemLink)
 						if (itemTooltipInfo and not itemTooltipInfo.isKnown) and not unknownSpells[spellName] or
 						(unknownSpells[spellName] and item.itemID > unknownSpells[spellName]) then
@@ -231,6 +233,7 @@ function AtlasLoot:LearnAllUnknownVanitySpells()
 end
 
 function AtlasLoot:BatchRequestVanity(itemList)
+	local vanityItems = self:GetVanityItems()
 	itemList = self:CloneTable(itemList)
 	local duplicateList = {}
 	for _, id in pairs(itemList) do
@@ -241,7 +244,7 @@ function AtlasLoot:BatchRequestVanity(itemList)
 		while task do
 			self:DeliverVanityItem(task)
             local count = GetItemCount(task)
-			if not CA_IsSpellKnown(self:GetVanityItemInfo(task).learnedSpell) and (not count or (count and count < duplicateList[task])) then
+			if not CA_IsSpellKnown(vanityItems[task].learnedSpell) and (not count or (count and count < duplicateList[task])) then
 				table.insert(itemList, task)
 			end
 			return Timer.After(.2, nextItem)
@@ -251,14 +254,13 @@ function AtlasLoot:BatchRequestVanity(itemList)
     return nextItem()
 end
 
-local vanityItems
 function AtlasLoot:GetVanityItems()
-	if not vanityItems then vanityItems = C_VanityCollection.GetAllItems() end
-	return vanityItems
+    return C_VanityCollection.GetAllItems() or {}
 end
 
+
 function AtlasLoot:GetVanityItemInfo(id)
-	return self:GetVanityItems()[id]
+	return VanityCollectionUtil.GetItem(id) or {}
 end
 
 function AtlasLoot:DeliverVanityItem(item)

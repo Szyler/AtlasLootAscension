@@ -91,8 +91,9 @@ function AtlasLoot:FilterItem(item, itemID, dataSource)
 
 	local function getVanityFilters(itemID, learnedSpellID)
 		local db = AtlasLootFilterDB.VanityFilters
-		if self:GetVanityItemInfo(itemID) and self:GetVanityItemInfo(itemID).learnedSpell and self:GetVanityItemInfo(itemID).learnedSpell ~= 0 then
-			learnedSpellID = self:GetVanityItemInfo(itemID).learnedSpell
+		local vanityItem = self:GetVanityItemInfo(itemID)
+		if vanityItem.learnedSpell and vanityItem.learnedSpell ~= 0 then
+			learnedSpellID = vanityItem.learnedSpell
 		end
 
 		if C_VanityCollection.IsCollectionItemOwned(itemID) then

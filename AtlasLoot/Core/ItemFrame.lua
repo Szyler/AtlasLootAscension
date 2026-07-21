@@ -130,13 +130,19 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 			text = ""
 		end
 
-		if C_VanityCollection.IsCollectionItemOwned(itemID) and self:GetVanityItemInfo(itemID) and CA_IsSpellKnown(self:GetVanityItemInfo(itemID).learnedSpell) and self:GetVanityItemInfo(itemID).learnedSpell ~= 0 then
-			hightlightFrame:SetTexture(itemHighlightGreen)
-			hightlightFrame:Show()
-		elseif C_VanityCollection.IsCollectionItemOwned(itemID) then
-			hightlightFrame:SetTexture(itemHighlightBlue)
-			hightlightFrame:Show()
-			if dataSource_backup == "currentWishList" or (self:GetVanityItemInfo(itemID) and self:GetVanityItemInfo(itemID).learnedSpell ~= 0 and not CA_IsSpellKnown(self:GetVanityItemInfo(itemID).learnedSpell)) then
+		local vanityLearnedSpell = self:GetVanityItemInfo(itemID).learnedSpell or 0
+		--learned spell id is used for items that are part of the ascension vanity collection
+		itemButton.learnedSpellID = vanityLearnedSpell ~= 0 and vanityLearnedSpell or nil
+
+		if C_VanityCollection.IsCollectionItemOwned(itemID) then
+			if CA_IsSpellKnown(vanityLearnedSpell) and vanityLearnedSpell ~= 0 then
+				hightlightFrame:SetTexture(itemHighlightGreen)
+				hightlightFrame:Show()
+			else
+				hightlightFrame:SetTexture(itemHighlightBlue)
+				hightlightFrame:Show()
+			end
+			if dataSource_backup == "currentWishList" or (vanityLearnedSpell ~= 0 and not CA_IsSpellKnown(vanityLearnedSpell)) then
 				table.insert(self.vanityItems, itemID)
 			end
 		end
@@ -262,13 +268,6 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 	--For convenience, we store information about the objects in the objects so that it can be easily accessed later
 	itemButton.itemID = itemID
 	itemButton.spellID = spellID
-	--learned spell id is used for items that are part of the ascension vanity collection
-	itemButton.learnedSpellID = nil
-
-	if self:GetVanityItemInfo(itemID) and self:GetVanityItemInfo(itemID).learnedSpell and self:GetVanityItemInfo(itemID).learnedSpell ~= 0 then
-		itemButton.learnedSpellID = self:GetVanityItemInfo(itemID).learnedSpell
-	end
-
 	itemButton.craftingData = self:GetRecipeSource(spellID)
 	itemButton.tablenum = tablenum
 	itemButton.dataID = dataID
