@@ -77,7 +77,7 @@ function AtlasLoot:ItemOnEnter(data)
         if not spellID then
             --Default game tooltips
             if itemID then
-                if GetItemInfo(itemID) then
+                if self.ItemUtil:GetItemName(itemID) then
                     GameTooltip:SetOwner(data, "ANCHOR_RIGHT", -(data:GetWidth() / 2), 24)
                     GameTooltip:SetHyperlink("item:"..itemID..":0:0:0")
                     self:SetQuestTooltip(data)
@@ -164,7 +164,7 @@ function AtlasLoot:ItemOnClick(item, button)
     local dataID, dataSource, dataPage
 
     if not spellID and itemID then
-        local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = self:GetItemInfo(itemID)
+        local itemData = self.ItemUtil:GetItemInfo(itemID)
         --If shift-clicked, link in the chat window
         if button == "RightButton" and self.wishListLockState == "Unlocked" then
             self:MoveWishlistItem("Down", item.item.positionNumber)
@@ -179,15 +179,15 @@ function AtlasLoot:ItemOnClick(item, button)
         elseif button == "RightButton" and itemID then
             self:ItemContextMenu(item, "item")
 
-        elseif IsShiftKeyDown() and itemName then
-            ChatEdit_InsertLink(itemLink)
+        elseif IsShiftKeyDown() and itemData.name then
+            ChatEdit_InsertLink(itemData.link)
 
         elseif ChatFrame1EditBox and ChatFrame1EditBox:IsVisible() and IsShiftKeyDown() then
-            ChatFrame1EditBox:Insert(itemName)  -- <-- this line just inserts plain text, does not need any adjustment
+            ChatFrame1EditBox:Insert(itemData.name)  -- <-- this line just inserts plain text, does not need any adjustment
             --If control-clicked, use the dressing room
-        elseif IsControlKeyDown() and itemName then
+        elseif IsControlKeyDown() and itemData.name then
             --view item in dressing room
-            DressUpItemLink(itemLink)
+            DressUpItemLink(itemData.link)
         elseif IsAltKeyDown() then
             if self.itemframe.refresh[2] == "currentWishList" then
                 self:DeleteFromWishList(item.item)
@@ -278,9 +278,9 @@ function AtlasLoot:ItemContextMenu(data, Type)
                 {text = self.Colors.LIGHTBLUE.."Party", func = function() self:Chatlink(linkID,"PARTY",Type) end},
                 {text = self.Colors.ORANGE2.."Raid", func = function() self:Chatlink(linkID,"RAID",Type) end},
                 {text = "Auction House Search", isTitle = true, showOnCondition = isAuction, divider = true},
-                {text = "Created Item", func = function() self:SearchAuctionHouse(self:GetItemInfo(craftedID)) end, showOnCondition = isCrafted},
-                {text = "Recipe", func = function() self:SearchAuctionHouse(self:GetItemInfo(recipeID)) end, showOnCondition = isRecipe},
-                {text = "Item", func = function() self:SearchAuctionHouse(self:GetItemInfo(itemID)) end, showOnCondition = isAuction},
+                {text = "Created Item", func = function() self:SearchAuctionHouse(self.ItemUtil:GetItemName(craftedID)) end, showOnCondition = isCrafted},
+                {text = "Recipe", func = function() self:SearchAuctionHouse(self.ItemUtil:GetItemName(recipeID)) end, showOnCondition = isRecipe},
+                {text = "Item", func = function() self:SearchAuctionHouse(self.ItemUtil:GetItemName(itemID)) end, showOnCondition = isAuction},
         }, {}
     }
     local wishList

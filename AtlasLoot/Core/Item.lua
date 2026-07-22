@@ -1,239 +1,317 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local Equipment = {}
-AtlasLoot.Equipment = Equipment
+local ItemUtil = {}
+AtlasLoot.ItemUtil = ItemUtil
 
 local equipmentSlots = {
-	INVTYPE_HEAD = {
+	-- 1 INVTYPE_HEAD
+	{
 		name = "Head",
 		pvpCost = "30000 #faction#",
 		arenaCost = "1500 #arena#",
 	},
-	INVTYPE_NECK = {
+	-- 2 INVTYPE_NECK
+	{
 		name = "Neck",
 		pvpCost = "24000 #faction#",
 	},
-	INVTYPE_SHOULDER = {
+	-- 3 INVTYPE_SHOULDERS
+	{
 		name = "Shoulders",
 		pvpCost = "24000 #faction#",
 		arenaCost = "1125 #arena#",
 	},
-	INVTYPE_BODY = {
+	-- 4 INVTYPE_BODY
+	{
 		name = "Shirt",
-		pvpCost = "30000 #faction#",
-		arenaCost = "1500 #arena#",
 	},
-	INVTYPE_CHEST = {
+	-- 5 INVTYPE_CHEST
+	{
 		name = "Chest",
 		pvpCost = "30000 #faction#",
 		arenaCost = "1500 #arena#",
 	},
-	INVTYPE_ROBE = {
-		name = "Chest",
-		pvpCost = "30000 #faction#",
-		arenaCost = "1500 #arena#",
-	},
-	INVTYPE_WAIST = {
+	-- 6 INVTYPE_WAIST
+	{
 		name = "Waist",
 		pvpCost = "17000 #faction#",
 	},
-	INVTYPE_LEGS = {
+	-- 7 INVTYPE_LEGS
+	{
 		name = "Legs",
 		pvpCost = "30000 #faction#",
 		arenaCost = "1500 #arena#",
 	},
-	INVTYPE_FEET = {
+	-- 8 INVTYPE_FEET
+	{
 		name = "Feet",
 		pvpCost = "24000 #faction#",
 	},
-	INVTYPE_WRIST = {
+	-- 9 INVTYPE_WRISTS
+	{
 		name = "Wrists",
 		pvpCost = "17000 #faction#",
 	},
-	INVTYPE_HAND = {
+	-- 10 INVTYPE_HANDS
+	{
 		name = "Hands",
 		pvpCost = "20000 #faction#",
 		arenaCost = "1000 #arena#",
 	},
-	INVTYPE_FINGER = {
+	-- 11 INVTYPE_FINGER
+	{
 		name = "Ring",
 		pvpCost = "24000 #faction#",
 	},
-	INVTYPE_TRINKET = {
+	-- 12 INVTYPE_TRINKET
+	{
 		name = "Trinket",
 		pvpCost = "30400 #faction#",
 	},
-	INVTYPE_CLOAK = {
-		name = "Back",
-		pvpCost = "30400 #faction#",
-	},
-	INVTYPE_TABARD = {
-		name = "Tabard",
-	},
-	-- Specific Weapon Slots from ArmorTypes
-	INVTYPE_WEAPON = {
+	-- 13 INVTYPE_WEAPON
+	{
 		name = "One-Handed Weapon",
 		pvpCost = "24000 #faction#",
 		arenaCost = "1875 #arena#",
 	},
-	INVTYPE_2HWEAPON = {
-		name = "Two-Handed Weapon",
-		pvpCost = "40000 #faction#",
-		arenaCost = "2700 #arena#",
-	},
-	INVTYPE_WEAPONMAINHAND = {
-		name = "Main Hand",
-		pvpCost = "24000 #faction#",
-		arenaCost = "1875 #arena#",
-	},
-	INVTYPE_WEAPONOFFHAND = {
-		name = "Off Hand",
-		pvpCost = "24000 #faction#",
-		arenaCost = "750 #arena#",
-	},
-	INVTYPE_SHIELD = {
+	-- 14 INVTYPE_SHIELD
+	{
 		name = "Shield",
 		pvpCost = "15000 #faction#",
 		arenaCost = "1500 #arena#",
 	},
-	INVTYPE_HOLDABLE = {
-		name = "Held In Off-Hand",
-		pvpCost = "15000 #faction#",
-		arenaCost = "1500 #arena#",
-	},
-	INVTYPE_RANGED = {
+	-- 15 INVTYPE_RANGED
+	{
 		name = "Ranged",
 		pvpCost = "15000 #faction#",
 		arenaCost = "1500 #arena#",
 	},
-	INVTYPE_RANGEDRIGHT = {
-		name = "Ranged Weapon",
+	-- 16 INVTYPE_CLOAK
+	{
+		name = "Back",
+		pvpCost = "30400 #faction#",
+	},
+	-- 17 INVTYPE_2HWEAPON
+	{
+		name = "Two-Handed Weapon",
+		pvpCost = "40000 #faction#",
+		arenaCost = "2700 #arena#",
+	},
+	-- 18 INVTYPE_BAG
+	{
+		name = "Bag",
+	},
+	-- 19 INVTYPE_TABARD
+	{
+		name = "Tabard",
+	},
+	-- 20 INVTYPE_ROBE
+	{
+		name = "Robe",
+		pvpCost = "30000 #faction#",
+		arenaCost = "1500 #arena#",
+	},
+	-- 21 INVTYPE_WEAPONMAINHAND
+	{
+		name = "Main Hand",
+		pvpCost = "24000 #faction#",
+		arenaCost = "1875 #arena#",
+	},
+	-- 22 INVTYPE_WEAPONOFFHAND
+	{
+		name = "Off Hand",
+		pvpCost = "24000 #faction#",
+		arenaCost = "750 #arena#",
+	},
+	-- 23 INVTYPE_HOLDABLE
+	{
+		name = "Held In Off-Hand",
 		pvpCost = "15000 #faction#",
 		arenaCost = "1500 #arena#",
 	},
-	INVTYPE_THROWN = {
+	-- 24 INVTYPE_AMMO
+	{
+		name = "Ammo",
+	},
+	-- 25 INVTYPE_THROWN
+	{
 		name = "Thrown",
 		pvpCost = "15000 #faction#",
 		arenaCost = "750 #arena#",
 	},
-	INVTYPE_RELIC = {
+	-- 26 INVTYPE_RANGEDRIGHT
+	{
+		name = "Ranged Right",
+	},
+	-- 27 INVTYPE_QUIVER
+	{
+		name = "Quiver",
+	},
+	-- 28 INVTYPE_RELIC
+	{
 		name = "Relic",
 		pvpCost = "15000 #faction#",
 		arenaCost = "750 #arena#",
 	},
-	-- Weapon Sub-Types
+	{
+		name = "None Equipable",
+	},
 	["One-Handed Axes"] = {
 		name = "Axe1H",
 		altName = "One-Handed Axes",
 		pvpCost = "24000 #faction#",
-		arenaCost = "1875 #arena#"
+		arenaCost = "1875 #arena#",
 	},
 	["Two-Handed Axes"] = {
 		name = "Axe2H",
 		altName = "Two-Handed Axes",
 		pvpCost = "40000 #faction#",
-		arenaCost = "2700 #arena#"
+		arenaCost = "2700 #arena#",
 	},
 	["One-Handed Swords"] = {
 		name = "Sword1H",
 		altName = "One-Handed Swords",
 		pvpCost = "24000 #faction#",
-		arenaCost = "1875 #arena#"
+		arenaCost = "1875 #arena#",
 	},
 	["Two-Handed Swords"] = {
 		name = "Sword2H",
 		altName = "Two-Handed Swords",
 		pvpCost = "40000 #faction#",
-		arenaCost = "2700 #arena#"
+		arenaCost = "2700 #arena#",
 	},
 	["One-Handed Maces"] = {
 		name = "Mace1H",
 		altName = "One-Handed Maces",
 		pvpCost = "24000 #faction#",
-		arenaCost = "1875 #arena#"
+		arenaCost = "1875 #arena#",
 	},
 	["Two-Handed Maces"] = {
 		name = "Mace2H",
 		altName = "Two-Handed Maces",
 		pvpCost = "40000 #faction#",
-		arenaCost = "2700 #arena#"
+		arenaCost = "2700 #arena#",
 	},
 	Daggers = {
 		name = "Dagger",
 		altName = "Daggers",
 		pvpCost = "24000 #faction#",
-		arenaCost = "1875 #arena#"
+		arenaCost = "1875 #arena#",
 	},
 	["Fist Weapons"] = {
 		name = "Fist",
 		altName = "Fist Weapons",
 		pvpCost = "24000 #faction#",
-		arenaCost = "1875 #arena#"
+		arenaCost = "1875 #arena#",
 	},
 	Shields = {
 		name = "Shield",
 		pvpCost = "15000 #faction#",
-		arenaCost = "1500 #arena#"
+		arenaCost = "1500 #arena#",
 	},
 	Polearms = {
 		name = "Polearm",
 		pvpCost = "40000 #faction#",
-		arenaCost = "2700 #arena#"
+		arenaCost = "2700 #arena#",
 	},
 	Bows = {
 		name = "Bows",
 		pvpCost = "15000 #faction#",
-		arenaCost = "1500 #arena#"
+		arenaCost = "1500 #arena#",
 	},
 	Guns = {
 		name = "Guns",
 		pvpCost = "15000 #faction#",
-		arenaCost = "1500 #arena#"
+		arenaCost = "1500 #arena#",
 	},
 	Crossbows = {
 		name = "Crossbows",
 		pvpCost = "15000 #faction#",
-		arenaCost = "1500 #arena#"
+		arenaCost = "1500 #arena#",
 	},
 	Thrown = {
 		name = "Thrown",
 		pvpCost = "15000 #faction#",
-		arenaCost = "750 #arena#"
+		arenaCost = "750 #arena#",
 	},
 	Wands = {
 		name = "Wands",
 		pvpCost = "15000 #faction#",
-		arenaCost = "1500 #arena#"
+		arenaCost = "1500 #arena#",
 	},
 	Staves = {
 		name = "Staves",
 		pvpCost = "40000 #faction#",
-		arenaCost = "2700 #arena#"
+		arenaCost = "2700 #arena#",
 	},
 	["Fishing Poles"] = {
 		name = "FishingPole",
-		altName = "Fishing Poles"
+		altName = "Fishing Poles",
 	},
 	OffHands = {
 		name = "OffHand",
 		altName = "OffHands",
 		pvpCost = "15000 #faction#",
-		arenaCost = "1500 #arena#"
+		arenaCost = "1500 #arena#",
 	},
 	Consumable = {
-		name = "Consumable"
+		name = "Consumable",
 	},
 }
 
-function Equipment:GetSlotName(slot)
+
+
+
+-- custom getiteminfo returns same formate as getiteminfo but will use info from either getiteminfo or getiteminfoinstant
+function ItemUtil:GetItemInfo(item)
+	if not item or item == 0 then return end
+	item = tonumber(item) and Item:CreateFromID(item) or Item:CreateFromLink(item)
+	if not item then return {} end
+	local itemInfo = item:GetInfoInstant() or {}
+	itemInfo.link = item:GetLink()
+	itemInfo.className = _G["ITEM_CLASS_"..itemInfo.classID]
+	itemInfo.subclassName = _G["ITEM_SUBCLASS_"..itemInfo.classID.."_"..itemInfo.subclassID]
+	itemInfo.inventoryTypeName = equipmentSlots[itemInfo.inventoryType] and equipmentSlots[itemInfo.inventoryType].name
+	return itemInfo
+end
+
+function ItemUtil:GetItemEquiplocation(id)
+	return self:GetItemInfo(id).invertoryType
+end
+
+function ItemUtil:GetItemName(id)
+	return self:GetItemInfo(id).name
+end
+
+function ItemUtil:GetItemIcon(id)
+	return self:GetItemInfo(id).icon
+end
+
+function ItemUtil:GetItemLink(id)
+	return self:GetItemInfo(id).link
+end
+
+function ItemUtil:GetItemQuality(id)
+	return self:GetItemInfo(id).quality
+end
+
+function ItemUtil:GetClassName(id)
+	return self:GetItemInfo(id).className
+end
+
+function ItemUtil:GetSubClassName(id)
+	return self:GetItemInfo(id).subclassName
+end
+
+function ItemUtil:GetSlotName(slot)
 	if not equipmentSlots[slot] then return end
 	return equipmentSlots[slot].name, equipmentSlots[slot].altName
 end
 
-function Equipment:GetSlotCost(slot)
+function ItemUtil:GetSlotCost(slot)
 	if not equipmentSlots[slot] then return end
 	return equipmentSlots[slot].pvpCost, equipmentSlots[slot].arenaCost
 end
 
-function Equipment:GetList()
+function ItemUtil:GetList()
     return equipmentSlots
 end

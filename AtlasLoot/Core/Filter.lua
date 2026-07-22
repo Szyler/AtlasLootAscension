@@ -78,13 +78,12 @@ function AtlasLoot:FilterItem(item, itemID, dataSource)
 	-- checks filters and whether the id is armor or a weapon
 	local function getFilterType(itemID)
 		if not itemID then return end
-		local itemLink, _, _, _, armorCheck = select(2,self:GetItemInfo(itemID))
-		if not itemLink then return end
-		local itemStats = GetItemStats(itemLink)
-
-		if (armorCheck == "Armor" or armorCheck == "Weapon") and checkfilters(itemStats, "PrimaryStat") and checkfilters(itemStats, "Stat") then
+		local itemData = self.ItemUtil:GetItemInfo(itemID)
+		if not itemData.link then return end
+		local itemStats = GetItemStats(itemData.link)
+		if (itemData.classID == 4 or itemData.classID == 2) and checkfilters(itemStats, "PrimaryStat") and checkfilters(itemStats, "Stat") then
 			return true
-		elseif armorCheck ~= "Armor" and armorCheck ~= "Weapon" then
+		elseif itemData.classID ~= 4 and itemData.classID ~= 2 then
 			return true
 		end
 	end

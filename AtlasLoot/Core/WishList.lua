@@ -272,7 +272,7 @@ function AtlasLoot:DeleteFromWishList(item)
 		if item.name then
 			name = item.name
 		elseif item.itemID then
-			name = self:GetItemInfo(item.itemID)
+			name = self.ItemUtil:GetItemName(item.itemID)
 		elseif item.spellID then
 			name = GetSpellInfo(item.spellID)
 		else

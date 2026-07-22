@@ -556,9 +556,8 @@ function AtlasLoot:InitializeSearch()
     end
 
     local function getItemDetails(itemId)
-        -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
-        local itemName, _, itemQuality, itemLvl, minLvl, _, itemSubType, _, itemEquipLoc = self:GetItemInfo(itemId)
-        return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
+        local itemInfo = self.ItemUtil:GetItemInfo(itemId)
+        return itemInfo.name, itemInfo.quality, itemInfo.itemLevel, itemInfo.itemLevel, itemInfo.inventoryType, itemInfo.subclassID, GetItemStats(itemInfo.link)
     end
 
     local newTable = {{}}

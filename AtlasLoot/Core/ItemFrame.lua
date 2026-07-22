@@ -83,7 +83,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 
 	local show = true
 	local text, extra
-	local itemName, _, itemQuality, _, _, itemType, itemSubType, _, itemEquipLoc, itemIcon = self:GetItemInfo(itemID)
+	local itemData = self.ItemUtil:GetItemInfo(itemID)
 	local spellName, spellIcon
 	--Use shortcuts for easier reference to parts of the item button
 	local iconFrame  = itemButton.Icon
@@ -102,7 +102,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 			text = self:FixText(text)
 		end
 		if itemID then
-			text = select(4,GetItemQualityColor(itemQuality))..text
+			text = select(4,GetItemQualityColor(itemData.quality))..text
 		end
 		--Adds button highlights if you know a recipe or have a char that knows one
 		if CA_IsSpellKnown(spellID) then
@@ -124,8 +124,8 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 			--If it has a manuel entry use that
 			text = itemNumber.name
 			text = self:FixText(text)
-		elseif itemName then
-			text = select(4,GetItemQualityColor(itemQuality))..itemName
+		elseif itemData.name then
+			text = select(4,GetItemQualityColor(itemData.quality))..itemData.name
 		else
 			text = ""
 		end
@@ -194,10 +194,10 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 		extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
 	elseif itemNumber.sourcePage and itemNumber.sourcePage[2] == "Token" then
 		extra = self:FixText("Set Token (Click)")
-	elseif itemEquipLoc and itemEquipLoc ~= "" and itemSubType then
-		extra = itemEquipLoc..", "..itemSubType
-	elseif itemSubType then
-		extra = itemSubType
+	elseif itemData.subclassName and itemData.inventoryTypeName then
+		extra = itemData.subclassName .. ", " .. itemData.inventoryTypeName
+	elseif itemData.subclassName then
+		extra = itemData.subclassName
 	else
 		extra = ""
 	end
@@ -217,7 +217,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 	local price = itemNumber.price
 	if price then
 		if price == "Arena" then
-			local honorPrice, arenaPrice = self.Equipment:GetSlotCost(itemEquipLoc)
+			local honorPrice, arenaPrice = self.ItemUtil:GetSlotCost(itemData.inventoryType)
 			if arenaPrice then
 				price = honorPrice .. arenaPrice
 			else
@@ -240,7 +240,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 	elseif itemNumber.icon then
 		iconFrame:SetTexture("Interface\\Icons\\"..itemNumber.icon)
 	elseif itemNumber.itemID then
-		iconFrame:SetTexture(itemIcon)
+		iconFrame:SetTexture(itemData.icon)
 	elseif spellIcon then
 		iconFrame:SetTexture(spellIcon)
 	else

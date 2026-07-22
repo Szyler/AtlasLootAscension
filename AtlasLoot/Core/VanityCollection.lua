@@ -146,9 +146,8 @@ function AtlasLoot:CreateVanityCollection()
 	for _, item in pairs(vanityItems) do
         local group
 		local flavor = GetItemFlavorText(item.itemid)
-        local itemInfo = {self:GetItemInfo(item.itemid, true)}
-        local itemType, itemSlot, itemDescription = itemInfo[7], itemInfo[9], itemInfo[12]
-        local slotName, slotAltName = self.Equipment:GetSlotName(itemSlot) or self.Equipment:GetSlotName(itemType)
+        local itemInfo = self.ItemUtil:GetItemInfo(item.itemid)
+
         local groupByName = setGroupByName(item)
 		if item.quality == 7 then
             group = setGroup("Heirlooms")
@@ -156,16 +155,18 @@ function AtlasLoot:CreateVanityCollection()
             group = setGroup("Manastorm")
 		elseif groupByName then
             group = setGroup(groupByName[1], groupByName[2])
-        elseif itemDescription:find("A Cosmetic set", 1, true) then
+        elseif itemInfo.description:find("A Cosmetic set", 1, true) then
             group = setGroup("Sets")
-        elseif itemType == "Pet" and excludePets(item) then
+        elseif itemInfo.subclassName == "Pet" and excludePets(item) then
             group = setGroup("Pets")
-		elseif itemType == "Key" and excludePets(item) then
+		elseif itemInfo.subclassName == "Key" and excludePets(item) then
             group = setGroup("Keys")
-        elseif itemType == "Mount" then
+        elseif itemInfo.subclassName == "Mount" then
             group = setGroup("Mounts")
-        elseif slotName then
-            group = setGroup(slotName, slotAltName or slotName)
+		elseif itemInfo.subclassName == "Devices" then
+            group = setGroup("Devices")
+        elseif itemInfo.inventoryTypeName then
+            group = setGroup(itemInfo.inventoryTypeName, itemInfo.subclassName or itemInfo.inventoryTypeName)
 		else
 			group = findGroup(item.group)
 		end
@@ -210,9 +211,8 @@ function AtlasLoot:LearnAllUnknownVanitySpells()
 				for _, item in ipairs(category) do
 					if type(item) == "table" and item.itemID and C_VanityCollection.IsCollectionItemOwned(item.itemID) and vanityItems[item.itemID] and
 					not CA_IsSpellKnown(vanityItems[item.itemID].learnedSpell) and vanityItems[item.itemID].learnedSpell ~= 0 then
-						local _, itemLink = self:GetItemInfo(item.itemID)
 						local spellName = GetSpellInfo(vanityItems[item.itemID].learnedSpell)
-						local itemTooltipInfo = self:GetTooltipItemInfo(itemLink)
+						local itemTooltipInfo = self:GetTooltipItemInfo(self.ItemUtil:GetItemLink(item.itemID))
 						if (itemTooltipInfo and not itemTooltipInfo.isKnown) and not unknownSpells[spellName] or
 						(unknownSpells[spellName] and item.itemID > unknownSpells[spellName]) then
 							unknownSpells[spellName] = item.itemID

@@ -1,2702 +1,4172 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-AtlasLoot:AddItemData({
-------------------------
---- Dungeons & Raids ---
-------------------------
-------------
---- Keys ---
-------------
-	["OldKeys"] = {
-		{
-			{ icon = "INV_Box_01", name = "Keys" },
-			{ itemID = 7146 }, --The Scarlet Key
-			{ itemID = 12382 }, --Key to the City
-			{ itemID = 6893 }, --Workshop Key
-			{ itemID = 11000 }, --Shadowforge Key
-			{ itemID = 11140 }, --Prison Cell Key
-			{ itemID = 18249 }, --Crescent Key
-			{ itemID = 13704 }, --Skeleton Key
-			{ icon = "INV_Box_01", name = "Dungeon Set 2" },
-			{ itemID = 22057 }, --Brazier of Invocation
-			{ itemID = 21986 }, --Banner of Provocation
-			{ icon = "INV_Box_01", name = "Misc" },
-			{ itemID = 19931 }, --Gurubashi Mojo Madness
-			{ itemID = 13523 }, --Blood of Innocents
-			{ itemID = 18746 }, --Divination Scryer
-			{ itemID = 18663 }, --J'eevee's Jar
-			{ itemID = 19974 }, --Mudskunk Lure
-			{ itemID = 7733 }, --Staff of Prehistoria
-			{ itemID = 10818 }, --Yeh'kinya's Scroll
-		},
-	},
------------------------------------------
---- Ahn'Qiraj: The Ruins of Ahn'Qiraj ---
------------------------------------------
-	["RuinsofAQ"] = {
-		{
-			{ itemID = 22217 }, --Kurinnaxx's Venom Sac
-			{ itemID = 1506051, sourcePage = {"AQ20SetsBACK","Token"} }, --Ceremonial Qiraji Drape
-		},
-		{
-			{ itemID = 21495 }, --Legplates of the Qiraji Command
-			{ icon = "INV_Box_01", name = "Rajaxx's Captains" },
-			{ itemID = 21810 }, --Treads of the Wandering Nomad
-			{ itemID = 21809 }, --Fury of the Forgotten Swarm
-			{ itemID = 21806 }, --Gavel of Qiraji Authority
-		},
-		{
-			{ itemID = 1506051, sourcePage = {"AQ20SetsBACK","Token"} }, --Ceremonial Qiraji Drape
-			{ icon = "INV_Box_01", name = "Lieutenant General Andorov" },
-			{ itemID = 22221 }, --Plans: Obsidian Mail Tunic
-			{ itemID = 22219 }, --Plans: Jagged Obsidian Shield
-		},
-		{
-			{ itemID = 1506053, sourcePage = {"AQ20SetsNECK","Token"} }, --Ceremonial Qiraji Pendant
-			{ itemID = 22220, contentsPreview = {22194} }, --Plans: Black Grasp of the Destroyer
-		},
-		{
-			{ itemID = 1506052, sourcePage = {"AQ20Sets-FINGER","Token"} }, --Ceremonial Qiraji Ring
-		},
-		{
+-- Auto Generated From Ascension DB with python script
 
-			{ itemID = 1506052, sourcePage = {"AQ20Sets-FINGER","Token"} }, --Ceremonial Qiraji Ring
-		},
-		{
-			{ itemID = 21220 }, --Head of Ossirian the Unscarred
-			{ itemID = 21504 }, --Charm of the Shifting Sands
-			{ itemID = 21507 }, --Amulet of the Shifting Sands
-			{ itemID = 21505 }, --Choker of the Shifting Sands
-			{ itemID = 21506 }, --Pendant of the Shifting Sands
-			{ itemID = 1506053, sourcePage = {"AQ20SetsNECK","Token"} }, --Ceremonial Qiraji Pendant
-		},
-		{
-			{ itemID = 20873 }, --Alabaster Idol
-			{ itemID = 20869 }, --Amber Idol
-			{ itemID = 20866 }, --Azure Idol
-			{ itemID = 20870 }, --Jasper Idol
-			{ itemID = 20868 }, --Lambent Idol
-			{ itemID = 20871 }, --Obsidian Idol
-			{ itemID = 20867 }, --Onyx Idol
-			{ itemID = 20872 }, --Vermillion Idol
-			{ itemID = 22202 }, --Small Obsidian Shard
-			{ itemID = 22203 }, --Large Obsidian Shard
-			{ itemID = 21404 }, --Dagger of Veiled Shadows
-			{ itemID = 21413 }, --Blade of Vaulted Secrets
-			{ itemID = 21395 }, --Blade of Eternal Justice
-			{ itemID = 20864 }, --Bone Scarab
-			{ itemID = 20861 }, --Bronze Scarab
-			{ itemID = 20863 }, --Clay Scarab
-			{ itemID = 20862 }, --Crystal Scarab
-			{ itemID = 20859 }, --Gold Scarab
-			{ itemID = 20865 }, --Ivory Scarab
-			{ itemID = 20860 }, --Silver Scarab
-			{ itemID = 20858 }, --Stone Scarab
-			{ itemID = 21761 }, --Scarab Coffer Key
-			{ itemID = 21407 }, --Mace of Unending Life
-			{ itemID = 21410 }, --Gavel of Infinite Wisdom
-			{ itemID = 21398 }, --Hammer of the Gathering Storm
-			{ itemID = 21401 }, --Scythe of the Unseen Path
-			{ itemID = 21392 }, --Sickle of Unyielding Strength
-		},
-		{
-			{ itemID = 20728 }, --Formula: Enchant Gloves - Frost Power
-			{ itemID = 20731 }, --Formula: Enchant Gloves - Superior Agility
-			{ itemID = 20734 }, --Formula: Enchant Cloak - Stealth
-			{ itemID = 20729 }, --Formula: Enchant Gloves - Fire Power
-			{ itemID = 20736 }, --Formula: Enchant Cloak - Dodge
-			{ itemID = 20730 }, --Formula: Enchant Gloves - Healing Power
-			{ itemID = 20727 }, --Formula: Enchant Gloves - Shadow Power
-		},
-	},
-------------------------------------------
---- Ahn'Qiraj: The Temple of Ahn'Qiraj ---
-------------------------------------------
-	["TempleofAQ"] = {
-		{
-			{ itemID = 21237 }, --Imperial Qiraji Regalia
-			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 22222 }, --Plans: Thick Obsidian Breastplate
-			{ itemID = 22196 }, --Thick Obsidian Breastplate
-			{ itemID = 20928, sourcePage = {"TTWO.5-FEET","Token"} }, --Bindings of the Lost Nomad
-		},
-		{
-			{ itemID = 21697 }, --Cape of the Trinity
-			{ itemID = 21694 }, --Ternary Mantle
-			{ itemID = 21696 }, --Robes of the Triumvirate
-			{ itemID = 21693 }, --Guise of the Devourer
-			{ itemID = 21692 }, --Triad Girdle
-			{ itemID = 21695 }, --Angelista's Touch
-			{ itemID = 21237 }, --Imperial Qiraji Regalia
-			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 21680 }, --Vest of Swift Execution
-			{ itemID = 21603 }, --Wand of Qiraji Nobility
-			{ itemID = 21681 }, --Ring of the Devoured
-			{ itemID = 21685 }, --Petrified Scarab
-			{ itemID = 21689 }, --Gloves of Ebru
-			{ itemID = 21691 }, --Ooze-ridden Gauntlets
-			{ itemID = 21688 }, --Boots of the Fallen Hero
-			{ itemID = 21690 }, --Angelista's Charm
-			{ itemID = 21686 }, --Mantle of Phrenic Power
-			{ itemID = 21682 }, --Bile-Covered Gauntlets
-			{ itemID = 21684 }, --Mantle of the Desert's Fury
-			{ itemID = 21683 }, --Mantle of the Desert Crusade
-			{ itemID = 21687 }, --Ukko's Ring of Darkness
-			{ itemID = 20928, sourcePage = {"TTWO.5-FEET","Token"} }, --Bindings of the Lost Nomad
-		},
-		{
-			{ itemID = 21237 }, --Imperial Qiraji Regalia
-			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 20932, sourcePage = {"TTWO.5-SHOULDER","Token"} }, --Spaulders of the Imperial Guard
-		},
-		{
-			{ itemID = 21237 }, --Imperial Qiraji Regalia
-			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 20932, sourcePage = {"TTWO.5-SHOULDER","Token"} }, --Spaulders of the Imperial Guard
-		},
-		{
-			{ itemID = 21237 }, --Imperial Qiraji Regalia
-			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 20932, sourcePage = {"TTWO.5-SHOULDER","Token"} }, --Spaulders of the Imperial Guard
-			{ itemID = 20931, sourcePage = {"TTWO.5-LEGS","Token"} }, --Hardened Qiraj Chitin
-			{ itemID = 20930, sourcePage = {"TTWO.5-HEAD","Token"} }, --Diadem of the Desert Prince
-			{ itemID = 20928, sourcePage = {"TTWO.5-FEET","Token"} }, --Bindings of the Lost Nomad
-		},
-		{
-			{ itemID = 21237 }, --Imperial Qiraji Regalia
-			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 20932, sourcePage = {"TTWO.5-SHOULDER","Token"} }, --Spaulders of the Imperial Guard
-			{ itemID = 20931, sourcePage = {"TTWO.5-LEGS","Token"} }, --Hardened Qiraj Chitin
-		},
-		{
-			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 21237 }, --Imperial Qiraji Regalia
-			{ itemID = 20930, sourcePage = {"TTWO.5-HEAD","Token"} }, --Diadem of the Desert Prince
-			{ itemID = 20726 }, --Formula: Enchant Gloves - Threat
-			{ itemID = 20735 }, --Formula: Enchant Cloak - Subtlety
-		},
-		{
-			{ itemID = 21237 }, --Imperial Qiraji Regalia
-			{ itemID = 21232 }, --Imperial Qiraji Armaments
-			{ itemID = 20931, sourcePage = {"TTWO.5-LEGS","Token"} }, --Hardened Qiraj Chitin
-		},
-		{
-			{ itemID = 21221 }, --Eye of C'Thun
-			{ itemID = 20933, sourcePage = {"TTWO.5-CHEST","Token"} }, --Husk of the Old God
-			{ itemID = 22734, contentsPreview = { 22632, 22589, 22631, 22630} }, --Base of Atiesh
-		},
-		{
-			{ itemID = 21838 }, --Garb of Royal Ascension
-			{ itemID = 21888 }, --Gloves of the Immortal
-			{ itemID = 21889 }, --Gloves of the Redeemed Prophecy
-			{ itemID = 21836 }, --Ritssyn's Ring of Chaos
-			{ itemID = 21891 }, --Shard of the Fallen Star
-			{ itemID = 21856 }, --Neretzek, The Blood Drinker
-			{ itemID = 21837 }, --Anubisath Warhammer
-			{ itemID = 22202 }, --Small Obsidian Shard
-			{ itemID = 22203 }, --Large Obsidian Shard
-			{ itemID = 21218 }, --Blue Qiraji Resonating Crystal
-			{ itemID = 21324 }, --Yellow Qiraji Resonating Crystal
-			{ itemID = 21323 }, --Green Qiraji Resonating Crystal
-			{ itemID = 21321 }, --Red Qiraji Resonating Crystal
-		},
-		{
-			{ itemID = 1319786, desc = "Quest Requirements", contentsPreview = {{20878},{20868},{20872},{20859,3},{20864,3}} }, --Inscription of the Stormcaller
-			{ itemID = 1319785, desc = "Quest Requirements", contentsPreview = {{20881},{20869},{20871},{20861,3},{20862,3}} }, --Inscription of the Stalker
-			{ itemID = 1319789, desc = "Quest Requirements", contentsPreview = {{20874},{20872},{20866},{20864,3},{20858,3}} }, --Inscription of the Oracle
-			{ itemID = 1319790, desc = "Quest Requirements", contentsPreview = {{20879},{20873},{20868},{20865,3},{20859,3}} }, --Inscription of the Genesis
-			{ itemID = 1319787, desc = "Quest Requirements", contentsPreview = {{20877},{20871},{20867},{20862,3},{20860,3}} }, --Inscription of the Enigma
-			{ itemID = 1319788, desc = "Quest Requirements", contentsPreview = {{20875},{20870},{20869},{20863,3},{20861,3}} }, --Inscription of the Doomcaller
-			{ itemID = 1319784, desc = "Quest Requirements", contentsPreview = {{20876},{20867},{20870},{20860,3},{20863,3}} }, --Inscription of the Deathdealer
-			{ itemID = 1319782, desc = "Quest Requirements", contentsPreview = {{20882},{20866},{20873},{20858,3},{20865,3}} }, --Inscription of the Conqueror
-			{ itemID = 1319783, desc = "Quest Requirements", contentsPreview = {{20878},{20868},{20872},{20859,3},{20864,3}} }, --Inscription of the Avenger
-		},
-		{
-			{ itemID = 20876 }, --Idol of Death
-			{ itemID = 20879 }, --Idol of Life
-			{ itemID = 20875 }, --Idol of Night
-			{ itemID = 20878 }, --Idol of Rebirth
-			{ itemID = 20881 }, --Idol of Strife
-			{ itemID = 20877 }, --Idol of the Sage
-			{ itemID = 20874 }, --Idol of the Sun
-			{ itemID = 20882 }, --Idol of War
-			{ itemID = 21230 }, --Ancient Qiraji Artifact
-			{ itemID = 21762 }, --Greater Scarab Coffer Key
-			{ itemID = 20864 }, --Bone Scarab
-			{ itemID = 20861 }, --Bronze Scarab
-			{ itemID = 20863 }, --Clay Scarab
-			{ itemID = 20862 }, --Crystal Scarab
-			{ itemID = 20859 }, --Gold Scarab
-			{ itemID = 20865 }, --Ivory Scarab
-			{ itemID = 20860 }, --Silver Scarab
-			{ itemID = 20858 }, --Stone Scarab
-		},
-	},
-	["AQOpening"] = {
-		{
-			{ itemID = 21138 }, --Red Scepter Shard
-			{ itemID = 21530 }, --Onyx Embedded Leggings
-			{ itemID = 21529 }, --Amulet of Shadow Shielding
-			{ itemID = 21139 }, --Green Scepter Shard
-			{ itemID = 21532 }, --Drudge Boots
-			{ itemID = 21531 }, --Drake Tooth Necklace
-			{ itemID = 21137 }, --Blue Scepter Shard
-			{ itemID = 21517 }, --Gnomish Turban of Psychic Might
-			{ itemID = 21527 }, --Darkwater Robes
-			{ itemID = 21526 }, --Band of Icy Depths
-			{ itemID = 21025 }, --Recipe: Dirge's Kickin' Chimaerok Chops
-			{ itemID = 21175 }, --The Scepter of the Shifting Sands
-			{ itemID = 21176 }, --Black Qiraji Resonating Crystal
-			{ itemID = 21522 }, --Shadowsong's Sorrow
-			{ itemID = 21523 }, --Fang of Korialstrasz
-			{ itemID = 21520 }, --Ravencrest's Legacy
-			{ itemID = 21521 }, --Runesword of the Red
-		},
-	},
-	-------------------------
-	--- Blackfathom Deeps ---
-	-------------------------
-	["BlackfathomDeeps"] = {
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 1470 }, --Murloc Skin Bag
-		},
-		{
-		},
-		{
-			{ itemID = 5881 }, --Head of Kelris
-		},
-		{
-		},
-		{
-			{ icon = "INV_Box_01", name = "Quest Item" },
-			{ itemID = 5359 }, --Lorgalis Manuscript
-			{ itemID = 16762 }, --Fathom Core
-		},
-		{
-			{ itemID = 1486 }, --Tree Bark Jacket
-			{ itemID = 3416 }, --Martyr's Chain
-			{ itemID = 1491 }, --Ring of Precision
-			{ itemID = 3413 }, --Doomspike
-			{ itemID = 2567 }, --Evocator's Blade
-			{ itemID = 3417 }, --Onyx Claymore
-			{ itemID = 1454 }, --Axe of the Enforcer
-			{ itemID = 1481 }, --Grimclaw
-			{ itemID = 3414 }, --Crested Scepter
-			{ itemID = 3415 }, --Staff of the Friar
-			{ itemID = 2271 }, --Staff of the Blessed Seer
-		},
-	},
-	--------------------------------------------
-	--- Blackrock Mountain: Blackrock Dephts ---
-	--------------------------------------------
-	["BlackrockDepths"] = {
-		{
-			{ itemID = 14486 }, --Pattern: Cloak of Fire
-		},
-		{
-			{ itemID = 11630 }, --Rockshard Pellets
-			{ itemID = 11813 }, --Formula: Smoking Heart of the Mountain
-			{ itemID = 11811, "Smoking Heart of the Mountain", maxDifficulty = "Normal" },
-		},
-		{
-			{ itemID = 11140 }, --Prison Cell Key
-		},
-		{
-			{ itemID = 11677 }, --Graverot Cape
-			{ itemID = 11675 }, --Shadefiend Boots
-			{ itemID = 11731 }, --Savage Gladiator Greaves
-			{ itemID = 11678 }, --Carapace of Anub'shiah
-			{ itemID = 11685 }, --Splinthide Shoulders
-			{ itemID = 11686 }, --Girdle of Beastial Fury
-			{ itemID = 11679 }, --Rubicund Armguards
-			{ itemID = 11730 }, --Savage Gladiator Grips
-			{ itemID = 11726 }, --Savage Gladiator Chain
-			{ itemID = 22271 }, --Leggings of Frenzied Magic
-			{ itemID = 11729 }, --Savage Gladiator Helm
-			{ itemID = 11722 }, --Dregmetal Spaulders
-			{ itemID = 11703 }, --Stonewall Girdle
-			{ itemID = 22270 }, --Entrenching Boots
-			{ itemID = 22257 }, --Bloodclot Band
-			{ itemID = 22266 }, --Flarethorn
-			{ itemID = 11702 }, --Grizzle's Skinner
-			{ itemID = 11610 }, --Plans: Dark Iron Pulverizer
-			{ itemID = 11634 }, --Silkweb Gloves
-			{ itemID = 11633 }, --Spiderfang Carapace
-			{ itemID = 11635 }, --Hookfang Shanker
-			{ itemID = 11662 }, --Ban'thok Sash
-			{ itemID = 11665 }, --Ogreseer Fists
-			{ itemID = 11728 }, --Savage Gladiator Leggings
-			{ itemID = 11824 }, --Cyclopean Band
-		},
-		{
-			{ icon = "INV_Misc_Bag_09", name = "Dungeon Set 2 Summonable", desc = "Theldren" },
-			{ itemID = 22330 }, --Shroud of Arcane Mastery
-			{ itemID = 22305 }, --Ironweave Mantle
-			{ itemID = 22317 }, --Lefty's Brass Knuckle
-			{ itemID = 22318 }, --Malgen's Long Bow
-			{ itemID = 22047 }, --Top Piece of Lord Valthalak's Amulet
-		},
-		{
-		},
-		{
-			{ itemID = 11000 }, --Shadowforge Key
-		},
-		{
-			{ itemID = 11207 }, --Formula: Enchant Weapon - Fiery Weapon
-		},
-		{
-			{ icon = "INV_Box_01", name = "The Vault" },
-			{ itemID = 11309 }, --The Heart of the Mountain
-			{ icon = "INV_Box_01", name = "The Secret Safe" },
-			{ itemID = 22256 }, --Mana Shaping Handwraps
-			{ itemID = 11929 }, --Haunting Specter Leggings
-			{ itemID = 11926 }, --Deathdealer Breastplate
-			{ itemID = 22205 }, --Black Steel Bindings
-			{ itemID = 22255 }, --Magma Forged Band
-			{ itemID = 11920 }, --Wraith Scythe
-			{ itemID = 11923 }, --The Hammer of Grace
-			{ itemID = 22254 }, --Wand of Eternal Light
-			{ icon = "INV_Box_01", name = "Dark Coffer" },
-			{ itemID = 11752 }, --Black Blood of the Tormented
-			{ itemID = 11751 }, --Burning Essence
-			{ itemID = 11753 }, --Eye of Kajal
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 11840 }, --Master Builder's Shirt
-			{ itemID = 10999 }, --Ironfel
-		},
-		{
-			{ itemID = 19268 }, --Ace of Elementals
-			{ itemID = 21987 }, --Incendicite of Incendius
-			{ itemID = 11126 }, --Tablet of Kurniya
-		},
-		{
-		},
-		{
-			{ itemID = 11464 }, --Marshal Windsor's Lost Information
-		},
-		{
-			{ itemID = 21956 }, --Design: Dark Iron Scorpid
-			{ itemID = 11268 }, --Head of Argelmach
-			{ itemID = 11465 }, --Marshal Windsor's Lost Information
-		},
-		{
-			{ itemID = 11312 }, --Lost Thunderbrew Recipe
-		},
-		{
-		},
-		{
-			{ itemID = 11612 }, --Plans: Dark Iron Plate
-			{ itemID = 2662 }, --Ribbly's Quiver
-			{ itemID = 2663 }, --Ribbly's Bandolier
-			{ itemID = 11742 }, --Wayfarer's Knapsack
-			{ itemID = 11313 }, --Ribbly's Head
-		},
-		{
-			{ itemID = 13483 }, --Recipe: Transmute Fire to Earth
-			{ itemID = 18653 }, --Schematic: Goblin Jumper Cables XL
-			{ itemID = 15759 }, --Pattern: Black Dragonscale Breastplate
-			{ itemID = 11602 }, --Grim Guzzler Key
-			{ itemID = 11325 }, --Dark Iron Ale Mug
-		},
-		{
-			{ itemID = 23320 }, --Tablet of Flame Shock VI
-		},
-		{
-		},
-		{
-			{ icon = "INV_Box_01", name = "Chest of The Seven" },
-			{ itemID = 11929 }, --Haunting Specter Leggings
-			{ itemID = 11925 }, --Ghostshroud
-			{ itemID = 11926 }, --Deathdealer Breastplate
-			{ itemID = 11927 }, --Legplates of the Eternal Guardian
-			{ itemID = 11922 }, --Blood-etched Blade
-			{ itemID = 11920 }, --Wraith Scythe
-			{ itemID = 11923 }, --The Hammer of Grace
-			{ itemID = 11921 }, --Impervious Giant
-		},
-		{
-			{ icon = "INV_Box_01", name = "Shadowforge Flame Keeper" },
-			{ itemID = 11885 }, --Shadowforge Torch
-		},
-		{
-		},
-		{
-			{ itemID = 12033 }, --Thaurissan Family Jewels
-		},
-		{
-			{ itemID = 12554 }, --Hands of the Exalted Herald
-			{ itemID = 12556 }, --High Priestess Boots
-			{ itemID = 12557 }, --Ebonsteel Spaulders
-			{ itemID = 12553 }, --Swiftwalker Boots
-		},
-		{
-			{ itemID = 11614 }, --Plans: Dark Iron Mail
-			{ itemID = 11615 }, --Plans: Dark Iron Shoulders
-		},
-		{
-			{ itemID = 12552 }, --Blisterbane Wrap
-			{ itemID = 12551 }, --Stoneshield Cloak
-			{ itemID = 12542 }, --Funeral Pyre Vestment
-			{ itemID = 12546 }, --Aristocratic Cuffs
-			{ itemID = 12550 }, --Runed Golem Shackles
-			{ itemID = 12547 }, --Mar Alom's Grip
-			{ itemID = 12549 }, --Braincage
-			{ itemID = 12555 }, --Battlechaser's Greaves
-			{ itemID = 12531 }, --Searing Needle
-			{ itemID = 12535 }, --Doomforged Straightedge
-			{ itemID = 12527 }, --Ribsplitter
-			{ itemID = 12528 }, --The Judge's Gavel
-			{ itemID = 12532 }, --Spire of the Stoneshaper
-			{ itemID = 15781 }, --Pattern: Black Dragonscale Leggings
-			{ itemID = 15770 }, --Pattern: Black Dragonscale Shoulders
-			{ itemID = 16053 }, --Schematic: Master Engineer's Goggles
-			{ itemID = 16049 }, --Schematic: Dark Iron Bomb
-			{ itemID = 16048 }, --Schematic: Dark Iron Rifle
-			{ itemID = 18654 }, --Schematic: Gnomish Alarm-O-Bot
-			{ itemID = 18661 }, --Schematic: World Enlarger
-			{ itemID = 11754 }, --Black Diamond
-			{ itemID = 11078 }, --Relic Coffer Key
-			{ itemID = 18945 }, --Dark Iron Residue
-			{ itemID = 11468 }, --Dark Iron Fanny Pack
-			{ itemID = 11446 }, --A Crumpled Up Note
-		},
-	},
-	--------------------------------------------
-	--- Blackrock Mountain: Blackrock Caverns ---
-	--------------------------------------------
-	["BlackrockCavernsCLASSIC"] = {
-		{
-			{ itemID = 241661 }, -- Amber Messenger
-			{ itemID = 241833 }, -- Witching Hourglass
-			{ itemID = 241876 }, -- Crepuscular Shield
-			{ itemID = 240379 }, -- Raz's Pauldrons
-			{ itemID = 241500 }, -- Twitching Shadows
-			{ itemID = 241543 }, -- Carrier Wave Pendant
-			{ itemID = 241704 }, -- Clutches of Dying Light
-			{ itemID = 241747 }, -- Willowy Crown
-			{ itemID = 241790 }, -- Kyrstel Mantle
-			{ itemID = 6011 }, -- Recipe: Flask of Mighty Power
-		},
-		{
-			{ itemID = 223128 }, -- Beauty's Favorite Bone
-			{ itemID = 219576 }, -- Beauty's Chew Toy
-			{ itemID = 222146 }, -- Beauty's Plate
-			{ itemID = 222844 }, -- Beauty's Silken Ribbon
-			{ itemID = 223076 }, -- Kibble
-		},
-		{
-			{ itemID = 212713 }, -- Grace of the Herald
-			{ itemID = 212826 }, -- Corla's Baton
-			{ itemID = 203224 }, -- Renouncer's Cowl
-			{ itemID = 211728 }, -- Armbands of Change
-			{ itemID = 212654 }, -- Signet of Transformation
-		},
-		{
-			{ itemID = 218298 }, -- Steelbender's Masterpiece
-			{ itemID = 213383 }, -- Bracers of Cooled Anger
-			{ itemID = 215448 }, -- Heat Wave Leggings
-			{ itemID = 217674 }, -- Burned Gatherings
-			{ itemID = 218255 }, -- Quicksilver Amulet
-			{ itemID = 1180884 }, -- Draconic Warhorn: Karsh Steelbender
-		},
-		{
-			{ itemID = 232104 }, -- Torturer's Mercy
-			{ itemID = 232147 }, -- Shield of the Iron Maiden
-			{ itemID = 231828 }, -- Inquisition Robes
-			{ itemID = 231871 }, -- Manacles of Pain
-			{ itemID = 232061 }, -- Skullcracker Ring
-		},
-	},
-	-------------------------------------------------
-	--- Blackrock Mountain: Lower Blackrock Spire ---
-	-------------------------------------------------
-	["LowerBlackrock"] = {
-		{
-			{ itemID = 18987 }, --Blackhand's Command
-		},
-		{
-			{ itemID = 12812 }, --Unfired Plate Gauntlets
-			{ itemID = 12631 }, --Fiery Plate Gauntlets
-			{ itemID = 12699 }, --Plans: Fiery Plate Gauntlets
-			{ itemID = 12533 }, --Roughshod Pike
-			{ itemID = 12740 }, --Fifth Mosh'aru Tablet
-			{ itemID = 12741 }, --Sixth Mosh'aru Tablet
-			{ itemID = 12345 }, --Bijou's Belongings
-		},
-		[4] = {
-			{ itemID = 12336 }, --Gemstone of Spirestone
-			{ itemID = 12534 }, --Omokk's Head
-			{ itemID = 16670 }, --Boots of Elements
-		},
-		[5] = {
-			{ itemID = 13284 }, --Swiftdart Battleboots
-			{ itemID = 13285 }, --The Blackrock Slicer
-		},
-		[6] = {
-			{ itemID = 13282 }, --Ogreseer Tower Boots
-			{ itemID = 13283 }, --Magus Ring
-			{ itemID = 13261 }, --Globe of D'sak
-		},
-		[7] = {
-			{ itemID = 12654 }, --Doomshot
-			{ itemID = 13352 }, --Vosh'gajin's Snakestone
-			{ itemID = 12821 }, --Plans: Dawn's Edge
-			{ itemID = 16712 }, --Shadowcraft Gloves
-		},
-		[8] = {
-			{ itemID = 12335 }, --Gemstone of Smolderthorn
-		},
-		[9] = {
-			{ itemID = 21984 }, --Left Piece of Lord Valthalak's Amulet
-			{ itemID = 22046 }, --Right Piece of Lord Valthalak's Amulet
-		},
-		[10] = {
-			{ itemID = 12838, contentsPreview = {12784} }, --Plans: Arcanite Reaper
-		},
-		[13] = {
-			{ itemID = 18784 }, --Top Half of Advanced Armorsmithing: Volume III
-			{ itemID = 12725 }, --Plans: Enchanted Thorium Helm
-			{ itemID = 12712 }, --Warosh's Mojo
-			{ itemID = 15867 }, --Prismcharm
-		},
-		[14] = {
-			{ itemID = 12835, contentsPreview = {12798} }, --Plans: Annihilator
-			{ itemID = 21955 }, --Design: Black Diamond Crab
-		},
-		[18] = {
-			{ itemID = 12337 }, --Gemstone of Bloodaxe
-		},
-		[19] = {
-			{ itemID = 13181 }, --Demonskin Gloves
-			{ itemID = 13182 }, --Phase Blade
-		},
-		[20] = {
-			{ itemID = 14513 }, --Pattern: Robe of the Archmage
-			{ itemID = 14152 }, --Robe of the Archmage
-			{ itemID = 13494 }, --Recipe: Greater Fire Protection Potion
-			{ itemID = 16250 }, --Formula: Enchant Weapon - Superior Striking
-			{ itemID = 16244 }, --Formula: Enchant Gloves - Greater Strength
-			{ itemID = 15749 }, --Pattern: Volcanic Breastplate
-			{ itemID = 15775 }, --Pattern: Volcanic Shoulders
-			{ itemID = 12219 }, --Unadorned Seal of Ascension
-			{ itemID = 21982 }, --Ogre Warbeads
-		},
-	},
-	-------------------------------------------------
-	--- Blackrock Mountain: Upper Blackrock Spire ---
-	-------------------------------------------------
-	["UpperBlackrock"] = {
-		{
-			{ itemID = 12905 }, --Wildfire Cape
-			{ itemID = 12927 }, --TruestrikeShoulders
-			{ itemID = 12929 }, --Emberfury Talisman
-			{ itemID = 12926 }, --Flaming Band
-			{ itemID = 17322 }, --Eye of the Emberseer
-			{ itemID = 21988 }, --Ember of Emberseer
-			{ itemID = 16672 }, --Gauntlets of Elements
-		},
-		{
-			{ itemID = 12609 }, --Polychromatic Visionwrap
-			{ itemID = 12589 }, --Dustfeather Sash
-			{ itemID = 12603 }, --Nightbrace Tunic
-			{ itemID = 12606 }, --Crystallized Girdle
-			{ itemID = 18657 }, --Schematic: Hyper-Radiant Flame Reflector
-			{ itemID = 18638 }, --Hyper-Radiant Flame Reflector
-			{ itemID = 16695 }, --Devout Mantle
-		},
-		{
-			{ itemID = 13371 }, --Father Flame
-		},
-		{
-			{ itemID = 12358 }, --Darkstone Tablet
-			{ itemID = 12352 }, --Doomrigger's Clasp
-		},
-		{
-			{ itemID = 12604 }, --Starfire Tiara
-			{ itemID = 12930 }, --Briarwood Reed
-			{ itemID = 12605 }, --Serpentine Skuller
-		},
-		{
-			{ itemID = 12837, contentsPreview = {12794} }, --Plans: Masterwork Stormhammer
-			{ itemID = 12834, contentsPreview = {12790} }, --Plans: Arcanite Champion
-			{ itemID = 18779 }, --Bottom Half of Advanced Armorsmithing: Volume I
-			{ itemID = 12727 }, --Plans: Enchanted Thorium Breastplate
-			{ icon = "INV_Box_01", name = "Unforged Rune Covered Breastplate" },
-			{ itemID = 12806 }, --Unforged Rune Covered Breastplate
-			{ itemID = 12696 }, --Plans: Demon Forged Breastplate
-		},
-		{
-			{ itemID = 12630 }, --Head of Rend Blackhand
-		},
-		{
-			{ itemID = 12871 }, --Chromatic Carapace
-			{ itemID = 12945 }, --Legplates of the Chromatic Defier
-			{ itemID = 12903 }, --Legguards of the Chromatic Defier
-			{ itemID = 12895 }, --Breastplate of the Chromatic Flight
-			{ itemID = 22225 }, --Dragonskin Cowl
-			{ itemID = 12960 }, --Tribal War Feathers
-			{ itemID = 12953 }, --Dragoneye Coif
-			{ itemID = 12952 }, --Gyth's Skull
-			{ itemID = 13522 }, --Recipe: Flask of Chromatic Resistance
-			{ itemID = 16669 }, --Pauldrons of Elements
-		},
-		{
-			{ itemID = 24101 }, --Book of Ferocious Bite V
-			{ itemID = 19227 }, --Ace of Beasts
-		},
-		{
-			{ icon = "INV_Misc_Bag_09", name = "Dungeon Set 2 Summonable", desc = "Lord Valthalak" },
-		},
-		{
-			{ itemID = 15730, contentsPreview = {15047} }, --Pattern: Red Dragonscale Breastplate
-			{ itemID = 13519 }, --Recipe: Flask of the Titans
-			{ itemID = 16663 }, --Blood of the Black Dragon Champion
-		},
-		{
-			{ itemID = 13260 }, --Wind Dancer Boots
-			{ itemID = 24102 }, --Manual of Eviscerate IX
-			{ itemID = 16247 }, --Formula: Enchant 2H Weapon - Superior Impact
-			{ itemID = 12607 }, --Brilliant Chromatic Scale
-			{ itemID = 12219 }, --Unadorned Seal of Ascension
-		},
-	},
-	---------------------------------------
-	--- Blackrock Mountain: Molten Core ---
-	---------------------------------------
-	["MoltenCore"] = {
-		{
-			{ itemID = 2522362, sourcePage = {"TONE-WRIST","Token"} }, --Molten Wristguards
-			{ itemID = 17329 }, --Hand of Lucifron
-		},
-		{
-			{ itemID = 18823, groupID = 1, refLootEntry = 11982 }, --Aged Core Leather Gloves
-			{ itemID = 17105, groupID = 1, refLootEntry = 11982 }, --Aurastone Hammer
-			{ itemID = 12573, groupID = 1, refLootEntry = 11982 }, --Corebound Shoulders
-			{ itemID = 17066, groupID = 1, refLootEntry = 11982 }, --Drillborer Disk
-			{ itemID = 17073, groupID = 1, refLootEntry = 11982 }, --Earthshaker
-			{ itemID = 18203, groupID = 1, refLootEntry = 11982 }, --Eskhandar's Right Claw
-			{ itemID = 17071, groupID = 1, refLootEntry = 11982 }, --Gutgore Ripper
-			{ itemID = 18879, groupID = 1, refLootEntry = 11982 }, --Heavy Dark Iron Ring
-			{ itemID = 18870, groupID = 1, refLootEntry = 11982 }, --Helm of the Lifegiver
-			{ itemID = 17065, groupID = 1, refLootEntry = 11982 }, --Medallion of Steadfast Might
-			{ itemID = 2522359, sourcePage = {"TONE-LEGS","Token"} }, --Molten Leggaurds
-		},
-		{
-			{ itemID = 2522364, sourcePage = {"TONE-HAND","Token"} }, --Molten Girdle
-			{ itemID = 17331 }, --Hand of Gehennas
-		},
-		{
-			{ itemID = 2522360, sourcePage = {"TONE-HEAD","Token"} }, --Molten Headpiece
-			{ itemID = 18564 }, --Bindings of the Windseeker
-			{ itemID = 19019 }, --Thunderfury, Blessed Blade of the Windseeker
-			{ itemID = 17782 }, --Talisman of Binding Shard
-			{ itemID = 11879 }, --Medallion of Binding Shard
-		},
-		{
-			{ itemID = 2522363, sourcePage = {"TONE-WAIST","Token"} }, --Molten Handgaurds
-			{ itemID = 17332 }, --Hand of Shazzrah
-		},
-		{
-			{ itemID = 2522361, sourcePage = {"TONE-SHOULDER","Token"} }, --Molten Spaulders
-			{ itemID = 18563 }, --Bindings of the Windseeker
-			{ itemID = 19019 }, --Thunderfury, Blessed Blade of the Windseeker
-		},
-		{
-			{ itemID = 17072, groupID = 1, refLootEntry = 11988 }, --Blastershot Launcher
-			{ itemID = 18829, groupID = 1, refLootEntry = 11988 }, --Deep Earth Spaulders
-			{ itemID = 12908, groupID = 1, refLootEntry = 11988 }, --Magma Forged Walkers
-			{ itemID = 18824, groupID = 1, refLootEntry = 11988 }, --Magma Tempered Boots
-			{ itemID = 19136, groupID = 1, refLootEntry = 11988 }, --Mana Igniting Cord
-			{ itemID = 18872, groupID = 1, refLootEntry = 11988 }, --Manastorm Leggings
-			{ itemID = 18822, groupID = 1, refLootEntry = 11988 }, --Obsidian Edged Blade
-			{ itemID = 17110, groupID = 1, refLootEntry = 11988 }, --Seal of the Archmagus
-			{ itemID = 18842, groupID = 1, refLootEntry = 11988 }, --Staff of Dominance
-			{ itemID = 19146, groupID = 1, refLootEntry = 11988 }, --Wristguards of Stability
-			{ itemID = 2522350, sourcePage = {"TONE-CHEST","Token"} }, --Molten Tunic
-			{ itemID = 17203 }, --Sulfuron Ingot
-			{ itemID = 17182 }, --Sulfuras, Hand of Ragnaros
-		},
-		{
-			{ itemID = 17103, groupID = 1, refLootEntry = 12098 }, --Azuresong Mageblade
-			{ itemID = 12872, groupID = 1, refLootEntry = 12098 }, --Blazing Slippers
-			{ itemID = 17109, groupID = 1, refLootEntry = 12098 }, --Choker of Enlightenment
-			{ itemID = 12595, groupID = 1, refLootEntry = 12098 }, --Flamebound Harness
-			{ itemID = 19147, groupID = 1, refLootEntry = 12098 }, --Ring of Spell Power
-			{ itemID = 19145, groupID = 1, refLootEntry = 12098 }, --Robe of Volatile Power
-			{ itemID = 18875, groupID = 1, refLootEntry = 12098 }, --Salamander Scale Pants
-			{ itemID = 17074, groupID = 1, refLootEntry = 12098 }, --Shadowstrike
-			{ itemID = 17069, groupID = 1, refLootEntry = 12098 }, --Striker's Mark
-			{ itemID = 18820, groupID = 1, refLootEntry = 12098 }, --Talisman of Ephemeral Power
-			{ itemID = 2522365, sourcePage = {"TONE-FEET","Token"} }, --Molten Boots
-			{ itemID = 17330 }, --Hand of Sulfuron
-		},
-		{
-		},
-		{
-			{ itemID = 2522459, sourcePage = {"TTWO-LEGS","Token"} }, --Chromatic Leggaurds
-			{ itemID = 21110 }, --Draconic for Dummies
-			{ itemID = 17204 }, --Eye of Sulfuras
-			{ itemID = 17182 }, --Sulfuras, Hand of Ragnaros
-			{ itemID = 19017 }, --Essence of the Firelord
-			{ itemID = 19019 }, --Thunderfury, Blessed Blade of the Windseeker
-			{ itemID = 102107, minDifficulty = "Heroic" }, -- Reins of the Magmatic Steed
-		},
-		{
-			{ itemID = 17010 }, --Fiery Core
-			{ itemID = 17011 }, --Lava Core
-			{ itemID = 11382 }, --Blood of the Mountain
-			{ itemID = 17012 }, --Core Leather
-		},
-		{
-			{ itemID = 18264, contentsPreview = {18262} }, --Plans: Elemental Sharpening Stone
-			{ itemID = 18292, contentsPreview = {18282} }, --Schematic: Core Marksman Rifle
-			{ itemID = 18291, contentsPreview = {18168} }, --Schematic: Force Reactive Disk
-			{ itemID = 18290, contentsPreview = {18290} }, --Schematic: Biznicks 247x128 Accurascope
-			{ itemID = 18259 }, --Formula: Enchant Weapon - Spell Power
-			{ itemID = 18260 }, --Formula: Enchant Weapon - Healing Power
-			{ itemID = 18252, contentsPreview = {18251} }, --Pattern: Core Armor Kit
-			{ itemID = 18265, contentsPreview = {18263} }, --Pattern: Flarecore Wraps
-			{ itemID = 21371, contentsPreview = {21342} }, --Pattern: Core Felcloth Bag
-			{ itemID = 18257, contentsPreview = {18257} }, --Recipe: Major Rejuvenation Potion
-		},
-	},
-	------------------------------------------
-	--- Blackrock Mountain: Blackwing Lair ---
-	------------------------------------------
-	["BlackwingLair"] = {
-		{
-			{ itemID = 2522462, sourcePage = {"TTWO-WRIST","Token"} }, --Chromatic Wristguards
-			{ itemID = 53144, droprate = 5 }, --Formula: Enchant Cloak - Blazing
-		},
-		{
-			{ itemID = 2522463, sourcePage = {"TTWO-WAIST","Token"} }, --Chromatic Girdle
-		},
-		{
-			{ itemID = 2522465, sourcePage = {"TTWO-FEET","Token"} }, --Chromatic Boots
-			{ itemID = 53142, droprate = 5 }, -- Formula: Enchant Cloak - Draconic Might
-			{ itemID = 20383 }, --Head of the Broodlord Lashlayer
-		},
-		{
-			{ itemID = 2522464, sourcePage = {"TTWO-HAND","Token"} }, --Chromatic Handgaurds
-		},
-		{
-			{ itemID = 2522464, sourcePage = {"TTWO-HAND","Token"} }, --Chromatic Handgaurds
-		},
-		{
-			{ itemID = 2522464, sourcePage = {"TTWO-HAND","Token"} }, --Chromatic Handgaurds
-		},
-		{
-			{ itemID = 2522461, sourcePage = {"TTWO-SHOULDER","Token"} }, --Chromatic Spaulders
-		},
-		{
-			{ itemID = 19378, groupID = 1, refLootEntry = 11583 }, --Cloak of the Brood Lord
-			{ itemID = 19360, groupID = 1, refLootEntry = 11583 }, --Lok'amir il Romathis
-			{ itemID = 19375, groupID = 1, refLootEntry = 11583 }, --Mish'undare, Circlet of the Mind Flayer
-			{ itemID = 19379, groupID = 1, refLootEntry = 11583 }, --Neltharion's Tear
-			{ itemID = 19382, groupID = 1, refLootEntry = 11583 }, --Pure Elementium Band
-			{ itemID = 19356, groupID = 1, refLootEntry = 11583 }, --Staff of the Shadow Flame
-			{ itemID = 14001, groupID = 2, refLootEntry = 11583 }, --Archimtiros' Ring of Armageddon
-			{ itemID = 19376, groupID = 2, refLootEntry = 11583 }, --Archimtiros' Ring of Reckoning
-			{ itemID = 19364, groupID = 2, refLootEntry = 11583 }, --Ashkandi, Greatsword of the Brotherhood
-			{ itemID = 19381, groupID = 2, refLootEntry = 11583 }, --Boots of the Shadow Flame
-			{ itemID = 19363, groupID = 2, refLootEntry = 11583 }, --Crul'shorukh, Edge of Chaos
-			{ itemID = 19377, groupID = 2, refLootEntry = 11583 }, --Prestor's Talisman of Connivery
-			{ itemID = 19380, groupID = 2, refLootEntry = 11583 }, --Therazane's Link
-			{ itemID = 2522450, sourcePage = {"TTWO-CHEST","Token"} }, --Chromatic Tunic
-			{ itemID = 19003, contentsPreview = {19383, 19384, 19366, 21138} }, --Head of Nefarian
-			{ itemID = 21138 }, --Red Scepter Shard
-		},
-		{
-			{ itemID = 19436 }, --Cloak of Draconic Might
-			{ itemID = 19437 }, --Boots of Pure Thought
-			{ itemID = 19438 }, --Ringo's Blizzard Boots
-			{ itemID = 19439 }, --Interlaced Shadow Jerkin
-			{ itemID = 19434 }, --Band of Dark Dominion
-			{ itemID = 19362 }, --Doom's Edge
-			{ itemID = 19354 }, --Draconic Avenger
-			{ itemID = 19358 }, --Draconic Maul
-			{ itemID = 19435 }, --Essence Gatherer
-			{ itemID = 18562 }, --Elementium Ore
-			{ itemID = 21109 }, --Draconic for Dummies
-		},
-	},
-	----------------------
-	--- Dire Maul East ---
-	----------------------
-	["DireMaulEast"] = {
-		{
-			{ itemID = 18267 }, --Recipe: Runn Tum Tuber Surprise
-			{ itemID = 18261 }, --Book of Incantations
-			{ itemID = 18249 }, --Crescent Key
-		},
-		{
-		},
-		{
-			{ itemID = 18426 }, --Lethtendris's Web
-		},
-		{
-			{ itemID = 18354 }, --Pimgib's Collar
-		},
-		{
-		},
-		{
-			{ itemID = 18501 }, --Felvine Shard
-		},
-		{
-			{ icon = "INV_Misc_Bag_09", name = "Dungeon Set 2 Summonable", desc = "Isalien" },
-			{ itemID = 22304 }, --Ironweave Gloves
-			{ itemID = 22472 }, --Boots of Ferocity
-			{ itemID = 22401 }, --Libram of Hope
-			{ itemID = 22345 }, --Totem of Rebirth
-			{ itemID = 22315 }, --Hammer of Revitalization
-			{ itemID = 22314 }, --Huntsman's Harpoon
-			{ itemID = 21984 }, --Left Piece of Lord Valthalak's Amulet
-			{ itemID = 22046 }, --Right Piece of Lord Valthalak's Amulet
-		},
-		{
-			{ itemID = 18295 }, --Phasing Boots
-			{ itemID = 18298 }, --Unbridled Leggings
-			{ itemID = 18296 }, --Marksman Bands
-			{ itemID = 18289 }, --Barbed Thorn Necklace
-		},
-		{
-			{ itemID = 18364 }, --The Emerald Dream
-			{ itemID = 18361 }, --The Greatest Race of Hunters
-			{ itemID = 18358 }, --The Arcanist's Cookbook
-			{ itemID = 18359 }, --The Light and How to Swing It
-			{ itemID = 18362 }, --Holy Bologna: What the Light Won't Tell You
-			{ itemID = 18356 }, --Garona: A Study on Stealth and Treachery
-			{ itemID = 18363 }, --Frost Shock and You
-			{ itemID = 18360 }, --Harnessing Shadows
-			{ itemID = 18357 }, --Codex of Defense
-			{ itemID = 18333 }, --Libram of Focus
-			{ itemID = 18334 }, --Libram of Protection
-			{ itemID = 18332 }, --Libram of Rapidity
-			{ itemID = 18470 }, --Royal Seal of Eldre'Thalas
-			{ itemID = 18473 }, --Royal Seal of Eldre'Thalas
-			{ itemID = 18468 }, --Royal Seal of Eldre'Thalas
-			{ itemID = 18472 }, --Royal Seal of Eldre'Thalas
-			{ itemID = 18469 }, --Royal Seal of Eldre'Thalas
-			{ itemID = 18465 }, --Royal Seal of Eldre'Thalas
-			{ itemID = 18471 }, --Royal Seal of Eldre'Thalas
-			{ itemID = 18467 }, --Royal Seal of Eldre'Thalas
-			{ itemID = 18466 }, --Royal Seal of Eldre'Thalas
-			{ itemID = 18401 }, --Foror's Compendium of Dragon Slaying
-			{ itemID = 18348 }, --Quel'Serrar
-		},
-	},
-	-----------------------
-	--- Dire Maul North ---
-	-----------------------
-	["DireMaulNorth"] = {
-		{
-			{ itemID = 18268 }, --Gordok Inner Door Key
-		},
-		{
-		},
-		{
-			{ icon = "INV_Box_01", name = "Fengus's Chest" },
-			{ itemID = 18266 }, --Gordok Courtyard Key
-		},
-		{
-			{ itemID = 18517 }, --Pattern: Chromatic Cloak
-			{ itemID = 18518 }, --Pattern: Hide of the Wild
-			{ itemID = 18519 }, --Pattern: Shifting Cloak
-			{ itemID = 18414 }, --Pattern: Belt of the Archmage
-			{ itemID = 18418 }, --Pattern: Cloak of Warding
-			{ itemID = 18415 }, --Pattern: Felcloth Gloves
-			{ itemID = 18416 }, --Pattern: Inferno Gloves
-			{ itemID = 18417 }, --Pattern: Mooncloth Gloves
-			{ itemID = 18514 }, --Pattern: Girdle of Insight
-			{ itemID = 18515 }, --Pattern: Mongoose Boots
-			{ itemID = 18516 }, --Pattern: Swift Flight Bracers
-			{ icon = "INV_Box_01", name = "Ogre Tannin Basket" },
-			{ itemID = 18240 }, --Ogre Tannin
-			{ itemID = 18509 }, --Chromatic Cloak
-			{ itemID = 18510 }, --Hide of the Wild
-			{ itemID = 18511 }, --Shifting Cloak
-			{ itemID = 18405 }, --Belt of the Archmage
-			{ itemID = 18413 }, --Cloak of Warding
-			{ itemID = 18407 }, --Felcloth Gloves
-			{ itemID = 18408 }, --Inferno Gloves
-			{ itemID = 18409 }, --Mooncloth Gloves
-			{ itemID = 18504 }, --Girdle of Insight
-			{ itemID = 18506 }, --Mongoose Boots
-			{ itemID = 18508 }, --Swift Flight Bracers
-		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 19258 }, --Ace of Warlords
-			{ itemID = 18780 }, --Top Half of Advanced Armorsmithing: Volume I
-			{ itemID = 12727 }, --Plans: Enchanted Thorium Breastplate
-		},
-		{
-			{ itemID = 18538 }, --Treant's Bane
-			{ itemID = 18495 }, --Redoubt Cloak
-			{ itemID = 18532 }, --Mindsurge Robe
-			{ itemID = 18528 }, --Cyclone Spaulders
-			{ itemID = 18530 }, --Ogre Forged Hauberk
-			{ itemID = 18533 }, --Gordok Bracers of Power
-			{ itemID = 18529 }, --Elemental Plate Girdle
-			{ itemID = 18500 }, --Tarnished Elven Ring
-			{ itemID = 18537 }, --Counterattack Lodestone
-			{ itemID = 18531 }, --Unyielding Maul
-			{ itemID = 18534 }, --Rod of the Ogre Magi
-			{ itemID = 18499 }, --Barrier Shield
-			{ itemID = 18475 }, --Oddly Magical Belt
-			{ itemID = 18478 }, --Hyena Hide Jerkin
-			{ itemID = 18477 }, --Shaggy Leggings
-			{ itemID = 18476 }, --Mud Stained Boots
-			{ itemID = 18479 }, --Carrion Scorpid Helm
-			{ itemID = 18480 }, --Scarab Plate Helm
-			{ itemID = 18481 }, --Skullcracking Mace
-			{ itemID = 18482 }, --Ogre Toothpick Shooter
-			{ itemID = 18655 }, --Schematic: Major Recombobulator
-		},
-	},
-	----------------------
-	--- Dire Maul West ---
-	----------------------
-	["DireMaulWest"] = {
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 22309 }, --Pattern: Big Bag of Enchantment
-		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
-			{ icon = "INV_Box_01", name = "The Prince's Chest" },
-			{ itemID = 18336 }, --Gauntlet of Gordok Might
-		},
-		{
-			{ itemID = 18487 }, --Pattern: Mooncloth Robe
-		},
-		{
-			{ itemID = 18344 }, --Stonebark Gauntlets
-			{ itemID = 18340 }, --Eidolon Talisman
-			{ itemID = 18338 }, --Wand of Arcane Potency
-		},
-	},
-	------------------
-	--- Gnomeregan ---
-	------------------
-	["Gnomeregan"] = {
-		{
-			{ itemID = 14639 }, --Schematic: Minor Recombobulator
-		},
-		{
-			{ itemID = 9277 }, --Techbot's Memory Core
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 6893 }, --Workshop Key
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 4415 }, --Schematic: Craftsman's Monocle
-			{ itemID = 4413 }, --Schematic: Discombobulator Ray
-			{ itemID = 4411 }, --Schematic: Flame Deflector
-			{ itemID = 7742 }, --Schematic: Gnomish Cloaking Device
-			{ itemID = 9299 }, --Thermaplugg's Safe Combination
-		},
-		{
-			{ itemID = 9508 }, --Mechbuilder's Overalls
-			{ itemID = 9491 }, --Hotshot Pilot's Gloves
-			{ itemID = 9509 }, --Petrolspill Leggings
-			{ itemID = 9510 }, --Caverndeep Trudgers
-			{ itemID = 9490 }, --Gizmotron Megachopper
-			{ itemID = 9485 }, --Vibroblade
-			{ itemID = 9486 }, --Supercharger Battle Axe
-			{ itemID = 9488 }, --Oscillating Power Hammer
-			{ itemID = 9487 }, --Hi-tech Supergun
-			{ itemID = 9327 }, --Security DELTA Data Access Card
-			{ itemID = 9326 }, --Grime-Encrusted Ring
-			{ itemID = 9362 }, --Brilliant Gold Ring
-			{ itemID = 9538 }, --Talvash's Gold Ring
-		},
-	},
-	["KarazhanCrypts"] = {
-		{
-			{ itemID = 252821 }, -- Twinglaive of the Vampire Council
-			{ itemID = 252906 }, -- Twinglaive of Eternal Slumber
-			{ itemID = 254389 }, -- Purified Vitae Chalice
-			{ itemID = 254432 }, -- Funeral Trousers
-			{ itemID = 254758 }, -- Tombstone Cover
-			{ itemID = 254888 }, -- Deathsworn Spaulders
-			{ itemID = 254068 }, -- Sigil of Cynfael
-		},
-		{
-			{ itemID = 253151 }, -- Sorrow of the Eclipse
-			{ itemID = 253442 }, -- Cryptsteel Maul
-			{ itemID = 253634 }, -- Dakrya, Hand of the Second Eidolon
-			{ itemID = 253720 }, -- Mourner's Cloak
-			{ itemID = 254260 }, -- Remembrance of Aegwynn
-			{ itemID = 254303 }, -- Missing Promise
-			{ itemID = 254672 }, -- Niko's Amulet
-			{ itemID = 254845 }, -- Funeral Mantle
-			{ itemID = 254984 }, -- Soulsteel Shoulderguards
-			{ itemID = 255061 }, -- Blossom of Sorrow
-			{ itemID = 254077, contentsPreview = {{1414603}, {1414604}, {1414605}, {1414606}} }, -- Forgotten Core
-			{ itemID = 254067 }, -- Sigil of Dryn Miel
-			{ itemID = 1179133 }, -- Reins of the Mawsworn Charger
-		},
-		{
-			{ itemID = 253677 }, -- Forgiveness
-			{ itemID = 253763 }, -- Drape of the Horse
-			{ itemID = 254629 }, -- Soulsteel Legplates
-			{ itemID = 254715 }, -- Forgotten Aegis of Kings
-			{ itemID = 255104 }, -- Concentrated DeathRecap_GetEvents
-			{ itemID = 254069 }, -- Sigil of Kurgoth Doomreaver
-		},
-		{
-			{ itemID = 253004 }, -- Ghoul Spine Cleaver
-			{ itemID = 253053 }, -- Conduit of Sinners
-			{ itemID = 253102 }, -- Spinesplinter Arbalest
-			{ itemID = 254532 }, -- Deathsworn Pants
-			{ itemID = 254941 }, -- Bonelink Mantle
-			{ itemID = 254070 }, -- Sigil of Sinners
-		},
-		{
-			{ itemID = 254088 }, --Funeral Treads
-			{ itemID = 254131 }, --Deathsworn Boots
-			{ itemID = 254174 }, --Bonelink Greaves
-			{ itemID = 254217 }, --Soulsteel Sabatons
-			{ itemID = 254080 }, --Sigil of Captain Taveir
-		},
-		{
-			{ itemID = 254088 }, --Funeral Treads
-			{ itemID = 254131 }, --Deathsworn Boots
-			{ itemID = 254174 }, --Bonelink Greaves
-			{ itemID = 254217 }, --Soulsteel Sabatons
-			{ itemID = 254078 }, --Sigil of Kelivex Autumnvale
-		},
-	},
-	----------------
-	--- Maraudon ---
-	----------------
-	["Maraudon"] = {
-		{
-			{ itemID = 17746 }, --Noxxion's Shackles
-			{ itemID = 17744 }, --Heart of Noxxion
-			{ itemID = 17745 }, --Noxious Shooter
-			{ itemID = 17702 }, --Celebrian Rod
-		},
-		{
-			{ itemID = 17750 }, --Chloromesh Girdle
-			{ itemID = 17748 }, --Vinerot Sandals
-			{ itemID = 17749 }, --Phytoskin Spaulders
-			{ itemID = 17751 }, --Brusslehide Leggings
-		},
-		{
-			{ itemID = 17755 }, --Satyrmane Sash
-			{ itemID = 17754 }, --Infernal Trickster Leggings
-			{ itemID = 17752 }, --Satyr's Lash
-			{ itemID = 17703 }, --Celebrian Diamond
-		},
-		{
-			{ itemID = 17741 }, --Nature's Embrace
-			{ itemID = 17742 }, --Fungus Shroud Armor
-			{ itemID = 17767 }, --Bloomsprout Headpiece
-		},
-		{
-			{ itemID = 17739 }, --Grovekeeper's Drape
-			{ itemID = 17740 }, --Soothsayer's Headdress
-			{ itemID = 17738 }, --Claw of Celebras
-		},
-		{
-			{ itemID = 17736 }, --Rockgrip Gauntlets
-			{ itemID = 17734 }, --Helm of the Mountain
-			{ itemID = 17737 }, --Cloud Stone
-			{ itemID = 17943 }, --Fist of Stone
-		},
-		{
-		},
-		{
-			{ itemID = 17732 }, --Rotgrip Mantle
-			{ itemID = 17728 }, --Albino Crocscale Boots
-			{ itemID = 17730 }, --Gatorbite Axe
-		},
-		{
-		},
-		{
-			{ itemID = 17764 }, --Gem of the Fourth Khan
-			{ itemID = 17765 }, --Gem of the Fifth Khan
-		},
-	},
-	----------------------
-	--- Ragefire Chasm ---
-	----------------------
-	["RagefireChasm"] = {
-		{
-			{ itemID = 14540 }, --Taragaman the Hungerer's Heart
-		},
-		{
-			{ itemID = 24225 }, --Blood of the Wrathful
-		},
-		{
-		},
-		{
-		},
-	},
-	----------------------
-	--- Razorfen Downs ---
-	----------------------
-	["RazorfenDowns"] = {
-		{
-			{ icon = "INV_Box_01", name = "Tuten'kash" },
-			{ itemID = 10776 }, --Silky Spider Cape
-			{ itemID = 10777 }, --Arachnid Gloves
-			{ itemID = 10775 }, --Carapace of Tuten'kash
-		},
-		{
-			{ itemID = 3831 }, --Recipe: Mighty Troll's Blood Potion
-			{ itemID = 10841, spellID = 13028 }, --Goldthorn Tea
-		},
-		{
-			{ itemID = 10771 }, --Deathmage Sash
-			{ itemID = 10769 }, --Glowing Eye of Mordresh
-			{ itemID = 10770 }, --Mordresh's Lifeless Skull
-		},
-		{
-			{ itemID = 10774 }, --Fleshhide Shoulders
-			{ itemID = 10772 }, --Glutton's Cleaver
-		},
-		{
-			{ itemID = 10768 }, --Boar Champion's Belt
-			{ itemID = 10758 }, --X'caliboar
-			{ itemID = 10767 }, --Savage Boar's Guard
-		},
-		{
-		},
-		{
-			{ itemID = 10762 }, --Robes of the Lich
-			{ itemID = 10765 }, --Bonefingers
-			{ itemID = 10764 }, --Deathchill Armor
-			{ itemID = 10763 }, --Icemetal Barbute
-			{ itemID = 10761 }, --Coldrage Dagger
-			{ itemID = 10420 }, --Skull of the Coldbringer
-		},
-		{
-			{ itemID = 10760 }, --Swine Fists
-			{ itemID = 10766 }, --Plaguerot Sprig
-		},
-		{
-			{ itemID = 10574 }, --Corpseshroud
-			{ itemID = 10581 }, --Death's Head Vestment
-			{ itemID = 10578 }, --Thoughtcast Boots
-			{ itemID = 10583 }, --Quillward Harness
-			{ itemID = 10582 }, --Briar Tredders
-			{ itemID = 10584 }, --Stormgale Fists
-			{ itemID = 10573 }, --Boneslasher
-			{ itemID = 10570 }, --Manslayer
-			{ itemID = 10571 }, --Ebony Boneclub
-			{ itemID = 10567 }, --Quillshooter
-			{ itemID = 10572 }, --Freezing Shard
-		},
-	},
-	----------------------
-	--- Razorfen Kraul ---
-	----------------------
-	["RazorfenKraul"] = {
-		{
-			{ itemID = 6841 }, --Vial of Phlogiston
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 6679 }, --Armor Piercer
-		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 17008 }, --Small Scroll
-			{ itemID = 5793 }, --Razorflank's Heart
-			{ itemID = 5792 }, --Razorflank's Medallion
-		},
-		{
-		},
-		{
-			{ itemID = 2264 }, --Mantle of Thieves
-			{ itemID = 1978 }, --Wolfclaw Gloves
-			{ itemID = 1488 }, --Avenger's Armor
-			{ itemID = 4438 }, --Pugilist Bracers
-			{ itemID = 2039 }, --Plains Ring
-			{ itemID = 776 }, --Vendetta
-			{ itemID = 1727 }, --Sword of Decay
-			{ itemID = 1975 }, --Pysan's Old Greatsword
-			{ itemID = 1976 }, --Slaghammer
-			{ itemID = 2549 }, --Staff of the Shade
-		},
-	},
-	-------------------------
-	--- Scarlet Monastery ---
-	-------------------------
-	["ScarletMonasteryArmory"] = {
-		{
-			{ itemID = 7719 }, --Raging Berserker's Helm
-			{ itemID = 7718 }, --Herod's Shoulder
-			{ itemID = 10330 }, --Scarlet Leggings
-			{ itemID = 7717 }, --Ravager
-			{ icon = "INV_Box_01", name = "Scarlet Trainee" },
-			{ itemID = 23192 }, --Tabard of the Scarlet Crusade
-		},
-		{
-			{ itemID = 7728 }, --Beguiler Robes
-			{ itemID = 7755 }, --Flintrock Shoulders
-			{ itemID = 7727 }, --Watchman Pauldrons
-			{ itemID = 7760 }, --Warchief Kilt
-			{ itemID = 7754 }, --Harbinger Boots
-			{ itemID = 5819 }, --Sunblaze Coif
-			{ itemID = 7759 }, --Archon Chestpiece
-			{ itemID = 10328 }, --Scarlet Chestpiece
-			{ itemID = 10332 }, --Scarlet Boots
-			{ itemID = 2262 }, --Mark of Kern
-			{ itemID = 1992 }, --Swampchill Fetish
-			{ itemID = 10333 }, --Scarlet Wristguards
-			{ itemID = 10331 }, --Scarlet Gauntlets
-			{ itemID = 10329 }, --Scarlet Belt
-			{ itemID = 5756 }, --Sliverblade
-			{ itemID = 8225 }, --Tainted Pierce
-			{ itemID = 8226 }, --The Butcher
-			{ itemID = 7786 }, --Headsplitter
-			{ itemID = 7761 }, --Steelclaw Reaver
-			{ itemID = 7753 }, --Bloodspiller
-			{ itemID = 7752 }, --Dreamslayer
-			{ itemID = 7736 }, --Fight Club
-			{ itemID = 7730 }, --Cobalt Crusher
-			{ itemID = 7758 }, --Ruthless Shiv
-			{ itemID = 7757 }, --Windweaver Staff
-			{ itemID = 7787 }, --Resplendent Guardian
-			{ itemID = 7729 }, --Chesterfall Musket
-		},
-	},
-	["ScarletMonasteryCathedral"] = {
-		{
-			{ itemID = 19507 }, --Inquisitor's Shawl
-			{ itemID = 19508 }, --Branded Leather Bracers
-			{ itemID = 19509 }, --Dusty Mail Boots
-		},
-		{
-			{ itemID = 7724 }, --Gauntlets of Divinity
-			{ itemID = 10330 }, --Scarlet Leggings
-			{ itemID = 7723 }, --Mograine's Might
-			{ itemID = 7726 }, --Aegis of the Scarlet Commander
-		},
-		{
-			{ itemID = 7720 }, --Whitemane's Chapeau
-			{ itemID = 7722 }, --Triune Amulet
-			{ itemID = 7721 }, --Hand of Righteousness
-			{ itemID = 20976 }, --Design: Citrine Pendant of Golden Healing
-		},
-		{
-			{ itemID = 7728 }, --Beguiler Robes
-			{ itemID = 7755 }, --Flintrock Shoulders
-			{ itemID = 7727 }, --Watchman Pauldrons
-			{ itemID = 7760 }, --Warchief Kilt
-			{ itemID = 7754 }, --Harbinger Boots
-			{ itemID = 5819 }, --Sunblaze Coif
-			{ itemID = 7759 }, --Archon Chestpiece
-			{ itemID = 10328 }, --Scarlet Chestpiece
-			{ itemID = 10332 }, --Scarlet Boots
-			{ itemID = 2262 }, --Mark of Kern
-			{ itemID = 1992 }, --Swampchill Fetish
-			{ itemID = 10333 }, --Scarlet Wristguards
-			{ itemID = 10331 }, --Scarlet Gauntlets
-			{ itemID = 10329 }, --Scarlet Belt
-			{ itemID = 5756 }, --Sliverblade
-			{ itemID = 8225 }, --Tainted Pierce
-			{ itemID = 8226 }, --The Butcher
-			{ itemID = 7786 }, --Headsplitter
-			{ itemID = 7761 }, --Steelclaw Reaver
-			{ itemID = 7753 }, --Bloodspiller
-			{ itemID = 7752 }, --Dreamslayer
-			{ itemID = 7736 }, --Fight Club
-			{ itemID = 7730 }, --Cobalt Crusher
-			{ itemID = 7758 }, --Ruthless Shiv
-			{ itemID = 7757 }, --Windweaver Staff
-			{ itemID = 7787 }, --Resplendent Guardian
-			{ itemID = 7729 }, --Chesterfall Musket
-		},
-	},
-	["ScarletMonasteryGraveyard"] = {
-		{
-			{ itemID = 7683 }, --Bloody Brass Knuckles
-			{ itemID = 7682 }, --Torturing Poker
-		},
-		{
-			{ itemID = 7684 }, --Bloodmage Mantle
-			{ itemID = 7685 }, --Orb of the Forgotten Seer
-		},
-		{
-			{ itemID = 7688 }, --Ironspine's Ribcage
-			{ itemID = 7686 }, --Ironspine's Eye
-			{ itemID = 7687 }, --Ironspine's Fist
-		},
-		{
-			{ itemID = 7709 }, --Blighted Leggings
-			{ itemID = 7731 }, --Ghostshard Talisman
-			{ itemID = 7708 }, --Necrotic Wand
-		},
-		{
-			{ itemID = 7691 }, --Embalmed Shroud
-			{ itemID = 7690 }, --Ebon Vise
-			{ itemID = 7689 }, --Morbid Dawn
-		},
-		{
-			{ itemID = 7728 }, --Beguiler Robes
-			{ itemID = 7755 }, --Flintrock Shoulders
-			{ itemID = 7727 }, --Watchman Pauldrons
-			{ itemID = 7760 }, --Warchief Kilt
-			{ itemID = 7754 }, --Harbinger Boots
-			{ itemID = 5819 }, --Sunblaze Coif
-			{ itemID = 7759 }, --Archon Chestpiece
-			{ itemID = 10328 }, --Scarlet Chestpiece
-			{ itemID = 10332 }, --Scarlet Boots
-			{ itemID = 2262 }, --Mark of Kern
-			{ itemID = 1992 }, --Swampchill Fetish
-			{ itemID = 10333 }, --Scarlet Wristguards
-			{ itemID = 10331 }, --Scarlet Gauntlets
-			{ itemID = 10329 }, --Scarlet Belt
-			{ itemID = 5756 }, --Sliverblade
-			{ itemID = 8225 }, --Tainted Pierce
-			{ itemID = 8226 }, --The Butcher
-			{ itemID = 7786 }, --Headsplitter
-			{ itemID = 7761 }, --Steelclaw Reaver
-			{ itemID = 7753 }, --Bloodspiller
-			{ itemID = 7752 }, --Dreamslayer
-			{ itemID = 7736 }, --Fight Club
-			{ itemID = 7730 }, --Cobalt Crusher
-			{ itemID = 7758 }, --Ruthless Shiv
-			{ itemID = 7757 }, --Windweaver Staff
-			{ itemID = 7787 }, --Resplendent Guardian
-			{ itemID = 7729 }, --Chesterfall Musket
-		},
-	},
-	["ScarletMonasteryLibrary"] = {
-		{
-			{ itemID = 7756 }, --Dog Training Gloves
-			{ itemID = 7710 }, --Loksey's Training Stick
-			{ itemID = 3456 }, --Dog Whistle
-		},
-		{
-			{ itemID = 34227 }, --Deadman's Hand
-			{ itemID = 7712 }, --Mantle of Doan
-			{ itemID = 7711 }, --Robe of Doan
-			{ itemID = 7714 }, --Hypnotic Blade
-			{ itemID = 7713 }, --Illusionary Rod
-			{ icon = "INV_Box_01", name = "Doan's Strongbox" },
-			{ itemID = 7146 }, --The Scarlet Key
-		},
-		{
-			{ itemID = 7728 }, --Beguiler Robes
-			{ itemID = 7755 }, --Flintrock Shoulders
-			{ itemID = 7727 }, --Watchman Pauldrons
-			{ itemID = 7760 }, --Warchief Kilt
-			{ itemID = 7754 }, --Harbinger Boots
-			{ itemID = 5819 }, --Sunblaze Coif
-			{ itemID = 7759 }, --Archon Chestpiece
-			{ itemID = 10328 }, --Scarlet Chestpiece
-			{ itemID = 10332 }, --Scarlet Boots
-			{ itemID = 2262 }, --Mark of Kern
-			{ itemID = 1992 }, --Swampchill Fetish
-			{ itemID = 10333 }, --Scarlet Wristguards
-			{ itemID = 10331 }, --Scarlet Gauntlets
-			{ itemID = 10329 }, --Scarlet Belt
-			{ itemID = 5756 }, --Sliverblade
-			{ itemID = 8225 }, --Tainted Pierce
-			{ itemID = 8226 }, --The Butcher
-			{ itemID = 7786 }, --Headsplitter
-			{ itemID = 7761 }, --Steelclaw Reaver
-			{ itemID = 7753 }, --Bloodspiller
-			{ itemID = 7752 }, --Dreamslayer
-			{ itemID = 7736 }, --Fight Club
-			{ itemID = 7730 }, --Cobalt Crusher
-			{ itemID = 7758 }, --Ruthless Shiv
-			{ itemID = 7757 }, --Windweaver Staff
-			{ itemID = 7787 }, --Resplendent Guardian
-			{ itemID = 7729 }, --Chesterfall Musket
-		},
-	},
-	-------------------
-	--- Scholomance ---
-	-------------------
-	["Scholomance"] = {
-		{
-			{ itemID = 13873 }, --Viewing Room Key
-			{ itemID = 13471 }, --The Deed to Brill
-			{ itemID = 13448 }, --The Deed to Caer Darrow
-			{ itemID = 13450 }, --The Deed to Southshore
-			{ itemID = 13451 }, --The Deed to Tarren Mill
-		},
-		{
-			{ itemID = 13523 }, --Blood of Innocents
-		},
-		{
-			{ itemID = 13956 }, --Clutch of Andros
-			{ itemID = 13957 }, --Gargoyle Slashers
-			{ itemID = 13969 }, --Loomguard Armbraces
-			{ itemID = 13967 }, --Windreaver Greaves
-			{ itemID = 13955 }, --Stoneform Shoulders
-			{ itemID = 13960 }, --Heart of the Fiend
-			{ itemID = 14024 }, --Frightalon
-			{ itemID = 13983 }, --Gravestone War Axe
-			{ itemID = 16734 }, --Boots of Valor
-		},
-		{
-			{ itemID = 13725 }, --Krastinov's Bag of Horrors
-			{ itemID = 13523 }, --Blood of Innocents
-		},
-		{
-			{ itemID = 13873 }, --Viewing Room Key
-			{ itemID = 18782 }, --Top Half of Advanced Armorsmithing: Volume II
-			{ itemID = 12726 }, --Plans: Enchanted Thorium Leggings
-		},
-		{
-			{ itemID = 18760 }, --Necromantic Band
-			{ itemID = 18758 }, --Specter's Blade
-			{ itemID = 18759 }, --Malicious Axe
-			{ itemID = 18761 }, --Oblivion's Touch
-			{ itemID = 18749 }, --Charger's Lost Soul
-		},
-		{
-		},
-		{
-			{ itemID = 18692 }, --Death Knight Sabatons
-			{ itemID = 14576 }, --Ebon Hilt of Marduk
-		},
-		{
-			{ itemID = 13521 }, --Recipe: Flask of Supreme Power
-			{ itemID = 13626 }, --Human Head of Ras Frostwhisper
-			{ itemID = 13986 }, --Crown of Caer Darrow
-			{ itemID = 13984 }, --Darrowspike
-			{ itemID = 13982 }, --Warblade of Caer Darrow
-			{ itemID = 14002 }, --Darrowshire Strongguard
-			{ icon = "INV_Box_01", name = "Frostwhisper's Embalming Fluid" },
-			{ itemID = 12736 }, --Frostwhisper's Embalming Fluid
-		},
-		{
-			{ icon = "INV_Misc_Bag_09", name = "Dungeon Set 2 Summonable", desc = "Kormok" },
-			{ itemID = 22303 }, --Ironweave Pants
-			{ itemID = 22326 }, --Amalgam's Band
-			{ itemID = 22331 }, --Band of the Steadfast Hero
-			{ itemID = 22332 }, --Blade of Necromancy
-			{ itemID = 22333 }, --Hammer of Divine Might
-			{ itemID = 21984 }, --Left Piece of Lord Valthalak's Amulet
-			{ itemID = 22046 }, --Right Piece of Lord Valthalak's Amulet
-		},
-		{
-			{ itemID = 13523 }, --Blood of Innocents
-		},
-		{
-			{ itemID = 13523 }, --Blood of Innocents
-		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 13937 }, --Headmaster's Charge
-			{ itemID = 14514 }, --Pattern: Robe of the Void
-			{ itemID = 14153 }, --Robe of the Void
-			{ itemID = 13944 }, --Tombstone Breastplate
-			{ itemID = 13398 }, --Boots of the Shrieker
-			{ itemID = 13950 }, --Detention Strap
-			{ itemID = 13951 }, --Vigorsteel Vambraces
-			{ itemID = 22433 }, --Don Mauricio's Band of Domination
-			{ itemID = 13964 }, --Witchblade
-			{ itemID = 13953 }, --Silent Fang
-			{ itemID = 13938 }, --Bonecreeper Stylus
-			{ itemID = 16698 }, --Dreadmist Mask
-			{ itemID = 16686 }, --Magister's Crown
-			{ itemID = 16693 }, --Devout Crown
-			{ itemID = 16707 }, --Shadowcraft Cap
-			{ itemID = 16720 }, --Wildheart Cowl
-			{ itemID = 16677 }, --Beaststalker's Cap
-			{ itemID = 16667 }, --Coif of Elements
-			{ itemID = 16731 }, --Helm of Valor
-			{ itemID = 16727 }, --Lightforge Helm
-			{ itemID = 19276 }, --Ace of Portals
-			{ itemID = 13501 }, --Recipe: Major Mana Potion
-		},
-		{
-			{ itemID = 18697 }, --Coldstone Slippers
-			{ itemID = 18698 }, --Tattered Leather Hood
-			{ itemID = 18699 }, --Icy Tomb Spaulders
-			{ itemID = 18700 }, --Malefic Bracers
-			{ itemID = 14536 }, --Bonebrace Hauberk
-			{ itemID = 18702 }, --Belt of the Ordained
-			{ itemID = 18701 }, --Innervating Band
-			{ itemID = 16254 }, --Formula: Enchant Weapon - Lifestealing
-			{ itemID = 16255 }, --Formula: Enchant 2H Weapon - Major Spirit
-			{ itemID = 15773 }, --Pattern: Wicked Leather Armor
-			{ itemID = 15776 }, --Pattern: Runic Leather Armor
-			{ itemID = 12753 }, --Skin of Shadow
-			{ itemID = 13920 }, --Healthy Dragon Scale
-			{ itemID = 16705 }, --Dreadmist Wraps
-			{ itemID = 16684 }, --Magister's Gloves
-			{ itemID = 16685 }, --Magister's Belt
-			{ itemID = 16710 }, --Shadowcraft Bracers
-			{ itemID = 16716 }, --Wildheart Belt
-			{ itemID = 16722 }, --Lightforge Bracers
-		},
-	},
-	-----------------------
-	--- Shadowfang Keep ---
-	-----------------------
-	["ShadowfangKeep"] = {
-		{
-		},
-		{
-			{ itemID = 6642 }, --Phantom Armor
-			{ itemID = 6641 }, --Haunting Blade
-		},
-		{
-		},
-		{
-			{ itemID = 6341 }, --Eerie Stable Lantern
-			{ itemID = 932 }, --Fel Steed Saddlebags
-		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 5943 }, --Rift Bracers
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 2292 }, --Necrology Robes
-			{ itemID = 1974 }, --Mindthrust Bracers
-			{ itemID = 1489 }, --Gloomshroud Armor
-			{ itemID = 1935 }, --Assassin's Blade
-			{ itemID = 1482 }, --Shadowfang
-			{ itemID = 2205 }, --Duskbringer
-			{ itemID = 2807 }, --Guillotine Axe
-			{ itemID = 1318 }, --Night Reaver
-			{ itemID = 1483 }, --Face Smasher
-			{ itemID = 3194 }, --Black Malice
-			{ itemID = 1484 }, --Witching Stave
-		},
-	},
-	------------------
-	--- Stratholme ---
-	------------------
-	["Stratholme"] = {
-		{
-		},
-		{
-			{ itemID = 13304 }, --Festival Lane Postbox Key
-			{ itemID = 13303 }, --Crusaders' Square Postbox Key
-			{ itemID = 13307 }, --Fras Siabi's Postbox Key
-			{ itemID = 13305 }, --Elders' Square Postbox Key
-			{ itemID = 13302 }, --Market Row Postbox Key
-			{ itemID = 13306 }, --King's Square Postbox Key
-		},
-		{
-			{ itemID = 13172 }, --Siabi's Premium Tobacco
-			{ itemID = 13171 }, --Smokey's Lighter
-		},
-		{
-			{ itemID = 22736 }, --Andonisus, Reaper of Souls
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 13403 }, --Grimgore Noose
-			{ itemID = 13402 }, --Timmy's Galoshes
-			{ itemID = 13400 }, --Vambraces of the Sadist
-			{ itemID = 13401 }, --The Cruel Hand of Timmy
-			{ itemID = 16724 }, --Lightforge Gauntlets
-		},
-		{
-			{ icon = "INV_Box_01", name = "Malor's Strongbox" },
-			{ itemID = 12845 }, --Medallion of Faith
-		},
-		{
-			{ itemID = 18781 }, --Bottom Half of Advanced Armorsmithing: Volume II
-			{ itemID = 12726 }, --Plans: Enchanted Thorium Leggings
-			{ itemID = 13351 }, --Crimson Hammersmith's Apron
-			{ itemID = 12824 }, --Plans: Enchanted Battlehammer
-		},
-		{
-			{ itemID = 12827 }, --Plans: Serenity
-		},
-		{
-			{ itemID = 13377 }, --Miniature Cannon Balls
-			{ itemID = 12839, contentsPreview = {12783} }, --Plans: Heartseeker
-		},
-		{
-			{ itemID = 22897 }, --Tome of Conjure Food VII
-			{ itemID = 12811 }, --Righteous Orb
-			{ icon = "INV_Box_01", name = "Unfinished Painting" },
-			{ itemID = 14679 }, --Of Love and Family
-		},
-		{
-			{ itemID = 13353 }, --Book of the Dead
-			{ itemID = 14512 }, --Pattern: Truefaith Vestments
-			{ itemID = 14154 }, --Truefaith Vestments
-			{ itemID = 18720 }, --Shroud of the Nathrezim
-			{ itemID = 13369 }, --Fire Striders
-			{ itemID = 13358 }, --Wyrmtongue Shoulders
-			{ itemID = 13359 }, --Crown of Tyranny
-			{ itemID = 18718 }, --Grand Crusader's Helm
-			{ itemID = 12103 }, --Star of Mystaria
-			{ itemID = 13360 }, --Gift of the Elven Magi
-			{ itemID = 13348 }, --Demonshear
-			{ itemID = 18717 }, --Hammer of the Grand Crusader
-			{ itemID = 16725 }, --Lightforge Boots
-			{ itemID = 13520 }, --Recipe: Flask of Distilled Wisdom
-			{ itemID = 13250 }, --Head of Balnazzar
-		},
-		{
-			{ icon = "INV_Misc_Bag_09", name = "Dungeon Set 2 Summonable", desc = "Sothos and Jarien" },
-			{ itemID = 22301 }, --Ironweave Robe
-			{ itemID = 22328 }, --Legplates of Vigilance
-			{ itemID = 22327 }, --Amulet of the Redeemed
-			{ itemID = 22334 }, --Band of Mending
-			{ itemID = 22329 }, --Scepter of Interminable Focus
-			{ itemID = 21984 }, --Left Piece of Lord Valthalak's Amulet
-			{ itemID = 22046 }, --Right Piece of Lord Valthalak's Amulet
-		},
-		{
-		},
-		{
-			{ itemID = 13514 }, --Wail of the Banshee
-		},
-		{
-			{ itemID = 18783 }, --Bottom Half of Advanced Armorsmithing: Volume III
-			{ itemID = 12725 }, --Plans: Enchanted Thorium Helm
-			{ itemID = 13350 }, --Insignia of the Black Guard
-			{ itemID = 12825 }, --Plans: Blazing Rapier
-		},
-		{
-			{ itemID = 12830 }, --Plans: Corruption
-		},
-		{
-			{ itemID = 13508 }, --Eye of Arachnida
-		},
-		{
-			{ itemID = 12833, contentsPreview = {12796} }, --Plans: Hammer of the Titans
-		},
-		{
-			{ itemID = 12382 }, --Key to the City
-		},
-		{
-			{ itemID = 13374 }, --Soulstealer Mantle
-			{ itemID = 18723 }, --Animated Chain Necklace
-			{ itemID = 13373 }, --Band of Flesh
-			{ itemID = 13515 }, --Ramstein's Lightning Bolts
-			{ itemID = 13372 }, --Slavedriver's Cane
-			{ itemID = 13375 }, --Crest of Retribution
-			{ itemID = 16737 }, --Gauntlets of Valor
-		},
-		{
-			{ itemID = 13251, contentsPreview = {13246,13249,13243} }, --Head of Baron Rivendare
-			{ itemID = 13335 }, --Deathcharger's Reins
-		},
-		{
-			{ itemID = 18743 }, --Gracious Cape
-			{ itemID = 17061 }, --Juno's Shadow
-			{ itemID = 18745 }, --Sacred Cloth Leggings
-			{ itemID = 18744 }, --Plaguebat Fur Gloves
-			{ itemID = 18736 }, --Plaguehound Leggings
-			{ itemID = 18742 }, --Stratholme Militia Shoulderguard
-			{ itemID = 18741 }, --Morlune's Bracer
-			{ itemID = 16249 }, --Formula: Enchant 2H Weapon - Major Intellect
-			{ itemID = 16248 }, --Formula: Enchant Weapon - Unholy
-			{ itemID = 18658 }, --Schematic: Ultra-Flash Shadow Reflector
-			{ itemID = 16052 }, --Schematic: Voice Amplification Modulator
-			{ itemID = 15777 }, --Pattern: Runic Leather Shoulders
-			{ itemID = 15768 }, --Pattern: Wicked Leather Belt
-			{ itemID = 14495 }, --Pattern: Ghostweave Pants
-			{ itemID = 16697 }, --Devout Bracers
-			{ itemID = 16702 }, --Dreadmist Belt
-			{ itemID = 16685 }, --Magister's Belt
-			{ itemID = 16714 }, --Wildheart Bracers
-			{ itemID = 16681 }, --Beaststalker's Bindings
-			{ itemID = 16671 }, --Bindings of Elements
-			{ itemID = 16736 }, --Belt of Valor
-			{ itemID = 16723 }, --Lightforge Belt
-			{ itemID = 12811 }, --Righteous Orb
-			{ itemID = 12735 }, --Frayed Abomination Stitching
-		},
-	},
-	---------------------
-	--- The Deadmines ---
-	---------------------
-	["TheDeadmines"] = {
-		{
-			{ itemID = 3019 }, --Noble's Robe
-			{ itemID = 4660 }, --Walking Boots
-		},
-		{
-			{ itemID = 5967 }, --Girdle of Nobility
-			{ itemID = 3902 }, --Staff of Nobles
-		},
-		{
-			{ itemID = 1875 }, --Thistlenettle's Badge
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 7365 }, --Gnoam Sprecklesprocket
-		},
-		{
-			{ itemID = 5397 }, --Defias Gunpowder
-		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 8490 }, --Cat Carrier (Siamese)
-		},
-		{
-			{ itemID = 2874 }, --An Unsent Letter
-			{ itemID = 3637 }, --Head of VanCleef
-		},
-	},
-	--------------------
-	--- The Stockade ---
-	--------------------
-	["TheStockade"] = {
-		{
-			{ itemID = 3630 }, --Head of Targorr
-			{ itemID = 56971, droprate = "1%" }, --Pet Sigil
-		},
-		{
-			{ itemID = 3640 }, --Head of Deepfury
-			{ itemID = 56970, droprate = "1%" }, --Pet Sigil
-		},
-		{
-			{ itemID = 2926 }, --Head of Bazil Thredd
-			{ itemID = 56972, droprate = "1%" }, --Pet Sigil
-		},
-		{
-			{ itemID = 56973, droprate = "1%" }, --Pet Sigil
-		},
-		{
-			{ itemID = 3628 }, --Hand of Dextren Ward
-			{ itemID = 56969, droprate = "1%" }, --Pet Sigil
-		},
-		{
-			{ itemID = 56974, droprate = "1%" }, --Pet Sigil
-		},
-		{
-			{ itemID = 2909 }, --Red Wool Bandana
-		},
-	},
-	-------------------------
-	--- The Sunken Temple ---
-	-------------------------
-	["SunkenTemple"] = {
-		{
-			{ itemID = 10802 }, --Wingveil Cloak
-			{ itemID = 10801 }, --Slitherscale Boots
-		},
-		{
-			{ itemID = 10787 }, --Atal'ai Gloves
-			{ itemID = 10783 }, --Atal'ai Spaulders
-			{ itemID = 10785 }, --Atal'ai Leggings
-			{ itemID = 10784 }, --Atal'ai Breastplate
-			{ itemID = 10786 }, --Atal'ai Boots
-			{ itemID = 10788 }, --Atal'ai Girdle
-			{ itemID = 20606 }, --Amber Voodoo Feather
-			{ itemID = 20607 }, --Blue Voodoo Feather
-			{ itemID = 20608 }, --Green Voodoo Feather
-		},
-		{
-			{ itemID = 10800 }, --Darkwater Bracers
-			{ itemID = 10798 }, --Atal'alarion's Tusk Ring
-			{ itemID = 10799 }, --Headspike
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 10663 }, --Essence of Hakkar
-		},
-		{
-			{ itemID = 10806 }, --Vestments of the Atal'ai Prophet
-			{ itemID = 10808 }, --Gloves of the Atal'ai Prophet
-			{ itemID = 10807 }, --Kilt of the Atal'ai Prophet
-			{ itemID = 6212 }, --Head of Jammal'an
-		},
-		{
-			{ itemID = 10805 }, --Eater of the Dead
-			{ itemID = 10804 }, --Fist of the Damned
-			{ itemID = 10803 }, --Blade of the Wretched
-		},
-		{
-			{ itemID = 20022 }, --Azure Key
-			{ itemID = 20085 }, --Arcane Shard
-			{ itemID = 20025 }, --Blood of Morphaz
-			{ itemID = 20019 }, --Tooth of Morphaz
-		},
-		{
-		},
-		{
-			{ itemID = 10454 }, --Essence of Eranikus
-			{ itemID = 10455 }, --Chained Essence of Eranikus
-		},
-		{
-			{ itemID = 10630 }, --Soulcatcher Halo
-			{ itemID = 10629 }, --Mistwalker Boots
-			{ itemID = 10632 }, --Slimescale Bracers
-			{ itemID = 10631 }, --Murkwater Gauntlets
-			{ itemID = 10633 }, --Silvershell Leggings
-			{ itemID = 10634 }, --Mindseye Circle
-			{ itemID = 15733 }, --Pattern: Green Dragonscale Leggings
-			{ itemID = 16216 }, --Formula: Enchant Cloak - Greater Resistance
-			{ itemID = 11318 }, --Atal'ai Haze
-			{ itemID = 6181 }, --Fetish of Hakkar
-			{ itemID = 10623 }, --Winter's Bite
-			{ itemID = 10625 }, --Stealthblade
-			{ itemID = 10628 }, --Deathblow
-			{ itemID = 10626 }, --Ragehammer
-			{ itemID = 10627 }, --Bludgeon of the Grinning Dog
-			{ itemID = 10624 }, --Stinging Bow
-		},
-	},
-	---------------
-	--- Uldaman ---
-	---------------
-	["Uldaman"] = {
-		{
-			{ itemID = 4635 }, --Hammertoe's Amulet
-		},
-		{
-			{ itemID = 4631 }, --Tablet of Ryun'eh
-		},
-		{
-			{ itemID = 8027 }, --Krom Stoutarm's Treasure
-		},
-		{
-			{ itemID = 8026 }, --Garrett Family Treasure
-		},
-		{
-			{ itemID = 9375 }, --Expert Goldminer's Helmet
-			{ itemID = 9378 }, --Shovelphlange's Mining Axe
-			{ itemID = 9382 }, --Tromping Miner's Boots
-		},
-		{
-			{ icon = "INV_Box_01", name = "Baelog" },
-			{ itemID = 9401 }, --Nordic Longshank
-			{ itemID = 9400 }, --Baelog's Shortbow
-			{ itemID = 9399 }, --Precision Arrow
-			{ icon = "INV_Box_01", name = "Eric 'The Swift'" },
-			{ itemID = 9394 }, --Horned Viking Helmet
-			{ itemID = 9398 }, --Worn Running Boots
-			{ itemID = 2459 }, --Swiftness Potion
-			{ icon = "INV_Box_01", name = "Olaf" },
-			{ itemID = 9404 }, --Olaf's All Purpose Shield
-			{ itemID = 9403 }, --Battered Viking Shield
-			{ itemID = 1177 }, --Oil of Olaf
-			{ icon = "INV_Box_01", name = "Baelog's Chest" },
-			{ itemID = 7740 }, --Gni'kiv Medallion
-			{ icon = "INV_Box_01", name = "Conspicuous Urn" },
-			{ itemID = 7671 }, --Shattered Necklace Topaz
-		},
-		{
-			{ itemID = 9390 }, --Revelosh's Gloves
-			{ itemID = 9389 }, --Revelosh's Spaulders
-			{ itemID = 9388 }, --Revelosh's Armguards
-			{ itemID = 9387 }, --Revelosh's Boots
-			{ itemID = 7741 }, --The Shaft of Tsol
-		},
-		{
-			{ itemID = 9407 }, --Stoneweaver Leggings
-			{ itemID = 9409 }, --Ironaya's Bracers
-			{ itemID = 9408 }, --Ironshod Bludgeon
-		},
-		{
-			{ itemID = 8053 }, --Obsidian Power Source
-		},
-		{
-			{ itemID = 9411 }, --Rockshard Pauldrons
-			{ itemID = 9410 }, --Cragfists
-		},
-		{
-			{ itemID = 11311 }, --Emberscale Cape
-			{ itemID = 11310 }, --Flameseer Mantle
-			{ itemID = 9419 }, --Galgann's Firehammer
-			{ itemID = 9412 }, --Galgann's Fireblaster
-		},
-		{
-			{ itemID = 5824 }, --Tablet of Will
-		},
-		{
-			{ itemID = 7669 }, --Shattered Necklace Ruby
-		},
-		{
-			{ itemID = 9415 }, --Grimlok's Tribal Vestments
-			{ itemID = 9414 }, --Oilskin Leggings
-			{ itemID = 9416 }, --Grimlok's Charge
-			{ itemID = 7670 }, --Shattered Necklace Sapphire
-		},
-		{
-			{ itemID = 11118 }, --Archaedic Stone
-			{ itemID = 9418 }, --Stoneslayer
-			{ itemID = 9413 }, --The Rockpounder
-			{ itemID = 7672 }, --Shattered Necklace Power Source
-		},
-		{
-			{ itemID = 9397 }, --Energy Cloak
-			{ itemID = 9431 }, --Papal Fez
-			{ itemID = 9429 }, --Miner's Hat of the Deep
-			{ itemID = 9420 }, --Adventurer's Pith Helmet
-			{ itemID = 9406 }, --Spirewind Fetter
-			{ itemID = 9428 }, --Unearthed Bands
-			{ itemID = 9430 }, --Spaulders of a Lost Age
-			{ itemID = 9396 }, --Legguards of the Vault
-			{ itemID = 9432 }, --Skullplate Bracers
-			{ itemID = 9393 }, --Beacon of Hope
-			{ itemID = 7666 }, --Shattered Necklace
-			{ itemID = 7673 }, --Talvash's Enhancing Necklace
-			{ itemID = 9384 }, --Stonevault Shiv
-			{ itemID = 9392 }, --Annealed Blade
-			{ itemID = 9424 }, --Ginn-su Sword
-			{ itemID = 9465 }, --Digmaster 5000
-			{ itemID = 9383 }, --Obsidian Cleaver
-			{ itemID = 9425 }, --Pendulum of Doom
-			{ itemID = 9386 }, --Excavator's Brand
-			{ itemID = 9427 }, --Stonevault Bonebreaker
-			{ itemID = 9423 }, --The Jackhammer
-			{ itemID = 9391 }, --The Shoveler
-			{ itemID = 9381 }, --Earthen Rod
-			{ itemID = 9426 }, --Monolithic Bow
-			{ itemID = 9422 }, --Shadowforge Bushmaster
-		},
-	},
-	-----------------------
-	--- Wailing Caverns ---
-	-----------------------
-	["WailingCaverns"] = {
-		{
-			{ itemID = 6475 }, --Pattern: Deviate Scale Gloves
-			{ itemID = 6474 }, --Pattern: Deviate Scale Cloak
-		},
-		{
-			{ itemID = 5334 }, --99-Year-Old Port
-		},
-		{
-			{ itemID = 5425 }, --Runescale Girdle
-			{ itemID = 5426 }, --Serpent's Kiss
-		},
-		{
-			{ itemID = 5423 }, --Boahn's Fang
-			{ itemID = 5422 }, --Brambleweed Leggings
-		},
-		{
-		},
-		{
-			{ itemID = 6446 }, --Snakeskin Bag
-		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
-		},
-		{
-			{ itemID = 10441 }, --Glowing Shard
-		},
-		{
-			{ itemID = 6632 }, --Feyscale Cloak
-			{ itemID = 5243 }, --Firebelcher
-		},
-	},
-	------------------
-	--- Zul'Farrak ---
-	------------------
-	["ZulFarrak"] = {
-		{
-			{ itemID = 9640 }, --Vice Grips
-			{ itemID = 9641 }, --Lifeblood Amulet
-			{ itemID = 9639 }, --The Hand of Antu'sul
-			{ itemID = 9379 }, --Sang'thraze the Deflector
-			{ itemID = 9372 }, --Sul'thraze the Lasher
-		},
-		{
-			{ itemID = 10660 }, --First Mosh'aru Tablet
-		},
-		{
-			{ itemID = 18083 }, --Jumanza Grips
-			{ itemID = 18082 }, --Zum'rah's Vexing Cane
-		},
-		{
-			{ itemID = 9471 }, --Nekrum's Medallion
-		},
-		{
-			{ itemID = 9470 }, --Bad Mojo Mask
-			{ itemID = 9473 }, --Jinxed Hoodoo Skin
-			{ itemID = 9474 }, --Jinxed Hoodoo Kilt
-			{ itemID = 9475 }, --Diabolic Skiver
-		},
-		{
-			{ itemID = 12471 }, --Desertwalker Cane
-		},
-		{
-			{ itemID = 8444 }, --Executioner's Key
-		},
-		{
-			{ itemID = 8548 }, --Divino-matic Rod
-		},
-		{
-			{ itemID = 9234 }, --Tiara of the Deep
-			{ itemID = 10661 }, --Second Mosh'aru Tablet
-		},
-		{
-			{ itemID = 9469 }, --Gahz'rilla Scale Armor
-			{ itemID = 9467 }, --Gahz'rilla Fang
-			{ itemID = 8707 }, --Gahz'rilla's Electrified Scale
-		},
-		{
-			{ itemID = 9479 }, --Embrace of the Lycan
-			{ itemID = 9476 }, --Big Bad Pauldrons
-			{ itemID = 9478 }, --Ripsaw
-			{ itemID = 9477 }, --The Chief's Enforcer
-			{ itemID = 11086 }, --Jang'thraze the Protector
-			{ itemID = 9372 }, --Sul'thraze the Lasher
-		},
-		{
-			{ itemID = 12470 }, --Sandstalker Ankleguards
-		},
-		{
-			{ itemID = 9512 }, --Blackmetal Cape
-			{ itemID = 9484 }, --Spellshock Leggings
-			{ itemID = 862 }, --Runed Ring
-			{ itemID = 6440 }, --Brainlash
-			{ itemID = 9243 }, --Shriveled Heart
-			{ itemID = 9523 }, --Troll Temper
-			{ itemID = 9238 }, --Uncracked Scarab Shell
-			{ itemID = 5616 }, --Gutwrencher
-			{ itemID = 9511 }, --Bloodletter Scalpel
-			{ itemID = 9481 }, --The Minotaur
-			{ itemID = 9480 }, --Eyegouger
-			{ itemID = 9482 }, --Witch Doctor's Cane
-			{ itemID = 9483 }, --Flaming Incinerator
-			{ itemID = 2040 }, --Troll Protector
-		},
-	},
-	-----------------
-	--- Zul'Gurub ---
-	-----------------
-	["ZulGurub"] = {
-		{
-			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
-			{ itemID = 19943 }, --Massive Mojo
-			{ itemID = 19881 }, --Channeler's Head
-		},
-		{
-			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
-			{ itemID = 19943 }, --Massive Mojo
-			{ itemID = 19881 }, --Channeler's Head
-			{ itemID = 22216 }, --Venoxis's Venom Sac
-		},
-		{
-			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
-			{ itemID = 19943 }, --Massive Mojo
-			{ itemID = 19881 }, --Channeler's Head
-		},
-		{
-				{ itemID = 19872 }, --Swift Razzashi Raptor
-			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
-			{ itemID = 22637 }, --Primal Hakkari Idol
-			{ itemID = 19943 }, --Massive Mojo
-		},
-		{
-			{ icon = "INV_Box_01", name = "Gri'lek" },
-			{ itemID = 19961 }, --Gri'lek's Grinder
-			{ itemID = 19962 }, --Gri'lek's Carver
-			{ itemID = 19939 }, --Gri'lek's Blood
-			{ icon = "INV_Box_01", name = "Hazza'rah" },
-			{ itemID = 19968 }, --Fiery Retributer
-			{ itemID = 19967 }, --Thoughtblighter
-			{ itemID = 19942 }, --Hazza'rah's Dream Thread
-			{ icon = "INV_Box_01", name = "Renataki" },
-			{ itemID = 19964 }, --Renataki's Soul Conduit
-			{ itemID = 19963 }, --Pitchfork of Madness
-			{ itemID = 19940 }, --Renataki's Tooth
-			{ icon = "INV_Box_01", name = "Wushoolay" },
-			{ itemID = 19965 }, --Wushoolay's Poker
-			{ itemID = 19993 }, --Hoodoo Hunting Bow
-			{ itemID = 19941 }, --Wushoolay's Mane
-		},
-		{
-			{ itemID = 19945 }, --Foror's Eyepatch
-			{ itemID = 19944 }, --Nat Pagle's Fish Terminator
-			{ itemID = 19947 }, --Nat Pagle's Broken Reel
-			{ itemID = 19946 }, --Tigule's Harpoon
-			{ itemID = 22739 }, --Tome of Polymorph: Turtle
-		},
-		{
-			{ itemID = 19902 }, --Swift Zulian Tiger
-			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
-			{ itemID = 19943 }, --Massive Mojo
-			{ itemID = 19881 }, --Channeler's Head
-			{ itemID = 60101, droprate = "1%" }, --Pet Sigil
-		},
-		{
-			{ itemID = 19914 }, --Panther Hide Sack
-			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
-			{ itemID = 19943 }, --Massive Mojo
-			{ itemID = 19881 }, --Channeler's Head
-		},
-		{
-			{ icon = "INV_Banner_01", name = "ZG Sets", sourcePage = {{"ZGSets", "	", 1},"Source"} },
-			{ itemID = 22637 }, --Primal Hakkari Idol
-			{ itemID = 19943 }, --Massive Mojo
-		},
-		{
-			{ itemID = 19802 }, --Heart of Hakkar
-			{ itemID = 19950 }, --Zandalarian Hero Charm
-			{ itemID = 19949 }, --Zandalarian Hero Medallion
-			{ itemID = 19948 }, --Zandalarian Hero Badge
-			{ itemID = 19943 }, --Massive Mojo
-		},
-		{
-			{ itemID = 19975 }, --Zulian Mudskunk
-		},
-		{
-			{ itemID = 22721 }, --Band of Servitude
-			{ itemID = 22722 }, --Seal of the Gurubashi Berserker
-			{ itemID = 22711 }, --Cloak of the Hakkari Worshipers
-			{ itemID = 22712 }, --Might of the Tribe
-			{ itemID = 22720 }, --Zulian Headdress
-			{ itemID = 22716 }, --Belt of Untapped Power
-			{ itemID = 22718 }, --Blooddrenched Mask
-			{ itemID = 22715 }, --Gloves of the Tormented
-			{ itemID = 22714 }, --Sacrificial Gauntlets
-			{ itemID = 22713 }, --Zulian Scepter of Rites
-		},
-		{
-			{ itemID = 20259 }, --Shadow Panther Hide Gloves
-			{ itemID = 20261 }, --Shadow Panther Hide Belt
-			{ itemID = 20263 }, --Gurubashi Helm
-			{ itemID = 19908 }, --Sceptre of Smiting
-			{ itemID = 19921 }, --Zulian Hacker
-			{ itemID = 20258 }, --Zulian Ceremonial Staff
-			{ itemID = 19727 }, --Blood Scythe
-			{ itemID = 48126 }, --Razzashi Hatchling
-			{ itemID = 19726 }, --Bloodvine
-			{ itemID = 19774 }, --Souldarite
-			{ itemID = 19767 }, --Primal Bat Leather
-			{ itemID = 19768 }, --Primal Tiger Leather
-			{ itemID = 19821 }, --Punctured Voodoo Doll
-			{ itemID = 19816 }, --Punctured Voodoo Doll
-			{ itemID = 19818 }, --Punctured Voodoo Doll
-			{ itemID = 19815 }, --Punctured Voodoo Doll
-			{ itemID = 19820 }, --Punctured Voodoo Doll
-			{ itemID = 19814 }, --Punctured Voodoo Doll
-			{ itemID = 19817 }, --Punctured Voodoo Doll
-			{ itemID = 19819 }, --Punctured Voodoo Doll
-			{ itemID = 19813 }, --Punctured Voodoo Doll
-		},
-		{
-			{ itemID = 19708 }, --Blue Hakkari Bijou
-			{ itemID = 19713 }, --Bronze Hakkari Bijou
-			{ itemID = 19715 }, --Gold Hakkari Bijou
-			{ itemID = 19711 }, --Green Hakkari Bijou
-			{ itemID = 19710 }, --Orange Hakkari Bijou
-			{ itemID = 19712 }, --Purple Hakkari Bijou
-			{ itemID = 19707 }, --Red Hakkari Bijou
-			{ itemID = 19714 }, --Silver Hakkari Bijou
-			{ itemID = 19709 }, --Yellow Hakkari Bijou
-			{ itemID = 19706 }, --Bloodscalp Coin
-			{ itemID = 19701 }, --Gurubashi Coin
-			{ itemID = 19700 }, --Hakkari Coin
-			{ itemID = 19699 }, --Razzashi Coin
-			{ itemID = 19704 }, --Sandfury Coin
-			{ itemID = 19705 }, --Skullsplitter Coin
-			{ itemID = 19702 }, --Vilebranch Coin
-			{ itemID = 19703 }, --Witherbark Coin
-			{ itemID = 19698 }, --Zulian Coin
-		},
-		{
-			{ itemID = 19790 }, --Animist's Caress
-			{ itemID = 19785 }, --Falcon's Call
-			{ itemID = 19787 }, --Presence of Sight
-			{ itemID = 19783 }, --Syncretist's Sigil
-			{ itemID = 19789 }, --Prophetic Aura
-			{ itemID = 19784 }, --Death's Embrace
-			{ itemID = 19786 }, --Vodouisant's Vigilant Embrace
-			{ itemID = 19788 }, --Hoodoo Hex
-			{ itemID = 19782 }, --Presence of Might
-			{ itemID = 20077 }, --Zandalar Signet of Might
-			{ itemID = 20076 }, --Zandalar Signet of Mojo
-			{ itemID = 20078 }, --Zandalar Signet of Serenity
-			{ itemID = 22635 }, --Savage Guard
-		},
-	},
-	-----------------
-	--- Naxxramas ---
-	-----------------
-	["Naxxramas60"] = {
-		{
-			{ itemID = 22354, sourcePage = {"TTHREE-SHOULDER","Token"} }, --Desecrated Pauldrons
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60187 }, --Sigil of Patchwerk
-		},
-		{
-			{ itemID = 22354, sourcePage = {"TTHREE-SHOULDER","Token"} }, --Desecrated Pauldrons
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60176 }, --Sigil of Grobbulus
-		},
-		{
-			{ itemID = 22354, sourcePage = {"TTHREE-SHOULDER","Token"} }, --Desecrated Pauldrons
-			{ itemID = 22355, sourcePage = {"TTHREE-WRIST","Token"} }, --Desecrated Bracers
-			{ itemID = 22356, sourcePage = {"TTHREE-WAIST","Token"} }, --Desecrated Waistguard
-			{ itemID = 22358, sourcePage = {"TTHREE-FEET","Token"} }, --Desecrated Sabatons
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60177 }, --Sigil of Gluth
-		},
-		{
-			{ itemID = 22353, sourcePage = {"TTHREE-HEAD","Token"} }, --Desecrated Helmet
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60173 }, -- Sigil of Thaddius
-		},
-		{
-			{ itemID = 22355, sourcePage = {"TTHREE-WRIST","Token"} }, --Desecrated Bracers
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60182 }, --Sigil of Anub'Rekhan
-		},
-		{
-			{ itemID = 22355, sourcePage = {"TTHREE-WRIST","Token"} }, --Desecrated Bracers
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60180 }, --Sigil of Grand Widow Faerlina
-		},
-		{
-			{ itemID = 22357, sourcePage = {"TTHREE-HAND","Token"} }, --Desecrated Gauntlets
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60179 }, --Sigil of Maexxna
-		},
-		{
-			{ itemID = 22358, sourcePage = {"TTHREE-FEET","Token"} }, --Desecrated Sabatons
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60190 }, --Sigil of Instructor Razuvious
-		},
-		{
-			{ itemID = 22358, sourcePage = {"TTHREE-SHOULDER","Token"} }, --Desecrated Sabatons
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60189 }, --Sigil of Gothik the Harvester
-		},
-		{
-			{ itemID = 23071 }, --Leggings of Apocalypse
-			{ itemID = 22809 }, --Maul of the Redeemed Crusader
-			{ itemID = 22691 }, --Corrupted Ashbringer
-			{ itemID = 22811 }, --Soulstring
-			{ itemID = 23025 }, --Seal of the Damned
-			{ itemID = 23027 }, --Warmth of Forgiveness
-			{ itemID = 22349, sourcePage = {"TTHREE-CHEST","Token"} }, --Desecrated Breastplate
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-		},
-		{
-			{ itemID = 22356, sourcePage = {"TTHREE-WAIST","Token"} }, --Desecrated Waistguard
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60181 }, --Sigil of Noth the Plaguebringer
-		},
-		{
-			{ itemID = 22356, sourcePage = {"TTHREE-WAIST","Token"} }, --Desecrated Waistguard
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60178 }, --Sigil of Heigan the Unclean
-		},
-		{
-			{ itemID = 22352, sourcePage = {"TTHREE-LEGS","Token"} }, --Desecrated Legplates
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60186 }, --Sigil of Loatheb
-		},
-		{
-			{ itemID = 23545 }, --Power of the Scourge
-			{ itemID = 23547 }, --Resilience of the Scourge
-			{ itemID = 23549 }, --Fortitude of the Scourge
-			{ itemID = 23548 }, --Might of the Scourge
-			{ itemID = 22726 }, --Splinter of Atiesh
-			{ itemID = 22727 }, --Frame of Atiesh
-			{ itemID = 60184 }, --Sigil of Sapphiron
-		},
-		{
-			{ itemID = 22520 }, --The Phylactery of Kel'Thuzad
-			{ itemID = 23207 }, --Mark of the Champion
-			{ itemID = 23206 }, --Mark of the Champion
-			{ itemID = 1510496, sourcePage = {"TTHREE-FINGER","Token"} }, --Desecrated Ring
-			{ itemID = 22733 }, --Staff Head of Atiesh
-			{ itemID = 22632 }, --Atiesh, Greatstaff of the Guardian
-			{ itemID = 22589 }, --Atiesh, Greatstaff of the Guardian
-			{ itemID = 22631 }, --Atiesh, Greatstaff of the Guardian
-			{ itemID = 22630 }, --Atiesh, Greatstaff of the Guardian
-			{ itemID = 60185, droprate = "1%" }, --Sigil
-		},
-		{
-			{ itemID = 22968 }, -- Glacial Mantle
-			{ itemID = 23019 }, -- Icebane Helmet
-			{ itemID = 23020 }, -- Polar Helmet
-			{ itemID = 23028 }, -- Hailstone Band
-			{ itemID = 23033 }, -- Icy Scale Coif
-			{ itemID = 22967 }, -- Icy Scale Spaulders
-			{ itemID = 22941 }, -- Polar Shoulder Pads
-			{ itemID = 22940 }, -- Icebane Pauldrons
-			{ itemID = 22935 }, -- Touch of Frost
-			{ itemID = 23032 }, -- Glacial Headdress
-		},
-		{
-			{ itemID = 23069 }, --Necro-Knight's Garb
-			{ itemID = 23226 }, --Ghoul Skin Tunic
-			{ itemID = 23663 }, --Girdle of Elemental Fury
-			{ itemID = 23664 }, --Pauldrons of Elemental Fury
-			{ itemID = 23665 }, --Leggings of Elemental Fury
-			{ itemID = 23666 }, --Belt of the Grand Crusader
-			{ itemID = 23667 }, --Spaulders of the Grand Crusader
-			{ itemID = 23668 }, --Leggings of the Grand Crusader
-			{ itemID = 23044 }, --Harbinger of Doom
-			{ itemID = 23221 }, --Misplaced Servo Arm
-			{ itemID = 23238 }, --Stygian Buckler
-			{ itemID = 23237 }, --Ring of the Eternal Flame
-			{ itemID = 22376 }, --Wartorn Cloth Scrap
-			{ itemID = 22373 }, --Wartorn Leather Scrap
-			{ itemID = 22374 }, --Wartorn Chain Scrap
-			{ itemID = 22375 }, --Wartorn Plate Scrap
-			{ itemID = 22708 }, --Fate of Ramaladni
-			{ itemID = 23055 }, --Word of Thawing
-		},
-	},
-	------------------------
-	--- Onyxia's Lair 60 ---
-	------------------------
-	["Onyxia60"] = {
-		{},
-		{
-			{ itemID = 2522460, sourcePage = {"TTWO-HEAD","Token"} }, --Chromatic Headpiece
-			{ itemID = 97269, contentsPreview = {18404,18403,18406} }, --Head of Onyxia
-			{ itemID = 15410 }, -- Scale of Onyxia
-			{ itemID = 17966 }, --Onyxia Hide Backpack
-			{ itemID = 53140, droprate = 5 }, --Formula: Enchant Cloak - Dragon Fire
-			{ itemID = 1180299 }, -- Draconic Warhorn: Onyxia
-			{ itemID = 49636, minDifficulty = "Heroic" }, -- Reins of the Onyxian Drake
-		},
-	},
-	["FrozenReach"] = {
-		{
-			{ itemID = 1519391 }, -- Reclaimed Blade of the Frozen Sepulcher
-			{ itemID = 1519392 }, -- Frigid Bow of the Bonded Souls
-			{ itemID = 1519380 }, -- Necklace of Frozen Reach
-			{ itemID = 1519381 }, -- Beartooth Pendant
-			{ itemID = 1519382 }, -- Alva's Gift
-			{ itemID = 1519383 }, -- Ring of the Frozen Sepulcher
-			{ itemID = 1519384 }, -- Ring of Bonded Souls
-			{ itemID = 1519385 }, -- Signet of Arktos
-			{ itemID = 1519386 }, -- Alva's Kinship Ring
-			{ itemID = 1519387 }, -- Frozen Forgiveness
-			{ itemID = 1519388 }, -- Frozen Vengeance
-			{ itemID = 1519389 }, -- Call of the Sepulcher
-			{ itemID = 1519390 }, -- Arktos' Resillience
-			{ itemID = 1519379 }, -- Amulet of the Bonded Souls
-			{ itemID = 1519393 }, -- Beastmaster's Whistle: Arktos
-			{ itemID = 49095 }, -- Incarnation: Arktos
-			{ itemID = 49093 }, -- Arktos
-		},
-	},
-	["SharedDungeonLoot"] = {
-		{
-			{ itemID = 1552721 }, --Holy Shroud
-			{ itemID = 1553020 }, --Enduring Cap
-			{ itemID = 1563102 }, --Cassandra's Grace
-			{ itemID = 1563112 }, --Winged Helm
-			{ itemID = 1563127 }, --Frostreaver Crown
-			{ itemID = 1563128 }, --High Bergg Helm
-			{ itemID = 1523169 }, --Scorn's Icy Choker
-			{ itemID = 1563087 }, --River Pride Choker
-			{ itemID = 1563089 }, --Skibi's Pendant
-			{ itemID = 1552278 }, --Forest Tracker Epaulets
-			{ itemID = 1563115 }, --Sheepshear Mantle
-			{ itemID = 1563131 }, --Sparkleshell Mantle
-			{ itemID = 1523178 }, --Mantle of Lady Falther'ess
-			{ itemID = 1563005 }, --Amy's Blanket
-			{ itemID = 1563109 }, --Blackflame Cape
-			{ itemID = 1551715 }, --Polished Jazeraint Armor
-			{ itemID = 1551717 }, --Double Link Tunic
-			{ itemID = 1552800 }, --Black Velvet Robes
-			{ itemID = 1559433 }, --Forgotten Wraps
-			{ itemID = 1563012 }, --Yorgen Bracers
-			{ itemID = 1563076 }, --Giantslayer Bracers
-			{ itemID = 1563106 }, --Glowing Magical Bracelets
-			{ itemID = 1550754 }, --Shortsword of Vengeance
-			{ itemID = 1552011 }, --Twisted Sabre
-			{ itemID = 1552912 }, --Claw of the Shadowmancer
-			{ itemID = 1554090 }, --Mug O' Hurt
-			{ itemID = 1554091 }, --Widowmaker
-			{ itemID = 1559359 }, --Wirt's Third Leg
-			{ itemID = 1562974 }, --The Black Knight
-			{ itemID = 1563024 }, --Beazel's Basher
-			{ itemID = 1563032 }, --Sword of Corruption
-			{ itemID = 1563035 }, --Serpent Slicer
-			{ itemID = 1563048 }, --Looming Gavel
-			{ itemID = 1552299 }, --Burning War Axe
-			{ itemID = 1552877 }, --Combatant Claymore
-			{ itemID = 1553203 }, --Dense Triangle Mace
-			{ itemID = 1563016 }, --Killmaim
-			{ itemID = 1563018 }, --Executioner's Cleaver
-			{ itemID = 1563041 }, --Guardian Blade
-			{ itemID = 1563043 }, --Blade of the Titans
-			{ itemID = 1563049 }, --Deanship Claymore
-			{ itemID = 1563051 }, --Witchfury
-			{ itemID = 1551203 }, --Aegis of Stormwind
-			{ itemID = 1563079 }, --Shield of Thorsen
-			{ itemID = 1563082 }, --Mountainside Buckler
-			{ itemID = 1563031 }, --Orb of Mistmantle
-			{ itemID = 1563019 }, --Harpyclaw Short Bow
-			{ itemID = 1563021 }, --Needle Threader
-			{ itemID = 2248297 }, --Oversimplified Stick Chucker
-			{ itemID = 1523177 }, --Lady Falther'ess' Finger
-			{ itemID = 1552098 }, --Double-barreled Shotgun
-			{ itemID = 1563037 }, --Crystalpine Stinger
-			{ itemID = 1563039 }, --Skull Splitting Crossbow
-			{ itemID = 1563062 }, --Thunderwood
-			{ itemID = 1523170 }, --The Frozen Clutch
-			{ itemID = 1550720 }, --Brawler Gloves
-			{ itemID = 1563071 }, --Plated Fist of Hakoo
-			{ itemID = 1559405 }, --Girdle of Golem Strength
-			{ itemID = 1563011 }, --Silver-lined Belt
-			{ itemID = 1563134 }, --Belt of the Gladiator
-			{ itemID = 1563145 }, --Enormous Ogre Belt
-			{ itemID = 1523173 }, --Abomination Skin Leggings
-			{ itemID = 1563010 }, --Dreamsinger Legguards
-			{ itemID = 1563074 }, --Golem Shard Leggings
-			{ itemID = 1563114 }, --Troll's Bane Leggings
-			{ itemID = 1563099 }, --Moccasins of the White Hare
-			{ itemID = 1563100 }, --Furen's Boots
-			{ itemID = 2248085 }, --Gordok Knuckleband
-			{ itemID = 2448085 }, --Flattened Elven Ring
-			{ itemID = 1563094 }, --The Queen's Jewel
-			{ itemID = 1563095 }, --Assault Band
-			{ itemID = 1563097 }, --Thunderbrow Ring
-			{ itemID = 1551713 }, --Ankh of Life
-		},
-		{
-			{ itemID = 2431147 }, --Pendant of Cunning
-			{ itemID = 2431178 }, --Amulet of Unstable Power
-			{ itemID = 2431196 }, --Amulet of Sanctification
-			{ itemID = 2431148 }, --Demon Hide Spaulders
-			{ itemID = 294191 }, --Cloak of Dark Bargain
-			{ itemID = 2431140 }, --Cloak of Entropy
-			{ itemID = 2431143 }, --Shroud of Frenzy
-			{ itemID = 2431127 }, --Hauberk of Totemic Rage
-			{ itemID = 2431136 }, --Breastplate of Blade Turning
-			{ itemID = 2431152 }, --Chestguard of Illumination
-			{ itemID = 2431286 }, --Breastplate of Rapid Striking
-			{ itemID = 2431127 }, --Hauberk of Totemic Rage
-			{ itemID = 2431136 }, --Breastplate of Blade Turning
-			{ itemID = 2431152 }, --Chestguard of Illumination
-			{ itemID = 2431286 }, --Breastplate of Rapid Striking
-			{ itemID = 2431175 }, --Blade Dancer's Wristguards
-			{ itemID = 2431284 }, --Bracers of Recklessness
-			{ itemID = 2431175 }, --Blade Dancer's Wristguards
-			{ itemID = 2431284 }, --Bracers of Recklessness
-			{ itemID = 2431134 }, --Blade of Misfortune
-			{ itemID = 2431139 }, --Fist of Reckoning
-			{ itemID = 2431142 }, --Blade of Trapped Knowledge
-			{ itemID = 2431153 }, --Axe of the Legion
-			{ itemID = 2431193 }, --Blade of Unquenched Thirst
-			{ itemID = 2431200 }, --Shield of the Wayward Footman
-			{ itemID = 2431204 }, --The Gunblade
-			{ itemID = 2431137 }, --Gauntlets of Purification
-			{ itemID = 2431149 }, --Gloves of Pandemonium
-			{ itemID = 2431150 }, --Gloves of Piety
-			{ itemID = 2431180 }, --Gauntlets of the Skullsplitter
-			{ itemID = 2431131 }, --Sash of Silent Blades
-			{ itemID = 2431138 }, --Storm Lord's Girdle
-			{ itemID = 2431151 }, --Girdle of Siege
-			{ itemID = 2431202 }, --Girdle of Divine Blessing
-			{ itemID = 2431133 }, --Leggings of Concentrated Darkness
-			{ itemID = 2431226 }, --Leggings of the Sly
-			{ itemID = 431276 }, --Boots of Zealotry
-			{ itemID = 2431125 }, --Boots of the Decimator
-			{ itemID = 2431173 }, --Boots of Savagery
-			{ itemID = 2431187 }, --Boots of the Pathfinder
-			{ itemID = 2431230 }, --Abyss Walker's Boots
-		},
-	},
-	--------------------
-	--- World Bosses ---
-	--------------------
-	["WorldBossesCLASSIC"] = {
-		----------------------------
-		--- Dragons of Nightmare ---
-		----------------------------
-		[6] = {
-			{ itemID = 20579 }, --Green Dragonskin Cloak
-			{ itemID = 20618 }, --Gloves of Delusional Power
-			{ itemID = 20615 }, --Dragonspur Wraps
-			{ itemID = 20617 }, --Ancient Corroded Leggings
-			{ itemID = 20616 }, --Dragonbone Wristguards
-			{ itemID = 20619 }, --Acid Inscribed Greaves
-			{ itemID = 20582 }, --Trance Stone
-			{ itemID = 20580 }, --Hammer of Bestial Fury
-			{ itemID = 20581 }, --Staff of Rampant Growth
-			{ itemID = 20644 }, --Nightmare Engulfed Object
-			{ itemID = 20600 }, --Malfurion's Signet Ring
-			{ itemID = 20623 }, --Circlet of Restless Dreams
-			{ itemID = 20621 }, --Boots of the Endless Moor
-			{ itemID = 20622 }, --Dragonheart Necklace
-			{ itemID = 20624 }, --Ring of the Unliving
-			{ itemID = 20599 }, --Polished Ironwood Crossbow
-		},
-		[7] = {
-			{ itemID = 20579 }, --Green Dragonskin Cloak
-			{ itemID = 20618 }, --Gloves of Delusional Power
-			{ itemID = 20615 }, --Dragonspur Wraps
-			{ itemID = 20617 }, --Ancient Corroded Leggings
-			{ itemID = 20616 }, --Dragonbone Wristguards
-			{ itemID = 20619 }, --Acid Inscribed Greaves
-			{ itemID = 20582 }, --Trance Stone
-			{ itemID = 20580 }, --Hammer of Bestial Fury
-			{ itemID = 20581 }, --Staff of Rampant Growth
-			{ itemID = 20644 }, --Nightmare Engulfed Object
-			{ itemID = 20600 }, --Malfurion's Signet Ring
-			{ itemID = 20626 }, --Black Bark Wristbands
-			{ itemID = 20625 }, --Belt of the Dark Bog
-			{ itemID = 20628 }, --Deviate Growth Cap
-			{ itemID = 20627 }, --Dark Heart Pants
-			{ itemID = 20629 }, --Malignant Footguards
-			{ itemID = 20630 }, --Gauntlets of the Shining Light
-		},
-		[8] = {
-			{ itemID = 20579 }, --Green Dragonskin Cloak
-			{ itemID = 20618 }, --Gloves of Delusional Power
-			{ itemID = 20615 }, --Dragonspur Wraps
-			{ itemID = 20617 }, --Ancient Corroded Leggings
-			{ itemID = 20616 }, --Dragonbone Wristguards
-			{ itemID = 20619 }, --Acid Inscribed Greaves
-			{ itemID = 20582 }, --Trance Stone
-			{ itemID = 20580 }, --Hammer of Bestial Fury
-			{ itemID = 20581 }, --Staff of Rampant Growth
-			{ itemID = 20644 }, --Nightmare Engulfed Object
-			{ itemID = 20600 }, --Malfurion's Signet Ring
-			{ itemID = 20631 }, --Mendicant's Slippers
-			{ itemID = 20633 }, --Unnatural Leather Spaulders
-			{ itemID = 20634 }, --Boots of Fright
-			{ itemID = 20632 }, --Mindtear Band
-			{ itemID = 20577 }, --Nightmare Blade
-		},
-		[9] = {
-			{ itemID = 20579 }, --Green Dragonskin Cloak
-			{ itemID = 20618 }, --Gloves of Delusional Power
-			{ itemID = 20615 }, --Dragonspur Wraps
-			{ itemID = 20617 }, --Ancient Corroded Leggings
-			{ itemID = 20616 }, --Dragonbone Wristguards
-			{ itemID = 20619 }, --Acid Inscribed Greaves
-			{ itemID = 20582 }, --Trance Stone
-			{ itemID = 20580 }, --Hammer of Bestial Fury
-			{ itemID = 20581 }, --Staff of Rampant Growth
-			{ itemID = 20644 }, --Nightmare Engulfed Object
-			{ itemID = 20600 }, --Malfurion's Signet Ring
-			{ itemID = 20635 }, --Jade Inlaid Vestments
-			{ itemID = 20638 }, --Leggings of the Demented Mind
-			{ itemID = 20637 }, --Acid Inscribed Pauldrons
-			{ itemID = 20639 }, --Strangely Glyphed Legplates
-			{ itemID = 20636 }, --Hibernation Crystal
-			{ itemID = 20578 }, --Emerald Dragonfang
-		},
-	},
-})
-------------------------
--- Item Sacks Classic --
-------------------------
-AtlasLoot:AddItemData("extraItemInfo", {
-	[22637] = {
-		{ itemID = 19790 }, --Animist's Caress
-		{ itemID = 19785 }, --Falcon's Call
-		{ itemID = 19787 }, --Presence of Sight
-		{ itemID = 19783 }, --Syncretist's Sigil
-		{ itemID = 19789 }, --Prophetic Aura
-		{ itemID = 19784 }, --Death's Embrace
-		{ itemID = 19786 }, --Vodouisant's Vigilant Embrace
-		{ itemID = 19788 }, --Hoodoo Hex
-		{ itemID = 19782 }, --Presence of Might
-	},
-	[21232] = {
-		{ itemID = 21242 }, --Blessed Qiraji War Axe
-		{ itemID = 21272 }, --Blessed Qiraji Musket
-		{ itemID = 21244 }, --Blessed Qiraji Pugio
-		{ itemID = 21269 }, --Blessed Qiraji Bulwark
-	},
-	[21237] = {
-		{ itemID = 21273 }, --Blessed Qiraji Acolyte Staff
-		{ itemID = 21275 }, --Blessed Qiraji Augur Staff
-		{ itemID = 21268 }, --Blessed Qiraji War Hammer
-	},
-	[21221] = {
-		{ itemID = 21710 }, --Cloak of the Fallen God
-		{ itemID = 21712 }, --Amulet of the Fallen God
-		{ itemID = 21709 }, --Ring of the Fallen God
-	},
+AtlasLoot:AddItemData("sort", {
+  { itemID = 414, groupID = 0, refLootEntry = 596 }; --Dalaran Sharp
+  { itemID = 818, groupID = 0, refLootEntry = 596 }; --Tigerseye
+  { itemID = 858, groupID = 0, refLootEntry = 596 }; --Lesser Healing Potion
+  { itemID = 954, groupID = 0, refLootEntry = 596 }; --Scroll of Strength
+  { itemID = 955, groupID = 0, refLootEntry = 596 }; --Scroll of Intellect
+  { itemID = 1179, groupID = 0, refLootEntry = 596 }; --Ice Cold Milk
+  { itemID = 1206, groupID = 0, refLootEntry = 596 }; --Moss Agate
+  { itemID = 1210, groupID = 0, refLootEntry = 596 }; --Shadowgem
+  { itemID = 2408, groupID = 0, refLootEntry = 596 }; --Pattern: Fine Leather Gloves
+  { itemID = 2455, groupID = 0, refLootEntry = 596 }; --Minor Mana Potion
+  { itemID = 2589, groupID = 0, refLootEntry = 596 }; --Linen Cloth
+  { itemID = 2592, groupID = 0, refLootEntry = 596 }; --Wool Cloth
+  { itemID = 2881, groupID = 0, refLootEntry = 596 }; --Plans: Runed Copper Breastplate
+  { itemID = 3012, groupID = 0, refLootEntry = 596 }; --Scroll of Agility
+  { itemID = 3902, groupID = 0, refLootEntry = 596 }; --Staff of Nobles
+  { itemID = 4293, groupID = 0, refLootEntry = 596 }; --Pattern: Hillman
+  { itemID = 4345, groupID = 0, refLootEntry = 596 }; --Pattern: Red Woolen Boots
+  { itemID = 4700, groupID = 0, refLootEntry = 596 }; --Inscribed Leather Spaulders
+  { itemID = 5967, groupID = 0, refLootEntry = 596 }; --Girdle of Nobility
+  { itemID = 6347, groupID = 0, refLootEntry = 596 }; --Formula: Enchant Bracer - Minor Strength
+  { itemID = 56935, groupID = 0, refLootEntry = 596 }; --Sigil of Brainwashed Noble
+  { itemID = 398607, groupID = 80, refLootEntry = 596 }; --Embossed Mystic Scroll
+  { itemID = 696661, groupID = 60, refLootEntry = 596 }; --Keeper
+  { itemID = 696662, groupID = 60, refLootEntry = 596 }; --Keeper
+  { itemID = 696663, groupID = 60, refLootEntry = 596 }; --Keeper
+  { itemID = 696664, groupID = 60, refLootEntry = 596 }; --Keeper
+  { itemID = 696665, groupID = 60, refLootEntry = 596 }; --Keeper
+  { itemID = 414, groupID = 0, refLootEntry = 626 }; --Dalaran Sharp
+  { itemID = 818, groupID = 0, refLootEntry = 626 }; --Tigerseye
+  { itemID = 856, groupID = 0, refLootEntry = 626 }; --Blue Leather Bag
+  { itemID = 858, groupID = 0, refLootEntry = 626 }; --Lesser Healing Potion
+  { itemID = 954, groupID = 0, refLootEntry = 626 }; --Scroll of Strength
+  { itemID = 955, groupID = 0, refLootEntry = 626 }; --Scroll of Intellect
+  { itemID = 1179, groupID = 0, refLootEntry = 626 }; --Ice Cold Milk
+  { itemID = 1180, groupID = 0, refLootEntry = 626 }; --Scroll of Stamina
+  { itemID = 1206, groupID = 0, refLootEntry = 626 }; --Moss Agate
+  { itemID = 1210, groupID = 0, refLootEntry = 626 }; --Shadowgem
+  { itemID = 1875, groupID = 0, refLootEntry = 626 }; --Thistlenettle
+  { itemID = 2406, groupID = 0, refLootEntry = 626 }; --Pattern: Fine Leather Boots
+  { itemID = 2408, groupID = 0, refLootEntry = 626 }; --Pattern: Fine Leather Gloves
+  { itemID = 2455, groupID = 0, refLootEntry = 626 }; --Minor Mana Potion
+  { itemID = 2553, groupID = 0, refLootEntry = 626 }; --Recipe: Elixir of Minor Agility
+  { itemID = 2589, groupID = 0, refLootEntry = 626 }; --Linen Cloth
+  { itemID = 2592, groupID = 0, refLootEntry = 626 }; --Wool Cloth
+  { itemID = 2601, groupID = 0, refLootEntry = 626 }; --Pattern: Gray Woolen Robe
+  { itemID = 2881, groupID = 0, refLootEntry = 626 }; --Plans: Runed Copper Breastplate
+  { itemID = 2883, groupID = 0, refLootEntry = 626 }; --Plans: Deadly Bronze Poniard
+  { itemID = 3012, groupID = 0, refLootEntry = 626 }; --Scroll of Agility
+  { itemID = 3393, groupID = 0, refLootEntry = 626 }; --Recipe: Minor Magic Resistance Potion
+  { itemID = 4293, groupID = 0, refLootEntry = 626 }; --Pattern: Hillman
+  { itemID = 4345, groupID = 0, refLootEntry = 626 }; --Pattern: Red Woolen Boots
+  { itemID = 4346, groupID = 0, refLootEntry = 626 }; --Pattern: Heavy Woolen Cloak
+  { itemID = 4348, groupID = 0, refLootEntry = 626 }; --Pattern: Phoenix Gloves
+  { itemID = 4409, groupID = 0, refLootEntry = 626 }; --Schematic: Small Seaforium Charge
+  { itemID = 4541, groupID = 0, refLootEntry = 626 }; --Freshly Baked Bread
+  { itemID = 4605, groupID = 0, refLootEntry = 626 }; --Red-speckled Mushroom
+  { itemID = 4694, groupID = 0, refLootEntry = 626 }; --Burnished Pauldrons
+  { itemID = 4698, groupID = 0, refLootEntry = 626 }; --Seer
+  { itemID = 4700, groupID = 0, refLootEntry = 626 }; --Inscribed Leather Spaulders
+  { itemID = 5573, groupID = 0, refLootEntry = 626 }; --Green Leather Bag
+  { itemID = 5574, groupID = 0, refLootEntry = 626 }; --White Leather Bag
+  { itemID = 5578, groupID = 0, refLootEntry = 626 }; --Plans: Silvered Bronze Breastplate
+  { itemID = 5972, groupID = 0, refLootEntry = 626 }; --Pattern: Fine Leather Pants
+  { itemID = 6344, groupID = 0, refLootEntry = 626 }; --Formula: Enchant Bracer - Minor Spirit
+  { itemID = 6347, groupID = 0, refLootEntry = 626 }; --Formula: Enchant Bracer - Minor Strength
+  { itemID = 6348, groupID = 0, refLootEntry = 626 }; --Formula: Enchant Weapon - Minor Beastslayer
+  { itemID = 6391, groupID = 0, refLootEntry = 626 }; --Pattern: Stylish Green Shirt
+  { itemID = 6530, groupID = 0, refLootEntry = 626 }; --Nightcrawlers
+  { itemID = 6588, groupID = 0, refLootEntry = 626 }; --Scouting Spaulders
+  { itemID = 6716, groupID = 0, refLootEntry = 626 }; --Schematic: EZ-Thro Dynamite
+  { itemID = 10405, groupID = 0, refLootEntry = 626 }; --Bandit Shoulders
+  { itemID = 10407, groupID = 0, refLootEntry = 626 }; --Raider
+  { itemID = 85872, groupID = 0, refLootEntry = 626 }; --Blood Soaked Vellum: Foreman Thistlenettle
+  { itemID = 398607, groupID = 80, refLootEntry = 626 }; --Embossed Mystic Scroll
+  { itemID = 696661, groupID = 60, refLootEntry = 626 }; --Keeper
+  { itemID = 696662, groupID = 60, refLootEntry = 626 }; --Keeper
+  { itemID = 696663, groupID = 60, refLootEntry = 626 }; --Keeper
+  { itemID = 696664, groupID = 60, refLootEntry = 626 }; --Keeper
+  { itemID = 696665, groupID = 60, refLootEntry = 626 }; --Keeper
+  { itemID = 5191, groupID = 1, refLootEntry = 639 }; --Cruel Barb
+  { itemID = 5193, groupID = 1, refLootEntry = 639 }; --Cape of the Brotherhood
+  { itemID = 5202, groupID = 1, refLootEntry = 639 }; --Corsair
+  { itemID = 10399, groupID = 1, refLootEntry = 639 }; --Blackened Defias Armor
+  { itemID = 2874, groupID = 0, refLootEntry = 639 }; --An Unsent Letter
+  { itemID = 3637, groupID = 0, refLootEntry = 639 }; --Head of VanCleef
+  { itemID = 56939, groupID = 0, refLootEntry = 639 }; --Sigil of Edwin VanCleef
+  { itemID = 375250, groupID = 0, refLootEntry = 639 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 639 }; --Dungeon Spoils
+  { itemID = 1937, groupID = 1, refLootEntry = 642 }; --Buzz Saw
+  { itemID = 2169, groupID = 1, refLootEntry = 642 }; --Buzzer Blade
+  { itemID = 5194, groupID = 1, refLootEntry = 642 }; --Taskmaster Axe
+  { itemID = 5195, groupID = 1, refLootEntry = 642 }; --Gold-flecked Gloves
+  { itemID = 7365, groupID = 0, refLootEntry = 642 }; --Gnoam Sprecklesprocket
+  { itemID = 56940, groupID = 0, refLootEntry = 642 }; --Sigil of Sneed
+  { itemID = 406010, groupID = 1, refLootEntry = 642 }; --Sneeds Sawed-Off
+  { itemID = 5197, groupID = 1, refLootEntry = 645 }; --Cookie
+  { itemID = 5198, groupID = 1, refLootEntry = 645 }; --Cookie
+  { itemID = 8490, groupID = 0, refLootEntry = 645 }; --Cat Carrier (Siamese)
+  { itemID = 56942, groupID = 0, refLootEntry = 645 }; --Sigil of Cookie
+  { itemID = 5192, groupID = 1, refLootEntry = 646 }; --Thief
+  { itemID = 5196, groupID = 1, refLootEntry = 646 }; --Smite
+  { itemID = 7230, groupID = 1, refLootEntry = 646 }; --Smite
+  { itemID = 56943, groupID = 0, refLootEntry = 646 }; --Sigil of Mr. Smite
+  { itemID = 5200, groupID = 1, refLootEntry = 647 }; --Impaling Harpoon
+  { itemID = 5201, groupID = 1, refLootEntry = 647 }; --Emberstone Staff
+  { itemID = 10403, groupID = 1, refLootEntry = 647 }; --Blackened Defias Belt
+  { itemID = 56944, groupID = 0, refLootEntry = 647 }; --Sigil of Captain Greenskin
+  { itemID = 3432, groupID = 1, refLootEntry = 1663 }; --Unnecessary Big Shanker
+  { itemID = 2909, groupID = 0, refLootEntry = 1663 }; --Red Wool Bandana
+  { itemID = 3628, groupID = 0, refLootEntry = 1663 }; --Hand of Dextren Ward
+  { itemID = 56969, groupID = 0, refLootEntry = 1663 }; --Sigil of Dextren Ward
+  { itemID = 1903, groupID = 1, refLootEntry = 1666 }; --Knee Cracker
+  { itemID = 1985, groupID = 1, refLootEntry = 1666 }; --Kam
+  { itemID = 2280, groupID = 1, refLootEntry = 1666 }; --Kam
+  { itemID = 3640, groupID = 0, refLootEntry = 1666 }; --Head of Deepfury
+  { itemID = 56970, groupID = 0, refLootEntry = 1666 }; --Sigil of Kam Deepfury
+  { itemID = 5305, groupID = 1, refLootEntry = 1696 }; --Dreadful Blade
+  { itemID = 3630, groupID = 0, refLootEntry = 1696 }; --Head of Targorr
+  { itemID = 56971, groupID = 0, refLootEntry = 1696 }; --Sigil of Targorr the Dread
+  { itemID = 1897, groupID = 1, refLootEntry = 1716 }; --Behander
+  { itemID = 2909, groupID = 0, refLootEntry = 1716 }; --Red Wool Bandana
+  { itemID = 2926, groupID = 0, refLootEntry = 1716 }; --Head of Bazil Thredd
+  { itemID = 56972, groupID = 0, refLootEntry = 1716 }; --Sigil of Bazil Thredd
+  { itemID = 375250, groupID = 0, refLootEntry = 1716 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 1716 }; --Dungeon Spoils
+  { itemID = 2827, groupID = 1, refLootEntry = 1717 }; --Hamhock
+  { itemID = 56973, groupID = 0, refLootEntry = 1717 }; --Sigil of Hamhock
+  { itemID = 2941, groupID = 1, refLootEntry = 1720 }; --Prison Shank
+  { itemID = 2942, groupID = 1, refLootEntry = 1720 }; --Iron Knuckles
+  { itemID = 3228, groupID = 1, refLootEntry = 1720 }; --Jimmied Handcuffs
+  { itemID = 2909, groupID = 0, refLootEntry = 1720 }; --Red Wool Bandana
+  { itemID = 56974, groupID = 0, refLootEntry = 1720 }; --Sigil of Bruegal Ironknuckle
+  { itemID = 1156, groupID = 1, refLootEntry = 1763 }; --Lavishly Jeweled Ring
+  { itemID = 5199, groupID = 1, refLootEntry = 1763 }; --Smelting Pants
+  { itemID = 56976, groupID = 0, refLootEntry = 1763 }; --Sigil of Gilnid
+  { itemID = 13398, groupID = 1, refLootEntry = 1853 }; --Boots of the Shrieker
+  { itemID = 13937, groupID = 1, refLootEntry = 1853 }; --Headmaster
+  { itemID = 13938, groupID = 1, refLootEntry = 1853 }; --Bonecreeper Stylus
+  { itemID = 13944, groupID = 1, refLootEntry = 1853 }; --Tombstone Breastplate
+  { itemID = 13951, groupID = 1, refLootEntry = 1853 }; --Vigorsteel Vambraces
+  { itemID = 13953, groupID = 1, refLootEntry = 1853 }; --Silent Fang
+  { itemID = 13964, groupID = 1, refLootEntry = 1853 }; --Witchblade
+  { itemID = 16667, groupID = 1, refLootEntry = 1853 }; --Coif of Elements
+  { itemID = 16677, groupID = 1, refLootEntry = 1853 }; --Beaststalker
+  { itemID = 16686, groupID = 1, refLootEntry = 1853 }; --Magister
+  { itemID = 16693, groupID = 1, refLootEntry = 1853 }; --Devout Crown
+  { itemID = 16698, groupID = 1, refLootEntry = 1853 }; --Dreadmist Mask
+  { itemID = 16707, groupID = 1, refLootEntry = 1853 }; --Shadowcraft Cap
+  { itemID = 16720, groupID = 1, refLootEntry = 1853 }; --Wildheart Cowl
+  { itemID = 16727, groupID = 1, refLootEntry = 1853 }; --Lightforge Helm
+  { itemID = 16731, groupID = 1, refLootEntry = 1853 }; --Helm of Valor
+  { itemID = 22433, groupID = 1, refLootEntry = 1853 }; --Don Mauricio
+  { itemID = 12843, groupID = 0, refLootEntry = 1853 }; --Corruptor
+  { itemID = 13501, groupID = 0, refLootEntry = 1853 }; --Recipe: Major Mana Potion
+  { itemID = 14514, groupID = 0, refLootEntry = 1853 }; --Pattern: Robe of the Void
+  { itemID = 19276, groupID = 0, refLootEntry = 1853 }; --Ace of Portals
+  { itemID = 56988, groupID = 0, refLootEntry = 1853 }; --Sigil of Darkmaster Gandling
+  { itemID = 97730, groupID = 0, refLootEntry = 1853 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 1853 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 1853 }; --Dungeon Spoils
+  { itemID = 4306, groupID = 0, refLootEntry = 2748 }; --Silk Cloth
+  { itemID = 4338, groupID = 0, refLootEntry = 2748 }; --Mageweave Cloth
+  { itemID = 4552, groupID = 0, refLootEntry = 2748 }; --Smooth Stone Chip
+  { itemID = 4554, groupID = 0, refLootEntry = 2748 }; --Shiny Polished Stone
+  { itemID = 4599, groupID = 0, refLootEntry = 2748 }; --Cured Ham Steak
+  { itemID = 7672, groupID = 0, refLootEntry = 2748 }; --Shattered Necklace Power Source
+  { itemID = 7912, groupID = 0, refLootEntry = 2748 }; --Solid Stone
+  { itemID = 8150, groupID = 0, refLootEntry = 2748 }; --Deeprock Salt
+  { itemID = 9413, groupID = 1, refLootEntry = 2748 }; --The Rockpounder
+  { itemID = 9418, groupID = 1, refLootEntry = 2748 }; --Stoneslayer
+  { itemID = 11118, groupID = 1, refLootEntry = 2748 }; --Archaedic Stone
+  { itemID = 375250, groupID = 0, refLootEntry = 2748 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 2748 }; --Dungeon Spoils
+  { itemID = 1477, groupID = 0, refLootEntry = 2932 }; --Scroll of Agility II
+  { itemID = 1529, groupID = 0, refLootEntry = 2932 }; --Jade
+  { itemID = 1708, groupID = 0, refLootEntry = 2932 }; --Sweet Nectar
+  { itemID = 1710, groupID = 0, refLootEntry = 2932 }; --Greater Healing Potion
+  { itemID = 1725, groupID = 0, refLootEntry = 2932 }; --Large Knapsack
+  { itemID = 2289, groupID = 0, refLootEntry = 2932 }; --Scroll of Strength II
+  { itemID = 2772, groupID = 0, refLootEntry = 2932 }; --Iron Ore
+  { itemID = 2838, groupID = 0, refLootEntry = 2932 }; --Heavy Stone
+  { itemID = 3827, groupID = 0, refLootEntry = 2932 }; --Mana Potion
+  { itemID = 3864, groupID = 0, refLootEntry = 2932 }; --Citrine
+  { itemID = 4300, groupID = 0, refLootEntry = 2932 }; --Pattern: Guardian Leather Bracers
+  { itemID = 4306, groupID = 0, refLootEntry = 2932 }; --Silk Cloth
+  { itemID = 4338, groupID = 0, refLootEntry = 2932 }; --Mageweave Cloth
+  { itemID = 4353, groupID = 0, refLootEntry = 2932 }; --Pattern: Spider Belt
+  { itemID = 4416, groupID = 0, refLootEntry = 2932 }; --Schematic: Goblin Land Mine
+  { itemID = 4421, groupID = 0, refLootEntry = 2932 }; --Scroll of Protection III
+  { itemID = 4424, groupID = 0, refLootEntry = 2932 }; --Scroll of Spirit III
+  { itemID = 4544, groupID = 0, refLootEntry = 2932 }; --Mulgore Spice Bread
+  { itemID = 4635, groupID = 0, refLootEntry = 2932 }; --Hammertoe
+  { itemID = 4636, groupID = 0, refLootEntry = 2932 }; --Strong Iron Lockbox
+  { itemID = 5974, groupID = 0, refLootEntry = 2932 }; --Pattern: Guardian Cloak
+  { itemID = 7084, groupID = 0, refLootEntry = 2932 }; --Pattern: Crimson Silk Shoulders
+  { itemID = 7909, groupID = 0, refLootEntry = 2932 }; --Aquamarine
+  { itemID = 7912, groupID = 0, refLootEntry = 2932 }; --Solid Stone
+  { itemID = 98558, groupID = 90, refLootEntry = 2932 }; --Fighter
+  { itemID = 398607, groupID = 80, refLootEntry = 2932 }; --Embossed Mystic Scroll
+  { itemID = 696661, groupID = 60, refLootEntry = 2932 }; --Keeper
+  { itemID = 696662, groupID = 60, refLootEntry = 2932 }; --Keeper
+  { itemID = 696663, groupID = 60, refLootEntry = 2932 }; --Keeper
+  { itemID = 696664, groupID = 60, refLootEntry = 2932 }; --Keeper
+  { itemID = 696665, groupID = 60, refLootEntry = 2932 }; --Keeper
+  { itemID = 5443, groupID = 1, refLootEntry = 3586 }; --Gold-plated Buckler
+  { itemID = 5444, groupID = 1, refLootEntry = 3586 }; --Miner
+  { itemID = 57593, groupID = 0, refLootEntry = 3586 }; --Sigil of Miner Johnson
+  { itemID = 6447, groupID = 1, refLootEntry = 3653 }; --Worn Turtle Shell Shield
+  { itemID = 13245, groupID = 1, refLootEntry = 3653 }; --Kresh
+  { itemID = 6443, groupID = 0, refLootEntry = 3653 }; --Deviate Hide
+  { itemID = 57596, groupID = 0, refLootEntry = 3653 }; --Sigil of Kresh
+  { itemID = 79638, groupID = 0, refLootEntry = 3653 }; --Beastmaster
+  { itemID = 6461, groupID = 1, refLootEntry = 3654 }; --Slime-encrusted Pads
+  { itemID = 6463, groupID = 1, refLootEntry = 3654 }; --Deep Fathom Ring
+  { itemID = 6627, groupID = 1, refLootEntry = 3654 }; --Mutant Scale Breastplate
+  { itemID = 6443, groupID = 0, refLootEntry = 3654 }; --Deviate Hide
+  { itemID = 10441, groupID = 0, refLootEntry = 3654 }; --Glowing Shard
+  { itemID = 57597, groupID = 0, refLootEntry = 3654 }; --Sigil of Mutanus the Devourer
+  { itemID = 2021814, groupID = 0, refLootEntry = 3654 }; --Dungeon Spoils
+  { itemID = 6460, groupID = 1, refLootEntry = 3669 }; --Cobrahn
+  { itemID = 6465, groupID = 1, refLootEntry = 3669 }; --Robe of the Moccasin
+  { itemID = 10410, groupID = 1, refLootEntry = 3669 }; --Leggings of the Fang
+  { itemID = 9738, groupID = 0, refLootEntry = 3669 }; --Gem of Cobrahn
+  { itemID = 57598, groupID = 0, refLootEntry = 3669 }; --Sigil of Lord Cobrahn
+  { itemID = 2021814, groupID = 0, refLootEntry = 3669 }; --Dungeon Spoils
+  { itemID = 6472, groupID = 1, refLootEntry = 3670 }; --Stinging Viper
+  { itemID = 6473, groupID = 1, refLootEntry = 3670 }; --Armor of the Fang
+  { itemID = 9740, groupID = 0, refLootEntry = 3670 }; --Gem of Pythas
+  { itemID = 57599, groupID = 0, refLootEntry = 3670 }; --Sigil of Lord Pythas
+  { itemID = 5404, groupID = 1, refLootEntry = 3671 }; --Serpent
+  { itemID = 10412, groupID = 1, refLootEntry = 3671 }; --Belt of the Fang
+  { itemID = 9739, groupID = 0, refLootEntry = 3671 }; --Gem of Anacondra
+  { itemID = 57600, groupID = 0, refLootEntry = 3671 }; --Sigil of Lady Anacondra
+  { itemID = 5970, groupID = 1, refLootEntry = 3673 }; --Serpent Gloves
+  { itemID = 6459, groupID = 1, refLootEntry = 3673 }; --Savage Trodders
+  { itemID = 6469, groupID = 1, refLootEntry = 3673 }; --Venomstrike
+  { itemID = 10411, groupID = 1, refLootEntry = 3673 }; --Footpads of the Fang
+  { itemID = 9741, groupID = 0, refLootEntry = 3673 }; --Gem of Serpentis
+  { itemID = 57602, groupID = 0, refLootEntry = 3673 }; --Sigil of Lord Serpentis
+  { itemID = 6448, groupID = 1, refLootEntry = 3674 }; --Tail Spike
+  { itemID = 6449, groupID = 1, refLootEntry = 3674 }; --Glowing Lizardscale Cloak
+  { itemID = 6443, groupID = 0, refLootEntry = 3674 }; --Deviate Hide
+  { itemID = 57603, groupID = 0, refLootEntry = 3674 }; --Sigil of Skum
+  { itemID = 2021814, groupID = 0, refLootEntry = 3674 }; --Dungeon Spoils
+  { itemID = 6641, groupID = 1, refLootEntry = 3872 }; --Haunting Blade
+  { itemID = 6642, groupID = 1, refLootEntry = 3872 }; --Phantom Armor
+  { itemID = 57610, groupID = 0, refLootEntry = 3872 }; --Sigil of Deathsworn Captain
+  { itemID = 1292, groupID = 1, refLootEntry = 3886 }; --Butcher
+  { itemID = 6226, groupID = 1, refLootEntry = 3886 }; --Bloody Apron
+  { itemID = 6633, groupID = 1, refLootEntry = 3886 }; --Butcher
+  { itemID = 57611, groupID = 0, refLootEntry = 3886 }; --Sigil of Razorclaw the Butcher
+  { itemID = 6321, groupID = 1, refLootEntry = 3887 }; --Silverlaine
+  { itemID = 6323, groupID = 1, refLootEntry = 3887 }; --Baron
+  { itemID = 57612, groupID = 0, refLootEntry = 3887 }; --Sigil of Baron Silverlaine
+  { itemID = 5254, groupID = 1, refLootEntry = 3914 }; --Rugged Spaulders
+  { itemID = 6341, groupID = 1, refLootEntry = 3914 }; --Eerie Stable Lantern
+  { itemID = 57613, groupID = 0, refLootEntry = 3914 }; --Sigil of Rethilgore
+  { itemID = 3748, groupID = 1, refLootEntry = 3927 }; --Feline Mantle
+  { itemID = 6314, groupID = 1, refLootEntry = 3927 }; --Wolfmaster Cape
+  { itemID = 29434, groupID = 0, refLootEntry = 3927 }; --Badge of Justice
+  { itemID = 57614, groupID = 0, refLootEntry = 3927 }; --Sigil of Wolf Master Nandos
+  { itemID = 3456, groupID = 1, refLootEntry = 3974 }; --Dog Whistle
+  { itemID = 4306, groupID = 0, refLootEntry = 3974 }; --Silk Cloth
+  { itemID = 5805, groupID = 0, refLootEntry = 3974 }; --Heart of Zeal
+  { itemID = 7710, groupID = 1, refLootEntry = 3974 }; --Loksey
+  { itemID = 7756, groupID = 1, refLootEntry = 3974 }; --Dog Training Gloves
+  { itemID = 57616, groupID = 0, refLootEntry = 3974 }; --Sigil of Houndmaster Loksey
+  { itemID = 4306, groupID = 0, refLootEntry = 3975 }; --Silk Cloth
+  { itemID = 5805, groupID = 0, refLootEntry = 3975 }; --Heart of Zeal
+  { itemID = 7717, groupID = 1, refLootEntry = 3975 }; --Ravager
+  { itemID = 7718, groupID = 1, refLootEntry = 3975 }; --Herod
+  { itemID = 7719, groupID = 1, refLootEntry = 3975 }; --Raging Berserker
+  { itemID = 10330, groupID = 1, refLootEntry = 3975 }; --Scarlet Leggings
+  { itemID = 57617, groupID = 0, refLootEntry = 3975 }; --Sigil of Herod
+  { itemID = 375250, groupID = 0, refLootEntry = 3975 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 3975 }; --Dungeon Spoils
+  { itemID = 4306, groupID = 0, refLootEntry = 3976 }; --Silk Cloth
+  { itemID = 5805, groupID = 0, refLootEntry = 3976 }; --Heart of Zeal
+  { itemID = 7723, groupID = 1, refLootEntry = 3976 }; --Mograine
+  { itemID = 7724, groupID = 1, refLootEntry = 3976 }; --Gauntlets of Divinity
+  { itemID = 7726, groupID = 1, refLootEntry = 3976 }; --Aegis of the Scarlet Commander
+  { itemID = 10330, groupID = 1, refLootEntry = 3976 }; --Scarlet Leggings
+  { itemID = 4306, groupID = 0, refLootEntry = 3977 }; --Silk Cloth
+  { itemID = 5805, groupID = 0, refLootEntry = 3977 }; --Heart of Zeal
+  { itemID = 7720, groupID = 1, refLootEntry = 3977 }; --Whitemane
+  { itemID = 7721, groupID = 1, refLootEntry = 3977 }; --Hand of Righteousness
+  { itemID = 7722, groupID = 1, refLootEntry = 3977 }; --Triune Amulet
+  { itemID = 20976, groupID = 0, refLootEntry = 3977 }; --Design: Citrine Pendant of Golden Healing
+  { itemID = 57618, groupID = 0, refLootEntry = 3977 }; --Sigil of High Inquisitor Whitemane
+  { itemID = 375250, groupID = 0, refLootEntry = 3977 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 3977 }; --Dungeon Spoils
+  { itemID = 3230, groupID = 1, refLootEntry = 4274 }; --Black Wolf Bracers
+  { itemID = 6340, groupID = 1, refLootEntry = 4274 }; --Fenrus
+  { itemID = 57624, groupID = 0, refLootEntry = 4274 }; --Sigil of Fenrus the Devourer
+  { itemID = 6220, groupID = 1, refLootEntry = 4275 }; --Meteor Shard
+  { itemID = 6324, groupID = 1, refLootEntry = 4275 }; --Robes of Arugal
+  { itemID = 6392, groupID = 1, refLootEntry = 4275 }; --Belt of Arugal
+  { itemID = 5442, groupID = 0, refLootEntry = 4275 }; --Head of Arugal
+  { itemID = 57625, groupID = 0, refLootEntry = 4275 }; --Sigil of Archmage Arugal
+  { itemID = 375250, groupID = 0, refLootEntry = 4275 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 4275 }; --Dungeon Spoils
+  { itemID = 3191, groupID = 1, refLootEntry = 4278 }; --Arced War Axe
+  { itemID = 6320, groupID = 1, refLootEntry = 4278 }; --Commander
+  { itemID = 57626, groupID = 0, refLootEntry = 4278 }; --Sigil of Commander Springvale
+  { itemID = 6318, groupID = 1, refLootEntry = 4279 }; --Odo
+  { itemID = 6319, groupID = 1, refLootEntry = 4279 }; --Girdle of the Blindwatcher
+  { itemID = 57627, groupID = 0, refLootEntry = 4279 }; --Sigil of Odo the Blindwatcher
+  { itemID = 6686, groupID = 1, refLootEntry = 4420 }; --Tusken Helm
+  { itemID = 6687, groupID = 1, refLootEntry = 4420 }; --Corpsemaker
+  { itemID = 5825, groupID = 0, refLootEntry = 4420 }; --Treshala
+  { itemID = 57629, groupID = 0, refLootEntry = 4420 }; --Sigil of Overlord Ramtusk
+  { itemID = 6692, groupID = 1, refLootEntry = 4421 }; --Pronged Reaver
+  { itemID = 6693, groupID = 1, refLootEntry = 4421 }; --Agamaggan
+  { itemID = 6694, groupID = 1, refLootEntry = 4421 }; --Heart of Agamaggan
+  { itemID = 5792, groupID = 0, refLootEntry = 4421 }; --Razorflank
+  { itemID = 5793, groupID = 0, refLootEntry = 4421 }; --Razorflank
+  { itemID = 5825, groupID = 0, refLootEntry = 4421 }; --Treshala
+  { itemID = 17008, groupID = 0, refLootEntry = 4421 }; --Small Scroll
+  { itemID = 57630, groupID = 0, refLootEntry = 4421 }; --Sigil of Charlga Razorflank
+  { itemID = 375250, groupID = 0, refLootEntry = 4421 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 4421 }; --Dungeon Spoils
+  { itemID = 6690, groupID = 1, refLootEntry = 4422 }; --Ferine Leggings
+  { itemID = 6691, groupID = 1, refLootEntry = 4422 }; --Swinetusk Shank
+  { itemID = 57631, groupID = 0, refLootEntry = 4422 }; --Sigil of Agathelos the Raging
+  { itemID = 2551, groupID = 1, refLootEntry = 4424 }; --Boar Bolter
+  { itemID = 6681, groupID = 1, refLootEntry = 4424 }; --Thornspike
+  { itemID = 5825, groupID = 0, refLootEntry = 4424 }; --Treshala
+  { itemID = 57632, groupID = 0, refLootEntry = 4424 }; --Sigil of Aggem Thorncurse
+  { itemID = 6695, groupID = 1, refLootEntry = 4425 }; --Stygian Bone Amulet
+  { itemID = 6696, groupID = 1, refLootEntry = 4425 }; --Nightstalker Bow
+  { itemID = 6697, groupID = 1, refLootEntry = 4425 }; --Batwing Mantle
+  { itemID = 57633, groupID = 0, refLootEntry = 4425 }; --Sigil of Blind Hunter
+  { itemID = 79701, groupID = 0, refLootEntry = 4425 }; --Beastmaster
+  { itemID = 2816, groupID = 1, refLootEntry = 4428 }; --Death Speaker Scepter
+  { itemID = 6682, groupID = 1, refLootEntry = 4428 }; --Death Speaker Robes
+  { itemID = 6685, groupID = 1, refLootEntry = 4428 }; --Death Speaker Mantle
+  { itemID = 5825, groupID = 0, refLootEntry = 4428 }; --Treshala
+  { itemID = 57634, groupID = 0, refLootEntry = 4428 }; --Sigil of Death Speaker Jargba
+  { itemID = 5825, groupID = 0, refLootEntry = 4438 }; --Treshala
+  { itemID = 57635, groupID = 0, refLootEntry = 4438 }; --Sigil of Razorfen Spearhide
+  { itemID = 888, groupID = 1, refLootEntry = 4831 }; --Naga Battle Gloves
+  { itemID = 3078, groupID = 1, refLootEntry = 4831 }; --Naga Heartpiercer
+  { itemID = 11121, groupID = 1, refLootEntry = 4831 }; --Darkwater Talwar
+  { itemID = 5952, groupID = 0, refLootEntry = 4831 }; --Corrupted Brain Stem
+  { itemID = 57640, groupID = 0, refLootEntry = 4831 }; --Sigil of Lady Sarevess
+  { itemID = 1155, groupID = 1, refLootEntry = 4832 }; --Rod of the Sleepwalker
+  { itemID = 6903, groupID = 1, refLootEntry = 4832 }; --Gaze Dreamer Pants
+  { itemID = 5881, groupID = 0, refLootEntry = 4832 }; --Head of Kelris
+  { itemID = 57641, groupID = 0, refLootEntry = 4832 }; --Sigil of Twilight Lord Kelris
+  { itemID = 6688, groupID = 1, refLootEntry = 4842 }; --Whisperwind Headdress
+  { itemID = 6689, groupID = 1, refLootEntry = 4842 }; --Wind Spirit Staff
+  { itemID = 5825, groupID = 0, refLootEntry = 4842 }; --Treshala
+  { itemID = 57642, groupID = 0, refLootEntry = 4842 }; --Sigil of Earthcaller Halmgar
+  { itemID = 1645, groupID = 0, refLootEntry = 4854 }; --Moonberry Juice
+  { itemID = 4306, groupID = 0, refLootEntry = 4854 }; --Silk Cloth
+  { itemID = 4338, groupID = 0, refLootEntry = 4854 }; --Mageweave Cloth
+  { itemID = 4599, groupID = 0, refLootEntry = 4854 }; --Cured Ham Steak
+  { itemID = 7670, groupID = 0, refLootEntry = 4854 }; --Shattered Necklace Sapphire
+  { itemID = 9414, groupID = 1, refLootEntry = 4854 }; --Oilskin Leggings
+  { itemID = 9415, groupID = 1, refLootEntry = 4854 }; --Grimlok
+  { itemID = 9416, groupID = 1, refLootEntry = 4854 }; --Grimlok
+  { itemID = 57643, groupID = 0, refLootEntry = 4854 }; --Sigil of Grimlok
+  { itemID = 2021814, groupID = 0, refLootEntry = 4854 }; --Dungeon Spoils
+  { itemID = 6907, groupID = 1, refLootEntry = 4887 }; --Tortoise Armor
+  { itemID = 6908, groupID = 1, refLootEntry = 4887 }; --Ghamoo-ra
+  { itemID = 57644, groupID = 0, refLootEntry = 4887 }; --Sigil of Ghamoo-ra
+  { itemID = 79747, groupID = 0, refLootEntry = 4887 }; --Beastmaster
+  { itemID = 10828, groupID = 1, refLootEntry = 5709 }; --Dire Nail
+  { itemID = 10829, groupID = 1, refLootEntry = 5709 }; --The Dragon
+  { itemID = 10833, groupID = 1, refLootEntry = 5709 }; --Horns of Eranikus
+  { itemID = 10835, groupID = 1, refLootEntry = 5709 }; --Crest of Supremacy
+  { itemID = 10836, groupID = 1, refLootEntry = 5709 }; --Rod of Corrosion
+  { itemID = 10837, groupID = 1, refLootEntry = 5709 }; --Tooth of Eranikus
+  { itemID = 10847, groupID = 1, refLootEntry = 5709 }; --Dragon
+  { itemID = 4460, groupID = 0, refLootEntry = 5709 }; --Ripped Wing Webbing
+  { itemID = 10454, groupID = 0, refLootEntry = 5709 }; --Essence of Eranikus
+  { itemID = 375250, groupID = 0, refLootEntry = 5709 }; --Rune of Ascension
+  { itemID = 1180226, groupID = 0, refLootEntry = 5709 }; --Draconic Warhorn: Shade of Eranikus
+  { itemID = 2021814, groupID = 0, refLootEntry = 5709 }; --Dungeon Spoils
+  { itemID = 4460, groupID = 0, refLootEntry = 5719 }; --Ripped Wing Webbing
+  { itemID = 20019, groupID = 0, refLootEntry = 5719 }; --Tooth of Morphaz
+  { itemID = 20022, groupID = 0, refLootEntry = 5719 }; --Azure Key
+  { itemID = 20025, groupID = 0, refLootEntry = 5719 }; --Blood of Morphaz
+  { itemID = 20085, groupID = 0, refLootEntry = 5719 }; --Arcane Shard
+  { itemID = 57663, groupID = 0, refLootEntry = 5719 }; --Sigil of Morphaz
+  { itemID = 1180229, groupID = 0, refLootEntry = 5719 }; --Draconic Warhorn: Morphaz
+  { itemID = 4460, groupID = 0, refLootEntry = 5720 }; --Ripped Wing Webbing
+  { itemID = 57664, groupID = 0, refLootEntry = 5720 }; --Sigil of Weaver
+  { itemID = 1180230, groupID = 0, refLootEntry = 5720 }; --Draconic Warhorn: Weaver
+  { itemID = 4460, groupID = 0, refLootEntry = 5722 }; --Ripped Wing Webbing
+  { itemID = 57666, groupID = 0, refLootEntry = 5722 }; --Sigil of Hazzas
+  { itemID = 1180232, groupID = 0, refLootEntry = 5722 }; --Draconic Warhorn: Hazzas
+  { itemID = 6629, groupID = 1, refLootEntry = 5775 }; --Sporid Cape
+  { itemID = 6630, groupID = 1, refLootEntry = 5775 }; --Seedcloud Buckler
+  { itemID = 6631, groupID = 1, refLootEntry = 5775 }; --Living Root
+  { itemID = 6443, groupID = 0, refLootEntry = 5775 }; --Deviate Hide
+  { itemID = 57667, groupID = 0, refLootEntry = 5775 }; --Sigil of Verdan the Everliving
+  { itemID = 375250, groupID = 0, refLootEntry = 5775 }; --Rune of Ascension
+  { itemID = 601062, groupID = 0, refLootEntry = 5775 }; --Elemental Lodestone: Verdan the Everliving
+  { itemID = 2021814, groupID = 0, refLootEntry = 5775 }; --Dungeon Spoils
+  { itemID = 5243, groupID = 1, refLootEntry = 5912 }; --Firebelcher
+  { itemID = 6632, groupID = 1, refLootEntry = 5912 }; --Feyscale Cloak
+  { itemID = 6443, groupID = 0, refLootEntry = 5912 }; --Deviate Hide
+  { itemID = 58212, groupID = 0, refLootEntry = 5912 }; --Sigil of Deviate Faerie Dragon
+  { itemID = 1180233, groupID = 0, refLootEntry = 5912 }; --Draconic Warhorn: Deviate Faerie Dragon
+  { itemID = 17304, groupID = 1, refLootEntry = 6037 }; --Crystalized Water Spike
+  { itemID = 17663, groupID = 1, refLootEntry = 6037 }; --Frostbound Bulwark
+  { itemID = 17664, groupID = 1, refLootEntry = 6037 }; --Glaciermind Spellfocus
+  { itemID = 17665, groupID = 1, refLootEntry = 6037 }; --Glacierborn Greatsword
+  { itemID = 17912, groupID = 1, refLootEntry = 6037 }; --Glacierwoven Legwraps
+  { itemID = 17913, groupID = 1, refLootEntry = 6037 }; --Frostbite Warcloak
+  { itemID = 18064, groupID = 1, refLootEntry = 6037 }; --Band of Winter
+  { itemID = 18065, groupID = 1, refLootEntry = 6037 }; --Frostwoven Spiritbinder Gloves
+  { itemID = 18084, groupID = 1, refLootEntry = 6037 }; --Glacierbound Wristguards
+  { itemID = 18085, groupID = 1, refLootEntry = 6037 }; --Frostbite Spellhammer
+  { itemID = 375250, groupID = 0, refLootEntry = 6037 }; --Rune of Ascension
+  { itemID = 1615011, groupID = 0, refLootEntry = 6037 }; --Treasures of Azeroth
+  { itemID = 16088, groupID = 1, refLootEntry = 6109 }; --Fang of the Mystics
+  { itemID = 16257, groupID = 1, refLootEntry = 6109 }; --Eskhandar
+  { itemID = 16284, groupID = 1, refLootEntry = 6109 }; --Drape of Benediction
+  { itemID = 16609, groupID = 1, refLootEntry = 6109 }; --Puissant Cape
+  { itemID = 16624, groupID = 1, refLootEntry = 6109 }; --Typhoon
+  { itemID = 16627, groupID = 1, refLootEntry = 6109 }; --Leggings of Arcane Supremacy
+  { itemID = 16771, groupID = 1, refLootEntry = 6109 }; --Unmelting Ice Girdle
+  { itemID = 16772, groupID = 1, refLootEntry = 6109 }; --Cold Snap
+  { itemID = 17085, groupID = 1, refLootEntry = 6109 }; --Snowblind Shoes
+  { itemID = 17120, groupID = 1, refLootEntry = 6109 }; --Crystal Adorned Crown
+  { itemID = 375250, groupID = 0, refLootEntry = 6109 }; --Rune of Ascension
+  { itemID = 1005012, groupID = 0, refLootEntry = 6109 }; --Scale of Azuregos
+  { itemID = 1180234, groupID = 0, refLootEntry = 6109 }; --Draconic Warhorn: Azuregos
+  { itemID = 1615011, groupID = 0, refLootEntry = 6109 }; --Treasures of Azeroth
+  { itemID = 2039, groupID = 1, refLootEntry = 6168 }; --Plains Ring
+  { itemID = 2177, groupID = 1, refLootEntry = 6168 }; --Quartzstone Staff
+  { itemID = 5825, groupID = 0, refLootEntry = 6168 }; --Treshala
+  { itemID = 6841, groupID = 0, refLootEntry = 6168 }; --Vial of Phlogiston
+  { itemID = 58229, groupID = 0, refLootEntry = 6168 }; --Sigil of Roogug
+  { itemID = 9455, groupID = 1, refLootEntry = 6228 }; --Emissary Cuffs
+  { itemID = 9456, groupID = 1, refLootEntry = 6228 }; --Glass Shooter
+  { itemID = 9457, groupID = 1, refLootEntry = 6228 }; --Royal Diplomatic Scepter
+  { itemID = 5108, groupID = 0, refLootEntry = 6228 }; --Dark Iron Leather
+  { itemID = 58230, groupID = 0, refLootEntry = 6228 }; --Sigil of Dark Iron Ambassador
+  { itemID = 9449, groupID = 1, refLootEntry = 6229 }; --Manual Crowd Pummeler
+  { itemID = 9450, groupID = 1, refLootEntry = 6229 }; --Gnomebot Operating Boots
+  { itemID = 406004, groupID = 1, refLootEntry = 6229 }; --Calibrated Puncher
+  { itemID = 9309, groupID = 0, refLootEntry = 6229 }; --Robo-mechanical Guts
+  { itemID = 9327, groupID = 0, refLootEntry = 6229 }; --Security DELTA Data Access Card
+  { itemID = 58359, groupID = 0, refLootEntry = 6229 }; --Sigil of Crowd Pummeler 9-60
+  { itemID = 2021814, groupID = 0, refLootEntry = 6229 }; --Dungeon Spoils
+  { itemID = 9444, groupID = 1, refLootEntry = 6231 }; --Techbot CPU Shell
+  { itemID = 9277, groupID = 0, refLootEntry = 6231 }; --Techbot
+  { itemID = 9309, groupID = 0, refLootEntry = 6231 }; --Robo-mechanical Guts
+  { itemID = 9327, groupID = 0, refLootEntry = 6231 }; --Security DELTA Data Access Card
+  { itemID = 398607, groupID = 80, refLootEntry = 6231 }; --Embossed Mystic Scroll
+  { itemID = 696661, groupID = 60, refLootEntry = 6231 }; --Keeper
+  { itemID = 696662, groupID = 60, refLootEntry = 6231 }; --Keeper
+  { itemID = 696663, groupID = 60, refLootEntry = 6231 }; --Keeper
+  { itemID = 696664, groupID = 60, refLootEntry = 6231 }; --Keeper
+  { itemID = 696665, groupID = 60, refLootEntry = 6231 }; --Keeper
+  { itemID = 9446, groupID = 1, refLootEntry = 6235 }; --Electrocutioner Leg
+  { itemID = 9447, groupID = 1, refLootEntry = 6235 }; --Electrocutioner Lagnut
+  { itemID = 9448, groupID = 1, refLootEntry = 6235 }; --Spidertank Oilrag
+  { itemID = 6893, groupID = 0, refLootEntry = 6235 }; --Workshop Key
+  { itemID = 9309, groupID = 0, refLootEntry = 6235 }; --Robo-mechanical Guts
+  { itemID = 9327, groupID = 0, refLootEntry = 6235 }; --Security DELTA Data Access Card
+  { itemID = 58360, groupID = 0, refLootEntry = 6235 }; --Sigil of Electrocutioner 6000
+  { itemID = 406012, groupID = 1, refLootEntry = 6235 }; --T.H.U.N.D.R
+  { itemID = 2021814, groupID = 0, refLootEntry = 6235 }; --Dungeon Spoils
+  { itemID = 6905, groupID = 1, refLootEntry = 6243 }; --Reef Axe
+  { itemID = 6906, groupID = 1, refLootEntry = 6243 }; --Algae Fists
+  { itemID = 58401, groupID = 0, refLootEntry = 6243 }; --Sigil of Gelihast
+  { itemID = 4306, groupID = 0, refLootEntry = 6487 }; --Silk Cloth
+  { itemID = 5805, groupID = 0, refLootEntry = 6487 }; --Heart of Zeal
+  { itemID = 7711, groupID = 1, refLootEntry = 6487 }; --Robe of Doan
+  { itemID = 7712, groupID = 1, refLootEntry = 6487 }; --Mantle of Doan
+  { itemID = 7713, groupID = 1, refLootEntry = 6487 }; --Illusionary Rod
+  { itemID = 7714, groupID = 1, refLootEntry = 6487 }; --Hypnotic Blade
+  { itemID = 34227, groupID = 1, refLootEntry = 6487 }; --Deadman
+  { itemID = 58411, groupID = 0, refLootEntry = 6487 }; --Sigil of Arcanist Doan
+  { itemID = 375250, groupID = 0, refLootEntry = 6487 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 6487 }; --Dungeon Spoils
+  { itemID = 4306, groupID = 0, refLootEntry = 6490 }; --Silk Cloth
+  { itemID = 7708, groupID = 0, refLootEntry = 6490 }; --Necrotic Wand
+  { itemID = 7709, groupID = 0, refLootEntry = 6490 }; --Blighted Leggings
+  { itemID = 7731, groupID = 0, refLootEntry = 6490 }; --Ghostshard Talisman
+  { itemID = 58495, groupID = 0, refLootEntry = 6490 }; --Sigil of Azshir the Sleepless
+  { itemID = 9399, groupID = 0, refLootEntry = 6906 }; --Precision Arrow
+  { itemID = 9400, groupID = 1, refLootEntry = 6906 }; --Baelog
+  { itemID = 9401, groupID = 1, refLootEntry = 6906 }; --Nordic Longshank
+  { itemID = 29434, groupID = 0, refLootEntry = 6906 }; --Badge of Justice
+  { itemID = 58847, groupID = 0, refLootEntry = 6906 }; --Sigil of Baelog
+  { itemID = 1708, groupID = 0, refLootEntry = 6910 }; --Sweet Nectar
+  { itemID = 3771, groupID = 0, refLootEntry = 6910 }; --Wild Hog Shank
+  { itemID = 4306, groupID = 0, refLootEntry = 6910 }; --Silk Cloth
+  { itemID = 4338, groupID = 0, refLootEntry = 6910 }; --Mageweave Cloth
+  { itemID = 7741, groupID = 0, refLootEntry = 6910 }; --The Shaft of Tsol
+  { itemID = 9387, groupID = 1, refLootEntry = 6910 }; --Revelosh
+  { itemID = 9388, groupID = 1, refLootEntry = 6910 }; --Revelosh
+  { itemID = 9389, groupID = 1, refLootEntry = 6910 }; --Revelosh
+  { itemID = 9390, groupID = 1, refLootEntry = 6910 }; --Revelosh
+  { itemID = 58848, groupID = 0, refLootEntry = 6910 }; --Sigil of Revelosh
+  { itemID = 1685, groupID = 0, refLootEntry = 7023 }; --Troll-hide Bag
+  { itemID = 3864, groupID = 0, refLootEntry = 7023 }; --Citrine
+  { itemID = 3868, groupID = 0, refLootEntry = 7023 }; --Plans: Frost Tiger Blade
+  { itemID = 3914, groupID = 0, refLootEntry = 7023 }; --Journeyman
+  { itemID = 4416, groupID = 0, refLootEntry = 7023 }; --Schematic: Goblin Land Mine
+  { itemID = 4552, groupID = 0, refLootEntry = 7023 }; --Smooth Stone Chip
+  { itemID = 4554, groupID = 0, refLootEntry = 7023 }; --Shiny Polished Stone
+  { itemID = 4637, groupID = 0, refLootEntry = 7023 }; --Steel Lockbox
+  { itemID = 7909, groupID = 0, refLootEntry = 7023 }; --Aquamarine
+  { itemID = 7910, groupID = 0, refLootEntry = 7023 }; --Star Ruby
+  { itemID = 7912, groupID = 0, refLootEntry = 7023 }; --Solid Stone
+  { itemID = 7975, groupID = 0, refLootEntry = 7023 }; --Plans: Heavy Mithril Pants
+  { itemID = 7976, groupID = 0, refLootEntry = 7023 }; --Plans: Mithril Shield Spike
+  { itemID = 8029, groupID = 0, refLootEntry = 7023 }; --Plans: Wicked Mithril Blade
+  { itemID = 8053, groupID = 0, refLootEntry = 7023 }; --Obsidian Power Source
+  { itemID = 8150, groupID = 0, refLootEntry = 7023 }; --Deeprock Salt
+  { itemID = 8385, groupID = 0, refLootEntry = 7023 }; --Pattern: Turtle Scale Gloves
+  { itemID = 8386, groupID = 0, refLootEntry = 7023 }; --Pattern: Big Voodoo Robe
+  { itemID = 8387, groupID = 0, refLootEntry = 7023 }; --Pattern: Big Voodoo Mask
+  { itemID = 9293, groupID = 0, refLootEntry = 7023 }; --Recipe: Magic Resistance Potion
+  { itemID = 9298, groupID = 0, refLootEntry = 7023 }; --Recipe: Elixir of Giants
+  { itemID = 9384, groupID = 0, refLootEntry = 7023 }; --Stonevault Shiv
+  { itemID = 9393, groupID = 0, refLootEntry = 7023 }; --Beacon of Hope
+  { itemID = 9396, groupID = 0, refLootEntry = 7023 }; --Legguards of the Vault
+  { itemID = 9420, groupID = 0, refLootEntry = 7023 }; --Adventurer
+  { itemID = 9424, groupID = 0, refLootEntry = 7023 }; --Ginn-su Sword
+  { itemID = 9425, groupID = 0, refLootEntry = 7023 }; --Pendulum of Doom
+  { itemID = 9426, groupID = 0, refLootEntry = 7023 }; --Monolithic Bow
+  { itemID = 9427, groupID = 0, refLootEntry = 7023 }; --Stonevault Bonebreaker
+  { itemID = 9428, groupID = 0, refLootEntry = 7023 }; --Unearthed Bands
+  { itemID = 9431, groupID = 0, refLootEntry = 7023 }; --Papal Fez
+  { itemID = 10300, groupID = 0, refLootEntry = 7023 }; --Pattern: Red Mageweave Vest
+  { itemID = 10301, groupID = 0, refLootEntry = 7023 }; --Pattern: White Bandit Mask
+  { itemID = 10302, groupID = 0, refLootEntry = 7023 }; --Pattern: Red Mageweave Pants
+  { itemID = 10312, groupID = 0, refLootEntry = 7023 }; --Pattern: Red Mageweave Gloves
+  { itemID = 10315, groupID = 0, refLootEntry = 7023 }; --Pattern: Red Mageweave Shoulders
+  { itemID = 10320, groupID = 0, refLootEntry = 7023 }; --Pattern: Red Mageweave Headband
+  { itemID = 10603, groupID = 0, refLootEntry = 7023 }; --Schematic: Catseye Ultra Goggles
+  { itemID = 10604, groupID = 0, refLootEntry = 7023 }; --Schematic: Mithril Heavy-bore Rifle
+  { itemID = 10606, groupID = 0, refLootEntry = 7023 }; --Schematic: Parachute Cloak
+  { itemID = 20976, groupID = 0, refLootEntry = 7023 }; --Design: Citrine Pendant of Golden Healing
+  { itemID = 1708, groupID = 0, refLootEntry = 7057 }; --Sweet Nectar
+  { itemID = 3771, groupID = 0, refLootEntry = 7057 }; --Wild Hog Shank
+  { itemID = 4306, groupID = 0, refLootEntry = 7057 }; --Silk Cloth
+  { itemID = 4338, groupID = 0, refLootEntry = 7057 }; --Mageweave Cloth
+  { itemID = 58852, groupID = 0, refLootEntry = 7057 }; --Sigil of Digmaster Shovelphlange
+  { itemID = 98558, groupID = 90, refLootEntry = 7057 }; --Fighter
+  { itemID = 398607, groupID = 80, refLootEntry = 7057 }; --Embossed Mystic Scroll
+  { itemID = 696661, groupID = 60, refLootEntry = 7057 }; --Keeper
+  { itemID = 696662, groupID = 60, refLootEntry = 7057 }; --Keeper
+  { itemID = 696663, groupID = 60, refLootEntry = 7057 }; --Keeper
+  { itemID = 696664, groupID = 60, refLootEntry = 7057 }; --Keeper
+  { itemID = 696665, groupID = 60, refLootEntry = 7057 }; --Keeper
+  { itemID = 9452, groupID = 1, refLootEntry = 7079 }; --Hydrocane
+  { itemID = 9453, groupID = 1, refLootEntry = 7079 }; --Toxic Revenger
+  { itemID = 9454, groupID = 1, refLootEntry = 7079 }; --Acidic Walkers
+  { itemID = 58853, groupID = 0, refLootEntry = 7079 }; --Sigil of Viscous Fallout
+  { itemID = 600392, groupID = 0, refLootEntry = 7079 }; --Elemental Lodestone: Viscous Fallout
+  { itemID = 4552, groupID = 0, refLootEntry = 7206 }; --Smooth Stone Chip
+  { itemID = 4554, groupID = 0, refLootEntry = 7206 }; --Shiny Polished Stone
+  { itemID = 7912, groupID = 0, refLootEntry = 7206 }; --Solid Stone
+  { itemID = 8150, groupID = 0, refLootEntry = 7206 }; --Deeprock Salt
+  { itemID = 9410, groupID = 1, refLootEntry = 7206 }; --Cragfists
+  { itemID = 9411, groupID = 1, refLootEntry = 7206 }; --Rockshard Pauldrons
+  { itemID = 58857, groupID = 0, refLootEntry = 7206 }; --Sigil of Ancient Stone Keeper
+  { itemID = 601679, groupID = 0, refLootEntry = 7206 }; --Elemental Lodestone: Ancient Stone Keeper
+  { itemID = 1645, groupID = 0, refLootEntry = 7228 }; --Moonberry Juice
+  { itemID = 4306, groupID = 0, refLootEntry = 7228 }; --Silk Cloth
+  { itemID = 4338, groupID = 0, refLootEntry = 7228 }; --Mageweave Cloth
+  { itemID = 4552, groupID = 0, refLootEntry = 7228 }; --Smooth Stone Chip
+  { itemID = 4553, groupID = 0, refLootEntry = 7228 }; --Jagged Piece of Stone
+  { itemID = 4599, groupID = 0, refLootEntry = 7228 }; --Cured Ham Steak
+  { itemID = 7912, groupID = 0, refLootEntry = 7228 }; --Solid Stone
+  { itemID = 8150, groupID = 0, refLootEntry = 7228 }; --Deeprock Salt
+  { itemID = 9407, groupID = 1, refLootEntry = 7228 }; --Stoneweaver Leggings
+  { itemID = 9408, groupID = 1, refLootEntry = 7228 }; --Ironshod Bludgeon
+  { itemID = 9409, groupID = 1, refLootEntry = 7228 }; --Ironaya
+  { itemID = 2021814, groupID = 0, refLootEntry = 7228 }; --Dungeon Spoils
+  { itemID = 1520, groupID = 0, refLootEntry = 7267 }; --Troll Sweat
+  { itemID = 4338, groupID = 0, refLootEntry = 7267 }; --Mageweave Cloth
+  { itemID = 8151, groupID = 0, refLootEntry = 7267 }; --Flask of Mojo
+  { itemID = 9242, groupID = 0, refLootEntry = 7267 }; --Ancient Tablet
+  { itemID = 9243, groupID = 0, refLootEntry = 7267 }; --Shriveled Heart
+  { itemID = 9476, groupID = 1, refLootEntry = 7267 }; --Big Bad Pauldrons
+  { itemID = 9477, groupID = 1, refLootEntry = 7267 }; --The Chief
+  { itemID = 9478, groupID = 1, refLootEntry = 7267 }; --Ripsaw
+  { itemID = 9479, groupID = 1, refLootEntry = 7267 }; --Embrace of the Lycan
+  { itemID = 9523, groupID = 0, refLootEntry = 7267 }; --Troll Temper
+  { itemID = 11086, groupID = 1, refLootEntry = 7267 }; --Jang
+  { itemID = 29434, groupID = 0, refLootEntry = 7267 }; --Badge of Justice
+  { itemID = 58859, groupID = 0, refLootEntry = 7267 }; --Sigil of Chief Ukorz Sandscalp
+  { itemID = 375250, groupID = 0, refLootEntry = 7267 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 7267 }; --Dungeon Spoils
+  { itemID = 1520, groupID = 0, refLootEntry = 7274 }; --Troll Sweat
+  { itemID = 1645, groupID = 0, refLootEntry = 7274 }; --Moonberry Juice
+  { itemID = 1685, groupID = 0, refLootEntry = 7274 }; --Troll-hide Bag
+  { itemID = 2040, groupID = 0, refLootEntry = 7274 }; --Troll Protector
+  { itemID = 3395, groupID = 0, refLootEntry = 7274 }; --Recipe: Limited Invulnerability Potion
+  { itemID = 3914, groupID = 0, refLootEntry = 7274 }; --Journeyman
+  { itemID = 3928, groupID = 0, refLootEntry = 7274 }; --Superior Healing Potion
+  { itemID = 4338, groupID = 0, refLootEntry = 7274 }; --Mageweave Cloth
+  { itemID = 4419, groupID = 0, refLootEntry = 7274 }; --Scroll of Intellect III
+  { itemID = 4422, groupID = 0, refLootEntry = 7274 }; --Scroll of Stamina III
+  { itemID = 4425, groupID = 0, refLootEntry = 7274 }; --Scroll of Agility III
+  { itemID = 4426, groupID = 0, refLootEntry = 7274 }; --Scroll of Strength III
+  { itemID = 4599, groupID = 0, refLootEntry = 7274 }; --Cured Ham Steak
+  { itemID = 4638, groupID = 0, refLootEntry = 7274 }; --Reinforced Steel Lockbox
+  { itemID = 5616, groupID = 0, refLootEntry = 7274 }; --Gutwrencher
+  { itemID = 6149, groupID = 0, refLootEntry = 7274 }; --Greater Mana Potion
+  { itemID = 6440, groupID = 0, refLootEntry = 7274 }; --Brainlash
+  { itemID = 7909, groupID = 0, refLootEntry = 7274 }; --Aquamarine
+  { itemID = 7910, groupID = 0, refLootEntry = 7274 }; --Star Ruby
+  { itemID = 7975, groupID = 0, refLootEntry = 7274 }; --Plans: Heavy Mithril Pants
+  { itemID = 7989, groupID = 0, refLootEntry = 7274 }; --Plans: Mithril Spurs
+  { itemID = 7990, groupID = 0, refLootEntry = 7274 }; --Plans: Heavy Mithril Helm
+  { itemID = 7993, groupID = 0, refLootEntry = 7274 }; --Plans: Dazzling Mithril Rapier
+  { itemID = 8029, groupID = 0, refLootEntry = 7274 }; --Plans: Wicked Mithril Blade
+  { itemID = 8151, groupID = 0, refLootEntry = 7274 }; --Flask of Mojo
+  { itemID = 8385, groupID = 0, refLootEntry = 7274 }; --Pattern: Turtle Scale Gloves
+  { itemID = 8387, groupID = 0, refLootEntry = 7274 }; --Pattern: Big Voodoo Mask
+  { itemID = 8389, groupID = 0, refLootEntry = 7274 }; --Pattern: Big Voodoo Pants
+  { itemID = 8390, groupID = 0, refLootEntry = 7274 }; --Pattern: Big Voodoo Cloak
+  { itemID = 8444, groupID = 2, refLootEntry = 7274 }; --Executioner
+  { itemID = 8623, groupID = 0, refLootEntry = 7274 }; --OOX-17\/TN Distress Beacon
+  { itemID = 9242, groupID = 0, refLootEntry = 7274 }; --Ancient Tablet
+  { itemID = 9243, groupID = 0, refLootEntry = 7274 }; --Shriveled Heart
+  { itemID = 9295, groupID = 0, refLootEntry = 7274 }; --Recipe: Invisibility Potion
+  { itemID = 9298, groupID = 0, refLootEntry = 7274 }; --Recipe: Elixir of Giants
+  { itemID = 9480, groupID = 0, refLootEntry = 7274 }; --Eyegouger
+  { itemID = 9482, groupID = 0, refLootEntry = 7274 }; --Witch Doctor
+  { itemID = 9483, groupID = 0, refLootEntry = 7274 }; --Flaming Incinerator
+  { itemID = 9511, groupID = 0, refLootEntry = 7274 }; --Bloodletter Scalpel
+  { itemID = 9512, groupID = 0, refLootEntry = 7274 }; --Blackmetal Cape
+  { itemID = 9523, groupID = 0, refLootEntry = 7274 }; --Troll Temper
+  { itemID = 10300, groupID = 0, refLootEntry = 7274 }; --Pattern: Red Mageweave Vest
+  { itemID = 10302, groupID = 0, refLootEntry = 7274 }; --Pattern: Red Mageweave Pants
+  { itemID = 10312, groupID = 0, refLootEntry = 7274 }; --Pattern: Red Mageweave Gloves
+  { itemID = 10315, groupID = 0, refLootEntry = 7274 }; --Pattern: Red Mageweave Shoulders
+  { itemID = 10320, groupID = 0, refLootEntry = 7274 }; --Pattern: Red Mageweave Headband
+  { itemID = 10606, groupID = 0, refLootEntry = 7274 }; --Schematic: Parachute Cloak
+  { itemID = 11204, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Bracer - Greater Spirit
+  { itemID = 11208, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Weapon - Demonslaying
+  { itemID = 11225, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Bracer - Greater Stamina
+  { itemID = 11226, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Gloves - Riding Skill
+  { itemID = 12682, groupID = 0, refLootEntry = 7274 }; --Plans: Thorium Armor
+  { itemID = 12689, groupID = 0, refLootEntry = 7274 }; --Plans: Radiant Breastplate
+  { itemID = 12691, groupID = 0, refLootEntry = 7274 }; --Plans: Wildthorn Mail
+  { itemID = 14467, groupID = 0, refLootEntry = 7274 }; --Pattern: Frostweave Robe
+  { itemID = 14474, groupID = 0, refLootEntry = 7274 }; --Pattern: Frostweave Gloves
+  { itemID = 14484, groupID = 0, refLootEntry = 7274 }; --Pattern: Brightcloth Cloak
+  { itemID = 15731, groupID = 0, refLootEntry = 7274 }; --Pattern: Runic Leather Gauntlets
+  { itemID = 16043, groupID = 0, refLootEntry = 7274 }; --Schematic: Thorium Rifle
+  { itemID = 16215, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Boots - Greater Stamina
+  { itemID = 16218, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Bracer - Superior Spirit
+  { itemID = 16220, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Boots - Spirit
+  { itemID = 1645, groupID = 0, refLootEntry = 7291 }; --Moonberry Juice
+  { itemID = 4306, groupID = 0, refLootEntry = 7291 }; --Silk Cloth
+  { itemID = 4338, groupID = 0, refLootEntry = 7291 }; --Mageweave Cloth
+  { itemID = 4601, groupID = 0, refLootEntry = 7291 }; --Soft Banana Bread
+  { itemID = 9412, groupID = 1, refLootEntry = 7291 }; --Galgann
+  { itemID = 9419, groupID = 1, refLootEntry = 7291 }; --Galgann
+  { itemID = 11310, groupID = 1, refLootEntry = 7291 }; --Flameseer Mantle
+  { itemID = 11311, groupID = 1, refLootEntry = 7291 }; --Emberscale Cape
+  { itemID = 58869, groupID = 0, refLootEntry = 7291 }; --Sigil of Galgann Firehammer
+  { itemID = 1708, groupID = 0, refLootEntry = 7356 }; --Sweet Nectar
+  { itemID = 4306, groupID = 0, refLootEntry = 7356 }; --Silk Cloth
+  { itemID = 4338, groupID = 0, refLootEntry = 7356 }; --Mageweave Cloth
+  { itemID = 4539, groupID = 0, refLootEntry = 7356 }; --Goldenbark Apple
+  { itemID = 10760, groupID = 1, refLootEntry = 7356 }; --Swine Fists
+  { itemID = 10766, groupID = 1, refLootEntry = 7356 }; --Plaguerot Sprig
+  { itemID = 1708, groupID = 0, refLootEntry = 7357 }; --Sweet Nectar
+  { itemID = 4306, groupID = 0, refLootEntry = 7357 }; --Silk Cloth
+  { itemID = 4338, groupID = 0, refLootEntry = 7357 }; --Mageweave Cloth
+  { itemID = 4607, groupID = 0, refLootEntry = 7357 }; --Delicious Cave Mold
+  { itemID = 10769, groupID = 1, refLootEntry = 7357 }; --Glowing Eye of Mordresh
+  { itemID = 10770, groupID = 1, refLootEntry = 7357 }; --Mordresh
+  { itemID = 10771, groupID = 1, refLootEntry = 7357 }; --Deathmage Sash
+  { itemID = 29434, groupID = 0, refLootEntry = 7357 }; --Badge of Justice
+  { itemID = 58872, groupID = 0, refLootEntry = 7357 }; --Sigil of Mordresh Fire Eye
+  { itemID = 87859, groupID = 0, refLootEntry = 7357 }; --Blood Soaked Vellum: Mordresh Fire Eye
+  { itemID = 1708, groupID = 0, refLootEntry = 7358 }; --Sweet Nectar
+  { itemID = 4306, groupID = 0, refLootEntry = 7358 }; --Silk Cloth
+  { itemID = 4338, groupID = 0, refLootEntry = 7358 }; --Mageweave Cloth
+  { itemID = 4607, groupID = 0, refLootEntry = 7358 }; --Delicious Cave Mold
+  { itemID = 7972, groupID = 0, refLootEntry = 7358 }; --Ichor of Undeath
+  { itemID = 10420, groupID = 0, refLootEntry = 7358 }; --Skull of the Coldbringer
+  { itemID = 10761, groupID = 1, refLootEntry = 7358 }; --Coldrage Dagger
+  { itemID = 10762, groupID = 1, refLootEntry = 7358 }; --Robes of the Lich
+  { itemID = 10763, groupID = 1, refLootEntry = 7358 }; --Icemetal Barbute
+  { itemID = 10764, groupID = 1, refLootEntry = 7358 }; --Deathchill Armor
+  { itemID = 10765, groupID = 1, refLootEntry = 7358 }; --Bonefingers
+  { itemID = 58874, groupID = 0, refLootEntry = 7358 }; --Sigil of Amnennar the Coldbringer
+  { itemID = 375250, groupID = 0, refLootEntry = 7358 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 7358 }; --Dungeon Spoils
+  { itemID = 9445, groupID = 1, refLootEntry = 7361 }; --Grubbis Paws
+  { itemID = 58875, groupID = 0, refLootEntry = 7361 }; --Sigil of Grubbis
+  { itemID = 9458, groupID = 1, refLootEntry = 7800 }; --Thermaplugg
+  { itemID = 9459, groupID = 1, refLootEntry = 7800 }; --Thermaplugg
+  { itemID = 9461, groupID = 1, refLootEntry = 7800 }; --Charged Gear
+  { itemID = 9492, groupID = 1, refLootEntry = 7800 }; --Electromagnetic Gigaflux Reactivator
+  { itemID = 9299, groupID = 0, refLootEntry = 7800 }; --Thermaplugg
+  { itemID = 9309, groupID = 0, refLootEntry = 7800 }; --Robo-mechanical Guts
+  { itemID = 9327, groupID = 0, refLootEntry = 7800 }; --Security DELTA Data Access Card
+  { itemID = 11828, groupID = 0, refLootEntry = 7800 }; --Schematic: Pet Bombling
+  { itemID = 58879, groupID = 0, refLootEntry = 7800 }; --Sigil of Mekgineer Thermaplugg
+  { itemID = 375250, groupID = 0, refLootEntry = 7800 }; --Rune of Ascension
+  { itemID = 406011, groupID = 1, refLootEntry = 7800 }; --Torque Shot
+  { itemID = 2021814, groupID = 0, refLootEntry = 7800 }; --Dungeon Spoils
+  { itemID = 1708, groupID = 0, refLootEntry = 8567 }; --Sweet Nectar
+  { itemID = 4306, groupID = 0, refLootEntry = 8567 }; --Silk Cloth
+  { itemID = 4338, groupID = 0, refLootEntry = 8567 }; --Mageweave Cloth
+  { itemID = 4607, groupID = 0, refLootEntry = 8567 }; --Delicious Cave Mold
+  { itemID = 7972, groupID = 0, refLootEntry = 8567 }; --Ichor of Undeath
+  { itemID = 10772, groupID = 1, refLootEntry = 8567 }; --Glutton
+  { itemID = 10774, groupID = 1, refLootEntry = 8567 }; --Fleshhide Shoulders
+  { itemID = 59821, groupID = 0, refLootEntry = 8567 }; --Sigil of Glutton
+  { itemID = 88309, groupID = 0, refLootEntry = 8567 }; --Blood Soaked Vellum: Glutton
+  { itemID = 4552, groupID = 0, refLootEntry = 8923 }; --Smooth Stone Chip
+  { itemID = 4554, groupID = 0, refLootEntry = 8923 }; --Shiny Polished Stone
+  { itemID = 7912, groupID = 0, refLootEntry = 8923 }; --Solid Stone
+  { itemID = 8150, groupID = 0, refLootEntry = 8923 }; --Deeprock Salt
+  { itemID = 11785, groupID = 1, refLootEntry = 8923 }; --Rock Golem Bulwark
+  { itemID = 11786, groupID = 1, refLootEntry = 8923 }; --Stone of the Earth
+  { itemID = 11787, groupID = 1, refLootEntry = 8923 }; --Shalehusk Boots
+  { itemID = 22245, groupID = 1, refLootEntry = 8923 }; --Soot Encrusted Footwear
+  { itemID = 11129, groupID = 0, refLootEntry = 8923 }; --Essence of the Elements
+  { itemID = 11370, groupID = 0, refLootEntry = 8923 }; --Dark Iron Ore
+  { itemID = 18945, groupID = 0, refLootEntry = 8923 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 8923 }; --Dark Iron Scraps
+  { itemID = 59824, groupID = 0, refLootEntry = 8923 }; --Sigil of Panzor the Invincible
+  { itemID = 97730, groupID = 0, refLootEntry = 8923 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 8923 }; --Rune of Ascension
+  { itemID = 601685, groupID = 0, refLootEntry = 8923 }; --Elemental Lodestone: Panzor the Invincible
+  { itemID = 11669, groupID = 1, refLootEntry = 8983 }; --Naglering
+  { itemID = 11819, groupID = 1, refLootEntry = 8983 }; --Second Wind
+  { itemID = 11822, groupID = 1, refLootEntry = 8983 }; --Omnicast Boots
+  { itemID = 11823, groupID = 1, refLootEntry = 8983 }; --Luminary Kilt
+  { itemID = 11078, groupID = 0, refLootEntry = 8983 }; --Relic Coffer Key
+  { itemID = 11268, groupID = 0, refLootEntry = 8983 }; --Head of Argelmach
+  { itemID = 11446, groupID = 0, refLootEntry = 8983 }; --A Crumpled Up Note
+  { itemID = 11465, groupID = 0, refLootEntry = 8983 }; --Marshal Windsor
+  { itemID = 11468, groupID = 0, refLootEntry = 8983 }; --Dark Iron Fanny Pack
+  { itemID = 14047, groupID = 0, refLootEntry = 8983 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 8983 }; --Dark Iron Residue
+  { itemID = 21956, groupID = 0, refLootEntry = 8983 }; --Design: Dark Iron Scorpid
+  { itemID = 22528, groupID = 0, refLootEntry = 8983 }; --Dark Iron Scraps
+  { itemID = 59830, groupID = 0, refLootEntry = 8983 }; --Sigil of Golem Lord Argelmach
+  { itemID = 97730, groupID = 0, refLootEntry = 8983 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 8983 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 8983 }; --Dungeon Spoils
+  { itemID = 11764, groupID = 1, refLootEntry = 9017 }; --Cinderhide Armsplints
+  { itemID = 11765, groupID = 1, refLootEntry = 9017 }; --Pyremail Wristguards
+  { itemID = 11766, groupID = 1, refLootEntry = 9017 }; --Flameweave Cuffs
+  { itemID = 11767, groupID = 1, refLootEntry = 9017 }; --Emberplate Armguards
+  { itemID = 11768, groupID = 1, refLootEntry = 9017 }; --Incendic Bracers
+  { itemID = 11126, groupID = 0, refLootEntry = 9017 }; --Tablet of Kurniya
+  { itemID = 11129, groupID = 0, refLootEntry = 9017 }; --Essence of the Elements
+  { itemID = 11446, groupID = 0, refLootEntry = 9017 }; --A Crumpled Up Note
+  { itemID = 18945, groupID = 0, refLootEntry = 9017 }; --Dark Iron Residue
+  { itemID = 19268, groupID = 0, refLootEntry = 9017 }; --Ace of Elementals
+  { itemID = 21987, groupID = 0, refLootEntry = 9017 }; --Incendicite of Incendius
+  { itemID = 22527, groupID = 0, refLootEntry = 9017 }; --Core of Elements
+  { itemID = 22528, groupID = 0, refLootEntry = 9017 }; --Dark Iron Scraps
+  { itemID = 59832, groupID = 0, refLootEntry = 9017 }; --Sigil of Lord Incendius
+  { itemID = 97730, groupID = 0, refLootEntry = 9017 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9017 }; --Rune of Ascension
+  { itemID = 11624, groupID = 1, refLootEntry = 9018 }; --Kentic Amice
+  { itemID = 11625, groupID = 1, refLootEntry = 9018 }; --Enthralled Sphere
+  { itemID = 11626, groupID = 1, refLootEntry = 9018 }; --Blackveil Cape
+  { itemID = 22240, groupID = 1, refLootEntry = 9018 }; --Greaves of Withering Despair
+  { itemID = 11140, groupID = 0, refLootEntry = 9018 }; --Prison Cell Key
+  { itemID = 11446, groupID = 0, refLootEntry = 9018 }; --A Crumpled Up Note
+  { itemID = 14047, groupID = 0, refLootEntry = 9018 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 9018 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9018 }; --Dark Iron Scraps
+  { itemID = 59833, groupID = 0, refLootEntry = 9018 }; --Sigil of High Interrogator Gerstahn
+  { itemID = 97730, groupID = 0, refLootEntry = 9018 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9018 }; --Rune of Ascension
+  { itemID = 11747, groupID = 1, refLootEntry = 9024 }; --Flamestrider Robes
+  { itemID = 11748, groupID = 1, refLootEntry = 9024 }; --Pyric Caduceus
+  { itemID = 11749, groupID = 1, refLootEntry = 9024 }; --Searingscale Leggings
+  { itemID = 11750, groupID = 1, refLootEntry = 9024 }; --Kindling Stave
+  { itemID = 11207, groupID = 0, refLootEntry = 9024 }; --Formula: Enchant Weapon - Fiery Weapon
+  { itemID = 11446, groupID = 0, refLootEntry = 9024 }; --A Crumpled Up Note
+  { itemID = 14047, groupID = 0, refLootEntry = 9024 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 9024 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9024 }; --Dark Iron Scraps
+  { itemID = 59835, groupID = 0, refLootEntry = 9024 }; --Sigil of Pyromancer Loregrain
+  { itemID = 97730, groupID = 0, refLootEntry = 9024 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9024 }; --Rune of Ascension
+  { itemID = 8150, groupID = 0, refLootEntry = 9025 }; --Deeprock Salt
+  { itemID = 11631, groupID = 1, refLootEntry = 9025 }; --Stoneshell Guard
+  { itemID = 11632, groupID = 1, refLootEntry = 9025 }; --Earthslag Shoulders
+  { itemID = 22234, groupID = 1, refLootEntry = 9025 }; --Mantle of Lost Hope
+  { itemID = 22397, groupID = 1, refLootEntry = 9025 }; --Idol of Ferocity
+  { itemID = 11129, groupID = 0, refLootEntry = 9025 }; --Essence of the Elements
+  { itemID = 11446, groupID = 0, refLootEntry = 9025 }; --A Crumpled Up Note
+  { itemID = 11630, groupID = 0, refLootEntry = 9025 }; --Rockshard Pellets
+  { itemID = 11813, groupID = 0, refLootEntry = 9025 }; --Formula: Smoking Heart of the Mountain
+  { itemID = 18945, groupID = 0, refLootEntry = 9025 }; --Dark Iron Residue
+  { itemID = 22527, groupID = 0, refLootEntry = 9025 }; --Core of Elements
+  { itemID = 22528, groupID = 0, refLootEntry = 9025 }; --Dark Iron Scraps
+  { itemID = 59836, groupID = 0, refLootEntry = 9025 }; --Sigil of Lord Roccor
+  { itemID = 97730, groupID = 0, refLootEntry = 9025 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9025 }; --Rune of Ascension
+  { itemID = 600408, groupID = 0, refLootEntry = 9025 }; --Elemental Lodestone: Lord Roccor
+  { itemID = 2450, groupID = 0, refLootEntry = 9026 }; --Briarthorn
+  { itemID = 3357, groupID = 0, refLootEntry = 9026 }; --Liferoot
+  { itemID = 3395, groupID = 0, refLootEntry = 9026 }; --Recipe: Limited Invulnerability Potion
+  { itemID = 3857, groupID = 0, refLootEntry = 9026 }; --Coal
+  { itemID = 4500, groupID = 0, refLootEntry = 9026 }; --Traveler
+  { itemID = 4787, groupID = 0, refLootEntry = 9026 }; --Burning Pitch
+  { itemID = 5758, groupID = 0, refLootEntry = 9026 }; --Mithril Lockbox
+  { itemID = 7068, groupID = 0, refLootEntry = 9026 }; --Elemental Fire
+  { itemID = 7077, groupID = 0, refLootEntry = 9026 }; --Heart of Fire
+  { itemID = 7078, groupID = 0, refLootEntry = 9026 }; --Essence of Fire
+  { itemID = 7909, groupID = 0, refLootEntry = 9026 }; --Aquamarine
+  { itemID = 7910, groupID = 0, refLootEntry = 9026 }; --Star Ruby
+  { itemID = 7989, groupID = 0, refLootEntry = 9026 }; --Plans: Mithril Spurs
+  { itemID = 7990, groupID = 0, refLootEntry = 9026 }; --Plans: Heavy Mithril Helm
+  { itemID = 7993, groupID = 0, refLootEntry = 9026 }; --Plans: Dazzling Mithril Rapier
+  { itemID = 8389, groupID = 0, refLootEntry = 9026 }; --Pattern: Big Voodoo Pants
+  { itemID = 9295, groupID = 0, refLootEntry = 9026 }; --Recipe: Invisibility Potion
+  { itemID = 9298, groupID = 0, refLootEntry = 9026 }; --Recipe: Elixir of Giants
+  { itemID = 10315, groupID = 0, refLootEntry = 9026 }; --Pattern: Red Mageweave Shoulders
+  { itemID = 11129, groupID = 0, refLootEntry = 9026 }; --Essence of the Elements
+  { itemID = 11225, groupID = 0, refLootEntry = 9026 }; --Formula: Enchant Bracer - Greater Stamina
+  { itemID = 11446, groupID = 0, refLootEntry = 9026 }; --A Crumpled Up Note
+  { itemID = 11754, groupID = 0, refLootEntry = 9026 }; --Black Diamond
+  { itemID = 12527, groupID = 0, refLootEntry = 9026 }; --Ribsplitter
+  { itemID = 12528, groupID = 0, refLootEntry = 9026 }; --The Judge
+  { itemID = 12531, groupID = 0, refLootEntry = 9026 }; --Searing Needle
+  { itemID = 12535, groupID = 0, refLootEntry = 9026 }; --Doomforged Straightedge
+  { itemID = 12542, groupID = 0, refLootEntry = 9026 }; --Funeral Pyre Vestment
+  { itemID = 12546, groupID = 0, refLootEntry = 9026 }; --Aristocratic Cuffs
+  { itemID = 12549, groupID = 0, refLootEntry = 9026 }; --Braincage
+  { itemID = 12550, groupID = 0, refLootEntry = 9026 }; --Runed Golem Shackles
+  { itemID = 12552, groupID = 0, refLootEntry = 9026 }; --Blisterbane Wrap
+  { itemID = 12555, groupID = 0, refLootEntry = 9026 }; --Battlechaser
+  { itemID = 12682, groupID = 0, refLootEntry = 9026 }; --Plans: Thorium Armor
+  { itemID = 12683, groupID = 0, refLootEntry = 9026 }; --Plans: Thorium Belt
+  { itemID = 12684, groupID = 0, refLootEntry = 9026 }; --Plans: Thorium Bracers
+  { itemID = 12689, groupID = 0, refLootEntry = 9026 }; --Plans: Radiant Breastplate
+  { itemID = 12691, groupID = 0, refLootEntry = 9026 }; --Plans: Wildthorn Mail
+  { itemID = 12695, groupID = 0, refLootEntry = 9026 }; --Plans: Radiant Gloves
+  { itemID = 12697, groupID = 0, refLootEntry = 9026 }; --Plans: Radiant Boots
+  { itemID = 14466, groupID = 0, refLootEntry = 9026 }; --Pattern: Frostweave Tunic
+  { itemID = 14467, groupID = 0, refLootEntry = 9026 }; --Pattern: Frostweave Robe
+  { itemID = 14470, groupID = 0, refLootEntry = 9026 }; --Pattern: Runecloth Tunic
+  { itemID = 14474, groupID = 0, refLootEntry = 9026 }; --Pattern: Frostweave Gloves
+  { itemID = 14478, groupID = 0, refLootEntry = 9026 }; --Pattern: Brightcloth Robe
+  { itemID = 14479, groupID = 0, refLootEntry = 9026 }; --Pattern: Brightcloth Gloves
+  { itemID = 14484, groupID = 0, refLootEntry = 9026 }; --Pattern: Brightcloth Cloak
+  { itemID = 14486, groupID = 0, refLootEntry = 9026 }; --Pattern: Cloak of Fire
+  { itemID = 14491, groupID = 0, refLootEntry = 9026 }; --Pattern: Runecloth Pants
+  { itemID = 14492, groupID = 0, refLootEntry = 9026 }; --Pattern: Felcloth Boots
+  { itemID = 14494, groupID = 0, refLootEntry = 9026 }; --Pattern: Brightcloth Pants
+  { itemID = 14496, groupID = 0, refLootEntry = 9026 }; --Pattern: Felcloth Hood
+  { itemID = 15731, groupID = 0, refLootEntry = 9026 }; --Pattern: Runic Leather Gauntlets
+  { itemID = 15743, groupID = 0, refLootEntry = 9026 }; --Pattern: Heavy Scorpid Belt
+  { itemID = 15745, groupID = 0, refLootEntry = 9026 }; --Pattern: Runic Leather Belt
+  { itemID = 15757, groupID = 0, refLootEntry = 9026 }; --Pattern: Wicked Leather Pants
+  { itemID = 16043, groupID = 0, refLootEntry = 9026 }; --Schematic: Thorium Rifle
+  { itemID = 16051, groupID = 0, refLootEntry = 9026 }; --Schematic: Thorium Shells
+  { itemID = 16215, groupID = 0, refLootEntry = 9026 }; --Formula: Enchant Boots - Greater Stamina
+  { itemID = 16220, groupID = 0, refLootEntry = 9026 }; --Formula: Enchant Boots - Spirit
+  { itemID = 18945, groupID = 0, refLootEntry = 9026 }; --Dark Iron Residue
+  { itemID = 20400, groupID = 0, refLootEntry = 9026 }; --Pumpkin Bag
+  { itemID = 22527, groupID = 0, refLootEntry = 9026 }; --Core of Elements
+  { itemID = 22528, groupID = 0, refLootEntry = 9026 }; --Dark Iron Scraps
+  { itemID = 97730, groupID = 0, refLootEntry = 9026 }; --Worldforged Key Fragment
+  { itemID = 98565, groupID = 90, refLootEntry = 9026 }; --Element-Bound Mystic Scroll
+  { itemID = 398607, groupID = 80, refLootEntry = 9026 }; --Embossed Mystic Scroll
+  { itemID = 696661, groupID = 60, refLootEntry = 9026 }; --Keeper
+  { itemID = 696662, groupID = 60, refLootEntry = 9026 }; --Keeper
+  { itemID = 696663, groupID = 60, refLootEntry = 9026 }; --Keeper
+  { itemID = 696664, groupID = 60, refLootEntry = 9026 }; --Keeper
+  { itemID = 696665, groupID = 60, refLootEntry = 9026 }; --Keeper
+  { itemID = 11446, groupID = 0, refLootEntry = 9027 }; --A Crumpled Up Note
+  { itemID = 14047, groupID = 0, refLootEntry = 9027 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 9027 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9027 }; --Dark Iron Scraps
+  { itemID = 97730, groupID = 0, refLootEntry = 9027 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9027 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 9027 }; --Dungeon Spoils
+  { itemID = 11446, groupID = 0, refLootEntry = 9028 }; --A Crumpled Up Note
+  { itemID = 11610, groupID = 0, refLootEntry = 9028 }; --Plans: Dark Iron Pulverizer
+  { itemID = 14047, groupID = 0, refLootEntry = 9028 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 9028 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9028 }; --Dark Iron Scraps
+  { itemID = 97730, groupID = 0, refLootEntry = 9028 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9028 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 9028 }; --Dungeon Spoils
+  { itemID = 11446, groupID = 0, refLootEntry = 9029 }; --A Crumpled Up Note
+  { itemID = 14047, groupID = 0, refLootEntry = 9029 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 9029 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9029 }; --Dark Iron Scraps
+  { itemID = 97730, groupID = 0, refLootEntry = 9029 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9029 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 9029 }; --Dungeon Spoils
+  { itemID = 11446, groupID = 0, refLootEntry = 9030 }; --A Crumpled Up Note
+  { itemID = 14047, groupID = 0, refLootEntry = 9030 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 9030 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9030 }; --Dark Iron Scraps
+  { itemID = 97730, groupID = 0, refLootEntry = 9030 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9030 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 9030 }; --Dungeon Spoils
+  { itemID = 1074, groupID = 0, refLootEntry = 9031 }; --Hard Spider Leg Tip
+  { itemID = 4337, groupID = 0, refLootEntry = 9031 }; --Thick Spider
+  { itemID = 4585, groupID = 0, refLootEntry = 9031 }; --Dripping Spider Mandible
+  { itemID = 11633, groupID = 5, refLootEntry = 9031 }; --Spiderfang Carapace
+  { itemID = 11634, groupID = 5, refLootEntry = 9031 }; --Silkweb Gloves
+  { itemID = 11635, groupID = 5, refLootEntry = 9031 }; --Hookfang Shanker
+  { itemID = 11662, groupID = 6, refLootEntry = 9031 }; --Ban
+  { itemID = 11665, groupID = 6, refLootEntry = 9031 }; --Ogreseer Fists
+  { itemID = 11675, groupID = 1, refLootEntry = 9031 }; --Shadefiend Boots
+  { itemID = 11677, groupID = 1, refLootEntry = 9031 }; --Graverot Cape
+  { itemID = 11678, groupID = 1, refLootEntry = 9031 }; --Carapace of Anub
+  { itemID = 11679, groupID = 2, refLootEntry = 9031 }; --Rubicund Armguards
+  { itemID = 11685, groupID = 2, refLootEntry = 9031 }; --Splinthide Shoulders
+  { itemID = 11686, groupID = 2, refLootEntry = 9031 }; --Girdle of Beastial Fury
+  { itemID = 11702, groupID = 4, refLootEntry = 9031 }; --Grizzle
+  { itemID = 11703, groupID = 3, refLootEntry = 9031 }; --Stonewall Girdle
+  { itemID = 11722, groupID = 3, refLootEntry = 9031 }; --Dregmetal Spaulders
+  { itemID = 11726, groupID = 3, refLootEntry = 9031 }; --Savage Gladiator Chain
+  { itemID = 11728, groupID = 6, refLootEntry = 9031 }; --Savage Gladiator Leggings
+  { itemID = 11729, groupID = 3, refLootEntry = 9031 }; --Savage Gladiator Helm
+  { itemID = 11730, groupID = 2, refLootEntry = 9031 }; --Savage Gladiator Grips
+  { itemID = 11731, groupID = 1, refLootEntry = 9031 }; --Savage Gladiator Greaves
+  { itemID = 11824, groupID = 6, refLootEntry = 9031 }; --Cyclopean Band
+  { itemID = 22257, groupID = 4, refLootEntry = 9031 }; --Bloodclot Band
+  { itemID = 22266, groupID = 4, refLootEntry = 9031 }; --Flarethorn
+  { itemID = 22270, groupID = 4, refLootEntry = 9031 }; --Entrenching Boots
+  { itemID = 22271, groupID = 3, refLootEntry = 9031 }; --Leggings of Frenzied Magic
+  { itemID = 10285, groupID = 0, refLootEntry = 9031 }; --Shadow Silk
+  { itemID = 11446, groupID = 0, refLootEntry = 9031 }; --A Crumpled Up Note
+  { itemID = 18945, groupID = 0, refLootEntry = 9031 }; --Dark Iron Residue
+  { itemID = 22525, groupID = 0, refLootEntry = 9031 }; --Crypt Fiend Parts
+  { itemID = 22528, groupID = 0, refLootEntry = 9031 }; --Dark Iron Scraps
+  { itemID = 88310, groupID = 0, refLootEntry = 9031 }; --Blood Soaked Vellum: Anub
+  { itemID = 97730, groupID = 0, refLootEntry = 9031 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9031 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 9031 }; --Dungeon Spoils
+  { itemID = 1074, groupID = 0, refLootEntry = 9032 }; --Hard Spider Leg Tip
+  { itemID = 4337, groupID = 0, refLootEntry = 9032 }; --Thick Spider
+  { itemID = 4585, groupID = 0, refLootEntry = 9032 }; --Dripping Spider Mandible
+  { itemID = 10285, groupID = 0, refLootEntry = 9032 }; --Shadow Silk
+  { itemID = 11446, groupID = 0, refLootEntry = 9032 }; --A Crumpled Up Note
+  { itemID = 12205, groupID = 0, refLootEntry = 9032 }; --White Spider Meat
+  { itemID = 14227, groupID = 0, refLootEntry = 9032 }; --Ironweb Spider Silk
+  { itemID = 18945, groupID = 0, refLootEntry = 9032 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9032 }; --Dark Iron Scraps
+  { itemID = 97730, groupID = 0, refLootEntry = 9032 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9032 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 9032 }; --Dungeon Spoils
+  { itemID = 11810, groupID = 1, refLootEntry = 9033 }; --Force of Will
+  { itemID = 11816, groupID = 1, refLootEntry = 9033 }; --Angerforge
+  { itemID = 11817, groupID = 1, refLootEntry = 9033 }; --Lord General
+  { itemID = 11820, groupID = 1, refLootEntry = 9033 }; --Royal Decorated Armor
+  { itemID = 11821, groupID = 1, refLootEntry = 9033 }; --Warstrife Leggings
+  { itemID = 273879, groupID = 1, refLootEntry = 9033 }; --Angerforge
+  { itemID = 11078, groupID = 0, refLootEntry = 9033 }; --Relic Coffer Key
+  { itemID = 11446, groupID = 0, refLootEntry = 9033 }; --A Crumpled Up Note
+  { itemID = 11464, groupID = 0, refLootEntry = 9033 }; --Marshal Windsor
+  { itemID = 11468, groupID = 0, refLootEntry = 9033 }; --Dark Iron Fanny Pack
+  { itemID = 14047, groupID = 0, refLootEntry = 9033 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 9033 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9033 }; --Dark Iron Scraps
+  { itemID = 59837, groupID = 0, refLootEntry = 9033 }; --Sigil of General Angerforge
+  { itemID = 97730, groupID = 0, refLootEntry = 9033 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9033 }; --Rune of Ascension
+  { itemID = 11782, groupID = 1, refLootEntry = 9041 }; --Boreal Mantle
+  { itemID = 11783, groupID = 1, refLootEntry = 9041 }; --Chillsteel Girdle
+  { itemID = 11784, groupID = 1, refLootEntry = 9041 }; --Arbiter
+  { itemID = 22241, groupID = 1, refLootEntry = 9041 }; --Dark Warder
+  { itemID = 11078, groupID = 0, refLootEntry = 9041 }; --Relic Coffer Key
+  { itemID = 11446, groupID = 0, refLootEntry = 9041 }; --A Crumpled Up Note
+  { itemID = 14047, groupID = 0, refLootEntry = 9041 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 9041 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9041 }; --Dark Iron Scraps
+  { itemID = 59838, groupID = 0, refLootEntry = 9041 }; --Sigil of Warder Stilgiss
+  { itemID = 97730, groupID = 0, refLootEntry = 9041 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9041 }; --Rune of Ascension
+  { itemID = 4425, groupID = 0, refLootEntry = 9046 }; --Scroll of Agility III
+  { itemID = 4426, groupID = 0, refLootEntry = 9046 }; --Scroll of Strength III
+  { itemID = 5758, groupID = 0, refLootEntry = 9046 }; --Mithril Lockbox
+  { itemID = 7909, groupID = 0, refLootEntry = 9046 }; --Aquamarine
+  { itemID = 7910, groupID = 0, refLootEntry = 9046 }; --Star Ruby
+  { itemID = 8766, groupID = 0, refLootEntry = 9046 }; --Morning Glory Dew
+  { itemID = 8952, groupID = 0, refLootEntry = 9046 }; --Spectral Roast
+  { itemID = 10305, groupID = 0, refLootEntry = 9046 }; --Scroll of Protection IV
+  { itemID = 10306, groupID = 0, refLootEntry = 9046 }; --Scroll of Spirit IV
+  { itemID = 11732, groupID = 0, refLootEntry = 9046 }; --Libram of Rumination
+  { itemID = 11733, groupID = 0, refLootEntry = 9046 }; --Libram of Constitution
+  { itemID = 11734, groupID = 0, refLootEntry = 9046 }; --Libram of Tenacity
+  { itemID = 11736, groupID = 0, refLootEntry = 9046 }; --Libram of Resilience
+  { itemID = 11737, groupID = 0, refLootEntry = 9046 }; --Libram of Voracity
+  { itemID = 12219, groupID = 0, refLootEntry = 9046 }; --Unadorned Seal of the Spire
+  { itemID = 13248, groupID = 0, refLootEntry = 9046 }; --Burstshot Harquebus
+  { itemID = 13254, groupID = 0, refLootEntry = 9046 }; --Astral Guard
+  { itemID = 13443, groupID = 0, refLootEntry = 9046 }; --Superior Mana Potion
+  { itemID = 13446, groupID = 0, refLootEntry = 9046 }; --Major Healing Potion
+  { itemID = 14047, groupID = 0, refLootEntry = 9046 }; --Runecloth
+  { itemID = 14507, groupID = 0, refLootEntry = 9046 }; --Pattern: Mooncloth Shoulders
+  { itemID = 16215, groupID = 0, refLootEntry = 9046 }; --Formula: Enchant Boots - Greater Stamina
+  { itemID = 16673, groupID = 0, refLootEntry = 9046 }; --Cord of Elements
+  { itemID = 16713, groupID = 0, refLootEntry = 9046 }; --Shadowcraft Belt
+  { itemID = 18987, groupID = 0, refLootEntry = 9046 }; --Blackhand
+  { itemID = 19233, groupID = 0, refLootEntry = 9046 }; --Five of Beasts
+  { itemID = 19234, groupID = 0, refLootEntry = 9046 }; --Six of Beasts
+  { itemID = 19235, groupID = 0, refLootEntry = 9046 }; --Seven of Beasts
+  { itemID = 19236, groupID = 0, refLootEntry = 9046 }; --Eight of Beasts
+  { itemID = 19262, groupID = 0, refLootEntry = 9046 }; --Five of Warlords
+  { itemID = 19263, groupID = 0, refLootEntry = 9046 }; --Six of Warlords
+  { itemID = 19264, groupID = 0, refLootEntry = 9046 }; --Seven of Warlords
+  { itemID = 19265, groupID = 0, refLootEntry = 9046 }; --Eight of Warlords
+  { itemID = 19272, groupID = 0, refLootEntry = 9046 }; --Five of Elementals
+  { itemID = 19273, groupID = 0, refLootEntry = 9046 }; --Six of Elementals
+  { itemID = 19274, groupID = 0, refLootEntry = 9046 }; --Seven of Elementals
+  { itemID = 19275, groupID = 0, refLootEntry = 9046 }; --Eight of Elementals
+  { itemID = 19281, groupID = 0, refLootEntry = 9046 }; --Five of Portals
+  { itemID = 19282, groupID = 0, refLootEntry = 9046 }; --Six of Portals
+  { itemID = 19283, groupID = 0, refLootEntry = 9046 }; --Seven of Portals
+  { itemID = 19284, groupID = 0, refLootEntry = 9046 }; --Eight of Portals
+  { itemID = 24232, groupID = 0, refLootEntry = 9046 }; --Shabby Knot
+  { itemID = 59840, groupID = 0, refLootEntry = 9046 }; --Sigil of Scarshield Quartermaster
+  { itemID = 97730, groupID = 0, refLootEntry = 9046 }; --Worldforged Key Fragment
+  { itemID = 98558, groupID = 90, refLootEntry = 9046 }; --Fighter
+  { itemID = 398607, groupID = 80, refLootEntry = 9046 }; --Embossed Mystic Scroll
+  { itemID = 696661, groupID = 60, refLootEntry = 9046 }; --Keeper
+  { itemID = 696662, groupID = 60, refLootEntry = 9046 }; --Keeper
+  { itemID = 696663, groupID = 60, refLootEntry = 9046 }; --Keeper
+  { itemID = 696664, groupID = 60, refLootEntry = 9046 }; --Keeper
+  { itemID = 696665, groupID = 60, refLootEntry = 9046 }; --Keeper
+  { itemID = 11839, groupID = 1, refLootEntry = 9056 }; --Chief Architect
+  { itemID = 11841, groupID = 1, refLootEntry = 9056 }; --Senior Designer
+  { itemID = 11842, groupID = 1, refLootEntry = 9056 }; --Lead Surveyor
+  { itemID = 22223, groupID = 1, refLootEntry = 9056 }; --Foreman
+  { itemID = 10999, groupID = 0, refLootEntry = 9056 }; --Ironfel
+  { itemID = 11078, groupID = 0, refLootEntry = 9056 }; --Relic Coffer Key
+  { itemID = 11446, groupID = 0, refLootEntry = 9056 }; --A Crumpled Up Note
+  { itemID = 11468, groupID = 0, refLootEntry = 9056 }; --Dark Iron Fanny Pack
+  { itemID = 11840, groupID = 0, refLootEntry = 9056 }; --Master Builder
+  { itemID = 14047, groupID = 0, refLootEntry = 9056 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 9056 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9056 }; --Dark Iron Scraps
+  { itemID = 59841, groupID = 0, refLootEntry = 9056 }; --Sigil of Fineous Darkvire
+  { itemID = 97730, groupID = 0, refLootEntry = 9056 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9056 }; --Rune of Ascension
+  { itemID = 11808, groupID = 1, refLootEntry = 9156 }; --Circle of Flame
+  { itemID = 11809, groupID = 1, refLootEntry = 9156 }; --Flame Wrath
+  { itemID = 11812, groupID = 1, refLootEntry = 9156 }; --Cape of the Fire Salamander
+  { itemID = 11814, groupID = 1, refLootEntry = 9156 }; --Molten Fists
+  { itemID = 11832, groupID = 1, refLootEntry = 9156 }; --Burst of Knowledge
+  { itemID = 11129, groupID = 0, refLootEntry = 9156 }; --Essence of the Elements
+  { itemID = 11446, groupID = 0, refLootEntry = 9156 }; --A Crumpled Up Note
+  { itemID = 18945, groupID = 0, refLootEntry = 9156 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9156 }; --Dark Iron Scraps
+  { itemID = 59843, groupID = 0, refLootEntry = 9156 }; --Sigil of Ambassador Flamelash
+  { itemID = 97730, groupID = 0, refLootEntry = 9156 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9156 }; --Rune of Ascension
+  { itemID = 13166, groupID = 1, refLootEntry = 9196 }; --Slamshot Shoulders
+  { itemID = 13167, groupID = 1, refLootEntry = 9196 }; --Fist of Omokk
+  { itemID = 13168, groupID = 1, refLootEntry = 9196 }; --Plate of the Shaman King
+  { itemID = 13169, groupID = 1, refLootEntry = 9196 }; --Tressermane Leggings
+  { itemID = 13170, groupID = 1, refLootEntry = 9196 }; --Skyshroud Leggings
+  { itemID = 16670, groupID = 1, refLootEntry = 9196 }; --Boots of Elements
+  { itemID = 12219, groupID = 0, refLootEntry = 9196 }; --Unadorned Seal of the Spire
+  { itemID = 12336, groupID = 0, refLootEntry = 9196 }; --Gemstone of Spirestone
+  { itemID = 12534, groupID = 0, refLootEntry = 9196 }; --Omokk
+  { itemID = 14047, groupID = 0, refLootEntry = 9196 }; --Runecloth
+  { itemID = 16250, groupID = 0, refLootEntry = 9196 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 21982, groupID = 0, refLootEntry = 9196 }; --Ogre Warbeads
+  { itemID = 22528, groupID = 0, refLootEntry = 9196 }; --Dark Iron Scraps
+  { itemID = 59844, groupID = 0, refLootEntry = 9196 }; --Sigil of Highlord Omokk
+  { itemID = 97730, groupID = 0, refLootEntry = 9196 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9196 }; --Rune of Ascension
+  { itemID = 12608, groupID = 1, refLootEntry = 9219 }; --Butcher
+  { itemID = 13286, groupID = 1, refLootEntry = 9219 }; --Rivenspike
+  { itemID = 12219, groupID = 0, refLootEntry = 9219 }; --Unadorned Seal of the Spire
+  { itemID = 14047, groupID = 0, refLootEntry = 9219 }; --Runecloth
+  { itemID = 16250, groupID = 0, refLootEntry = 9219 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 21982, groupID = 0, refLootEntry = 9219 }; --Ogre Warbeads
+  { itemID = 22528, groupID = 0, refLootEntry = 9219 }; --Dark Iron Scraps
+  { itemID = 59847, groupID = 0, refLootEntry = 9219 }; --Sigil of Spirestone Butcher
+  { itemID = 97730, groupID = 0, refLootEntry = 9219 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9219 }; --Rune of Ascension
+  { itemID = 12582, groupID = 1, refLootEntry = 9237 }; --Keris of Zul
+  { itemID = 13177, groupID = 1, refLootEntry = 9237 }; --Talisman of Evasion
+  { itemID = 13179, groupID = 1, refLootEntry = 9237 }; --Brazecore Armguards
+  { itemID = 16676, groupID = 1, refLootEntry = 9237 }; --Beaststalker
+  { itemID = 22231, groupID = 1, refLootEntry = 9237 }; --Kayser
+  { itemID = 28972, groupID = 1, refLootEntry = 9237 }; --Flightblade Throwing Axe
+  { itemID = 12219, groupID = 0, refLootEntry = 9237 }; --Unadorned Seal of the Spire
+  { itemID = 12335, groupID = 0, refLootEntry = 9237 }; --Gemstone of Smolderthorn
+  { itemID = 14047, groupID = 0, refLootEntry = 9237 }; --Runecloth
+  { itemID = 16250, groupID = 0, refLootEntry = 9237 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 22528, groupID = 0, refLootEntry = 9237 }; --Dark Iron Scraps
+  { itemID = 59849, groupID = 0, refLootEntry = 9237 }; --Sigil of War Master Voone
+  { itemID = 97730, groupID = 0, refLootEntry = 9237 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9237 }; --Rune of Ascension
+  { itemID = 11623, groupID = 1, refLootEntry = 9319 }; --Spritecaster Cape
+  { itemID = 11627, groupID = 1, refLootEntry = 9319 }; --Fleetfoot Greaves
+  { itemID = 11628, groupID = 1, refLootEntry = 9319 }; --Houndmaster
+  { itemID = 11629, groupID = 1, refLootEntry = 9319 }; --Houndmaster
+  { itemID = 11078, groupID = 0, refLootEntry = 9319 }; --Relic Coffer Key
+  { itemID = 11446, groupID = 0, refLootEntry = 9319 }; --A Crumpled Up Note
+  { itemID = 14047, groupID = 0, refLootEntry = 9319 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 9319 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9319 }; --Dark Iron Scraps
+  { itemID = 59850, groupID = 0, refLootEntry = 9319 }; --Sigil of Houndmaster Grebmar
+  { itemID = 97730, groupID = 0, refLootEntry = 9319 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9319 }; --Rune of Ascension
+  { itemID = 12791, groupID = 1, refLootEntry = 9499 }; --Barman Shanker
+  { itemID = 12793, groupID = 1, refLootEntry = 9499 }; --Mixologist
+  { itemID = 11446, groupID = 0, refLootEntry = 9499 }; --A Crumpled Up Note
+  { itemID = 14047, groupID = 0, refLootEntry = 9499 }; --Runecloth
+  { itemID = 18653, groupID = 2, refLootEntry = 9499 }; --Schematic: Goblin Jumper Cables XL
+  { itemID = 18945, groupID = 0, refLootEntry = 9499 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9499 }; --Dark Iron Scraps
+  { itemID = 59852, groupID = 0, refLootEntry = 9499 }; --Sigil of Plugger Spazzring
+  { itemID = 97730, groupID = 0, refLootEntry = 9499 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9499 }; --Rune of Ascension
+  { itemID = 406014, groupID = 1, refLootEntry = 9499 }; --Wig
+  { itemID = 4552, groupID = 0, refLootEntry = 9502 }; --Smooth Stone Chip
+  { itemID = 4554, groupID = 0, refLootEntry = 9502 }; --Shiny Polished Stone
+  { itemID = 7912, groupID = 0, refLootEntry = 9502 }; --Solid Stone
+  { itemID = 8150, groupID = 0, refLootEntry = 9502 }; --Deeprock Salt
+  { itemID = 11744, groupID = 1, refLootEntry = 9502 }; --Bloodfist
+  { itemID = 11745, groupID = 1, refLootEntry = 9502 }; --Fists of Phalanx
+  { itemID = 22212, groupID = 1, refLootEntry = 9502 }; --Golem Fitted Pauldrons
+  { itemID = 11370, groupID = 0, refLootEntry = 9502 }; --Dark Iron Ore
+  { itemID = 11446, groupID = 0, refLootEntry = 9502 }; --A Crumpled Up Note
+  { itemID = 18945, groupID = 0, refLootEntry = 9502 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9502 }; --Dark Iron Scraps
+  { itemID = 59853, groupID = 0, refLootEntry = 9502 }; --Sigil of Phalanx
+  { itemID = 97730, groupID = 0, refLootEntry = 9502 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9502 }; --Rune of Ascension
+  { itemID = 601688, groupID = 0, refLootEntry = 9502 }; --Elemental Lodestone: Phalanx
+  { itemID = 11735, groupID = 1, refLootEntry = 9537 }; --Ragefury Eyepatch
+  { itemID = 18043, groupID = 1, refLootEntry = 9537 }; --Coal Miner Boots
+  { itemID = 18044, groupID = 1, refLootEntry = 9537 }; --Hurley
+  { itemID = 22275, groupID = 1, refLootEntry = 9537 }; --Firemoss Boots
+  { itemID = 11078, groupID = 0, refLootEntry = 9537 }; --Relic Coffer Key
+  { itemID = 11312, groupID = 0, refLootEntry = 9537 }; --Lost Thunderbrew Recipe
+  { itemID = 11446, groupID = 0, refLootEntry = 9537 }; --A Crumpled Up Note
+  { itemID = 11468, groupID = 0, refLootEntry = 9537 }; --Dark Iron Fanny Pack
+  { itemID = 14047, groupID = 0, refLootEntry = 9537 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 9537 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9537 }; --Dark Iron Scraps
+  { itemID = 59854, groupID = 0, refLootEntry = 9537 }; --Sigil of Hurley Blackbreath
+  { itemID = 97730, groupID = 0, refLootEntry = 9537 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9537 }; --Rune of Ascension
+  { itemID = 2662, groupID = 2, refLootEntry = 9543 }; --Ribbly
+  { itemID = 2663, groupID = 2, refLootEntry = 9543 }; --Ribbly
+  { itemID = 11742, groupID = 1, refLootEntry = 9543 }; --Wayfarer
+  { itemID = 11313, groupID = 0, refLootEntry = 9543 }; --Ribbly
+  { itemID = 11446, groupID = 0, refLootEntry = 9543 }; --A Crumpled Up Note
+  { itemID = 11612, groupID = 2, refLootEntry = 9543 }; --Plans: Dark Iron Plate
+  { itemID = 14047, groupID = 0, refLootEntry = 9543 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 9543 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9543 }; --Dark Iron Scraps
+  { itemID = 59855, groupID = 0, refLootEntry = 9543 }; --Sigil of Ribbly Screwspigot
+  { itemID = 97730, groupID = 0, refLootEntry = 9543 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9543 }; --Rune of Ascension
+  { itemID = 13143, groupID = 1, refLootEntry = 9568 }; --Mark of the Dragon Lord
+  { itemID = 13148, groupID = 1, refLootEntry = 9568 }; --Chillpike
+  { itemID = 13161, groupID = 1, refLootEntry = 9568 }; --Trindlehaven Staff
+  { itemID = 13162, groupID = 1, refLootEntry = 9568 }; --Reiver Claws
+  { itemID = 13163, groupID = 1, refLootEntry = 9568 }; --Relentless Scythe
+  { itemID = 13164, groupID = 1, refLootEntry = 9568 }; --Heart of the Scale
+  { itemID = 16679, groupID = 1, refLootEntry = 9568 }; --Beaststalker
+  { itemID = 22321, groupID = 1, refLootEntry = 9568 }; --Heart of Wyrmthalak
+  { itemID = 12219, groupID = 0, refLootEntry = 9568 }; --Unadorned Seal of the Spire
+  { itemID = 12337, groupID = 0, refLootEntry = 9568 }; --Gemstone of Bloodaxe
+  { itemID = 12780, groupID = 0, refLootEntry = 9568 }; --General Drakkisath
+  { itemID = 16250, groupID = 0, refLootEntry = 9568 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 16786, groupID = 0, refLootEntry = 9568 }; --Black Dragonspawn Eye
+  { itemID = 22528, groupID = 0, refLootEntry = 9568 }; --Dark Iron Scraps
+  { itemID = 59856, groupID = 0, refLootEntry = 9568 }; --Sigil of Overlord Wyrmthalak
+  { itemID = 97730, groupID = 0, refLootEntry = 9568 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9568 }; --Rune of Ascension
+  { itemID = 1180292, groupID = 0, refLootEntry = 9568 }; --Draconic Warhorn: Overlord Wyrmthalak
+  { itemID = 2021814, groupID = 0, refLootEntry = 9568 }; --Dungeon Spoils
+  { itemID = 12621, groupID = 1, refLootEntry = 9596 }; --Demonfork
+  { itemID = 12634, groupID = 1, refLootEntry = 9596 }; --Chiselbrand Girdle
+  { itemID = 12637, groupID = 1, refLootEntry = 9596 }; --Backusarian Gauntlets
+  { itemID = 12219, groupID = 0, refLootEntry = 9596 }; --Unadorned Seal of the Spire
+  { itemID = 12838, groupID = 0, refLootEntry = 9596 }; --Plans: Arcanite Reaper
+  { itemID = 14047, groupID = 0, refLootEntry = 9596 }; --Runecloth
+  { itemID = 16250, groupID = 0, refLootEntry = 9596 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 22138, groupID = 0, refLootEntry = 9596 }; --Blackrock Bracer
+  { itemID = 22528, groupID = 0, refLootEntry = 9596 }; --Dark Iron Scraps
+  { itemID = 59857, groupID = 0, refLootEntry = 9596 }; --Sigil of Bannok Grimaxe
+  { itemID = 97730, groupID = 0, refLootEntry = 9596 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9596 }; --Rune of Ascension
+  { itemID = 808961, groupID = 0, refLootEntry = 9596 }; --Plans: Arcanite Spellreaver
+  { itemID = 13198, groupID = 1, refLootEntry = 9718 }; --Hurd Smasher
+  { itemID = 13203, groupID = 1, refLootEntry = 9718 }; --Armswake Cloak
+  { itemID = 13204, groupID = 1, refLootEntry = 9718 }; --Bashguuder
+  { itemID = 12219, groupID = 0, refLootEntry = 9718 }; --Unadorned Seal of the Spire
+  { itemID = 14047, groupID = 0, refLootEntry = 9718 }; --Runecloth
+  { itemID = 16250, groupID = 0, refLootEntry = 9718 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 22138, groupID = 0, refLootEntry = 9718 }; --Blackrock Bracer
+  { itemID = 22528, groupID = 0, refLootEntry = 9718 }; --Dark Iron Scraps
+  { itemID = 59860, groupID = 0, refLootEntry = 9718 }; --Sigil of Ghok Bashguud
+  { itemID = 97730, groupID = 0, refLootEntry = 9718 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9718 }; --Rune of Ascension
+  { itemID = 13252, groupID = 1, refLootEntry = 9736 }; --Cloudrunner Girdle
+  { itemID = 13253, groupID = 1, refLootEntry = 9736 }; --Hands of Power
+  { itemID = 12219, groupID = 0, refLootEntry = 9736 }; --Unadorned Seal of the Spire
+  { itemID = 12835, groupID = 0, refLootEntry = 9736 }; --Plans: Annihilator
+  { itemID = 13444, groupID = 0, refLootEntry = 9736 }; --Major Mana Potion
+  { itemID = 13446, groupID = 0, refLootEntry = 9736 }; --Major Healing Potion
+  { itemID = 14047, groupID = 0, refLootEntry = 9736 }; --Runecloth
+  { itemID = 16250, groupID = 0, refLootEntry = 9736 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 21955, groupID = 0, refLootEntry = 9736 }; --Design: Black Diamond Crab
+  { itemID = 22138, groupID = 0, refLootEntry = 9736 }; --Blackrock Bracer
+  { itemID = 22528, groupID = 0, refLootEntry = 9736 }; --Dark Iron Scraps
+  { itemID = 59861, groupID = 0, refLootEntry = 9736 }; --Sigil of Quartermaster Zigris
+  { itemID = 97730, groupID = 0, refLootEntry = 9736 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9736 }; --Rune of Ascension
+  { itemID = 406016, groupID = 1, refLootEntry = 9736 }; --Blackrock Mortar
+  { itemID = 12905, groupID = 1, refLootEntry = 9816 }; --Wildfire Cape
+  { itemID = 12926, groupID = 1, refLootEntry = 9816 }; --Flaming Band
+  { itemID = 12927, groupID = 1, refLootEntry = 9816 }; --Truestrike Shoulders
+  { itemID = 12929, groupID = 1, refLootEntry = 9816 }; --Emberfury Talisman
+  { itemID = 16672, groupID = 1, refLootEntry = 9816 }; --Gauntlets of Elements
+  { itemID = 3857, groupID = 0, refLootEntry = 9816 }; --Coal
+  { itemID = 4787, groupID = 0, refLootEntry = 9816 }; --Burning Pitch
+  { itemID = 16250, groupID = 0, refLootEntry = 9816 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 17322, groupID = 0, refLootEntry = 9816 }; --Eye of the Emberseer
+  { itemID = 21988, groupID = 0, refLootEntry = 9816 }; --Ember of Emberseer
+  { itemID = 22527, groupID = 0, refLootEntry = 9816 }; --Core of Elements
+  { itemID = 59862, groupID = 0, refLootEntry = 9816 }; --Sigil of Pyroguard Emberseer
+  { itemID = 97730, groupID = 0, refLootEntry = 9816 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9816 }; --Rune of Ascension
+  { itemID = 3857, groupID = 0, refLootEntry = 9938 }; --Coal
+  { itemID = 4787, groupID = 0, refLootEntry = 9938 }; --Burning Pitch
+  { itemID = 11746, groupID = 1, refLootEntry = 9938 }; --Golem Skull Helm
+  { itemID = 11935, groupID = 1, refLootEntry = 9938 }; --Magmus Stone
+  { itemID = 22208, groupID = 1, refLootEntry = 9938 }; --Lavastone Hammer
+  { itemID = 22395, groupID = 1, refLootEntry = 9938 }; --Totem of Rage
+  { itemID = 22400, groupID = 1, refLootEntry = 9938 }; --Libram of Truth
+  { itemID = 11446, groupID = 0, refLootEntry = 9938 }; --A Crumpled Up Note
+  { itemID = 18945, groupID = 0, refLootEntry = 9938 }; --Dark Iron Residue
+  { itemID = 22528, groupID = 0, refLootEntry = 9938 }; --Dark Iron Scraps
+  { itemID = 97730, groupID = 0, refLootEntry = 9938 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 9938 }; --Rune of Ascension
+  { itemID = 601687, groupID = 0, refLootEntry = 9938 }; --Elemental Lodestone: Ironhand Guardian
+  { itemID = 4425, groupID = 0, refLootEntry = 9956 }; --Scroll of Agility III
+  { itemID = 4426, groupID = 0, refLootEntry = 9956 }; --Scroll of Strength III
+  { itemID = 4500, groupID = 0, refLootEntry = 9956 }; --Traveler
+  { itemID = 5758, groupID = 0, refLootEntry = 9956 }; --Mithril Lockbox
+  { itemID = 7909, groupID = 0, refLootEntry = 9956 }; --Aquamarine
+  { itemID = 7910, groupID = 0, refLootEntry = 9956 }; --Star Ruby
+  { itemID = 8766, groupID = 0, refLootEntry = 9956 }; --Morning Glory Dew
+  { itemID = 8950, groupID = 0, refLootEntry = 9956 }; --Homemade Cherry Pie
+  { itemID = 10305, groupID = 0, refLootEntry = 9956 }; --Scroll of Protection IV
+  { itemID = 10306, groupID = 0, refLootEntry = 9956 }; --Scroll of Spirit IV
+  { itemID = 11732, groupID = 0, refLootEntry = 9956 }; --Libram of Rumination
+  { itemID = 11733, groupID = 0, refLootEntry = 9956 }; --Libram of Constitution
+  { itemID = 11737, groupID = 0, refLootEntry = 9956 }; --Libram of Voracity
+  { itemID = 11885, groupID = 0, refLootEntry = 9956 }; --Shadowforge Torch
+  { itemID = 13443, groupID = 0, refLootEntry = 9956 }; --Superior Mana Potion
+  { itemID = 13446, groupID = 0, refLootEntry = 9956 }; --Major Healing Potion
+  { itemID = 14047, groupID = 0, refLootEntry = 9956 }; --Runecloth
+  { itemID = 19231, groupID = 0, refLootEntry = 9956 }; --Three of Beasts
+  { itemID = 19270, groupID = 0, refLootEntry = 9956 }; --Three of Elementals
+  { itemID = 19271, groupID = 0, refLootEntry = 9956 }; --Four of Elementals
+  { itemID = 20400, groupID = 0, refLootEntry = 9956 }; --Pumpkin Bag
+  { itemID = 1520, groupID = 0, refLootEntry = 10081 }; --Troll Sweat
+  { itemID = 1645, groupID = 0, refLootEntry = 10081 }; --Moonberry Juice
+  { itemID = 3864, groupID = 0, refLootEntry = 10081 }; --Citrine
+  { itemID = 3928, groupID = 0, refLootEntry = 10081 }; --Superior Healing Potion
+  { itemID = 4306, groupID = 0, refLootEntry = 10081 }; --Silk Cloth
+  { itemID = 4338, groupID = 0, refLootEntry = 10081 }; --Mageweave Cloth
+  { itemID = 4419, groupID = 0, refLootEntry = 10081 }; --Scroll of Intellect III
+  { itemID = 4421, groupID = 0, refLootEntry = 10081 }; --Scroll of Protection III
+  { itemID = 4422, groupID = 0, refLootEntry = 10081 }; --Scroll of Stamina III
+  { itemID = 4599, groupID = 0, refLootEntry = 10081 }; --Cured Ham Steak
+  { itemID = 4637, groupID = 0, refLootEntry = 10081 }; --Steel Lockbox
+  { itemID = 6149, groupID = 0, refLootEntry = 10081 }; --Greater Mana Potion
+  { itemID = 7909, groupID = 0, refLootEntry = 10081 }; --Aquamarine
+  { itemID = 8151, groupID = 0, refLootEntry = 10081 }; --Flask of Mojo
+  { itemID = 8623, groupID = 0, refLootEntry = 10081 }; --OOX-17\/TN Distress Beacon
+  { itemID = 9242, groupID = 0, refLootEntry = 10081 }; --Ancient Tablet
+  { itemID = 9243, groupID = 0, refLootEntry = 10081 }; --Shriveled Heart
+  { itemID = 9523, groupID = 0, refLootEntry = 10081 }; --Troll Temper
+  { itemID = 12471, groupID = 0, refLootEntry = 10081 }; --Desertwalker Cane
+  { itemID = 59867, groupID = 0, refLootEntry = 10081 }; --Sigil of Dustwraith
+  { itemID = 11571, groupID = 4, refLootEntry = 10184 }; --Flame-Infused Sceptre
+  { itemID = 12596, groupID = 4, refLootEntry = 10184 }; --Charred Breastplate
+  { itemID = 15410, groupID = 1, refLootEntry = 10184 }; --Scale of Onyxia
+  { itemID = 17064, groupID = 4, refLootEntry = 10184 }; --Shard of the Scale
+  { itemID = 17067, groupID = 4, refLootEntry = 10184 }; --Ancient Cornerstone Grimoire
+  { itemID = 17068, groupID = 4, refLootEntry = 10184 }; --Deathbringer
+  { itemID = 17075, groupID = 4, refLootEntry = 10184 }; --Vis
+  { itemID = 17078, groupID = 4, refLootEntry = 10184 }; --Sapphiron Drape
+  { itemID = 17084, groupID = 4, refLootEntry = 10184 }; --Mace of the Dragon Knight
+  { itemID = 18205, groupID = 4, refLootEntry = 10184 }; --Eskhandar
+  { itemID = 18211, groupID = 4, refLootEntry = 10184 }; --Wand of the Noble
+  { itemID = 18212, groupID = 4, refLootEntry = 10184 }; --Band of Nyxondra
+  { itemID = 18215, groupID = 4, refLootEntry = 10184 }; --Insignia of the Dragon
+  { itemID = 18216, groupID = 4, refLootEntry = 10184 }; --Neltharion
+  { itemID = 18813, groupID = 4, refLootEntry = 10184 }; --Ring of Binding
+  { itemID = 49636, groupID = 6, refLootEntry = 10184 }; --Reins of the Onyxian Drake
+  { itemID = 53140, groupID = 5, refLootEntry = 10184 }; --Formula: Enchant Cloak - Dragon Fire
+  { itemID = 97269, groupID = 2, refLootEntry = 10184 }; --Head of Onyxia
+  { itemID = 2522460, groupID = 3, refLootEntry = 10184 }; --Chromatic Headpiece
+  { itemID = 21108, groupID = 0, refLootEntry = 10184 }; --Draconic for Dummies - Chapter VI
+  { itemID = 375250, groupID = 0, refLootEntry = 10184 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 10184 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 10184 }; --Personal Cache
+  { itemID = 1180299, groupID = 0, refLootEntry = 10184 }; --Draconic Warhorn: Onyxia
+  { itemID = 13210, groupID = 1, refLootEntry = 10220 }; --Pads of the Dread Wolf
+  { itemID = 13211, groupID = 1, refLootEntry = 10220 }; --Slashclaw Bracers
+  { itemID = 13212, groupID = 1, refLootEntry = 10220 }; --Halycon
+  { itemID = 22313, groupID = 1, refLootEntry = 10220 }; --Ironweave Bracers
+  { itemID = 4583, groupID = 0, refLootEntry = 10220 }; --Thick Furry Mane
+  { itemID = 4584, groupID = 0, refLootEntry = 10220 }; --Large Trophy Paw
+  { itemID = 12203, groupID = 0, refLootEntry = 10220 }; --Red Wolf Meat
+  { itemID = 12208, groupID = 0, refLootEntry = 10220 }; --Tender Wolf Meat
+  { itemID = 16250, groupID = 0, refLootEntry = 10220 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 59882, groupID = 0, refLootEntry = 10220 }; --Sigil of Halycon
+  { itemID = 97730, groupID = 0, refLootEntry = 10220 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10220 }; --Rune of Ascension
+  { itemID = 12589, groupID = 1, refLootEntry = 10264 }; --Dustfeather Sash
+  { itemID = 12603, groupID = 1, refLootEntry = 10264 }; --Nightbrace Tunic
+  { itemID = 12606, groupID = 1, refLootEntry = 10264 }; --Crystallized Girdle
+  { itemID = 12609, groupID = 1, refLootEntry = 10264 }; --Polychromatic Visionwrap
+  { itemID = 13371, groupID = 1, refLootEntry = 10264 }; --Father Flame
+  { itemID = 16695, groupID = 1, refLootEntry = 10264 }; --Devout Mantle
+  { itemID = 16786, groupID = 0, refLootEntry = 10264 }; --Black Dragonspawn Eye
+  { itemID = 18657, groupID = 0, refLootEntry = 10264 }; --Schematic: Hyper-Radiant Flame Reflector
+  { itemID = 59888, groupID = 0, refLootEntry = 10264 }; --Sigil of Solakar Flamewreath
+  { itemID = 97730, groupID = 0, refLootEntry = 10264 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10264 }; --Rune of Ascension
+  { itemID = 1180305, groupID = 0, refLootEntry = 10264 }; --Draconic Warhorn: Solakar Flamewreath
+  { itemID = 13205, groupID = 1, refLootEntry = 10268 }; --Rhombeard Protector
+  { itemID = 13206, groupID = 1, refLootEntry = 10268 }; --Wolfshear Leggings
+  { itemID = 13208, groupID = 1, refLootEntry = 10268 }; --Bleak Howler Armguards
+  { itemID = 16718, groupID = 1, refLootEntry = 10268 }; --Wildheart Spaulders
+  { itemID = 4583, groupID = 0, refLootEntry = 10268 }; --Thick Furry Mane
+  { itemID = 4584, groupID = 0, refLootEntry = 10268 }; --Large Trophy Paw
+  { itemID = 12203, groupID = 0, refLootEntry = 10268 }; --Red Wolf Meat
+  { itemID = 12208, groupID = 0, refLootEntry = 10268 }; --Tender Wolf Meat
+  { itemID = 59889, groupID = 0, refLootEntry = 10268 }; --Sigil of Gizrul the Slavener
+  { itemID = 97730, groupID = 0, refLootEntry = 10268 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10268 }; --Rune of Ascension
+  { itemID = 12592, groupID = 1, refLootEntry = 10363 }; --Blackblade of Shahram
+  { itemID = 12602, groupID = 1, refLootEntry = 10363 }; --Draconian Deflector
+  { itemID = 13098, groupID = 1, refLootEntry = 10363 }; --Painweaver Band
+  { itemID = 13141, groupID = 1, refLootEntry = 10363 }; --Tooth of Gnarr
+  { itemID = 13142, groupID = 1, refLootEntry = 10363 }; --Brigam Girdle
+  { itemID = 16666, groupID = 1, refLootEntry = 10363 }; --Vest of Elements
+  { itemID = 16674, groupID = 1, refLootEntry = 10363 }; --Beaststalker
+  { itemID = 16688, groupID = 1, refLootEntry = 10363 }; --Magister
+  { itemID = 16690, groupID = 1, refLootEntry = 10363 }; --Devout Robe
+  { itemID = 16700, groupID = 1, refLootEntry = 10363 }; --Dreadmist Robe
+  { itemID = 16706, groupID = 1, refLootEntry = 10363 }; --Wildheart Vest
+  { itemID = 16721, groupID = 1, refLootEntry = 10363 }; --Shadowcraft Tunic
+  { itemID = 16726, groupID = 1, refLootEntry = 10363 }; --Lightforge Breastplate
+  { itemID = 16730, groupID = 1, refLootEntry = 10363 }; --Breastplate of Valor
+  { itemID = 22253, groupID = 1, refLootEntry = 10363 }; --Tome of the Lost
+  { itemID = 22267, groupID = 1, refLootEntry = 10363 }; --Spellweaver
+  { itemID = 22268, groupID = 1, refLootEntry = 10363 }; --Draconic Infused Emblem
+  { itemID = 22269, groupID = 1, refLootEntry = 10363 }; --Shadow Prowler
+  { itemID = 13519, groupID = 0, refLootEntry = 10363 }; --Recipe: Flask of the Titans
+  { itemID = 15730, groupID = 0, refLootEntry = 10363 }; --Pattern: Red Dragonscale Breastplate
+  { itemID = 16250, groupID = 0, refLootEntry = 10363 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 16663, groupID = 0, refLootEntry = 10363 }; --Blood of the Black Dragon Champion
+  { itemID = 59894, groupID = 0, refLootEntry = 10363 }; --Sigil of General Drakkisath
+  { itemID = 97730, groupID = 0, refLootEntry = 10363 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10363 }; --Rune of Ascension
+  { itemID = 1180309, groupID = 0, refLootEntry = 10363 }; --Draconic Warhorn: General Drakkisath
+  { itemID = 2021814, groupID = 0, refLootEntry = 10363 }; --Dungeon Spoils
+  { itemID = 13184, groupID = 1, refLootEntry = 10376 }; --Fallbrush Handgrips
+  { itemID = 13185, groupID = 1, refLootEntry = 10376 }; --Sunderseer Mantle
+  { itemID = 13218, groupID = 1, refLootEntry = 10376 }; --Fang of the Crystal Spider
+  { itemID = 1074, groupID = 0, refLootEntry = 10376 }; --Hard Spider Leg Tip
+  { itemID = 4337, groupID = 0, refLootEntry = 10376 }; --Thick Spider
+  { itemID = 4585, groupID = 0, refLootEntry = 10376 }; --Dripping Spider Mandible
+  { itemID = 10285, groupID = 0, refLootEntry = 10376 }; --Shadow Silk
+  { itemID = 12205, groupID = 0, refLootEntry = 10376 }; --White Spider Meat
+  { itemID = 14227, groupID = 0, refLootEntry = 10376 }; --Ironweb Spider Silk
+  { itemID = 16250, groupID = 0, refLootEntry = 10376 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 59895, groupID = 0, refLootEntry = 10376 }; --Sigil of Crystal Fang
+  { itemID = 97730, groupID = 0, refLootEntry = 10376 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10376 }; --Rune of Ascension
+  { itemID = 13394, groupID = 1, refLootEntry = 10393 }; --Skul
+  { itemID = 13395, groupID = 1, refLootEntry = 10393 }; --Skul
+  { itemID = 13396, groupID = 1, refLootEntry = 10393 }; --Skul
+  { itemID = 12843, groupID = 0, refLootEntry = 10393 }; --Corruptor
+  { itemID = 14047, groupID = 0, refLootEntry = 10393 }; --Runecloth
+  { itemID = 22526, groupID = 0, refLootEntry = 10393 }; --Bone Fragments
+  { itemID = 59896, groupID = 0, refLootEntry = 10393 }; --Sigil of Skul
+  { itemID = 88319, groupID = 0, refLootEntry = 10393 }; --Blood Soaked Vellum: Skul
+  { itemID = 97730, groupID = 0, refLootEntry = 10393 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10393 }; --Rune of Ascension
+  { itemID = 12583, groupID = 1, refLootEntry = 10429 }; --Blackhand Doomsaw
+  { itemID = 12587, groupID = 1, refLootEntry = 10429 }; --Eye of Rend
+  { itemID = 12588, groupID = 1, refLootEntry = 10429 }; --Bonespike Shoulder
+  { itemID = 12590, groupID = 1, refLootEntry = 10429 }; --Felstriker
+  { itemID = 12935, groupID = 1, refLootEntry = 10429 }; --Warmaster Legguards
+  { itemID = 12936, groupID = 1, refLootEntry = 10429 }; --Battleborn Armbraces
+  { itemID = 12939, groupID = 1, refLootEntry = 10429 }; --Dal
+  { itemID = 12940, groupID = 1, refLootEntry = 10429 }; --Dal
+  { itemID = 12952, groupID = 1, refLootEntry = 10429 }; --Gyth
+  { itemID = 12953, groupID = 1, refLootEntry = 10429 }; --Dragoneye Coif
+  { itemID = 12960, groupID = 1, refLootEntry = 10429 }; --Tribal War Feathers
+  { itemID = 16669, groupID = 1, refLootEntry = 10429 }; --Pauldrons of Elements
+  { itemID = 16733, groupID = 1, refLootEntry = 10429 }; --Spaulders of Valor
+  { itemID = 18102, groupID = 1, refLootEntry = 10429 }; --Dragonrider Boots
+  { itemID = 18103, groupID = 1, refLootEntry = 10429 }; --Band of Rumination
+  { itemID = 18104, groupID = 1, refLootEntry = 10429 }; --Feralsurge Girdle
+  { itemID = 22225, groupID = 1, refLootEntry = 10429 }; --Dragonskin Cowl
+  { itemID = 22247, groupID = 1, refLootEntry = 10429 }; --Faith Healer
+  { itemID = 4460, groupID = 0, refLootEntry = 10429 }; --Ripped Wing Webbing
+  { itemID = 12630, groupID = 0, refLootEntry = 10429 }; --Head of Rend Blackhand
+  { itemID = 12871, groupID = 0, refLootEntry = 10429 }; --Chromatic Carapace
+  { itemID = 13522, groupID = 0, refLootEntry = 10429 }; --Recipe: Flask of Chromatic Resistance
+  { itemID = 14047, groupID = 0, refLootEntry = 10429 }; --Runecloth
+  { itemID = 22138, groupID = 0, refLootEntry = 10429 }; --Blackrock Bracer
+  { itemID = 29434, groupID = 0, refLootEntry = 10429 }; --Badge of Justice
+  { itemID = 59897, groupID = 0, refLootEntry = 10429 }; --Sigil of Warchief Rend Blackhand
+  { itemID = 97730, groupID = 0, refLootEntry = 10429 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10429 }; --Rune of Ascension
+  { itemID = 1180308, groupID = 0, refLootEntry = 10429 }; --Draconic Warhorn: Gyth
+  { itemID = 1180316, groupID = 0, refLootEntry = 10429 }; --Draconic Warhorn: Chromatic Whelp
+  { itemID = 1180319, groupID = 0, refLootEntry = 10429 }; --Draconic Warhorn: Chromatic Dragonspawn
+  { itemID = 12709, groupID = 1, refLootEntry = 10430 }; --Finkle
+  { itemID = 12963, groupID = 1, refLootEntry = 10430 }; --Blademaster Leggings
+  { itemID = 12964, groupID = 1, refLootEntry = 10430 }; --Tristam Legguards
+  { itemID = 12965, groupID = 1, refLootEntry = 10430 }; --Spiritshroud Leggings
+  { itemID = 12966, groupID = 1, refLootEntry = 10430 }; --Blackmist Armguards
+  { itemID = 12967, groupID = 1, refLootEntry = 10430 }; --Bloodmoon Cloak
+  { itemID = 12968, groupID = 1, refLootEntry = 10430 }; --Frostweaver Cape
+  { itemID = 12969, groupID = 1, refLootEntry = 10430 }; --Seeping Willow
+  { itemID = 16729, groupID = 1, refLootEntry = 10430 }; --Lightforge Spaulders
+  { itemID = 22311, groupID = 1, refLootEntry = 10430 }; --Ironweave Boots
+  { itemID = 16250, groupID = 0, refLootEntry = 10430 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 19227, groupID = 0, refLootEntry = 10430 }; --Ace of Beasts
+  { itemID = 80089, groupID = 0, refLootEntry = 10430 }; --Beastmaster
+  { itemID = 97730, groupID = 0, refLootEntry = 10430 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10430 }; --Rune of Ascension
+  { itemID = 14577, groupID = 1, refLootEntry = 10432 }; --Skullsmoke Pants
+  { itemID = 18691, groupID = 1, refLootEntry = 10432 }; --Dark Advisor
+  { itemID = 274663, groupID = 1, refLootEntry = 10432 }; --Remulos
+  { itemID = 12843, groupID = 0, refLootEntry = 10432 }; --Corruptor
+  { itemID = 14047, groupID = 0, refLootEntry = 10432 }; --Runecloth
+  { itemID = 22526, groupID = 0, refLootEntry = 10432 }; --Bone Fragments
+  { itemID = 59899, groupID = 0, refLootEntry = 10432 }; --Sigil of Vectus
+  { itemID = 88333, groupID = 0, refLootEntry = 10432 }; --Blood Soaked Vellum: Vectus
+  { itemID = 97730, groupID = 0, refLootEntry = 10432 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10432 }; --Rune of Ascension
+  { itemID = 6530, groupID = 0, refLootEntry = 10435 }; --Nightcrawlers
+  { itemID = 13376, groupID = 1, refLootEntry = 10435 }; --Royal Tribunal Cloak
+  { itemID = 18722, groupID = 1, refLootEntry = 10435 }; --Death Grips
+  { itemID = 18725, groupID = 1, refLootEntry = 10435 }; --Peacemaker
+  { itemID = 18726, groupID = 1, refLootEntry = 10435 }; --Magistrate
+  { itemID = 18727, groupID = 1, refLootEntry = 10435 }; --Crimson Felt Hat
+  { itemID = 23198, groupID = 1, refLootEntry = 10435 }; --Idol of Brutality
+  { itemID = 12382, groupID = 0, refLootEntry = 10435 }; --Key to the City
+  { itemID = 12843, groupID = 0, refLootEntry = 10435 }; --Corruptor
+  { itemID = 13174, groupID = 0, refLootEntry = 10435 }; --Plagued Flesh Sample
+  { itemID = 14047, groupID = 0, refLootEntry = 10435 }; --Runecloth
+  { itemID = 59902, groupID = 0, refLootEntry = 10435 }; --Sigil of Magistrate Barthilas
+  { itemID = 88334, groupID = 0, refLootEntry = 10435 }; --Blood Soaked Vellum: Magistrate Barthilas
+  { itemID = 97730, groupID = 0, refLootEntry = 10435 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10435 }; --Rune of Ascension
+  { itemID = 13514, groupID = 2, refLootEntry = 10436 }; --Wail of the Banshee
+  { itemID = 13534, groupID = 1, refLootEntry = 10436 }; --Banshee Finger
+  { itemID = 13535, groupID = 2, refLootEntry = 10436 }; --Coldtouch Phantom Wraps
+  { itemID = 13537, groupID = 2, refLootEntry = 10436 }; --Chillhide Bracers
+  { itemID = 13538, groupID = 2, refLootEntry = 10436 }; --Windshrieker Pauldrons
+  { itemID = 13539, groupID = 2, refLootEntry = 10436 }; --Banshee
+  { itemID = 16704, groupID = 1, refLootEntry = 10436 }; --Dreadmist Sandals
+  { itemID = 18728, groupID = 1, refLootEntry = 10436 }; --Anastari Heirloom
+  { itemID = 18729, groupID = 1, refLootEntry = 10436 }; --Screeching Bow
+  { itemID = 18730, groupID = 1, refLootEntry = 10436 }; --Shadowy Laced Handwraps
+  { itemID = 12843, groupID = 0, refLootEntry = 10436 }; --Corruptor
+  { itemID = 13174, groupID = 0, refLootEntry = 10436 }; --Plagued Flesh Sample
+  { itemID = 14047, groupID = 0, refLootEntry = 10436 }; --Runecloth
+  { itemID = 59903, groupID = 0, refLootEntry = 10436 }; --Sigil of Baroness Anastari
+  { itemID = 88363, groupID = 0, refLootEntry = 10436 }; --Blood Soaked Vellum: Baroness Anastari
+  { itemID = 97730, groupID = 0, refLootEntry = 10436 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10436 }; --Rune of Ascension
+  { itemID = 13509, groupID = 2, refLootEntry = 10438 }; --Clutch of Foresight
+  { itemID = 13525, groupID = 2, refLootEntry = 10438 }; --Darkbind Fingers
+  { itemID = 13526, groupID = 2, refLootEntry = 10438 }; --Flamescarred Girdle
+  { itemID = 13527, groupID = 2, refLootEntry = 10438 }; --Lavawalker Greaves
+  { itemID = 13528, groupID = 2, refLootEntry = 10438 }; --Twilight Void Bracers
+  { itemID = 16691, groupID = 1, refLootEntry = 10438 }; --Devout Sandals
+  { itemID = 18734, groupID = 1, refLootEntry = 10438 }; --Pale Moon Cloak
+  { itemID = 18735, groupID = 1, refLootEntry = 10438 }; --Maleki
+  { itemID = 18737, groupID = 1, refLootEntry = 10438 }; --Bone Slicing Hatchet
+  { itemID = 12833, groupID = 0, refLootEntry = 10438 }; --Plans: Hammer of the Titans
+  { itemID = 12843, groupID = 0, refLootEntry = 10438 }; --Corruptor
+  { itemID = 14047, groupID = 0, refLootEntry = 10438 }; --Runecloth
+  { itemID = 59905, groupID = 0, refLootEntry = 10438 }; --Sigil of Maleki the Pallid
+  { itemID = 97730, groupID = 0, refLootEntry = 10438 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10438 }; --Rune of Ascension
+  { itemID = 13372, groupID = 1, refLootEntry = 10439 }; --Slavedriver
+  { itemID = 13373, groupID = 1, refLootEntry = 10439 }; --Band of Flesh
+  { itemID = 13374, groupID = 1, refLootEntry = 10439 }; --Soulstealer Mantle
+  { itemID = 13375, groupID = 1, refLootEntry = 10439 }; --Crest of Retribution
+  { itemID = 13515, groupID = 1, refLootEntry = 10439 }; --Ramstein
+  { itemID = 16737, groupID = 1, refLootEntry = 10439 }; --Gauntlets of Valor
+  { itemID = 18723, groupID = 1, refLootEntry = 10439 }; --Animated Chain Necklace
+  { itemID = 12735, groupID = 0, refLootEntry = 10439 }; --Frayed Abomination Stitching
+  { itemID = 12843, groupID = 0, refLootEntry = 10439 }; --Corruptor
+  { itemID = 13174, groupID = 0, refLootEntry = 10439 }; --Plagued Flesh Sample
+  { itemID = 15880, groupID = 0, refLootEntry = 10439 }; --Head of Ramstein the Gorger
+  { itemID = 59906, groupID = 0, refLootEntry = 10439 }; --Sigil of Ramstein the Gorger
+  { itemID = 88365, groupID = 0, refLootEntry = 10439 }; --Blood Soaked Vellum: Ramstein the Gorger
+  { itemID = 97730, groupID = 0, refLootEntry = 10439 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10439 }; --Rune of Ascension
+  { itemID = 6005, groupID = 0, refLootEntry = 10440 }; --Recipe: Potency Potion
+  { itemID = 13340, groupID = 1, refLootEntry = 10440 }; --Cape of the Black Baron
+  { itemID = 13344, groupID = 1, refLootEntry = 10440 }; --Dracorian Gauntlets
+  { itemID = 13345, groupID = 1, refLootEntry = 10440 }; --Seal of Rivendare
+  { itemID = 13346, groupID = 1, refLootEntry = 10440 }; --Robes of the Exalted
+  { itemID = 13349, groupID = 1, refLootEntry = 10440 }; --Scepter of the Unholy
+  { itemID = 13361, groupID = 1, refLootEntry = 10440 }; --Skullforge Reaver
+  { itemID = 13368, groupID = 1, refLootEntry = 10440 }; --Bonescraper
+  { itemID = 13505, groupID = 1, refLootEntry = 10440 }; --Runeblade of Baron Rivendare
+  { itemID = 16668, groupID = 1, refLootEntry = 10440 }; --Kilt of Elements
+  { itemID = 16678, groupID = 1, refLootEntry = 10440 }; --Beaststalker
+  { itemID = 16687, groupID = 1, refLootEntry = 10440 }; --Magister
+  { itemID = 16694, groupID = 1, refLootEntry = 10440 }; --Devout Skirt
+  { itemID = 16699, groupID = 1, refLootEntry = 10440 }; --Dreadmist Leggings
+  { itemID = 16709, groupID = 1, refLootEntry = 10440 }; --Shadowcraft Pants
+  { itemID = 16719, groupID = 1, refLootEntry = 10440 }; --Wildheart Kilt
+  { itemID = 16728, groupID = 1, refLootEntry = 10440 }; --Lightforge Legplates
+  { itemID = 16732, groupID = 1, refLootEntry = 10440 }; --Legplates of Valor
+  { itemID = 22408, groupID = 1, refLootEntry = 10440 }; --Ritssyn
+  { itemID = 22409, groupID = 1, refLootEntry = 10440 }; --Tunic of the Crescent Moon
+  { itemID = 22410, groupID = 1, refLootEntry = 10440 }; --Gauntlets of Deftness
+  { itemID = 22411, groupID = 1, refLootEntry = 10440 }; --Helm of the Executioner
+  { itemID = 22412, groupID = 1, refLootEntry = 10440 }; --Thuzadin Mantle
+  { itemID = 12843, groupID = 0, refLootEntry = 10440 }; --Corruptor
+  { itemID = 13174, groupID = 0, refLootEntry = 10440 }; --Plagued Flesh Sample
+  { itemID = 13251, groupID = 0, refLootEntry = 10440 }; --Head of Baron Rivendare
+  { itemID = 13335, groupID = 0, refLootEntry = 10440 }; --Deathcharger
+  { itemID = 14047, groupID = 0, refLootEntry = 10440 }; --Runecloth
+  { itemID = 59907, groupID = 0, refLootEntry = 10440 }; --Sigil of Baron Rivendare
+  { itemID = 97730, groupID = 0, refLootEntry = 10440 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10440 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 10440 }; --Dungeon Spoils
+  { itemID = 14611, groupID = 1, refLootEntry = 10502 }; --Bloodmail Hauberk
+  { itemID = 14612, groupID = 1, refLootEntry = 10502 }; --Bloodmail Legguards
+  { itemID = 14614, groupID = 1, refLootEntry = 10502 }; --Bloodmail Belt
+  { itemID = 14615, groupID = 1, refLootEntry = 10502 }; --Bloodmail Gauntlets
+  { itemID = 14616, groupID = 1, refLootEntry = 10502 }; --Bloodmail Boots
+  { itemID = 14620, groupID = 1, refLootEntry = 10502 }; --Deathbone Girdle
+  { itemID = 14621, groupID = 1, refLootEntry = 10502 }; --Deathbone Sabatons
+  { itemID = 14622, groupID = 1, refLootEntry = 10502 }; --Deathbone Gauntlets
+  { itemID = 14623, groupID = 1, refLootEntry = 10502 }; --Deathbone Legguards
+  { itemID = 14624, groupID = 1, refLootEntry = 10502 }; --Deathbone Chestplate
+  { itemID = 14626, groupID = 1, refLootEntry = 10502 }; --Necropile Robe
+  { itemID = 14629, groupID = 1, refLootEntry = 10502 }; --Necropile Cuffs
+  { itemID = 14631, groupID = 1, refLootEntry = 10502 }; --Necropile Boots
+  { itemID = 14632, groupID = 1, refLootEntry = 10502 }; --Necropile Leggings
+  { itemID = 14633, groupID = 1, refLootEntry = 10502 }; --Necropile Mantle
+  { itemID = 14636, groupID = 1, refLootEntry = 10502 }; --Cadaverous Belt
+  { itemID = 14637, groupID = 1, refLootEntry = 10502 }; --Cadaverous Armor
+  { itemID = 14638, groupID = 1, refLootEntry = 10502 }; --Cadaverous Leggings
+  { itemID = 14640, groupID = 1, refLootEntry = 10502 }; --Cadaverous Gloves
+  { itemID = 14641, groupID = 1, refLootEntry = 10502 }; --Cadaverous Walkers
+  { itemID = 16722, groupID = 1, refLootEntry = 10502 }; --Lightforge Bracers
+  { itemID = 18680, groupID = 1, refLootEntry = 10502 }; --Ancient Bone Bow
+  { itemID = 18681, groupID = 1, refLootEntry = 10502 }; --Burial Shawl
+  { itemID = 18682, groupID = 1, refLootEntry = 10502 }; --Ghoul Skin Leggings
+  { itemID = 18683, groupID = 1, refLootEntry = 10502 }; --Hammer of the Vesper
+  { itemID = 18684, groupID = 1, refLootEntry = 10502 }; --Dimly Opalescent Ring
+  { itemID = 23200, groupID = 1, refLootEntry = 10502 }; --Totem of Sustaining
+  { itemID = 23201, groupID = 1, refLootEntry = 10502 }; --Libram of Divinity
+  { itemID = 99222, groupID = 1, refLootEntry = 10502 }; --Deathbone Wristguards
+  { itemID = 198367, groupID = 1, refLootEntry = 10502 }; --Deathbone Pauldrons
+  { itemID = 202982, groupID = 1, refLootEntry = 10502 }; --Deathbone Helmet
+  { itemID = 264935, groupID = 1, refLootEntry = 10502 }; --Hauberk of Tenacity
+  { itemID = 265170, groupID = 1, refLootEntry = 10502 }; --Gauntlets of Tenacity
+  { itemID = 267897, groupID = 1, refLootEntry = 10502 }; --Waistguard of Tenacity
+  { itemID = 268347, groupID = 1, refLootEntry = 10502 }; --Legguards of Tenacity
+  { itemID = 269237, groupID = 1, refLootEntry = 10502 }; --Greaves of Tenacity
+  { itemID = 12753, groupID = 0, refLootEntry = 10502 }; --Skin of Shadow
+  { itemID = 12843, groupID = 0, refLootEntry = 10502 }; --Corruptor
+  { itemID = 14047, groupID = 0, refLootEntry = 10502 }; --Runecloth
+  { itemID = 20520, groupID = 0, refLootEntry = 10502 }; --Dark Rune
+  { itemID = 59908, groupID = 0, refLootEntry = 10502 }; --Sigil of Lady Illucia Barov
+  { itemID = 97730, groupID = 0, refLootEntry = 10502 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10502 }; --Rune of Ascension
+  { itemID = 14541, groupID = 1, refLootEntry = 10503 }; --Barovian Family Sword
+  { itemID = 14545, groupID = 1, refLootEntry = 10503 }; --Ghostloom Leggings
+  { itemID = 14548, groupID = 1, refLootEntry = 10503 }; --Royal Cap Spaulders
+  { itemID = 16701, groupID = 1, refLootEntry = 10503 }; --Dreadmist Mantle
+  { itemID = 18689, groupID = 1, refLootEntry = 10503 }; --Phantasmal Cloak
+  { itemID = 18690, groupID = 1, refLootEntry = 10503 }; --Wraithplate Leggings
+  { itemID = 22394, groupID = 1, refLootEntry = 10503 }; --Staff of Metanoia
+  { itemID = 277569, groupID = 1, refLootEntry = 10503 }; --Reliquary Scripture
+  { itemID = 12843, groupID = 0, refLootEntry = 10503 }; --Corruptor
+  { itemID = 13523, groupID = 2, refLootEntry = 10503 }; --Blood of Innocents
+  { itemID = 13725, groupID = 0, refLootEntry = 10503 }; --Krastinov
+  { itemID = 14047, groupID = 0, refLootEntry = 10503 }; --Runecloth
+  { itemID = 59909, groupID = 0, refLootEntry = 10503 }; --Sigil of Jandice Barov
+  { itemID = 97730, groupID = 0, refLootEntry = 10503 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10503 }; --Rune of Ascension
+  { itemID = 406015, groupID = 1, refLootEntry = 10503 }; --Barovian Peacemaker
+  { itemID = 14611, groupID = 1, refLootEntry = 10504 }; --Bloodmail Hauberk
+  { itemID = 14612, groupID = 1, refLootEntry = 10504 }; --Bloodmail Legguards
+  { itemID = 14614, groupID = 1, refLootEntry = 10504 }; --Bloodmail Belt
+  { itemID = 14615, groupID = 1, refLootEntry = 10504 }; --Bloodmail Gauntlets
+  { itemID = 14616, groupID = 1, refLootEntry = 10504 }; --Bloodmail Boots
+  { itemID = 14620, groupID = 1, refLootEntry = 10504 }; --Deathbone Girdle
+  { itemID = 14621, groupID = 1, refLootEntry = 10504 }; --Deathbone Sabatons
+  { itemID = 14622, groupID = 1, refLootEntry = 10504 }; --Deathbone Gauntlets
+  { itemID = 14623, groupID = 1, refLootEntry = 10504 }; --Deathbone Legguards
+  { itemID = 14624, groupID = 1, refLootEntry = 10504 }; --Deathbone Chestplate
+  { itemID = 14626, groupID = 1, refLootEntry = 10504 }; --Necropile Robe
+  { itemID = 14629, groupID = 1, refLootEntry = 10504 }; --Necropile Cuffs
+  { itemID = 14631, groupID = 1, refLootEntry = 10504 }; --Necropile Boots
+  { itemID = 14632, groupID = 1, refLootEntry = 10504 }; --Necropile Leggings
+  { itemID = 14633, groupID = 1, refLootEntry = 10504 }; --Necropile Mantle
+  { itemID = 14636, groupID = 1, refLootEntry = 10504 }; --Cadaverous Belt
+  { itemID = 14637, groupID = 1, refLootEntry = 10504 }; --Cadaverous Armor
+  { itemID = 14638, groupID = 1, refLootEntry = 10504 }; --Cadaverous Leggings
+  { itemID = 14640, groupID = 1, refLootEntry = 10504 }; --Cadaverous Gloves
+  { itemID = 14641, groupID = 1, refLootEntry = 10504 }; --Cadaverous Walkers
+  { itemID = 16722, groupID = 1, refLootEntry = 10504 }; --Lightforge Bracers
+  { itemID = 18680, groupID = 1, refLootEntry = 10504 }; --Ancient Bone Bow
+  { itemID = 18681, groupID = 1, refLootEntry = 10504 }; --Burial Shawl
+  { itemID = 18682, groupID = 1, refLootEntry = 10504 }; --Ghoul Skin Leggings
+  { itemID = 18683, groupID = 1, refLootEntry = 10504 }; --Hammer of the Vesper
+  { itemID = 18684, groupID = 1, refLootEntry = 10504 }; --Dimly Opalescent Ring
+  { itemID = 23200, groupID = 1, refLootEntry = 10504 }; --Totem of Sustaining
+  { itemID = 23201, groupID = 1, refLootEntry = 10504 }; --Libram of Divinity
+  { itemID = 99222, groupID = 1, refLootEntry = 10504 }; --Deathbone Wristguards
+  { itemID = 198367, groupID = 1, refLootEntry = 10504 }; --Deathbone Pauldrons
+  { itemID = 202982, groupID = 1, refLootEntry = 10504 }; --Deathbone Helmet
+  { itemID = 264935, groupID = 1, refLootEntry = 10504 }; --Hauberk of Tenacity
+  { itemID = 265170, groupID = 1, refLootEntry = 10504 }; --Gauntlets of Tenacity
+  { itemID = 267897, groupID = 1, refLootEntry = 10504 }; --Waistguard of Tenacity
+  { itemID = 268347, groupID = 1, refLootEntry = 10504 }; --Legguards of Tenacity
+  { itemID = 269237, groupID = 1, refLootEntry = 10504 }; --Greaves of Tenacity
+  { itemID = 12843, groupID = 0, refLootEntry = 10504 }; --Corruptor
+  { itemID = 14047, groupID = 0, refLootEntry = 10504 }; --Runecloth
+  { itemID = 59910, groupID = 0, refLootEntry = 10504 }; --Sigil of Lord Alexei Barov
+  { itemID = 97730, groupID = 0, refLootEntry = 10504 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10504 }; --Rune of Ascension
+  { itemID = 14611, groupID = 1, refLootEntry = 10505 }; --Bloodmail Hauberk
+  { itemID = 14612, groupID = 1, refLootEntry = 10505 }; --Bloodmail Legguards
+  { itemID = 14614, groupID = 1, refLootEntry = 10505 }; --Bloodmail Belt
+  { itemID = 14615, groupID = 1, refLootEntry = 10505 }; --Bloodmail Gauntlets
+  { itemID = 14616, groupID = 1, refLootEntry = 10505 }; --Bloodmail Boots
+  { itemID = 14620, groupID = 1, refLootEntry = 10505 }; --Deathbone Girdle
+  { itemID = 14621, groupID = 1, refLootEntry = 10505 }; --Deathbone Sabatons
+  { itemID = 14622, groupID = 1, refLootEntry = 10505 }; --Deathbone Gauntlets
+  { itemID = 14623, groupID = 1, refLootEntry = 10505 }; --Deathbone Legguards
+  { itemID = 14624, groupID = 1, refLootEntry = 10505 }; --Deathbone Chestplate
+  { itemID = 14626, groupID = 1, refLootEntry = 10505 }; --Necropile Robe
+  { itemID = 14629, groupID = 1, refLootEntry = 10505 }; --Necropile Cuffs
+  { itemID = 14631, groupID = 1, refLootEntry = 10505 }; --Necropile Boots
+  { itemID = 14632, groupID = 1, refLootEntry = 10505 }; --Necropile Leggings
+  { itemID = 14633, groupID = 1, refLootEntry = 10505 }; --Necropile Mantle
+  { itemID = 14636, groupID = 1, refLootEntry = 10505 }; --Cadaverous Belt
+  { itemID = 14637, groupID = 1, refLootEntry = 10505 }; --Cadaverous Armor
+  { itemID = 14638, groupID = 1, refLootEntry = 10505 }; --Cadaverous Leggings
+  { itemID = 14640, groupID = 1, refLootEntry = 10505 }; --Cadaverous Gloves
+  { itemID = 14641, groupID = 1, refLootEntry = 10505 }; --Cadaverous Walkers
+  { itemID = 16710, groupID = 1, refLootEntry = 10505 }; --Shadowcraft Bracers
+  { itemID = 18680, groupID = 1, refLootEntry = 10505 }; --Ancient Bone Bow
+  { itemID = 18681, groupID = 1, refLootEntry = 10505 }; --Burial Shawl
+  { itemID = 18682, groupID = 1, refLootEntry = 10505 }; --Ghoul Skin Leggings
+  { itemID = 18683, groupID = 1, refLootEntry = 10505 }; --Hammer of the Vesper
+  { itemID = 18684, groupID = 1, refLootEntry = 10505 }; --Dimly Opalescent Ring
+  { itemID = 23200, groupID = 1, refLootEntry = 10505 }; --Totem of Sustaining
+  { itemID = 23201, groupID = 1, refLootEntry = 10505 }; --Libram of Divinity
+  { itemID = 99222, groupID = 1, refLootEntry = 10505 }; --Deathbone Wristguards
+  { itemID = 198367, groupID = 1, refLootEntry = 10505 }; --Deathbone Pauldrons
+  { itemID = 202982, groupID = 1, refLootEntry = 10505 }; --Deathbone Helmet
+  { itemID = 264935, groupID = 1, refLootEntry = 10505 }; --Hauberk of Tenacity
+  { itemID = 265170, groupID = 1, refLootEntry = 10505 }; --Gauntlets of Tenacity
+  { itemID = 267897, groupID = 1, refLootEntry = 10505 }; --Waistguard of Tenacity
+  { itemID = 268347, groupID = 1, refLootEntry = 10505 }; --Legguards of Tenacity
+  { itemID = 269237, groupID = 1, refLootEntry = 10505 }; --Greaves of Tenacity
+  { itemID = 12753, groupID = 0, refLootEntry = 10505 }; --Skin of Shadow
+  { itemID = 12843, groupID = 0, refLootEntry = 10505 }; --Corruptor
+  { itemID = 14047, groupID = 0, refLootEntry = 10505 }; --Runecloth
+  { itemID = 20520, groupID = 0, refLootEntry = 10505 }; --Dark Rune
+  { itemID = 59911, groupID = 0, refLootEntry = 10505 }; --Sigil of Instructor Malicia
+  { itemID = 97730, groupID = 0, refLootEntry = 10505 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10505 }; --Rune of Ascension
+  { itemID = 4552, groupID = 0, refLootEntry = 10506 }; --Smooth Stone Chip
+  { itemID = 4554, groupID = 0, refLootEntry = 10506 }; --Shiny Polished Stone
+  { itemID = 13955, groupID = 1, refLootEntry = 10506 }; --Stoneform Shoulders
+  { itemID = 13956, groupID = 1, refLootEntry = 10506 }; --Clutch of Andros
+  { itemID = 13957, groupID = 1, refLootEntry = 10506 }; --Gargoyle Slashers
+  { itemID = 13960, groupID = 1, refLootEntry = 10506 }; --Heart of the Fiend
+  { itemID = 13967, groupID = 1, refLootEntry = 10506 }; --Windreaver Greaves
+  { itemID = 13969, groupID = 1, refLootEntry = 10506 }; --Loomguard Armbraces
+  { itemID = 13983, groupID = 1, refLootEntry = 10506 }; --Gravestone War Axe
+  { itemID = 14024, groupID = 1, refLootEntry = 10506 }; --Frightalon
+  { itemID = 16734, groupID = 1, refLootEntry = 10506 }; --Boots of Valor
+  { itemID = 59912, groupID = 0, refLootEntry = 10506 }; --Sigil of Kirtonos the Herald
+  { itemID = 88560, groupID = 0, refLootEntry = 10506 }; --Blood Soaked Vellum: Kirtonos the Herald
+  { itemID = 97730, groupID = 0, refLootEntry = 10506 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10506 }; --Rune of Ascension
+  { itemID = 6530, groupID = 0, refLootEntry = 10507 }; --Nightcrawlers
+  { itemID = 14611, groupID = 1, refLootEntry = 10507 }; --Bloodmail Hauberk
+  { itemID = 14612, groupID = 1, refLootEntry = 10507 }; --Bloodmail Legguards
+  { itemID = 14614, groupID = 1, refLootEntry = 10507 }; --Bloodmail Belt
+  { itemID = 14615, groupID = 1, refLootEntry = 10507 }; --Bloodmail Gauntlets
+  { itemID = 14616, groupID = 1, refLootEntry = 10507 }; --Bloodmail Boots
+  { itemID = 14620, groupID = 1, refLootEntry = 10507 }; --Deathbone Girdle
+  { itemID = 14621, groupID = 1, refLootEntry = 10507 }; --Deathbone Sabatons
+  { itemID = 14622, groupID = 1, refLootEntry = 10507 }; --Deathbone Gauntlets
+  { itemID = 14623, groupID = 1, refLootEntry = 10507 }; --Deathbone Legguards
+  { itemID = 14624, groupID = 1, refLootEntry = 10507 }; --Deathbone Chestplate
+  { itemID = 14626, groupID = 1, refLootEntry = 10507 }; --Necropile Robe
+  { itemID = 14629, groupID = 1, refLootEntry = 10507 }; --Necropile Cuffs
+  { itemID = 14631, groupID = 1, refLootEntry = 10507 }; --Necropile Boots
+  { itemID = 14632, groupID = 1, refLootEntry = 10507 }; --Necropile Leggings
+  { itemID = 14633, groupID = 1, refLootEntry = 10507 }; --Necropile Mantle
+  { itemID = 14636, groupID = 1, refLootEntry = 10507 }; --Cadaverous Belt
+  { itemID = 14637, groupID = 1, refLootEntry = 10507 }; --Cadaverous Armor
+  { itemID = 14638, groupID = 1, refLootEntry = 10507 }; --Cadaverous Leggings
+  { itemID = 14640, groupID = 1, refLootEntry = 10507 }; --Cadaverous Gloves
+  { itemID = 14641, groupID = 1, refLootEntry = 10507 }; --Cadaverous Walkers
+  { itemID = 16716, groupID = 1, refLootEntry = 10507 }; --Wildheart Belt
+  { itemID = 18680, groupID = 1, refLootEntry = 10507 }; --Ancient Bone Bow
+  { itemID = 18681, groupID = 1, refLootEntry = 10507 }; --Burial Shawl
+  { itemID = 18682, groupID = 1, refLootEntry = 10507 }; --Ghoul Skin Leggings
+  { itemID = 18683, groupID = 1, refLootEntry = 10507 }; --Hammer of the Vesper
+  { itemID = 18684, groupID = 1, refLootEntry = 10507 }; --Dimly Opalescent Ring
+  { itemID = 23200, groupID = 1, refLootEntry = 10507 }; --Totem of Sustaining
+  { itemID = 23201, groupID = 1, refLootEntry = 10507 }; --Libram of Divinity
+  { itemID = 99222, groupID = 1, refLootEntry = 10507 }; --Deathbone Wristguards
+  { itemID = 198367, groupID = 1, refLootEntry = 10507 }; --Deathbone Pauldrons
+  { itemID = 202982, groupID = 1, refLootEntry = 10507 }; --Deathbone Helmet
+  { itemID = 264935, groupID = 1, refLootEntry = 10507 }; --Hauberk of Tenacity
+  { itemID = 265170, groupID = 1, refLootEntry = 10507 }; --Gauntlets of Tenacity
+  { itemID = 267897, groupID = 1, refLootEntry = 10507 }; --Waistguard of Tenacity
+  { itemID = 268347, groupID = 1, refLootEntry = 10507 }; --Legguards of Tenacity
+  { itemID = 269237, groupID = 1, refLootEntry = 10507 }; --Greaves of Tenacity
+  { itemID = 12753, groupID = 0, refLootEntry = 10507 }; --Skin of Shadow
+  { itemID = 12843, groupID = 0, refLootEntry = 10507 }; --Corruptor
+  { itemID = 14047, groupID = 0, refLootEntry = 10507 }; --Runecloth
+  { itemID = 20520, groupID = 0, refLootEntry = 10507 }; --Dark Rune
+  { itemID = 59913, groupID = 0, refLootEntry = 10507 }; --Sigil of The Ravenian
+  { itemID = 88561, groupID = 0, refLootEntry = 10507 }; --Blood Soaked Vellum: The Ravenian
+  { itemID = 97730, groupID = 0, refLootEntry = 10507 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10507 }; --Rune of Ascension
+  { itemID = 13314, groupID = 1, refLootEntry = 10508 }; --Alanna
+  { itemID = 13952, groupID = 1, refLootEntry = 10508 }; --Iceblade Hacker
+  { itemID = 14340, groupID = 1, refLootEntry = 10508 }; --Freezing Lich Robes
+  { itemID = 14487, groupID = 1, refLootEntry = 10508 }; --Bonechill Hammer
+  { itemID = 14502, groupID = 1, refLootEntry = 10508 }; --Frostbite Girdle
+  { itemID = 14503, groupID = 1, refLootEntry = 10508 }; --Death
+  { itemID = 14522, groupID = 1, refLootEntry = 10508 }; --Maelstrom Leggings
+  { itemID = 14525, groupID = 1, refLootEntry = 10508 }; --Boneclenched Gauntlets
+  { itemID = 16689, groupID = 1, refLootEntry = 10508 }; --Magister
+  { itemID = 18693, groupID = 1, refLootEntry = 10508 }; --Shivery Handwraps
+  { itemID = 18694, groupID = 1, refLootEntry = 10508 }; --Shadowy Mail Greaves
+  { itemID = 18695, groupID = 1, refLootEntry = 10508 }; --Spellbound Tome
+  { itemID = 18696, groupID = 1, refLootEntry = 10508 }; --Intricately Runed Shield
+  { itemID = 12843, groupID = 0, refLootEntry = 10508 }; --Corruptor
+  { itemID = 13521, groupID = 0, refLootEntry = 10508 }; --Recipe: Flask of Supreme Power
+  { itemID = 13626, groupID = 0, refLootEntry = 10508 }; --Human Head of Ras Frostwhisper
+  { itemID = 14047, groupID = 0, refLootEntry = 10508 }; --Runecloth
+  { itemID = 59914, groupID = 1, refLootEntry = 10508 }; --Sigil of Ras Frostwhisper
+  { itemID = 97730, groupID = 0, refLootEntry = 10508 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10508 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 10508 }; --Dungeon Spoils
+  { itemID = 12604, groupID = 1, refLootEntry = 10509 }; --Starfire Tiara
+  { itemID = 12605, groupID = 1, refLootEntry = 10509 }; --Serpentine Skuller
+  { itemID = 12930, groupID = 1, refLootEntry = 10509 }; --Briarwood Reed
+  { itemID = 14047, groupID = 0, refLootEntry = 10509 }; --Runecloth
+  { itemID = 16250, groupID = 0, refLootEntry = 10509 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 22138, groupID = 0, refLootEntry = 10509 }; --Blackrock Bracer
+  { itemID = 59915, groupID = 0, refLootEntry = 10509 }; --Sigil of Jed Runewatcher
+  { itemID = 97730, groupID = 0, refLootEntry = 10509 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10509 }; --Rune of Ascension
+  { itemID = 13404, groupID = 1, refLootEntry = 10516 }; --Mask of the Unforgiven
+  { itemID = 13405, groupID = 1, refLootEntry = 10516 }; --Wailing Nightbane Pauldrons
+  { itemID = 13408, groupID = 1, refLootEntry = 10516 }; --Soul Breaker
+  { itemID = 13409, groupID = 1, refLootEntry = 10516 }; --Tearfall Bracers
+  { itemID = 16717, groupID = 1, refLootEntry = 10516 }; --Wildheart Gloves
+  { itemID = 12843, groupID = 0, refLootEntry = 10516 }; --Corruptor
+  { itemID = 13174, groupID = 0, refLootEntry = 10516 }; --Plagued Flesh Sample
+  { itemID = 14047, groupID = 0, refLootEntry = 10516 }; --Runecloth
+  { itemID = 59916, groupID = 0, refLootEntry = 10516 }; --Sigil of The Unforgiven
+  { itemID = 88562, groupID = 0, refLootEntry = 10516 }; --Blood Soaked Vellum: The Unforgiven
+  { itemID = 97730, groupID = 0, refLootEntry = 10516 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10516 }; --Rune of Ascension
+  { itemID = 13378, groupID = 1, refLootEntry = 10558 }; --Songbird Blouse
+  { itemID = 13379, groupID = 1, refLootEntry = 10558 }; --Piccolo of the Flaming Fire
+  { itemID = 13383, groupID = 1, refLootEntry = 10558 }; --Woollies of the Prancing Minstrel
+  { itemID = 13384, groupID = 1, refLootEntry = 10558 }; --Rainbow Girdle
+  { itemID = 16682, groupID = 1, refLootEntry = 10558 }; --Magister
+  { itemID = 12843, groupID = 0, refLootEntry = 10558 }; --Corruptor
+  { itemID = 13174, groupID = 0, refLootEntry = 10558 }; --Plagued Flesh Sample
+  { itemID = 14047, groupID = 0, refLootEntry = 10558 }; --Runecloth
+  { itemID = 59918, groupID = 0, refLootEntry = 10558 }; --Sigil of Hearthsinger Forresten
+  { itemID = 97730, groupID = 0, refLootEntry = 10558 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10558 }; --Rune of Ascension
+  { itemID = 13178, groupID = 1, refLootEntry = 10584 }; --Rosewine Circle
+  { itemID = 13258, groupID = 1, refLootEntry = 10584 }; --Slaghide Gauntlets
+  { itemID = 13259, groupID = 1, refLootEntry = 10584 }; --Ribsteel Footguards
+  { itemID = 22232, groupID = 1, refLootEntry = 10584 }; --Marksman
+  { itemID = 12219, groupID = 0, refLootEntry = 10584 }; --Unadorned Seal of the Spire
+  { itemID = 12712, groupID = 0, refLootEntry = 10584 }; --Warosh
+  { itemID = 14047, groupID = 0, refLootEntry = 10584 }; --Runecloth
+  { itemID = 18784, groupID = 0, refLootEntry = 10584 }; --Top Half of Advanced Armorsmithing: Volume III
+  { itemID = 21982, groupID = 0, refLootEntry = 10584 }; --Ogre Warbeads
+  { itemID = 22528, groupID = 0, refLootEntry = 10584 }; --Dark Iron Scraps
+  { itemID = 29434, groupID = 0, refLootEntry = 10584 }; --Badge of Justice
+  { itemID = 59920, groupID = 0, refLootEntry = 10584 }; --Sigil of Urok Doomhowl
+  { itemID = 97730, groupID = 0, refLootEntry = 10584 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10584 }; --Rune of Ascension
+  { itemID = 13183, groupID = 1, refLootEntry = 10596 }; --Venomspitter
+  { itemID = 13213, groupID = 1, refLootEntry = 10596 }; --Smolderweb
+  { itemID = 13244, groupID = 1, refLootEntry = 10596 }; --Gilded Gauntlets
+  { itemID = 16715, groupID = 1, refLootEntry = 10596 }; --Wildheart Boots
+  { itemID = 1074, groupID = 0, refLootEntry = 10596 }; --Hard Spider Leg Tip
+  { itemID = 4337, groupID = 0, refLootEntry = 10596 }; --Thick Spider
+  { itemID = 4585, groupID = 0, refLootEntry = 10596 }; --Dripping Spider Mandible
+  { itemID = 10285, groupID = 0, refLootEntry = 10596 }; --Shadow Silk
+  { itemID = 12205, groupID = 0, refLootEntry = 10596 }; --White Spider Meat
+  { itemID = 14227, groupID = 0, refLootEntry = 10596 }; --Ironweb Spider Silk
+  { itemID = 16250, groupID = 0, refLootEntry = 10596 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 59921, groupID = 0, refLootEntry = 10596 }; --Sigil of Mother Smolderweb
+  { itemID = 97730, groupID = 0, refLootEntry = 10596 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10596 }; --Rune of Ascension
+  { itemID = 6530, groupID = 0, refLootEntry = 10808 }; --Nightcrawlers
+  { itemID = 13400, groupID = 1, refLootEntry = 10808 }; --Vambraces of the Sadist
+  { itemID = 13401, groupID = 1, refLootEntry = 10808 }; --The Cruel Hand of Timmy
+  { itemID = 13402, groupID = 1, refLootEntry = 10808 }; --Timmy
+  { itemID = 13403, groupID = 1, refLootEntry = 10808 }; --Grimgore Noose
+  { itemID = 16724, groupID = 1, refLootEntry = 10808 }; --Lightforge Gauntlets
+  { itemID = 12843, groupID = 0, refLootEntry = 10808 }; --Corruptor
+  { itemID = 13174, groupID = 0, refLootEntry = 10808 }; --Plagued Flesh Sample
+  { itemID = 14047, groupID = 0, refLootEntry = 10808 }; --Runecloth
+  { itemID = 59929, groupID = 0, refLootEntry = 10808 }; --Sigil of Timmy the Cruel
+  { itemID = 88671, groupID = 0, refLootEntry = 10808 }; --Blood Soaked Vellum: Timmy the Cruel
+  { itemID = 97730, groupID = 0, refLootEntry = 10808 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10808 }; --Rune of Ascension
+  { itemID = 4552, groupID = 0, refLootEntry = 10809 }; --Smooth Stone Chip
+  { itemID = 4554, groupID = 0, refLootEntry = 10809 }; --Shiny Polished Stone
+  { itemID = 13397, groupID = 1, refLootEntry = 10809 }; --Stoneskin Gargoyle Cape
+  { itemID = 13399, groupID = 1, refLootEntry = 10809 }; --Gargoyle Shredder Talons
+  { itemID = 13954, groupID = 1, refLootEntry = 10809 }; --Verdant Footpads
+  { itemID = 276243, groupID = 1, refLootEntry = 10809 }; --Petrified Codex
+  { itemID = 12843, groupID = 0, refLootEntry = 10809 }; --Corruptor
+  { itemID = 59930, groupID = 0, refLootEntry = 10809 }; --Sigil of Stonespine
+  { itemID = 88672, groupID = 0, refLootEntry = 10809 }; --Blood Soaked Vellum: Stonespine
+  { itemID = 97730, groupID = 0, refLootEntry = 10809 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10809 }; --Rune of Ascension
+  { itemID = 13385, groupID = 1, refLootEntry = 10811 }; --Tome of Knowledge
+  { itemID = 13386, groupID = 1, refLootEntry = 10811 }; --Archivist Cape
+  { itemID = 13387, groupID = 1, refLootEntry = 10811 }; --Foresight Girdle
+  { itemID = 16692, groupID = 1, refLootEntry = 10811 }; --Devout Gloves
+  { itemID = 18716, groupID = 1, refLootEntry = 10811 }; --Ash Covered Boots
+  { itemID = 276483, groupID = 1, refLootEntry = 10811 }; --Archived Record of Inquisition
+  { itemID = 12811, groupID = 0, refLootEntry = 10811 }; --Righteous Orb
+  { itemID = 14047, groupID = 0, refLootEntry = 10811 }; --Runecloth
+  { itemID = 22206, groupID = 0, refLootEntry = 10811 }; --Bouquet of Red Roses
+  { itemID = 59932, groupID = 0, refLootEntry = 10811 }; --Sigil of Archivist Galford
+  { itemID = 97730, groupID = 0, refLootEntry = 10811 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10811 }; --Rune of Ascension
+  { itemID = 12103, groupID = 1, refLootEntry = 10813 }; --Star of Mystaria
+  { itemID = 13348, groupID = 1, refLootEntry = 10813 }; --Demonshear
+  { itemID = 13353, groupID = 1, refLootEntry = 10813 }; --Book of the Dead
+  { itemID = 13358, groupID = 1, refLootEntry = 10813 }; --Wyrmtongue Shoulders
+  { itemID = 13359, groupID = 1, refLootEntry = 10813 }; --Crown of Tyranny
+  { itemID = 13360, groupID = 1, refLootEntry = 10813 }; --Gift of the Elven Magi
+  { itemID = 13369, groupID = 1, refLootEntry = 10813 }; --Fire Striders
+  { itemID = 16725, groupID = 1, refLootEntry = 10813 }; --Lightforge Boots
+  { itemID = 18717, groupID = 1, refLootEntry = 10813 }; --Hammer of the Grand Crusader
+  { itemID = 18718, groupID = 1, refLootEntry = 10813 }; --Grand Crusader
+  { itemID = 18720, groupID = 1, refLootEntry = 10813 }; --Shroud of the Nathrezim
+  { itemID = 12662, groupID = 0, refLootEntry = 10813 }; --Demonic Rune
+  { itemID = 13250, groupID = 0, refLootEntry = 10813 }; --Head of Balnazzar
+  { itemID = 13520, groupID = 0, refLootEntry = 10813 }; --Recipe: Flask of Distilled Wisdom
+  { itemID = 14047, groupID = 0, refLootEntry = 10813 }; --Runecloth
+  { itemID = 14512, groupID = 0, refLootEntry = 10813 }; --Pattern: Truefaith Vestments
+  { itemID = 59933, groupID = 0, refLootEntry = 10813 }; --Sigil of Balnazzar
+  { itemID = 82780, groupID = 0, refLootEntry = 10813 }; --Summoner
+  { itemID = 97730, groupID = 0, refLootEntry = 10813 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10813 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 10813 }; --Dungeon Spoils
+  { itemID = 13498, groupID = 1, refLootEntry = 10899 }; --Handcrafted Mastersmith Leggings
+  { itemID = 13502, groupID = 1, refLootEntry = 10899 }; --Handcrafted Mastersmith Girdle
+  { itemID = 18047, groupID = 1, refLootEntry = 10899 }; --Flame Walkers
+  { itemID = 18048, groupID = 1, refLootEntry = 10899 }; --Mastersmith
+  { itemID = 12728, groupID = 1, refLootEntry = 10899 }; --Plans: Invulnerable Mail
+  { itemID = 12834, groupID = 1, refLootEntry = 10899 }; --Plans: Arcanite Champion
+  { itemID = 12837, groupID = 1, refLootEntry = 10899 }; --Plans: Masterwork Stormhammer
+  { itemID = 14047, groupID = 0, refLootEntry = 10899 }; --Runecloth
+  { itemID = 16250, groupID = 0, refLootEntry = 10899 }; --Formula: Enchant Weapon - Superior Striking
+  { itemID = 18779, groupID = 0, refLootEntry = 10899 }; --Bottom Half of Advanced Armorsmithing: Volume I
+  { itemID = 21525, groupID = 0, refLootEntry = 10899 }; --Green Winter Hat
+  { itemID = 22138, groupID = 0, refLootEntry = 10899 }; --Blackrock Bracer
+  { itemID = 59946, groupID = 0, refLootEntry = 10899 }; --Sigil of Goraluk Anvilcrack
+  { itemID = 97730, groupID = 0, refLootEntry = 10899 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10899 }; --Rune of Ascension
+  { itemID = 6530, groupID = 0, refLootEntry = 10901 }; --Nightcrawlers
+  { itemID = 14611, groupID = 1, refLootEntry = 10901 }; --Bloodmail Hauberk
+  { itemID = 14612, groupID = 1, refLootEntry = 10901 }; --Bloodmail Legguards
+  { itemID = 14614, groupID = 1, refLootEntry = 10901 }; --Bloodmail Belt
+  { itemID = 14615, groupID = 1, refLootEntry = 10901 }; --Bloodmail Gauntlets
+  { itemID = 14616, groupID = 1, refLootEntry = 10901 }; --Bloodmail Boots
+  { itemID = 14620, groupID = 1, refLootEntry = 10901 }; --Deathbone Girdle
+  { itemID = 14621, groupID = 1, refLootEntry = 10901 }; --Deathbone Sabatons
+  { itemID = 14622, groupID = 1, refLootEntry = 10901 }; --Deathbone Gauntlets
+  { itemID = 14623, groupID = 1, refLootEntry = 10901 }; --Deathbone Legguards
+  { itemID = 14624, groupID = 1, refLootEntry = 10901 }; --Deathbone Chestplate
+  { itemID = 14626, groupID = 1, refLootEntry = 10901 }; --Necropile Robe
+  { itemID = 14629, groupID = 1, refLootEntry = 10901 }; --Necropile Cuffs
+  { itemID = 14631, groupID = 1, refLootEntry = 10901 }; --Necropile Boots
+  { itemID = 14632, groupID = 1, refLootEntry = 10901 }; --Necropile Leggings
+  { itemID = 14633, groupID = 1, refLootEntry = 10901 }; --Necropile Mantle
+  { itemID = 14636, groupID = 1, refLootEntry = 10901 }; --Cadaverous Belt
+  { itemID = 14637, groupID = 1, refLootEntry = 10901 }; --Cadaverous Armor
+  { itemID = 14638, groupID = 1, refLootEntry = 10901 }; --Cadaverous Leggings
+  { itemID = 14640, groupID = 1, refLootEntry = 10901 }; --Cadaverous Gloves
+  { itemID = 14641, groupID = 1, refLootEntry = 10901 }; --Cadaverous Walkers
+  { itemID = 16705, groupID = 1, refLootEntry = 10901 }; --Dreadmist Wraps
+  { itemID = 18680, groupID = 1, refLootEntry = 10901 }; --Ancient Bone Bow
+  { itemID = 18681, groupID = 1, refLootEntry = 10901 }; --Burial Shawl
+  { itemID = 18682, groupID = 1, refLootEntry = 10901 }; --Ghoul Skin Leggings
+  { itemID = 18683, groupID = 1, refLootEntry = 10901 }; --Hammer of the Vesper
+  { itemID = 18684, groupID = 1, refLootEntry = 10901 }; --Dimly Opalescent Ring
+  { itemID = 23200, groupID = 1, refLootEntry = 10901 }; --Totem of Sustaining
+  { itemID = 23201, groupID = 1, refLootEntry = 10901 }; --Libram of Divinity
+  { itemID = 99222, groupID = 1, refLootEntry = 10901 }; --Deathbone Wristguards
+  { itemID = 198367, groupID = 1, refLootEntry = 10901 }; --Deathbone Pauldrons
+  { itemID = 202982, groupID = 1, refLootEntry = 10901 }; --Deathbone Helmet
+  { itemID = 264935, groupID = 1, refLootEntry = 10901 }; --Hauberk of Tenacity
+  { itemID = 265170, groupID = 1, refLootEntry = 10901 }; --Gauntlets of Tenacity
+  { itemID = 267897, groupID = 1, refLootEntry = 10901 }; --Waistguard of Tenacity
+  { itemID = 268347, groupID = 1, refLootEntry = 10901 }; --Legguards of Tenacity
+  { itemID = 269237, groupID = 1, refLootEntry = 10901 }; --Greaves of Tenacity
+  { itemID = 274663, groupID = 1, refLootEntry = 10901 }; --Remulos
+  { itemID = 12753, groupID = 0, refLootEntry = 10901 }; --Skin of Shadow
+  { itemID = 12841, groupID = 0, refLootEntry = 10901 }; --Invader
+  { itemID = 14047, groupID = 0, refLootEntry = 10901 }; --Runecloth
+  { itemID = 20520, groupID = 0, refLootEntry = 10901 }; --Dark Rune
+  { itemID = 22206, groupID = 0, refLootEntry = 10901 }; --Bouquet of Red Roses
+  { itemID = 59947, groupID = 0, refLootEntry = 10901 }; --Sigil of Lorekeeper Polkelt
+  { itemID = 88677, groupID = 0, refLootEntry = 10901 }; --Blood Soaked Vellum: Lorekeeper Polkelt
+  { itemID = 97730, groupID = 0, refLootEntry = 10901 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10901 }; --Rune of Ascension
+  { itemID = 13380, groupID = 1, refLootEntry = 10997 }; --Willey
+  { itemID = 13381, groupID = 1, refLootEntry = 10997 }; --Master Cannoneer Boots
+  { itemID = 13382, groupID = 1, refLootEntry = 10997 }; --Cannonball Runner
+  { itemID = 16708, groupID = 1, refLootEntry = 10997 }; --Shadowcraft Spaulders
+  { itemID = 18721, groupID = 1, refLootEntry = 10997 }; --Barrage Girdle
+  { itemID = 22403, groupID = 1, refLootEntry = 10997 }; --Diana
+  { itemID = 22404, groupID = 1, refLootEntry = 10997 }; --Willey
+  { itemID = 22405, groupID = 1, refLootEntry = 10997 }; --Mantle of the Scarlet Crusade
+  { itemID = 22406, groupID = 1, refLootEntry = 10997 }; --Redemption
+  { itemID = 22407, groupID = 1, refLootEntry = 10997 }; --Helm of the New Moon
+  { itemID = 12839, groupID = 0, refLootEntry = 10997 }; --Plans: Heartseeker
+  { itemID = 13377, groupID = 0, refLootEntry = 10997 }; --Miniature Cannon Balls
+  { itemID = 14047, groupID = 0, refLootEntry = 10997 }; --Runecloth
+  { itemID = 59949, groupID = 0, refLootEntry = 10997 }; --Sigil of Cannon Master Willey
+  { itemID = 97730, groupID = 0, refLootEntry = 10997 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 10997 }; --Rune of Ascension
+  { itemID = 12843, groupID = 0, refLootEntry = 11058 }; --Corruptor
+  { itemID = 13172, groupID = 0, refLootEntry = 11058 }; --Siabi
+  { itemID = 14047, groupID = 0, refLootEntry = 11058 }; --Runecloth
+  { itemID = 22526, groupID = 0, refLootEntry = 11058 }; --Bone Fragments
+  { itemID = 97730, groupID = 0, refLootEntry = 11058 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 11058 }; --Rune of Ascension
+  { itemID = 13351, groupID = 0, refLootEntry = 11120 }; --Crimson Hammersmith
+  { itemID = 14047, groupID = 0, refLootEntry = 11120 }; --Runecloth
+  { itemID = 18781, groupID = 0, refLootEntry = 11120 }; --Bottom Half of Advanced Armorsmithing: Volume II
+  { itemID = 97730, groupID = 0, refLootEntry = 11120 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 11120 }; --Rune of Ascension
+  { itemID = 12841, groupID = 0, refLootEntry = 11121 }; --Invader
+  { itemID = 13350, groupID = 0, refLootEntry = 11121 }; --Insignia of the Black Guard
+  { itemID = 14047, groupID = 0, refLootEntry = 11121 }; --Runecloth
+  { itemID = 18783, groupID = 0, refLootEntry = 11121 }; --Bottom Half of Advanced Armorsmithing: Volume III
+  { itemID = 22526, groupID = 0, refLootEntry = 11121 }; --Bone Fragments
+  { itemID = 88713, groupID = 0, refLootEntry = 11121 }; --Blood Soaked Vellum: Black Guard Swordsmith
+  { itemID = 97730, groupID = 0, refLootEntry = 11121 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 11121 }; --Rune of Ascension
+  { itemID = 14611, groupID = 1, refLootEntry = 11261 }; --Bloodmail Hauberk
+  { itemID = 14612, groupID = 1, refLootEntry = 11261 }; --Bloodmail Legguards
+  { itemID = 14614, groupID = 1, refLootEntry = 11261 }; --Bloodmail Belt
+  { itemID = 14615, groupID = 1, refLootEntry = 11261 }; --Bloodmail Gauntlets
+  { itemID = 14616, groupID = 1, refLootEntry = 11261 }; --Bloodmail Boots
+  { itemID = 14620, groupID = 1, refLootEntry = 11261 }; --Deathbone Girdle
+  { itemID = 14621, groupID = 1, refLootEntry = 11261 }; --Deathbone Sabatons
+  { itemID = 14622, groupID = 1, refLootEntry = 11261 }; --Deathbone Gauntlets
+  { itemID = 14623, groupID = 1, refLootEntry = 11261 }; --Deathbone Legguards
+  { itemID = 14624, groupID = 1, refLootEntry = 11261 }; --Deathbone Chestplate
+  { itemID = 14626, groupID = 1, refLootEntry = 11261 }; --Necropile Robe
+  { itemID = 14629, groupID = 1, refLootEntry = 11261 }; --Necropile Cuffs
+  { itemID = 14631, groupID = 1, refLootEntry = 11261 }; --Necropile Boots
+  { itemID = 14632, groupID = 1, refLootEntry = 11261 }; --Necropile Leggings
+  { itemID = 14633, groupID = 1, refLootEntry = 11261 }; --Necropile Mantle
+  { itemID = 14636, groupID = 1, refLootEntry = 11261 }; --Cadaverous Belt
+  { itemID = 14637, groupID = 1, refLootEntry = 11261 }; --Cadaverous Armor
+  { itemID = 14638, groupID = 1, refLootEntry = 11261 }; --Cadaverous Leggings
+  { itemID = 14640, groupID = 1, refLootEntry = 11261 }; --Cadaverous Gloves
+  { itemID = 14641, groupID = 1, refLootEntry = 11261 }; --Cadaverous Walkers
+  { itemID = 16684, groupID = 1, refLootEntry = 11261 }; --Magister
+  { itemID = 18680, groupID = 1, refLootEntry = 11261 }; --Ancient Bone Bow
+  { itemID = 18681, groupID = 1, refLootEntry = 11261 }; --Burial Shawl
+  { itemID = 18682, groupID = 1, refLootEntry = 11261 }; --Ghoul Skin Leggings
+  { itemID = 18683, groupID = 1, refLootEntry = 11261 }; --Hammer of the Vesper
+  { itemID = 18684, groupID = 1, refLootEntry = 11261 }; --Dimly Opalescent Ring
+  { itemID = 23200, groupID = 1, refLootEntry = 11261 }; --Totem of Sustaining
+  { itemID = 23201, groupID = 1, refLootEntry = 11261 }; --Libram of Divinity
+  { itemID = 99222, groupID = 1, refLootEntry = 11261 }; --Deathbone Wristguards
+  { itemID = 198367, groupID = 1, refLootEntry = 11261 }; --Deathbone Pauldrons
+  { itemID = 202982, groupID = 1, refLootEntry = 11261 }; --Deathbone Helmet
+  { itemID = 264935, groupID = 1, refLootEntry = 11261 }; --Hauberk of Tenacity
+  { itemID = 265170, groupID = 1, refLootEntry = 11261 }; --Gauntlets of Tenacity
+  { itemID = 267897, groupID = 1, refLootEntry = 11261 }; --Waistguard of Tenacity
+  { itemID = 268347, groupID = 1, refLootEntry = 11261 }; --Legguards of Tenacity
+  { itemID = 269237, groupID = 1, refLootEntry = 11261 }; --Greaves of Tenacity
+  { itemID = 12843, groupID = 0, refLootEntry = 11261 }; --Corruptor
+  { itemID = 13523, groupID = 2, refLootEntry = 11261 }; --Blood of Innocents
+  { itemID = 14047, groupID = 0, refLootEntry = 11261 }; --Runecloth
+  { itemID = 14617, groupID = 0, refLootEntry = 11261 }; --Sawbones Shirt
+  { itemID = 59951, groupID = 0, refLootEntry = 11261 }; --Sigil of Doctor Theolen Krastinov
+  { itemID = 97730, groupID = 0, refLootEntry = 11261 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 11261 }; --Rune of Ascension
+  { itemID = 12390, groupID = 3, refLootEntry = 11382 }; --Battleweaver
+  { itemID = 12391, groupID = 3, refLootEntry = 11382 }; --Battleweaver
+  { itemID = 12473, groupID = 3, refLootEntry = 11382 }; --Battleweaver
+  { itemID = 19822, groupID = 3, refLootEntry = 11382 }; --Zandalar Vindicator
+  { itemID = 19823, groupID = 3, refLootEntry = 11382 }; --Zandalar Vindicator
+  { itemID = 19824, groupID = 3, refLootEntry = 11382 }; --Zandalar Vindicator
+  { itemID = 19825, groupID = 3, refLootEntry = 11382 }; --Zandalar Freethinker
+  { itemID = 19826, groupID = 3, refLootEntry = 11382 }; --Zandalar Freethinker
+  { itemID = 19827, groupID = 3, refLootEntry = 11382 }; --Zandalar Freethinker
+  { itemID = 19828, groupID = 3, refLootEntry = 11382 }; --Zandalar Augur
+  { itemID = 19829, groupID = 3, refLootEntry = 11382 }; --Zandalar Augur
+  { itemID = 19830, groupID = 3, refLootEntry = 11382 }; --Zandalar Augur
+  { itemID = 19831, groupID = 3, refLootEntry = 11382 }; --Zandalar Predator
+  { itemID = 19832, groupID = 3, refLootEntry = 11382 }; --Zandalar Predator
+  { itemID = 19833, groupID = 3, refLootEntry = 11382 }; --Zandalar Predator
+  { itemID = 19834, groupID = 3, refLootEntry = 11382 }; --Zandalar Madcap
+  { itemID = 19835, groupID = 3, refLootEntry = 11382 }; --Zandalar Madcap
+  { itemID = 19836, groupID = 3, refLootEntry = 11382 }; --Zandalar Madcap
+  { itemID = 19838, groupID = 3, refLootEntry = 11382 }; --Zandalar Haruspex
+  { itemID = 19839, groupID = 3, refLootEntry = 11382 }; --Zandalar Haruspex
+  { itemID = 19840, groupID = 3, refLootEntry = 11382 }; --Zandalar Haruspex
+  { itemID = 19841, groupID = 3, refLootEntry = 11382 }; --Zandalar Confessor
+  { itemID = 19842, groupID = 3, refLootEntry = 11382 }; --Zandalar Confessor
+  { itemID = 19843, groupID = 3, refLootEntry = 11382 }; --Zandalar Confessor
+  { itemID = 19845, groupID = 3, refLootEntry = 11382 }; --Zandalar Illusionist
+  { itemID = 19846, groupID = 3, refLootEntry = 11382 }; --Zandalar Illusionist
+  { itemID = 19848, groupID = 3, refLootEntry = 11382 }; --Zandalar Demoniac
+  { itemID = 19849, groupID = 3, refLootEntry = 11382 }; --Zandalar Demoniac
+  { itemID = 19863, groupID = 2, refLootEntry = 11382 }; --Primalist
+  { itemID = 19866, groupID = 1, refLootEntry = 11382 }; --Warblade of the Hakkari
+  { itemID = 19867, groupID = 1, refLootEntry = 11382 }; --Bloodlord
+  { itemID = 19869, groupID = 2, refLootEntry = 11382 }; --Blooddrenched Grips
+  { itemID = 19870, groupID = 2, refLootEntry = 11382 }; --Hakkari Loa Cloak
+  { itemID = 19873, groupID = 2, refLootEntry = 11382 }; --Overlord
+  { itemID = 19874, groupID = 1, refLootEntry = 11382 }; --Halberd of Smiting
+  { itemID = 19877, groupID = 2, refLootEntry = 11382 }; --Animist
+  { itemID = 19878, groupID = 2, refLootEntry = 11382 }; --Bloodsoaked Pauldrons
+  { itemID = 19893, groupID = 2, refLootEntry = 11382 }; --Zanzil
+  { itemID = 19895, groupID = 2, refLootEntry = 11382 }; --Bloodtinged Kilt
+  { itemID = 20033, groupID = 3, refLootEntry = 11382 }; --Zandalar Demoniac
+  { itemID = 20034, groupID = 3, refLootEntry = 11382 }; --Zandalar Illusionist
+  { itemID = 20038, groupID = 1, refLootEntry = 11382 }; --Mandokir
+  { itemID = 19872, groupID = 0, refLootEntry = 11382 }; --Swift Razzashi Raptor
+  { itemID = 22637, groupID = 0, refLootEntry = 11382 }; --Primal Hakkari Idol
+  { itemID = 29434, groupID = 0, refLootEntry = 11382 }; --Badge of Justice
+  { itemID = 59953, groupID = 0, refLootEntry = 11382 }; --Sigil of Bloodlord Mandokir
+  { itemID = 97885, groupID = 37, refLootEntry = 11382 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 11382 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 11382 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 11382 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 11382 }; --Personal Cache
+  { itemID = 1278049, groupID = 37, refLootEntry = 11382 }; --Case of Fortune
+  { itemID = 1400023, groupID = 0, refLootEntry = 11382 }; --Cache of the Blood God
+  { itemID = 18373, groupID = 1, refLootEntry = 11486 }; --Chestplate of Tranquility
+  { itemID = 18375, groupID = 1, refLootEntry = 11486 }; --Bracers of the Eclipse
+  { itemID = 18376, groupID = 1, refLootEntry = 11486 }; --Timeworn Mace
+  { itemID = 18378, groupID = 1, refLootEntry = 11486 }; --Silvermoon Leggings
+  { itemID = 18380, groupID = 1, refLootEntry = 11486 }; --Eldritch Reinforced Legplates
+  { itemID = 18382, groupID = 1, refLootEntry = 11486 }; --Fluctuating Cloak
+  { itemID = 18388, groupID = 1, refLootEntry = 11486 }; --Stoneshatter
+  { itemID = 18392, groupID = 1, refLootEntry = 11486 }; --Distracting Dagger
+  { itemID = 18395, groupID = 1, refLootEntry = 11486 }; --Emerald Flame Ring
+  { itemID = 18396, groupID = 1, refLootEntry = 11486 }; --Mind Carver
+  { itemID = 14047, groupID = 0, refLootEntry = 11486 }; --Runecloth
+  { itemID = 21525, groupID = 0, refLootEntry = 11486 }; --Green Winter Hat
+  { itemID = 59957, groupID = 0, refLootEntry = 11486 }; --Sigil of Prince Tortheldrin
+  { itemID = 97730, groupID = 0, refLootEntry = 11486 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 11486 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 11486 }; --Dungeon Spoils
+  { itemID = 18350, groupID = 1, refLootEntry = 11487 }; --Amplifying Cloak
+  { itemID = 18351, groupID = 1, refLootEntry = 11487 }; --Magically Sealed Bracers
+  { itemID = 18371, groupID = 1, refLootEntry = 11487 }; --Mindtap Talisman
+  { itemID = 18374, groupID = 1, refLootEntry = 11487 }; --Flamescarred Shoulders
+  { itemID = 18397, groupID = 1, refLootEntry = 11487 }; --Elder Magus Pendant
+  { itemID = 276132, groupID = 1, refLootEntry = 11487 }; --Idol of Lunar Apparitions
+  { itemID = 14047, groupID = 0, refLootEntry = 11487 }; --Runecloth
+  { itemID = 22309, groupID = 0, refLootEntry = 11487 }; --Pattern: Big Bag of Enchantment
+  { itemID = 59958, groupID = 0, refLootEntry = 11487 }; --Sigil of Magister Kalendris
+  { itemID = 97730, groupID = 0, refLootEntry = 11487 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 11487 }; --Rune of Ascension
+  { itemID = 18347, groupID = 1, refLootEntry = 11488 }; --Well Balanced Axe
+  { itemID = 18349, groupID = 1, refLootEntry = 11488 }; --Gauntlets of Accuracy
+  { itemID = 18383, groupID = 1, refLootEntry = 11488 }; --Force Imbued Gauntlets
+  { itemID = 18386, groupID = 1, refLootEntry = 11488 }; --Padre
+  { itemID = 14047, groupID = 0, refLootEntry = 11488 }; --Runecloth
+  { itemID = 22206, groupID = 0, refLootEntry = 11488 }; --Bouquet of Red Roses
+  { itemID = 59959, groupID = 0, refLootEntry = 11488 }; --Sigil of Illyanna Ravenoak
+  { itemID = 97730, groupID = 0, refLootEntry = 11488 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 11488 }; --Rune of Ascension
+  { itemID = 10286, groupID = 0, refLootEntry = 11489 }; --Heart of the Wild
+  { itemID = 18352, groupID = 1, refLootEntry = 11489 }; --Petrified Bark Shield
+  { itemID = 18353, groupID = 1, refLootEntry = 11489 }; --Stoneflower Staff
+  { itemID = 18390, groupID = 1, refLootEntry = 11489 }; --Tanglemoss Leggings
+  { itemID = 18393, groupID = 1, refLootEntry = 11489 }; --Warpwood Binding
+  { itemID = 22529, groupID = 0, refLootEntry = 11489 }; --Savage Frond
+  { itemID = 97730, groupID = 0, refLootEntry = 11489 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 11489 }; --Rune of Ascension
+  { itemID = 18306, groupID = 1, refLootEntry = 11490 }; --Gloves of Shadowy Mist
+  { itemID = 18308, groupID = 1, refLootEntry = 11490 }; --Clever Hat
+  { itemID = 18313, groupID = 1, refLootEntry = 11490 }; --Helm of Awareness
+  { itemID = 18319, groupID = 1, refLootEntry = 11490 }; --Fervent Helm
+  { itemID = 18323, groupID = 1, refLootEntry = 11490 }; --Satyr
+  { itemID = 14047, groupID = 0, refLootEntry = 11490 }; --Runecloth
+  { itemID = 59961, groupID = 0, refLootEntry = 11490 }; --Sigil of Zevrim Thornhoof
+  { itemID = 82863, groupID = 0, refLootEntry = 11490 }; --Summoner
+  { itemID = 97730, groupID = 0, refLootEntry = 11490 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 11490 }; --Rune of Ascension
+  { itemID = 18309, groupID = 1, refLootEntry = 11492 }; --Gloves of Restoration
+  { itemID = 18310, groupID = 1, refLootEntry = 11492 }; --Fiendish Machete
+  { itemID = 18312, groupID = 1, refLootEntry = 11492 }; --Energized Chestplate
+  { itemID = 18314, groupID = 1, refLootEntry = 11492 }; --Ring of Demonic Guile
+  { itemID = 18315, groupID = 1, refLootEntry = 11492 }; --Ring of Demonic Potency
+  { itemID = 18318, groupID = 1, refLootEntry = 11492 }; --Merciful Greaves
+  { itemID = 18321, groupID = 1, refLootEntry = 11492 }; --Energetic Rod
+  { itemID = 18326, groupID = 1, refLootEntry = 11492 }; --Razor Gauntlets
+  { itemID = 18327, groupID = 1, refLootEntry = 11492 }; --Whipvine Cord
+  { itemID = 18328, groupID = 1, refLootEntry = 11492 }; --Shadewood Cloak
+  { itemID = 14047, groupID = 0, refLootEntry = 11492 }; --Runecloth
+  { itemID = 18249, groupID = 3, refLootEntry = 11492 }; --Crescent Key
+  { itemID = 59962, groupID = 0, refLootEntry = 11492 }; --Sigil of Alzzin the Wildshaper
+  { itemID = 82865, groupID = 0, refLootEntry = 11492 }; --Summoner
+  { itemID = 97730, groupID = 0, refLootEntry = 11492 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 11492 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 11492 }; --Dungeon Spoils
+  { itemID = 18520, groupID = 1, refLootEntry = 11501 }; --Barbarous Blade
+  { itemID = 18521, groupID = 1, refLootEntry = 11501 }; --Grimy Metal Boots
+  { itemID = 18522, groupID = 1, refLootEntry = 11501 }; --Band of the Ogre King
+  { itemID = 18523, groupID = 1, refLootEntry = 11501 }; --Brightly Glowing Stone
+  { itemID = 18524, groupID = 1, refLootEntry = 11501 }; --Leggings of Destruction
+  { itemID = 18525, groupID = 1, refLootEntry = 11501 }; --Bracers of Prosperity
+  { itemID = 18526, groupID = 1, refLootEntry = 11501 }; --Crown of the Ogre King
+  { itemID = 18527, groupID = 1, refLootEntry = 11501 }; --Harmonious Gauntlets
+  { itemID = 14047, groupID = 0, refLootEntry = 11501 }; --Runecloth
+  { itemID = 18640, groupID = 0, refLootEntry = 11501 }; --Happy Fun Rock
+  { itemID = 18780, groupID = 0, refLootEntry = 11501 }; --Top Half of Advanced Armorsmithing: Volume I
+  { itemID = 19258, groupID = 0, refLootEntry = 11501 }; --Ace of Warlords
+  { itemID = 21982, groupID = 0, refLootEntry = 11501 }; --Ogre Warbeads
+  { itemID = 59966, groupID = 0, refLootEntry = 11501 }; --Sigil of King Gordok
+  { itemID = 97730, groupID = 0, refLootEntry = 11501 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 11501 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 11501 }; --Dungeon Spoils
+  { itemID = 12572, groupID = 3, refLootEntry = 11502 }; --Veil of Flame Worshipper
+  { itemID = 15712, groupID = 4, refLootEntry = 11502 }; --Pyroclasmic Longbow
+  { itemID = 17063, groupID = 3, refLootEntry = 11502 }; --Band of Accuria
+  { itemID = 17076, groupID = 4, refLootEntry = 11502 }; --Bonereaver
+  { itemID = 17082, groupID = 4, refLootEntry = 11502 }; --Shard of the Flame
+  { itemID = 17083, groupID = 4, refLootEntry = 11502 }; --Blade of Dragon Bone
+  { itemID = 17102, groupID = 3, refLootEntry = 11502 }; --Cloak of the Shrouded Mists
+  { itemID = 17104, groupID = 4, refLootEntry = 11502 }; --Spinal Reaper
+  { itemID = 17106, groupID = 4, refLootEntry = 11502 }; --Malistar
+  { itemID = 17107, groupID = 3, refLootEntry = 11502 }; --Dragon
+  { itemID = 17203, groupID = 2, refLootEntry = 11502 }; --Sulfuron Ingot
+  { itemID = 17204, groupID = 1, refLootEntry = 11502 }; --Eye of Sulfuras
+  { itemID = 18814, groupID = 3, refLootEntry = 11502 }; --Choker of the Fire Lord
+  { itemID = 18815, groupID = 4, refLootEntry = 11502 }; --Essence of the Pure Flame
+  { itemID = 18816, groupID = 4, refLootEntry = 11502 }; --Perdition
+  { itemID = 18817, groupID = 3, refLootEntry = 11502 }; --Crown of Destruction
+  { itemID = 19137, groupID = 3, refLootEntry = 11502 }; --Onslaught Girdle
+  { itemID = 19138, groupID = 8, refLootEntry = 11502 }; --Band of Sulfuras
+  { itemID = 102107, groupID = 6, refLootEntry = 11502 }; --Reins of the Magmatic Steed
+  { itemID = 2522459, groupID = 5, refLootEntry = 11502 }; --Chromatic Legguards
+  { itemID = 21110, groupID = 0, refLootEntry = 11502 }; --Draconic for Dummies - Chapter VIII
+  { itemID = 375250, groupID = 3, refLootEntry = 11502 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 11502 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 11502 }; --Personal Cache
+  { itemID = 1400024, groupID = 0, refLootEntry = 11502 }; --Cache of the Fire Lord
+  { itemID = 2021814, groupID = 0, refLootEntry = 11502 }; --Dungeon Spoils
+  { itemID = 14149, groupID = 1, refLootEntry = 11517 }; --Subterranean Cape
+  { itemID = 68194, groupID = 1, refLootEntry = 11517 }; --Oggleflint
+  { itemID = 59968, groupID = 0, refLootEntry = 11517 }; --Sigil of Oggleflint
+  { itemID = 2559, groupID = 1, refLootEntry = 11518 }; --Ebonstone Staff
+  { itemID = 14150, groupID = 1, refLootEntry = 11518 }; --Robe of Evocation
+  { itemID = 59969, groupID = 0, refLootEntry = 11518 }; --Sigil of Jergosh the Invoker
+  { itemID = 11321, groupID = 1, refLootEntry = 11520 }; --The Hungerer
+  { itemID = 14145, groupID = 1, refLootEntry = 11520 }; --Cursed Felblade
+  { itemID = 14540, groupID = 0, refLootEntry = 11520 }; --Taragaman the Hungerer
+  { itemID = 29434, groupID = 0, refLootEntry = 11520 }; --Badge of Justice
+  { itemID = 59971, groupID = 0, refLootEntry = 11520 }; --Sigil of Taragaman the Hungerer
+  { itemID = 375250, groupID = 0, refLootEntry = 11520 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 11520 }; --Dungeon Spoils
+  { itemID = 13827, groupID = 1, refLootEntry = 11583 }; --Robes of the Blackwing Apprentice
+  { itemID = 14001, groupID = 2, refLootEntry = 11583 }; --Archimtiros
+  { itemID = 14996, groupID = 2, refLootEntry = 11583 }; --Shadow Flame Legguards
+  { itemID = 19356, groupID = 1, refLootEntry = 11583 }; --Staff of the Shadow Flame
+  { itemID = 19360, groupID = 1, refLootEntry = 11583 }; --Lok
+  { itemID = 19363, groupID = 2, refLootEntry = 11583 }; --Crul
+  { itemID = 19364, groupID = 2, refLootEntry = 11583 }; --Ashkandi, Greatsword of the Brotherhood
+  { itemID = 19375, groupID = 1, refLootEntry = 11583 }; --Mish
+  { itemID = 19376, groupID = 2, refLootEntry = 11583 }; --Archimtiros
+  { itemID = 19377, groupID = 2, refLootEntry = 11583 }; --Prestor
+  { itemID = 19378, groupID = 1, refLootEntry = 11583 }; --Cloak of the Brood Lord
+  { itemID = 19379, groupID = 1, refLootEntry = 11583 }; --Neltharion
+  { itemID = 19380, groupID = 2, refLootEntry = 11583 }; --Therazane
+  { itemID = 19381, groupID = 2, refLootEntry = 11583 }; --Boots of the Shadow Flame
+  { itemID = 19382, groupID = 1, refLootEntry = 11583 }; --Pure Elementium Band
+  { itemID = 2522450, groupID = 3, refLootEntry = 11583 }; --Chromatic Tunic
+  { itemID = 15020, groupID = 0, refLootEntry = 11583 }; --Royal Cloak of Lord Victor Nefarius
+  { itemID = 21138, groupID = 0, refLootEntry = 11583 }; --Red Scepter Shard
+  { itemID = 21142, groupID = 0, refLootEntry = 11583 }; --From the Desk of Lord Victor Nefarius
+  { itemID = 29434, groupID = 0, refLootEntry = 11583 }; --Badge of Justice
+  { itemID = 97271, groupID = 0, refLootEntry = 11583 }; --Head of Nefarian
+  { itemID = 375250, groupID = 0, refLootEntry = 11583 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 11583 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 11583 }; --Personal Cache
+  { itemID = 1400020, groupID = 0, refLootEntry = 11583 }; --Cache of the Broodmother
+  { itemID = 2021814, groupID = 0, refLootEntry = 11583 }; --Dungeon Spoils
+  { itemID = 14528, groupID = 1, refLootEntry = 11622 }; --Rattlecage Buckler
+  { itemID = 14531, groupID = 1, refLootEntry = 11622 }; --Frightskull Shaft
+  { itemID = 14537, groupID = 1, refLootEntry = 11622 }; --Corpselight Greaves
+  { itemID = 14538, groupID = 1, refLootEntry = 11622 }; --Deadwalker Mantle
+  { itemID = 14539, groupID = 1, refLootEntry = 11622 }; --Bone Ring Helm
+  { itemID = 16711, groupID = 1, refLootEntry = 11622 }; --Shadowcraft Boots
+  { itemID = 18686, groupID = 1, refLootEntry = 11622 }; --Bone Golem Shoulders
+  { itemID = 12841, groupID = 0, refLootEntry = 11622 }; --Invader
+  { itemID = 13873, groupID = 0, refLootEntry = 11622 }; --Viewing Room Key
+  { itemID = 14047, groupID = 0, refLootEntry = 11622 }; --Runecloth
+  { itemID = 18782, groupID = 0, refLootEntry = 11622 }; --Top Half of Advanced Armorsmithing: Volume II
+  { itemID = 22526, groupID = 0, refLootEntry = 11622 }; --Bone Fragments
+  { itemID = 59974, groupID = 0, refLootEntry = 11622 }; --Sigil of Rattlegore
+  { itemID = 88757, groupID = 0, refLootEntry = 11622 }; --Blood Soaked Vellum: Rattlegore
+  { itemID = 97730, groupID = 0, refLootEntry = 11622 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 11622 }; --Rune of Ascension
+  { itemID = 12573, groupID = 2, refLootEntry = 11982 }; --Corebound Shoulders
+  { itemID = 15959, groupID = 2, refLootEntry = 11982 }; --Idol of the Magma Beast
+  { itemID = 17065, groupID = 2, refLootEntry = 11982 }; --Medallion of Steadfast Might
+  { itemID = 17066, groupID = 2, refLootEntry = 11982 }; --Drillborer Disk
+  { itemID = 17071, groupID = 2, refLootEntry = 11982 }; --Gutgore Ripper
+  { itemID = 17073, groupID = 2, refLootEntry = 11982 }; --Earthshaker
+  { itemID = 17105, groupID = 2, refLootEntry = 11982 }; --Aurastone Hammer
+  { itemID = 17203, groupID = 1, refLootEntry = 11982 }; --Sulfuron Ingot
+  { itemID = 18203, groupID = 2, refLootEntry = 11982 }; --Eskhandar
+  { itemID = 18823, groupID = 2, refLootEntry = 11982 }; --Aged Core Leather Gloves
+  { itemID = 18870, groupID = 2, refLootEntry = 11982 }; --Helm of the Lifegiver
+  { itemID = 18879, groupID = 2, refLootEntry = 11982 }; --Heavy Dark Iron Ring
+  { itemID = 2522359, groupID = 3, refLootEntry = 11982 }; --Molten Legguards
+  { itemID = 97885, groupID = 37, refLootEntry = 11982 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 11982 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 3, refLootEntry = 11982 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 11982 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 11982 }; --Personal Cache
+  { itemID = 1278048, groupID = 37, refLootEntry = 11982 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 11982 }; --Case of Fortune
+  { itemID = 19344, groupID = 1, refLootEntry = 11983 }; --Natural Alignment Crystal
+  { itemID = 19353, groupID = 2, refLootEntry = 11983 }; --Drake Talon Cleaver
+  { itemID = 19355, groupID = 1, refLootEntry = 11983 }; --Shadow Wing Focus Staff
+  { itemID = 19368, groupID = 2, refLootEntry = 11983 }; --Dragonbreath Hand Cannon
+  { itemID = 19395, groupID = 1, refLootEntry = 11983 }; --Rejuvenating Gem
+  { itemID = 19396, groupID = 2, refLootEntry = 11983 }; --Taut Dragonhide Belt
+  { itemID = 19398, groupID = 2, refLootEntry = 11983 }; --Cloak of Firemaw
+  { itemID = 19400, groupID = 1, refLootEntry = 11983 }; --Firemaw
+  { itemID = 19406, groupID = 2, refLootEntry = 11983 }; --Drake Fang Talisman
+  { itemID = 19407, groupID = 1, refLootEntry = 11983 }; --Ebony Flame Gloves
+  { itemID = 19431, groupID = 2, refLootEntry = 11983 }; --Styleen
+  { itemID = 19433, groupID = 1, refLootEntry = 11983 }; --Emberweave Leggings
+  { itemID = 2522464, groupID = 3, refLootEntry = 11983 }; --Chromatic Handguards
+  { itemID = 59984, groupID = 0, refLootEntry = 11983 }; --Sigil of Firemaw
+  { itemID = 375250, groupID = 0, refLootEntry = 11983 }; --Rune of Ascension
+  { itemID = 1180344, groupID = 0, refLootEntry = 11983 }; --Draconic Warhorn: Firemaw
+  { itemID = 1400020, groupID = 0, refLootEntry = 11983 }; --Cache of the Broodmother
+  { itemID = 10532, groupID = 2, refLootEntry = 11988 }; --Codex of War Arts
+  { itemID = 12908, groupID = 2, refLootEntry = 11988 }; --Magma Forged Walkers
+  { itemID = 17072, groupID = 2, refLootEntry = 11988 }; --Blastershot Launcher
+  { itemID = 17110, groupID = 2, refLootEntry = 11988 }; --Seal of the Archmagus
+  { itemID = 17203, groupID = 1, refLootEntry = 11988 }; --Sulfuron Ingot
+  { itemID = 18822, groupID = 2, refLootEntry = 11988 }; --Obsidian Edged Blade
+  { itemID = 18824, groupID = 2, refLootEntry = 11988 }; --Magma Tempered Boots
+  { itemID = 18829, groupID = 2, refLootEntry = 11988 }; --Deep Earth Spaulders
+  { itemID = 18842, groupID = 2, refLootEntry = 11988 }; --Staff of Dominance
+  { itemID = 18872, groupID = 2, refLootEntry = 11988 }; --Manastorm Leggings
+  { itemID = 19136, groupID = 2, refLootEntry = 11988 }; --Mana Igniting Cord
+  { itemID = 19146, groupID = 2, refLootEntry = 11988 }; --Wristguards of Stability
+  { itemID = 2522350, groupID = 3, refLootEntry = 11988 }; --Molten Tunic
+  { itemID = 97885, groupID = 37, refLootEntry = 11988 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 11988 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 3, refLootEntry = 11988 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 11988 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 11988 }; --Personal Cache
+  { itemID = 1278048, groupID = 37, refLootEntry = 11988 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 11988 }; --Case of Fortune
+  { itemID = 15319, groupID = 2, refLootEntry = 12017 }; --Taut Dragonhide Bracers
+  { itemID = 15320, groupID = 1, refLootEntry = 12017 }; --Black Brood Wristguards
+  { itemID = 19341, groupID = 2, refLootEntry = 12017 }; --Lifegiving Gem
+  { itemID = 19342, groupID = 2, refLootEntry = 12017 }; --Venomous Totem
+  { itemID = 19345, groupID = 1, refLootEntry = 12017 }; --Aegis of Preservation
+  { itemID = 19350, groupID = 2, refLootEntry = 12017 }; --Heartstriker
+  { itemID = 19351, groupID = 2, refLootEntry = 12017 }; --Maladath, Runed Blade of the Black Flight
+  { itemID = 19365, groupID = 2, refLootEntry = 12017 }; --Claw of the Black Drake
+  { itemID = 19373, groupID = 1, refLootEntry = 12017 }; --Black Brood Pauldrons
+  { itemID = 19374, groupID = 1, refLootEntry = 12017 }; --Bracers of Arcane Accuracy
+  { itemID = 19399, groupID = 1, refLootEntry = 12017 }; --Black Ash Robe
+  { itemID = 19402, groupID = 1, refLootEntry = 12017 }; --Legguards of the Fallen Crusader
+  { itemID = 19408, groupID = 2, refLootEntry = 12017 }; --Kirasath
+  { itemID = 19432, groupID = 2, refLootEntry = 12017 }; --Circle of Applied Force
+  { itemID = 53142, groupID = 4, refLootEntry = 12017 }; --Formula: Enchant Cloak - Draconic Might
+  { itemID = 2522465, groupID = 3, refLootEntry = 12017 }; --Chromatic Boots
+  { itemID = 20383, groupID = 0, refLootEntry = 12017 }; --Head of the Broodlord Lashlayer
+  { itemID = 29434, groupID = 0, refLootEntry = 12017 }; --Badge of Justice
+  { itemID = 59986, groupID = 0, refLootEntry = 12017 }; --Sigil of Broodlord Lashlayer
+  { itemID = 375250, groupID = 0, refLootEntry = 12017 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 12017 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 12017 }; --Personal Cache
+  { itemID = 1180345, groupID = 0, refLootEntry = 12017 }; --Draconic Warhorn: Broodlord Lashlayer
+  { itemID = 1400020, groupID = 0, refLootEntry = 12017 }; --Cache of the Broodmother
+  { itemID = 10531, groupID = 4, refLootEntry = 12056 }; --Stoneclad Libram
+  { itemID = 17072, groupID = 4, refLootEntry = 12056 }; --Blastershot Launcher
+  { itemID = 17110, groupID = 4, refLootEntry = 12056 }; --Seal of the Archmagus
+  { itemID = 17203, groupID = 3, refLootEntry = 12056 }; --Sulfuron Ingot
+  { itemID = 17782, groupID = 1, refLootEntry = 12056 }; --Talisman of Binding Shard
+  { itemID = 18563, groupID = 2, refLootEntry = 12056 }; --Bindings of the Windseeker
+  { itemID = 18822, groupID = 4, refLootEntry = 12056 }; --Obsidian Edged Blade
+  { itemID = 18824, groupID = 4, refLootEntry = 12056 }; --Magma Tempered Boots
+  { itemID = 18829, groupID = 4, refLootEntry = 12056 }; --Deep Earth Spaulders
+  { itemID = 18842, groupID = 4, refLootEntry = 12056 }; --Staff of Dominance
+  { itemID = 18872, groupID = 4, refLootEntry = 12056 }; --Manastorm Leggings
+  { itemID = 19136, groupID = 4, refLootEntry = 12056 }; --Mana Igniting Cord
+  { itemID = 19146, groupID = 4, refLootEntry = 12056 }; --Wristguards of Stability
+  { itemID = 2522361, groupID = 5, refLootEntry = 12056 }; --Molten Spaulders
+  { itemID = 59989, groupID = 0, refLootEntry = 12056 }; --Sigil of Baron Geddon
+  { itemID = 375250, groupID = 0, refLootEntry = 12056 }; --Rune of Ascension
+  { itemID = 1170083, groupID = 0, refLootEntry = 12056 }; --Personal Cache
+  { itemID = 15956, groupID = 3, refLootEntry = 12057 }; --Heavy Boulder Totem
+  { itemID = 17065, groupID = 3, refLootEntry = 12057 }; --Medallion of Steadfast Might
+  { itemID = 17066, groupID = 3, refLootEntry = 12057 }; --Drillborer Disk
+  { itemID = 17071, groupID = 3, refLootEntry = 12057 }; --Gutgore Ripper
+  { itemID = 17073, groupID = 3, refLootEntry = 12057 }; --Earthshaker
+  { itemID = 17105, groupID = 3, refLootEntry = 12057 }; --Aurastone Hammer
+  { itemID = 17203, groupID = 2, refLootEntry = 12057 }; --Sulfuron Ingot
+  { itemID = 18203, groupID = 3, refLootEntry = 12057 }; --Eskhandar
+  { itemID = 18564, groupID = 1, refLootEntry = 12057 }; --Bindings of the Windseeker
+  { itemID = 18823, groupID = 3, refLootEntry = 12057 }; --Aged Core Leather Gloves
+  { itemID = 18870, groupID = 3, refLootEntry = 12057 }; --Helm of the Lifegiver
+  { itemID = 18879, groupID = 3, refLootEntry = 12057 }; --Heavy Dark Iron Ring
+  { itemID = 2522360, groupID = 4, refLootEntry = 12057 }; --Molten Headpiece
+  { itemID = 59990, groupID = 0, refLootEntry = 12057 }; --Sigil of Garr
+  { itemID = 97885, groupID = 37, refLootEntry = 12057 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 12057 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 3, refLootEntry = 12057 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 12057 }; --Raider
+  { itemID = 600425, groupID = 0, refLootEntry = 12057 }; --Elemental Lodestone: Garr
+  { itemID = 1170083, groupID = 0, refLootEntry = 12057 }; --Personal Cache
+  { itemID = 1278049, groupID = 37, refLootEntry = 12057 }; --Case of Fortune
+  { itemID = 10470, groupID = 2, refLootEntry = 12098 }; --Eternal Flame Artifact
+  { itemID = 12595, groupID = 2, refLootEntry = 12098 }; --Flamebound Harness
+  { itemID = 12872, groupID = 2, refLootEntry = 12098 }; --Blazing Slippers
+  { itemID = 12911, groupID = 2, refLootEntry = 12098 }; --Magma-forged Throwing Knife
+  { itemID = 16010, groupID = 2, refLootEntry = 12098 }; --Eclipsing Rune of the Herald
+  { itemID = 17069, groupID = 2, refLootEntry = 12098 }; --Striker
+  { itemID = 17074, groupID = 2, refLootEntry = 12098 }; --Shadowstrike
+  { itemID = 17103, groupID = 2, refLootEntry = 12098 }; --Azuresong Mageblade
+  { itemID = 17109, groupID = 2, refLootEntry = 12098 }; --Choker of Enlightenment
+  { itemID = 17203, groupID = 1, refLootEntry = 12098 }; --Sulfuron Ingot
+  { itemID = 18820, groupID = 2, refLootEntry = 12098 }; --Talisman of Ephemeral Power
+  { itemID = 18875, groupID = 2, refLootEntry = 12098 }; --Salamander Scale Pants
+  { itemID = 19145, groupID = 2, refLootEntry = 12098 }; --Robe of Volatile Power
+  { itemID = 19147, groupID = 2, refLootEntry = 12098 }; --Ring of Spell Power
+  { itemID = 2522365, groupID = 3, refLootEntry = 12098 }; --Molten Boots
+  { itemID = 17330, groupID = 0, refLootEntry = 12098 }; --Hand of Sulfuron
+  { itemID = 59991, groupID = 0, refLootEntry = 12098 }; --Sigil of Sulfuron Harbinger
+  { itemID = 97885, groupID = 37, refLootEntry = 12098 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 12098 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 3, refLootEntry = 12098 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 12098 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 12098 }; --Personal Cache
+  { itemID = 1278048, groupID = 37, refLootEntry = 12098 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 12098 }; --Case of Fortune
+  { itemID = 4552, groupID = 0, refLootEntry = 12203 }; --Smooth Stone Chip
+  { itemID = 7912, groupID = 0, refLootEntry = 12203 }; --Solid Stone
+  { itemID = 8150, groupID = 0, refLootEntry = 12203 }; --Deeprock Salt
+  { itemID = 17684, groupID = 0, refLootEntry = 12203 }; --Theradric Crystal Carving
+  { itemID = 17734, groupID = 1, refLootEntry = 12203 }; --Helm of the Mountain
+  { itemID = 17736, groupID = 1, refLootEntry = 12203 }; --Rockgrip Gauntlets
+  { itemID = 17737, groupID = 1, refLootEntry = 12203 }; --Cloud Stone
+  { itemID = 17943, groupID = 1, refLootEntry = 12203 }; --Fist of Stone
+  { itemID = 17684, groupID = 0, refLootEntry = 12237 }; --Theradric Crystal Carving
+  { itemID = 17741, groupID = 1, refLootEntry = 12237 }; --Nature
+  { itemID = 17742, groupID = 1, refLootEntry = 12237 }; --Fungus Shroud Armor
+  { itemID = 59999, groupID = 0, refLootEntry = 12237 }; --Sigil of Meshlok the Harvester
+  { itemID = 601076, groupID = 0, refLootEntry = 12237 }; --Elemental Lodestone: Meshlok the Harvester
+  { itemID = 4606, groupID = 0, refLootEntry = 12258 }; --Spongy Morel
+  { itemID = 4607, groupID = 0, refLootEntry = 12258 }; --Delicious Cave Mold
+  { itemID = 17684, groupID = 0, refLootEntry = 12258 }; --Theradric Crystal Carving
+  { itemID = 17747, groupID = 0, refLootEntry = 12258 }; --Razorlash Root
+  { itemID = 17748, groupID = 1, refLootEntry = 12258 }; --Vinerot Sandals
+  { itemID = 17749, groupID = 1, refLootEntry = 12258 }; --Phytoskin Spaulders
+  { itemID = 17750, groupID = 1, refLootEntry = 12258 }; --Chloromesh Girdle
+  { itemID = 17751, groupID = 1, refLootEntry = 12258 }; --Brusslehide Leggings
+  { itemID = 22529, groupID = 0, refLootEntry = 12258 }; --Savage Frond
+  { itemID = 60000, groupID = 0, refLootEntry = 12258 }; --Sigil of Razorlash
+  { itemID = 375250, groupID = 0, refLootEntry = 12258 }; --Rune of Ascension
+  { itemID = 601200, groupID = 0, refLootEntry = 12258 }; --Elemental Lodestone: Razorlash
+  { itemID = 2021814, groupID = 0, refLootEntry = 12258 }; --Dungeon Spoils
+  { itemID = 10533, groupID = 2, refLootEntry = 12259 }; --Tome of Burning Passion
+  { itemID = 12594, groupID = 2, refLootEntry = 12259 }; --Flamewalker Shoulderguards
+  { itemID = 12910, groupID = 2, refLootEntry = 12259 }; --Molten Slugtosser
+  { itemID = 17077, groupID = 2, refLootEntry = 12259 }; --Crimson Shocker
+  { itemID = 17203, groupID = 1, refLootEntry = 12259 }; --Sulfuron Ingot
+  { itemID = 18821, groupID = 2, refLootEntry = 12259 }; --Quick Strike Ring
+  { itemID = 18832, groupID = 2, refLootEntry = 12259 }; --Brutality Blade
+  { itemID = 18861, groupID = 2, refLootEntry = 12259 }; --Flamewaker Legplates
+  { itemID = 18878, groupID = 2, refLootEntry = 12259 }; --Sorcerous Dagger
+  { itemID = 19142, groupID = 2, refLootEntry = 12259 }; --Fire Runed Grimoire
+  { itemID = 19143, groupID = 2, refLootEntry = 12259 }; --Flameguard Gauntlets
+  { itemID = 19144, groupID = 2, refLootEntry = 12259 }; --Sabatons of the Flamewalker
+  { itemID = 2522363, groupID = 3, refLootEntry = 12259 }; --Molten Girdle
+  { itemID = 17331, groupID = 0, refLootEntry = 12259 }; --Hand of Gehennas
+  { itemID = 60001, groupID = 0, refLootEntry = 12259 }; --Sigil of Gehennas
+  { itemID = 375250, groupID = 3, refLootEntry = 12259 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 12259 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 12259 }; --Personal Cache
+  { itemID = 10470, groupID = 2, refLootEntry = 12264 }; --Eternal Flame Artifact
+  { itemID = 12597, groupID = 2, refLootEntry = 12264 }; --Embercloth Robe
+  { itemID = 12909, groupID = 2, refLootEntry = 12264 }; --Embercloth Wraps
+  { itemID = 12911, groupID = 2, refLootEntry = 12264 }; --Magma-forged Throwing Knife
+  { itemID = 15957, groupID = 2, refLootEntry = 12264 }; --Overloaded Totem
+  { itemID = 17069, groupID = 2, refLootEntry = 12264 }; --Striker
+  { itemID = 17074, groupID = 2, refLootEntry = 12264 }; --Shadowstrike
+  { itemID = 17103, groupID = 2, refLootEntry = 12264 }; --Azuresong Mageblade
+  { itemID = 17109, groupID = 2, refLootEntry = 12264 }; --Choker of Enlightenment
+  { itemID = 17203, groupID = 1, refLootEntry = 12264 }; --Sulfuron Ingot
+  { itemID = 18820, groupID = 2, refLootEntry = 12264 }; --Talisman of Ephemeral Power
+  { itemID = 18875, groupID = 2, refLootEntry = 12264 }; --Salamander Scale Pants
+  { itemID = 19145, groupID = 2, refLootEntry = 12264 }; --Robe of Volatile Power
+  { itemID = 19147, groupID = 2, refLootEntry = 12264 }; --Ring of Spell Power
+  { itemID = 2522364, groupID = 3, refLootEntry = 12264 }; --Molten Handguards
+  { itemID = 17332, groupID = 0, refLootEntry = 12264 }; --Hand of Shazzrah
+  { itemID = 60002, groupID = 0, refLootEntry = 12264 }; --Sigil of Shazzrah
+  { itemID = 375250, groupID = 3, refLootEntry = 12264 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 12264 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 12264 }; --Personal Cache
+  { itemID = 1615011, groupID = 0, refLootEntry = 12397 }; --Treasures of Azeroth
+  { itemID = 13826, groupID = 1, refLootEntry = 12435 }; --Dragon Hunter
+  { itemID = 15026, groupID = 2, refLootEntry = 12435 }; --Living Blood Gem
+  { itemID = 19334, groupID = 2, refLootEntry = 12435 }; --The Untamed Blade
+  { itemID = 19335, groupID = 2, refLootEntry = 12435 }; --Spineshatter
+  { itemID = 19336, groupID = 2, refLootEntry = 12435 }; --Arcane Infused Gem
+  { itemID = 19337, groupID = 1, refLootEntry = 12435 }; --The Black Book
+  { itemID = 19357, groupID = 2, refLootEntry = 12435 }; --Herald of Woe
+  { itemID = 19369, groupID = 1, refLootEntry = 12435 }; --Gloves of Rapid Evolution
+  { itemID = 19370, groupID = 1, refLootEntry = 12435 }; --Mantle of the Blackwing Cabal
+  { itemID = 19397, groupID = 1, refLootEntry = 12435 }; --Ring of Blackrock
+  { itemID = 19401, groupID = 1, refLootEntry = 12435 }; --Primalist
+  { itemID = 19405, groupID = 2, refLootEntry = 12435 }; --Malfurion
+  { itemID = 53144, groupID = 3, refLootEntry = 12435 }; --Formula: Enchant Cloak - Blazing
+  { itemID = 29434, groupID = 0, refLootEntry = 12435 }; --Badge of Justice
+  { itemID = 60007, groupID = 0, refLootEntry = 12435 }; --Sigil of Razorgore the Untamed
+  { itemID = 97885, groupID = 37, refLootEntry = 12435 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 12435 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 12435 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 12435 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 12435 }; --Personal Cache
+  { itemID = 1180352, groupID = 0, refLootEntry = 12435 }; --Draconic Warhorn: Razorgore the Untamed
+  { itemID = 1278048, groupID = 37, refLootEntry = 12435 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 12435 }; --Case of Fortune
+  { itemID = 1400020, groupID = 0, refLootEntry = 12435 }; --Cache of the Broodmother
+  { itemID = 1481, groupID = 1, refLootEntry = 12876 }; --Grimclaw
+  { itemID = 1491, groupID = 1, refLootEntry = 12876 }; --Ring of Precision
+  { itemID = 2567, groupID = 1, refLootEntry = 12876 }; --Evocator
+  { itemID = 3414, groupID = 1, refLootEntry = 12876 }; --Crested Scepter
+  { itemID = 3415, groupID = 1, refLootEntry = 12876 }; --Staff of the Friar
+  { itemID = 3416, groupID = 1, refLootEntry = 12876 }; --Martyr
+  { itemID = 16762, groupID = 0, refLootEntry = 12876 }; --Fathom Core
+  { itemID = 16782, groupID = 0, refLootEntry = 12876 }; --Strange Water Globe
+  { itemID = 600432, groupID = 0, refLootEntry = 12876 }; --Elemental Lodestone: Baron Aquanis
+  { itemID = 13635, groupID = 1, refLootEntry = 13020 }; --Dragonrider
+  { itemID = 14000, groupID = 2, refLootEntry = 13020 }; --Ring of Trinity Force
+  { itemID = 14997, groupID = 2, refLootEntry = 13020 }; --Bindings of the Sand Keepers
+  { itemID = 19339, groupID = 1, refLootEntry = 13020 }; --Mind Quickening Gem
+  { itemID = 19340, groupID = 2, refLootEntry = 13020 }; --Rune of Metamorphosis
+  { itemID = 19343, groupID = 2, refLootEntry = 13020 }; --Scrolls of Blinding Light
+  { itemID = 19346, groupID = 2, refLootEntry = 13020 }; --Dragonfang Blade
+  { itemID = 19348, groupID = 1, refLootEntry = 13020 }; --Red Dragonscale Protector
+  { itemID = 19367, groupID = 1, refLootEntry = 13020 }; --Dragon
+  { itemID = 19371, groupID = 1, refLootEntry = 13020 }; --Pendant of the Fallen Dragon
+  { itemID = 19372, groupID = 2, refLootEntry = 13020 }; --Helm of Endless Rage
+  { itemID = 19394, groupID = 2, refLootEntry = 13020 }; --Drake Talon Pauldrons
+  { itemID = 19403, groupID = 1, refLootEntry = 13020 }; --Band of Forced Concentration
+  { itemID = 19430, groupID = 1, refLootEntry = 13020 }; --Shroud of Pure Thought
+  { itemID = 2522463, groupID = 3, refLootEntry = 13020 }; --Chromatic Girdle
+  { itemID = 29434, groupID = 0, refLootEntry = 13020 }; --Badge of Justice
+  { itemID = 355138, groupID = 0, refLootEntry = 13020 }; --Vaelastrasz
+  { itemID = 375250, groupID = 0, refLootEntry = 13020 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 13020 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 13020 }; --Personal Cache
+  { itemID = 1180389, groupID = 0, refLootEntry = 13020 }; --Draconic Warhorn: Vaelastrasz the Corrupt
+  { itemID = 1400020, groupID = 0, refLootEntry = 13020 }; --Cache of the Broodmother
+  { itemID = 7070, groupID = 0, refLootEntry = 13280 }; --Elemental Water
+  { itemID = 7079, groupID = 0, refLootEntry = 13280 }; --Globe of Water
+  { itemID = 7080, groupID = 0, refLootEntry = 13280 }; --Essence of Water
+  { itemID = 18305, groupID = 1, refLootEntry = 13280 }; --Breakwater Legguards
+  { itemID = 18307, groupID = 1, refLootEntry = 13280 }; --Riptide Shoes
+  { itemID = 18317, groupID = 1, refLootEntry = 13280 }; --Tempest Talisman
+  { itemID = 18322, groupID = 1, refLootEntry = 13280 }; --Waterspout Boots
+  { itemID = 18324, groupID = 1, refLootEntry = 13280 }; --Waveslicer
+  { itemID = 274503, groupID = 1, refLootEntry = 13280 }; --Wildwater Totem
+  { itemID = 18299, groupID = 0, refLootEntry = 13280 }; --Hydrospawn Essence
+  { itemID = 19268, groupID = 0, refLootEntry = 13280 }; --Ace of Elementals
+  { itemID = 22527, groupID = 0, refLootEntry = 13280 }; --Core of Elements
+  { itemID = 60012, groupID = 0, refLootEntry = 13280 }; --Sigil of Hydrospawn
+  { itemID = 97730, groupID = 0, refLootEntry = 13280 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 13280 }; --Rune of Ascension
+  { itemID = 600436, groupID = 0, refLootEntry = 13280 }; --Elemental Lodestone: Hydrospawn
+  { itemID = 4791, groupID = 0, refLootEntry = 13282 }; --Enchanted Water
+  { itemID = 17684, groupID = 0, refLootEntry = 13282 }; --Theradric Crystal Carving
+  { itemID = 17702, groupID = 0, refLootEntry = 13282 }; --Celebrian Rod
+  { itemID = 17744, groupID = 1, refLootEntry = 13282 }; --Heart of Noxxion
+  { itemID = 17745, groupID = 1, refLootEntry = 13282 }; --Noxious Shooter
+  { itemID = 17746, groupID = 1, refLootEntry = 13282 }; --Noxxion
+  { itemID = 60013, groupID = 0, refLootEntry = 13282 }; --Sigil of Noxxion
+  { itemID = 600437, groupID = 0, refLootEntry = 13282 }; --Elemental Lodestone: Noxxion
+  { itemID = 770, groupID = 0, refLootEntry = 13596 }; --Pointy Crocolisk Tooth
+  { itemID = 17684, groupID = 0, refLootEntry = 13596 }; --Theradric Crystal Carving
+  { itemID = 17728, groupID = 1, refLootEntry = 13596 }; --Albino Crocscale Boots
+  { itemID = 17730, groupID = 1, refLootEntry = 13596 }; --Gatorbite Axe
+  { itemID = 17732, groupID = 1, refLootEntry = 13596 }; --Rotgrip Mantle
+  { itemID = 60014, groupID = 0, refLootEntry = 13596 }; --Sigil of Rotgrip
+  { itemID = 13636, groupID = 2, refLootEntry = 14020 }; --Dragonsbane Headguard
+  { itemID = 14995, groupID = 2, refLootEntry = 14020 }; --Death Talon Tunic
+  { itemID = 19347, groupID = 1, refLootEntry = 14020 }; --Claw of Chromaggus
+  { itemID = 19349, groupID = 1, refLootEntry = 14020 }; --Elementium Reinforced Bulwark
+  { itemID = 19352, groupID = 2, refLootEntry = 14020 }; --Chromatically Tempered Sword
+  { itemID = 19361, groupID = 2, refLootEntry = 14020 }; --Ashjre
+  { itemID = 19385, groupID = 1, refLootEntry = 14020 }; --Empowered Leggings
+  { itemID = 19386, groupID = 2, refLootEntry = 14020 }; --Elementium Threaded Cloak
+  { itemID = 19387, groupID = 2, refLootEntry = 14020 }; --Drakeadon
+  { itemID = 19388, groupID = 1, refLootEntry = 14020 }; --Angelista
+  { itemID = 19389, groupID = 2, refLootEntry = 14020 }; --Taut Dragonhide Shoulderpads
+  { itemID = 19390, groupID = 2, refLootEntry = 14020 }; --Taut Dragonhide Gloves
+  { itemID = 19391, groupID = 1, refLootEntry = 14020 }; --Shimmering Geta
+  { itemID = 19392, groupID = 1, refLootEntry = 14020 }; --Girdle of the Fallen Crusader
+  { itemID = 19393, groupID = 1, refLootEntry = 14020 }; --Primalist
+  { itemID = 2522461, groupID = 3, refLootEntry = 14020 }; --Chromatic Spaulders
+  { itemID = 29434, groupID = 0, refLootEntry = 14020 }; --Badge of Justice
+  { itemID = 60021, groupID = 0, refLootEntry = 14020 }; --Sigil of Chromaggus
+  { itemID = 375250, groupID = 0, refLootEntry = 14020 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 14020 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 14020 }; --Personal Cache
+  { itemID = 1180392, groupID = 0, refLootEntry = 14020 }; --Draconic Warhorn: Chromaggus
+  { itemID = 1400020, groupID = 0, refLootEntry = 14020 }; --Cache of the Broodmother
+  { itemID = 14047, groupID = 0, refLootEntry = 14321 }; --Runecloth
+  { itemID = 18450, groupID = 1, refLootEntry = 14321 }; --Robe of Combustion
+  { itemID = 18451, groupID = 1, refLootEntry = 14321 }; --Hyena Hide Belt
+  { itemID = 18458, groupID = 1, refLootEntry = 14321 }; --Modest Armguards
+  { itemID = 18459, groupID = 1, refLootEntry = 14321 }; --Gallant
+  { itemID = 18460, groupID = 1, refLootEntry = 14321 }; --Unsophisticated Hand Cannon
+  { itemID = 18462, groupID = 1, refLootEntry = 14321 }; --Jagged Bone Fist
+  { itemID = 18463, groupID = 1, refLootEntry = 14321 }; --Ogre Pocket Knife
+  { itemID = 18464, groupID = 1, refLootEntry = 14321 }; --Gordok Nose Ring
+  { itemID = 18493, groupID = 1, refLootEntry = 14321 }; --Bulky Iron Spaulders
+  { itemID = 18494, groupID = 1, refLootEntry = 14321 }; --Denwatcher
+  { itemID = 18496, groupID = 1, refLootEntry = 14321 }; --Heliotrope Cloak
+  { itemID = 18497, groupID = 1, refLootEntry = 14321 }; --Sublime Wristguards
+  { itemID = 18498, groupID = 1, refLootEntry = 14321 }; --Hedgecutter
+  { itemID = 2018464, groupID = 1, refLootEntry = 14321 }; --Gordok Knuckleband
+  { itemID = 2218464, groupID = 1, refLootEntry = 14321 }; --Flattened Elven Ring
+  { itemID = 18250, groupID = 0, refLootEntry = 14321 }; --Gordok Shackle Key
+  { itemID = 18640, groupID = 0, refLootEntry = 14321 }; --Happy Fun Rock
+  { itemID = 60054, groupID = 0, refLootEntry = 14321 }; --Sigil of Guard Fengus
+  { itemID = 97730, groupID = 0, refLootEntry = 14321 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 14321 }; --Rune of Ascension
+  { itemID = 4595, groupID = 0, refLootEntry = 14322 }; --Junglevine Wine
+  { itemID = 14047, groupID = 0, refLootEntry = 14322 }; --Runecloth
+  { itemID = 18425, groupID = 1, refLootEntry = 14322 }; --Kreeg
+  { itemID = 18450, groupID = 1, refLootEntry = 14322 }; --Robe of Combustion
+  { itemID = 18451, groupID = 1, refLootEntry = 14322 }; --Hyena Hide Belt
+  { itemID = 18458, groupID = 1, refLootEntry = 14322 }; --Modest Armguards
+  { itemID = 18459, groupID = 1, refLootEntry = 14322 }; --Gallant
+  { itemID = 18460, groupID = 1, refLootEntry = 14322 }; --Unsophisticated Hand Cannon
+  { itemID = 18462, groupID = 1, refLootEntry = 14322 }; --Jagged Bone Fist
+  { itemID = 18463, groupID = 1, refLootEntry = 14322 }; --Ogre Pocket Knife
+  { itemID = 18464, groupID = 1, refLootEntry = 14322 }; --Gordok Nose Ring
+  { itemID = 2018464, groupID = 1, refLootEntry = 14322 }; --Gordok Knuckleband
+  { itemID = 2218464, groupID = 1, refLootEntry = 14322 }; --Flattened Elven Ring
+  { itemID = 18640, groupID = 0, refLootEntry = 14322 }; --Happy Fun Rock
+  { itemID = 60055, groupID = 0, refLootEntry = 14322 }; --Sigil of Stomper Kreeg
+  { itemID = 97730, groupID = 0, refLootEntry = 14322 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 14322 }; --Rune of Ascension
+  { itemID = 14047, groupID = 0, refLootEntry = 14325 }; --Runecloth
+  { itemID = 18502, groupID = 1, refLootEntry = 14325 }; --Monstrous Glaive
+  { itemID = 18503, groupID = 1, refLootEntry = 14325 }; --Kromcrush
+  { itemID = 18505, groupID = 1, refLootEntry = 14325 }; --Mugger
+  { itemID = 18507, groupID = 1, refLootEntry = 14325 }; --Boots of the Full Moon
+  { itemID = 18250, groupID = 0, refLootEntry = 14325 }; --Gordok Shackle Key
+  { itemID = 18640, groupID = 0, refLootEntry = 14325 }; --Happy Fun Rock
+  { itemID = 60058, groupID = 0, refLootEntry = 14325 }; --Sigil of Captain Kromcrush
+  { itemID = 97730, groupID = 0, refLootEntry = 14325 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 14325 }; --Rune of Ascension
+  { itemID = 14047, groupID = 0, refLootEntry = 14327 }; --Runecloth
+  { itemID = 18301, groupID = 1, refLootEntry = 14327 }; --Lethtendris
+  { itemID = 18302, groupID = 1, refLootEntry = 14327 }; --Band of Vigor
+  { itemID = 18311, groupID = 1, refLootEntry = 14327 }; --Quel
+  { itemID = 18325, groupID = 1, refLootEntry = 14327 }; --Felhide Cap
+  { itemID = 18354, groupID = 1, refLootEntry = 14327 }; --Pimgib
+  { itemID = 18426, groupID = 0, refLootEntry = 14327 }; --Lethtendris
+  { itemID = 60060, groupID = 0, refLootEntry = 14327 }; --Sigil of Lethtendris
+  { itemID = 97730, groupID = 0, refLootEntry = 14327 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 14327 }; --Rune of Ascension
+  { itemID = 14047, groupID = 0, refLootEntry = 14354 }; --Runecloth
+  { itemID = 18249, groupID = 0, refLootEntry = 14354 }; --Crescent Key
+  { itemID = 18255, groupID = 0, refLootEntry = 14354 }; --Runn Tum Tuber
+  { itemID = 18261, groupID = 0, refLootEntry = 14354 }; --Book of Incantations
+  { itemID = 18267, groupID = 0, refLootEntry = 14354 }; --Recipe: Runn Tum Tuber Surprise
+  { itemID = 97730, groupID = 0, refLootEntry = 14354 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 14354 }; --Rune of Ascension
+  { itemID = 6001, groupID = 0, refLootEntry = 14471 }; --Recipe: Potion of Lightning Reflexes
+  { itemID = 17243, groupID = 1, refLootEntry = 14471 }; --Scepter of the Gate Warden
+  { itemID = 17244, groupID = 1, refLootEntry = 14471 }; --Staff of the Gate Warden
+  { itemID = 17303, groupID = 1, refLootEntry = 14471 }; --Musket of the Gate Warden
+  { itemID = 17334, groupID = 1, refLootEntry = 14471 }; --Wristguards of the Shifting Sands
+  { itemID = 17356, groupID = 1, refLootEntry = 14471 }; --Waistguard of the Shifting Sands
+  { itemID = 17357, groupID = 1, refLootEntry = 14471 }; --Bracers of the Sand Prince
+  { itemID = 17358, groupID = 1, refLootEntry = 14471 }; --Belt of the Sand Prince
+  { itemID = 17365, groupID = 1, refLootEntry = 14471 }; --Amulet of the Gate Warden
+  { itemID = 17366, groupID = 1, refLootEntry = 14471 }; --Amulet of the Sand Prince
+  { itemID = 17367, groupID = 1, refLootEntry = 14471 }; --Insignia of the Shifting Sands
+  { itemID = 317243, groupID = 1, refLootEntry = 14471 }; --Scepter of the Gate Warden
+  { itemID = 317244, groupID = 1, refLootEntry = 14471 }; --Staff of the Gate Warden
+  { itemID = 317303, groupID = 1, refLootEntry = 14471 }; --Musket of the Gate Warden
+  { itemID = 317334, groupID = 1, refLootEntry = 14471 }; --Wristguards of the Shifting Sands
+  { itemID = 317356, groupID = 1, refLootEntry = 14471 }; --Waistguard of the Shifting Sands
+  { itemID = 317357, groupID = 1, refLootEntry = 14471 }; --Bracers of the Sand Prince
+  { itemID = 317358, groupID = 1, refLootEntry = 14471 }; --Belt of the Sand Prince
+  { itemID = 317365, groupID = 1, refLootEntry = 14471 }; --Amulet of the Gate Warden
+  { itemID = 317366, groupID = 1, refLootEntry = 14471 }; --Amulet of the Sand Prince
+  { itemID = 317367, groupID = 1, refLootEntry = 14471 }; --Insignia of the Shifting Sands
+  { itemID = 375250, groupID = 0, refLootEntry = 14471 }; --Rune of Ascension
+  { itemID = 1005032, groupID = 0, refLootEntry = 14471 }; --Idol of the Old Gods
+  { itemID = 1615011, groupID = 0, refLootEntry = 14471 }; --Treasures of Azeroth
+  { itemID = 12390, groupID = 3, refLootEntry = 14507 }; --Battleweaver
+  { itemID = 12391, groupID = 3, refLootEntry = 14507 }; --Battleweaver
+  { itemID = 12473, groupID = 3, refLootEntry = 14507 }; --Battleweaver
+  { itemID = 19822, groupID = 3, refLootEntry = 14507 }; --Zandalar Vindicator
+  { itemID = 19823, groupID = 3, refLootEntry = 14507 }; --Zandalar Vindicator
+  { itemID = 19824, groupID = 3, refLootEntry = 14507 }; --Zandalar Vindicator
+  { itemID = 19825, groupID = 3, refLootEntry = 14507 }; --Zandalar Freethinker
+  { itemID = 19826, groupID = 3, refLootEntry = 14507 }; --Zandalar Freethinker
+  { itemID = 19827, groupID = 3, refLootEntry = 14507 }; --Zandalar Freethinker
+  { itemID = 19828, groupID = 3, refLootEntry = 14507 }; --Zandalar Augur
+  { itemID = 19829, groupID = 3, refLootEntry = 14507 }; --Zandalar Augur
+  { itemID = 19830, groupID = 3, refLootEntry = 14507 }; --Zandalar Augur
+  { itemID = 19831, groupID = 3, refLootEntry = 14507 }; --Zandalar Predator
+  { itemID = 19832, groupID = 3, refLootEntry = 14507 }; --Zandalar Predator
+  { itemID = 19833, groupID = 3, refLootEntry = 14507 }; --Zandalar Predator
+  { itemID = 19834, groupID = 3, refLootEntry = 14507 }; --Zandalar Madcap
+  { itemID = 19835, groupID = 3, refLootEntry = 14507 }; --Zandalar Madcap
+  { itemID = 19836, groupID = 3, refLootEntry = 14507 }; --Zandalar Madcap
+  { itemID = 19838, groupID = 3, refLootEntry = 14507 }; --Zandalar Haruspex
+  { itemID = 19839, groupID = 3, refLootEntry = 14507 }; --Zandalar Haruspex
+  { itemID = 19840, groupID = 3, refLootEntry = 14507 }; --Zandalar Haruspex
+  { itemID = 19841, groupID = 3, refLootEntry = 14507 }; --Zandalar Confessor
+  { itemID = 19842, groupID = 3, refLootEntry = 14507 }; --Zandalar Confessor
+  { itemID = 19843, groupID = 3, refLootEntry = 14507 }; --Zandalar Confessor
+  { itemID = 19845, groupID = 3, refLootEntry = 14507 }; --Zandalar Illusionist
+  { itemID = 19846, groupID = 3, refLootEntry = 14507 }; --Zandalar Illusionist
+  { itemID = 19848, groupID = 3, refLootEntry = 14507 }; --Zandalar Demoniac
+  { itemID = 19849, groupID = 3, refLootEntry = 14507 }; --Zandalar Demoniac
+  { itemID = 19900, groupID = 1, refLootEntry = 14507 }; --Zulian Stone Axe
+  { itemID = 19903, groupID = 1, refLootEntry = 14507 }; --Fang of Venoxis
+  { itemID = 19904, groupID = 1, refLootEntry = 14507 }; --Runed Bloodstained Hauberk
+  { itemID = 19905, groupID = 1, refLootEntry = 14507 }; --Zanzil
+  { itemID = 19906, groupID = 1, refLootEntry = 14507 }; --Blooddrenched Footpads
+  { itemID = 19907, groupID = 1, refLootEntry = 14507 }; --Zulian Tigerhide Cloak
+  { itemID = 20033, groupID = 3, refLootEntry = 14507 }; --Zandalar Demoniac
+  { itemID = 20034, groupID = 3, refLootEntry = 14507 }; --Zandalar Illusionist
+  { itemID = 22711, groupID = 2, refLootEntry = 14507 }; --Cloak of the Hakkari Worshippers
+  { itemID = 22712, groupID = 2, refLootEntry = 14507 }; --Might of the Tribe
+  { itemID = 22713, groupID = 2, refLootEntry = 14507 }; --Zulian Scepter of Rites
+  { itemID = 22714, groupID = 2, refLootEntry = 14507 }; --Sacrificial Gauntlets
+  { itemID = 22715, groupID = 2, refLootEntry = 14507 }; --Gloves of the Tormented
+  { itemID = 22716, groupID = 2, refLootEntry = 14507 }; --Belt of Untapped Power
+  { itemID = 22718, groupID = 2, refLootEntry = 14507 }; --Blooddrenched Mask
+  { itemID = 22720, groupID = 2, refLootEntry = 14507 }; --Zulian Headdress
+  { itemID = 22721, groupID = 2, refLootEntry = 14507 }; --Band of Servitude
+  { itemID = 22722, groupID = 2, refLootEntry = 14507 }; --Seal of the Gurubashi Berserker
+  { itemID = 19881, groupID = 0, refLootEntry = 14507 }; --Channeler
+  { itemID = 22216, groupID = 0, refLootEntry = 14507 }; --Venoxis
+  { itemID = 29434, groupID = 0, refLootEntry = 14507 }; --Badge of Justice
+  { itemID = 60100, groupID = 0, refLootEntry = 14507 }; --Sigil of High Priest Venoxis
+  { itemID = 375250, groupID = 0, refLootEntry = 14507 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 14507 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 14507 }; --Personal Cache
+  { itemID = 1400023, groupID = 0, refLootEntry = 14507 }; --Cache of the Blood God
+  { itemID = 12390, groupID = 3, refLootEntry = 14509 }; --Battleweaver
+  { itemID = 12391, groupID = 3, refLootEntry = 14509 }; --Battleweaver
+  { itemID = 12473, groupID = 3, refLootEntry = 14509 }; --Battleweaver
+  { itemID = 19822, groupID = 3, refLootEntry = 14509 }; --Zandalar Vindicator
+  { itemID = 19823, groupID = 3, refLootEntry = 14509 }; --Zandalar Vindicator
+  { itemID = 19824, groupID = 3, refLootEntry = 14509 }; --Zandalar Vindicator
+  { itemID = 19825, groupID = 3, refLootEntry = 14509 }; --Zandalar Freethinker
+  { itemID = 19826, groupID = 3, refLootEntry = 14509 }; --Zandalar Freethinker
+  { itemID = 19827, groupID = 3, refLootEntry = 14509 }; --Zandalar Freethinker
+  { itemID = 19828, groupID = 3, refLootEntry = 14509 }; --Zandalar Augur
+  { itemID = 19829, groupID = 3, refLootEntry = 14509 }; --Zandalar Augur
+  { itemID = 19830, groupID = 3, refLootEntry = 14509 }; --Zandalar Augur
+  { itemID = 19831, groupID = 3, refLootEntry = 14509 }; --Zandalar Predator
+  { itemID = 19832, groupID = 3, refLootEntry = 14509 }; --Zandalar Predator
+  { itemID = 19833, groupID = 3, refLootEntry = 14509 }; --Zandalar Predator
+  { itemID = 19834, groupID = 3, refLootEntry = 14509 }; --Zandalar Madcap
+  { itemID = 19835, groupID = 3, refLootEntry = 14509 }; --Zandalar Madcap
+  { itemID = 19836, groupID = 3, refLootEntry = 14509 }; --Zandalar Madcap
+  { itemID = 19838, groupID = 3, refLootEntry = 14509 }; --Zandalar Haruspex
+  { itemID = 19839, groupID = 3, refLootEntry = 14509 }; --Zandalar Haruspex
+  { itemID = 19840, groupID = 3, refLootEntry = 14509 }; --Zandalar Haruspex
+  { itemID = 19841, groupID = 3, refLootEntry = 14509 }; --Zandalar Confessor
+  { itemID = 19842, groupID = 3, refLootEntry = 14509 }; --Zandalar Confessor
+  { itemID = 19843, groupID = 3, refLootEntry = 14509 }; --Zandalar Confessor
+  { itemID = 19845, groupID = 3, refLootEntry = 14509 }; --Zandalar Illusionist
+  { itemID = 19846, groupID = 3, refLootEntry = 14509 }; --Zandalar Illusionist
+  { itemID = 19848, groupID = 3, refLootEntry = 14509 }; --Zandalar Demoniac
+  { itemID = 19849, groupID = 3, refLootEntry = 14509 }; --Zandalar Demoniac
+  { itemID = 19896, groupID = 1, refLootEntry = 14509 }; --Thekal
+  { itemID = 19897, groupID = 1, refLootEntry = 14509 }; --Betrayer
+  { itemID = 19898, groupID = 1, refLootEntry = 14509 }; --Seal of Jin
+  { itemID = 19899, groupID = 1, refLootEntry = 14509 }; --Ritualistic Legguards
+  { itemID = 19901, groupID = 1, refLootEntry = 14509 }; --Zulian Slicer
+  { itemID = 20033, groupID = 3, refLootEntry = 14509 }; --Zandalar Demoniac
+  { itemID = 20034, groupID = 3, refLootEntry = 14509 }; --Zandalar Illusionist
+  { itemID = 20260, groupID = 1, refLootEntry = 14509 }; --Seafury Leggings
+  { itemID = 20266, groupID = 1, refLootEntry = 14509 }; --Peacekeeper Leggings
+  { itemID = 22711, groupID = 2, refLootEntry = 14509 }; --Cloak of the Hakkari Worshippers
+  { itemID = 22712, groupID = 2, refLootEntry = 14509 }; --Might of the Tribe
+  { itemID = 22713, groupID = 2, refLootEntry = 14509 }; --Zulian Scepter of Rites
+  { itemID = 22714, groupID = 2, refLootEntry = 14509 }; --Sacrificial Gauntlets
+  { itemID = 22715, groupID = 2, refLootEntry = 14509 }; --Gloves of the Tormented
+  { itemID = 22716, groupID = 2, refLootEntry = 14509 }; --Belt of Untapped Power
+  { itemID = 22718, groupID = 2, refLootEntry = 14509 }; --Blooddrenched Mask
+  { itemID = 22720, groupID = 2, refLootEntry = 14509 }; --Zulian Headdress
+  { itemID = 22721, groupID = 2, refLootEntry = 14509 }; --Band of Servitude
+  { itemID = 22722, groupID = 2, refLootEntry = 14509 }; --Seal of the Gurubashi Berserker
+  { itemID = 19881, groupID = 0, refLootEntry = 14509 }; --Channeler
+  { itemID = 19902, groupID = 0, refLootEntry = 14509 }; --Swift Zulian Tiger
+  { itemID = 29434, groupID = 0, refLootEntry = 14509 }; --Badge of Justice
+  { itemID = 60101, groupID = 0, refLootEntry = 14509 }; --Sigil of High Priest Thekal
+  { itemID = 375250, groupID = 0, refLootEntry = 14509 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 14509 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 14509 }; --Personal Cache
+  { itemID = 1400023, groupID = 0, refLootEntry = 14509 }; --Cache of the Blood God
+  { itemID = 12390, groupID = 3, refLootEntry = 14515 }; --Battleweaver
+  { itemID = 12391, groupID = 3, refLootEntry = 14515 }; --Battleweaver
+  { itemID = 12473, groupID = 3, refLootEntry = 14515 }; --Battleweaver
+  { itemID = 19822, groupID = 3, refLootEntry = 14515 }; --Zandalar Vindicator
+  { itemID = 19823, groupID = 3, refLootEntry = 14515 }; --Zandalar Vindicator
+  { itemID = 19824, groupID = 3, refLootEntry = 14515 }; --Zandalar Vindicator
+  { itemID = 19825, groupID = 3, refLootEntry = 14515 }; --Zandalar Freethinker
+  { itemID = 19826, groupID = 3, refLootEntry = 14515 }; --Zandalar Freethinker
+  { itemID = 19827, groupID = 3, refLootEntry = 14515 }; --Zandalar Freethinker
+  { itemID = 19828, groupID = 3, refLootEntry = 14515 }; --Zandalar Augur
+  { itemID = 19829, groupID = 3, refLootEntry = 14515 }; --Zandalar Augur
+  { itemID = 19830, groupID = 3, refLootEntry = 14515 }; --Zandalar Augur
+  { itemID = 19831, groupID = 3, refLootEntry = 14515 }; --Zandalar Predator
+  { itemID = 19832, groupID = 3, refLootEntry = 14515 }; --Zandalar Predator
+  { itemID = 19833, groupID = 3, refLootEntry = 14515 }; --Zandalar Predator
+  { itemID = 19834, groupID = 3, refLootEntry = 14515 }; --Zandalar Madcap
+  { itemID = 19835, groupID = 3, refLootEntry = 14515 }; --Zandalar Madcap
+  { itemID = 19836, groupID = 3, refLootEntry = 14515 }; --Zandalar Madcap
+  { itemID = 19838, groupID = 3, refLootEntry = 14515 }; --Zandalar Haruspex
+  { itemID = 19839, groupID = 3, refLootEntry = 14515 }; --Zandalar Haruspex
+  { itemID = 19840, groupID = 3, refLootEntry = 14515 }; --Zandalar Haruspex
+  { itemID = 19841, groupID = 3, refLootEntry = 14515 }; --Zandalar Confessor
+  { itemID = 19842, groupID = 3, refLootEntry = 14515 }; --Zandalar Confessor
+  { itemID = 19843, groupID = 3, refLootEntry = 14515 }; --Zandalar Confessor
+  { itemID = 19845, groupID = 3, refLootEntry = 14515 }; --Zandalar Illusionist
+  { itemID = 19846, groupID = 3, refLootEntry = 14515 }; --Zandalar Illusionist
+  { itemID = 19848, groupID = 3, refLootEntry = 14515 }; --Zandalar Demoniac
+  { itemID = 19849, groupID = 3, refLootEntry = 14515 }; --Zandalar Demoniac
+  { itemID = 19909, groupID = 1, refLootEntry = 14515 }; --Will of Arlokk
+  { itemID = 19910, groupID = 1, refLootEntry = 14515 }; --Arlokk
+  { itemID = 19912, groupID = 1, refLootEntry = 14515 }; --Overlord
+  { itemID = 19913, groupID = 1, refLootEntry = 14515 }; --Bloodsoaked Greaves
+  { itemID = 19922, groupID = 1, refLootEntry = 14515 }; --Arlokk
+  { itemID = 20033, groupID = 3, refLootEntry = 14515 }; --Zandalar Demoniac
+  { itemID = 20034, groupID = 3, refLootEntry = 14515 }; --Zandalar Illusionist
+  { itemID = 22711, groupID = 2, refLootEntry = 14515 }; --Cloak of the Hakkari Worshippers
+  { itemID = 22712, groupID = 2, refLootEntry = 14515 }; --Might of the Tribe
+  { itemID = 22713, groupID = 2, refLootEntry = 14515 }; --Zulian Scepter of Rites
+  { itemID = 22714, groupID = 2, refLootEntry = 14515 }; --Sacrificial Gauntlets
+  { itemID = 22715, groupID = 2, refLootEntry = 14515 }; --Gloves of the Tormented
+  { itemID = 22716, groupID = 2, refLootEntry = 14515 }; --Belt of Untapped Power
+  { itemID = 22718, groupID = 2, refLootEntry = 14515 }; --Blooddrenched Mask
+  { itemID = 22720, groupID = 2, refLootEntry = 14515 }; --Zulian Headdress
+  { itemID = 22721, groupID = 2, refLootEntry = 14515 }; --Band of Servitude
+  { itemID = 22722, groupID = 2, refLootEntry = 14515 }; --Seal of the Gurubashi Berserker
+  { itemID = 19881, groupID = 0, refLootEntry = 14515 }; --Channeler
+  { itemID = 29434, groupID = 0, refLootEntry = 14515 }; --Badge of Justice
+  { itemID = 60103, groupID = 0, refLootEntry = 14515 }; --Sigil of High Priestess Arlokk
+  { itemID = 97885, groupID = 37, refLootEntry = 14515 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 14515 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 14515 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 14515 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 14515 }; --Personal Cache
+  { itemID = 1278048, groupID = 37, refLootEntry = 14515 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 14515 }; --Case of Fortune
+  { itemID = 1400023, groupID = 0, refLootEntry = 14515 }; --Cache of the Blood God
+  { itemID = 12843, groupID = 0, refLootEntry = 14516 }; --Corruptor
+  { itemID = 14047, groupID = 0, refLootEntry = 14516 }; --Runecloth
+  { itemID = 18758, groupID = 1, refLootEntry = 14516 }; --Specter
+  { itemID = 18759, groupID = 1, refLootEntry = 14516 }; --Malicious Axe
+  { itemID = 18760, groupID = 1, refLootEntry = 14516 }; --Necromantic Band
+  { itemID = 18761, groupID = 1, refLootEntry = 14516 }; --Oblivion
+  { itemID = 18749, groupID = 0, refLootEntry = 14516 }; --Charger
+  { itemID = 18880, groupID = 0, refLootEntry = 14516 }; --Darkreaver
+  { itemID = 97730, groupID = 0, refLootEntry = 14516 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 14516 }; --Rune of Ascension
+  { itemID = 12390, groupID = 3, refLootEntry = 14517 }; --Battleweaver
+  { itemID = 12391, groupID = 3, refLootEntry = 14517 }; --Battleweaver
+  { itemID = 12473, groupID = 3, refLootEntry = 14517 }; --Battleweaver
+  { itemID = 19822, groupID = 3, refLootEntry = 14517 }; --Zandalar Vindicator
+  { itemID = 19823, groupID = 3, refLootEntry = 14517 }; --Zandalar Vindicator
+  { itemID = 19824, groupID = 3, refLootEntry = 14517 }; --Zandalar Vindicator
+  { itemID = 19825, groupID = 3, refLootEntry = 14517 }; --Zandalar Freethinker
+  { itemID = 19826, groupID = 3, refLootEntry = 14517 }; --Zandalar Freethinker
+  { itemID = 19827, groupID = 3, refLootEntry = 14517 }; --Zandalar Freethinker
+  { itemID = 19828, groupID = 3, refLootEntry = 14517 }; --Zandalar Augur
+  { itemID = 19829, groupID = 3, refLootEntry = 14517 }; --Zandalar Augur
+  { itemID = 19830, groupID = 3, refLootEntry = 14517 }; --Zandalar Augur
+  { itemID = 19831, groupID = 3, refLootEntry = 14517 }; --Zandalar Predator
+  { itemID = 19832, groupID = 3, refLootEntry = 14517 }; --Zandalar Predator
+  { itemID = 19833, groupID = 3, refLootEntry = 14517 }; --Zandalar Predator
+  { itemID = 19834, groupID = 3, refLootEntry = 14517 }; --Zandalar Madcap
+  { itemID = 19835, groupID = 3, refLootEntry = 14517 }; --Zandalar Madcap
+  { itemID = 19836, groupID = 3, refLootEntry = 14517 }; --Zandalar Madcap
+  { itemID = 19838, groupID = 3, refLootEntry = 14517 }; --Zandalar Haruspex
+  { itemID = 19839, groupID = 3, refLootEntry = 14517 }; --Zandalar Haruspex
+  { itemID = 19840, groupID = 3, refLootEntry = 14517 }; --Zandalar Haruspex
+  { itemID = 19841, groupID = 3, refLootEntry = 14517 }; --Zandalar Confessor
+  { itemID = 19842, groupID = 3, refLootEntry = 14517 }; --Zandalar Confessor
+  { itemID = 19843, groupID = 3, refLootEntry = 14517 }; --Zandalar Confessor
+  { itemID = 19845, groupID = 3, refLootEntry = 14517 }; --Zandalar Illusionist
+  { itemID = 19846, groupID = 3, refLootEntry = 14517 }; --Zandalar Illusionist
+  { itemID = 19848, groupID = 3, refLootEntry = 14517 }; --Zandalar Demoniac
+  { itemID = 19849, groupID = 3, refLootEntry = 14517 }; --Zandalar Demoniac
+  { itemID = 19915, groupID = 1, refLootEntry = 14517 }; --Zulian Defender
+  { itemID = 19918, groupID = 1, refLootEntry = 14517 }; --Jeklik
+  { itemID = 19920, groupID = 1, refLootEntry = 14517 }; --Primalist
+  { itemID = 19923, groupID = 1, refLootEntry = 14517 }; --Jeklik
+  { itemID = 19928, groupID = 1, refLootEntry = 14517 }; --Animist
+  { itemID = 20033, groupID = 3, refLootEntry = 14517 }; --Zandalar Demoniac
+  { itemID = 20034, groupID = 3, refLootEntry = 14517 }; --Zandalar Illusionist
+  { itemID = 20262, groupID = 1, refLootEntry = 14517 }; --Seafury Boots
+  { itemID = 20265, groupID = 1, refLootEntry = 14517 }; --Peacekeeper Boots
+  { itemID = 22711, groupID = 2, refLootEntry = 14517 }; --Cloak of the Hakkari Worshippers
+  { itemID = 22712, groupID = 2, refLootEntry = 14517 }; --Might of the Tribe
+  { itemID = 22713, groupID = 2, refLootEntry = 14517 }; --Zulian Scepter of Rites
+  { itemID = 22714, groupID = 2, refLootEntry = 14517 }; --Sacrificial Gauntlets
+  { itemID = 22715, groupID = 2, refLootEntry = 14517 }; --Gloves of the Tormented
+  { itemID = 22716, groupID = 2, refLootEntry = 14517 }; --Belt of Untapped Power
+  { itemID = 22718, groupID = 2, refLootEntry = 14517 }; --Blooddrenched Mask
+  { itemID = 22720, groupID = 2, refLootEntry = 14517 }; --Zulian Headdress
+  { itemID = 22721, groupID = 2, refLootEntry = 14517 }; --Band of Servitude
+  { itemID = 22722, groupID = 2, refLootEntry = 14517 }; --Seal of the Gurubashi Berserker
+  { itemID = 19881, groupID = 0, refLootEntry = 14517 }; --Channeler
+  { itemID = 29434, groupID = 0, refLootEntry = 14517 }; --Badge of Justice
+  { itemID = 60104, groupID = 0, refLootEntry = 14517 }; --Sigil of High Priestess Jeklik
+  { itemID = 375250, groupID = 0, refLootEntry = 14517 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 14517 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 14517 }; --Personal Cache
+  { itemID = 1400023, groupID = 0, refLootEntry = 14517 }; --Cache of the Blood God
+  { itemID = 19852, groupID = 2, refLootEntry = 14834 }; --Ancient Hakkari Manslayer
+  { itemID = 19853, groupID = 2, refLootEntry = 14834 }; --Gurubashi Dwarf Destroyer
+  { itemID = 19854, groupID = 2, refLootEntry = 14834 }; --Zin
+  { itemID = 19855, groupID = 1, refLootEntry = 14834 }; --Bloodsoaked Legplates
+  { itemID = 19856, groupID = 1, refLootEntry = 14834 }; --The Eye of Hakkar
+  { itemID = 19857, groupID = 1, refLootEntry = 14834 }; --Cloak of Consumption
+  { itemID = 19859, groupID = 2, refLootEntry = 14834 }; --Fang of the Faceless
+  { itemID = 19861, groupID = 2, refLootEntry = 14834 }; --Touch of Chaos
+  { itemID = 19862, groupID = 2, refLootEntry = 14834 }; --Aegis of the Blood God
+  { itemID = 19864, groupID = 2, refLootEntry = 14834 }; --Bloodcaller
+  { itemID = 19865, groupID = 2, refLootEntry = 14834 }; --Warblade of the Hakkari
+  { itemID = 19876, groupID = 1, refLootEntry = 14834 }; --Soul Corrupter
+  { itemID = 20257, groupID = 1, refLootEntry = 14834 }; --Seafury Gauntlets
+  { itemID = 20264, groupID = 1, refLootEntry = 14834 }; --Peacekeeper Gauntlets
+  { itemID = 19802, groupID = 0, refLootEntry = 14834 }; --Heart of Hakkar
+  { itemID = 22637, groupID = 0, refLootEntry = 14834 }; --Primal Hakkari Idol
+  { itemID = 29434, groupID = 0, refLootEntry = 14834 }; --Badge of Justice
+  { itemID = 60108, groupID = 0, refLootEntry = 14834 }; --Sigil of Hakkar
+  { itemID = 97725, groupID = 0, refLootEntry = 14834 }; --Offering Key
+  { itemID = 375250, groupID = 0, refLootEntry = 14834 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 14834 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 14834 }; --Personal Cache
+  { itemID = 1400023, groupID = 0, refLootEntry = 14834 }; --Cache of the Blood God
+  { itemID = 2021814, groupID = 0, refLootEntry = 14834 }; --Dungeon Spoils
+  { itemID = 17369, groupID = 1, refLootEntry = 14887 }; --Emerald Dragonfang
+  { itemID = 17370, groupID = 1, refLootEntry = 14887 }; --Green Dragonskin Cloak
+  { itemID = 17385, groupID = 1, refLootEntry = 14887 }; --Hammer of Bestial Fury
+  { itemID = 17386, groupID = 1, refLootEntry = 14887 }; --Staff of Rampant Growth
+  { itemID = 17387, groupID = 1, refLootEntry = 14887 }; --Trance Stone
+  { itemID = 17425, groupID = 1, refLootEntry = 14887 }; --Dragonspur Wraps
+  { itemID = 17426, groupID = 1, refLootEntry = 14887 }; --Dragonbone Wristguards
+  { itemID = 17464, groupID = 1, refLootEntry = 14887 }; --Ancient Corroded Leggings
+  { itemID = 17465, groupID = 1, refLootEntry = 14887 }; --Gloves of Delusional Power
+  { itemID = 17483, groupID = 1, refLootEntry = 14887 }; --Acid Inscribed Greaves
+  { itemID = 17526, groupID = 1, refLootEntry = 14887 }; --Jade Inlaid Vestments
+  { itemID = 17543, groupID = 1, refLootEntry = 14887 }; --Hibernation Crystal
+  { itemID = 17627, groupID = 1, refLootEntry = 14887 }; --Acid Inscribed Pauldrons
+  { itemID = 17645, groupID = 1, refLootEntry = 14887 }; --Leggings of the Demented Mind
+  { itemID = 17646, groupID = 1, refLootEntry = 14887 }; --Strangely Glyphed Legplates
+  { itemID = 1615011, groupID = 0, refLootEntry = 14887 }; --Treasures of Azeroth
+  { itemID = 17370, groupID = 1, refLootEntry = 14888 }; --Green Dragonskin Cloak
+  { itemID = 17385, groupID = 1, refLootEntry = 14888 }; --Hammer of Bestial Fury
+  { itemID = 17386, groupID = 1, refLootEntry = 14888 }; --Staff of Rampant Growth
+  { itemID = 17387, groupID = 1, refLootEntry = 14888 }; --Trance Stone
+  { itemID = 17425, groupID = 1, refLootEntry = 14888 }; --Dragonspur Wraps
+  { itemID = 17426, groupID = 1, refLootEntry = 14888 }; --Dragonbone Wristguards
+  { itemID = 17464, groupID = 1, refLootEntry = 14888 }; --Ancient Corroded Leggings
+  { itemID = 17465, groupID = 1, refLootEntry = 14888 }; --Gloves of Delusional Power
+  { itemID = 17483, groupID = 1, refLootEntry = 14888 }; --Acid Inscribed Greaves
+  { itemID = 17488, groupID = 1, refLootEntry = 14888 }; --Belt of the Dark Bog
+  { itemID = 17489, groupID = 1, refLootEntry = 14888 }; --Black Bark Wristbands
+  { itemID = 17490, groupID = 1, refLootEntry = 14888 }; --Dark Heart Pants
+  { itemID = 17510, groupID = 1, refLootEntry = 14888 }; --Deviate Growth Cap
+  { itemID = 17511, groupID = 1, refLootEntry = 14888 }; --Malignant Footguards
+  { itemID = 17512, groupID = 1, refLootEntry = 14888 }; --Gauntlets of the Shining Light
+  { itemID = 1615011, groupID = 0, refLootEntry = 14888 }; --Treasures of Azeroth
+  { itemID = 17370, groupID = 1, refLootEntry = 14889 }; --Green Dragonskin Cloak
+  { itemID = 17385, groupID = 1, refLootEntry = 14889 }; --Hammer of Bestial Fury
+  { itemID = 17386, groupID = 1, refLootEntry = 14889 }; --Staff of Rampant Growth
+  { itemID = 17387, groupID = 1, refLootEntry = 14889 }; --Trance Stone
+  { itemID = 17424, groupID = 1, refLootEntry = 14889 }; --Polished Ironwood Crossbow
+  { itemID = 17425, groupID = 1, refLootEntry = 14889 }; --Dragonspur Wraps
+  { itemID = 17426, groupID = 1, refLootEntry = 14889 }; --Dragonbone Wristguards
+  { itemID = 17464, groupID = 1, refLootEntry = 14889 }; --Ancient Corroded Leggings
+  { itemID = 17465, groupID = 1, refLootEntry = 14889 }; --Gloves of Delusional Power
+  { itemID = 17483, groupID = 1, refLootEntry = 14889 }; --Acid Inscribed Greaves
+  { itemID = 17484, groupID = 1, refLootEntry = 14889 }; --Boots of the Endless Moor
+  { itemID = 17485, groupID = 1, refLootEntry = 14889 }; --Dragonheart Necklace
+  { itemID = 17486, groupID = 1, refLootEntry = 14889 }; --Circlet of Restless Dreams
+  { itemID = 17487, groupID = 1, refLootEntry = 14889 }; --Ring of the Unliving
+  { itemID = 1615011, groupID = 0, refLootEntry = 14889 }; --Treasures of Azeroth
+  { itemID = 17368, groupID = 1, refLootEntry = 14890 }; --Nightmare Blade
+  { itemID = 17370, groupID = 1, refLootEntry = 14890 }; --Green Dragonskin Cloak
+  { itemID = 17385, groupID = 1, refLootEntry = 14890 }; --Hammer of Bestial Fury
+  { itemID = 17386, groupID = 1, refLootEntry = 14890 }; --Staff of Rampant Growth
+  { itemID = 17387, groupID = 1, refLootEntry = 14890 }; --Trance Stone
+  { itemID = 17425, groupID = 1, refLootEntry = 14890 }; --Dragonspur Wraps
+  { itemID = 17426, groupID = 1, refLootEntry = 14890 }; --Dragonbone Wristguards
+  { itemID = 17464, groupID = 1, refLootEntry = 14890 }; --Ancient Corroded Leggings
+  { itemID = 17465, groupID = 1, refLootEntry = 14890 }; --Gloves of Delusional Power
+  { itemID = 17483, groupID = 1, refLootEntry = 14890 }; --Acid Inscribed Greaves
+  { itemID = 17513, groupID = 1, refLootEntry = 14890 }; --Mendicant
+  { itemID = 17514, groupID = 1, refLootEntry = 14890 }; --Mindtear Band
+  { itemID = 17524, groupID = 1, refLootEntry = 14890 }; --Unnatural Leather Spaulders
+  { itemID = 17525, groupID = 1, refLootEntry = 14890 }; --Boots of Fright
+  { itemID = 1615011, groupID = 0, refLootEntry = 14890 }; --Treasures of Azeroth
+  { itemID = 3914, groupID = 0, refLootEntry = 15249 }; --Journeyman
+  { itemID = 4500, groupID = 0, refLootEntry = 15249 }; --Traveler
+  { itemID = 5759, groupID = 0, refLootEntry = 15249 }; --Thorium Lockbox
+  { itemID = 8766, groupID = 0, refLootEntry = 15249 }; --Morning Glory Dew
+  { itemID = 8952, groupID = 0, refLootEntry = 15249 }; --Spectral Roast
+  { itemID = 13444, groupID = 0, refLootEntry = 15249 }; --Major Mana Potion
+  { itemID = 13446, groupID = 0, refLootEntry = 15249 }; --Major Healing Potion
+  { itemID = 14047, groupID = 0, refLootEntry = 15249 }; --Runecloth
+  { itemID = 18335, groupID = 0, refLootEntry = 15249 }; --Pristine Black Diamond
+  { itemID = 21222, groupID = 0, refLootEntry = 15249 }; --Armored Chitin
+  { itemID = 21224, groupID = 0, refLootEntry = 15249 }; --Ancient Armor Fragment
+  { itemID = 21225, groupID = 0, refLootEntry = 15249 }; --Heavy Silithid Husk
+  { itemID = 21230, groupID = 0, refLootEntry = 15249 }; --Ancient Qiraji Artifact
+  { itemID = 21321, groupID = 0, refLootEntry = 15249 }; --Red Qiraji Resonating Crystal
+  { itemID = 21761, groupID = 0, refLootEntry = 15249 }; --Scarab Coffer Key
+  { itemID = 21762, groupID = 0, refLootEntry = 15249 }; --Greater Scarab Coffer Key
+  { itemID = 97730, groupID = 0, refLootEntry = 15249 }; --Worldforged Key Fragment
+  { itemID = 20928, groupID = 3, refLootEntry = 15263 }; --Bindings of the Lost Nomad
+  { itemID = 21128, groupID = 1, refLootEntry = 15263 }; --Staff of the Qiraji Prophets
+  { itemID = 21698, groupID = 1, refLootEntry = 15263 }; --Leggings of Immersion
+  { itemID = 21699, groupID = 2, refLootEntry = 15263 }; --Barrage Shoulders
+  { itemID = 21700, groupID = 2, refLootEntry = 15263 }; --Pendant of the Qiraji Guardian
+  { itemID = 21701, groupID = 2, refLootEntry = 15263 }; --Cloak of Concentrated Hatred
+  { itemID = 21702, groupID = 2, refLootEntry = 15263 }; --Amulet of Foul Warding
+  { itemID = 21703, groupID = 1, refLootEntry = 15263 }; --Hammer of Ji
+  { itemID = 21704, groupID = 1, refLootEntry = 15263 }; --Boots of the Redeemed Prophecy
+  { itemID = 21705, groupID = 1, refLootEntry = 15263 }; --Boots of the Fallen Prophet
+  { itemID = 21706, groupID = 2, refLootEntry = 15263 }; --Boots of the Unwavering Will
+  { itemID = 21707, groupID = 1, refLootEntry = 15263 }; --Ring of Swarming Thought
+  { itemID = 21814, groupID = 2, refLootEntry = 15263 }; --Breastplate of Annihilation
+  { itemID = 15023, groupID = 0, refLootEntry = 15263 }; --Master
+  { itemID = 21229, groupID = 0, refLootEntry = 15263 }; --Qiraji Lord
+  { itemID = 29434, groupID = 0, refLootEntry = 15263 }; --Badge of Justice
+  { itemID = 60126, groupID = 0, refLootEntry = 15263 }; --Sigil of The Prophet Skeram
+  { itemID = 375250, groupID = 0, refLootEntry = 15263 }; --Rune of Ascension
+  { itemID = 1170083, groupID = 0, refLootEntry = 15263 }; --Personal Cache
+  { itemID = 1400021, groupID = 0, refLootEntry = 15263 }; --Cache of the Old God
+  { itemID = 20930, groupID = 3, refLootEntry = 15275 }; --Diadem of the Desert Prince
+  { itemID = 21597, groupID = 1, refLootEntry = 15275 }; --Royal Scepter of Vek
+  { itemID = 21598, groupID = 1, refLootEntry = 15275 }; --Royal Qiraji Belt
+  { itemID = 21599, groupID = 1, refLootEntry = 15275 }; --Vek
+  { itemID = 21600, groupID = 1, refLootEntry = 15275 }; --Boots of Epiphany
+  { itemID = 21601, groupID = 1, refLootEntry = 15275 }; --Ring of Emperor Vek
+  { itemID = 21602, groupID = 1, refLootEntry = 15275 }; --Qiraji Execution Bracers
+  { itemID = 21604, groupID = 1, refLootEntry = 15275 }; --Bracelets of Royal Redemption
+  { itemID = 21606, groupID = 1, refLootEntry = 15275 }; --Belt of the Fallen Emperor
+  { itemID = 21607, groupID = 1, refLootEntry = 15275 }; --Grasp of the Fallen Emperor
+  { itemID = 21608, groupID = 1, refLootEntry = 15275 }; --Amulet of Vek
+  { itemID = 21609, groupID = 1, refLootEntry = 15275 }; --Regenerating Belt of Vek
+  { itemID = 21679, groupID = 1, refLootEntry = 15275 }; --Kalimdor
+  { itemID = 15023, groupID = 0, refLootEntry = 15275 }; --Master
+  { itemID = 21229, groupID = 0, refLootEntry = 15275 }; --Qiraji Lord
+  { itemID = 29434, groupID = 0, refLootEntry = 15275 }; --Badge of Justice
+  { itemID = 60127, groupID = 0, refLootEntry = 15275 }; --Sigil of Emperor Vek
+  { itemID = 60128, groupID = 0, refLootEntry = 15275 }; --Sigil of Emperor Vek
+  { itemID = 97885, groupID = 37, refLootEntry = 15275 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 15275 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 15275 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15275 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15275 }; --Personal Cache
+  { itemID = 1278049, groupID = 37, refLootEntry = 15275 }; --Case of Fortune
+  { itemID = 1400021, groupID = 0, refLootEntry = 15275 }; --Cache of the Old God
+  { itemID = 20928, groupID = 3, refLootEntry = 15299 }; --Bindings of the Lost Nomad
+  { itemID = 20930, groupID = 3, refLootEntry = 15299 }; --Diadem of the Desert Prince
+  { itemID = 20931, groupID = 3, refLootEntry = 15299 }; --Hardened Qiraji Chitin
+  { itemID = 20932, groupID = 3, refLootEntry = 15299 }; --Spaulders of the Imperial Guard
+  { itemID = 21622, groupID = 1, refLootEntry = 15299 }; --Sharpened Silithid Femur
+  { itemID = 21623, groupID = 2, refLootEntry = 15299 }; --Gauntlets of the Righteous Champion
+  { itemID = 21624, groupID = 2, refLootEntry = 15299 }; --Gauntlets of Kalimdor
+  { itemID = 21625, groupID = 1, refLootEntry = 15299 }; --Scarab Brooch
+  { itemID = 21626, groupID = 2, refLootEntry = 15299 }; --Slime-coated Leggings
+  { itemID = 21677, groupID = 2, refLootEntry = 15299 }; --Ring of the Qiraji Fury
+  { itemID = 21682, groupID = 2, refLootEntry = 15299 }; --Bile-Covered Gauntlets
+  { itemID = 21688, groupID = 1, refLootEntry = 15299 }; --Boots of the Fallen Hero
+  { itemID = 21691, groupID = 2, refLootEntry = 15299 }; --Ooze-ridden Gauntlets
+  { itemID = 22399, groupID = 1, refLootEntry = 15299 }; --Idol of Health
+  { itemID = 15023, groupID = 0, refLootEntry = 15299 }; --Master
+  { itemID = 21229, groupID = 0, refLootEntry = 15299 }; --Qiraji Lord
+  { itemID = 29434, groupID = 0, refLootEntry = 15299 }; --Badge of Justice
+  { itemID = 60129, groupID = 0, refLootEntry = 15299 }; --Sigil of Viscidus
+  { itemID = 375250, groupID = 0, refLootEntry = 15299 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15299 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15299 }; --Personal Cache
+  { itemID = 1400021, groupID = 0, refLootEntry = 15299 }; --Cache of the Old God
+  { itemID = 8200177, groupID = 4, refLootEntry = 15299 }; --Jigglesworth Sr.
+  { itemID = 5759, groupID = 0, refLootEntry = 15318 }; --Thorium Lockbox
+  { itemID = 12037, groupID = 0, refLootEntry = 15318 }; --Mystery Meat
+  { itemID = 18335, groupID = 0, refLootEntry = 15318 }; --Pristine Black Diamond
+  { itemID = 18512, groupID = 0, refLootEntry = 15318 }; --Larval Acid
+  { itemID = 21222, groupID = 0, refLootEntry = 15318 }; --Armored Chitin
+  { itemID = 21225, groupID = 0, refLootEntry = 15318 }; --Heavy Silithid Husk
+  { itemID = 21321, groupID = 0, refLootEntry = 15318 }; --Red Qiraji Resonating Crystal
+  { itemID = 21761, groupID = 0, refLootEntry = 15318 }; --Scarab Coffer Key
+  { itemID = 21762, groupID = 0, refLootEntry = 15318 }; --Greater Scarab Coffer Key
+  { itemID = 97730, groupID = 0, refLootEntry = 15318 }; --Worldforged Key Fragment
+  { itemID = 15028, groupID = 1, refLootEntry = 15339 }; --Time-Lost Pocketwatch
+  { itemID = 21392, groupID = 4, refLootEntry = 15339 }; --Sickle of Unyielding Strength
+  { itemID = 21395, groupID = 4, refLootEntry = 15339 }; --Blade of Eternal Justice
+  { itemID = 21398, groupID = 4, refLootEntry = 15339 }; --Hammer of the Gathering Storm
+  { itemID = 21401, groupID = 4, refLootEntry = 15339 }; --Scythe of the Unseen Path
+  { itemID = 21404, groupID = 4, refLootEntry = 15339 }; --Dagger of Veiled Shadows
+  { itemID = 21407, groupID = 4, refLootEntry = 15339 }; --Mace of Unending Life
+  { itemID = 21410, groupID = 4, refLootEntry = 15339 }; --Gavel of Infinite Wisdom
+  { itemID = 21413, groupID = 4, refLootEntry = 15339 }; --Blade of Vaulted Secrets
+  { itemID = 21416, groupID = 4, refLootEntry = 15339 }; --Kris of Unspoken Names
+  { itemID = 21452, groupID = 2, refLootEntry = 15339 }; --Staff of the Ruins
+  { itemID = 21453, groupID = 2, refLootEntry = 15339 }; --Mantle of the Horusath
+  { itemID = 21454, groupID = 2, refLootEntry = 15339 }; --Runic Stone Shoulders
+  { itemID = 21456, groupID = 1, refLootEntry = 15339 }; --Sandstorm Cloak
+  { itemID = 21457, groupID = 1, refLootEntry = 15339 }; --Bracers of Brutality
+  { itemID = 21458, groupID = 2, refLootEntry = 15339 }; --Gauntlets of New Life
+  { itemID = 21459, groupID = 1, refLootEntry = 15339 }; --Crossbow of Imminent Doom
+  { itemID = 21460, groupID = 1, refLootEntry = 15339 }; --Helm of Domination
+  { itemID = 21461, groupID = 2, refLootEntry = 15339 }; --Leggings of the Black Blizzard
+  { itemID = 21462, groupID = 2, refLootEntry = 15339 }; --Gloves of Dark Wisdom
+  { itemID = 21463, groupID = 1, refLootEntry = 15339 }; --Ossirian
+  { itemID = 21464, groupID = 2, refLootEntry = 15339 }; --Shackles of the Unscarred
+  { itemID = 21715, groupID = 1, refLootEntry = 15339 }; --Sand Polished Hammer
+  { itemID = 1506017, groupID = 4, refLootEntry = 15339 }; --Locket of Unending Life
+  { itemID = 1506018, groupID = 4, refLootEntry = 15339 }; --Choker of the Unseen Path
+  { itemID = 1506019, groupID = 4, refLootEntry = 15339 }; --Pendant of Roaring Earth
+  { itemID = 1506020, groupID = 4, refLootEntry = 15339 }; --Medallion of Eternal Justice
+  { itemID = 1506021, groupID = 4, refLootEntry = 15339 }; --Charm of Vaulted Secrets
+  { itemID = 1506022, groupID = 4, refLootEntry = 15339 }; --Lariat of Veiled Shadows
+  { itemID = 1506023, groupID = 4, refLootEntry = 15339 }; --Bayadere of Infinite Wisdom
+  { itemID = 1506024, groupID = 4, refLootEntry = 15339 }; --Necklace of the Gathering Storm
+  { itemID = 1506025, groupID = 4, refLootEntry = 15339 }; --Collar of Unyielding Strength
+  { itemID = 1506026, groupID = 4, refLootEntry = 15339 }; --Bayadere of Unspoken Names
+  { itemID = 1506027, groupID = 4, refLootEntry = 15339 }; --Choker of Endless Machinations
+  { itemID = 1506034, groupID = 4, refLootEntry = 15339 }; --Choker of Ferocious Vigor
+  { itemID = 1506037, groupID = 4, refLootEntry = 15339 }; --Locket of the Faithful Zealot
+  { itemID = 1506040, groupID = 4, refLootEntry = 15339 }; --Locket of Masterful Technique
+  { itemID = 1506043, groupID = 4, refLootEntry = 15339 }; --Lariat of Martial Prowess
+  { itemID = 1506046, groupID = 4, refLootEntry = 15339 }; --Collar of Unrivaled Rage
+  { itemID = 1506049, groupID = 4, refLootEntry = 15339 }; --Bayadere of Expansive Research
+  { itemID = 1506053, groupID = 3, refLootEntry = 15339 }; --Ceremonial Qiraji Pendant
+  { itemID = 1506054, groupID = 2, refLootEntry = 15339 }; --Sword of the Ruins
+  { itemID = 15023, groupID = 0, refLootEntry = 15339 }; --Master
+  { itemID = 21220, groupID = 0, refLootEntry = 15339 }; --Head of Ossirian the Unscarred
+  { itemID = 60132, groupID = 0, refLootEntry = 15339 }; --Sigil of Ossirian the Unscarred
+  { itemID = 97885, groupID = 37, refLootEntry = 15339 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 15339 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 15339 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15339 }; --Raider
+  { itemID = 1278048, groupID = 37, refLootEntry = 15339 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 15339 }; --Case of Fortune
+  { itemID = 1400019, groupID = 0, refLootEntry = 15339 }; --Cache of the Shifting Sands
+  { itemID = 2021814, groupID = 0, refLootEntry = 15339 }; --Dungeon Spoils
+  { itemID = 21467, groupID = 1, refLootEntry = 15340 }; --Thick Silithid Chestguard
+  { itemID = 21468, groupID = 1, refLootEntry = 15340 }; --Mantle of Maz
+  { itemID = 21469, groupID = 1, refLootEntry = 15340 }; --Gauntlets of Southwind
+  { itemID = 21471, groupID = 1, refLootEntry = 15340 }; --Talon of Furious Concentration
+  { itemID = 21472, groupID = 1, refLootEntry = 15340 }; --Dustwind Turban
+  { itemID = 21473, groupID = 1, refLootEntry = 15340 }; --Eye of Moam
+  { itemID = 21475, groupID = 1, refLootEntry = 15340 }; --Legplates of the Destroyer
+  { itemID = 21476, groupID = 1, refLootEntry = 15340 }; --Obsidian Scaled Leggings
+  { itemID = 21479, groupID = 1, refLootEntry = 15340 }; --Gauntlets of the Immovable
+  { itemID = 1506017, groupID = 4, refLootEntry = 15340 }; --Locket of Unending Life
+  { itemID = 1506018, groupID = 4, refLootEntry = 15340 }; --Choker of the Unseen Path
+  { itemID = 1506019, groupID = 4, refLootEntry = 15340 }; --Pendant of Roaring Earth
+  { itemID = 1506020, groupID = 4, refLootEntry = 15340 }; --Medallion of Eternal Justice
+  { itemID = 1506021, groupID = 4, refLootEntry = 15340 }; --Charm of Vaulted Secrets
+  { itemID = 1506022, groupID = 4, refLootEntry = 15340 }; --Lariat of Veiled Shadows
+  { itemID = 1506023, groupID = 4, refLootEntry = 15340 }; --Bayadere of Infinite Wisdom
+  { itemID = 1506024, groupID = 4, refLootEntry = 15340 }; --Necklace of the Gathering Storm
+  { itemID = 1506025, groupID = 4, refLootEntry = 15340 }; --Collar of Unyielding Strength
+  { itemID = 1506026, groupID = 4, refLootEntry = 15340 }; --Bayadere of Unspoken Names
+  { itemID = 1506027, groupID = 4, refLootEntry = 15340 }; --Choker of Endless Machinations
+  { itemID = 1506034, groupID = 4, refLootEntry = 15340 }; --Choker of Ferocious Vigor
+  { itemID = 1506037, groupID = 4, refLootEntry = 15340 }; --Locket of the Faithful Zealot
+  { itemID = 1506040, groupID = 4, refLootEntry = 15340 }; --Locket of Masterful Technique
+  { itemID = 1506043, groupID = 4, refLootEntry = 15340 }; --Lariat of Martial Prowess
+  { itemID = 1506046, groupID = 4, refLootEntry = 15340 }; --Collar of Unrivaled Rage
+  { itemID = 1506049, groupID = 4, refLootEntry = 15340 }; --Bayadere of Expansive Research
+  { itemID = 1506053, groupID = 3, refLootEntry = 15340 }; --Ceremonial Qiraji Pendant
+  { itemID = 15023, groupID = 0, refLootEntry = 15340 }; --Master
+  { itemID = 60133, groupID = 0, refLootEntry = 15340 }; --Sigil of Moam
+  { itemID = 97885, groupID = 37, refLootEntry = 15340 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 15340 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 15340 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15340 }; --Raider
+  { itemID = 1278048, groupID = 37, refLootEntry = 15340 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 15340 }; --Case of Fortune
+  { itemID = 1400019, groupID = 0, refLootEntry = 15340 }; --Cache of the Shifting Sands
+  { itemID = 21394, groupID = 3, refLootEntry = 15341 }; --Drape of Unyielding Strength
+  { itemID = 21397, groupID = 3, refLootEntry = 15341 }; --Cape of Eternal Justice
+  { itemID = 21400, groupID = 3, refLootEntry = 15341 }; --Cloak of the Gathering Storm
+  { itemID = 21403, groupID = 3, refLootEntry = 15341 }; --Cloak of the Unseen Path
+  { itemID = 21406, groupID = 3, refLootEntry = 15341 }; --Cloak of Veiled Shadows
+  { itemID = 21409, groupID = 3, refLootEntry = 15341 }; --Cloak of Unending Life
+  { itemID = 21412, groupID = 3, refLootEntry = 15341 }; --Shroud of Infinite Wisdom
+  { itemID = 21415, groupID = 3, refLootEntry = 15341 }; --Drape of Vaulted Secrets
+  { itemID = 21418, groupID = 3, refLootEntry = 15341 }; --Shroud of Unspoken Names
+  { itemID = 21477, groupID = 1, refLootEntry = 15341 }; --Ring of Fury
+  { itemID = 21492, groupID = 1, refLootEntry = 15341 }; --Manslayer of the Qiraji
+  { itemID = 21493, groupID = 1, refLootEntry = 15341 }; --Boots of the Vanguard
+  { itemID = 21494, groupID = 1, refLootEntry = 15341 }; --Southwind
+  { itemID = 21495, groupID = 1, refLootEntry = 15341 }; --Legplates of the Qiraji Command
+  { itemID = 21496, groupID = 1, refLootEntry = 15341 }; --Bracers of Qiraji Command
+  { itemID = 21497, groupID = 1, refLootEntry = 15341 }; --Boots of the Qiraji General
+  { itemID = 21806, groupID = 1, refLootEntry = 15341 }; --Gavel of Qiraji Authority
+  { itemID = 1506028, groupID = 3, refLootEntry = 15341 }; --Shroud of Endless Machinations
+  { itemID = 1506031, groupID = 3, refLootEntry = 15341 }; --Drape of Roaring Earth
+  { itemID = 1506033, groupID = 3, refLootEntry = 15341 }; --Cape of Ferocious Vigor
+  { itemID = 1506036, groupID = 3, refLootEntry = 15341 }; --Shroud of the Faithful Zealot
+  { itemID = 1506039, groupID = 3, refLootEntry = 15341 }; --Drape of Masterful Technique
+  { itemID = 1506042, groupID = 3, refLootEntry = 15341 }; --Cloak of Martial Prowess
+  { itemID = 1506045, groupID = 3, refLootEntry = 15341 }; --Cloak of Unrivaled Rage
+  { itemID = 1506048, groupID = 3, refLootEntry = 15341 }; --Drape of Expansive Research
+  { itemID = 1506051, groupID = 2, refLootEntry = 15341 }; --Ceremonial Qiraji Drape
+  { itemID = 15023, groupID = 0, refLootEntry = 15341 }; --Master
+  { itemID = 60134, groupID = 0, refLootEntry = 15341 }; --Sigil of General Rajaxx
+  { itemID = 97885, groupID = 37, refLootEntry = 15341 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 15341 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 15341 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15341 }; --Raider
+  { itemID = 1278048, groupID = 37, refLootEntry = 15341 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 15341 }; --Case of Fortune
+  { itemID = 1400019, groupID = 0, refLootEntry = 15341 }; --Cache of the Shifting Sands
+  { itemID = 21394, groupID = 4, refLootEntry = 15348 }; --Drape of Unyielding Strength
+  { itemID = 21397, groupID = 4, refLootEntry = 15348 }; --Cape of Eternal Justice
+  { itemID = 21400, groupID = 4, refLootEntry = 15348 }; --Cloak of the Gathering Storm
+  { itemID = 21403, groupID = 4, refLootEntry = 15348 }; --Cloak of the Unseen Path
+  { itemID = 21406, groupID = 4, refLootEntry = 15348 }; --Cloak of Veiled Shadows
+  { itemID = 21409, groupID = 4, refLootEntry = 15348 }; --Cloak of Unending Life
+  { itemID = 21412, groupID = 4, refLootEntry = 15348 }; --Shroud of Infinite Wisdom
+  { itemID = 21415, groupID = 4, refLootEntry = 15348 }; --Drape of Vaulted Secrets
+  { itemID = 21418, groupID = 4, refLootEntry = 15348 }; --Shroud of Unspoken Names
+  { itemID = 21498, groupID = 1, refLootEntry = 15348 }; --Qiraji Sacrificial Dagger
+  { itemID = 21499, groupID = 1, refLootEntry = 15348 }; --Vestments of the Shifting Sands
+  { itemID = 21500, groupID = 1, refLootEntry = 15348 }; --Belt of the Inquisition
+  { itemID = 21501, groupID = 1, refLootEntry = 15348 }; --Toughened Silithid Hide Gloves
+  { itemID = 21502, groupID = 1, refLootEntry = 15348 }; --Sand Reaver Wristguards
+  { itemID = 21503, groupID = 1, refLootEntry = 15348 }; --Belt of the Sand Reaver
+  { itemID = 21809, groupID = 1, refLootEntry = 15348 }; --Fury of the Forgotten Swarm
+  { itemID = 21810, groupID = 1, refLootEntry = 15348 }; --Treads of the Wandering Nomad
+  { itemID = 1506028, groupID = 4, refLootEntry = 15348 }; --Shroud of Endless Machinations
+  { itemID = 1506031, groupID = 4, refLootEntry = 15348 }; --Drape of Roaring Earth
+  { itemID = 1506033, groupID = 4, refLootEntry = 15348 }; --Cape of Ferocious Vigor
+  { itemID = 1506036, groupID = 4, refLootEntry = 15348 }; --Shroud of the Faithful Zealot
+  { itemID = 1506039, groupID = 4, refLootEntry = 15348 }; --Drape of Masterful Technique
+  { itemID = 1506042, groupID = 4, refLootEntry = 15348 }; --Cloak of Martial Prowess
+  { itemID = 1506045, groupID = 4, refLootEntry = 15348 }; --Cloak of Unrivaled Rage
+  { itemID = 1506048, groupID = 4, refLootEntry = 15348 }; --Drape of Expansive Research
+  { itemID = 1506051, groupID = 3, refLootEntry = 15348 }; --Ceremonial Qiraji Drape
+  { itemID = 15023, groupID = 0, refLootEntry = 15348 }; --Master
+  { itemID = 22217, groupID = 0, refLootEntry = 15348 }; --Kurinnaxx
+  { itemID = 60135, groupID = 0, refLootEntry = 15348 }; --Sigil of Kurinnaxx
+  { itemID = 97885, groupID = 37, refLootEntry = 15348 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 15348 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 15348 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15348 }; --Raider
+  { itemID = 1278048, groupID = 37, refLootEntry = 15348 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 15348 }; --Case of Fortune
+  { itemID = 1400019, groupID = 0, refLootEntry = 15348 }; --Cache of the Shifting Sands
+  { itemID = 3914, groupID = 0, refLootEntry = 15355 }; --Journeyman
+  { itemID = 4500, groupID = 0, refLootEntry = 15355 }; --Traveler
+  { itemID = 4784, groupID = 0, refLootEntry = 15355 }; --Lifeless Stone
+  { itemID = 5759, groupID = 0, refLootEntry = 15355 }; --Thorium Lockbox
+  { itemID = 7067, groupID = 0, refLootEntry = 15355 }; --Elemental Earth
+  { itemID = 7075, groupID = 0, refLootEntry = 15355 }; --Core of Earth
+  { itemID = 7076, groupID = 0, refLootEntry = 15355 }; --Essence of Earth
+  { itemID = 8766, groupID = 0, refLootEntry = 15355 }; --Morning Glory Dew
+  { itemID = 8952, groupID = 0, refLootEntry = 15355 }; --Spectral Roast
+  { itemID = 9262, groupID = 0, refLootEntry = 15355 }; --Black Vitriol
+  { itemID = 11754, groupID = 0, refLootEntry = 15355 }; --Black Diamond
+  { itemID = 12809, groupID = 0, refLootEntry = 15355 }; --Guardian Stone
+  { itemID = 13444, groupID = 0, refLootEntry = 15355 }; --Major Mana Potion
+  { itemID = 13446, groupID = 0, refLootEntry = 15355 }; --Major Healing Potion
+  { itemID = 14047, groupID = 0, refLootEntry = 15355 }; --Runecloth
+  { itemID = 18335, groupID = 0, refLootEntry = 15355 }; --Pristine Black Diamond
+  { itemID = 21223, groupID = 0, refLootEntry = 15355 }; --Black Stone
+  { itemID = 21224, groupID = 0, refLootEntry = 15355 }; --Ancient Armor Fragment
+  { itemID = 21226, groupID = 0, refLootEntry = 15355 }; --Runic Stone
+  { itemID = 21321, groupID = 0, refLootEntry = 15355 }; --Red Qiraji Resonating Crystal
+  { itemID = 21761, groupID = 0, refLootEntry = 15355 }; --Scarab Coffer Key
+  { itemID = 21762, groupID = 0, refLootEntry = 15355 }; --Greater Scarab Coffer Key
+  { itemID = 22202, groupID = 0, refLootEntry = 15355 }; --Small Obsidian Shard
+  { itemID = 22203, groupID = 0, refLootEntry = 15355 }; --Large Obsidian Shard
+  { itemID = 97730, groupID = 0, refLootEntry = 15355 }; --Worldforged Key Fragment
+  { itemID = 21393, groupID = 4, refLootEntry = 15369 }; --Signet of Unyielding Strength
+  { itemID = 21396, groupID = 4, refLootEntry = 15369 }; --Ring of Eternal Justice
+  { itemID = 21399, groupID = 4, refLootEntry = 15369 }; --Ring of the Gathering Storm
+  { itemID = 21402, groupID = 4, refLootEntry = 15369 }; --Signet of the Unseen Path
+  { itemID = 21405, groupID = 4, refLootEntry = 15369 }; --Band of Veiled Shadows
+  { itemID = 21408, groupID = 4, refLootEntry = 15369 }; --Band of Unending Life
+  { itemID = 21411, groupID = 4, refLootEntry = 15369 }; --Ring of Infinite Wisdom
+  { itemID = 21414, groupID = 4, refLootEntry = 15369 }; --Band of Vaulted Secrets
+  { itemID = 21417, groupID = 4, refLootEntry = 15369 }; --Ring of Unspoken Names
+  { itemID = 21466, groupID = 1, refLootEntry = 15369 }; --Stinger of Ayamiss
+  { itemID = 21470, groupID = 1, refLootEntry = 15369 }; --Cloak of the Savior
+  { itemID = 21478, groupID = 1, refLootEntry = 15369 }; --Bow of Taut Sinew
+  { itemID = 21479, groupID = 1, refLootEntry = 15369 }; --Gauntlets of the Immovable
+  { itemID = 21480, groupID = 1, refLootEntry = 15369 }; --Scaled Silithid Gauntlets
+  { itemID = 21481, groupID = 1, refLootEntry = 15369 }; --Boots of the Desert Protector
+  { itemID = 21482, groupID = 1, refLootEntry = 15369 }; --Boots of the Fiery Sands
+  { itemID = 21483, groupID = 1, refLootEntry = 15369 }; --Ring of the Desert Winds
+  { itemID = 21484, groupID = 1, refLootEntry = 15369 }; --Helm of Regrowth
+  { itemID = 1506029, groupID = 4, refLootEntry = 15369 }; --Loop of Endless Machinations
+  { itemID = 1506030, groupID = 4, refLootEntry = 15369 }; --Signet of Roaring Earth
+  { itemID = 1506032, groupID = 4, refLootEntry = 15369 }; --Signet of Ferocious Vigor
+  { itemID = 1506035, groupID = 4, refLootEntry = 15369 }; --Band of the Faithful Zealot
+  { itemID = 1506038, groupID = 4, refLootEntry = 15369 }; --Band of Masterful Technique
+  { itemID = 1506041, groupID = 4, refLootEntry = 15369 }; --Ring of Martial Prowess
+  { itemID = 1506044, groupID = 4, refLootEntry = 15369 }; --Signet of Unrivaled Rage
+  { itemID = 1506047, groupID = 4, refLootEntry = 15369 }; --Loop of Expansive Research
+  { itemID = 1506052, groupID = 3, refLootEntry = 15369 }; --Ceremonial Qiraji Ring
+  { itemID = 15023, groupID = 0, refLootEntry = 15369 }; --Master
+  { itemID = 60137, groupID = 0, refLootEntry = 15369 }; --Sigil of Ayamiss the Hunter
+  { itemID = 97885, groupID = 37, refLootEntry = 15369 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 15369 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 15369 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15369 }; --Raider
+  { itemID = 1278048, groupID = 37, refLootEntry = 15369 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 15369 }; --Case of Fortune
+  { itemID = 1400019, groupID = 0, refLootEntry = 15369 }; --Cache of the Shifting Sands
+  { itemID = 21393, groupID = 4, refLootEntry = 15370 }; --Signet of Unyielding Strength
+  { itemID = 21396, groupID = 4, refLootEntry = 15370 }; --Ring of Eternal Justice
+  { itemID = 21399, groupID = 4, refLootEntry = 15370 }; --Ring of the Gathering Storm
+  { itemID = 21402, groupID = 4, refLootEntry = 15370 }; --Signet of the Unseen Path
+  { itemID = 21405, groupID = 4, refLootEntry = 15370 }; --Band of Veiled Shadows
+  { itemID = 21408, groupID = 4, refLootEntry = 15370 }; --Band of Unending Life
+  { itemID = 21411, groupID = 4, refLootEntry = 15370 }; --Ring of Infinite Wisdom
+  { itemID = 21414, groupID = 4, refLootEntry = 15370 }; --Band of Vaulted Secrets
+  { itemID = 21417, groupID = 4, refLootEntry = 15370 }; --Ring of Unspoken Names
+  { itemID = 21455, groupID = 1, refLootEntry = 15370 }; --Southwind Helm
+  { itemID = 21474, groupID = 1, refLootEntry = 15370 }; --Chitinous Shoulderguards
+  { itemID = 21485, groupID = 1, refLootEntry = 15370 }; --Buru
+  { itemID = 21486, groupID = 1, refLootEntry = 15370 }; --Gloves of the Swarm
+  { itemID = 21487, groupID = 1, refLootEntry = 15370 }; --Slimy Scaled Gauntlets
+  { itemID = 21488, groupID = 1, refLootEntry = 15370 }; --Fetish of Chitinous Spikes
+  { itemID = 21489, groupID = 1, refLootEntry = 15370 }; --Quicksand Waders
+  { itemID = 21490, groupID = 1, refLootEntry = 15370 }; --Slime Kickers
+  { itemID = 21491, groupID = 1, refLootEntry = 15370 }; --Scaled Bracers of the Gorger
+  { itemID = 1506029, groupID = 4, refLootEntry = 15370 }; --Loop of Endless Machinations
+  { itemID = 1506030, groupID = 4, refLootEntry = 15370 }; --Signet of Roaring Earth
+  { itemID = 1506032, groupID = 4, refLootEntry = 15370 }; --Signet of Ferocious Vigor
+  { itemID = 1506035, groupID = 4, refLootEntry = 15370 }; --Band of the Faithful Zealot
+  { itemID = 1506038, groupID = 4, refLootEntry = 15370 }; --Band of Masterful Technique
+  { itemID = 1506041, groupID = 4, refLootEntry = 15370 }; --Ring of Martial Prowess
+  { itemID = 1506044, groupID = 4, refLootEntry = 15370 }; --Signet of Unrivaled Rage
+  { itemID = 1506047, groupID = 4, refLootEntry = 15370 }; --Loop of Expansive Research
+  { itemID = 1506052, groupID = 3, refLootEntry = 15370 }; --Ceremonial Qiraji Ring
+  { itemID = 15023, groupID = 0, refLootEntry = 15370 }; --Master
+  { itemID = 60138, groupID = 0, refLootEntry = 15370 }; --Sigil of Buru the Gorger
+  { itemID = 97885, groupID = 37, refLootEntry = 15370 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 15370 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 15370 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15370 }; --Raider
+  { itemID = 1278048, groupID = 37, refLootEntry = 15370 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 15370 }; --Case of Fortune
+  { itemID = 1400019, groupID = 0, refLootEntry = 15370 }; --Cache of the Shifting Sands
+  { itemID = 20931, groupID = 3, refLootEntry = 15509 }; --Hardened Qiraji Chitin
+  { itemID = 21603, groupID = 1, refLootEntry = 15509 }; --Wand of Qiraji Nobility
+  { itemID = 21616, groupID = 2, refLootEntry = 15509 }; --Huhuran
+  { itemID = 21617, groupID = 1, refLootEntry = 15509 }; --Wasphide Gauntlets
+  { itemID = 21618, groupID = 2, refLootEntry = 15509 }; --Hive Defiler Wristguards
+  { itemID = 21619, groupID = 1, refLootEntry = 15509 }; --Gloves of the Messiah
+  { itemID = 21620, groupID = 1, refLootEntry = 15509 }; --Ring of the Martyr
+  { itemID = 21621, groupID = 2, refLootEntry = 15509 }; --Cloak of the Golden Hive
+  { itemID = 21668, groupID = 1, refLootEntry = 15509 }; --Scaled Leggings of Qiraji Fury
+  { itemID = 21680, groupID = 2, refLootEntry = 15509 }; --Vest of Swift Execution
+  { itemID = 21683, groupID = 2, refLootEntry = 15509 }; --Mantle of the Desert Crusade
+  { itemID = 21694, groupID = 1, refLootEntry = 15509 }; --Ternary Mantle
+  { itemID = 15023, groupID = 0, refLootEntry = 15509 }; --Master
+  { itemID = 21229, groupID = 0, refLootEntry = 15509 }; --Qiraji Lord
+  { itemID = 29434, groupID = 0, refLootEntry = 15509 }; --Badge of Justice
+  { itemID = 60153, groupID = 0, refLootEntry = 15509 }; --Sigil of Princess Huhuran
+  { itemID = 97885, groupID = 37, refLootEntry = 15509 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 15509 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 15509 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15509 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15509 }; --Personal Cache
+  { itemID = 1278049, groupID = 37, refLootEntry = 15509 }; --Case of Fortune
+  { itemID = 1400021, groupID = 0, refLootEntry = 15509 }; --Cache of the Old God
+  { itemID = 20932, groupID = 3, refLootEntry = 15510 }; --Spaulders of the Imperial Guard
+  { itemID = 21627, groupID = 1, refLootEntry = 15510 }; --Cloak of Untold Secrets
+  { itemID = 21635, groupID = 2, refLootEntry = 15510 }; --Barb of the Sand Reaver
+  { itemID = 21639, groupID = 2, refLootEntry = 15510 }; --Pauldrons of the Unrelenting
+  { itemID = 21647, groupID = 1, refLootEntry = 15510 }; --Fetish of the Sand Reaver
+  { itemID = 21650, groupID = 2, refLootEntry = 15510 }; --Ancient Qiraji Ripper
+  { itemID = 21651, groupID = 1, refLootEntry = 15510 }; --Scaled Sand Reaver Leggings
+  { itemID = 21652, groupID = 2, refLootEntry = 15510 }; --Silithid Carapace Chestguard
+  { itemID = 21663, groupID = 1, refLootEntry = 15510 }; --Robes of the Guardian Saint
+  { itemID = 21664, groupID = 2, refLootEntry = 15510 }; --Barbed Choker
+  { itemID = 21665, groupID = 2, refLootEntry = 15510 }; --Mantle of Wicked Revenge
+  { itemID = 22396, groupID = 1, refLootEntry = 15510 }; --Totem of Life
+  { itemID = 22402, groupID = 1, refLootEntry = 15510 }; --Libram of Grace
+  { itemID = 15023, groupID = 0, refLootEntry = 15510 }; --Master
+  { itemID = 21229, groupID = 0, refLootEntry = 15510 }; --Qiraji Lord
+  { itemID = 29434, groupID = 0, refLootEntry = 15510 }; --Badge of Justice
+  { itemID = 60154, groupID = 0, refLootEntry = 15510 }; --Sigil of Fankriss the Unyielding
+  { itemID = 97885, groupID = 37, refLootEntry = 15510 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 15510 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 15510 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15510 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15510 }; --Personal Cache
+  { itemID = 1278049, groupID = 37, refLootEntry = 15510 }; --Case of Fortune
+  { itemID = 1400021, groupID = 0, refLootEntry = 15510 }; --Cache of the Old God
+  { itemID = 20932, groupID = 3, refLootEntry = 15516 }; --Spaulders of the Imperial Guard
+  { itemID = 21648, groupID = 1, refLootEntry = 15516 }; --Recomposed Boots
+  { itemID = 21666, groupID = 1, refLootEntry = 15516 }; --Sartura
+  { itemID = 21667, groupID = 2, refLootEntry = 15516 }; --Legplates of Blazing Light
+  { itemID = 21669, groupID = 1, refLootEntry = 15516 }; --Creeping Vine Helm
+  { itemID = 21670, groupID = 2, refLootEntry = 15516 }; --Badge of the Swarmguard
+  { itemID = 21671, groupID = 1, refLootEntry = 15516 }; --Robes of the Battleguard
+  { itemID = 21672, groupID = 2, refLootEntry = 15516 }; --Gloves of Enforcement
+  { itemID = 21673, groupID = 2, refLootEntry = 15516 }; --Silithid Claw
+  { itemID = 21674, groupID = 2, refLootEntry = 15516 }; --Gauntlets of Steadfast Determination
+  { itemID = 21675, groupID = 2, refLootEntry = 15516 }; --Thick Qirajihide Belt
+  { itemID = 21676, groupID = 1, refLootEntry = 15516 }; --Leggings of the Festering Swarm
+  { itemID = 21678, groupID = 1, refLootEntry = 15516 }; --Necklace of Purity
+  { itemID = 15023, groupID = 0, refLootEntry = 15516 }; --Master
+  { itemID = 21229, groupID = 0, refLootEntry = 15516 }; --Qiraji Lord
+  { itemID = 29434, groupID = 0, refLootEntry = 15516 }; --Badge of Justice
+  { itemID = 60156, groupID = 0, refLootEntry = 15516 }; --Sigil of Battleguard Sartura
+  { itemID = 97885, groupID = 37, refLootEntry = 15516 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 15516 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 15516 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15516 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15516 }; --Personal Cache
+  { itemID = 1278049, groupID = 37, refLootEntry = 15516 }; --Case of Fortune
+  { itemID = 1400021, groupID = 0, refLootEntry = 15516 }; --Cache of the Old God
+  { itemID = 15029, groupID = 1, refLootEntry = 15517 }; --Aera
+  { itemID = 20931, groupID = 3, refLootEntry = 15517 }; --Hardened Qiraji Chitin
+  { itemID = 21605, groupID = 2, refLootEntry = 15517 }; --Gloves of the Hidden Temple
+  { itemID = 21610, groupID = 1, refLootEntry = 15517 }; --Wormscale Blocker
+  { itemID = 21611, groupID = 1, refLootEntry = 15517 }; --Burrower Bracers
+  { itemID = 21615, groupID = 1, refLootEntry = 15517 }; --Don Rigoberto
+  { itemID = 21645, groupID = 2, refLootEntry = 15517 }; --Hive Tunneler
+  { itemID = 21708, groupID = 2, refLootEntry = 15517 }; --Beetle Scaled Wristguards
+  { itemID = 23557, groupID = 2, refLootEntry = 15517 }; --Larvae of the Great Worm
+  { itemID = 23558, groupID = 2, refLootEntry = 15517 }; --The Burrower
+  { itemID = 23570, groupID = 2, refLootEntry = 15517 }; --Jom Gabbar
+  { itemID = 15023, groupID = 0, refLootEntry = 15517 }; --Master
+  { itemID = 21229, groupID = 0, refLootEntry = 15517 }; --Qiraji Lord
+  { itemID = 29434, groupID = 0, refLootEntry = 15517 }; --Badge of Justice
+  { itemID = 60157, groupID = 0, refLootEntry = 15517 }; --Sigil of Ouro
+  { itemID = 97885, groupID = 37, refLootEntry = 15517 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 15517 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 15517 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15517 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15517 }; --Personal Cache
+  { itemID = 1278049, groupID = 37, refLootEntry = 15517 }; --Case of Fortune
+  { itemID = 1400021, groupID = 0, refLootEntry = 15517 }; --Cache of the Old God
+  { itemID = 15032, groupID = 2, refLootEntry = 15928 }; --Dislocated Spine
+  { itemID = 22353, groupID = 4, refLootEntry = 15928 }; --Desecrated Helmet
+  { itemID = 22726, groupID = 1, refLootEntry = 15928 }; --Splinter of Atiesh
+  { itemID = 22808, groupID = 2, refLootEntry = 15928 }; --The Castigator
+  { itemID = 22940, groupID = 5, refLootEntry = 15928 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 15928 }; --Polar Shoulder Pads
+  { itemID = 22967, groupID = 5, refLootEntry = 15928 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 15928 }; --Glacial Mantle
+  { itemID = 23000, groupID = 2, refLootEntry = 15928 }; --Plated Abomination Ribcage
+  { itemID = 23001, groupID = 2, refLootEntry = 15928 }; --Eye of the Scourge
+  { itemID = 23019, groupID = 5, refLootEntry = 15928 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 15928 }; --Polar Helmet
+  { itemID = 23028, groupID = 5, refLootEntry = 15928 }; --Hailstone Band
+  { itemID = 23032, groupID = 5, refLootEntry = 15928 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 15928 }; --Icy Scale Coif
+  { itemID = 23070, groupID = 2, refLootEntry = 15928 }; --Leggings of Polarity
+  { itemID = 60173, groupID = 15, refLootEntry = 15928 }; --Sigil of Thaddius
+  { itemID = 375250, groupID = 3, refLootEntry = 15928 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 15928 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15928 }; --Personal Cache
+  { itemID = 22354, groupID = 4, refLootEntry = 15931 }; --Desecrated Pauldrons
+  { itemID = 22726, groupID = 1, refLootEntry = 15931 }; --Splinter of Atiesh
+  { itemID = 22803, groupID = 2, refLootEntry = 15931 }; --Midnight Haze
+  { itemID = 22810, groupID = 2, refLootEntry = 15931 }; --Toxin Injector
+  { itemID = 22935, groupID = 5, refLootEntry = 15931 }; --Touch of Frost
+  { itemID = 22940, groupID = 5, refLootEntry = 15931 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 15931 }; --Polar Shoulder Pads
+  { itemID = 22967, groupID = 5, refLootEntry = 15931 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 15931 }; --Glacial Mantle
+  { itemID = 22988, groupID = 2, refLootEntry = 15931 }; --The End of Dreams
+  { itemID = 23019, groupID = 5, refLootEntry = 15931 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 15931 }; --Polar Helmet
+  { itemID = 23028, groupID = 5, refLootEntry = 15931 }; --Hailstone Band
+  { itemID = 23032, groupID = 5, refLootEntry = 15931 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 15931 }; --Icy Scale Coif
+  { itemID = 60176, groupID = 15, refLootEntry = 15931 }; --Sigil of Grobbulus
+  { itemID = 375250, groupID = 3, refLootEntry = 15931 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 15931 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15931 }; --Personal Cache
+  { itemID = 22349, groupID = 4, refLootEntry = 15932 }; --Desecrated Breastplate
+  { itemID = 22352, groupID = 4, refLootEntry = 15932 }; --Desecrated Legplates
+  { itemID = 22353, groupID = 4, refLootEntry = 15932 }; --Desecrated Helmet
+  { itemID = 22354, groupID = 4, refLootEntry = 15932 }; --Desecrated Pauldrons
+  { itemID = 22355, groupID = 4, refLootEntry = 15932 }; --Desecrated Bracers
+  { itemID = 22356, groupID = 4, refLootEntry = 15932 }; --Desecrated Waistguard
+  { itemID = 22357, groupID = 4, refLootEntry = 15932 }; --Desecrated Gauntlets
+  { itemID = 22358, groupID = 4, refLootEntry = 15932 }; --Desecrated Sabatons
+  { itemID = 22726, groupID = 1, refLootEntry = 15932 }; --Splinter of Atiesh
+  { itemID = 22813, groupID = 2, refLootEntry = 15932 }; --Claymore of Unholy Might
+  { itemID = 22935, groupID = 5, refLootEntry = 15932 }; --Touch of Frost
+  { itemID = 22940, groupID = 5, refLootEntry = 15932 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 15932 }; --Polar Shoulder Pads
+  { itemID = 22967, groupID = 5, refLootEntry = 15932 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 15932 }; --Glacial Mantle
+  { itemID = 22981, groupID = 2, refLootEntry = 15932 }; --Gluth
+  { itemID = 22983, groupID = 2, refLootEntry = 15932 }; --Rime Covered Mantle
+  { itemID = 22994, groupID = 2, refLootEntry = 15932 }; --Digested Hand of Power
+  { itemID = 23019, groupID = 5, refLootEntry = 15932 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 15932 }; --Polar Helmet
+  { itemID = 23028, groupID = 5, refLootEntry = 15932 }; --Hailstone Band
+  { itemID = 23032, groupID = 5, refLootEntry = 15932 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 15932 }; --Icy Scale Coif
+  { itemID = 23075, groupID = 2, refLootEntry = 15932 }; --Death
+  { itemID = 60177, groupID = 15, refLootEntry = 15932 }; --Sigil of Gluth
+  { itemID = 375250, groupID = 3, refLootEntry = 15932 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 15932 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15932 }; --Personal Cache
+  { itemID = 22356, groupID = 4, refLootEntry = 15936 }; --Desecrated Waistguard
+  { itemID = 22726, groupID = 1, refLootEntry = 15936 }; --Splinter of Atiesh
+  { itemID = 22935, groupID = 5, refLootEntry = 15936 }; --Touch of Frost
+  { itemID = 22940, groupID = 5, refLootEntry = 15936 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 15936 }; --Polar Shoulder Pads
+  { itemID = 22967, groupID = 5, refLootEntry = 15936 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 15936 }; --Glacial Mantle
+  { itemID = 23019, groupID = 5, refLootEntry = 15936 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 15936 }; --Polar Helmet
+  { itemID = 23028, groupID = 5, refLootEntry = 15936 }; --Hailstone Band
+  { itemID = 23032, groupID = 5, refLootEntry = 15936 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 15936 }; --Icy Scale Coif
+  { itemID = 23035, groupID = 2, refLootEntry = 15936 }; --Preceptor
+  { itemID = 23036, groupID = 2, refLootEntry = 15936 }; --Necklace of Necropsy
+  { itemID = 23068, groupID = 2, refLootEntry = 15936 }; --Legplates of Carnage
+  { itemID = 60178, groupID = 15, refLootEntry = 15936 }; --Sigil of Heigan the Unclean
+  { itemID = 375250, groupID = 3, refLootEntry = 15936 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 15936 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15936 }; --Personal Cache
+  { itemID = 22357, groupID = 4, refLootEntry = 15952 }; --Desecrated Gauntlets
+  { itemID = 22726, groupID = 1, refLootEntry = 15952 }; --Splinter of Atiesh
+  { itemID = 22804, groupID = 2, refLootEntry = 15952 }; --Maexxna
+  { itemID = 22807, groupID = 2, refLootEntry = 15952 }; --Wraith Blade
+  { itemID = 22935, groupID = 5, refLootEntry = 15952 }; --Touch of Frost
+  { itemID = 22940, groupID = 5, refLootEntry = 15952 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 15952 }; --Polar Shoulder Pads
+  { itemID = 22947, groupID = 2, refLootEntry = 15952 }; --Pendant of Forgotten Names
+  { itemID = 22954, groupID = 2, refLootEntry = 15952 }; --Kiss of the Spider
+  { itemID = 22967, groupID = 5, refLootEntry = 15952 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 15952 }; --Glacial Mantle
+  { itemID = 23019, groupID = 5, refLootEntry = 15952 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 15952 }; --Polar Helmet
+  { itemID = 23028, groupID = 5, refLootEntry = 15952 }; --Hailstone Band
+  { itemID = 23032, groupID = 5, refLootEntry = 15952 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 15952 }; --Icy Scale Coif
+  { itemID = 23220, groupID = 2, refLootEntry = 15952 }; --Crystal Webbed Robe
+  { itemID = 60179, groupID = 15, refLootEntry = 15952 }; --Sigil of Maexxna
+  { itemID = 375250, groupID = 3, refLootEntry = 15952 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 15952 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15952 }; --Personal Cache
+  { itemID = 22355, groupID = 4, refLootEntry = 15953 }; --Desecrated Bracers
+  { itemID = 22806, groupID = 2, refLootEntry = 15953 }; --Widow
+  { itemID = 22935, groupID = 5, refLootEntry = 15953 }; --Touch of Frost
+  { itemID = 22940, groupID = 5, refLootEntry = 15953 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 15953 }; --Polar Shoulder Pads
+  { itemID = 22942, groupID = 2, refLootEntry = 15953 }; --The Widow
+  { itemID = 22943, groupID = 2, refLootEntry = 15953 }; --Malice Stone Pendant
+  { itemID = 22967, groupID = 5, refLootEntry = 15953 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 15953 }; --Glacial Mantle
+  { itemID = 23019, groupID = 5, refLootEntry = 15953 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 15953 }; --Polar Helmet
+  { itemID = 23028, groupID = 5, refLootEntry = 15953 }; --Hailstone Band
+  { itemID = 23032, groupID = 5, refLootEntry = 15953 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 15953 }; --Icy Scale Coif
+  { itemID = 60180, groupID = 15, refLootEntry = 15953 }; --Sigil of Grand Widow Faerlina
+  { itemID = 375250, groupID = 3, refLootEntry = 15953 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 15953 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15953 }; --Personal Cache
+  { itemID = 22356, groupID = 4, refLootEntry = 15954 }; --Desecrated Waistguard
+  { itemID = 22726, groupID = 1, refLootEntry = 15954 }; --Splinter of Atiesh
+  { itemID = 22816, groupID = 2, refLootEntry = 15954 }; --Hatchet of Sundered Bone
+  { itemID = 22935, groupID = 5, refLootEntry = 15954 }; --Touch of Frost
+  { itemID = 22940, groupID = 5, refLootEntry = 15954 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 15954 }; --Polar Shoulder Pads
+  { itemID = 22967, groupID = 5, refLootEntry = 15954 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 15954 }; --Glacial Mantle
+  { itemID = 23005, groupID = 2, refLootEntry = 15954 }; --Totem of Flowing Water
+  { itemID = 23006, groupID = 2, refLootEntry = 15954 }; --Libram of Light
+  { itemID = 23019, groupID = 5, refLootEntry = 15954 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 15954 }; --Polar Helmet
+  { itemID = 23028, groupID = 5, refLootEntry = 15954 }; --Hailstone Band
+  { itemID = 23029, groupID = 2, refLootEntry = 15954 }; --Noth
+  { itemID = 23030, groupID = 2, refLootEntry = 15954 }; --Cloak of the Scourge
+  { itemID = 23031, groupID = 2, refLootEntry = 15954 }; --Band of the Inevitable
+  { itemID = 23032, groupID = 5, refLootEntry = 15954 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 15954 }; --Icy Scale Coif
+  { itemID = 60181, groupID = 15, refLootEntry = 15954 }; --Sigil of Noth the Plaguebringer
+  { itemID = 375250, groupID = 3, refLootEntry = 15954 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 15954 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15954 }; --Personal Cache
+  { itemID = 22708, groupID = 0, refLootEntry = 15975 }; --Fate of Ramaladni
+  { itemID = 19761, groupID = 2, refLootEntry = 15989 }; --Fang of the Frost Wyrm
+  { itemID = 22726, groupID = 1, refLootEntry = 15989 }; --Splinter of Atiesh
+  { itemID = 22935, groupID = 5, refLootEntry = 15989 }; --Touch of Frost
+  { itemID = 22940, groupID = 5, refLootEntry = 15989 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 15989 }; --Polar Shoulder Pads
+  { itemID = 22967, groupID = 5, refLootEntry = 15989 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 15989 }; --Glacial Mantle
+  { itemID = 23019, groupID = 5, refLootEntry = 15989 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 15989 }; --Polar Helmet
+  { itemID = 23028, groupID = 5, refLootEntry = 15989 }; --Hailstone Band
+  { itemID = 23032, groupID = 5, refLootEntry = 15989 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 15989 }; --Icy Scale Coif
+  { itemID = 23040, groupID = 2, refLootEntry = 15989 }; --Glyph of Deflection
+  { itemID = 23041, groupID = 2, refLootEntry = 15989 }; --Slayer
+  { itemID = 23043, groupID = 2, refLootEntry = 15989 }; --The Face of Death
+  { itemID = 23045, groupID = 2, refLootEntry = 15989 }; --Shroud of Dominion
+  { itemID = 23046, groupID = 2, refLootEntry = 15989 }; --The Restrained Essence of Sapphiron
+  { itemID = 23047, groupID = 2, refLootEntry = 15989 }; --Eye of the Dead
+  { itemID = 23048, groupID = 2, refLootEntry = 15989 }; --Sapphiron
+  { itemID = 23049, groupID = 2, refLootEntry = 15989 }; --Sapphiron
+  { itemID = 23050, groupID = 2, refLootEntry = 15989 }; --Cloak of the Necropolis
+  { itemID = 23072, groupID = 2, refLootEntry = 15989 }; --Fists of the Unrelenting
+  { itemID = 23242, groupID = 2, refLootEntry = 15989 }; --Claw of the Frost Wyrm
+  { itemID = 23545, groupID = 4, refLootEntry = 15989 }; --Power of the Scourge
+  { itemID = 23547, groupID = 4, refLootEntry = 15989 }; --Resilience of the Scourge
+  { itemID = 23548, groupID = 4, refLootEntry = 15989 }; --Might of the Scourge
+  { itemID = 23549, groupID = 4, refLootEntry = 15989 }; --Fortitude of the Scourge
+  { itemID = 60184, groupID = 15, refLootEntry = 15989 }; --Sigil of Sapphiron
+  { itemID = 375250, groupID = 3, refLootEntry = 15989 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 15989 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 15989 }; --Personal Cache
+  { itemID = 22352, groupID = 4, refLootEntry = 16011 }; --Desecrated Legplates
+  { itemID = 22726, groupID = 1, refLootEntry = 16011 }; --Splinter of Atiesh
+  { itemID = 22800, groupID = 2, refLootEntry = 16011 }; --Brimstone Staff
+  { itemID = 22935, groupID = 5, refLootEntry = 16011 }; --Touch of Frost
+  { itemID = 22940, groupID = 5, refLootEntry = 16011 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 16011 }; --Polar Shoulder Pads
+  { itemID = 22967, groupID = 5, refLootEntry = 16011 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 16011 }; --Glacial Mantle
+  { itemID = 23019, groupID = 5, refLootEntry = 16011 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 16011 }; --Polar Helmet
+  { itemID = 23028, groupID = 5, refLootEntry = 16011 }; --Hailstone Band
+  { itemID = 23032, groupID = 5, refLootEntry = 16011 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 16011 }; --Icy Scale Coif
+  { itemID = 23037, groupID = 2, refLootEntry = 16011 }; --Ring of Spiritual Fervor
+  { itemID = 23038, groupID = 2, refLootEntry = 16011 }; --Band of Unnatural Forces
+  { itemID = 23039, groupID = 2, refLootEntry = 16011 }; --The Eye of Nerub
+  { itemID = 23042, groupID = 2, refLootEntry = 16011 }; --Loatheb
+  { itemID = 60186, groupID = 15, refLootEntry = 16011 }; --Sigil of Loatheb
+  { itemID = 375250, groupID = 3, refLootEntry = 16011 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 16011 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 16011 }; --Personal Cache
+  { itemID = 22354, groupID = 4, refLootEntry = 16028 }; --Desecrated Pauldrons
+  { itemID = 22726, groupID = 1, refLootEntry = 16028 }; --Splinter of Atiesh
+  { itemID = 22815, groupID = 2, refLootEntry = 16028 }; --Severance
+  { itemID = 22818, groupID = 2, refLootEntry = 16028 }; --The Plague Bearer
+  { itemID = 22820, groupID = 2, refLootEntry = 16028 }; --Wand of Fates
+  { itemID = 22935, groupID = 5, refLootEntry = 16028 }; --Touch of Frost
+  { itemID = 22940, groupID = 5, refLootEntry = 16028 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 16028 }; --Polar Shoulder Pads
+  { itemID = 22960, groupID = 2, refLootEntry = 16028 }; --Cloak of Suturing
+  { itemID = 22961, groupID = 2, refLootEntry = 16028 }; --Band of Reanimation
+  { itemID = 22967, groupID = 5, refLootEntry = 16028 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 16028 }; --Glacial Mantle
+  { itemID = 23019, groupID = 5, refLootEntry = 16028 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 16028 }; --Polar Helmet
+  { itemID = 23028, groupID = 5, refLootEntry = 16028 }; --Hailstone Band
+  { itemID = 23032, groupID = 5, refLootEntry = 16028 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 16028 }; --Icy Scale Coif
+  { itemID = 60187, groupID = 15, refLootEntry = 16028 }; --Sigil of Patchwerk
+  { itemID = 375250, groupID = 3, refLootEntry = 16028 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 16028 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 16028 }; --Personal Cache
+  { itemID = 22302, groupID = 1, refLootEntry = 16042 }; --Ironweave Cowl
+  { itemID = 22335, groupID = 1, refLootEntry = 16042 }; --Lord Valthalak
+  { itemID = 22336, groupID = 1, refLootEntry = 16042 }; --Draconian Aegis of the Legion
+  { itemID = 22337, groupID = 1, refLootEntry = 16042 }; --Shroud of Domination
+  { itemID = 22339, groupID = 1, refLootEntry = 16042 }; --Rune Band of Wizardry
+  { itemID = 22340, groupID = 1, refLootEntry = 16042 }; --Pendant of Celerity
+  { itemID = 22342, groupID = 1, refLootEntry = 16042 }; --Leggings of Torment
+  { itemID = 22343, groupID = 1, refLootEntry = 16042 }; --Handguards of Savagery
+  { itemID = 14047, groupID = 0, refLootEntry = 16042 }; --Runecloth
+  { itemID = 60188, groupID = 0, refLootEntry = 16042 }; --Sigil of Lord Valthalak
+  { itemID = 97730, groupID = 0, refLootEntry = 16042 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 16042 }; --Rune of Ascension
+  { itemID = 1180434, groupID = 0, refLootEntry = 16042 }; --Draconic Warhorn: Lord Valthalak
+  { itemID = 22305, groupID = 1, refLootEntry = 16059 }; --Ironweave Mantle
+  { itemID = 22317, groupID = 1, refLootEntry = 16059 }; --Lefty
+  { itemID = 22318, groupID = 1, refLootEntry = 16059 }; --Malgen
+  { itemID = 22330, groupID = 1, refLootEntry = 16059 }; --Shroud of Arcane Mastery
+  { itemID = 22047, groupID = 0, refLootEntry = 16059 }; --Top Piece of Lord Valthalak
+  { itemID = 97730, groupID = 0, refLootEntry = 16059 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 16059 }; --Rune of Ascension
+  { itemID = 22358, groupID = 4, refLootEntry = 16060 }; --Desecrated Sabatons
+  { itemID = 22726, groupID = 1, refLootEntry = 16060 }; --Splinter of Atiesh
+  { itemID = 22935, groupID = 5, refLootEntry = 16060 }; --Touch of Frost
+  { itemID = 22940, groupID = 5, refLootEntry = 16060 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 16060 }; --Polar Shoulder Pads
+  { itemID = 22967, groupID = 5, refLootEntry = 16060 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 16060 }; --Glacial Mantle
+  { itemID = 23019, groupID = 5, refLootEntry = 16060 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 16060 }; --Polar Helmet
+  { itemID = 23021, groupID = 2, refLootEntry = 16060 }; --The Soul Harvester
+  { itemID = 23023, groupID = 2, refLootEntry = 16060 }; --Sadist
+  { itemID = 23028, groupID = 5, refLootEntry = 16060 }; --Hailstone Band
+  { itemID = 23032, groupID = 5, refLootEntry = 16060 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 16060 }; --Icy Scale Coif
+  { itemID = 23073, groupID = 2, refLootEntry = 16060 }; --Boots of Displacement
+  { itemID = 60189, groupID = 15, refLootEntry = 16060 }; --Sigil of Gothik the Harvester
+  { itemID = 375250, groupID = 3, refLootEntry = 16060 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 16060 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 16060 }; --Personal Cache
+  { itemID = 15030, groupID = 2, refLootEntry = 16061 }; --Jagged Cold Steel Knife
+  { itemID = 22358, groupID = 4, refLootEntry = 16061 }; --Desecrated Sabatons
+  { itemID = 22726, groupID = 1, refLootEntry = 16061 }; --Splinter of Atiesh
+  { itemID = 22935, groupID = 5, refLootEntry = 16061 }; --Touch of Frost
+  { itemID = 22940, groupID = 5, refLootEntry = 16061 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 16061 }; --Polar Shoulder Pads
+  { itemID = 22967, groupID = 5, refLootEntry = 16061 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 16061 }; --Glacial Mantle
+  { itemID = 23004, groupID = 2, refLootEntry = 16061 }; --Idol of Longevity
+  { itemID = 23009, groupID = 2, refLootEntry = 16061 }; --Wand of the Whispering Dead
+  { itemID = 23014, groupID = 2, refLootEntry = 16061 }; --Iblis, Blade of the Fallen Seraph
+  { itemID = 23017, groupID = 2, refLootEntry = 16061 }; --Veil of Eclipse
+  { itemID = 23018, groupID = 2, refLootEntry = 16061 }; --Signet of the Fallen Defender
+  { itemID = 23019, groupID = 5, refLootEntry = 16061 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 16061 }; --Polar Helmet
+  { itemID = 23028, groupID = 5, refLootEntry = 16061 }; --Hailstone Band
+  { itemID = 23032, groupID = 5, refLootEntry = 16061 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 16061 }; --Icy Scale Coif
+  { itemID = 23219, groupID = 2, refLootEntry = 16061 }; --Girdle of the Mentor
+  { itemID = 23328, groupID = 2, refLootEntry = 16061 }; --The Unholy Blade
+  { itemID = 60190, groupID = 15, refLootEntry = 16061 }; --Sigil of Instructor Razuvious
+  { itemID = 375250, groupID = 3, refLootEntry = 16061 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 16061 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 16061 }; --Personal Cache
+  { itemID = 22306, groupID = 1, refLootEntry = 16080 }; --Ironweave Belt
+  { itemID = 22319, groupID = 1, refLootEntry = 16080 }; --Tome of Divine Right
+  { itemID = 22322, groupID = 1, refLootEntry = 16080 }; --The Jaw Breaker
+  { itemID = 22325, groupID = 1, refLootEntry = 16080 }; --Belt of the Trickster
+  { itemID = 22398, groupID = 1, refLootEntry = 16080 }; --Idol of Rejuvenation
+  { itemID = 21984, groupID = 0, refLootEntry = 16080 }; --Left Piece of Lord Valthalak
+  { itemID = 22046, groupID = 0, refLootEntry = 16080 }; --Right Piece of Lord Valthalak
+  { itemID = 97730, groupID = 0, refLootEntry = 16080 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 16080 }; --Rune of Ascension
+  { itemID = 22304, groupID = 1, refLootEntry = 16097 }; --Ironweave Gloves
+  { itemID = 22314, groupID = 1, refLootEntry = 16097 }; --Huntsman
+  { itemID = 22315, groupID = 1, refLootEntry = 16097 }; --Hammer of Revitalization
+  { itemID = 22345, groupID = 1, refLootEntry = 16097 }; --Totem of Rebirth
+  { itemID = 22401, groupID = 1, refLootEntry = 16097 }; --Libram of Hope
+  { itemID = 22472, groupID = 1, refLootEntry = 16097 }; --Boots of Ferocity
+  { itemID = 21984, groupID = 0, refLootEntry = 16097 }; --Left Piece of Lord Valthalak
+  { itemID = 22046, groupID = 0, refLootEntry = 16097 }; --Right Piece of Lord Valthalak
+  { itemID = 97730, groupID = 0, refLootEntry = 16097 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 16097 }; --Rune of Ascension
+  { itemID = 22303, groupID = 1, refLootEntry = 16118 }; --Ironweave Pants
+  { itemID = 22326, groupID = 1, refLootEntry = 16118 }; --Amalgam
+  { itemID = 22331, groupID = 1, refLootEntry = 16118 }; --Band of the Steadfast Hero
+  { itemID = 22332, groupID = 1, refLootEntry = 16118 }; --Blade of Necromancy
+  { itemID = 22333, groupID = 1, refLootEntry = 16118 }; --Hammer of Divine Might
+  { itemID = 21984, groupID = 0, refLootEntry = 16118 }; --Left Piece of Lord Valthalak
+  { itemID = 22046, groupID = 0, refLootEntry = 16118 }; --Right Piece of Lord Valthalak
+  { itemID = 97730, groupID = 0, refLootEntry = 16118 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 16118 }; --Rune of Ascension
+  { itemID = 14147, groupID = 1, refLootEntry = 17830 }; --Cavedweller Bracers
+  { itemID = 14148, groupID = 1, refLootEntry = 17830 }; --Crystalline Cuffs
+  { itemID = 24225, groupID = 0, refLootEntry = 17830 }; --Blood of the Wrathful
+  { itemID = 83115, groupID = 0, refLootEntry = 17830 }; --Summoner
+  { itemID = 12265, groupID = 3, refLootEntry = 23863 }; --Hook of the Wild Hunt
+  { itemID = 24537, groupID = 2, refLootEntry = 23863 }; --Waistband of Crushed Skulls
+  { itemID = 33102, groupID = 4, refLootEntry = 23863 }; --Blood of Zul
+  { itemID = 33307, groupID = 5, refLootEntry = 23863 }; --Formula: Enchant Weapon - Executioner
+  { itemID = 33466, groupID = 1, refLootEntry = 23863 }; --Loop of Cursed Bones
+  { itemID = 33467, groupID = 3, refLootEntry = 23863 }; --Blade of Twisted Visions
+  { itemID = 33468, groupID = 3, refLootEntry = 23863 }; --Dark Blessing
+  { itemID = 33469, groupID = 1, refLootEntry = 23863 }; --Hauberk of the Empire
+  { itemID = 33471, groupID = 1, refLootEntry = 23863 }; --Two-toed Sandals
+  { itemID = 33473, groupID = 2, refLootEntry = 23863 }; --Chestguard of the Warlord
+  { itemID = 33474, groupID = 3, refLootEntry = 23863 }; --Ancient Amani Longbow
+  { itemID = 33476, groupID = 3, refLootEntry = 23863 }; --Cleaver of the Unforgiving
+  { itemID = 33478, groupID = 3, refLootEntry = 23863 }; --Jin
+  { itemID = 33479, groupID = 2, refLootEntry = 23863 }; --Grimgrin Faceguard
+  { itemID = 33829, groupID = 1, refLootEntry = 23863 }; --Hex Shrunken Head
+  { itemID = 33830, groupID = 2, refLootEntry = 23863 }; --Ancient Aqir Artifact
+  { itemID = 33831, groupID = 2, refLootEntry = 23863 }; --Berserker
+  { itemID = 34071, groupID = 3, refLootEntry = 23863 }; --Seething Hate
+  { itemID = 63949, groupID = 15, refLootEntry = 23863 }; --Sigil of Zul
+  { itemID = 222637, groupID = 10, refLootEntry = 23863 }; --Primal Amani Idol
+  { itemID = 375250, groupID = 0, refLootEntry = 23863 }; --Rune of Ascension
+  { itemID = 1170083, groupID = 0, refLootEntry = 23863 }; --Personal Cache
+  { itemID = 1400029, groupID = 0, refLootEntry = 23863 }; --Cache of the Amani
+  { itemID = 22349, groupID = 4, refLootEntry = 30549 }; --Desecrated Breastplate
+  { itemID = 22691, groupID = 2, refLootEntry = 30549 }; --Corrupted Ashbringer
+  { itemID = 22726, groupID = 1, refLootEntry = 30549 }; --Splinter of Atiesh
+  { itemID = 22809, groupID = 2, refLootEntry = 30549 }; --Maul of the Redeemed Crusader
+  { itemID = 22811, groupID = 2, refLootEntry = 30549 }; --Soulstring
+  { itemID = 22935, groupID = 5, refLootEntry = 30549 }; --Touch of Frost
+  { itemID = 22940, groupID = 5, refLootEntry = 30549 }; --Icebane Pauldrons
+  { itemID = 22941, groupID = 5, refLootEntry = 30549 }; --Polar Shoulder Pads
+  { itemID = 22967, groupID = 5, refLootEntry = 30549 }; --Icy Scale Spaulders
+  { itemID = 22968, groupID = 5, refLootEntry = 30549 }; --Glacial Mantle
+  { itemID = 23019, groupID = 5, refLootEntry = 30549 }; --Icebane Helmet
+  { itemID = 23020, groupID = 5, refLootEntry = 30549 }; --Polar Helmet
+  { itemID = 23025, groupID = 2, refLootEntry = 30549 }; --Seal of the Damned
+  { itemID = 23027, groupID = 2, refLootEntry = 30549 }; --Warmth of Forgiveness
+  { itemID = 23028, groupID = 5, refLootEntry = 30549 }; --Hailstone Band
+  { itemID = 23032, groupID = 5, refLootEntry = 30549 }; --Glacial Headdress
+  { itemID = 23033, groupID = 5, refLootEntry = 30549 }; --Icy Scale Coif
+  { itemID = 23071, groupID = 2, refLootEntry = 30549 }; --Leggings of Apocalypse
+  { itemID = 375250, groupID = 3, refLootEntry = 30549 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 30549 }; --Raider
+  { itemID = 1170083, groupID = 0, refLootEntry = 30549 }; --Personal Cache
+  { itemID = 1400018, groupID = 0, refLootEntry = 30549 }; --Cache of the Lich
+  { itemID = 50446, groupID = 3, refLootEntry = 36296 }; --Toxic Wasteling
+  { itemID = 50471, groupID = 3, refLootEntry = 36296 }; --The Heartbreaker
+  { itemID = 388912, groupID = 2, refLootEntry = 36296 }; --Forever-Lovely Rose
+  { itemID = 392168, groupID = 2, refLootEntry = 36296 }; --Vile Fumigator
+  { itemID = 397120, groupID = 1, refLootEntry = 36296 }; --Winking Eye of Love
+  { itemID = 397132, groupID = 1, refLootEntry = 36296 }; --Heartbreak Charm
+  { itemID = 397144, groupID = 1, refLootEntry = 36296 }; --Shard of Pirouetting Happiness
+  { itemID = 397156, groupID = 1, refLootEntry = 36296 }; --Sweet Perfume Broach
+  { itemID = 397168, groupID = 1, refLootEntry = 36296 }; --Choker of the Pure Heart
+  { itemID = 49641, groupID = 0, refLootEntry = 36296 }; --Faded Lovely Greeting Card
+  { itemID = 50250, groupID = 0, refLootEntry = 36296 }; --Big Love Rocket
+  { itemID = 50320, groupID = 0, refLootEntry = 36296 }; --Faded Lovely Greeting Card
+  { itemID = 203224, groupID = 1, refLootEntry = 39679 }; --Renouncer
+  { itemID = 211728, groupID = 1, refLootEntry = 39679 }; --Armbands of Change
+  { itemID = 212654, groupID = 1, refLootEntry = 39679 }; --Signet of Transformation
+  { itemID = 212713, groupID = 1, refLootEntry = 39679 }; --Grace of the Herald
+  { itemID = 212826, groupID = 1, refLootEntry = 39679 }; --Corla
+  { itemID = 274009, groupID = 1, refLootEntry = 39679 }; --Corla
+  { itemID = 375250, groupID = 0, refLootEntry = 39679 }; --Rune of Ascension
+  { itemID = 213383, groupID = 1, refLootEntry = 39698 }; --Bracers of Cooled Anger
+  { itemID = 215448, groupID = 1, refLootEntry = 39698 }; --Heat Wave Leggings
+  { itemID = 217674, groupID = 1, refLootEntry = 39698 }; --Burned Gatherings
+  { itemID = 218255, groupID = 1, refLootEntry = 39698 }; --Quicksilver Amulet
+  { itemID = 218298, groupID = 1, refLootEntry = 39698 }; --Steelbender
+  { itemID = 375250, groupID = 0, refLootEntry = 39698 }; --Rune of Ascension
+  { itemID = 1180884, groupID = 0, refLootEntry = 39698 }; --Draconic Warhorn: Karsh Steelbender
+  { itemID = 219576, groupID = 1, refLootEntry = 39700 }; --Beauty
+  { itemID = 222146, groupID = 1, refLootEntry = 39700 }; --Beauty
+  { itemID = 222844, groupID = 1, refLootEntry = 39700 }; --Beauty
+  { itemID = 223076, groupID = 1, refLootEntry = 39700 }; --Kibble
+  { itemID = 223128, groupID = 1, refLootEntry = 39700 }; --Beauty
+  { itemID = 275438, groupID = 1, refLootEntry = 39700 }; --Idol of the Tamed Mauler
+  { itemID = 375250, groupID = 0, refLootEntry = 39700 }; --Rune of Ascension
+  { itemID = 240379, groupID = 1, refLootEntry = 39705 }; --Raz
+  { itemID = 241500, groupID = 1, refLootEntry = 39705 }; --Twitching Shadows
+  { itemID = 241543, groupID = 1, refLootEntry = 39705 }; --Carrier Wave Pendant
+  { itemID = 241661, groupID = 1, refLootEntry = 39705 }; --Amber Messenger
+  { itemID = 241704, groupID = 1, refLootEntry = 39705 }; --Clutches of Dying Light
+  { itemID = 241747, groupID = 1, refLootEntry = 39705 }; --Willowy Crown
+  { itemID = 241790, groupID = 1, refLootEntry = 39705 }; --Kyrstel Mantle
+  { itemID = 241833, groupID = 1, refLootEntry = 39705 }; --Witching Hourglass
+  { itemID = 241876, groupID = 1, refLootEntry = 39705 }; --Crepuscular Shield
+  { itemID = 6011, groupID = 0, refLootEntry = 39705 }; --Recipe: Flask of Mighty Power
+  { itemID = 375250, groupID = 0, refLootEntry = 39705 }; --Rune of Ascension
+  { itemID = 2021814, groupID = 0, refLootEntry = 39705 }; --Dungeon Spoils
+  { itemID = 6001, groupID = 0, refLootEntry = 64600 }; --Recipe: Potion of Lightning Reflexes
+  { itemID = 17243, groupID = 1, refLootEntry = 64600 }; --Scepter of the Gate Warden
+  { itemID = 17244, groupID = 1, refLootEntry = 64600 }; --Staff of the Gate Warden
+  { itemID = 17303, groupID = 1, refLootEntry = 64600 }; --Musket of the Gate Warden
+  { itemID = 17334, groupID = 1, refLootEntry = 64600 }; --Wristguards of the Shifting Sands
+  { itemID = 17356, groupID = 1, refLootEntry = 64600 }; --Waistguard of the Shifting Sands
+  { itemID = 17357, groupID = 1, refLootEntry = 64600 }; --Bracers of the Sand Prince
+  { itemID = 17358, groupID = 1, refLootEntry = 64600 }; --Belt of the Sand Prince
+  { itemID = 17365, groupID = 1, refLootEntry = 64600 }; --Amulet of the Gate Warden
+  { itemID = 17366, groupID = 1, refLootEntry = 64600 }; --Amulet of the Sand Prince
+  { itemID = 17367, groupID = 1, refLootEntry = 64600 }; --Insignia of the Shifting Sands
+  { itemID = 375250, groupID = 0, refLootEntry = 64600 }; --Rune of Ascension
+  { itemID = 1005032, groupID = 0, refLootEntry = 64600 }; --Idol of the Old Gods
+  { itemID = 1978059, groupID = 0, refLootEntry = 64600 }; --Treasures of Azeroth
+  { itemID = 17304, groupID = 1, refLootEntry = 64627 }; --Crystalized Water Spike
+  { itemID = 17663, groupID = 1, refLootEntry = 64627 }; --Frostbound Bulwark
+  { itemID = 17664, groupID = 1, refLootEntry = 64627 }; --Glaciermind Spellfocus
+  { itemID = 17665, groupID = 1, refLootEntry = 64627 }; --Glacierborn Greatsword
+  { itemID = 17912, groupID = 1, refLootEntry = 64627 }; --Glacierwoven Legwraps
+  { itemID = 17913, groupID = 1, refLootEntry = 64627 }; --Frostbite Warcloak
+  { itemID = 18064, groupID = 1, refLootEntry = 64627 }; --Band of Winter
+  { itemID = 18065, groupID = 1, refLootEntry = 64627 }; --Frostwoven Spiritbinder Gloves
+  { itemID = 18084, groupID = 1, refLootEntry = 64627 }; --Glacierbound Wristguards
+  { itemID = 18085, groupID = 1, refLootEntry = 64627 }; --Frostbite Spellhammer
+  { itemID = 375250, groupID = 0, refLootEntry = 64627 }; --Rune of Ascension
+  { itemID = 978059, groupID = 0, refLootEntry = 64627 }; --Treasures of Azeroth
+  { itemID = 12140, groupID = 1, refLootEntry = 81201 }; --Ocean Song
+  { itemID = 18113, groupID = 1, refLootEntry = 81201 }; --Sea Speaker Amulet
+  { itemID = 18573, groupID = 1, refLootEntry = 81201 }; --Tideforged Sharpshooter
+  { itemID = 18574, groupID = 1, refLootEntry = 81201 }; --Tide Bender Cord
+  { itemID = 18575, groupID = 1, refLootEntry = 81201 }; --Corsair Cape
+  { itemID = 18576, groupID = 1, refLootEntry = 81201 }; --Tempest Charm
+  { itemID = 18613, groupID = 1, refLootEntry = 81201 }; --Mana Vein Boots
+  { itemID = 18614, groupID = 1, refLootEntry = 81201 }; --Coral Cutter
+  { itemID = 18618, groupID = 1, refLootEntry = 81201 }; --Deep Sea Oculus
+  { itemID = 18907, groupID = 1, refLootEntry = 81201 }; --Sinister Council Staff
+  { itemID = 18908, groupID = 1, refLootEntry = 81201 }; --Drowned Highborne Slicer
+  { itemID = 18916, groupID = 1, refLootEntry = 81201 }; --Ocean Kilt
+  { itemID = 375250, groupID = 0, refLootEntry = 81201 }; --Rune of Ascension
+  { itemID = 1615011, groupID = 0, refLootEntry = 81201 }; --Treasures of Azeroth
+  { itemID = 559301, groupID = 1, refLootEntry = 162700 }; --Mantle of Caged Light
+  { itemID = 559306, groupID = 1, refLootEntry = 162700 }; --Faithful Servant
+  { itemID = 559311, groupID = 1, refLootEntry = 162700 }; --Dark Veil Girdle
+  { itemID = 559319, groupID = 1, refLootEntry = 162700 }; --Slumbering Voice Belt
+  { itemID = 559320, groupID = 1, refLootEntry = 162700 }; --Legguards of Spiritual Hunger
+  { itemID = 559339, groupID = 2, refLootEntry = 162700 }; --Pendant of Shattered Prayers
+  { itemID = 559346, groupID = 2, refLootEntry = 162700 }; --Cloak of the Last Confessor
+  { itemID = 559349, groupID = 1, refLootEntry = 162700 }; --Mace of the Dauntless Jailer
+  { itemID = 559361, groupID = 2, refLootEntry = 162700 }; --Forgotten Sin Ring
+  { itemID = 559302, groupID = 1, refLootEntry = 162711 }; --Hollow Glow Robe
+  { itemID = 559306, groupID = 1, refLootEntry = 162711 }; --Faithful Servant
+  { itemID = 559314, groupID = 1, refLootEntry = 162711 }; --Bindings of the Broken Promise
+  { itemID = 559321, groupID = 1, refLootEntry = 162711 }; --Greaves of the Funeral Judgement
+  { itemID = 559329, groupID = 1, refLootEntry = 162711 }; --Sabatons of the Lost Dominion
+  { itemID = 559334, groupID = 2, refLootEntry = 162711 }; --Ring of Tribal Whispers
+  { itemID = 559344, groupID = 2, refLootEntry = 162711 }; --Cloak of the Other Side
+  { itemID = 559353, groupID = 1, refLootEntry = 162711 }; --Glaive of the Bat God
+  { itemID = 559354, groupID = 1, refLootEntry = 162711 }; --Glaive of the Bat God
+  { itemID = 559356, groupID = 1, refLootEntry = 162711 }; --Emblem of the Spider Goddess
+  { itemID = 559362, groupID = 2, refLootEntry = 162711 }; --Offered Flame Necklace
+  { itemID = 559301, groupID = 1, refLootEntry = 162716 }; --Mantle of Caged Light
+  { itemID = 559313, groupID = 1, refLootEntry = 162716 }; --Boots of the Rotting Throne
+  { itemID = 559318, groupID = 1, refLootEntry = 162716 }; --Vest of the Broken Horizon
+  { itemID = 559325, groupID = 1, refLootEntry = 162716 }; --Hollow Ore Pauldrons
+  { itemID = 559330, groupID = 1, refLootEntry = 162716 }; --Vambraces of Innate Hunger
+  { itemID = 559331, groupID = 1, refLootEntry = 162716 }; --Devourer
+  { itemID = 559333, groupID = 2, refLootEntry = 162716 }; --Band of the Three Voices
+  { itemID = 559340, groupID = 2, refLootEntry = 162716 }; --Chain of Silent Hunger
+  { itemID = 559343, groupID = 2, refLootEntry = 162716 }; --Mutated Heart Cloak
+  { itemID = 559357, groupID = 1, refLootEntry = 162716 }; --Fang of the Chimeric Embryo
+  { itemID = 559365, groupID = 1, refLootEntry = 162716 }; --Cutter of the Spawn
+  { itemID = 97730, groupID = 0, refLootEntry = 254401 }; --Worldforged Key Fragment
+  { itemID = 252821, groupID = 1, refLootEntry = 254401 }; --Twinglaive of the Vampire Council
+  { itemID = 252906, groupID = 1, refLootEntry = 254401 }; --Twinglaive of Eternal Slumber
+  { itemID = 254068, groupID = 0, refLootEntry = 254401 }; --Sigil of Cynfael
+  { itemID = 254389, groupID = 1, refLootEntry = 254401 }; --Purified Vitae Chalice
+  { itemID = 254432, groupID = 1, refLootEntry = 254401 }; --Funeral Trousers
+  { itemID = 254758, groupID = 1, refLootEntry = 254401 }; --Tombstone Cover
+  { itemID = 254888, groupID = 1, refLootEntry = 254401 }; --Deathsworn Spaulders
+  { itemID = 375250, groupID = 0, refLootEntry = 254401 }; --Rune of Ascension
+  { itemID = 97730, groupID = 0, refLootEntry = 254405 }; --Worldforged Key Fragment
+  { itemID = 253004, groupID = 1, refLootEntry = 254405 }; --Ghoul Spine Cleaver
+  { itemID = 253053, groupID = 1, refLootEntry = 254405 }; --Conduit of Sinners
+  { itemID = 253102, groupID = 1, refLootEntry = 254405 }; --Spinesplinter Arbalest
+  { itemID = 254070, groupID = 0, refLootEntry = 254405 }; --Sigil of Sinners
+  { itemID = 254532, groupID = 1, refLootEntry = 254405 }; --Deathsworn Pants
+  { itemID = 254941, groupID = 1, refLootEntry = 254405 }; --Bonelink Mantle
+  { itemID = 375250, groupID = 0, refLootEntry = 254405 }; --Rune of Ascension
+  { itemID = 97730, groupID = 0, refLootEntry = 254406 }; --Worldforged Key Fragment
+  { itemID = 253677, groupID = 1, refLootEntry = 254406 }; --Forgiveness
+  { itemID = 253763, groupID = 1, refLootEntry = 254406 }; --Drape of the Horse
+  { itemID = 254069, groupID = 0, refLootEntry = 254406 }; --Sigil of Kurgoth Doomreaver
+  { itemID = 254629, groupID = 1, refLootEntry = 254406 }; --Soulsteel Legplates
+  { itemID = 254715, groupID = 1, refLootEntry = 254406 }; --Forgotten Aegis of Kings
+  { itemID = 255104, groupID = 1, refLootEntry = 254406 }; --Concentrated Death
+  { itemID = 375250, groupID = 0, refLootEntry = 254406 }; --Rune of Ascension
+  { itemID = 97730, groupID = 0, refLootEntry = 254413 }; --Worldforged Key Fragment
+  { itemID = 253151, groupID = 1, refLootEntry = 254413 }; --Sorrow of the Eclipse
+  { itemID = 253442, groupID = 1, refLootEntry = 254413 }; --Cryptsteel Maul
+  { itemID = 253634, groupID = 1, refLootEntry = 254413 }; --Dakrya, Hand of the Second Eidolon
+  { itemID = 253720, groupID = 1, refLootEntry = 254413 }; --Mourner
+  { itemID = 254067, groupID = 0, refLootEntry = 254413 }; --Sigil of Dryn Miel
+  { itemID = 254077, groupID = 0, refLootEntry = 254413 }; --Forgotten Core
+  { itemID = 254260, groupID = 1, refLootEntry = 254413 }; --Remembrance of Aegwynn
+  { itemID = 254303, groupID = 1, refLootEntry = 254413 }; --Missing Promise
+  { itemID = 254672, groupID = 1, refLootEntry = 254413 }; --Niko
+  { itemID = 254845, groupID = 1, refLootEntry = 254413 }; --Funeral Mantle
+  { itemID = 254984, groupID = 1, refLootEntry = 254413 }; --Soulsteel Shoulderguards
+  { itemID = 255061, groupID = 1, refLootEntry = 254413 }; --Blossom of Sorrow
+  { itemID = 375250, groupID = 0, refLootEntry = 254413 }; --Rune of Ascension
+  { itemID = 1179133, groupID = 0, refLootEntry = 254413 }; --Aima, Steed of the Second Eidolon
+  { itemID = 97730, groupID = 0, refLootEntry = 254493 }; --Worldforged Key Fragment
+  { itemID = 254078, groupID = 0, refLootEntry = 254493 }; --Sigil of Kelivex Autumnvale
+  { itemID = 254088, groupID = 1, refLootEntry = 254493 }; --Funeral Treads
+  { itemID = 254131, groupID = 1, refLootEntry = 254493 }; --Deathsworn Boots
+  { itemID = 254174, groupID = 1, refLootEntry = 254493 }; --Bonelink Greaves
+  { itemID = 254217, groupID = 1, refLootEntry = 254493 }; --Soulsteel Sabatons
+  { itemID = 375250, groupID = 0, refLootEntry = 254493 }; --Rune of Ascension
+  { itemID = 97730, groupID = 0, refLootEntry = 254495 }; --Worldforged Key Fragment
+  { itemID = 254080, groupID = 0, refLootEntry = 254495 }; --Sigil of Captain Taveir
+  { itemID = 254088, groupID = 1, refLootEntry = 254495 }; --Funeral Treads
+  { itemID = 254131, groupID = 1, refLootEntry = 254495 }; --Deathsworn Boots
+  { itemID = 254174, groupID = 1, refLootEntry = 254495 }; --Bonelink Greaves
+  { itemID = 254217, groupID = 1, refLootEntry = 254495 }; --Soulsteel Sabatons
+  { itemID = 375250, groupID = 0, refLootEntry = 254495 }; --Rune of Ascension
+  { itemID = 21218, groupID = 6, refLootEntry = 400509 }; --Blue Qiraji Resonating Crystal
+  { itemID = 21323, groupID = 6, refLootEntry = 400509 }; --Green Qiraji Resonating Crystal
+  { itemID = 21324, groupID = 6, refLootEntry = 400509 }; --Yellow Qiraji Resonating Crystal
+  { itemID = 21218, groupID = 6, refLootEntry = 400509 }; --Blue Qiraji Resonating Crystal
+  { itemID = 21323, groupID = 6, refLootEntry = 400509 }; --Green Qiraji Resonating Crystal
+  { itemID = 21324, groupID = 6, refLootEntry = 400509 }; --Yellow Qiraji Resonating Crystal
+  { itemID = 21218, groupID = 6, refLootEntry = 400531 }; --Blue Qiraji Resonating Crystal
+  { itemID = 21232, groupID = 9, refLootEntry = 400531 }; --Imperial Qiraji Armaments
+  { itemID = 21237, groupID = 9, refLootEntry = 400531 }; --Imperial Qiraji Regalia
+  { itemID = 21323, groupID = 6, refLootEntry = 400531 }; --Green Qiraji Resonating Crystal
+  { itemID = 21324, groupID = 6, refLootEntry = 400531 }; --Yellow Qiraji Resonating Crystal
+  { itemID = 11271, groupID = 1, refLootEntry = 454003 }; --Eles
+  { itemID = 11272, groupID = 1, refLootEntry = 454003 }; --Twilight Faceguard
+  { itemID = 11273, groupID = 1, refLootEntry = 454003 }; --Visage of Aydreath
+  { itemID = 11274, groupID = 1, refLootEntry = 454003 }; --Breastplate of the Void
+  { itemID = 11275, groupID = 1, refLootEntry = 454003 }; --The Darkened Gaze
+  { itemID = 11276, groupID = 1, refLootEntry = 454003 }; --Treads of Twilight Shadow
+  { itemID = 11277, groupID = 1, refLootEntry = 454003 }; --Thorn of Aydreath
+  { itemID = 11326, groupID = 1, refLootEntry = 454003 }; --The Dreaming Eternity
+  { itemID = 11327, groupID = 1, refLootEntry = 454003 }; --Shroud of Soothing Twilight
+  { itemID = 11328, groupID = 1, refLootEntry = 454003 }; --Guidance of the Old Gods
+  { itemID = 11431, groupID = 1, refLootEntry = 454003 }; --The Deceiving Refraction
+  { itemID = 454011, groupID = 0, refLootEntry = 454003 }; --Lesser Psychophage
+  { itemID = 1615011, groupID = 0, refLootEntry = 454003 }; --Treasures of Azeroth
+  { itemID = 9261, groupID = 1, refLootEntry = 500002 }; --Lead Ore
+  { itemID = 5569, groupID = 1, refLootEntry = 500003 }; --Seaweed
+  { itemID = 4632, groupID = 1, refLootEntry = 500022 }; --Ornate Bronze Lockbox
+  { itemID = 4633, groupID = 2, refLootEntry = 500022 }; --Heavy Bronze Lockbox
+  { itemID = 4634, groupID = 3, refLootEntry = 500022 }; --Iron Lockbox
+  { itemID = 4636, groupID = 3, refLootEntry = 500022 }; --Strong Iron Lockbox
+  { itemID = 4637, groupID = 4, refLootEntry = 500022 }; --Steel Lockbox
+  { itemID = 4638, groupID = 4, refLootEntry = 500022 }; --Reinforced Steel Lockbox
+  { itemID = 5759, groupID = 5, refLootEntry = 500022 }; --Thorium Lockbox
+  { itemID = 5760, groupID = 5, refLootEntry = 500022 }; --Eternium Lockbox
+  { itemID = 537, groupID = 14, refLootEntry = 510000 }; --Dull Frenzy Scale
+  { itemID = 755, groupID = 106, refLootEntry = 510000 }; --Melted Candle
+  { itemID = 1686, groupID = 107, refLootEntry = 510000 }; --Bristly Whisker
+  { itemID = 1688, groupID = 107, refLootEntry = 510000 }; --Long Soft Tail
+  { itemID = 1701, groupID = 9, refLootEntry = 510000 }; --Curved Basilisk Claw
+  { itemID = 1702, groupID = 9, refLootEntry = 510000 }; --Intact Basilisk Spine
+  { itemID = 2295, groupID = 24, refLootEntry = 510000 }; --Large Boar Tusk
+  { itemID = 2608, groupID = 23, refLootEntry = 510000 }; --Threshadon Ambergris
+  { itemID = 3010, groupID = 22, refLootEntry = 510000 }; --Fine Sand
+  { itemID = 3180, groupID = 20, refLootEntry = 510000 }; --Flecked Raptor Scale
+  { itemID = 3181, groupID = 8, refLootEntry = 510000 }; --Partially Digested Meat
+  { itemID = 3299, groupID = 1, refLootEntry = 510000 }; --Fractured Canine
+  { itemID = 3301, groupID = 12, refLootEntry = 510000 }; --Sharp Canine
+  { itemID = 3401, groupID = 8, refLootEntry = 510000 }; --Rough Crocolisk Scale
+  { itemID = 3402, groupID = 107, refLootEntry = 510000 }; --Soft Patch of Fur
+  { itemID = 3403, groupID = 24, refLootEntry = 510000 }; --Ivory Boar Tusk
+  { itemID = 3669, groupID = 21, refLootEntry = 510000 }; --Gelatinous Goo
+  { itemID = 3673, groupID = 20, refLootEntry = 510000 }; --Broken Arrow
+  { itemID = 3676, groupID = 21, refLootEntry = 510000 }; --Slimy Ichor
+  { itemID = 3766, groupID = 5, refLootEntry = 510000 }; --Gryphon Feather Quill
+  { itemID = 4555, groupID = 8, refLootEntry = 510000 }; --Thick Scaly Tail
+  { itemID = 4556, groupID = 10, refLootEntry = 510000 }; --Speckled Shell Fragment
+  { itemID = 5120, groupID = 2, refLootEntry = 510000 }; --Long Tail Hair
+  { itemID = 5124, groupID = 20, refLootEntry = 510000 }; --Small Raptor Tooth
+  { itemID = 5125, groupID = 109, refLootEntry = 510000 }; --Charged Scale
+  { itemID = 5128, groupID = 109, refLootEntry = 510000 }; --Shed Lizard Skin
+  { itemID = 5135, groupID = 108, refLootEntry = 510000 }; --Thin Black Claw
+  { itemID = 5136, groupID = 108, refLootEntry = 510000 }; --Torn Furry Ear
+  { itemID = 5429, groupID = 106, refLootEntry = 510000 }; --A Pretty Rock
+  { itemID = 5569, groupID = 10, refLootEntry = 510000 }; --Seaweed
+  { itemID = 5602, groupID = 17, refLootEntry = 510000 }; --Sticky Spider Webbing
+  { itemID = 5741, groupID = 106, refLootEntry = 510000 }; --Rock Chip
+  { itemID = 6445, groupID = 16, refLootEntry = 510000 }; --Brittle Molting
+  { itemID = 7073, groupID = 107, refLootEntry = 510000 }; --Broken Fang
+  { itemID = 11384, groupID = 9, refLootEntry = 510000 }; --Broken Basilisk Teeth
+  { itemID = 11385, groupID = 9, refLootEntry = 510000 }; --Basilisk Scale
+  { itemID = 11390, groupID = 1, refLootEntry = 510000 }; --Broken Bat Fang
+  { itemID = 11391, groupID = 1, refLootEntry = 510000 }; --Spined Bat Wing
+  { itemID = 11392, groupID = 1, refLootEntry = 510000 }; --Severed Bat Claw
+  { itemID = 11393, groupID = 1, refLootEntry = 510000 }; --Small Bat Skull
+  { itemID = 11394, groupID = 1, refLootEntry = 510000 }; --Bat Heart
+  { itemID = 32714, groupID = 17, refLootEntry = 510000 }; --Splintered Spider Fang
+  { itemID = 537, groupID = 14, refLootEntry = 510000 }; --Dull Frenzy Scale
+  { itemID = 755, groupID = 106, refLootEntry = 510000 }; --Melted Candle
+  { itemID = 800, groupID = 1, refLootEntry = 510000 }; --Bone
+  { itemID = 1686, groupID = 107, refLootEntry = 510000 }; --Bristly Whisker
+  { itemID = 1688, groupID = 107, refLootEntry = 510000 }; --Long Soft Tail
+  { itemID = 1701, groupID = 9, refLootEntry = 510000 }; --Curved Basilisk Claw
+  { itemID = 1702, groupID = 9, refLootEntry = 510000 }; --Intact Basilisk Spine
+  { itemID = 2295, groupID = 24, refLootEntry = 510000 }; --Large Boar Tusk
+  { itemID = 2608, groupID = 23, refLootEntry = 510000 }; --Threshadon Ambergris
+  { itemID = 3010, groupID = 22, refLootEntry = 510000 }; --Fine Sand
+  { itemID = 3180, groupID = 20, refLootEntry = 510000 }; --Flecked Raptor Scale
+  { itemID = 3181, groupID = 8, refLootEntry = 510000 }; --Partially Digested Meat
+  { itemID = 3299, groupID = 1, refLootEntry = 510000 }; --Fractured Canine
+  { itemID = 3301, groupID = 12, refLootEntry = 510000 }; --Sharp Canine
+  { itemID = 3401, groupID = 8, refLootEntry = 510000 }; --Rough Crocolisk Scale
+  { itemID = 3402, groupID = 107, refLootEntry = 510000 }; --Soft Patch of Fur
+  { itemID = 3403, groupID = 24, refLootEntry = 510000 }; --Ivory Boar Tusk
+  { itemID = 3669, groupID = 21, refLootEntry = 510000 }; --Gelatinous Goo
+  { itemID = 3673, groupID = 20, refLootEntry = 510000 }; --Broken Arrow
+  { itemID = 3676, groupID = 21, refLootEntry = 510000 }; --Slimy Ichor
+  { itemID = 3766, groupID = 5, refLootEntry = 510000 }; --Gryphon Feather Quill
+  { itemID = 4555, groupID = 8, refLootEntry = 510000 }; --Thick Scaly Tail
+  { itemID = 4556, groupID = 10, refLootEntry = 510000 }; --Speckled Shell Fragment
+  { itemID = 4585, groupID = 17, refLootEntry = 510000 }; --Dripping Spider Mandible
+  { itemID = 5120, groupID = 2, refLootEntry = 510000 }; --Long Tail Hair
+  { itemID = 5124, groupID = 20, refLootEntry = 510000 }; --Small Raptor Tooth
+  { itemID = 5125, groupID = 109, refLootEntry = 510000 }; --Charged Scale
+  { itemID = 5128, groupID = 109, refLootEntry = 510000 }; --Shed Lizard Skin
+  { itemID = 5135, groupID = 108, refLootEntry = 510000 }; --Thin Black Claw
+  { itemID = 5136, groupID = 108, refLootEntry = 510000 }; --Torn Furry Ear
+  { itemID = 5429, groupID = 106, refLootEntry = 510000 }; --A Pretty Rock
+  { itemID = 5602, groupID = 17, refLootEntry = 510000 }; --Sticky Spider Webbing
+  { itemID = 5741, groupID = 106, refLootEntry = 510000 }; --Rock Chip
+  { itemID = 6444, groupID = 16, refLootEntry = 510000 }; --Forked Tongue
+  { itemID = 6445, groupID = 16, refLootEntry = 510000 }; --Brittle Molting
+  { itemID = 6826, groupID = 110, refLootEntry = 510000 }; --Brilliant Scale
+  { itemID = 7073, groupID = 107, refLootEntry = 510000 }; --Broken Fang
+  { itemID = 11384, groupID = 9, refLootEntry = 510000 }; --Broken Basilisk Teeth
+  { itemID = 11385, groupID = 9, refLootEntry = 510000 }; --Basilisk Scale
+  { itemID = 11390, groupID = 1, refLootEntry = 510000 }; --Broken Bat Fang
+  { itemID = 11391, groupID = 1, refLootEntry = 510000 }; --Spined Bat Wing
+  { itemID = 11392, groupID = 1, refLootEntry = 510000 }; --Severed Bat Claw
+  { itemID = 11393, groupID = 1, refLootEntry = 510000 }; --Small Bat Skull
+  { itemID = 11394, groupID = 1, refLootEntry = 510000 }; --Bat Heart
+  { itemID = 17056, groupID = 4, refLootEntry = 510000 }; --Light Feather
+  { itemID = 17057, groupID = 22, refLootEntry = 510000 }; --Shiny Fish Scales
+  { itemID = 17058, groupID = 8, refLootEntry = 510000 }; --Fish Oil
+  { itemID = 32714, groupID = 17, refLootEntry = 510000 }; --Splintered Spider Fang
+  { itemID = 5758, groupID = 5, refLootEntry = 600000 }; --Mithril Lockbox
+  { itemID = 5759, groupID = 5, refLootEntry = 600000 }; --Thorium Lockbox
+  { itemID = 5760, groupID = 5, refLootEntry = 600000 }; --Eternium Lockbox
+  { itemID = 770, groupID = 24, refLootEntry = 600011 }; --Pointy Crocolisk Tooth
+  { itemID = 800, groupID = 1, refLootEntry = 600011 }; --Bone
+  { itemID = 1074, groupID = 1, refLootEntry = 600011 }; --Hard Spider Leg Tip
+  { itemID = 4580, groupID = 22, refLootEntry = 600011 }; --Sabertooth Fang
+  { itemID = 4581, groupID = 22, refLootEntry = 600011 }; --Patch of Fine Fur
+  { itemID = 4585, groupID = 1, refLootEntry = 600011 }; --Dripping Spider Mandible
+  { itemID = 4588, groupID = 9, refLootEntry = 600011 }; --Pristine Raptor Skull
+  { itemID = 4787, groupID = 21, refLootEntry = 600011 }; --Burning Pitch
+  { itemID = 6444, groupID = 7, refLootEntry = 600011 }; --Forked Tongue
+  { itemID = 6826, groupID = 7, refLootEntry = 600011 }; --Brilliant Scale
+  { itemID = 8146, groupID = 2, refLootEntry = 600011 }; --Wicked Claw
+  { itemID = 11403, groupID = 2, refLootEntry = 600011 }; --Large Bat Fang
+  { itemID = 17056, groupID = 18, refLootEntry = 600011 }; --Light Feather
+  { itemID = 17057, groupID = 11, refLootEntry = 600011 }; --Shiny Fish Scales
+  { itemID = 17058, groupID = 11, refLootEntry = 600011 }; --Fish Oil
+  { itemID = 20015, groupID = 9, refLootEntry = 600011 }; --Elder Raptor Feathers
+  { itemID = 20016, groupID = 9, refLootEntry = 600011 }; --Trophy Raptor Skull
+  { itemID = 25409, groupID = 5, refLootEntry = 600011 }; --Resilient Tail Hair
+  { itemID = 25411, groupID = 5, refLootEntry = 600011 }; --Worn Hoof
+  { itemID = 25413, groupID = 6, refLootEntry = 600011 }; --Smooth Fur
+  { itemID = 25418, groupID = 4, refLootEntry = 600011 }; --Razor Sharp Fang
+  { itemID = 25421, groupID = 4, refLootEntry = 600011 }; --Gnarled Claw
+  { itemID = 25428, groupID = 18, refLootEntry = 600011 }; --Savage Talon
+  { itemID = 25435, groupID = 1, refLootEntry = 600011 }; --Hardened Carapace
+  { itemID = 25437, groupID = 1, refLootEntry = 600011 }; --Barbed Leg
+  { itemID = 25441, groupID = 14, refLootEntry = 600011 }; --Gnarled Boar Tusk
+  { itemID = 25443, groupID = 14, refLootEntry = 600011 }; --Bloody Snout
+  { itemID = 29567, groupID = 9, refLootEntry = 600011 }; --Raptor Talon
+  { itemID = 29568, groupID = 9, refLootEntry = 600011 }; --Raptor War Feather
+  { itemID = 30512, groupID = 1, refLootEntry = 600011 }; --Giant Spinneret
+  { itemID = 30513, groupID = 1, refLootEntry = 600011 }; --Bloody Spider Fang
+  { itemID = 30812, groupID = 7, refLootEntry = 600011 }; --Iridescent Scale
+  { itemID = 33546, groupID = 4, refLootEntry = 600011 }; --Vicious Fang
+  { itemID = 33547, groupID = 4, refLootEntry = 600011 }; --Hardened Claw
+  { itemID = 33549, groupID = 4, refLootEntry = 600011 }; --Thick Tail Hair
+  { itemID = 33550, groupID = 13, refLootEntry = 600011 }; --Thick Carapace
+  { itemID = 33551, groupID = 13, refLootEntry = 600011 }; --Razor Pincer
+  { itemID = 33561, groupID = 12, refLootEntry = 600011 }; --Hardened Flipper
+  { itemID = 33562, groupID = 12, refLootEntry = 600011 }; --Enormous Jaws
+  { itemID = 33569, groupID = 9, refLootEntry = 600011 }; --Barbed Fang
+  { itemID = 33571, groupID = 9, refLootEntry = 600011 }; --Rending Talon
+  { itemID = 36788, groupID = 6, refLootEntry = 600011 }; --Matted Fur
+  { itemID = 36789, groupID = 10, refLootEntry = 600011 }; --Cracked Horn
+  { itemID = 36797, groupID = 16, refLootEntry = 600011 }; --Massive Scaly Tail
+  { itemID = 36798, groupID = 16, refLootEntry = 600011 }; --Scraped Shell Fragment
+  { itemID = 36801, groupID = 4, refLootEntry = 600011 }; --Crooked Fang
+  { itemID = 36802, groupID = 9, refLootEntry = 600011 }; --Scything Talon
+  { itemID = 36804, groupID = 6, refLootEntry = 600011 }; --Chipped Ivory Tusk
+  { itemID = 36805, groupID = 6, refLootEntry = 600011 }; --Misshapen Foot
+  { itemID = 36806, groupID = 6, refLootEntry = 600011 }; --Perfectly Rounded Foot
+  { itemID = 36808, groupID = 6, refLootEntry = 600011 }; --Bent Ivory Tusk
+  { itemID = 36823, groupID = 18, refLootEntry = 600011 }; --Silky Plumage
+  { itemID = 36824, groupID = 18, refLootEntry = 600011 }; --Articulated Talon
+  { itemID = 39211, groupID = 4, refLootEntry = 600011 }; --Serrated Fang
+  { itemID = 39212, groupID = 4, refLootEntry = 600011 }; --Indurate Claw
+  { itemID = 39562, groupID = 6, refLootEntry = 600011 }; --Looped Tusk
+  { itemID = 39563, groupID = 6, refLootEntry = 600011 }; --Stumpy Foot
+  { itemID = 39567, groupID = 7, refLootEntry = 600011 }; --Rubicund Scale
+  { itemID = 39568, groupID = 7, refLootEntry = 600011 }; --Hollow Fang
+  { itemID = 40360, groupID = 19, refLootEntry = 600011 }; --Punctured Pelt
+  { itemID = 40391, groupID = 11, refLootEntry = 600011 }; --Mirror-Like Seashell
+  { itemID = 43520, groupID = 18, refLootEntry = 600011 }; --Distinctive Feathers
+  { itemID = 44759, groupID = 1, refLootEntry = 600011 }; --Acid-Drenched Fangs
+  { itemID = 44762, groupID = 6, refLootEntry = 600011 }; --Fat-Stained Fur
+  { itemID = 44763, groupID = 10, refLootEntry = 600011 }; --Chunky Horn
+  { itemID = 44766, groupID = 20, refLootEntry = 600011 }; --Slime-Drenched Scale
+  { itemID = 44767, groupID = 20, refLootEntry = 600011 }; --Gelid Nerve Fluid
+  { itemID = 44782, groupID = 9, refLootEntry = 600011 }; --Bent Raptor Talon
+  { itemID = 44783, groupID = 9, refLootEntry = 600011 }; --Blood-Soaked Raptor War Feather
+  { itemID = 11078, groupID = 0, refLootEntry = 750122 }; --Relic Coffer Key
+  { itemID = 11446, groupID = 0, refLootEntry = 750122 }; --A Crumpled Up Note
+  { itemID = 11468, groupID = 0, refLootEntry = 750122 }; --Dark Iron Fanny Pack
+  { itemID = 14047, groupID = 0, refLootEntry = 750122 }; --Runecloth
+  { itemID = 18945, groupID = 0, refLootEntry = 750122 }; --Dark Iron Residue
+  { itemID = 22206, groupID = 0, refLootEntry = 750122 }; --Bouquet of Red Roses
+  { itemID = 22528, groupID = 0, refLootEntry = 750122 }; --Dark Iron Scraps
+  { itemID = 97730, groupID = 0, refLootEntry = 750122 }; --Worldforged Key Fragment
+  { itemID = 375250, groupID = 0, refLootEntry = 750122 }; --Rune of Ascension
+  { itemID = 1278048, groupID = 1, refLootEntry = 967705 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 1, refLootEntry = 967705 }; --Case of Fortune
+  { itemID = 97885, groupID = 1, refLootEntry = 967706 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 1, refLootEntry = 967706 }; --Talent Sealed Card Pack
+  { itemID = 1278048, groupID = 1, refLootEntry = 1316996 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 1, refLootEntry = 1316996 }; --Case of Fortune
+  { itemID = 1278048, groupID = 1, refLootEntry = 1316996 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 1, refLootEntry = 1316996 }; --Case of Fortune
+  { itemID = 1278048, groupID = 1, refLootEntry = 1316996 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 1, refLootEntry = 1316996 }; --Case of Fortune
+  { itemID = 1278048, groupID = 1, refLootEntry = 1316996 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 1, refLootEntry = 1316996 }; --Case of Fortune
+  { itemID = 400751, groupID = 5, refLootEntry = 8111111 }; --Raider
 })

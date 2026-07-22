@@ -104,43 +104,6 @@ function AtlasLoot:OpenDB(frame, type, text)
     self:OpenDewdropMenu(frame, menuList)
 end
 
-local itemEquipLocConversion = {
-	"INVTYPE_HEAD","INVTYPE_NECK","INVTYPE_SHOULDER","INVTYPE_BODY","INVTYPE_CHEST",
-	"INVTYPE_WAIST","INVTYPE_LEGS","INVTYPE_FEET","INVTYPE_WRIST",	"INVTYPE_HAND",
-	"INVTYPE_FINGER","INVTYPE_TRINKET","INVTYPE_WEAPON","INVTYPE_SHIELD","INVTYPE_RANGED",
-	"INVTYPE_CLOAK","INVTYPE_2HWEAPON","INVTYPE_BAG","INVTYPE_TABARD","INVTYPE_ROBE",
-    "INVTYPE_WEAPONMAINHAND","INVTYPE_WEAPONOFFHAND","INVTYPE_HOLDABLE","INVTYPE_AMMO",
-    "INVTYPE_THROWN","INVTYPE_RANGEDRIGHT","INVTYPE_QUIVER","INVTYPE_RELIC",
-}
-
--- custom getiteminfo returns same formate as getiteminfo but will use info from either getiteminfo or getiteminfoinstant
-function AtlasLoot:GetItemInfo(item, dontCache)
-	if not item or item == 0 then return end
-	item = tonumber(item) and Item:CreateFromID(item) or Item:CreateFromLink(item)
-	if not item then return end
-	local itemDescription
-	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = GetItemInfo(item.itemID)
-	if not dontCache and not item:GetInfo() then
-		self:ItemsLoading(1)
-		item:ContinueOnLoad(function()
-			self:ItemsLoading(-1)
-		end)
-	end
-		local itemInstant = GetItemInfoInstant(item.itemID)
-		if itemInstant then
-			itemName = itemName or itemInstant.name
-			itemSubType = itemSubType or _G["ITEM_SUBCLASS_"..itemInstant.classID.."_"..itemInstant.subclassID]
-			itemEquipLoc = itemEquipLoc or itemEquipLocConversion[itemInstant.inventoryType]
-
-			itemTexture = itemTexture or itemInstant.icon
-			itemQuality = itemQuality or itemInstant.quality
-			itemLink = itemLink or item:GetLink()
-			itemLevel = itemLevel or item.itemLevel
-			itemDescription = itemDescription or itemInstant.description
-		end
-	return itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice, itemDescription
-end
-
 local AtlasLootScanTooltip = CreateFrame("GAMETOOLTIP","AtlasLootScanTooltip",nil,"GameTooltipTemplate")
 AtlasLootScanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
 -- Create enchant tooltip
@@ -172,7 +135,7 @@ function AtlasLoot:Chatlink(ID,chatType,Type)
     if Type == "spell" then
         SendChatMessage(self:GetEnchantLink(ID) ,chatType)
     else
-        SendChatMessage(select(2,GetItemInfo(ID)) ,chatType)
+        SendChatMessage(self.ItemUtil:GetItemLink(ID) ,chatType)
     end
 end
 
@@ -265,9 +228,10 @@ function AtlasLoot:PopoupItemFrame(frame, data, craftedItem)
 		else
 			local correctID = (type(item) == "number" and item) or (type(item) == "table" and (item.itemID or item.ItemID))
 			local itemID = self:GetItemDifficultyID(correctID, self.ItemindexID)
-			local itemData = {self:GetItemInfo(itemID)}
-			SetItemButtonTexture(button, itemData[10])
-			SetItemButtonQuality(button, itemData[3])
+			local itemData = self.ItemUtil:GetItemInfo(itemID)
+			if not itemData then break end
+			SetItemButtonTexture(button, itemData.icon)
+			SetItemButtonQuality(button, itemData.quality)
 
 			button.itemID = itemID
 			button.itemTexture = frame.itemTexture
@@ -616,7 +580,7 @@ end
 
 function AtlasLoot:RateLimitLoadTable(taskData, taskFunction)
 	-- rate limit tied to half the current frame rate
-	local maxDuration = (self.selectedProfile.ItemLoadingSpeed*500)/GetFramerate()
+	local maxDuration = ((self.selectedProfile and self.selectedProfile.ItemLoadingSpeed or 1)*500)/GetFramerate()
 	local startTime = debugprofilestop()
 	local function continue()
 		startTime = debugprofilestop()

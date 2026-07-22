@@ -4,7 +4,7 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 function AtlasLoot:CreateToken(dataID)
 	local newDataID, slotType = string.split("-", dataID, 2)
 	local itemType = "INVTYPE_"..slotType
-	local slotName = self.Equipment:GetSlotName(itemType)
+	local slotName = self.ItemUtil:GetSlotName(itemType)
 	
 	--Creates data set of the item type
 	if (self.data.token[dataID] == nil) then
@@ -22,8 +22,7 @@ function AtlasLoot:CreateToken(dataID)
 	while self.data.item[newDataID..count] do
 		for _, item in ipairs(self.data.item[newDataID..count]) do
 			if item.itemID then
-				local itemT = gsub(select(9, self:GetItemInfo(item.itemID)), "INVTYPE_ROBE", "INVTYPE_CHEST")
-				if itemType == itemT then
+				if itemType == self.ItemUtil:GetItemEquiplocation(item.itemID) then
 					table.insert(self.data.token[dataID][1], {itemID = item.itemID, desc = self:GetDataPageName(newDataID..count)})
 				end
 			end
@@ -90,14 +89,6 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 		return text
 	end
 
-	-- Combind robes with chest
-	local function getEquip(equipLoc)
-		if equipLoc == "INVTYPE_ROBE" then
-			return "INVTYPE_CHEST"
-		end
-		return equipLoc
-	end
-
 	-- Show the loot table or refresh it
 	local firstLoad
 	local function showTable()
@@ -115,14 +106,14 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 
 	local unsorted = {}
 	-- Creates type catagorys and then adds items to them
-	local function sortItem(item, armorSubType, equipLoc, armorType)
-		if not unsorted[armorSubType] then unsorted[armorSubType] = {} end
-		if equipLoc and not unsorted[armorSubType][getEquip(equipLoc)] then unsorted[armorSubType][getEquip(equipLoc)] = {} end
-		if equipLoc then
-			table.insert(unsorted[armorSubType][getEquip(equipLoc)], {item, armorType})
+	local function sortItem(item, armorSubClassID, armorInventoryType, armorClassID)
+		if not unsorted[armorSubClassID] then unsorted[armorSubClassID] = {} end
+		if armorInventoryType and not unsorted[armorSubClassID][armorInventoryType] then unsorted[armorSubClassID][armorInventoryType] = {} end
+		if armorInventoryType then
+			table.insert(unsorted[armorSubClassID][armorInventoryType], {item, armorClassID})
 		else
-			local type = armorType or "Misc"
-			local subType = armorSubType or "Misc"
+			local type = armorClassID or "Misc"
+			local subType = armorSubClassID or "Misc"
 			if not unsorted[subType] then unsorted[subType] = {} end
 			if not unsorted[subType]["Misc"] then unsorted[subType]["Misc"] = {} end
 			table.insert(unsorted[subType]["Misc"], {item, type})
@@ -132,7 +123,7 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 		for aType, v in pairs(unsorted) do
 			for eLoc, t in pairs(v) do
 				for i, items in ipairs(t) do
-					local slot = self.Equipment:GetSlotName(getEquip(eLoc))
+					local slot = self.ItemUtil:GetSlotName(eLoc)
 					local name = slot and items[2] and aType.." "..items[2].." - "..slot or aType or ""
 					local lootType = self.data.onDemand[typeL]
 					if i == 1 then
@@ -149,13 +140,13 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 	end
 
 	-- Load items to cache and check they are either an armor or weapon
-	local function processItem(itemData)
-		if not itemData then return end
-		if itemData.itemID then
+	local function processItem(item)
+		if not item then return end
+		if item.itemID then
 			self:ItemsLoading(-1)
-			local armorType, armorSubType, _, equipLoc = select(6,self:GetItemInfo(itemData.itemID, true))
-			if not isDungeon or armorType == "Armor" or armorType == "Weapon" then
-				sortItem(itemData, armorSubType, equipLoc, armorType)
+			local itemData = self.ItemUtil:GetItemInfo(item.itemID)
+			if not isDungeon or itemData.classID == 4 or itemData.classID == 2 then
+				sortItem(item, itemData.subclassID, itemData.inventoryType, itemData.classID)
 			end
 		end
 	end
