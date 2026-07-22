@@ -153,8 +153,7 @@ function AtlasLoot:InitializeMenus()
 		{"Crafting", "Crafting" },
 		{"Sets/Collections", "Collections" },
 		{"PvP Rewards", "PVP" },
-		{"Vanity", "Vanity" },
-		{"Ascension Vanity Collection", "CollectionsAscension" },
+		{"Vanity Collection", "CollectionsAscension" },
 		{"Factions", "Factions" },
 		{"World Events", "WorldEvents" },
 	}
@@ -385,16 +384,6 @@ function AtlasLoot:InitializeMenus()
 		{ "TNINE" },
 		{ "TTEN" },
 	}
-
-	------------------------------------- Vanity Menus -------------------------------------
-	collection.VanityCLASSIC = {
-		Module = "AtlasLoot_Vanity",
-		{ "Tabards" },
-		{ "VanityPetsOld" },
-		{ "Mounts" },
-	}
-	collection.VanityTBC = collection.VanityCLASSIC
-	collection.VanityWRATH = collection.VanityCLASSIC
 	
 	------------------------------------- Faction Menus -------------------------------------
 	collection.FactionsCLASSIC = {

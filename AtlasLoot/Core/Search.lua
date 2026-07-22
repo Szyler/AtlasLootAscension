@@ -698,7 +698,7 @@ function AtlasLoot:InitializeSearch()
         local searchOptionsItems = {{
             { text = "Search options", isTitle = true },
             {
-                text = "Ascension Vanity Collection", isRadio = true, checked = profile.SearchAscensionVanity, dontCloseWhenClicked = true,
+                text = "Vanity Collection", isRadio = true, checked = profile.SearchAscensionVanity, dontCloseWhenClicked = true,
                 tooltip = "If checked, AtlasLoot will search Ascension Vanity Collection", func = function() profile.SearchAscensionVanity = not profile.SearchAscensionVanity end
             },
         }}
