@@ -194,9 +194,9 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 		extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
 	elseif itemNumber.sourcePage and itemNumber.sourcePage[2] == "Token" then
 		extra = self:FixText("Set Token (Click)")
-	elseif itemData.subclassName and itemData.inventoryTypeName then
+	elseif itemData and itemData.subclassName and itemData.inventoryTypeName then
 		extra = itemData.subclassName .. ", " .. itemData.inventoryTypeName
-	elseif itemData.subclassName then
+	elseif itemData and itemData.subclassName then
 		extra = itemData.subclassName
 	else
 		extra = ""
