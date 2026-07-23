@@ -281,8 +281,6 @@ function AtlasLoot:AddItemData(var1, var2)
 			end
 		end
 	end
-	wipe(data)
-	collectgarbage("collect")
 end
 
 local subTypes = {
@@ -331,10 +329,6 @@ for i, sType in ipairs(subTypes) do
 	subType[sType] = i
 end
 
-local baseType = {
-	Armor = 1, Weapon = 2, Recipe = 3, Quest = 4, Miscellaneous = 5
-}
-
 local displayData = {}
 
 local function getLootItem(newTable, node)
@@ -353,15 +347,22 @@ local function getLootItem(newTable, node)
     end
 end
 
+local classIdOrder = {4,2,5,9,15}
+local function getClassIdOrder(id)
+	for _, i in pairs (classIdOrder) do
+		if i == id then return true end
+	end
+end
+
 local function sortItemData(self, dataSource, dataID, tablenum)
     if not dataSource or not dataSource[tablenum] then return end
-    
+
     local lootTables = { self.data.item[dataID..tablenum] and dataID..tablenum }
     local lootTableName = (self.data.item[dataID..tablenum] and dataID..tablenum) or 
                           (#dataSource[tablenum][2] > 0 and self.data.item[dataSource[tablenum][2][1]] and dataSource[tablenum][2][1])
-    
+
     if displayData[lootTableName] then return displayData[lootTableName] end
-    
+
     local dontSort, isVanity = false, false
     if #dataSource[tablenum][2] > 0 then
         for _, ref in pairs(dataSource[tablenum][2]) do
@@ -372,14 +373,14 @@ local function sortItemData(self, dataSource, dataID, tablenum)
             end
         end
     end
-    
+
     dontSort = dontSort or (self.data.item[lootTableName] and self.data.item[lootTableName].dontSort) or false
     isVanity = isVanity or (self.data.item[lootTableName] and self.data.item[lootTableName].vanityCollection) or false
     if #lootTables == 0 then return end
-    
+
     local newTable = {{}}
     local duplicateCheck = {}
-    
+
     if not dontSort then
         local itemCatagories = {}
         for _, lootTableSelection in ipairs(lootTables) do
@@ -387,23 +388,23 @@ local function sortItemData(self, dataSource, dataID, tablenum)
                 for _, itemData in ipairs(self.data.item[lootTableSelection]) do
                     if itemData and itemData.itemID and not duplicateCheck[itemData.itemID] then
                         local itemInfo = self.ItemUtil:GetItemInfo(itemData.itemID)
-                        
-                        -- Graceful fallbacks for uncategorised or pending item database queries
-                        local className = itemInfo and itemInfo.className or "Miscellaneous"
+
+                        -- Fallback for uncategorised or pending item database queries
                         local subclassName = itemInfo and itemInfo.subclassName or "Miscellaneous"
                         local inventoryType = itemInfo and itemInfo.inventoryType
-                        
-                        local bTypeIdx = baseType[className] or 5
+
+                        local bTypeIdx = getClassIdOrder(itemInfo.classID) and itemInfo.classID or 5
+
                         if not itemCatagories[bTypeIdx] then
                             itemCatagories[bTypeIdx] = {}
                         end
                         local iType = itemCatagories[bTypeIdx]
-                        
+
                         local sTypeIdx = subType[subclassName] or 21
                         if not iType[sTypeIdx] then
                             iType[sTypeIdx] = {}
                         end
-                        
+
                         local addType
                         if inventoryType then
                             if not iType[sTypeIdx][inventoryType] then
@@ -413,9 +414,9 @@ local function sortItemData(self, dataSource, dataID, tablenum)
                         else
                             addType = iType[sTypeIdx]
                         end
-                        
+
                         table.insert(addType, itemData)
-                        
+
                         if not itemData.name then
                             duplicateCheck[itemData.itemID] = true
                         end
@@ -423,16 +424,16 @@ local function sortItemData(self, dataSource, dataID, tablenum)
                 end
             end
         end
-        
-        -- FIX: Process sparse array indices correctly without breaking via pairs lookup
-        for i = 1, 5 do
+
+        --Process sparse array indices correctly without breaking via pairs lookup
+        for _, i in pairs(classIdOrder) do
             local itemCat = itemCatagories[i]
             if itemCat then
                 local currentPage = #newTable
                 local countBefore = #newTable[currentPage]
-                
+
                 getLootItem(newTable, itemCat)
-                
+
                 -- Check if items were added to the current grid workspace
                 if #newTable[currentPage] > countBefore or #newTable > currentPage then
                     if #newTable[#newTable] >= 30 then
@@ -441,35 +442,34 @@ local function sortItemData(self, dataSource, dataID, tablenum)
                     -- Insert visual padding block between major item category shifts
                     if #newTable[#newTable] ~= 15 and #newTable[#newTable] ~= 0 then
                         local lastEntry = newTable[#newTable][#newTable[#newTable]]
-                        if lastEntry and lastEntry[1] ~= "blankLine" then
+                        if lastEntry and lastEntry[1] ~= "blankLine"  and type(newTable[#newTable]) == "table" then
                             table.insert(newTable[#newTable], {"blankLine"})
                         end
                     end
                 end
             end
         end
-        AtlasLootITEMCAT = itemCatagories
-        
+
     elseif isVanity then
         newTable = self.data.item[lootTableName] or {{}}
     else
-        for itemNum, item in ipairs(self.data.item[lootTableName] or {}) do
-            if (#newTable[#newTable] ~= 0 and item.pageBreak) then
-                if #newTable[#newTable] < 16 then
-                    for i = 1, (15 - #newTable[#newTable]) do
-                        table.insert(newTable[#newTable], {"blankLine"})
-                    end
-                elseif #newTable[#newTable] > 15 then
-                    table.insert(newTable, {})
-                end
-            end
-            table.insert(newTable[#newTable], item)
-            if #newTable[#newTable] >= 30 and itemNum ~= #self.data.item[lootTableName] then
-                table.insert(newTable, {})
-            end
-        end
+		for itemNum, item in ipairs(self.data.item[lootTableName]) do
+			if (#newTable[#newTable] ~= 0 and item.pageBreak) then
+				if #newTable[#newTable] < 16 then
+					for i = 1, (15 - #newTable[#newTable]) do
+						table.insert(newTable[#newTable], {"blankLine"})
+					end
+				elseif #newTable[#newTable] > 15 then
+					table.insert(newTable, {})
+				end
+			end
+			table.insert(newTable[#newTable], item)
+			if #newTable[#newTable] >= 30 and itemNum ~= #self.data.item[lootTableName] then
+				table.insert(newTable, {})
+			end
+		end
     end
-    
+
     displayData[lootTableName] = newTable
     if self.selectedProfile and self.selectedProfile.isAdmin then
         AtlaslootDisplaydata = displayData
@@ -503,6 +503,9 @@ function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 		dataSource = self.ui.menus.data[dataID]
 		itemData = sortItemData(self, dataSource, dataID, tablenum)
 	end
-	if not itemData then return end
+	if not itemData then
+		dataSource = self.ui.menus.data[dataID]
+		itemData = {[1] = {}}
+	end
 	return dataSource, itemData, #itemData
 end
