@@ -146,7 +146,7 @@ AtlasLoot:AddNewMenus({
 		{"Summoner's Tomb", {} },
 		{"Shadowforge Flame Keeper", {9956} },
 		{"Magmus", {9938} },
-		{"Emperor Dagran Thaurissan", {8929} },
+		{"Emperor Dagran Thaurissan", {9019} },
 		{"Princess Moira Bronzebeard", {750122} },
 	},
 
@@ -168,7 +168,7 @@ AtlasLoot:AddNewMenus({
 		Loadfirst = 3,
 		Map = "BlackrockSpire",
 		{"Scarshield Quartermaster", {9046} },
-		{"Spirestone Butcher (Rare)", {9219,2075549} },
+		{"Spirestone Butcher (Rare)", {43662,2075549} },
 		{"Highlord Omokk", {9196,2075540} },
 		{"Spirestone Battle Lord (Rare)", {43661} },
 		{"Spirestone Lord Magus (Rare)", {43660} },
@@ -215,7 +215,7 @@ AtlasLoot:AddNewMenus({
 		{"Baron Geddon", {12056} },
 		{"Golemagg the Incinerator", {11988} },
 		{"Sulfuron Harbinger", {12098} },
-		{"Majordomo Executus", {12018} },
+		{"Majordomo Executus", {1750004} },
 		{"Ragnaros", {11502} },
 	},
 
@@ -573,10 +573,10 @@ AtlasLoot:AddNewMenus({
 		{"Dustwraith", {10081,2061348} },
 		{"Sergeant Bly", {24040,2061258} },
 		{"Sandfury Executioner", {7274} },
-		{"Hydromancer Velratha", {24081,2060262} },
+		{"Hydromancer Velratha", {7795,2060262} },
 		{"Gahz'rilla", {7273} },
 		{"Chief Ukorz Sandscalp", {7267,2061260} },
-		{"Zerillis", {24081,2060334} },
+		{"Zerillis", {10082,2060334} },
 	},
 
 	["VaultsOfTheInquisition"] = {
