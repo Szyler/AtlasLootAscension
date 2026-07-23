@@ -162,7 +162,7 @@ end
 AtlasLoot:PopoupItemFrame(item, data)
 Used to create a popup item frame for items like gem sacks to show what they contain
 ]] 
-function AtlasLoot:PopoupItemFrame(frame, data, craftedItem)
+function AtlasLoot:PopoupItemFrame(frame, data)
 	if not data then self.ui.itemPopupframe:Hide() return end
 	--hide the unused buttons
 	for i = 1, 15 do
@@ -206,11 +206,12 @@ function AtlasLoot:PopoupItemFrame(frame, data, craftedItem)
 	end
 
 	local numberBtns
-	if craftedItem then
-		table.insert(data, 1, craftedItem)
-		local bloodforged = self:GetItemDifficultyID(craftedItem.ItemID, 1)
+	local craftedItemID = self:GetCraftedItem(frame.spellID)
+	if craftedItemID then
+		table.insert(data, 1, {ItemID = craftedItemID})
+		local bloodforged = self:GetItemDifficultyID(craftedItemID, 1)
 		local firstBlank = 2
-		if bloodforged and bloodforged ~= craftedItem.ItemID then
+		if bloodforged and bloodforged ~= craftedItemID then
 			table.insert(data, 2, {ItemID = bloodforged})
 			firstBlank = 3
 		end

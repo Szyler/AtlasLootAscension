@@ -213,7 +213,6 @@ function AtlasLoot:ItemOnClick(item, button)
             self.ui.itemPopupframe:Show()
         end
     else
-        local reagents = self:GetReagentItems(spellID)
         if IsShiftKeyDown() then
             ChatEdit_InsertLink(self:GetEnchantLink(spellID))
         elseif button == "RightButton" and self.wishListLockState == "Unlocked" then
@@ -241,10 +240,12 @@ function AtlasLoot:ItemOnClick(item, button)
             end
             --Show token table
             self:ShowItemsFrame(item.sourcePage[1], "token", 1)
-        elseif button == "LeftButton" and reagents then
-            local craftedItem = self:GetCraftedItem(spellID)
-            self:PopoupItemFrame(item, reagents, craftedItem)
-            self.ui.itemPopupframe:Show()
+        elseif button == "LeftButton" then
+            local reagents = self:GetReagentItems(spellID)
+            if reagents then
+                self:PopoupItemFrame(item, reagents)
+                self.ui.itemPopupframe:Show()
+            end
         end
     end
 end
@@ -265,7 +266,7 @@ function AtlasLoot:ItemContextMenu(data, Type)
     end
 
     local recipeID = self:GetRecipeID(spellID)
-    local craftedID = self:GetCraftedItem(spellID).ItemID
+    local craftedID = self:GetCraftedItem(spellID)
     local isAuction = AuctionFrame and AuctionFrame:IsVisible() and true or false
     local isCrafted = isAuction and craftedID or false
     local isRecipe = isCrafted and recipeID or false

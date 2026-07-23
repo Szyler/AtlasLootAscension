@@ -6,11 +6,13 @@ local realmName = GetRealmName()
 local playerFaction = UnitFactionGroup("player")
 
 function AtlasLoot:GetReagentItems(id)
-	return id and C_TradeSkill.GetReagentItems(id) or {}
+	return id and C_TradeSkill.GetReagentItems(id)
 end
 
-function AtlasLoot:GetCraftedItem(id)
-	return id and C_TradeSkill.GetCraftedItem(id) or {}
+function AtlasLoot:GetCraftedItem(spellID)
+	if not spellID then return end
+	local item = C_TradeSkill.GetCraftedItem(spellID)
+	return item and item.ItemID
 end
 
 function AtlasLoot:GetAllTradeSkillSpellsBySkillIndex(skillIndex)
