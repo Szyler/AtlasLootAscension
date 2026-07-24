@@ -271,11 +271,12 @@ function ItemUtil:GetItemInfo(item)
 	itemInfo.className = _G["ITEM_CLASS_"..itemInfo.classID]
 	itemInfo.subclassName = _G["ITEM_SUBCLASS_"..itemInfo.classID.."_"..itemInfo.subclassID]
 	itemInfo.inventoryTypeName = equipmentSlots[itemInfo.inventoryType] and equipmentSlots[itemInfo.inventoryType].name
+	itemInfo.isToken = itemInfo.description and itemInfo.description:find("Global Token for Tier", 1, true) or nil
 	return itemInfo
 end
 
 function ItemUtil:GetItemEquiplocation(id)
-	return self:GetItemInfo(id).invertoryType
+	return self:GetItemInfo(id).inventoryType
 end
 
 function ItemUtil:GetItemName(id)
