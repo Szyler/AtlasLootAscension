@@ -688,16 +688,16 @@ function AtlasLoot:InitializeSearch()
         for _, cat in pairs(searchCategories) do
             table.insert(menuList[1], {text = cat.Name, isTitle = true})
             for _, data in ipairs(cat) do
+                profile.SearchOn[data[2]] = profile.SearchOn[data[2]]  or {false, data[3]}
                 local searchState = profile.SearchOn[data[2]]
-                searchState = searchState or {false, data[3]}
-                table.insert(menuList[1], {isRadio = true, text = data[1], checked = searchState and searchState[1], func = function() searchState[1] = not searchState[1] end, dontCloseWhenClicked = true})
+                table.insert(menuList[1], {isRadio = true, text = data[1], checked = {searchState, 1}, func = function() searchState[1] = not searchState[1] end})
             end
         end
 
         local searchOptionsItems = {{
             { text = "Search options", isTitle = true },
             {
-                text = "Vanity Collection", isRadio = true, checked = profile.SearchAscensionVanity, dontCloseWhenClicked = true,
+                text = "Vanity Collection", isRadio = true, checked = {profile, "SearchAscensionVanity"},
                 tooltip = "If checked, AtlasLoot will search Ascension Vanity Collection", func = function() profile.SearchAscensionVanity = not profile.SearchAscensionVanity end
             },
         }}

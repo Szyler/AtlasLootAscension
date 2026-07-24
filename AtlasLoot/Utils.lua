@@ -46,16 +46,17 @@ function AtlasLoot:OpenDewdropMenu(frame, menuList, ...)
 							checked = menu.checked[1][menu.checked[2]]
 						end
 						local text = menu.isTitle and self.Colors.YELLOW..menu.text or menu.text
+
 						self.Dewdrop:AddLine(
 							"text", text,
 							"isTitle", menu.isTitle,
 							"value", menu.value,
 							"hasArrow", menu.hasArrow,
-							"closeWhenClicked", not menu.dontCloseWhenClicked,
+							"closeWhenClicked", not menu.dontCloseWhenClicked and not menu.isRadio,
 							"textHeight", menu.textHeight or textSize,
 							"textWidth", menu.textWidth or textSize,
 							"checked", checked,
-							"notCheckable", (checked == nil or not menu.isRadio),
+							"notCheckable", (checked == nil and not menu.isRadio),
 							"tooltip", menu.tooltip or menu.text,
 							"secure", menu.secure,
 							"icon", menu.icon,
