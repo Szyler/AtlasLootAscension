@@ -448,6 +448,7 @@ local function sortItemData(self, dataSource, dataID, tablenum)
                     end
                 end
             end
+			if #newTable[#newTable] == 0 then newTable[#newTable] = nil end
         end
 
     elseif isVanity then
