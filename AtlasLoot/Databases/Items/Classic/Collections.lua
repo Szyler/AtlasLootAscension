@@ -3,7 +3,79 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 --------------------------
 --- Sets & Collections ---
 --------------------------
+------------------------
+-- Item Sacks Classic --
+------------------------
+AtlasLoot:AddItemData("extraItemInfo", {
+	[22637] = {
+		{ itemID = 19790 }, --Animist's Caress
+		{ itemID = 19785 }, --Falcon's Call
+		{ itemID = 19787 }, --Presence of Sight
+		{ itemID = 19783 }, --Syncretist's Sigil
+		{ itemID = 19789 }, --Prophetic Aura
+		{ itemID = 19784 }, --Death's Embrace
+		{ itemID = 19786 }, --Vodouisant's Vigilant Embrace
+		{ itemID = 19788 }, --Hoodoo Hex
+		{ itemID = 19782 }, --Presence of Might
+	},
+	[21232] = {
+		{ itemID = 21242 }, --Blessed Qiraji War Axe
+		{ itemID = 21272 }, --Blessed Qiraji Musket
+		{ itemID = 21244 }, --Blessed Qiraji Pugio
+		{ itemID = 21269 }, --Blessed Qiraji Bulwark
+	},
+	[21237] = {
+		{ itemID = 21273 }, --Blessed Qiraji Acolyte Staff
+		{ itemID = 21275 }, --Blessed Qiraji Augur Staff
+		{ itemID = 21268 }, --Blessed Qiraji War Hammer
+	},
+	[21221] = {
+		{ itemID = 21710 }, --Cloak of the Fallen God
+		{ itemID = 21712 }, --Amulet of the Fallen God
+		{ itemID = 21709 }, --Ring of the Fallen God
+	},
+})
 
+AtlasLoot:AddItemData("lootableLinks", {
+	-- Teir 1
+    [2522360] = {"TONE", 1,"Token"}, --Head
+    [2522361] = {"TONE", 3,"Token"}, --Shoulders
+    [2522350] = {"TONE", 5,"Token"}, --Chest
+    [2522363] = {"TONE", 6,"Token"}, --Waist
+    [2522359] = {"TONE", 7,"Token"}, --Legs
+    [2522365] = {"TONE", 8,"Token"}, --Feet
+    [2522362] = {"TONE", 9,"Token"}, --Wrists
+    [2522364] = {"TONE", 10,"Token"}, --Hands
+    -- Teir 2
+    [2522460] = {"TONE", 1,"Token"}, --Head
+    [2522461] = {"TONE", 3,"Token"}, --Shoulders
+    [2522450] = {"TONE", 5,"Token"}, --Chest
+    [2522463] = {"TONE", 6,"Token"}, --Waist
+    [2522459] = {"TONE", 7,"Token"}, --Legs
+    [2522465] = {"TONE", 8,"Token"}, --Feet
+    [2522462] = {"TONE", 9,"Token"}, --Wrists
+    [2522464] = {"TONE", 10,"Token"}, --Hands
+})
+
+AtlasLoot:AddItemData("sort", {
+    { itemID = 15717, groupID = 1, refLootEntry = 10185 }; --Drakon Soul Shard
+    { itemID = 18086, groupID = 1, refLootEntry = 10185 }; --Dreadshot
+    { itemID = 18087, groupID = 1, refLootEntry = 10185 }; --Fissured Warplate
+		{ itemID = 18107, groupID = 1, refLootEntry = 10185 }; --Ashen Drape
+		{ itemID = 18108, groupID = 1, refLootEntry = 10185 }; --Ash Stitched Gauntlets
+		{ itemID = 18109, groupID = 1, refLootEntry = 10185 }; --Obsidian Signet
+		{ itemID = 18110, groupID = 1, refLootEntry = 10185 }; --Obsidian Emberlance
+		{ itemID = 18112, groupID = 1, refLootEntry = 10185 }; --Eruption Cord
+		{ itemID = 18124, groupID = 1, refLootEntry = 10185 }; --Basalt Pauldrons
+		{ itemID = 18125, groupID = 1, refLootEntry = 10185 }; --Emberthorn
+		{ itemID = 18126, groupID = 1, refLootEntry = 10185 }; --Infernos, the Extinguished
+		{ itemID = 18210, groupID = 1, refLootEntry = 10185 }; --Draconic Effigy
+		{ itemID = 18548, groupID = 1, refLootEntry = 10185 }; --Wyrmguard Talisman
+		{ itemID = 18549, groupID = 1, refLootEntry = 10185 }; --Molten Visor
+		{ itemID = 18571, groupID = 1, refLootEntry = 10185 }; --Living Lavastone Conduit
+		{ itemID = 18572, groupID = 1, refLootEntry = 10185 }; --Corelit Igneous
+		{ itemID = 18906, groupID = 1, refLootEntry = 10185 }; --Obsidian Heartseeker
+})
 ------------------------------------
 ------ Mark of Triumph Vendor ------
 ------------------------------------

@@ -1,80 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-
-------------------------
--- Item Sacks Classic --
-------------------------
-AtlasLoot:AddItemData("extraItemInfo", {
-	[22637] = {
-		{ itemID = 19790 }, --Animist's Caress
-		{ itemID = 19785 }, --Falcon's Call
-		{ itemID = 19787 }, --Presence of Sight
-		{ itemID = 19783 }, --Syncretist's Sigil
-		{ itemID = 19789 }, --Prophetic Aura
-		{ itemID = 19784 }, --Death's Embrace
-		{ itemID = 19786 }, --Vodouisant's Vigilant Embrace
-		{ itemID = 19788 }, --Hoodoo Hex
-		{ itemID = 19782 }, --Presence of Might
-	},
-	[21232] = {
-		{ itemID = 21242 }, --Blessed Qiraji War Axe
-		{ itemID = 21272 }, --Blessed Qiraji Musket
-		{ itemID = 21244 }, --Blessed Qiraji Pugio
-		{ itemID = 21269 }, --Blessed Qiraji Bulwark
-	},
-	[21237] = {
-		{ itemID = 21273 }, --Blessed Qiraji Acolyte Staff
-		{ itemID = 21275 }, --Blessed Qiraji Augur Staff
-		{ itemID = 21268 }, --Blessed Qiraji War Hammer
-	},
-	[21221] = {
-		{ itemID = 21710 }, --Cloak of the Fallen God
-		{ itemID = 21712 }, --Amulet of the Fallen God
-		{ itemID = 21709 }, --Ring of the Fallen God
-	},
-})
-
-AtlasLoot:AddItemData("lootableLinks", {
-		-- Teir 1
-    [2522360] = {"TONE", 1,"Token"}, --Head
-    [2522361] = {"TONE", 3,"Token"}, --Shoulders
-    [2522350] = {"TONE", 5,"Token"}, --Chest
-    [2522363] = {"TONE", 6,"Token"}, --Waist
-    [2522359] = {"TONE", 7,"Token"}, --Legs
-    [2522365] = {"TONE", 8,"Token"}, --Feet
-    [29758] = {"TONE", 9,"Token"}, --Wrists
-    [2522364] = {"TONE", 10,"Token"}, --Hands
-    -- Teir 2
-    [2522460] = {"TONE", 1,"Token"}, --Head
-    [2522461] = {"TONE", 3,"Token"}, --Shoulders
-    [2522450] = {"TONE", 5,"Token"}, --Chest
-    [2522463] = {"TONE", 6,"Token"}, --Waist
-    [2522459] = {"TONE", 7,"Token"}, --Legs
-    [2522465] = {"TONE", 8,"Token"}, --Feet
-    [29758] = {"TONE", 9,"Token"}, --Wrists
-    [2522464] = {"TONE", 10,"Token"}, --Hands
-})
-
-AtlasLoot:AddItemData("sort", {
-    { itemID = 15717, groupID = 1, refLootEntry = 10185 }; --Drakon Soul Shard
-    { itemID = 18086, groupID = 1, refLootEntry = 10185 }; --Dreadshot
-    { itemID = 18087, groupID = 1, refLootEntry = 10185 }; --Fissured Warplate
-		{ itemID = 18107, groupID = 1, refLootEntry = 10185 }; --Ashen Drape
-		{ itemID = 18108, groupID = 1, refLootEntry = 10185 }; --Ash Stitched Gauntlets
-		{ itemID = 18109, groupID = 1, refLootEntry = 10185 }; --Obsidian Signet
-		{ itemID = 18110, groupID = 1, refLootEntry = 10185 }; --Obsidian Emberlance
-		{ itemID = 18112, groupID = 1, refLootEntry = 10185 }; --Eruption Cord
-		{ itemID = 18124, groupID = 1, refLootEntry = 10185 }; --Basalt Pauldrons
-		{ itemID = 18125, groupID = 1, refLootEntry = 10185 }; --Emberthorn
-		{ itemID = 18126, groupID = 1, refLootEntry = 10185 }; --Infernos, the Extinguished
-		{ itemID = 18210, groupID = 1, refLootEntry = 10185 }; --Draconic Effigy
-		{ itemID = 18548, groupID = 1, refLootEntry = 10185 }; --Wyrmguard Talisman
-		{ itemID = 18549, groupID = 1, refLootEntry = 10185 }; --Molten Visor
-		{ itemID = 18571, groupID = 1, refLootEntry = 10185 }; --Living Lavastone Conduit
-		{ itemID = 18572, groupID = 1, refLootEntry = 10185 }; --Corelit Igneous
-		{ itemID = 18906, groupID = 1, refLootEntry = 10185 }; --Obsidian Heartseeker
-})
-
 -- Auto Generated From Ascension DB with python script
+
 AtlasLoot:AddItemData("sort", {
   { itemID = 414, groupID = 0, refLootEntry = 596 }; --Dalaran Sharp
   { itemID = 818, groupID = 0, refLootEntry = 596 }; --Tigerseye
@@ -2505,6 +2431,58 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 20038, groupID = 1, refLootEntry = 11382 }; --Mandokir's Sting
   { itemID = 19872, groupID = 0, refLootEntry = 11382 }; --Swift Razzashi Raptor
   { itemID = 22637, groupID = 0, refLootEntry = 11382 }; --Primal Hakkari Idol
+  { itemID = 59953, groupID = 0, refLootEntry = 11382 }; --Sigil of Bloodlord Mandokir
+  { itemID = 97885, groupID = 37, refLootEntry = 11382 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 11382 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 11382 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 11382 }; --Raider's Commendation
+  { itemID = 1170083, groupID = 0, refLootEntry = 11382 }; --Personal Cache
+  { itemID = 1278049, groupID = 37, refLootEntry = 11382 }; --Case of Fortune
+  { itemID = 1400023, groupID = 0, refLootEntry = 11382 }; --Cache of the Blood God
+  { itemID = 12390, groupID = 3, refLootEntry = 11382 }; --Battleweaver's Spaulders
+  { itemID = 12391, groupID = 3, refLootEntry = 11382 }; --Battleweaver's Armor
+  { itemID = 12473, groupID = 3, refLootEntry = 11382 }; --Battleweaver's Wristguards
+  { itemID = 19822, groupID = 3, refLootEntry = 11382 }; --Zandalar Vindicator's Breastplate
+  { itemID = 19823, groupID = 3, refLootEntry = 11382 }; --Zandalar Vindicator's Belt
+  { itemID = 19824, groupID = 3, refLootEntry = 11382 }; --Zandalar Vindicator's Armguards
+  { itemID = 19825, groupID = 3, refLootEntry = 11382 }; --Zandalar Freethinker's Breastplate
+  { itemID = 19826, groupID = 3, refLootEntry = 11382 }; --Zandalar Freethinker's Belt
+  { itemID = 19827, groupID = 3, refLootEntry = 11382 }; --Zandalar Freethinker's Armguards
+  { itemID = 19828, groupID = 3, refLootEntry = 11382 }; --Zandalar Augur's Hauberk
+  { itemID = 19829, groupID = 3, refLootEntry = 11382 }; --Zandalar Augur's Belt
+  { itemID = 19830, groupID = 3, refLootEntry = 11382 }; --Zandalar Augur's Bracers
+  { itemID = 19831, groupID = 3, refLootEntry = 11382 }; --Zandalar Predator's Mantle
+  { itemID = 19832, groupID = 3, refLootEntry = 11382 }; --Zandalar Predator's Belt
+  { itemID = 19833, groupID = 3, refLootEntry = 11382 }; --Zandalar Predator's Bracers
+  { itemID = 19834, groupID = 3, refLootEntry = 11382 }; --Zandalar Madcap's Tunic
+  { itemID = 19835, groupID = 3, refLootEntry = 11382 }; --Zandalar Madcap's Mantle
+  { itemID = 19836, groupID = 3, refLootEntry = 11382 }; --Zandalar Madcap's Bracers
+  { itemID = 19838, groupID = 3, refLootEntry = 11382 }; --Zandalar Haruspex's Tunic
+  { itemID = 19839, groupID = 3, refLootEntry = 11382 }; --Zandalar Haruspex's Belt
+  { itemID = 19840, groupID = 3, refLootEntry = 11382 }; --Zandalar Haruspex's Bracers
+  { itemID = 19841, groupID = 3, refLootEntry = 11382 }; --Zandalar Confessor's Mantle
+  { itemID = 19842, groupID = 3, refLootEntry = 11382 }; --Zandalar Confessor's Bindings
+  { itemID = 19843, groupID = 3, refLootEntry = 11382 }; --Zandalar Confessor's Wraps
+  { itemID = 19845, groupID = 3, refLootEntry = 11382 }; --Zandalar Illusionist's Mantle
+  { itemID = 19846, groupID = 3, refLootEntry = 11382 }; --Zandalar Illusionist's Wraps
+  { itemID = 19848, groupID = 3, refLootEntry = 11382 }; --Zandalar Demoniac's Wraps
+  { itemID = 19849, groupID = 3, refLootEntry = 11382 }; --Zandalar Demoniac's Mantle
+  { itemID = 19863, groupID = 2, refLootEntry = 11382 }; --Primalist's Seal
+  { itemID = 19866, groupID = 1, refLootEntry = 11382 }; --Warblade of the Hakkari
+  { itemID = 19867, groupID = 1, refLootEntry = 11382 }; --Bloodlord's Defender
+  { itemID = 19869, groupID = 2, refLootEntry = 11382 }; --Blooddrenched Grips
+  { itemID = 19870, groupID = 2, refLootEntry = 11382 }; --Hakkari Loa Cloak
+  { itemID = 19873, groupID = 2, refLootEntry = 11382 }; --Overlord's Crimson Band
+  { itemID = 19874, groupID = 1, refLootEntry = 11382 }; --Halberd of Smiting
+  { itemID = 19877, groupID = 2, refLootEntry = 11382 }; --Animist's Leggings
+  { itemID = 19878, groupID = 2, refLootEntry = 11382 }; --Bloodsoaked Pauldrons
+  { itemID = 19893, groupID = 2, refLootEntry = 11382 }; --Zanzil's Seal
+  { itemID = 19895, groupID = 2, refLootEntry = 11382 }; --Bloodtinged Kilt
+  { itemID = 20033, groupID = 3, refLootEntry = 11382 }; --Zandalar Demoniac's Robe
+  { itemID = 20034, groupID = 3, refLootEntry = 11382 }; --Zandalar Illusionist's Robe
+  { itemID = 20038, groupID = 1, refLootEntry = 11382 }; --Mandokir's Sting
+  { itemID = 19872, groupID = 0, refLootEntry = 11382 }; --Swift Razzashi Raptor
+  { itemID = 22637, groupID = 0, refLootEntry = 11382 }; --Primal Hakkari Idol
   { itemID = 29434, groupID = 0, refLootEntry = 11382 }; --Badge of Justice
   { itemID = 59953, groupID = 0, refLootEntry = 11382 }; --Sigil of Bloodlord Mandokir
   { itemID = 97885, groupID = 37, refLootEntry = 11382 }; --Ability Sealed Card Pack
@@ -2704,6 +2682,29 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 88757, groupID = 0, refLootEntry = 11622 }; --Blood Soaked Vellum: Rattlegore
   { itemID = 97730, groupID = 0, refLootEntry = 11622 }; --Worldforged Key Fragment
   { itemID = 375250, groupID = 0, refLootEntry = 11622 }; --Rune of Ascension
+  { itemID = 4784, groupID = 1, refLootEntry = 11667 }; --Lifeless Stone
+  { itemID = 4787, groupID = 2, refLootEntry = 11667 }; --Burning Pitch
+  { itemID = 24508, groupID = 1, refLootEntry = 11667 }; --Elemental Fragment
+  { itemID = 24511, groupID = 1, refLootEntry = 11667 }; --Primordial Essence
+  { itemID = 36809, groupID = 1, refLootEntry = 11667 }; --Elemental Husk
+  { itemID = 36810, groupID = 1, refLootEntry = 11667 }; --Primordial Infusion
+  { itemID = 36816, groupID = 1, refLootEntry = 11667 }; --Prismatic Stone Chip
+  { itemID = 36817, groupID = 1, refLootEntry = 11667 }; --Banded Stone
+  { itemID = 39209, groupID = 1, refLootEntry = 11667 }; --Scintillating Stone Shard
+  { itemID = 39210, groupID = 1, refLootEntry = 11667 }; --Shattered Stone
+  { itemID = 39220, groupID = 1, refLootEntry = 11667 }; --Geodesic Fragments
+  { itemID = 39512, groupID = 1, refLootEntry = 11667 }; --Hoary Crystals
+  { itemID = 39513, groupID = 1, refLootEntry = 11667 }; --Efflorescing Shards
+  { itemID = 40392, groupID = 1, refLootEntry = 11667 }; --Cracked Diamond
+  { itemID = 40393, groupID = 1, refLootEntry = 11667 }; --Green Sparkly
+  { itemID = 43321, groupID = 1, refLootEntry = 11667 }; --Crystallized Tear
+  { itemID = 44206, groupID = 7, refLootEntry = 11667 }; --Rime-Crusted Herbs
+  { itemID = 44207, groupID = 7, refLootEntry = 11667 }; --Flash-Frozen Flower
+  { itemID = 44208, groupID = 8, refLootEntry = 11667 }; --Shattered Log
+  { itemID = 5758, groupID = 5, refLootEntry = 11667 }; --Mithril Lockbox
+  { itemID = 5759, groupID = 5, refLootEntry = 11667 }; --Thorium Lockbox
+  { itemID = 5760, groupID = 5, refLootEntry = 11667 }; --Eternium Lockbox
+  { itemID = 20951, groupID = 0, refLootEntry = 11667 }; --Narain's Scrying Goggles
   { itemID = 12573, groupID = 2, refLootEntry = 11982 }; --Corebound Shoulders
   { itemID = 15959, groupID = 2, refLootEntry = 11982 }; --Idol of the Magma Beast
   { itemID = 17065, groupID = 2, refLootEntry = 11982 }; --Medallion of Steadfast Might
@@ -2847,6 +2848,29 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 1170083, groupID = 0, refLootEntry = 12098 }; --Personal Cache
   { itemID = 1278048, groupID = 37, refLootEntry = 12098 }; --Case of Fortune: Talents
   { itemID = 1278049, groupID = 37, refLootEntry = 12098 }; --Case of Fortune
+  { itemID = 12598, groupID = 2, refLootEntry = 12118 }; --Flametouched Leggings
+  { itemID = 12599, groupID = 2, refLootEntry = 12118 }; --Flameguard Legguards
+  { itemID = 12910, groupID = 2, refLootEntry = 12118 }; --Molten Slugtosser
+  { itemID = 15958, groupID = 2, refLootEntry = 12118 }; --The Water Duke's Stolen Totem
+  { itemID = 17077, groupID = 2, refLootEntry = 12118 }; --Crimson Shocker
+  { itemID = 17203, groupID = 1, refLootEntry = 12118 }; --Sulfuron Ingot
+  { itemID = 18821, groupID = 2, refLootEntry = 12118 }; --Quick Strike Ring
+  { itemID = 18832, groupID = 2, refLootEntry = 12118 }; --Brutality Blade
+  { itemID = 18861, groupID = 2, refLootEntry = 12118 }; --Flamewaker Legplates
+  { itemID = 18878, groupID = 2, refLootEntry = 12118 }; --Sorcerous Dagger
+  { itemID = 19142, groupID = 2, refLootEntry = 12118 }; --Fire Runed Grimoire
+  { itemID = 19143, groupID = 2, refLootEntry = 12118 }; --Flameguard Gauntlets
+  { itemID = 19144, groupID = 2, refLootEntry = 12118 }; --Sabatons of the Flamewalker
+  { itemID = 2522362, groupID = 3, refLootEntry = 12118 }; --Molten Wristguards
+  { itemID = 17329, groupID = 0, refLootEntry = 12118 }; --Hand of Lucifron
+  { itemID = 59993, groupID = 0, refLootEntry = 12118 }; --Sigil of Lucifron
+  { itemID = 97885, groupID = 37, refLootEntry = 12118 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 12118 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 3, refLootEntry = 12118 }; --Rune of Ascension
+  { itemID = 400750, groupID = 4, refLootEntry = 12118 }; --Raider's Commendation
+  { itemID = 1170083, groupID = 0, refLootEntry = 12118 }; --Personal Cache
+  { itemID = 1278048, groupID = 37, refLootEntry = 12118 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 12118 }; --Case of Fortune
   { itemID = 4552, groupID = 0, refLootEntry = 12203 }; --Smooth Stone Chip
   { itemID = 7912, groupID = 0, refLootEntry = 12203 }; --Solid Stone
   { itemID = 8150, groupID = 0, refLootEntry = 12203 }; --Deeprock Salt
@@ -3220,6 +3244,59 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 22722, groupID = 2, refLootEntry = 14507 }; --Seal of the Gurubashi Berserker
   { itemID = 19881, groupID = 0, refLootEntry = 14507 }; --Channeler's Head
   { itemID = 22216, groupID = 0, refLootEntry = 14507 }; --Venoxis's Venom Sac
+  { itemID = 60100, groupID = 0, refLootEntry = 14507 }; --Sigil of High Priest Venoxis
+  { itemID = 375250, groupID = 0, refLootEntry = 14507 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 14507 }; --Raider's Commendation
+  { itemID = 1170083, groupID = 0, refLootEntry = 14507 }; --Personal Cache
+  { itemID = 1400023, groupID = 0, refLootEntry = 14507 }; --Cache of the Blood God
+  { itemID = 12390, groupID = 3, refLootEntry = 14507 }; --Battleweaver's Spaulders
+  { itemID = 12391, groupID = 3, refLootEntry = 14507 }; --Battleweaver's Armor
+  { itemID = 12473, groupID = 3, refLootEntry = 14507 }; --Battleweaver's Wristguards
+  { itemID = 19822, groupID = 3, refLootEntry = 14507 }; --Zandalar Vindicator's Breastplate
+  { itemID = 19823, groupID = 3, refLootEntry = 14507 }; --Zandalar Vindicator's Belt
+  { itemID = 19824, groupID = 3, refLootEntry = 14507 }; --Zandalar Vindicator's Armguards
+  { itemID = 19825, groupID = 3, refLootEntry = 14507 }; --Zandalar Freethinker's Breastplate
+  { itemID = 19826, groupID = 3, refLootEntry = 14507 }; --Zandalar Freethinker's Belt
+  { itemID = 19827, groupID = 3, refLootEntry = 14507 }; --Zandalar Freethinker's Armguards
+  { itemID = 19828, groupID = 3, refLootEntry = 14507 }; --Zandalar Augur's Hauberk
+  { itemID = 19829, groupID = 3, refLootEntry = 14507 }; --Zandalar Augur's Belt
+  { itemID = 19830, groupID = 3, refLootEntry = 14507 }; --Zandalar Augur's Bracers
+  { itemID = 19831, groupID = 3, refLootEntry = 14507 }; --Zandalar Predator's Mantle
+  { itemID = 19832, groupID = 3, refLootEntry = 14507 }; --Zandalar Predator's Belt
+  { itemID = 19833, groupID = 3, refLootEntry = 14507 }; --Zandalar Predator's Bracers
+  { itemID = 19834, groupID = 3, refLootEntry = 14507 }; --Zandalar Madcap's Tunic
+  { itemID = 19835, groupID = 3, refLootEntry = 14507 }; --Zandalar Madcap's Mantle
+  { itemID = 19836, groupID = 3, refLootEntry = 14507 }; --Zandalar Madcap's Bracers
+  { itemID = 19838, groupID = 3, refLootEntry = 14507 }; --Zandalar Haruspex's Tunic
+  { itemID = 19839, groupID = 3, refLootEntry = 14507 }; --Zandalar Haruspex's Belt
+  { itemID = 19840, groupID = 3, refLootEntry = 14507 }; --Zandalar Haruspex's Bracers
+  { itemID = 19841, groupID = 3, refLootEntry = 14507 }; --Zandalar Confessor's Mantle
+  { itemID = 19842, groupID = 3, refLootEntry = 14507 }; --Zandalar Confessor's Bindings
+  { itemID = 19843, groupID = 3, refLootEntry = 14507 }; --Zandalar Confessor's Wraps
+  { itemID = 19845, groupID = 3, refLootEntry = 14507 }; --Zandalar Illusionist's Mantle
+  { itemID = 19846, groupID = 3, refLootEntry = 14507 }; --Zandalar Illusionist's Wraps
+  { itemID = 19848, groupID = 3, refLootEntry = 14507 }; --Zandalar Demoniac's Wraps
+  { itemID = 19849, groupID = 3, refLootEntry = 14507 }; --Zandalar Demoniac's Mantle
+  { itemID = 19900, groupID = 1, refLootEntry = 14507 }; --Zulian Stone Axe
+  { itemID = 19903, groupID = 1, refLootEntry = 14507 }; --Fang of Venoxis
+  { itemID = 19904, groupID = 1, refLootEntry = 14507 }; --Runed Bloodstained Hauberk
+  { itemID = 19905, groupID = 1, refLootEntry = 14507 }; --Zanzil's Band
+  { itemID = 19906, groupID = 1, refLootEntry = 14507 }; --Blooddrenched Footpads
+  { itemID = 19907, groupID = 1, refLootEntry = 14507 }; --Zulian Tigerhide Cloak
+  { itemID = 20033, groupID = 3, refLootEntry = 14507 }; --Zandalar Demoniac's Robe
+  { itemID = 20034, groupID = 3, refLootEntry = 14507 }; --Zandalar Illusionist's Robe
+  { itemID = 22711, groupID = 2, refLootEntry = 14507 }; --Cloak of the Hakkari Worshippers
+  { itemID = 22712, groupID = 2, refLootEntry = 14507 }; --Might of the Tribe
+  { itemID = 22713, groupID = 2, refLootEntry = 14507 }; --Zulian Scepter of Rites
+  { itemID = 22714, groupID = 2, refLootEntry = 14507 }; --Sacrificial Gauntlets
+  { itemID = 22715, groupID = 2, refLootEntry = 14507 }; --Gloves of the Tormented
+  { itemID = 22716, groupID = 2, refLootEntry = 14507 }; --Belt of Untapped Power
+  { itemID = 22718, groupID = 2, refLootEntry = 14507 }; --Blooddrenched Mask
+  { itemID = 22720, groupID = 2, refLootEntry = 14507 }; --Zulian Headdress
+  { itemID = 22721, groupID = 2, refLootEntry = 14507 }; --Band of Servitude
+  { itemID = 22722, groupID = 2, refLootEntry = 14507 }; --Seal of the Gurubashi Berserker
+  { itemID = 19881, groupID = 0, refLootEntry = 14507 }; --Channeler's Head
+  { itemID = 22216, groupID = 0, refLootEntry = 14507 }; --Venoxis's Venom Sac
   { itemID = 29434, groupID = 0, refLootEntry = 14507 }; --Badge of Justice
   { itemID = 60100, groupID = 0, refLootEntry = 14507 }; --Sigil of High Priest Venoxis
   { itemID = 375250, groupID = 0, refLootEntry = 14507 }; --Rune of Ascension
@@ -3281,6 +3358,58 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 400750, groupID = 0, refLootEntry = 14509 }; --Raider's Commendation
   { itemID = 1170083, groupID = 0, refLootEntry = 14509 }; --Personal Cache
   { itemID = 1400023, groupID = 0, refLootEntry = 14509 }; --Cache of the Blood God
+  { itemID = 12390, groupID = 3, refLootEntry = 14510 }; --Battleweaver's Spaulders
+  { itemID = 12391, groupID = 3, refLootEntry = 14510 }; --Battleweaver's Armor
+  { itemID = 12473, groupID = 3, refLootEntry = 14510 }; --Battleweaver's Wristguards
+  { itemID = 19822, groupID = 3, refLootEntry = 14510 }; --Zandalar Vindicator's Breastplate
+  { itemID = 19823, groupID = 3, refLootEntry = 14510 }; --Zandalar Vindicator's Belt
+  { itemID = 19824, groupID = 3, refLootEntry = 14510 }; --Zandalar Vindicator's Armguards
+  { itemID = 19825, groupID = 3, refLootEntry = 14510 }; --Zandalar Freethinker's Breastplate
+  { itemID = 19826, groupID = 3, refLootEntry = 14510 }; --Zandalar Freethinker's Belt
+  { itemID = 19827, groupID = 3, refLootEntry = 14510 }; --Zandalar Freethinker's Armguards
+  { itemID = 19828, groupID = 3, refLootEntry = 14510 }; --Zandalar Augur's Hauberk
+  { itemID = 19829, groupID = 3, refLootEntry = 14510 }; --Zandalar Augur's Belt
+  { itemID = 19830, groupID = 3, refLootEntry = 14510 }; --Zandalar Augur's Bracers
+  { itemID = 19831, groupID = 3, refLootEntry = 14510 }; --Zandalar Predator's Mantle
+  { itemID = 19832, groupID = 3, refLootEntry = 14510 }; --Zandalar Predator's Belt
+  { itemID = 19833, groupID = 3, refLootEntry = 14510 }; --Zandalar Predator's Bracers
+  { itemID = 19834, groupID = 3, refLootEntry = 14510 }; --Zandalar Madcap's Tunic
+  { itemID = 19835, groupID = 3, refLootEntry = 14510 }; --Zandalar Madcap's Mantle
+  { itemID = 19836, groupID = 3, refLootEntry = 14510 }; --Zandalar Madcap's Bracers
+  { itemID = 19838, groupID = 3, refLootEntry = 14510 }; --Zandalar Haruspex's Tunic
+  { itemID = 19839, groupID = 3, refLootEntry = 14510 }; --Zandalar Haruspex's Belt
+  { itemID = 19840, groupID = 3, refLootEntry = 14510 }; --Zandalar Haruspex's Bracers
+  { itemID = 19841, groupID = 3, refLootEntry = 14510 }; --Zandalar Confessor's Mantle
+  { itemID = 19842, groupID = 3, refLootEntry = 14510 }; --Zandalar Confessor's Bindings
+  { itemID = 19843, groupID = 3, refLootEntry = 14510 }; --Zandalar Confessor's Wraps
+  { itemID = 19845, groupID = 3, refLootEntry = 14510 }; --Zandalar Illusionist's Mantle
+  { itemID = 19846, groupID = 3, refLootEntry = 14510 }; --Zandalar Illusionist's Wraps
+  { itemID = 19848, groupID = 3, refLootEntry = 14510 }; --Zandalar Demoniac's Wraps
+  { itemID = 19849, groupID = 3, refLootEntry = 14510 }; --Zandalar Demoniac's Mantle
+  { itemID = 19871, groupID = 1, refLootEntry = 14510 }; --Talisman of Protection
+  { itemID = 19919, groupID = 1, refLootEntry = 14510 }; --Bloodstained Greaves
+  { itemID = 19925, groupID = 1, refLootEntry = 14510 }; --Band of Jin
+  { itemID = 19927, groupID = 1, refLootEntry = 14510 }; --Mar'li's Touch
+  { itemID = 19930, groupID = 1, refLootEntry = 14510 }; --Mar'li's Eye
+  { itemID = 20032, groupID = 1, refLootEntry = 14510 }; --Flowing Ritual Robes
+  { itemID = 20033, groupID = 3, refLootEntry = 14510 }; --Zandalar Demoniac's Robe
+  { itemID = 20034, groupID = 3, refLootEntry = 14510 }; --Zandalar Illusionist's Robe
+  { itemID = 22711, groupID = 2, refLootEntry = 14510 }; --Cloak of the Hakkari Worshippers
+  { itemID = 22712, groupID = 2, refLootEntry = 14510 }; --Might of the Tribe
+  { itemID = 22713, groupID = 2, refLootEntry = 14510 }; --Zulian Scepter of Rites
+  { itemID = 22714, groupID = 2, refLootEntry = 14510 }; --Sacrificial Gauntlets
+  { itemID = 22715, groupID = 2, refLootEntry = 14510 }; --Gloves of the Tormented
+  { itemID = 22716, groupID = 2, refLootEntry = 14510 }; --Belt of Untapped Power
+  { itemID = 22718, groupID = 2, refLootEntry = 14510 }; --Blooddrenched Mask
+  { itemID = 22720, groupID = 2, refLootEntry = 14510 }; --Zulian Headdress
+  { itemID = 22721, groupID = 2, refLootEntry = 14510 }; --Band of Servitude
+  { itemID = 22722, groupID = 2, refLootEntry = 14510 }; --Seal of the Gurubashi Berserker
+  { itemID = 19881, groupID = 0, refLootEntry = 14510 }; --Channeler's Head
+  { itemID = 60102, groupID = 0, refLootEntry = 14510 }; --Sigil of High Priestess Mar'li
+  { itemID = 375250, groupID = 0, refLootEntry = 14510 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 14510 }; --Raider's Commendation
+  { itemID = 1170083, groupID = 0, refLootEntry = 14510 }; --Personal Cache
+  { itemID = 1400023, groupID = 0, refLootEntry = 14510 }; --Cache of the Blood God
   { itemID = 12390, groupID = 3, refLootEntry = 14510 }; --Battleweaver's Spaulders
   { itemID = 12391, groupID = 3, refLootEntry = 14510 }; --Battleweaver's Armor
   { itemID = 12473, groupID = 3, refLootEntry = 14510 }; --Battleweaver's Wristguards
@@ -3453,6 +3582,59 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 400750, groupID = 0, refLootEntry = 14517 }; --Raider's Commendation
   { itemID = 1170083, groupID = 0, refLootEntry = 14517 }; --Personal Cache
   { itemID = 1400023, groupID = 0, refLootEntry = 14517 }; --Cache of the Blood God
+  { itemID = 12390, groupID = 3, refLootEntry = 14517 }; --Battleweaver's Spaulders
+  { itemID = 12391, groupID = 3, refLootEntry = 14517 }; --Battleweaver's Armor
+  { itemID = 12473, groupID = 3, refLootEntry = 14517 }; --Battleweaver's Wristguards
+  { itemID = 19822, groupID = 3, refLootEntry = 14517 }; --Zandalar Vindicator's Breastplate
+  { itemID = 19823, groupID = 3, refLootEntry = 14517 }; --Zandalar Vindicator's Belt
+  { itemID = 19824, groupID = 3, refLootEntry = 14517 }; --Zandalar Vindicator's Armguards
+  { itemID = 19825, groupID = 3, refLootEntry = 14517 }; --Zandalar Freethinker's Breastplate
+  { itemID = 19826, groupID = 3, refLootEntry = 14517 }; --Zandalar Freethinker's Belt
+  { itemID = 19827, groupID = 3, refLootEntry = 14517 }; --Zandalar Freethinker's Armguards
+  { itemID = 19828, groupID = 3, refLootEntry = 14517 }; --Zandalar Augur's Hauberk
+  { itemID = 19829, groupID = 3, refLootEntry = 14517 }; --Zandalar Augur's Belt
+  { itemID = 19830, groupID = 3, refLootEntry = 14517 }; --Zandalar Augur's Bracers
+  { itemID = 19831, groupID = 3, refLootEntry = 14517 }; --Zandalar Predator's Mantle
+  { itemID = 19832, groupID = 3, refLootEntry = 14517 }; --Zandalar Predator's Belt
+  { itemID = 19833, groupID = 3, refLootEntry = 14517 }; --Zandalar Predator's Bracers
+  { itemID = 19834, groupID = 3, refLootEntry = 14517 }; --Zandalar Madcap's Tunic
+  { itemID = 19835, groupID = 3, refLootEntry = 14517 }; --Zandalar Madcap's Mantle
+  { itemID = 19836, groupID = 3, refLootEntry = 14517 }; --Zandalar Madcap's Bracers
+  { itemID = 19838, groupID = 3, refLootEntry = 14517 }; --Zandalar Haruspex's Tunic
+  { itemID = 19839, groupID = 3, refLootEntry = 14517 }; --Zandalar Haruspex's Belt
+  { itemID = 19840, groupID = 3, refLootEntry = 14517 }; --Zandalar Haruspex's Bracers
+  { itemID = 19841, groupID = 3, refLootEntry = 14517 }; --Zandalar Confessor's Mantle
+  { itemID = 19842, groupID = 3, refLootEntry = 14517 }; --Zandalar Confessor's Bindings
+  { itemID = 19843, groupID = 3, refLootEntry = 14517 }; --Zandalar Confessor's Wraps
+  { itemID = 19845, groupID = 3, refLootEntry = 14517 }; --Zandalar Illusionist's Mantle
+  { itemID = 19846, groupID = 3, refLootEntry = 14517 }; --Zandalar Illusionist's Wraps
+  { itemID = 19848, groupID = 3, refLootEntry = 14517 }; --Zandalar Demoniac's Wraps
+  { itemID = 19849, groupID = 3, refLootEntry = 14517 }; --Zandalar Demoniac's Mantle
+  { itemID = 19915, groupID = 1, refLootEntry = 14517 }; --Zulian Defender
+  { itemID = 19918, groupID = 1, refLootEntry = 14517 }; --Jeklik's Crusher
+  { itemID = 19920, groupID = 1, refLootEntry = 14517 }; --Primalist's Band
+  { itemID = 19923, groupID = 1, refLootEntry = 14517 }; --Jeklik's Opaline Talisman
+  { itemID = 19928, groupID = 1, refLootEntry = 14517 }; --Animist's Spaulders
+  { itemID = 20033, groupID = 3, refLootEntry = 14517 }; --Zandalar Demoniac's Robe
+  { itemID = 20034, groupID = 3, refLootEntry = 14517 }; --Zandalar Illusionist's Robe
+  { itemID = 20262, groupID = 1, refLootEntry = 14517 }; --Seafury Boots
+  { itemID = 20265, groupID = 1, refLootEntry = 14517 }; --Peacekeeper Boots
+  { itemID = 22711, groupID = 2, refLootEntry = 14517 }; --Cloak of the Hakkari Worshippers
+  { itemID = 22712, groupID = 2, refLootEntry = 14517 }; --Might of the Tribe
+  { itemID = 22713, groupID = 2, refLootEntry = 14517 }; --Zulian Scepter of Rites
+  { itemID = 22714, groupID = 2, refLootEntry = 14517 }; --Sacrificial Gauntlets
+  { itemID = 22715, groupID = 2, refLootEntry = 14517 }; --Gloves of the Tormented
+  { itemID = 22716, groupID = 2, refLootEntry = 14517 }; --Belt of Untapped Power
+  { itemID = 22718, groupID = 2, refLootEntry = 14517 }; --Blooddrenched Mask
+  { itemID = 22720, groupID = 2, refLootEntry = 14517 }; --Zulian Headdress
+  { itemID = 22721, groupID = 2, refLootEntry = 14517 }; --Band of Servitude
+  { itemID = 22722, groupID = 2, refLootEntry = 14517 }; --Seal of the Gurubashi Berserker
+  { itemID = 19881, groupID = 0, refLootEntry = 14517 }; --Channeler's Head
+  { itemID = 60104, groupID = 0, refLootEntry = 14517 }; --Sigil of High Priestess Jeklik
+  { itemID = 375250, groupID = 0, refLootEntry = 14517 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 14517 }; --Raider's Commendation
+  { itemID = 1170083, groupID = 0, refLootEntry = 14517 }; --Personal Cache
+  { itemID = 1400023, groupID = 0, refLootEntry = 14517 }; --Cache of the Blood God
   { itemID = 19852, groupID = 2, refLootEntry = 14834 }; --Ancient Hakkari Manslayer
   { itemID = 19853, groupID = 2, refLootEntry = 14834 }; --Gurubashi Dwarf Destroyer
   { itemID = 19854, groupID = 2, refLootEntry = 14834 }; --Zin'rokh, Destroyer of Worlds
@@ -3539,6 +3721,29 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 17524, groupID = 1, refLootEntry = 14890 }; --Unnatural Leather Spaulders
   { itemID = 17525, groupID = 1, refLootEntry = 14890 }; --Boots of Fright
   { itemID = 1615011, groupID = 0, refLootEntry = 14890 }; --Treasures of Azeroth
+  { itemID = 12503, groupID = 1, refLootEntry = 15114 }; --Battleweaver's Necklace
+  { itemID = 19908, groupID = 2, refLootEntry = 15114 }; --Sceptre of Smiting
+  { itemID = 19921, groupID = 2, refLootEntry = 15114 }; --Zulian Hacker
+  { itemID = 19944, groupID = 1, refLootEntry = 15114 }; --Nat Pagle's Fish Terminator
+  { itemID = 19945, groupID = 1, refLootEntry = 15114 }; --Foror's Eyepatch
+  { itemID = 19946, groupID = 1, refLootEntry = 15114 }; --Tigule's Harpoon
+  { itemID = 19947, groupID = 1, refLootEntry = 15114 }; --Nat Pagle's Broken Reel
+  { itemID = 20258, groupID = 2, refLootEntry = 15114 }; --Zulian Ceremonial Staff
+  { itemID = 20259, groupID = 2, refLootEntry = 15114 }; --Shadow Panther Hide Gloves
+  { itemID = 20261, groupID = 2, refLootEntry = 15114 }; --Shadow Panther Hide Belt
+  { itemID = 20263, groupID = 2, refLootEntry = 15114 }; --Gurubashi Helm
+  { itemID = 22637, groupID = 0, refLootEntry = 15114 }; --Primal Hakkari Idol
+  { itemID = 22739, groupID = 0, refLootEntry = 15114 }; --Tome of Polymorph: Turtle
+  { itemID = 60120, groupID = 0, refLootEntry = 15114 }; --Sigil of Gahz'ranka
+  { itemID = 97885, groupID = 37, refLootEntry = 15114 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 15114 }; --Talent Sealed Card Pack
+  { itemID = 375250, groupID = 0, refLootEntry = 15114 }; --Rune of Ascension
+  { itemID = 400750, groupID = 0, refLootEntry = 15114 }; --Raider's Commendation
+  { itemID = 1022739, groupID = 0, refLootEntry = 15114 }; --Tome of Polymorph: Turtle
+  { itemID = 1170083, groupID = 0, refLootEntry = 15114 }; --Personal Cache
+  { itemID = 1278048, groupID = 37, refLootEntry = 15114 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 15114 }; --Case of Fortune
+  { itemID = 1400023, groupID = 0, refLootEntry = 15114 }; --Cache of the Blood God
   { itemID = 12503, groupID = 1, refLootEntry = 15114 }; --Battleweaver's Necklace
   { itemID = 19908, groupID = 2, refLootEntry = 15114 }; --Sceptre of Smiting
   { itemID = 19921, groupID = 2, refLootEntry = 15114 }; --Zulian Hacker
@@ -4549,6 +4754,14 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 1170083, groupID = 0, refLootEntry = 23863 }; --Personal Cache
   { itemID = 1400029, groupID = 0, refLootEntry = 23863 }; --Cache of the Amani
   { itemID = 400751, groupID = 5, refLootEntry = 23863 }; --Raider's Commendation
+  { itemID = 11308, groupID = 0, refLootEntry = 24028 }; --Sylvan Shortbow
+  { itemID = 11307, groupID = 0, refLootEntry = 24028 }; --Massive Longbow
+  { itemID = 41584, groupID = 0, refLootEntry = 24028 }; --Frostbite Bullets
+  { itemID = 41586, groupID = 0, refLootEntry = 24028 }; --Terrorshaft Arrow
+  { itemID = 28056, groupID = 0, refLootEntry = 24028 }; --Blackflight Arrow
+  { itemID = 28061, groupID = 0, refLootEntry = 24028 }; --Ironbite Shell
+  { itemID = 28053, groupID = 0, refLootEntry = 24028 }; --Wicked Arrow
+  { itemID = 28060, groupID = 0, refLootEntry = 24028 }; --Impact Shot
   { itemID = 22349, groupID = 4, refLootEntry = 30549 }; --Desecrated Breastplate
   { itemID = 22691, groupID = 2, refLootEntry = 30549 }; --Corrupted Ashbringer
   { itemID = 22726, groupID = 1, refLootEntry = 30549 }; --Splinter of Atiesh
@@ -4571,6 +4784,54 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 400750, groupID = 4, refLootEntry = 30549 }; --Raider's Commendation
   { itemID = 1170083, groupID = 0, refLootEntry = 30549 }; --Personal Cache
   { itemID = 1400018, groupID = 0, refLootEntry = 30549 }; --Cache of the Lich
+  { itemID = 42040, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Pendant of Salvation
+  { itemID = 41885, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Slippers of Salvation
+  { itemID = 41893, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Cuffs of Salvation
+  { itemID = 41898, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Cord of Dominance
+  { itemID = 41903, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Slippers of Dominance
+  { itemID = 41909, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Cuffs of Dominance
+  { itemID = 42034, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Pendant of Triumph
+  { itemID = 42035, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Pendant of Victory
+  { itemID = 42036, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Pendant of Dominance
+  { itemID = 42037, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Pendant of Ascendancy
+  { itemID = 42038, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Pendant of Subjugation
+  { itemID = 42039, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Pendant of Deliverance
+  { itemID = 41881, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Cord of Salvation
+  { itemID = 42069, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Cloak of Dominance
+  { itemID = 42070, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Cloak of Subjugation
+  { itemID = 42071, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Cloak of Ascendancy
+  { itemID = 42072, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Cloak of Salvation
+  { itemID = 42073, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Cloak of Deliverance
+  { itemID = 42074, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Cloak of Triumph
+  { itemID = 42075, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Cloak of Victory
+  { itemID = 42116, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Band of Dominance
+  { itemID = 42117, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Band of Triumph
+  { itemID = 42126, groupID = 0, refLootEntry = 34037 }; --Medallion of the Horde
+  { itemID = 46373, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Pendant of Sundering
+  { itemID = 41225, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Wristguards of Triumph
+  { itemID = 40882, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Greaves of Triumph
+  { itemID = 40889, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Bracers of Triumph
+  { itemID = 40976, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Girdle of Salvation
+  { itemID = 40977, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Greaves of Salvation
+  { itemID = 40983, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Bracers of Salvation
+  { itemID = 41051, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Waistguard of Salvation
+  { itemID = 41055, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Sabatons of Salvation
+  { itemID = 41060, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Wristguards of Salvation
+  { itemID = 41065, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Wristguards of Dominance
+  { itemID = 41070, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Waistguard of Dominance
+  { itemID = 41075, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Sabatons of Dominance
+  { itemID = 40881, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Girdle of Triumph
+  { itemID = 41230, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Sabatons of Triumph
+  { itemID = 41235, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Waistguard of Triumph
+  { itemID = 41617, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Belt of Salvation
+  { itemID = 41621, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Boots of Salvation
+  { itemID = 41625, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Armwraps of Salvation
+  { itemID = 41630, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Belt of Dominance
+  { itemID = 41635, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Boots of Dominance
+  { itemID = 41640, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Armwraps of Dominance
+  { itemID = 41832, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Belt of Triumph
+  { itemID = 41836, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Boots of Triumph
+  { itemID = 41840, groupID = 0, refLootEntry = 34037 }; --Furious Gladiator's Armwraps of Triumph
   { itemID = 50446, groupID = 3, refLootEntry = 36296 }; --Toxic Wasteling
   { itemID = 50471, groupID = 3, refLootEntry = 36296 }; --The Heartbreaker
   { itemID = 388912, groupID = 2, refLootEntry = 36296 }; --Forever-Lovely Rose
@@ -4637,6 +4898,8 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 375250, groupID = 0, refLootEntry = 81201 }; --Rune of Ascension
   { itemID = 1615011, groupID = 0, refLootEntry = 81201 }; --Treasures of Azeroth
   { itemID = 375250, groupID = 0, refLootEntry = 84270 }; --Rune of Ascension
+  { itemID = 7669, groupID = 0, refLootEntry = 113757 }; --Shattered Necklace Ruby
+  { itemID = 5824, groupID = 0, refLootEntry = 142088 }; --Tablet of Will
   { itemID = 559301, groupID = 1, refLootEntry = 162700 }; --Mantle of Caged Light
   { itemID = 559306, groupID = 1, refLootEntry = 162700 }; --Faithful Servant's Wristwraps
   { itemID = 559311, groupID = 1, refLootEntry = 162700 }; --Dark Veil Girdle
@@ -4668,6 +4931,9 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 559343, groupID = 2, refLootEntry = 162716 }; --Mutated Heart Cloak
   { itemID = 559357, groupID = 1, refLootEntry = 162716 }; --Fang of the Chimeric Embryo
   { itemID = 559365, groupID = 1, refLootEntry = 162716 }; --Cutter of the Spawn
+  { itemID = 12845, groupID = 0, refLootEntry = 176112 }; --Medallion of Faith
+  { itemID = 12827, groupID = 0, refLootEntry = 176325 }; --Plans: Serenity
+  { itemID = 12830, groupID = 0, refLootEntry = 176327 }; --Plans: Corruption
   { itemID = 97730, groupID = 0, refLootEntry = 254401 }; --Worldforged Key Fragment
   { itemID = 252821, groupID = 1, refLootEntry = 254401 }; --Twinglaive of the Vampire Council
   { itemID = 252906, groupID = 1, refLootEntry = 254401 }; --Twinglaive of Eternal Slumber
@@ -4744,4 +5010,32 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 22528, groupID = 0, refLootEntry = 750122 }; --Dark Iron Scraps
   { itemID = 97730, groupID = 0, refLootEntry = 750122 }; --Worldforged Key Fragment
   { itemID = 375250, groupID = 0, refLootEntry = 750122 }; --Rune of Ascension
+  { itemID = 72559, groupID = 0, refLootEntry = 1011981 }; --Sigil of Flamegor
+  { itemID = 19334, groupID = 1, refLootEntry = 1012435 }; --The Untamed Blade
+  { itemID = 19335, groupID = 1, refLootEntry = 1012435 }; --Spineshatter
+  { itemID = 19336, groupID = 1, refLootEntry = 1012435 }; --Arcane Infused Gem
+  { itemID = 19337, groupID = 1, refLootEntry = 1012435 }; --The Black Book
+  { itemID = 19369, groupID = 1, refLootEntry = 1012435 }; --Gloves of Rapid Evolution
+  { itemID = 19370, groupID = 1, refLootEntry = 1012435 }; --Mantle of the Blackwing Cabal
+  { itemID = 2522462, groupID = 1, refLootEntry = 1012435 }; --Chromatic Wristguards
+  { itemID = 72571, groupID = 0, refLootEntry = 1012435 }; --Sigil of Razorgore the Untamed
+  { itemID = 97885, groupID = 37, refLootEntry = 1012435 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 1012435 }; --Talent Sealed Card Pack
+  { itemID = 400750, groupID = 0, refLootEntry = 1012435 }; --Raider's Commendation
+  { itemID = 1278048, groupID = 37, refLootEntry = 1012435 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 1012435 }; --Case of Fortune
+  { itemID = 72588, groupID = 0, refLootEntry = 1014601 }; --Sigil of Ebonroc
+  { itemID = 18608, groupID = 1, refLootEntry = 1750004 }; --Benediction
+  { itemID = 18609, groupID = 1, refLootEntry = 1750004 }; --Anathema
+  { itemID = 18803, groupID = 1, refLootEntry = 1750004 }; --Finkle's Lava Dredger
+  { itemID = 18805, groupID = 1, refLootEntry = 1750004 }; --Core Hound Tooth
+  { itemID = 18806, groupID = 1, refLootEntry = 1750004 }; --Core Forged Greaves
+  { itemID = 18808, groupID = 1, refLootEntry = 1750004 }; --Gloves of the Hypnotic Flame
+  { itemID = 18809, groupID = 1, refLootEntry = 1750004 }; --Sash of Whispered Secrets
+  { itemID = 18810, groupID = 1, refLootEntry = 1750004 }; --Wild Growth Spaulders
+  { itemID = 18811, groupID = 1, refLootEntry = 1750004 }; --Fireproof Cloak
+  { itemID = 18812, groupID = 1, refLootEntry = 1750004 }; --Wristguards of True Flight
+  { itemID = 19139, groupID = 1, refLootEntry = 1750004 }; --Fireguard Shoulders
+  { itemID = 19140, groupID = 1, refLootEntry = 1750004 }; --Cauterizing Band
+  { itemID = 400750, groupID = 0, refLootEntry = 1750004 }; --Raider's Commendation
 })

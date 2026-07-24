@@ -1,74 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 -- Auto Generated From Ascension DB with python script
 
-------------------------
-	----Item Sacks TBC ----
-	------------------------
-	AtlasLoot:AddItemData("extraItemInfo",{
-		[34846] = {
-			{itemID = 23437 },
-			{itemID = 23438 },
-			{itemID = 23439 },
-			{itemID = 23441 },
-			{itemID = 23436 },
-			{itemID = 23440 },
-			{itemID = 32230 },
-			{itemID = 32249 },
-			{itemID = 32231 },
-			{itemID = 32229 },
-			{itemID = 32228 },
-			{itemID = 32227 },
-		},
-		[222637] = {
-			{ itemID = 229194 }, --The Krakmon Wand
-			{ itemID = 229193 }, --Massacre Cloak
-			{ itemID = 229196 }, --Throat Crushers
-			{ itemID = 229192 }, --Seal of the Amani'shi Berserker
-			{ itemID = 229195 }, --Staff of Blazing Glory
-		},
-		[229739] = {
-			Faction = {"The Scryers", "The Aldor"},
-			["The Scryers"] = {
-				{ itemID = 228910, desc = "Shoulder Enchants" }, --Masters Inscription of the Blade
-				{ itemID = 228911, desc = "Shoulder Enchants" }, --Masters Inscription of the Knight
-				{ itemID = 228912, desc = "Shoulder Enchants" }, --Masters Inscription of the Oracle
-				{ itemID = 228909, desc = "Shoulder Enchants" }, --Masters Inscription of the Orb
-				{ itemID = 2228886, desc = "Shoulder Enchants" }, --Masters Inscription of Discipline
-				{ itemID = 2228887, desc = "Shoulder Enchants" }, --Masters Inscription of Faith
-				{ itemID = 2228888, desc = "Shoulder Enchants" }, --Masters Inscription of Vengeance
-				{ itemID = 2228889, desc = "Shoulder Enchants" }, --Masters Inscription of Warding
-				{ itemID = 228913, desc = "Shoulder Enchants" }, --Masters Inscription of Guardian
-				{ itemID = 228914, desc = "Shoulder Enchants" }, --Masters Inscription of Phalanx
-				{ itemID = 2228891, desc = "Shoulder Enchants" }, --Masters Inscription of Protection
-				{ itemID = 2228890, desc = "Shoulder Enchants" }, --Masters Inscription of Vigilance
-			},
-			["The Aldor"] = {
-				{ itemID = 2228910, desc = "Shoulder Enchants" }, --Masters Inscription of the Blade
-				{ itemID = 2228911, desc = "Shoulder Enchants" }, --Masters Inscription of the Knight
-				{ itemID = 2228912, desc = "Shoulder Enchants" }, --Masters Inscription of the Oracle
-				{ itemID = 2228909, desc = "Shoulder Enchants" }, --Masters Inscription of the Orb
-				{ itemID = 228886, desc = "Shoulder Enchants" }, --Masters Inscription of Discipline
-				{ itemID = 228887, desc = "Shoulder Enchants" }, --Masters Inscription of Faith
-				{ itemID = 228888, desc = "Shoulder Enchants" }, --Masters Inscription of Vengeance
-				{ itemID = 228889, desc = "Shoulder Enchants" }, --Masters Inscription of Warding
-				{ itemID = 2228913, desc = "Shoulder Enchants" }, --Masters Inscription of Guardian
-				{ itemID = 2228914, desc = "Shoulder Enchants" }, --Masters Inscription of Phalanx
-				{ itemID = 228891, desc = "Shoulder Enchants" }, --Masters Inscription of Protection
-				{ itemID = 228890, desc = "Shoulder Enchants" }, --Masters Inscription of Vigilance
-			}
-		},
-	})
-
-	AtlasLoot:AddItemData("lootableLinks", {
-		[29758] = {"TFOUR-HEAD","Token"}, --Gloves of the Fallen Defender
-    [29758] = {"TFOUR-HAND","Token"}, --Gloves of the Fallen Defender
-    [29758] = {"TFOUR-HAND","Token"}, --Gloves of the Fallen Defender
-    [29758] = {"TFOUR-HAND","Token"}, --Gloves of the Fallen Defender
-    [29758] = {"TFOUR-HAND","Token"}, --Gloves of the Fallen Defender
-    [29758] = {"TFOUR-HAND","Token"}, --Gloves of the Fallen Defender
-    [29758] = {"TFOUR-HAND","Token"}, --Gloves of the Fallen Defender
-	})
-
 AtlasLoot:AddItemData("sort", {
   { itemID = 22559, groupID = 5, refLootEntry = 15687 }; --Formula: Enchant Weapon - Mongoose
   { itemID = 28524, groupID = 2, refLootEntry = 15687 }; --Emerald Ripper
@@ -204,6 +136,7 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 1170083, groupID = 0, refLootEntry = 16457 }; --Personal Cache
   { itemID = 1400027, groupID = 0, refLootEntry = 16457 }; --Cache of the Last Guardian
   { itemID = 400751, groupID = 5, refLootEntry = 16457 }; --Raider's Commendation
+  { itemID = 31952, groupID = 0, refLootEntry = 16485 }; --Khorium Lockbox
   { itemID = 12084, groupID = 2, refLootEntry = 16524 }; --Drape of the Stormbreaker
   { itemID = 22560, groupID = 5, refLootEntry = 16524 }; --Formula: Enchant Weapon - Sunfire
   { itemID = 28663, groupID = 1, refLootEntry = 16524 }; --Boots of the Incorrupt
@@ -596,6 +529,7 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 28558, groupID = 0, refLootEntry = 18373 }; --Spirit Shard
   { itemID = 61607, groupID = 0, refLootEntry = 18373 }; --Sigil of Exarch Maladaar
   { itemID = 375250, groupID = 0, refLootEntry = 18373 }; --Rune of Ascension
+  { itemID = 28558, groupID = 0, refLootEntry = 18478 }; --Spirit Shard
   { itemID = 29434, groupID = 0, refLootEntry = 18728 }; --Badge of Justice
   { itemID = 34846, groupID = 0, refLootEntry = 18728 }; --Black Sack of Gems
   { itemID = 97885, groupID = 37, refLootEntry = 18728 }; --Ability Sealed Card Pack
@@ -1356,6 +1290,80 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 32428, groupID = 10, refLootEntry = 92179 }; --Heart of Darkness
   { itemID = 375250, groupID = 0, refLootEntry = 92179 }; --Rune of Ascension
   { itemID = 400751, groupID = 5, refLootEntry = 92179 }; --Raider's Commendation
+  { itemID = 28581, groupID = 1, refLootEntry = 117521 }; --Wolfslayer Sniper Rifle
+  { itemID = 28582, groupID = 1, refLootEntry = 117521 }; --Red Riding Hood's Cloak
+  { itemID = 28583, groupID = 1, refLootEntry = 117521 }; --Big Bad Wolf's Head
+  { itemID = 28584, groupID = 1, refLootEntry = 117521 }; --Big Bad Wolf's Paw
+  { itemID = 28589, groupID = 2, refLootEntry = 117521 }; --Beastmaw Pauldrons
+  { itemID = 28590, groupID = 2, refLootEntry = 117521 }; --Ribbon of Sacrifice
+  { itemID = 28591, groupID = 2, refLootEntry = 117521 }; --Earthsoul Leggings
+  { itemID = 28592, groupID = 2, refLootEntry = 117521 }; --Libram of Souls Redeemed
+  { itemID = 28593, groupID = 2, refLootEntry = 117521 }; --Eternium Greathelm
+  { itemID = 28594, groupID = 2, refLootEntry = 117521 }; --Trial-Fire Trousers
+  { itemID = 60991, groupID = 15, refLootEntry = 117521 }; --Sigil of The Big Bad Wolf
+  { itemID = 229739, groupID = 10, refLootEntry = 117521 }; --Tome of Untold Secrets
+  { itemID = 1170083, groupID = 0, refLootEntry = 117521 }; --Personal Cache
+  { itemID = 1400027, groupID = 0, refLootEntry = 117521 }; --Cache of the Last Guardian
+  { itemID = 375250, groupID = 4, refLootEntry = 117521 }; --Rune of Ascension
+  { itemID = 400751, groupID = 5, refLootEntry = 117521 }; --Raider's Commendation
+  { itemID = 28572, groupID = 1, refLootEntry = 117534 }; --Blade of the Unrequited
+  { itemID = 28573, groupID = 1, refLootEntry = 117534 }; --Despair
+  { itemID = 28578, groupID = 1, refLootEntry = 117534 }; --Masquerade Gown
+  { itemID = 28579, groupID = 1, refLootEntry = 117534 }; --Romulo's Poison Vial
+  { itemID = 28589, groupID = 2, refLootEntry = 117534 }; --Beastmaw Pauldrons
+  { itemID = 28590, groupID = 2, refLootEntry = 117534 }; --Ribbon of Sacrifice
+  { itemID = 28591, groupID = 2, refLootEntry = 117534 }; --Earthsoul Leggings
+  { itemID = 28592, groupID = 2, refLootEntry = 117534 }; --Libram of Souls Redeemed
+  { itemID = 28593, groupID = 2, refLootEntry = 117534 }; --Eternium Greathelm
+  { itemID = 28594, groupID = 2, refLootEntry = 117534 }; --Trial-Fire Trousers
+  { itemID = 60992, groupID = 15, refLootEntry = 117534 }; --Sigil of Romulo
+  { itemID = 61022, groupID = 15, refLootEntry = 117534 }; --Sigil of Julianne
+  { itemID = 229739, groupID = 10, refLootEntry = 117534 }; --Tome of Untold Secrets
+  { itemID = 1170083, groupID = 0, refLootEntry = 117534 }; --Personal Cache
+  { itemID = 1400027, groupID = 0, refLootEntry = 117534 }; --Cache of the Last Guardian
+  { itemID = 375250, groupID = 4, refLootEntry = 117534 }; --Rune of Ascension
+  { itemID = 400751, groupID = 5, refLootEntry = 117534 }; --Raider's Commendation
+  { itemID = 28585, groupID = 1, refLootEntry = 118168 }; --Ruby Slippers
+  { itemID = 28586, groupID = 1, refLootEntry = 118168 }; --Wicked Witch's Hat
+  { itemID = 28587, groupID = 1, refLootEntry = 118168 }; --Legacy
+  { itemID = 28588, groupID = 1, refLootEntry = 118168 }; --Blue Diamond Witchwand
+  { itemID = 28589, groupID = 2, refLootEntry = 118168 }; --Beastmaw Pauldrons
+  { itemID = 28590, groupID = 2, refLootEntry = 118168 }; --Ribbon of Sacrifice
+  { itemID = 28591, groupID = 2, refLootEntry = 118168 }; --Earthsoul Leggings
+  { itemID = 28592, groupID = 2, refLootEntry = 118168 }; --Libram of Souls Redeemed
+  { itemID = 28593, groupID = 2, refLootEntry = 118168 }; --Eternium Greathelm
+  { itemID = 28594, groupID = 2, refLootEntry = 118168 }; --Trial-Fire Trousers
+  { itemID = 61590, groupID = 15, refLootEntry = 118168 }; --Sigil of The Crone
+  { itemID = 229739, groupID = 10, refLootEntry = 118168 }; --Tome of Untold Secrets
+  { itemID = 1170083, groupID = 0, refLootEntry = 118168 }; --Personal Cache
+  { itemID = 1400027, groupID = 0, refLootEntry = 118168 }; --Cache of the Last Guardian
+  { itemID = 375250, groupID = 4, refLootEntry = 118168 }; --Rune of Ascension
+  { itemID = 400751, groupID = 5, refLootEntry = 118168 }; --Raider's Commendation
+  { itemID = 24152, groupID = 0, refLootEntry = 181963 }; --Charred Bone Fragment
+  { itemID = 28248, groupID = 1, refLootEntry = 184465 }; --Totem of the Void
+  { itemID = 28249, groupID = 1, refLootEntry = 184465 }; --Capacitus' Cloak of Calibration
+  { itemID = 28250, groupID = 1, refLootEntry = 184465 }; --Vestia's Pauldrons of Inner Grace
+  { itemID = 28251, groupID = 1, refLootEntry = 184465 }; --Boots of the Glade-Keeper
+  { itemID = 28252, groupID = 1, refLootEntry = 184465 }; --Bloodfyre Robes of Annihilation
+  { itemID = 11640, groupID = 1, refLootEntry = 185119 }; --Bindings of Mystic Might
+  { itemID = 11797, groupID = 1, refLootEntry = 185119 }; --Ring of Shadowed Precision
+  { itemID = 28745, groupID = 2, refLootEntry = 185119 }; --Mithril Chain of Heroism
+  { itemID = 28746, groupID = 2, refLootEntry = 185119 }; --Fiend Slayer Boots
+  { itemID = 28747, groupID = 2, refLootEntry = 185119 }; --Battlescar Boots
+  { itemID = 28748, groupID = 1, refLootEntry = 185119 }; --Legplates of the Innocent
+  { itemID = 28749, groupID = 2, refLootEntry = 185119 }; --King's Defender
+  { itemID = 28750, groupID = 2, refLootEntry = 185119 }; --Girdle of Treachery
+  { itemID = 28751, groupID = 1, refLootEntry = 185119 }; --Heart-Flame Leggings
+  { itemID = 28752, groupID = 1, refLootEntry = 185119 }; --Forestlord Striders
+  { itemID = 28753, groupID = 1, refLootEntry = 185119 }; --Ring of Recurrence
+  { itemID = 28754, groupID = 1, refLootEntry = 185119 }; --Triptych Shield of the Ancients
+  { itemID = 28755, groupID = 2, refLootEntry = 185119 }; --Bladed Shoulderpads of the Merciless
+  { itemID = 28756, groupID = 1, refLootEntry = 185119 }; --Headdress of the High Potentate
+  { itemID = 229739, groupID = 10, refLootEntry = 185119 }; --Tome of Untold Secrets
+  { itemID = 1170083, groupID = 0, refLootEntry = 185119 }; --Personal Cache
+  { itemID = 1400027, groupID = 0, refLootEntry = 185119 }; --Cache of the Last Guardian
+  { itemID = 375250, groupID = 4, refLootEntry = 185119 }; --Rune of Ascension
+  { itemID = 400751, groupID = 5, refLootEntry = 185119 }; --Raider's Commendation
   { itemID = 97730, groupID = 0, refLootEntry = 254401 }; --Worldforged Key Fragment
   { itemID = 252821, groupID = 1, refLootEntry = 254401 }; --Twinglaive of the Vampire Council
   { itemID = 252906, groupID = 1, refLootEntry = 254401 }; --Twinglaive of Eternal Slumber
@@ -1410,7 +1418,7 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 254174, groupID = 1, refLootEntry = 254495 }; --Bonelink Greaves
   { itemID = 254217, groupID = 1, refLootEntry = 254495 }; --Soulsteel Sabatons
   { itemID = 375250, groupID = 0, refLootEntry = 254495 }; --Rune of Ascension
+  { itemID = 24492, groupID = 0, refLootEntry = 282199 }; --Keanna's Log
   { itemID = 97730, groupID = 0, refLootEntry = 654564 }; --Worldforged Key Fragment
   { itemID = 354056, groupID = 0, refLootEntry = 654564 }; --Sigil of Takan Velor
 })
-
