@@ -348,11 +348,6 @@ local function getLootItem(newTable, node)
 end
 
 local classIdOrder = {4,2,6,5,9,15}
-local function getClassIdOrder(id)
-	for _, i in pairs (classIdOrder) do
-		if i == id then return true end
-	end
-end
 
 local function sortItemData(self, dataSource, dataID, tablenum)
     if not dataSource or not dataSource[tablenum] then return end
@@ -361,6 +356,7 @@ local function sortItemData(self, dataSource, dataID, tablenum)
     local lootTableName = (self.data.item[dataID..tablenum] and dataID..tablenum) or 
                           (#dataSource[tablenum][2] > 0 and self.data.item[dataSource[tablenum][2][1]] and dataSource[tablenum][2][1])
 
+	if not lootTableName then return end
     if displayData[lootTableName] then return displayData[lootTableName] end
 
     local dontSort, isVanity = false, false
@@ -393,7 +389,7 @@ local function sortItemData(self, dataSource, dataID, tablenum)
                         local subclassName = itemInfo and itemInfo.subclassName or "Miscellaneous"
                         local inventoryType = itemInfo and itemInfo.inventoryType
 
-                        local bTypeIdx = itemInfo.isToken and 6 or getClassIdOrder(itemInfo.classID) and itemInfo.classID or 5
+                        local bTypeIdx = itemInfo.isToken and 6 or classIdOrder[itemInfo.classID] and itemInfo.classID or 5
 
                         if not itemCatagories[bTypeIdx] then
                             itemCatagories[bTypeIdx] = {}
@@ -426,7 +422,7 @@ local function sortItemData(self, dataSource, dataID, tablenum)
         end
 
         --Process sparse array indices correctly without breaking via pairs lookup
-        for _, i in pairs(classIdOrder) do
+        for current, i in pairs(classIdOrder) do
             local itemCat = itemCatagories[i]
             if itemCat then
                 local currentPage = #newTable
@@ -436,7 +432,7 @@ local function sortItemData(self, dataSource, dataID, tablenum)
 
                 -- Check if items were added to the current grid workspace
                 if #newTable[currentPage] > countBefore or #newTable > currentPage then
-                    if #newTable[#newTable] >= 30 then
+                    if current ~= #classIdOrder and #newTable[#newTable] >= 30 then
                         table.insert(newTable, {})
                     end
                     -- Insert visual padding block between major item category shifts
@@ -448,7 +444,6 @@ local function sortItemData(self, dataSource, dataID, tablenum)
                     end
                 end
             end
-			if #newTable[#newTable] == 0 then newTable[#newTable] = nil end
         end
 
     elseif isVanity then
@@ -470,7 +465,7 @@ local function sortItemData(self, dataSource, dataID, tablenum)
 			end
 		end
     end
-
+	
     displayData[lootTableName] = newTable
     if self.selectedProfile and self.selectedProfile.isAdmin then
         AtlaslootDisplaydata = displayData
