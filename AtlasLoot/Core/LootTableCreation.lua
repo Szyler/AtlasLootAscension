@@ -1,16 +1,15 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
 --Creates tables for raid tokens from the collections tables
-function AtlasLoot:CreateToken(dataID)
-	local newDataID, slotType = string.split("-", dataID, 2)
-	local itemType = "INVTYPE_"..slotType
-	local slotName = self.ItemUtil:GetSlotName(itemType)
-	
+function AtlasLoot:CreateToken(dataID, slotNumber)
+	local newDataID = dataID..slotNumber
+	local slotName = self.ItemUtil:GetSlotName(slotNumber)
+
 	--Creates data set of the item type
-	if (self.data.token[dataID] == nil) then
-		self.data.token[dataID] = {
+	if (self.data.token[newDataID] == nil) then
+		self.data.token[newDataID] = {
 			Name = slotName,
-			Type = self:GetDataType(newDataID),
+			Type = self:GetDataType(dataID),
 			Back = true,
 			NoSubt = true,
 			[1] = {}
@@ -19,17 +18,16 @@ function AtlasLoot:CreateToken(dataID)
 
 	local count = 1
 	--Fills table with items
-	while self.data.item[newDataID..count] do
-		for _, item in ipairs(self.data.item[newDataID..count]) do
+	while self.data.item[dataID..count] do
+		for _, item in ipairs(self.data.item[dataID..count]) do
 			if item.itemID then
-				if itemType == self.ItemUtil:GetItemEquiplocation(item.itemID) then
-					table.insert(self.data.token[dataID][1], {itemID = item.itemID, desc = self:GetDataPageName(newDataID..count)})
+				if slotNumber == self.ItemUtil:GetItemEquiplocation(item.itemID) then
+					table.insert(self.data.token[newDataID][1], {itemID = item.itemID, desc = self:GetDataPageName(dataID..count)})
 				end
 			end
 		end
 		count = count + 1
 	end
-	self:ShowItemsFrame("refresh")
 end
 
 local function checkForWorldforgedUpdate(self, typeL)

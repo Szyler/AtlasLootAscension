@@ -192,7 +192,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 		local lvls = self.data.crafting["CraftingLevels"][spellID]
 		local name = self:FixText(dataSource.Name)
 		extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
-	elseif itemNumber.sourcePage and itemNumber.sourcePage[2] == "Token" then
+	elseif self.data.lootableLinks[itemID] and self.data.lootableLinks[itemID][3] == "Token" then
 		extra = self:FixText("Set Token (Click)")
 	elseif itemData and itemData.subclassName and itemData.inventoryTypeName then
 		extra = itemData.subclassName .. ", " .. itemData.inventoryTypeName

@@ -198,13 +198,14 @@ function AtlasLoot:ItemOnClick(item, button)
                 self.backEnabled = true
                 self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
             end
-        elseif item.sourcePage and item.sourcePage[2] == "Token" then
+        elseif item.sourcePage and item.sourcePage[3] == "Token" then
+            local source = item.sourcePage[1]..item.sourcePage[2]
             --Create token table if there isnt one
-            if self.data.token[item.sourcePage[1]] == nil then
-                self:CreateToken(item.sourcePage[1])
+            if self.data.token[source] == nil then
+                self:CreateToken(item.sourcePage[1], item.sourcePage[2])
             end
             --Show token table
-            self:ShowItemsFrame(item.sourcePage[1], "token", 1)
+            self:ShowItemsFrame(source, "token", 1)
         elseif button == "LeftButton" and itemID and self.data.extraItemInfo[itemID] then
             self:PopoupItemFrame(item, self.data.extraItemInfo[itemID] )
             self.ui.itemPopupframe:Show()
@@ -233,13 +234,14 @@ function AtlasLoot:ItemOnClick(item, button)
                 self.backEnabled = true
                 self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
             end       
-        elseif item.sourcePage and item.sourcePage[2] == "Token" then
+        elseif item.sourcePage and item.sourcePage[3] == "Token" then
+            local source = item.sourcePage[1]..item.sourcePage[2]
             --Create token table if there isnt one
-            if self.data.token[item.sourcePage[1]] == nil then
-                self:CreateToken(item.sourcePage[1])
+            if self.data.token[source] == nil then
+                self:CreateToken(item.sourcePage[1], item.sourcePage[2])
             end
             --Show token table
-            self:ShowItemsFrame(item.sourcePage[1], "token", 1)
+            self:ShowItemsFrame(source, "token", 1)
         elseif button == "LeftButton" then
             local reagents = self:GetReagentItems(spellID)
             if reagents then
