@@ -75,7 +75,8 @@ function AtlasLoot:InitializeUIFunctions()
             else
                 self:ShowItemsFrame(tablename, "itemData", tablenum, 1)
             end
-    end
+            self:SetUITab("Loot")
+    end 
 
     --[[
     self:ModuleMenuOpen:
@@ -104,6 +105,7 @@ function AtlasLoot:InitializeUIFunctions()
             --Show the table that has been selected
             self:ShowItemsFrame(tablename, "itemData", tablenum, 1)
         end
+        self:SetUITab("Loot")
     end
 
     --[[
@@ -156,6 +158,7 @@ function AtlasLoot:InitializeUIFunctions()
                 local tablenum = self.ui.menus.data[tablename].Loadfirst or 1
                 self:ShowItemsFrame(tablename, "itemData", tablenum, 1)
             end
+            self:SetUITab("Loot")
         end
     end
 
@@ -251,7 +254,8 @@ function AtlasLoot:InitializeUIFunctions()
         end
     end
 
-    function self:SetUITab()
+    function self:SetUITab(showTab)
+        if showTab then self.ui.tabs.currentTab = showTab end
         for _, tab in pairs(self.ui.tabs) do
             if type(tab) ~= "string" then
                 if tab.name == self.ui.tabs.currentTab then
