@@ -347,7 +347,7 @@ local function getLootItem(newTable, node)
     end
 end
 
-local classIdOrder = {4,2,5,9,15}
+local classIdOrder = {4,2,6,5,9,15}
 local function getClassIdOrder(id)
 	for _, i in pairs (classIdOrder) do
 		if i == id then return true end
@@ -393,7 +393,7 @@ local function sortItemData(self, dataSource, dataID, tablenum)
                         local subclassName = itemInfo and itemInfo.subclassName or "Miscellaneous"
                         local inventoryType = itemInfo and itemInfo.inventoryType
 
-                        local bTypeIdx = getClassIdOrder(itemInfo.classID) and itemInfo.classID or 5
+                        local bTypeIdx = itemInfo.isToken and 6 or getClassIdOrder(itemInfo.classID) and itemInfo.classID or 5
 
                         if not itemCatagories[bTypeIdx] then
                             itemCatagories[bTypeIdx] = {}
