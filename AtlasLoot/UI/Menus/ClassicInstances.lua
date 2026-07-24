@@ -7,6 +7,7 @@ AtlasLoot:AddNewMenus({
         Name = "Zul'Gurub",
         Type = "ClassicRaid",
         Map = "ZulGurub",
+		{"Majordomo Executus", {1750004} },
         {"High Priestess Jeklik", {14517} },
         {"High Priest Venoxis", {14507} },
         {"High Priestess Mar'li", {14510} },
@@ -200,7 +201,7 @@ AtlasLoot:AddNewMenus({
 		{"The Beast", {10430} },
 		{"Lord Valthalak (Summon)", {16042} },
 		{"General Drakkisath", {10363} },
-			},
+	},
 
 	["MoltenCore"] = {
 		Module = "AtlasLoot_OriginalWoW",
@@ -217,6 +218,7 @@ AtlasLoot:AddNewMenus({
 		{"Sulfuron Harbinger", {12098} },
 		{"Majordomo Executus", {1750004} },
 		{"Ragnaros", {11502} },
+		{"Trash", {11668}},
 	},
 
 	["BlackwingLair"] = {
