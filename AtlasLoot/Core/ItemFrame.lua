@@ -326,6 +326,7 @@ AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum):
 dataID - Name of the loot table
 dataSource - Table in the database where the loot table is stored
 tablenum - Number of the table with the loot in it
+pageNumber - Page number of the loot table
 It is the workhorse of the mod and allows the loot tables to be displayed any way anywhere in any mod.
 ]]
 function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumber)
