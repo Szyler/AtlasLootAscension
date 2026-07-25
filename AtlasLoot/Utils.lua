@@ -207,7 +207,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 	end
 
 	local numberBtns
-	local craftedItemID = self:GetCraftedItem(frame.spellID)
+	local craftedItemID = self:GetCraftedItemID(frame.spellID)
 	if craftedItemID then
 		table.insert(data, 1, {ItemID = craftedItemID})
 		local bloodforged = self:GetItemDifficultyID(craftedItemID, 1)

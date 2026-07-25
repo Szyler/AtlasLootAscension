@@ -9,7 +9,7 @@ function AtlasLoot:GetReagentItems(id)
 	return id and C_TradeSkill.GetReagentItems(id)
 end
 
-function AtlasLoot:GetCraftedItem(spellID)
+function AtlasLoot:GetCraftedItemID(spellID)
 	if not spellID then return end
 	local item = C_TradeSkill.GetCraftedItem(spellID)
 	return item and item.ItemID

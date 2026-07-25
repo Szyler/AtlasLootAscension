@@ -268,7 +268,7 @@ function AtlasLoot:ItemContextMenu(data, Type)
     end
 
     local recipeID = self:GetRecipeID(spellID)
-    local craftedID = self:GetCraftedItem(spellID)
+    local craftedID = self:GetCraftedItemID(spellID)
     local isAuction = AuctionFrame and AuctionFrame:IsVisible() and true or false
     local isCrafted = isAuction and craftedID or false
     local isRecipe = isCrafted and recipeID or false
