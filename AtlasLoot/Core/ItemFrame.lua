@@ -431,8 +431,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 
 	--For stopping the subtable from changing if its a token table
 	if dataSource.NoSubt == nil then
-		local text = dataSource.DisplayName or dataSource.Name
-		self.ui.submenuButton:SetText(self:FixText(text))
+		local _, displayName = string.split("%-", dataSource.Name, 2)
+		self.ui.submenuButton:SetText(self:FixText(displayName:gsub("^%s+", "")))
 		self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
 	end
 

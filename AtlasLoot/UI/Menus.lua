@@ -97,9 +97,11 @@ end
 
 function AtlasLoot:GetDataDisplayName(id)
 	if self.ui.menus.data[id] then
-		return (self.ui.menus.data[id].DisplayName or self.ui.menus.data[id].Name) or ""
-	elseif menusKeyTable[id] then
-		return (self.ui.menus.data[menusKeyTable[id][1]] and (self.ui.menus.data[menusKeyTable[id][1]].DisplayName or self.ui.menus.data[menusKeyTable[id][1]].Name)) or ""
+		local _, displayName = string.split("%-", self.ui.menus.data[id].Name, 2)
+		return displayName:gsub("^%s+", "") or ""
+	elseif menusKeyTable[id] and self.ui.menus.data[menusKeyTable[id][1]] then
+		local _, displayName = string.split("%-", self.ui.menus.data[menusKeyTable[id][1]].Name, 2)
+		return displayName:gsub("^%s+", "") or ""
 	end
 	return ""
 end
