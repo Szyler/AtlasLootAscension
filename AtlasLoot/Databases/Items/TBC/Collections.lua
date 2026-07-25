@@ -56,6 +56,12 @@ AtlasLoot:AddItemData("extraItemInfo",{
 			{ itemID = 228890, desc = "Shoulder Enchants" }, --Masters Inscription of Vigilance
 		}
 	},
+	[32405] = {
+		{ itemID = 30018 }, --Lord Sanguinar's Claim
+		{ itemID = 30017 }, --Telonicus's Pendant of Mayhem
+		{ itemID = 30007 }, --The Darkener's Grasp
+		{ itemID = 30015 }, --The Sun King's Talisman
+	},
 })
 
 AtlasLoot:AddItemData("lootableLinks", {
