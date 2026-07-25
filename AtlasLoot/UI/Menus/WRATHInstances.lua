@@ -146,7 +146,6 @@ AtlasLoot:AddNewMenus({
 	["CoTStratholme"] = {
 		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Caverns of Time" .. ": " .. "The Culling of Stratholme",
-		DisplayName = "The Culling of Stratholme",
 		Type = "WrathDungeon",
 		{ "Meathook", {} },
 		{ "Salramm the Fleshcrafter", {} },
