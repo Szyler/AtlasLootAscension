@@ -129,7 +129,7 @@ function AtlasLoot:FilterItem(item, itemID, dataSource)
 
 end
 
-function AtlasLoot:FilterEnableButton(frame, btnclick)
+function AtlasLoot:SetFilterToggle(frame, btnclick)
 	if btnclick == "RightButton" then
 		self:FilterMenuOpen(frame)
 		self.ui.filterButton:SetChecked(not self.ui.filterButton:GetChecked())

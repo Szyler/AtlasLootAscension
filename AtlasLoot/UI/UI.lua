@@ -302,7 +302,7 @@ function AtlasLoot:InitializeUI()
     self.ui.filterButton.Label:SetText("Filter")
     self.ui.filterButton.Label:SetPoint("RIGHT", self.ui.filterButton, 30, 2)
     self.ui.filterButton:RegisterForClicks("LeftButtonDown","RightButtonDown")
-    self.ui.filterButton:SetScript("OnClick", function(button, btnclick) self:FilterEnableButton(button, btnclick) end)
+    self.ui.filterButton:SetScript("OnClick", function(button, btnclick) self:SetFilterToggle(button, btnclick) end)
 
     function self:ToogleWishListButtons(show)
         if show then
