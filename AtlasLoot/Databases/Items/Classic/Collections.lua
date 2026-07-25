@@ -47,14 +47,29 @@ AtlasLoot:AddItemData("lootableLinks", {
     [2522362] = {"TONE", 9,"Token"}, --Wrists
     [2522364] = {"TONE", 10,"Token"}, --Hands
     -- Teir 2
-    [2522460] = {"TONE", 1,"Token"}, --Head
-    [2522461] = {"TONE", 3,"Token"}, --Shoulders
-    [2522450] = {"TONE", 5,"Token"}, --Chest
-    [2522463] = {"TONE", 6,"Token"}, --Waist
-    [2522459] = {"TONE", 7,"Token"}, --Legs
-    [2522465] = {"TONE", 8,"Token"}, --Feet
-    [2522462] = {"TONE", 9,"Token"}, --Wrists
-    [2522464] = {"TONE", 10,"Token"}, --Hands
+    [2522460] = {"TTWO", 1,"Token"}, --Head
+    [2522461] = {"TTWO", 3,"Token"}, --Shoulders
+    [2522450] = {"TTWO", 5,"Token"}, --Chest
+    [2522463] = {"TTWO", 6,"Token"}, --Waist
+    [2522459] = {"TTWO", 7,"Token"}, --Legs
+    [2522465] = {"TTWO", 8,"Token"}, --Feet
+    [2522462] = {"TTWO", 9,"Token"}, --Wrists
+    [2522464] = {"TTWO", 10,"Token"}, --Hands
+	-- Teir 2.5
+    [20930] = {"T2.5", 1,"Token"}, --Head
+    [20932] = {"T2.5", 3,"Token"}, --Shoulders
+    [20933] = {"T2.5", 5,"Token"}, --Chest
+    [20931] = {"T2.5", 7,"Token"}, --Legs
+    [20928] = {"T2.5", 8,"Token"}, --Feet
+	-- Teir 3
+    [22353] = {"TTHREE", 1,"Token"}, --Head
+    [22354] = {"TTHREE", 3,"Token"}, --Shoulders
+    [22349] = {"TTHREE", 5,"Token"}, --Chest
+    [22356] = {"TTHREE", 6,"Token"}, --Waist
+    [22352] = {"TTHREE", 7,"Token"}, --Legs
+    [22358] = {"TTHREE", 8,"Token"}, --Feet
+    [22355] = {"TTHREE", 9,"Token"}, --Wrists
+    [22357] = {"TTHREE", 10,"Token"}, --Hands
 })
 
 AtlasLoot:AddItemData("sort", {
