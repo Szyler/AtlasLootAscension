@@ -270,7 +270,6 @@ function ItemUtil:GetItemInfo(item)
 	itemInfo.link = item:GetLink()
 	if not itemInfo.itemID then return {} end
 
-	print(itemInfo.itemID, itemInfo.classID)
 	itemInfo.className = _G["ITEM_CLASS_"..itemInfo.classID]
 	itemInfo.subclassName = _G["ITEM_SUBCLASS_"..itemInfo.classID.."_"..itemInfo.subclassID]
 	itemInfo.inventoryTypeName = equipmentSlots[itemInfo.inventoryType] and equipmentSlots[itemInfo.inventoryType].name
