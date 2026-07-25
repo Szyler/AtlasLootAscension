@@ -265,9 +265,12 @@ local equipmentSlots = {
 function ItemUtil:GetItemInfo(item)
 	if not item or item == 0 then return end
 	item = tonumber(item) and Item:CreateFromID(item) or Item:CreateFromLink(item)
-	if not item then return {} end
+
 	local itemInfo = item:GetInfoInstant() or {}
 	itemInfo.link = item:GetLink()
+	if not itemInfo.itemID then return {} end
+
+	print(itemInfo.itemID, itemInfo.classID)
 	itemInfo.className = _G["ITEM_CLASS_"..itemInfo.classID]
 	itemInfo.subclassName = _G["ITEM_SUBCLASS_"..itemInfo.classID.."_"..itemInfo.subclassID]
 	itemInfo.inventoryTypeName = equipmentSlots[itemInfo.inventoryType] and equipmentSlots[itemInfo.inventoryType].name
