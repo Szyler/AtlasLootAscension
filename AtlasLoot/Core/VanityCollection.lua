@@ -244,10 +244,10 @@ function AtlasLoot:BatchRequestVanity(itemList)
 		while task do
 			self:DeliverVanityItem(task)
             local count = GetItemCount(task)
-			if not CA_IsSpellKnown(vanityItems[task].learnedSpell) and (not count or (count and count < duplicateList[task])) then
+			if vanityItems[task] and not CA_IsSpellKnown(vanityItems[task].learnedSpell) and (not count or (count and count < duplicateList[task])) then
 				table.insert(itemList, task)
 			end
-			return Timer.After(.2, nextItem)
+			return Timer.After(1.5, nextItem)
         end
 		DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot"..": "..self.Colors.YELLOW.."Retrieving Vanity Items Completed!")
     end
