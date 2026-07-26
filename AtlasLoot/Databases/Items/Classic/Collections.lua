@@ -73,23 +73,33 @@ AtlasLoot:AddItemData("lootableLinks", {
 })
 
 AtlasLoot:AddItemData("sort", {
-    { itemID = 15717, groupID = 1, refLootEntry = 10185 }; --Drakon Soul Shard
-    { itemID = 18086, groupID = 1, refLootEntry = 10185 }; --Dreadshot
-    { itemID = 18087, groupID = 1, refLootEntry = 10185 }; --Fissured Warplate
-		{ itemID = 18107, groupID = 1, refLootEntry = 10185 }; --Ashen Drape
-		{ itemID = 18108, groupID = 1, refLootEntry = 10185 }; --Ash Stitched Gauntlets
-		{ itemID = 18109, groupID = 1, refLootEntry = 10185 }; --Obsidian Signet
-		{ itemID = 18110, groupID = 1, refLootEntry = 10185 }; --Obsidian Emberlance
-		{ itemID = 18112, groupID = 1, refLootEntry = 10185 }; --Eruption Cord
-		{ itemID = 18124, groupID = 1, refLootEntry = 10185 }; --Basalt Pauldrons
-		{ itemID = 18125, groupID = 1, refLootEntry = 10185 }; --Emberthorn
-		{ itemID = 18126, groupID = 1, refLootEntry = 10185 }; --Infernos, the Extinguished
-		{ itemID = 18210, groupID = 1, refLootEntry = 10185 }; --Draconic Effigy
-		{ itemID = 18548, groupID = 1, refLootEntry = 10185 }; --Wyrmguard Talisman
-		{ itemID = 18549, groupID = 1, refLootEntry = 10185 }; --Molten Visor
-		{ itemID = 18571, groupID = 1, refLootEntry = 10185 }; --Living Lavastone Conduit
-		{ itemID = 18572, groupID = 1, refLootEntry = 10185 }; --Corelit Igneous
-		{ itemID = 18906, groupID = 1, refLootEntry = 10185 }; --Obsidian Heartseeker
+	{ itemID = 15717, groupID = 1, refLootEntry = 10185 }; --Drakon Soul Shard
+	{ itemID = 18086, groupID = 1, refLootEntry = 10185 }; --Dreadshot
+	{ itemID = 18087, groupID = 1, refLootEntry = 10185 }; --Fissured Warplate
+	{ itemID = 18107, groupID = 1, refLootEntry = 10185 }; --Ashen Drape
+	{ itemID = 18108, groupID = 1, refLootEntry = 10185 }; --Ash Stitched Gauntlets
+	{ itemID = 18109, groupID = 1, refLootEntry = 10185 }; --Obsidian Signet
+	{ itemID = 18110, groupID = 1, refLootEntry = 10185 }; --Obsidian Emberlance
+	{ itemID = 18112, groupID = 1, refLootEntry = 10185 }; --Eruption Cord
+	{ itemID = 18124, groupID = 1, refLootEntry = 10185 }; --Basalt Pauldrons
+	{ itemID = 18125, groupID = 1, refLootEntry = 10185 }; --Emberthorn
+	{ itemID = 18126, groupID = 1, refLootEntry = 10185 }; --Infernos, the Extinguished
+	{ itemID = 18210, groupID = 1, refLootEntry = 10185 }; --Draconic Effigy
+	{ itemID = 18548, groupID = 1, refLootEntry = 10185 }; --Wyrmguard Talisman
+	{ itemID = 18549, groupID = 1, refLootEntry = 10185 }; --Molten Visor
+	{ itemID = 18571, groupID = 1, refLootEntry = 10185 }; --Living Lavastone Conduit
+	{ itemID = 18572, groupID = 1, refLootEntry = 10185 }; --Corelit Igneous
+	{ itemID = 18906, groupID = 1, refLootEntry = 10185 }; --Obsidian Heartseeker
+	-- Aq shouuld enchant
+	{ itemID = 1319786, desc = "Quest Requirements", refLootEntry = "AqTempEnchants", contentsPreview = {{20878},{20868},{20872},{20859,3},{20864,3}} }, --Inscription of the Stormcaller
+	{ itemID = 1319785, desc = "Quest Requirements", refLootEntry = "AqTempEnchants", contentsPreview = {{20881},{20869},{20871},{20861,3},{20862,3}} }, --Inscription of the Stalker
+	{ itemID = 1319789, desc = "Quest Requirements", refLootEntry = "AqTempEnchants", contentsPreview = {{20874},{20872},{20866},{20864,3},{20858,3}} }, --Inscription of the Oracle
+	{ itemID = 1319790, desc = "Quest Requirements", refLootEntry = "AqTempEnchants", contentsPreview = {{20879},{20873},{20868},{20865,3},{20859,3}} }, --Inscription of the Genesis
+	{ itemID = 1319787, desc = "Quest Requirements", refLootEntry = "AqTempEnchants", contentsPreview = {{20877},{20871},{20867},{20862,3},{20860,3}} }, --Inscription of the Enigma
+	{ itemID = 1319788, desc = "Quest Requirements", refLootEntry = "AqTempEnchants", contentsPreview = {{20875},{20870},{20869},{20863,3},{20861,3}} }, --Inscription of the Doomcaller
+	{ itemID = 1319784, desc = "Quest Requirements", refLootEntry = "AqTempEnchants", contentsPreview = {{20876},{20867},{20870},{20860,3},{20863,3}} }, --Inscription of the Deathdealer
+	{ itemID = 1319782, desc = "Quest Requirements", refLootEntry = "AqTempEnchants", contentsPreview = {{20882},{20866},{20873},{20858,3},{20865,3}} }, --Inscription of the Conqueror
+	{ itemID = 1319783, desc = "Quest Requirements", refLootEntry = "AqTempEnchants", contentsPreview = {{20878},{20868},{20872},{20859,3},{20864,3}} }, --Inscription of the Avenger
 })
 ------------------------------------
 ------ Mark of Triumph Vendor ------
