@@ -228,7 +228,8 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 		if item == "blank" then
 			button:Hide()
 		else
-			local correctID = (type(item) == "number" and item) or (type(item) == "table" and (item.itemID or item.ItemID))
+			local correctID = (type(item) == "number" and item) or (type(item) == "table" and (item.itemID or item[1]))
+			local itemCount = (type(item) == "table" and (item.Count or item[2])) or nil
 			local itemID = self:GetItemDifficultyID(correctID, self.ItemindexID)
 			local itemData = self.ItemUtil:GetItemInfo(itemID)
 			if not itemData then break end
@@ -242,7 +243,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 			if recipeSpellID then
 				button.craftingData = self:GetRecipeSource(recipeSpellID)
 			end
-			SetItemButtonCount(button, item.Count)
+			SetItemButtonCount(button, itemCount)
 			button:Show()
 		end
 		numberBtns = i
