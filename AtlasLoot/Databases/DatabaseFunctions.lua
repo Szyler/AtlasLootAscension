@@ -444,6 +444,9 @@ local function sortItemData(self, dataSource, dataID, tablenum)
                     end
                 end
             end
+			if current == #classIdOrder and #newTable[#newTable] == 0 then
+				newTable[#newTable] = nil
+			end
         end
 
     elseif isVanity then
@@ -463,9 +466,12 @@ local function sortItemData(self, dataSource, dataID, tablenum)
 			if #newTable[#newTable] >= 30 and itemNum ~= #self.data.item[lootTableName] then
 				table.insert(newTable, {})
 			end
+			if newTable[#newTable] == 0 and itemNum == #self.data.item[lootTableName] then
+				table.insert(newTable, {})
+			end
 		end
     end
-	
+
     displayData[lootTableName] = newTable
     if self.selectedProfile and self.selectedProfile.isAdmin then
         AtlaslootDisplaydata = displayData
