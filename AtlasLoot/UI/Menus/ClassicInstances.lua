@@ -40,7 +40,6 @@ AtlasLoot:AddNewMenus({
 		{"Ayamiss the Hunter", {15369} },
 		{"Ossirian the Unscarred", {15339} },
 		{"Trash Mobs", {15318} },
-		{"AQ Enchants", {} },
 	},
 
 	["TempleofAQ"] = {
@@ -58,7 +57,7 @@ AtlasLoot:AddNewMenus({
 		{"Ouro", {15517} },
 		{"C'Thun", {15727} },
 		{"Trash Mobs", {15249} },
-		{"Shoulder Enchants", {} },
+		{"Shoulder Enchants", {"AqTempEnchants"} },
 	},
 
 	["Naxxramas60"] = {
@@ -225,7 +224,7 @@ AtlasLoot:AddNewMenus({
 		Name = "Blackwing Lair",
 		Type = "ClassicRaid",
 		Map = "BlackwingLair",
-		{"Razorgore the Untamed", {1012435} },
+		{"Razorgore the Untamed", {12435} },
 		{"Vaelastrasz the Corrupt", {13020} },
 		{"Broodlord Lashlayer", {12017} },
 		{"Three Dragons", {11983, 1014601, 1011981} },

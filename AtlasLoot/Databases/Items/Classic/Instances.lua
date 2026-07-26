@@ -1999,6 +1999,26 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 400750, groupID = 4, refLootEntry = 12264 }; --Raider's Commendation
   { itemID = 1170083, groupID = 0, refLootEntry = 12264 }; --Personal Cache
   { itemID = 1615011, groupID = 0, refLootEntry = 12397 }; --Treasures of Azeroth
+  { itemID = 13826, groupID = 1, refLootEntry = 12435 }; --Dragon Hunter's Mantle
+  { itemID = 15026, groupID = 2, refLootEntry = 12435 }; --Living Blood Gem
+  { itemID = 19334, groupID = 2, refLootEntry = 12435 }; --The Untamed Blade
+  { itemID = 19335, groupID = 2, refLootEntry = 12435 }; --Spineshatter
+  { itemID = 19336, groupID = 2, refLootEntry = 12435 }; --Arcane Infused Gem
+  { itemID = 19337, groupID = 1, refLootEntry = 12435 }; --The Black Book
+  { itemID = 19357, groupID = 2, refLootEntry = 12435 }; --Herald of Woe
+  { itemID = 19369, groupID = 1, refLootEntry = 12435 }; --Gloves of Rapid Evolution
+  { itemID = 19370, groupID = 1, refLootEntry = 12435 }; --Mantle of the Blackwing Cabal
+  { itemID = 19397, groupID = 1, refLootEntry = 12435 }; --Ring of Blackrock
+  { itemID = 19401, groupID = 1, refLootEntry = 12435 }; --Primalist's Linked Legguards
+  { itemID = 19405, groupID = 2, refLootEntry = 12435 }; --Malfurion's Blessed Bulwark
+  { itemID = 53144, groupID = 3, refLootEntry = 12435 }; --Formula: Enchant Cloak - Blazing
+  { itemID = 60007, groupID = 0, refLootEntry = 12435 }; --Sigil of Razorgore the Untamed
+  { itemID = 97885, groupID = 37, refLootEntry = 12435 }; --Ability Sealed Card Pack
+  { itemID = 97886, groupID = 37, refLootEntry = 12435 }; --Talent Sealed Card Pack
+  { itemID = 400750, groupID = 0, refLootEntry = 12435 }; --Raider's Commendation
+  { itemID = 1170083, groupID = 0, refLootEntry = 12435 }; --Personal Cache
+  { itemID = 1278048, groupID = 37, refLootEntry = 12435 }; --Case of Fortune: Talents
+  { itemID = 1278049, groupID = 37, refLootEntry = 12435 }; --Case of Fortune
   { itemID = 1481, groupID = 1, refLootEntry = 12876 }; --Grimclaw
   { itemID = 1491, groupID = 1, refLootEntry = 12876 }; --Ring of Precision
   { itemID = 2567, groupID = 1, refLootEntry = 12876 }; --Evocator's Blade
