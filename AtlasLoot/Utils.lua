@@ -469,7 +469,7 @@ end
 function AtlasLoot:GetItemSource(itemID)
 	local itemSource = itemSourceList[findBaseItemID(itemID)]
 	if itemSource and itemSource[1] and itemSource[2] then
-		return "Item Source: " .. self.Colors.CYAN.. self:GetDataDisplayName(itemSource[1]) .. self.Colors.WHITE .. " - " .. self:GetDataPageName(itemSource[1], itemSource[2])
+		return "Item Source: " .. self.Colors.CYAN.. self:GetDisplayNameByID(itemSource[1]) .. self.Colors.WHITE .. " - " .. self:GetDataPageName(itemSource[1], itemSource[2])
 	end
 end
 

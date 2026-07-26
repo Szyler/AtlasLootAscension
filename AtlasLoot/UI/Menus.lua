@@ -29,7 +29,7 @@ end
 function AtlasLoot:GetSourcesExtendedInfo(id)
 	local sourceInfo = {
 		Type = self:GetDataType(id),
-		SourceName = self:GetDataDisplayName(id),
+		SourceName = self:GetDisplayNameByID(id),
 		Source = {self:GetSourceLocation(id)},
 		Module = self:GetDataModule(id),
 		Name = self:GetDataPageName(id),
@@ -95,13 +95,17 @@ function AtlasLoot:GetDataName(id)
 	return ""
 end
 
-function AtlasLoot:GetDataDisplayName(id)
+function AtlasLoot:GetSplitDisplayName(name)
+	if not name then return end
+	local _, displayName = string.split("%-", name, 2)
+	displayName = displayName  and displayName:gsub("^%s+", "") or name
+end
+
+function AtlasLoot:GetDisplayNameByID(id)
 	if self.ui.menus.data[id] then
-		local _, displayName = string.split("%-", self.ui.menus.data[id].Name, 2)
-		return displayName and displayName:gsub("^%s+", "") or ""
+		return self:GetSplitDisplayName(self.ui.menus.data[id].Name) or ""
 	elseif menusKeyTable[id] and menusKeyTable[id][1] and self.ui.menus.data[menusKeyTable[id][1]] then
-		local _, displayName = string.split("%-", self.ui.menus.data[menusKeyTable[id][1]].Name, 2)
-		return displayName and displayName:gsub("^%s+", "") or ""
+		return self:GetSplitDisplayName(self.ui.menus.data[menusKeyTable[id][1]].Name) or ""
 	end
 	return ""
 end

@@ -71,7 +71,7 @@ function AtlasLoot:AddItemToWishList(typ, tableNum, data, show)
 		table.insert(AtlasLootWishList[typ][tableNum], tableCopy)
 		local tNum = #AtlasLootWishList[typ][tableNum]
 		AtlasLootWishList[typ][tableNum][tNum].sourcePage = data.item.sourcePage or {{data.dataID, data.dataSource, data.tablenum}, "Source"}
-		AtlasLootWishList[typ][tableNum][tNum].desc = self:GetDataDisplayName(data.dataID..data.tablenum).." - "..self:GetDataPageName(data.dataID..data.tablenum)
+		AtlasLootWishList[typ][tableNum][tNum].desc = self:GetDisplayNameByID(data.dataID..data.tablenum).." - "..self:GetDataPageName(data.dataID..data.tablenum)
 		if AtlasLootWishList.Options[playerName].AutoSortWishlist then
 			self:SortWishList(nil,typ, tableNum)
 		end
