@@ -7,7 +7,7 @@ local lastMap
 local totalPins = 0
 
 -- Creates the map pins 
-function AtlasLoot:CreateMapPins(list)
+local function setMapPins(self, list)
     _G["AtlasLoot_PlayerMapPin"]:Hide()
     -- Hide all pins before reshowing so any extras arnt showing
     if totalPins then
@@ -86,7 +86,7 @@ function AtlasLoot:GetCursorCords()
     return x, y
 end
 
-function AtlasLoot:PlayerPin(firstSet)
+local function setPlayerPin(self, firstSet)
     if self.ui.tabs.Map:IsVisible() and self.data.map[self.CurrentMap].ZoneName[1] == GetRealZoneText() and self.MapNum == GetCurrentMapDungeonLevel() then
         _G["AtlasLoot_PlayerMapPin"]:Show()
     else
@@ -184,9 +184,9 @@ function AtlasLoot:MapSelect(mapID, mapNum)
     self.CurrentMap = mapID
     self:SubTableScrollFrameUpdate(mapID, "AtlasLoot_MapData", mapNum)
     self:SetNavButtons(mapID, mapNum)
-    self:CreateMapPins(pinsList)
+    setMapPins(self, pinsList)
     self:CancelTimer(self.playerPinTimer)
-    self:PlayerPin(true)
+    setPlayerPin(self, true)
 
     local text = map.ZoneName[1]..self.Colors.WHITE.." ["..map.Acronym.."]\n"..
     self.Colors.GOLD .. "Location: ".. self.Colors.WHITE..map.Location[1].."\n"..
