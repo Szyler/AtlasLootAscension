@@ -6,27 +6,23 @@ AtlasLoot:AddNewMenus({
     --------- Classic ----------
     ----------------------------
 	["DesolaceCentaurClans"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Desolace Centaur Clans",
 		{ "Magram Clan Centaur", {}, WebID = {93,"faction"} },
 		{ "Gelkis Clan Centaur", {}, WebID = {92,"faction"} },
 	},
 
 	["Wintersaber"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Wintersaber Trainers",
 		{ "Wintersaber Trainers", {} },
 	},
 
 	["ArathiBasinFactions"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Arathi Basin",
 		{ "The League of Arathor - Alliance", {}, WebID = {509,"faction"} },
 		{ "The Defilers - Horde", {}, WebID = {510,"faction"} },
 	},
 
 	["Argent"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Argent Dawn",
 		WebID = {529,"faction"},
 		{ "Argent Dawn", {} },
@@ -37,14 +33,12 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Bloodsail"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Bloodsail Buccaneers",
 		WebID = {87,"faction"},
 		{ "Bloodsail Buccaneers", {} },
 	},
 
 	["Hydraxian"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Hydraxian Waterlords",
 		WebID = {749,"faction"},
 		{ "Honored", {} },
@@ -53,13 +47,11 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["AQBroodRings"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Brood of Nozdormu",
 		{ "Brood of Nozdormu", {}, WebID = {910,"faction"} },
 	},
 
 	["Cenarion"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Cenarion Circle",
 		WebID = {609,"faction"},
 		{ "Friendly", {} },
@@ -69,14 +61,12 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["AlteracFactions"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Alterac Valley",
 		{ "Stormpike Guard - Alliance", {}, {730,"faction"} },
 		{ "Frostwolf Clan - Horde", {}, WebID = {729,"faction"} },
 	},
 
 	["Thorium"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Thorium Brotherhood",
 		WebID = {59,"faction"},
 		{ "Friendly", {} },
@@ -86,7 +76,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Timbermaw"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Timbermaw Hold",
 		WebID = {576,"faction"},
 		{ "Timbermaw Hold", {} },
@@ -97,7 +86,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Zandalar"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Zandalar Tribe",
 		WebID = {270,"faction"},
 		{ "Zandalar Tribe", {} },
@@ -111,7 +99,6 @@ AtlasLoot:AddNewMenus({
     ----------- TBC ------------
     ----------------------------
 	["Ashtongue"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Ashtongue Deathsworn",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -119,7 +106,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["CExpedition"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Cenarion Expedition",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -128,7 +114,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["HonorHold"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Honor Hold - Alliance",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -137,7 +122,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["KeepersofTime"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Keepers of Time",
 		{ "Honored", {} },
 		{ "Revered", {} },
@@ -145,7 +129,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Kurenai"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Kurenai - Alliance",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -154,7 +137,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["LowerCity"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Lower City",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -163,7 +145,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Netherwing"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Netherwing",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -172,7 +153,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Ogrila"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Ogri'la",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -181,7 +161,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Skyguard"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Sha'tari Skyguard",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -190,7 +169,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["SunOffensive"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Shattered Sun Offensive",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -199,7 +177,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Sporeggar"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Sporeggar",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -208,7 +185,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Aldor"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "The Aldor",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -217,7 +193,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Consortium"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "The Consortium",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -226,7 +201,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Maghar"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "The Mag'har - Horde",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -235,7 +209,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["ScaleSands"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "The Scale of the Sands",
 		{ "Rings", {} },
 		{ "Friendly", {} },
@@ -245,7 +218,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Scryer"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "The Scryers",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -254,7 +226,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Shatar"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "The Sha'tar",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -263,7 +234,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["VioletEye"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "The Violet Eye",
 		{ "Rings", {} },
 		{ "Honored", {} },
@@ -272,7 +242,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Thrallmar"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Thrallmar - Horde",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -281,7 +250,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Tranquillien"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Tranquillien - Horde",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -290,7 +258,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["ShattrathFlasks"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Shattrath Flasks",
 		{ "Shattrath Flasks", {} },
 	},

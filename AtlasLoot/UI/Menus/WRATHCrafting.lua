@@ -30,7 +30,6 @@ AtlasLoot:AddNewMenus({
 	--- Alchemy ---
 	---------------
 	["AlchemyWRATH"] = {
-		Module = "AtlasLoot_Crafting_Wrath",
 		Name = ALCHEMY,
 		Type = "WrathCrafting",
 		{ "Battle Elixirs", {} },
@@ -46,7 +45,6 @@ AtlasLoot:AddNewMenus({
 	--- Blacksmithing ---
 	---------------------
 	["SmithingWRATH"] = {
-		Module = "AtlasLoot_Crafting_Wrath",
 		Name = BLACKSMITHING,
 		Type = "WrathCrafting",
 		{ "Armor - Chest", {} },
@@ -75,7 +73,6 @@ AtlasLoot:AddNewMenus({
 	--- Cooking ---
 	---------------
 	["CookingWRATH"] = {
-		Module = "AtlasLoot_Crafting_Wrath",
 		Name = COOKING,
 		Type = "WrathCrafting",
 		{ "Cooking", {} },
@@ -86,7 +83,6 @@ AtlasLoot:AddNewMenus({
 	--- Enchanting ---
 	------------------
 	["EnchantingWRATH"] = {
-		Module = "AtlasLoot_Crafting_Wrath",
 		Name = ENCHANTING,
 		Type = "WrathCrafting",
 		{ "Boots", {} },
@@ -107,7 +103,6 @@ AtlasLoot:AddNewMenus({
 	--- Engineering ---
 	-------------------
 	["EngineeringWRATH"] = {
-		Module = "AtlasLoot_Crafting_Wrath",
 		Name = ENGINEERING,
 		Type = "WrathCrafting",
 		{ "Ammunition", {} },
@@ -126,7 +121,6 @@ AtlasLoot:AddNewMenus({
 	--- Inscription ---
 	-------------------
 	["InscriptionWRATH"] = {
-		Module = "AtlasLoot_Crafting_Wrath",
 		Name = INSCRIPTION,
 		Type = "WrathCrafting",
 		{ "Off-Hand Items", {} },
@@ -160,7 +154,6 @@ AtlasLoot:AddNewMenus({
 	--- Jewelcrafting ---
 	---------------------
 	["JewelcraftingWRATH"] = {
-		Module = "AtlasLoot_Crafting_Wrath",
 		Name = JEWELCRAFTING,
 		Type = "WrathCrafting",
 		{ "Red Gems", {} },
@@ -183,7 +176,6 @@ AtlasLoot:AddNewMenus({
 	--- Leatherworking ---
 	----------------------
 	["LeatherworkingWRATH"] = {
-		Module = "AtlasLoot_Crafting_Wrath",
 		Name = LEATHERWORKING,
 		Type = "WrathCrafting",
 		{ "Leather Armor - Back", {} },
@@ -211,14 +203,12 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["MiningWRATH"] = {
-		Module = "AtlasLoot_Crafting_Wrath",
 		Name = MINING,
 		Type = "WrathCrafting",
 		{ "Smelting", {} },
 	},
 
 	["FirstAidWRATH"] = {
-		Module = "AtlasLoot_Crafting_Wrath",
 		Name = FIRSTAID,
 		Type = "WrathCrafting",
 		{ FIRSTAID, {} },
@@ -228,7 +218,6 @@ AtlasLoot:AddNewMenus({
 	--- Tailoring ---
 	-----------------
 	["TailoringWRATH"] = {
-		Module = "AtlasLoot_Crafting_Wrath",
 		Name = TAILORING,
 		Type = "WrathCrafting",
 		{ "Cloth Armor - Back", {} },

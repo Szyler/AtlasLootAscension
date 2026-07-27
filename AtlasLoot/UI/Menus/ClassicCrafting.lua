@@ -19,7 +19,6 @@ local TAILORING = GetSpellInfo(3908)
 
 AtlasLoot:AddNewMenus({
 	["AlchemyCLASSIC"] = {
-		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = ALCHEMY,
 		Type = "ClassicCrafting",
 		{ "Battle Elixirs", {} },
@@ -34,7 +33,6 @@ AtlasLoot:AddNewMenus({
 	--- Blacksmithing ---
 	---------------------
 	["SmithingCLASSIC"] = {
-		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = BLACKSMITHING,
 		Type = "ClassicCrafting",
 		{ "Armor - Chest", {} },
@@ -59,7 +57,6 @@ AtlasLoot:AddNewMenus({
 	--- Cooking ---
 	---------------
 	["CookingCLASSIC"] = {
-		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = COOKING,
 		Type = "ClassicCrafting",
 		{ "Cooking", {} },
@@ -70,7 +67,6 @@ AtlasLoot:AddNewMenus({
 	--- Enchanting ---
 	------------------
 	["EnchantingCLASSIC"] = {
-		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = ENCHANTING,
 		Type = "ClassicCrafting",
 		{ "Boots", {} },
@@ -88,7 +84,6 @@ AtlasLoot:AddNewMenus({
 	--- Engineering ---
 	-------------------
 	["EngineeringCLASSIC"] = {
-		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = ENGINEERING,
 		Type = "ClassicCrafting",
 		{ "Ammunition", {} },
@@ -107,7 +102,6 @@ AtlasLoot:AddNewMenus({
 	--- First Aid ---
 	-----------------
 	["FirstAidCLASSIC"] = {
-		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = FIRSTAID,
 		Type = "ClassicCrafting",
 		{ FIRSTAID, {} },
@@ -116,7 +110,6 @@ AtlasLoot:AddNewMenus({
 	--- Leatherworking ---
 	----------------------
 	["LeatherworkingCLASSIC"] = {
-		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = LEATHERWORKING,
 		Type = "ClassicCrafting",
 		{ "Leather Armor - Back", {} },
@@ -149,7 +142,6 @@ AtlasLoot:AddNewMenus({
 	--- Mining ---
 	--------------
 	["MiningCLASSIC"] = {
-		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = MINING,
 		Type = "ClassicCrafting",
 		{ "Smelting", {} },
@@ -159,7 +151,6 @@ AtlasLoot:AddNewMenus({
 	--- Tailoring ---
 	-----------------
 	["TailoringCLASSIC"] = {
-		Module = "AtlasLoot_Crafting_OriginalWoW",
 		Name = TAILORING,
 		Type = "ClassicCrafting",
 		{ "Cloth Armor - Back", {} },

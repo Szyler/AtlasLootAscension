@@ -6,7 +6,6 @@ AtlasLoot:AddNewMenus({
     --------- Classic ----------
     ----------------------------
     ["AVMisc"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Alterac Valley",
 		{ "Misc. Rewards", {} },
 		{ "Alliance", {} },
@@ -14,7 +13,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["AB_A"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Arathi Basin - Alliance",
         WebID = {509,"faction"},
 		{ "Misc. Rewards", {} },
@@ -32,7 +30,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["AB_H"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Arathi Basin - Horde",
         WebID = {510,"faction"},
 		{ "Misc. Rewards", {} },
@@ -50,7 +47,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["WSG_A"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Warsong Gulch - Alliance",
         WebID = {890,"faction"},
 		{ "Misc. Rewards", {} },
@@ -60,7 +56,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["WSG_H"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Warsong Gulch - Horde",
         WebID = {890,"faction"},
 		{ "Misc. Rewards", {} },
@@ -70,7 +65,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["PVPDruid"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = LOCALIZED_CLASS_NAMES_MALE["DRUID"],
 		{ "Rare Set - Alliance", {} },
 		{ "Superior Rare Set - Alliance", {} },
@@ -86,7 +80,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["PVPHunter"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{ "Rare Set - Alliance", {} },
 		{ "Superior Rare Set - Alliance", {} },
@@ -99,7 +92,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["PVPPaladin"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"],
 		{ "Rare Set - Alliance", {} },
 		{ "Superior Rare Set - Alliance", {} },
@@ -112,7 +104,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["PVPPriest"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
 		{ "Rare Set - Alliance", {} },
 		{ "Superior Rare Set - Alliance", {} },
@@ -125,7 +116,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["PVPRogue"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{ "Rare Set - Alliance", {} },
 		{ "Superior Rare Set - Alliance", {} },
@@ -138,7 +128,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["PVPShaman"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"],
 		{ "Rare Set - Alliance", {} },
 		{ "Superior Rare Set - Alliance", {} },
@@ -151,7 +140,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["PVPWarlock"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{ "Rare Set - Alliance", {} },
 		{ "Superior Rare Set - Alliance", {} },
@@ -164,7 +152,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["PVPWarrior"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"],
 		{ "Rare Set - Alliance", {} },
 		{ "Superior Rare Set - Alliance", {} },
@@ -177,7 +164,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["PVPMage"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{ "Rare Set - Alliance", {} },
 		{ "Superior Rare Set - Alliance", {} },
@@ -190,7 +176,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["PVPWeapons60"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "PvP Weapons - Level 60",
 		{ "Grand Marshal's - Alliance", {} },
 		{ "Lieutenant Commander's - Alliance", {} },
@@ -199,14 +184,12 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["PvP60Accessories"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "PvP Accessories - Level 60",
 		{ "Alliance", {} },
 		{ "Horde", {} },
 	},
 
     ["PvP60Ench"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "PvP Enchants",
 		{ "PvP Enchants", {} },
 	},
@@ -215,31 +198,26 @@ AtlasLoot:AddNewMenus({
     ----------- TBC ------------
     ----------------------------
 	["PVPHellfire"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Hellfire Fortifications",
 		{ "Hellfire Fortifications", {} },
 	},
 
 	["PVPHalaa"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Nagrand - Halaa",
 		{ "Nagrand - Halaa", {} },
 	},
 
 	["PVPSpiritTowers"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "PvP",
 		{ "Terokkar Forest - Spirit Towers", {} },
 	},
 
 	["PVPTwinSpireRuins"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Twin Spire Ruins",
 		{ "Zangarmarsh - Twin Spire Ruins", {} },
 	},
 
 	["PVP70RepGear"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Rep PVP Gear",
 		{ "Cloth", {} },
 		{ "Leather", {} },
@@ -256,13 +234,11 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["PvP70HonorVendor"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Honor Vendor",
 		{ "PvP Accessories", {} },
 	},
 
 	["Pvp70Season1"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Arena Season 1",
 		WebID = {41015, "npc"},
 		{ "Accessories", {} },
@@ -293,7 +269,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Pvp70Season2"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Arena Season 2",
 		WebID = {41025, "npc"},
 		{ "Back", {} },
@@ -326,7 +301,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Pvp70Season3"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Arena Season 3",
 		WebID = {41035, "npc"},
 		{ "Accessories", {} },
@@ -356,7 +330,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Pvp70Season4"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Arena Season 4",
 		WebID = {41045, "npc"},
 		{ "Back", {} },

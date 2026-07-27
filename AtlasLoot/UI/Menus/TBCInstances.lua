@@ -3,13 +3,11 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 AtlasLoot:AddNewMenus({
 	--TBC Instances
 	["BCKeys"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "BCKeys",
 		{ "BCKeys", {} },
 	},
 
 	["AuchCrypts"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Auchindoun - Auchenai Crypts",
 		Type = "BCDungeon",
  		{ "Shirrak the Dead Watcher", {18371} },
@@ -18,7 +16,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["AuchManaTombs"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Auchindoun - Mana-Tombs",
 		Type = "BCDungeon",
  		{ "Pandemonius", {118341} },
@@ -28,7 +25,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["AuchSethekk"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Auchindoun - Sethekk Halls",
 		Type = "BCDungeon",
  		{ "Darkweaver Syth", {18472} },
@@ -37,7 +33,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["AuchShadowLab"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Auchindoun - Shadow Labyrinth",
 		Type = "BCDungeon",
  		{ "Ambassador Hellmaw", {18731} },
@@ -47,7 +42,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["BlackTemple"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Black Temple",
 		Type = "BCRaid",
  		{ "High Warlord Naj'entus", {22887} },
@@ -65,9 +59,7 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["CoTOldHillsbrad"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Caverns of Time - Old Hillsbrad Foothills",
-		
 		Type = "BCDungeon",
  		{ "Lieutenant Drake", {17848} },
 		{ "Captain Skarloc", {17862} },
@@ -75,7 +67,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["CoTBlackMorass"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Caverns of Time - The Black Morass",
 		Type = "BCDungeon",
  		{ "Chrono Lord Deja", {17879} },
@@ -84,7 +75,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["CoTHyjal"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Caverns of Time - Hyjal Summit",
 		Type = "BCRaid",
  		{ "Rage Winterchill", {17767} },
@@ -98,7 +88,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["CFRSlavePens"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Coilfang Reservoir - The Slave Pens",
 		Type = "BCDungeon",
 		{ "Mennu the Betrayer", {17941, 2061629} },
@@ -107,7 +96,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["CFRSteamvault"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Coilfang Reservoir - The Steamvault",
 		Type = "BCDungeon",
  		{ "Hydromancer Thespia", {17797} },
@@ -116,7 +104,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["CFRUnderbog"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Coilfang Reservoir - The Underbog",
 		Type = "BCDungeon",
  		{ "Hungarfen", {17770} },
@@ -126,7 +113,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["CFRSerpentshrine"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Coilfang Reservoir - Serpentshrine Cavern",
 		Type = "BCRaid",
  		{ "Hydross the Unstable", {21216} },
@@ -139,7 +125,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["GruulsLair"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Gruul's Lair",
 		Type = "BCRaid",
  		{ "High King Maulgar", {18831} },
@@ -147,7 +132,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["HCRamparts"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Hellfire Citadel - Hellfire Ramparts",
 		Type = "BCDungeon",
  		{ "Watchkeeper Gargolmar", {17306} },
@@ -156,7 +140,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["HCFurnace"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Hellfire Citadel - The Blood Furnace",
 		Type = "BCDungeon",
  		{ "The Maker", {17381} },
@@ -165,7 +148,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["HCShatteredHalls"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Hellfire Citadel - The Shattered Halls",
 		Type = "BCDungeon",
  		{ "Grand Warlock Nethekurse", {16807} },
@@ -175,14 +157,12 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["HCMagtheridon"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Hellfire Citadel - Magtheridon's Lair",
 		Type = "BCRaid",
  		{ "Magtheridon", {17257} },
 	},
 
 	["Karazhan"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Karazhan",
 		Type = "BCRaid",
  		Loadfirst = 3,
@@ -204,7 +184,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["MagistersTerrace"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Sunwell Isle - Magisters' Terrace",
 		Type = "BCDungeon",
  		{ "Selin Fireheart", {24723} },
@@ -214,7 +193,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["TKArc"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Tempest Keep - The Arcatraz",
 		Type = "BCDungeon",
  		{ "Zereketh the Unbound", {40080} },
@@ -225,7 +203,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["TKBot"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Tempest Keep - The Botanica",
 		Type = "BCDungeon",
  		{ "Commander Sarannis", {40070,2061739} },
@@ -236,7 +213,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["TKMech"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Tempest Keep - The Mechanar",
 		Type = "BCDungeon",
  		{ "Cache of the Legion", {184465} },
@@ -246,7 +222,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["TKEye"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Tempest Keep - The Eye",
 		Type = "BCRaid",
  		{ "Al'ar", {19514} },
@@ -258,7 +233,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["SunwellPlateau"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Sunwell Isle - Sunwell Plateau",
 		Type = "BCRaid",
  		{ "Kalecgos", {24892} },
@@ -274,7 +248,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["ZulAman"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Zul'Aman",
 		Type = "BCRaid",
  		{ "Nalorakk", {23576} },
@@ -287,7 +260,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["WorldBossesTBC"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "World Bosses",
 		Type = "BCRaid",
 		{ "Doom Lord Kazzak", {18728} },
@@ -295,7 +267,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["KarazhanCryptsTBC"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "The Karazhan Crypts",
 		Type = "BCkarazhanCrypts",
 		Index = 5,
@@ -309,7 +280,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["BlackrockCavernsTBC"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Blackrock Caverns",
 		Type = "BCDungeon",
 		{ "Ascendant Lord Obsidius", {39705} },
@@ -320,7 +290,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["FrozenReachTBC"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Frozen Reach",
 		Type = "ManastormTBC",
 		{ "Frozen Reach", {1298888} },

@@ -180,17 +180,6 @@ function AtlasLoot:SlashCommand(msg)
 	end
 end
 
-AtlasLoot.dataModules = {
-	"AtlasLoot_OriginalWoW",
-	"AtlasLoot_BurningCrusade",
-	"AtlasLoot_WrathoftheLichKing",
-	"AtlasLoot_Crafting_OriginalWoW",
-	"AtlasLoot_Crafting_TBC",
-	"AtlasLoot_Crafting_Wrath",
-	"AtlasLoot_WorldEvents",
-	"AtlasLoot_Vanity"
-}
-
 function AtlasLoot:UNIT_SPELLCAST_SUCCEEDED(event, arg1, arg2 , arg3)
 	if arg1 == "player" and arg2 == "Learning" then
 		self:PopulateProfessions()

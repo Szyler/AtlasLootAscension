@@ -661,21 +661,21 @@ function AtlasLoot:InitializeSearch()
     local searchCategories = {
         {
             Name = "Classic",
-            {"Dungeon", "ClassicDungeonExt", "AtlasLoot_OriginalWoW"},
-            {"Raid", "ClassicRaid", "AtlasLoot_OriginalWoW"},
-            {"Crafting", "ClassicCrafting", "AtlasLoot_Crafting_OriginalWoW"},
+            {"Dungeon", "ClassicDungeonExt"},
+            {"Raid", "ClassicRaid"},
+            {"Crafting", "ClassicCrafting"},
         },
         {
             Name = "BurningCrusade",
-            {"Dungeon", "BCDungeon", "AtlasLoot_BurningCrusade"},
-            {"Raid", "BCRaid", "AtlasLoot_BurningCrusade"},
-            {"Crafting", "BCCrafting", "AtlasLoot_Crafting_TBC"},
+            {"Dungeon", "BCDungeon"},
+            {"Raid", "BCRaid"},
+            {"Crafting", "BCCrafting"},
         },
         {
             Name = "Wrath",
-            {"Dungeon", "WrathDungeon", "AtlasLoot_WrathoftheLichKing"},
-            {"Raid", "WrathRaid", "AtlasLoot_WrathoftheLichKing"},
-            {"Crafting", "WrathCrafting", "AtlasLoot_Crafting_Wrath"},
+            {"Dungeon", "WrathDungeon"},
+            {"Raid", "WrathRaid"},
+            {"Crafting", "WrathCrafting"},
         }
     }
 
@@ -688,7 +688,7 @@ function AtlasLoot:InitializeSearch()
         for _, cat in pairs(searchCategories) do
             table.insert(menuList[1], {text = cat.Name, isTitle = true})
             for _, data in ipairs(cat) do
-                profile.SearchOn[data[2]] = profile.SearchOn[data[2]]  or {false, data[3]}
+                profile.SearchOn[data[2]] = profile.SearchOn[data[2]]
                 local searchState = profile.SearchOn[data[2]]
                 table.insert(menuList[1], {isRadio = true, text = data[1], checked = {searchState, 1}, func = function() searchState[1] = not searchState[1] end})
             end

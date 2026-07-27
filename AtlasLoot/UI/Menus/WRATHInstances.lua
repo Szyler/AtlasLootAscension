@@ -3,7 +3,6 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 AtlasLoot:AddNewMenus({
 
 	["WrathKeys"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Keys",
 		{ "Keys", {} }
 	},
@@ -12,7 +11,6 @@ AtlasLoot:AddNewMenus({
 	--------------------
 
 	["UtgardeKeep"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Utgarde Keep",
 		Type = "WrathDungeon",
 		{ "Prince Keleseth", {} },
@@ -26,7 +24,6 @@ AtlasLoot:AddNewMenus({
 	-----------------
 
 	["TheNexus"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "The Nexus",
 		Type = "WrathDungeon",
 		{ "Grand Magus Telestra", {} },
@@ -41,7 +38,6 @@ AtlasLoot:AddNewMenus({
 	-------------------
 
 	["AzjolNerub"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Azjol-Nerub",
 		Type = "WrathDungeon",
 		{ "Krik'thir the Gatewatcher", {} },
@@ -55,7 +51,6 @@ AtlasLoot:AddNewMenus({
 	----------------------------------
 
 	["Ahnkahet"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Ahn'kahet: The Old Kingdom",
 		Type = "WrathDungeon",
 		{ "Elder Nadox", {} },
@@ -70,7 +65,6 @@ AtlasLoot:AddNewMenus({
 	------------------------
 
 	["DrakTharonKeep"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Drak'Tharon Keep",
 		Type = "WrathDungeon",
 		{ "Trollgore", {} },
@@ -84,7 +78,6 @@ AtlasLoot:AddNewMenus({
 	-----------------------
 
 	["TheVioletHold"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "The Violet Hold",
 		Type = "WrathDungeon",
 		{ "Erekem", {} },
@@ -101,7 +94,6 @@ AtlasLoot:AddNewMenus({
 	---------------
 
 	["Gundrak"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Gundrak",
 		Type = "WrathDungeon",
 		{ "Slad'ran", {} },
@@ -116,7 +108,6 @@ AtlasLoot:AddNewMenus({
 	----------------------
 
 	["HallsofStone"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Halls of Stone",
 		Type = "WrathDungeon",
 		{ "Maiden of Grief", {} },
@@ -130,7 +121,6 @@ AtlasLoot:AddNewMenus({
 	--------------------------
 
 	["HallsofLightning"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Halls of Lightning",
 		Type = "WrathDungeon",
 		{ "General Bjarngrim", {} },
@@ -144,7 +134,6 @@ AtlasLoot:AddNewMenus({
 	---------------------------------------
 
 	["CoTStratholme"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Caverns of Time" .. ": " .. "The Culling of Stratholme",
 		Type = "WrathDungeon",
 		{ "Meathook", {} },
@@ -159,7 +148,6 @@ AtlasLoot:AddNewMenus({
 	------------------------
 
 	["UtgardePinnacle"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Utgarde Pinnacle",
 		Type = "WrathDungeon",
 		{ "Skadi the Ruthless", {} },
@@ -173,7 +161,6 @@ AtlasLoot:AddNewMenus({
 	------------------
 
 	["TheOculus"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "The Oculus",
 		Type = "WrathDungeon",
 		{ "Drakos the Interrogator", {} },
@@ -187,7 +174,6 @@ AtlasLoot:AddNewMenus({
 	--------------------------
 
 	["ForgeofSouls"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "The Forge of Souls",
 		Type = "WrathDungeon",
 		{ "Bronjahm", {} },
@@ -199,7 +185,6 @@ AtlasLoot:AddNewMenus({
 	--------------------
 
 	["PitofSaron"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Pit of Saron",
 		Type = "WrathDungeon",
 		{ "Forgemaster Garfrost", {} },
@@ -212,7 +197,6 @@ AtlasLoot:AddNewMenus({
 	---------------------------
 
 	["HallsofReflection"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Halls of Reflection",
 		Type = "WrathDungeon",
 		{ "Falric", {} },
@@ -227,7 +211,6 @@ AtlasLoot:AddNewMenus({
 	-----------------------------
 
 	["TrialoftheChampion"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Trial of the Champion",
 		Type = "WrathDungeon",
 		{ "Faction Champions", {} },
@@ -241,7 +224,6 @@ AtlasLoot:AddNewMenus({
 	-------------------------
 
 	["VaultofArchavon"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Vault of Archavon",
 		Type = "WrathRaid",
 		{ "Archavon the Stone Watcher", {} },
@@ -332,7 +314,6 @@ AtlasLoot:AddNewMenus({
 	-------------------------
 
 	["Naxxramas80"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Naxxramas",
 		Type = "WrathRaid",
 		{ "Patchwerk", {} },
@@ -375,7 +356,6 @@ AtlasLoot:AddNewMenus({
 	------------------------
 
 	["Sartharion"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "The Obsidian Sanctum",
 		Type = "WrathRaid",
 		{ "Sartharion", {} },
@@ -385,7 +365,6 @@ AtlasLoot:AddNewMenus({
 	---------------------------
 
 	["Malygos"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "The Eye of Eternity",
 		Type = "WrathRaid",
 		{ "Malygos", {} },
@@ -394,7 +373,6 @@ AtlasLoot:AddNewMenus({
 	--------------
 
 	["Ulduar"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Ulduar",
 		Type = "WrathRaid",
 		{ "Flame Leviathan", {} },
@@ -433,7 +411,6 @@ AtlasLoot:AddNewMenus({
 	-----------------------------
 
 	["TrialoftheCrusader"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Trial of the Crusader",
 		Type = "WrathRaid",
 		{ "The Beasts of Northrend", {} },
@@ -464,7 +441,6 @@ AtlasLoot:AddNewMenus({
 	-------------------------
 
 	["Onyxia80"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Onyxia's Lair",
 		Type = "WrathRaid",
 		{ "Onyxia", {} },
@@ -481,7 +457,6 @@ AtlasLoot:AddNewMenus({
 	-------------------
 
 	["IcecrownCitadel"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Icecrown Citadel",
 		Type = "WrathRaid",
 		{ "Lord Marrowgar", {} },
@@ -515,7 +490,6 @@ AtlasLoot:AddNewMenus({
 	--------------------
 
 	["Halion"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "The Ruby Sanctum",
 		Type = "WrathRaid",
 		{ "Halion", {} },
@@ -531,7 +505,6 @@ AtlasLoot:AddNewMenus({
 	-------------------------
 
 	["AllianceVanguard"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Alliance Vanguard",
 		{ "Revered", {} },
 		{ "Exalted", {} },
@@ -540,7 +513,6 @@ AtlasLoot:AddNewMenus({
 	----------------------
 
 	["ArgentCrusade"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Argent Crusade",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -552,7 +524,6 @@ AtlasLoot:AddNewMenus({
 	-------------------------
 
 	["FrenzyheartTribe"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Frenzyheart Tribe",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -564,7 +535,6 @@ AtlasLoot:AddNewMenus({
 	----------------------------
 
 	["HordeExpedition"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Horde Expedition",
 		{ "Revered", {} },
 		{ "Exalted", {} },
@@ -574,7 +544,6 @@ AtlasLoot:AddNewMenus({
 	-----------------
 
 	["KirinTor"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Kirin Tor",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -586,7 +555,6 @@ AtlasLoot:AddNewMenus({
 	---------------------------------
 
 	["KnightsoftheEbonBlade"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Knights of the Ebon Blade",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -598,7 +566,6 @@ AtlasLoot:AddNewMenus({
 	-------------------
 
 	["TheKaluak"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "The Kalu'ak",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -610,7 +577,6 @@ AtlasLoot:AddNewMenus({
 	-------------------
 
 	["TheOracles"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "The Oracles",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -622,7 +588,6 @@ AtlasLoot:AddNewMenus({
 	-------------------------
 
 	["TheSonsofHodir"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "The Sons of Hodir",
 		{ "Honored", {} },
 		{ "Revered", {} },
@@ -633,7 +598,6 @@ AtlasLoot:AddNewMenus({
 	-------------------------
 
 	["WinterfinRetreat"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Winterfin Retreat",
 		{ "Winterfin Retreat", {} },
 	},
@@ -642,7 +606,6 @@ AtlasLoot:AddNewMenus({
 	---------------------------
 
 	["TheWyrmrestAccord"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "The Wyrmrest Accord",
 		{ "Friendly", {} },
 		{ "Honored", {} },
@@ -654,7 +617,6 @@ AtlasLoot:AddNewMenus({
 	-------------------------
 
 	["AshenVerdict"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "The Ashen Verdict",
 		{ "Rings", {} },
 		{ "Honored", {} },
@@ -669,14 +631,12 @@ AtlasLoot:AddNewMenus({
 	------------------
 
 	["ArenaDeathKnightWRATH"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"],
 		{ "Page 1", {} },
 		{ "Page 2", {} },
 	},
 
 	["ArenaDruidWRATH"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = LOCALIZED_CLASS_NAMES_MALE["DRUID"],
 		{ "Balance" .. " Page 1", {} },
 		{ "Balance" .. " Page 2", {} },
@@ -687,21 +647,18 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["ArenaHunterWRATH"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"],
 		{ "Page 1", {} },
 		{ "Page 2", {} },
 	},
 
 	["ArenaMageWRATH"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"],
 		{ "Page 1", {} },
 		{ "Page 2", {} },
 	},
 
 	["ArenaPaladinWRATH"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"],
 		{ "Retribution" .. "Page 1", {} },
 		{ "Retribution" .. "Page 2", {} },
@@ -710,7 +667,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["ArenaPriestWRATH"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
 		{ "Shadow" .. "Page 1", {} },
 		{ "Shadow" .. "Page 2", {} },
@@ -719,14 +675,12 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["ArenaRogueWRATH"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"],
 		{ "Page 1", {} },
 		{ "Page 2", {} },
 	},
 
 	["ArenaShamanWRATH"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"],
 		{ "Elemental" .. "Page 1", {} },
 		{ "Elemental" .. "Page 2", {} },
@@ -737,14 +691,12 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["ArenaWarlockWRATH"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{ "Page 1", {} },
 		{ "Page 2", {} },
 	},
 
 	["ArenaWarriorWRATH"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"],
 		{ "Page 1", {} },
 		{ "Page 2", {} },
@@ -753,7 +705,6 @@ AtlasLoot:AddNewMenus({
 	------------------------------
 
 	["PvP80NonSet"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "PvP Non-Set Epics",
 		{ "Page 1", {} },
 		{ "Page 2", {} },
@@ -767,7 +718,6 @@ AtlasLoot:AddNewMenus({
 	--- Wrathful Gladiator Weapons ---
 	------------------------------------
 	["WeaponsWRATH"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Arena " .. "Weapons",
 		{ "Page 1", {} },
 		{ "Page 2", {} },
@@ -778,7 +728,6 @@ AtlasLoot:AddNewMenus({
 	-----------------------
 
 	["PVPidolWRATH"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Idols/Librams/Sigils/Totems",
 		{ "Page 1", {} },
 		{ "Page 2", {} },
@@ -787,7 +736,6 @@ AtlasLoot:AddNewMenus({
 	-------------------------
 
 	["PvP80Misc"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "PvP Misc",
 		{ "PvP Misc", {} },
 	},
@@ -796,7 +744,6 @@ AtlasLoot:AddNewMenus({
 	--------------------------------
 
 	["LakeWintergrasp"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Wintergrasp",
 		{ "Page 1", {} },
 		{ "Page 2", {} },
@@ -811,7 +758,6 @@ AtlasLoot:AddNewMenus({
 	-----------------------------------------------
 
 	["VentureBay"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Venture Bay",
 		{ "Venture Bay", {} },
 	},
@@ -824,7 +770,6 @@ AtlasLoot:AddNewMenus({
 	---------------------------------------
 
 	["TSEVEN"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Tier 7",
 		Type = "WrathRaid",
 		{ LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " DPS", {} },
@@ -853,7 +798,6 @@ AtlasLoot:AddNewMenus({
 	---------------------------------------
 
 	["TEIGHT"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Tier 8",
 		Type = "WrathRaid",
 		{ LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " DPS", {} },
@@ -879,7 +823,6 @@ AtlasLoot:AddNewMenus({
 	--- Tier 9 Sets (T9) ---
 	------------------------
 	["TNINE"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Tier 9",
 		Type = "WrathRaid",
 		{ LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " DPS", {} },
@@ -925,7 +868,6 @@ AtlasLoot:AddNewMenus({
 	--- Tier 10 Sets (T10) ---
 	--------------------------
 	["TTEN"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Tier 10",
 		Type = "WrathRaid",
 		{ LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"] .. " DPS", {} },
@@ -953,7 +895,6 @@ AtlasLoot:AddNewMenus({
 	-------------------
 
 	["Legendaries"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Legendary Items",
 		Type = "WrathRaid",
 		{ "Legendary Items", {} },
@@ -963,7 +904,6 @@ AtlasLoot:AddNewMenus({
 	-----------------------
 
 	["WorldEpicsWrath"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "World Epics",
 		Type = "WrathDungeon",
 		{ "World Epics", {} },
@@ -973,7 +913,6 @@ AtlasLoot:AddNewMenus({
 	-------------------------------
 
 	["EmblemofHeroism"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Emblem of Heroism Rewards",
 		{ "Page 1", {} },
 		{ "Page 2", {} },
@@ -984,7 +923,6 @@ AtlasLoot:AddNewMenus({
 	-----------------------------
 
 	["EmblemofValor"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Emblem of Valor Rewards",
 		{ "Page 1", {} },
 		{ "Page 2", {} },
@@ -994,7 +932,6 @@ AtlasLoot:AddNewMenus({
 	--------------------------------
 
 	["EmblemofConquest"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Emblem of Conquest Rewards",
 		{ "Page 1", {} },
 		{ "Page 2", {} },
@@ -1004,7 +941,6 @@ AtlasLoot:AddNewMenus({
 	-------------------------------
 
 	["EmblemofTriumph"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Emblem of Triumph Rewards",
 		{ "Page 1", {} },
 		{ "Page 2", {} },
@@ -1015,7 +951,6 @@ AtlasLoot:AddNewMenus({
 	-----------------------------
 
 	["EmblemofFrost"] = {
-		Module = "AtlasLoot_WrathoftheLichKing",
 		Name = "Emblem of Frost Rewards",
 		{ "Page 1", {} },
 		{ "Page 2", {} },

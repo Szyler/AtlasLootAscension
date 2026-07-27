@@ -29,7 +29,6 @@ AtlasLoot:AddNewMenus({
 	--- Alchemy ---
 	---------------
 	["AlchemyTBC"] = {
-		Module = "AtlasLoot_Crafting_TBC",
 		Name = ALCHEMY,
 		Type = "BCCrafting",
 		{ "Battle Elixirs", {} },
@@ -45,7 +44,6 @@ AtlasLoot:AddNewMenus({
 	--- Blacksmithing ---
 	---------------------
 	["SmithingTBC"] = {
-		Module = "AtlasLoot_Crafting_TBC",
 		Name = BLACKSMITHING,
 		Type = "BCCrafting",
 		{ "Armor - Chest", {} },
@@ -72,7 +70,6 @@ AtlasLoot:AddNewMenus({
 	--- Cooking ---
 	---------------
 	["CookingTBC"] = {
-		Module = "AtlasLoot_Crafting_TBC",
 		Name = COOKING,
 		Type = "BCCrafting",
 		{ "Cooking", {} },
@@ -83,7 +80,6 @@ AtlasLoot:AddNewMenus({
 	--- Enchanting ---
 	------------------
 	["EnchantingTBC"] = {
-		Module = "AtlasLoot_Crafting_TBC",
 		Name = ENCHANTING,
 		Type = "BCCrafting",
 		{ "Boots", {} },
@@ -103,7 +99,6 @@ AtlasLoot:AddNewMenus({
 	--- Engineering ---
 	-------------------
 	["EngineeringTBC"] = {
-		Module = "AtlasLoot_Crafting_TBC",
 		Name = ENGINEERING,
 		Type = "BCCrafting",
 		{ "Ammunition", {} },
@@ -123,7 +118,6 @@ AtlasLoot:AddNewMenus({
 	--- Jewelcrafting ---
 	---------------------
 	["JewelcraftingTBC"] = {
-		Module = "AtlasLoot_Crafting_TBC",
 		Name = JEWELCRAFTING,
 		Type = "BCCrafting",
 		{ "Red Gems", {} },
@@ -145,7 +139,6 @@ AtlasLoot:AddNewMenus({
 	--- Leatherworking ---
 	----------------------
 	["LeatherworkingTBC"] = {
-		Module = "AtlasLoot_Crafting_TBC",
 		Name = LEATHERWORKING,
 		Type = "BCCrafting",
 		{ "Leather Armor - Back", {} },
@@ -176,14 +169,12 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["MiningTBC"] = {
-		Module = "AtlasLoot_Crafting_TBC",
 		Name = MINING,
 		Type = "BCCrafting",
 		{ "Smelting", {} },
 	},
 
 	["FirstAidTBC"] = {
-		Module = "AtlasLoot_Crafting_TBC",
 		Name = FIRSTAID,
 		Type = "BCCrafting",
 		{ FIRSTAID, {} },
@@ -193,7 +184,6 @@ AtlasLoot:AddNewMenus({
 	--- Tailoring ---
 	-----------------
 	["TailoringTBC"] = {
-		Module = "AtlasLoot_Crafting_TBC",
 		Name = TAILORING,
 		Type = "BCCrafting",
 		{ "Cloth Armor - Back", {} },

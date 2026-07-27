@@ -21,7 +21,6 @@ AtlasLoot:AddNewMenus({
     --------- Classic ----------
     ----------------------------
     ["MarkOfTriumph"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Mark of Triumph Vendor",
         Type = "ClassicDungeonExt",
         WebID = {1414503,"npc"},
@@ -29,7 +28,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["DungeonSetsCLASSIC"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Dungeon Sets",
         Type = "ClassicDungeonExt",
 		{ "Wildheart Raiment", {} },
@@ -53,7 +51,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["DungeonSetsUpgradedCLASSIC"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Dungeon Sets Quest Upgrades",
         Type = "ClassicDungeonExt",
 		{ "Feralheart Raiment", {} },
@@ -68,7 +65,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["TONE"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Tier 1",
         Type = "ClassicRaid",
 		{ LOCALIZED_CLASS_NAMES_MALE["DRUID"] .. " - Restoration", {} },
@@ -93,7 +89,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["TTWO"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Tier 2",
         Type = "ClassicRaid",
 		{ LOCALIZED_CLASS_NAMES_MALE["DRUID"] .. " - Restoration", {} },
@@ -119,7 +114,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["TTHREE"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Tier 3",
         Type = "ClassicRaid",
 		{ LOCALIZED_CLASS_NAMES_MALE["DRUID"] .. " - Restoration", {} },
@@ -144,7 +138,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["ClassicSets"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Classic Sets",
 		{ "Defias Leather", {} },
 		{ "Embrace of the Viper", {} },
@@ -165,7 +158,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["ZGSets"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Zul'Gurub",
 		Type = "ClassicRaid",
 		{ "Haruspex's Garb", {} },
@@ -180,7 +172,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["AQ20Sets"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "AQ20 Class Sets",
 		Type = "ClassicRaid",
 		{ "Symbols of Unending Life", {} },
@@ -203,7 +194,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["T2.5"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "AQ40 Class Sets - Tier 2.5",
 		Type = "ClassicRaid",
 		{ LOCALIZED_CLASS_NAMES_MALE["DRUID"] .. " - Restoration", {} },
@@ -228,7 +218,6 @@ AtlasLoot:AddNewMenus({
 	},
 
     ["WorldEpicsCLASSIC"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "BoE World Epics",
         Type = "ClassicDungeonExt",
 		{ "Level 30-39", {} },
@@ -237,7 +226,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["DS3"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Dungeon 3 Sets",
 		Type = "BCDungeon",
 		{ "Hallowed Raiment", {} },
@@ -261,7 +249,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["TFOUR"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Tier 4",
         Type = "BCRaid",
 		{ LOCALIZED_CLASS_NAMES_MALE["DRUID"] .. " - Feral", {} },
@@ -286,7 +273,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["TFIVE"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Tier 5",
         Type = "BCRaid",
 		{ LOCALIZED_CLASS_NAMES_MALE["DRUID"] .. " - Feral", {} },
@@ -311,7 +297,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["TSIX"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Tier 6",
         Type = "BCRaid",
 		{ LOCALIZED_CLASS_NAMES_MALE["DRUID"] .. " - Feral", {} },
@@ -336,7 +321,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["TBCSets"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Burning Crusade Sets",
 		{ "Latro's Flurry", {} },
 		{ "The Twin Stars", {} },
@@ -345,7 +329,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["BadgeShatt"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Shattrath City",
 		{ "Cloth", {} },
 		{ "Leather", {} },
@@ -359,7 +342,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["BadgeSunwell"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Sunwell Isle",
 		{ "Cloth", {} },
 		{ "Leather", {} },
@@ -371,33 +353,28 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["SunmoteSunwell"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Yrma - Sunmote Vendor",
 		Type = "BCRaid",
 		{ "Sunmote Vendor", {} },
 	},
 
 	["HardModeArena"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Hardmode arena",
 		{ "Hardmode arena", {} },
 	},
 
 	["HardModeArena2"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "Hardmode arena2",
 		{ "Hardmode arena2", {} },
 	},
 
 	["WorldEpicsTBC"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "BoE World Epics",
 		Type = "BCDungeon",
 		{ "BoE World Epics", {} },
 	},
 
 	["WorldRaresTBC"] = {
-		Module = "AtlasLoot_BurningCrusade",
 		Name = "BoE World Rares",
 		Type = "BCDungeon",
 		{ "BoE World Rares", {} },

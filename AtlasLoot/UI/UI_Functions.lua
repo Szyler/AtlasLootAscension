@@ -39,7 +39,6 @@ function AtlasLoot:InitializeUIFunctions()
         if instance then
             local sourceData = self:GetSourcesExtendedInfo(instance)
             self.currentTable = sourceData.CollectionModule
-            self.lastModule = sourceData.Module
             self:ShowItemsFrame(instance, "itemData", 1, 1)
             return true
         end
@@ -67,7 +66,6 @@ function AtlasLoot:InitializeUIFunctions()
         tablename = tablename .. self.currentExpansion
         self.currentTable = tablename
         tablenum = tablenum or 1
-        self.lastModule = AtlasLoot.ui.menus.collection[tablename].Module
         self.ui.moduelMenuButton:SetText(text)
             local lasttable = self.db.profile.savedState[self.currentTable]
             if lasttable then
@@ -206,7 +204,6 @@ function AtlasLoot:InitializeUIFunctions()
         else
             local favButton = AtlasLootCharDB.QuickLooks[button.num]
             if favButton then
-                button.lastModule = favButton[4]
                 button.currentTable = favButton[5]
                 if favButton[2] == "AtlasLootWishList" then
                     self:ShowWishList(favButton[3])
@@ -223,9 +220,9 @@ function AtlasLoot:InitializeUIFunctions()
     ]]
     function self:SetFavorites(num)
         if self.itemframe.refresh[2] == "currentWishList" then
-            AtlasLootCharDB.QuickLooks[num]={self.currentWishList.Show.ListType, "AtlasLootWishList", self.currentWishList.Show.ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][self.currentWishList.Show.ListType][self.currentWishList.Show.ListNum].Name}
+            AtlasLootCharDB.QuickLooks[num]={self.currentWishList.Show.ListType, "AtlasLootWishList", self.currentWishList.Show.ListNum, "", self.currentTable, _G["AtlasLootWishList"][self.currentWishList.Show.ListType][self.currentWishList.Show.ListNum].Name}
         else
-            AtlasLootCharDB.QuickLooks[num]={self.itemframe.refreshOri[1], self.itemframe.refreshOri[2], self.itemframe.refreshOri[3], self.lastModule, self.currentTable, _G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]][self.itemframe.refreshOri[3]].Name}
+            AtlasLootCharDB.QuickLooks[num]={self.itemframe.refreshOri[1], self.itemframe.refreshOri[2], self.itemframe.refreshOri[3], "", self.currentTable, _G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]][self.itemframe.refreshOri[3]].Name}
         end
     end
 
