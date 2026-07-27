@@ -126,7 +126,6 @@ AtlasLoot:AddNewMenus({
 		{"Ring of Law", {9027,9028,9029,9030,9031,9032} },
 		{"Theldren", {16059} },
 		{"Houndmaster Grebmar", {9319} },
-		{"Monument of Franclorn Forgewright", {164689} },
 		{"Pyromancer Loregrain", {9024} },
 		{"The Vault", {165554,160845,161495} },
 		{"Warder Stilgiss", {9041} },
@@ -243,7 +242,6 @@ AtlasLoot:AddNewMenus({
 		{"Hydrospawn", {13280} },
 		{"Alzzin the Wildshaper", {11492} },
 		{"Isalien", {16097} },
-		{"Dire Maul Books", {} },
 	},
 
 	["DireMaulNorth"] = {
@@ -254,7 +252,7 @@ AtlasLoot:AddNewMenus({
 		{"Guard Mol'dar", {14326} },
 		{"Stomper Kreeg", {14322} },
 		{"Guard Fengus", {14321} },
-		{"Knot Thimblejack", {} },
+		{"Knot Thimblejack", {"KnotTimblejack"} },
 		{"Guard Slip'kik", {14323} },
 		{"Captain Kromcrush", {14325} },
 		{"Cho'Rush the Observer", {14324} },
@@ -480,7 +478,6 @@ AtlasLoot:AddNewMenus({
 		{"Foreman Thistlenettle", {626} },
 		{"Rhahk'Zor", {644} },
 		{"Miner Johnson", {3586,2060859} },
-		{"Sneed's Shredder", {642} },
 		{"Sneed", {642} },
 		{"Gilnid", {1763,2062869} },
 		{"Captain Greenskin", {647,2060296} },

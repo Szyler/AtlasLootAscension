@@ -6184,4 +6184,260 @@ function AtlasLoot:InitializeDatabases()
 		}
 	})
 
+	self:AddItemData("sort", {
+		{ itemID = 18517, refLootEntry = "KnotTimblejack" }, --Pattern: Chromatic Cloak
+		{ itemID = 18518, refLootEntry = "KnotTimblejack" }, --Pattern: Hide of the Wild
+		{ itemID = 18519, refLootEntry = "KnotTimblejack" }, --Pattern: Shifting Cloak
+		{ itemID = 18414, refLootEntry = "KnotTimblejack" }, --Pattern: Belt of the Archmage
+		{ itemID = 18418, refLootEntry = "KnotTimblejack" }, --Pattern: Cloak of Warding
+		{ itemID = 18415, refLootEntry = "KnotTimblejack" }, --Pattern: Felcloth Gloves
+		{ itemID = 18416, refLootEntry = "KnotTimblejack" }, --Pattern: Inferno Gloves
+		{ itemID = 18417, refLootEntry = "KnotTimblejack" }, --Pattern: Mooncloth Gloves
+		{ itemID = 18514, refLootEntry = "KnotTimblejack" }, --Pattern: Girdle of Insight
+		{ itemID = 18515, refLootEntry = "KnotTimblejack" }, --Pattern: Mongoose Boots
+		{ itemID = 18516, refLootEntry = "KnotTimblejack" }, --Pattern: Swift Flight Bracers
+		{ itemID = 18240, refLootEntry = "KnotTimblejack" }, --Ogre Tannin
+		{ itemID = 18509, refLootEntry = "KnotTimblejack" }, --Chromatic Cloak
+		{ itemID = 18510, refLootEntry = "KnotTimblejack" }, --Hide of the Wild
+		{ itemID = 18511, refLootEntry = "KnotTimblejack" }, --Shifting Cloak
+		{ itemID = 18405, refLootEntry = "KnotTimblejack" }, --Belt of the Archmage
+		{ itemID = 18413, refLootEntry = "KnotTimblejack" }, --Cloak of Warding
+		{ itemID = 18407, refLootEntry = "KnotTimblejack" }, --Felcloth Gloves
+		{ itemID = 18408, refLootEntry = "KnotTimblejack" }, --Inferno Gloves
+		{ itemID = 18409, refLootEntry = "KnotTimblejack" }, --Mooncloth Gloves
+		{ itemID = 18504, refLootEntry = "KnotTimblejack" }, --Girdle of Insight
+		{ itemID = 18506, refLootEntry = "KnotTimblejack" }, --Mongoose Boots
+		{ itemID = 18508, refLootEntry = "KnotTimblejack" }, --Swift Flight Bracers
+		{ itemID = 18425, groupID = 1, refLootEntry = 14322 }; --Kreeg's Mug
+		{ itemID = 18538, refLootEntry = 179564 }, --Treant's Bane
+		{ itemID = 18495, refLootEntry = 179564 }, --Redoubt Cloak
+		{ itemID = 18532, refLootEntry = 179564 }, --Mindsurge Robe
+		{ itemID = 18528, refLootEntry = 179564 }, --Cyclone Spaulders
+		{ itemID = 18530, refLootEntry = 179564 }, --Ogre Forged Hauberk
+		{ itemID = 18533, refLootEntry = 179564 }, --Gordok Bracers of Power
+		{ itemID = 18529, refLootEntry = 179564 }, --Elemental Plate Girdle
+		{ itemID = 18500, refLootEntry = 179564 }, --Tarnished Elven Ring
+		{ itemID = 18537, refLootEntry = 179564 }, --Counterattack Lodestone
+		{ itemID = 18531, refLootEntry = 179564 }, --Unyielding Maul
+		{ itemID = 18534, refLootEntry = 179564 }, --Rod of the Ogre Magi
+		{ itemID = 18499, refLootEntry = 179564 }, --Barrier Shield
+		{ itemID = 18475, refLootEntry = 179564 }, --Oddly Magical Belt
+		{ itemID = 18478, refLootEntry = 179564 }, --Hyena Hide Jerkin
+		{ itemID = 18477, refLootEntry = 179564 }, --Shaggy Leggings
+		{ itemID = 18476, refLootEntry = 179564 }, --Mud Stained Boots
+		{ itemID = 18479, refLootEntry = 179564 }, --Carrion Scorpid Helm
+		{ itemID = 18480, refLootEntry = 179564 }, --Scarab Plate Helm
+		{ itemID = 18481, refLootEntry = 179564 }, --Skullcracking Mace
+		{ itemID = 18482, refLootEntry = 179564 }, --Ogre Toothpick Shooter
+		{ itemID = 18655, refLootEntry = 179564 }, --Schematic: Major Recombobulator
+
+	})
+
+	self:AddItemData({
+		----------------------
+		--- Razorfen Downs ---
+		----------------------
+		["RazorfenDowns"] = {
+			{
+				{ icon = "INV_Box_01", name = "Tuten'kash" },
+				{ itemID = 10776 }, --Silky Spider Cape
+				{ itemID = 10777 }, --Arachnid Gloves
+				{ itemID = 10775 }, --Carapace of Tuten'kash
+			},
+			{
+				{ itemID = 3831 }, --Recipe: Mighty Troll's Blood Potion
+				{ itemID = 10841, spellID = 13028 }, --Goldthorn Tea
+			},
+			{
+				{ itemID = 10771 }, --Deathmage Sash
+				{ itemID = 10769 }, --Glowing Eye of Mordresh
+				{ itemID = 10770 }, --Mordresh's Lifeless Skull
+			},
+			{
+				{ itemID = 10774 }, --Fleshhide Shoulders
+				{ itemID = 10772 }, --Glutton's Cleaver
+			},
+			{
+				{ itemID = 10768 }, --Boar Champion's Belt
+				{ itemID = 10758 }, --X'caliboar
+				{ itemID = 10767 }, --Savage Boar's Guard
+			},
+			{
+			},
+			{
+				{ itemID = 10762 }, --Robes of the Lich
+				{ itemID = 10765 }, --Bonefingers
+				{ itemID = 10764 }, --Deathchill Armor
+				{ itemID = 10763 }, --Icemetal Barbute
+				{ itemID = 10761 }, --Coldrage Dagger
+				{ itemID = 10420 }, --Skull of the Coldbringer
+			},
+			{
+				{ itemID = 10760 }, --Swine Fists
+				{ itemID = 10766 }, --Plaguerot Sprig
+			},
+			{
+				{ itemID = 10574 }, --Corpseshroud
+				{ itemID = 10581 }, --Death's Head Vestment
+				{ itemID = 10578 }, --Thoughtcast Boots
+				{ itemID = 10583 }, --Quillward Harness
+				{ itemID = 10582 }, --Briar Tredders
+				{ itemID = 10584 }, --Stormgale Fists
+				{ itemID = 10573 }, --Boneslasher
+				{ itemID = 10570 }, --Manslayer
+				{ itemID = 10571 }, --Ebony Boneclub
+				{ itemID = 10567 }, --Quillshooter
+				{ itemID = 10572 }, --Freezing Shard
+			},
+		},
+		["ScarletMonasteryCathedral"] = {
+		{
+			{ itemID = 19507 }, --Inquisitor's Shawl
+			{ itemID = 19508 }, --Branded Leather Bracers
+			{ itemID = 19509 }, --Dusty Mail Boots
+		},
+		{
+			{ itemID = 7724 }, --Gauntlets of Divinity
+			{ itemID = 10330 }, --Scarlet Leggings
+			{ itemID = 7723 }, --Mograine's Might
+			{ itemID = 7726 }, --Aegis of the Scarlet Commander
+		},
+		{
+			{ itemID = 7720 }, --Whitemane's Chapeau
+			{ itemID = 7722 }, --Triune Amulet
+			{ itemID = 7721 }, --Hand of Righteousness
+			{ itemID = 20976 }, --Design: Citrine Pendant of Golden Healing
+		},
+		{
+			{ itemID = 7728 }, --Beguiler Robes
+			{ itemID = 7755 }, --Flintrock Shoulders
+			{ itemID = 7727 }, --Watchman Pauldrons
+			{ itemID = 7760 }, --Warchief Kilt
+			{ itemID = 7754 }, --Harbinger Boots
+			{ itemID = 5819 }, --Sunblaze Coif
+			{ itemID = 7759 }, --Archon Chestpiece
+			{ itemID = 10328 }, --Scarlet Chestpiece
+			{ itemID = 10332 }, --Scarlet Boots
+			{ itemID = 2262 }, --Mark of Kern
+			{ itemID = 1992 }, --Swampchill Fetish
+			{ itemID = 10333 }, --Scarlet Wristguards
+			{ itemID = 10331 }, --Scarlet Gauntlets
+			{ itemID = 10329 }, --Scarlet Belt
+			{ itemID = 5756 }, --Sliverblade
+			{ itemID = 8225 }, --Tainted Pierce
+			{ itemID = 8226 }, --The Butcher
+			{ itemID = 7786 }, --Headsplitter
+			{ itemID = 7761 }, --Steelclaw Reaver
+			{ itemID = 7753 }, --Bloodspiller
+			{ itemID = 7752 }, --Dreamslayer
+			{ itemID = 7736 }, --Fight Club
+			{ itemID = 7730 }, --Cobalt Crusher
+			{ itemID = 7758 }, --Ruthless Shiv
+			{ itemID = 7757 }, --Windweaver Staff
+			{ itemID = 7787 }, --Resplendent Guardian
+			{ itemID = 7729 }, --Chesterfall Musket
+		},
+		},
+		["ScarletMonasteryGraveyard"] = {
+			{
+				{ itemID = 7683 }, --Bloody Brass Knuckles
+				{ itemID = 7682 }, --Torturing Poker
+			},
+			{
+				{ itemID = 7684 }, --Bloodmage Mantle
+				{ itemID = 7685 }, --Orb of the Forgotten Seer
+			},
+			{
+				{ itemID = 7688 }, --Ironspine's Ribcage
+				{ itemID = 7686 }, --Ironspine's Eye
+				{ itemID = 7687 }, --Ironspine's Fist
+			},
+			{
+				{ itemID = 7709 }, --Blighted Leggings
+				{ itemID = 7731 }, --Ghostshard Talisman
+				{ itemID = 7708 }, --Necrotic Wand
+			},
+			{
+				{ itemID = 7691 }, --Embalmed Shroud
+				{ itemID = 7690 }, --Ebon Vise
+				{ itemID = 7689 }, --Morbid Dawn
+			},
+			{
+				{ itemID = 7728 }, --Beguiler Robes
+				{ itemID = 7755 }, --Flintrock Shoulders
+				{ itemID = 7727 }, --Watchman Pauldrons
+				{ itemID = 7760 }, --Warchief Kilt
+				{ itemID = 7754 }, --Harbinger Boots
+				{ itemID = 5819 }, --Sunblaze Coif
+				{ itemID = 7759 }, --Archon Chestpiece
+				{ itemID = 10328 }, --Scarlet Chestpiece
+				{ itemID = 10332 }, --Scarlet Boots
+				{ itemID = 2262 }, --Mark of Kern
+				{ itemID = 1992 }, --Swampchill Fetish
+				{ itemID = 10333 }, --Scarlet Wristguards
+				{ itemID = 10331 }, --Scarlet Gauntlets
+				{ itemID = 10329 }, --Scarlet Belt
+				{ itemID = 5756 }, --Sliverblade
+				{ itemID = 8225 }, --Tainted Pierce
+				{ itemID = 8226 }, --The Butcher
+				{ itemID = 7786 }, --Headsplitter
+				{ itemID = 7761 }, --Steelclaw Reaver
+				{ itemID = 7753 }, --Bloodspiller
+				{ itemID = 7752 }, --Dreamslayer
+				{ itemID = 7736 }, --Fight Club
+				{ itemID = 7730 }, --Cobalt Crusher
+				{ itemID = 7758 }, --Ruthless Shiv
+				{ itemID = 7757 }, --Windweaver Staff
+				{ itemID = 7787 }, --Resplendent Guardian
+				{ itemID = 7729 }, --Chesterfall Musket
+			},
+		},
+		["ScarletMonasteryLibrary"] = {
+			{
+				{ itemID = 7756 }, --Dog Training Gloves
+				{ itemID = 7710 }, --Loksey's Training Stick
+				{ itemID = 3456 }, --Dog Whistle
+			},
+			{
+				{ itemID = 34227 }, --Deadman's Hand
+				{ itemID = 7712 }, --Mantle of Doan
+				{ itemID = 7711 }, --Robe of Doan
+				{ itemID = 7714 }, --Hypnotic Blade
+				{ itemID = 7713 }, --Illusionary Rod
+				{ icon = "INV_Box_01", name = "Doan's Strongbox" },
+				{ itemID = 7146 }, --The Scarlet Key
+			},
+			{
+				{ itemID = 7728 }, --Beguiler Robes
+				{ itemID = 7755 }, --Flintrock Shoulders
+				{ itemID = 7727 }, --Watchman Pauldrons
+				{ itemID = 7760 }, --Warchief Kilt
+				{ itemID = 7754 }, --Harbinger Boots
+				{ itemID = 5819 }, --Sunblaze Coif
+				{ itemID = 7759 }, --Archon Chestpiece
+				{ itemID = 10328 }, --Scarlet Chestpiece
+				{ itemID = 10332 }, --Scarlet Boots
+				{ itemID = 2262 }, --Mark of Kern
+				{ itemID = 1992 }, --Swampchill Fetish
+				{ itemID = 10333 }, --Scarlet Wristguards
+				{ itemID = 10331 }, --Scarlet Gauntlets
+				{ itemID = 10329 }, --Scarlet Belt
+				{ itemID = 5756 }, --Sliverblade
+				{ itemID = 8225 }, --Tainted Pierce
+				{ itemID = 8226 }, --The Butcher
+				{ itemID = 7786 }, --Headsplitter
+				{ itemID = 7761 }, --Steelclaw Reaver
+				{ itemID = 7753 }, --Bloodspiller
+				{ itemID = 7752 }, --Dreamslayer
+				{ itemID = 7736 }, --Fight Club
+				{ itemID = 7730 }, --Cobalt Crusher
+				{ itemID = 7758 }, --Ruthless Shiv
+				{ itemID = 7757 }, --Windweaver Staff
+				{ itemID = 7787 }, --Resplendent Guardian
+				{ itemID = 7729 }, --Chesterfall Musket
+			},
+		},
+
+	})
+
 end
