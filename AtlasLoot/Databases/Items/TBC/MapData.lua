@@ -122,7 +122,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["HCMagtheridonsLair"] = {
+    ["HCMagtheridon"] = {
         ZoneName = { "Magtheridon's Lair", 3836 },
         Location = { "Hellfire Peninsula", 3483 },
         LevelRange = "70",
@@ -176,7 +176,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["TempestKeepTheEye"] = {
+    ["TKEye"] = {
         ZoneName = { "The Eye", 3845 },
         Location = { "Netherstorm", 3523 },
         LevelRange = "70",
@@ -354,7 +354,7 @@ AtlasLoot:AddItemData("map",{
 
     -- Dungeons
 
-    ["HCHellfireRamparts"] = {
+    ["HCRamparts"] = {
         ZoneName = { "Hellfire Ramparts", 3562 },
         Location = { "Hellfire Peninsula", 3483 },
         LevelRange = "59-67",
@@ -373,7 +373,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["HCTheShatteredHalls"] = {
+    ["HCShatteredHalls"] = {
         ZoneName = { "The Shattered Halls", 3714 },
         Location = { "Hellfire Peninsula", 3483 },
         LevelRange = "69-70",
@@ -400,7 +400,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["HCBloodFurnace"] = {
+    ["HCFurnace"] = {
         ZoneName = { "The Blood Furnace", 3713 },
         Location = { "Hellfire Peninsula", 3483 },
         LevelRange = "60-68",
@@ -417,7 +417,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["TempestKeepBotanica"] = {
+    ["TKBot"] = {
         ZoneName = { "The Botanica", 3847 },
         Location = { "Netherstorm", 3523 },
         LevelRange = "69-70",
@@ -436,7 +436,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["TempestKeepArcatraz"] = {
+    ["TKArc"] = {
         ZoneName = {"The Arcatraz", 3846 },
         Location = { "Netherstorm", 3523 },
         LevelRange = "69-70",
@@ -465,7 +465,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["TempestKeepMechanar"] = {
+    ["TKMech"] = {
         ZoneName = { "The Mechanar", 3849 },
         Location = { "Netherstorm", 3523 },
         LevelRange = "68-70",
@@ -489,7 +489,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["AuchAuchenaiCrypts"] = {
+    ["AuchCrypts"] = {
         ZoneName = { "Auchenai Crypts", 3790 },
         Location = { "Terokkar Forest", 3519 },
         LevelRange = "64-70",
@@ -532,7 +532,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["AuchSethekkHalls"] = {
+    ["AuchSethekk"] = {
         ZoneName = {"Sethekk Halls", 3791 },
         Location = { "Terokkar Forest", 3519 },
         LevelRange = "66-70",
@@ -555,7 +555,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["AuchShadowLabyrinth"] = {
+    ["AuchShadowLab"] = {
         ZoneName = { "Shadow Labyrinth", 3789 },
         Location = { "Terokkar Forest", 3519 },
         LevelRange = "69-70",
@@ -625,7 +625,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["CFRTheSlavePens"] = {
+    ["CFRSlavePens"] = {
         ZoneName = { "The Slave Pens", 3717 },
         Location = { "Zangarmarsh", 3521 },
         LevelRange = "61-69",
@@ -646,7 +646,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["CFRTheSteamvault"] = {
+    ["CFRSteamvault"] = {
         ZoneName = { "The Steamvault", 3715 },
         Location = { "Zangarmarsh", 3521 },
         LevelRange = "69-70",
@@ -667,7 +667,7 @@ AtlasLoot:AddItemData("map",{
         },
     },
 
-    ["CFRTheUnderbog"] = {
+    ["CFRUnderbog"] = {
         ZoneName = { "The Underbog", 3716 },
         Location = { "Zangarmarsh", 3521 },
         LevelRange = "62-70",

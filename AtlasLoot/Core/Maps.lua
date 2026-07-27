@@ -232,3 +232,7 @@ function AtlasLoot:ShowMapTab(button, buttonClick)
         self:MapOnShow(self.CurrentMap, self.MapNum or 1)
     end
 end
+
+function AtlasLoot:GetMapInfo(mapID)
+    return self.data.map[mapID]
+end
