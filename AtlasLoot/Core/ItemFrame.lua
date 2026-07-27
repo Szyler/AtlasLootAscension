@@ -68,7 +68,7 @@ local function getItemConditionals(self, item, dataSource)
 	if minDif and minDif > itemDif then
 		show = false
 	end
-	itemID = item and item.itemID
+	itemID = item and ((item.spellID and self:GetCraftedItemID(item.spellID)) or item.itemID)
 	if item and item.itemID then
 		itemID = self:GetItemDifficultyID(item.itemID, itemDif)
 	end
@@ -239,7 +239,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 		iconFrame:SetTexture(nil)
 	elseif itemNumber.icon then
 		iconFrame:SetTexture("Interface\\Icons\\"..itemNumber.icon)
-	elseif itemNumber.itemID then
+	elseif itemNumber.itemID or itemID then
 		iconFrame:SetTexture(itemData.icon)
 	elseif spellIcon then
 		iconFrame:SetTexture(spellIcon)
