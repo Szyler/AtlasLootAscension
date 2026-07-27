@@ -3962,6 +3962,11 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 1400027, groupID = 0, refLootEntry = 185119 }; --Cache of the Last Guardian
   { itemID = 375250, groupID = 4, refLootEntry = 185119 }; --Rune of Ascension
   { itemID = 400751, groupID = 5, refLootEntry = 185119 }; --Raider's Commendation
+  { itemID = 31882, groupID = 1, refLootEntry = 185168 }; --Ace of Blessings
+  { itemID = 31892, groupID = 1, refLootEntry = 185168 }; --Ace of Storms
+  { itemID = 31901, groupID = 1, refLootEntry = 185168 }; --Ace of Furies
+  { itemID = 31910, groupID = 1, refLootEntry = 185168 }; --Ace of Lunacy
+  { itemID = 23901, groupID = 0, refLootEntry = 185168 }; --Nazan's Head
   { itemID = 97730, groupID = 0, refLootEntry = 254401 }; --Worldforged Key Fragment
   { itemID = 252821, groupID = 1, refLootEntry = 254401 }; --Twinglaive of the Vampire Council
   { itemID = 252906, groupID = 1, refLootEntry = 254401 }; --Twinglaive of Eternal Slumber

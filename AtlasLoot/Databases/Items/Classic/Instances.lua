@@ -3638,6 +3638,9 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 18908, groupID = 1, refLootEntry = 81201 }; --Drowned Highborne Slicer
   { itemID = 18916, groupID = 1, refLootEntry = 81201 }; --Ocean Kilt
   { itemID = 1615011, groupID = 0, refLootEntry = 81201 }; --Treasures of Azeroth
+  { itemID = 7669, groupID = 0, refLootEntry = 113757 }; --Shattered Necklace Ruby
+  { itemID = 5824, groupID = 0, refLootEntry = 142088 }; --Tablet of Will
+  { itemID = 11751, groupID = 1, refLootEntry = 160845 }; --Burning Essence
   { itemID = 559301, groupID = 1, refLootEntry = 162700 }; --Mantle of Caged Light
   { itemID = 559306, groupID = 1, refLootEntry = 162700 }; --Faithful Servant's Wristwraps
   { itemID = 559311, groupID = 1, refLootEntry = 162700 }; --Dark Veil Girdle
@@ -3669,6 +3672,10 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 559343, groupID = 2, refLootEntry = 162716 }; --Mutated Heart Cloak
   { itemID = 559357, groupID = 1, refLootEntry = 162716 }; --Fang of the Chimeric Embryo
   { itemID = 559365, groupID = 1, refLootEntry = 162716 }; --Cutter of the Spawn
+  { itemID = 11309, groupID = 0, refLootEntry = 165554 }; --The Heart of the Mountain
+  { itemID = 12845, groupID = 0, refLootEntry = 176112 }; --Medallion of Faith
+  { itemID = 12827, groupID = 0, refLootEntry = 176325 }; --Plans: Serenity
+  { itemID = 21984, groupID = 0, refLootEntry = 181083 }; --Left Piece of Lord Valthalak's Amulet
   { itemID = 254068, groupID = 0, refLootEntry = 254401 }; --Sigil of Cynfael
   { itemID = 254070, groupID = 0, refLootEntry = 254405 }; --Sigil of Sinners
   { itemID = 254069, groupID = 0, refLootEntry = 254406 }; --Sigil of Kurgoth Doomreaver
