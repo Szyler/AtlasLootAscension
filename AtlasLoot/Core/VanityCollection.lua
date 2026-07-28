@@ -76,7 +76,7 @@ function AtlasLoot:CreateVanityCollection()
 		local menuData = {}
 		for mainCatName, mainCat in pairs(extraCategories) do
 			if mainCat["Vanity"..cat] then
-				menuData["Vanity"..mainCatName] = menuData["Vanity"..mainCatName] or {Name = mainCatName, vanity = true, Module = "AtlasLoot_Ascension_Vanity"}
+				menuData["Vanity"..mainCatName] = menuData["Vanity"..mainCatName] or {Name = mainCatName, vanity = true, Type = "Vanity"}
 				for catName, catDisplayName in pairs (mainCat) do
 					itemData[catName] = { dontSort = true, vanityCollection = true, {} }
 					table.insert(menuData["Vanity"..mainCatName], {catDisplayName, {catName}})
@@ -86,7 +86,7 @@ function AtlasLoot:CreateVanityCollection()
 		end
 		if #menuData == 0 then
 			itemData["Vanity"..cat] = { dontSort = true, vanityCollection = true, {} }
-			menuData["Vanity"..cat] = menuData["Vanity"..cat] or {Name = name, vanity = true, Module = "AtlasLoot_Ascension_Vanity"}
+			menuData["Vanity"..cat] = menuData["Vanity"..cat] or {Name = name, vanity = true, Type = "Vanity"}
 			table.insert(menuData["Vanity"..cat], {name, {"Vanity"..cat}})
 		end
 		self:AddNewMenus(menuData)

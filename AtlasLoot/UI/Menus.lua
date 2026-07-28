@@ -374,7 +374,6 @@ function AtlasLoot:InitializeMenus()
 	
 	------------------------------------- Faction Menus -------------------------------------
 	collection.FactionsCLASSIC = {
-	Module = "AtlasLoot_OriginalWoW",
 		{ "Argent" },
 		{ "AQBroodRings" },
 		{ "AlteracFactions" },
