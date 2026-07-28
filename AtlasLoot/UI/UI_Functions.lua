@@ -153,7 +153,7 @@ function AtlasLoot:InitializeUIFunctions()
             if lasttable then
                 self:ShowItemsFrame(unpack(lasttable))
             else
-                local tablenum = self.ui.menus.data[tablename].Loadfirst or 1
+                local tablenum = self.ui.menus.data[tablename] and self.ui.menus.data[tablename].Loadfirst or 1
                 self:ShowItemsFrame(tablename, "itemData", tablenum, 1)
             end
             self:SetUITab("Loot")
