@@ -295,6 +295,7 @@ local function itemFrameUpdate(self, dataID, dataSource_backup, tablenum, pageNu
 	local dataSource, itemData = self:GetSourceData(dataSource_backup, dataID, tablenum)
 	if not dataSource or not itemData then return end
 	itemData = itemData[pageNumber]
+	if not itemData then return end
 	local displayItems = {}
 	for _, item in pairs(itemData) do
 		local show, itemID, recipeID = getItemConditionals(self, item, dataSource)
