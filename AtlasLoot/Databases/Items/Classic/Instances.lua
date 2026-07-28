@@ -707,6 +707,8 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 18945, groupID = 0, refLootEntry = 9319 }; --Dark Iron Residue
   { itemID = 22528, groupID = 0, refLootEntry = 9319 }; --Dark Iron Scraps
   { itemID = 59850, groupID = 0, refLootEntry = 9319 }; --Sigil of Houndmaster Grebmar
+  { itemID = 100621, groupID = 0, refLootEntry = 9499 }; --Recipe: Chilled Lava Eel
+  { itemID = 13483, groupID = 0, refLootEntry = 9499 }; --Recipe: Transmute Fire to Earth
   { itemID = 11744, groupID = 1, refLootEntry = 9502 }; --Bloodfist
   { itemID = 11745, groupID = 1, refLootEntry = 9502 }; --Fists of Phalanx
   { itemID = 22212, groupID = 1, refLootEntry = 9502 }; --Golem Fitted Pauldrons
@@ -2027,6 +2029,112 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 60002, groupID = 0, refLootEntry = 12264 }; --Sigil of Shazzrah
   { itemID = 400750, groupID = 4, refLootEntry = 12264 }; --Raider's Commendation
   { itemID = 1170083, groupID = 0, refLootEntry = 12264 }; --Personal Cache
+  { itemID = 6018126, groupID = 1, refLootEntry = 12397 }; --Bloodforged Infernos, the Extinguished
+  { itemID = 967233, groupID = 1, refLootEntry = 12397 }; --Pattern: Flamescale Gambeson
+  { itemID = 967236, groupID = 1, refLootEntry = 12397 }; --Pattern: Devilsaur Gambeson
+  { itemID = 967239, groupID = 1, refLootEntry = 12397 }; --Pattern: Magescale Gambeson
+  { itemID = 967242, groupID = 1, refLootEntry = 12397 }; --Pattern: Scorpion Strike Gambeson
+  { itemID = 967245, groupID = 1, refLootEntry = 12397 }; --Pattern: Earth Warder Gambeson
+  { itemID = 967248, groupID = 1, refLootEntry = 12397 }; --Pattern: Riverscale Gambeson
+  { itemID = 967251, groupID = 1, refLootEntry = 12397 }; --Plans: Mountainous Belt Buckle
+  { itemID = 967254, groupID = 1, refLootEntry = 12397 }; --Plans: Deflecting Belt Buckle
+  { itemID = 967257, groupID = 1, refLootEntry = 12397 }; --Plans: Roguish Belt Buckle
+  { itemID = 967260, groupID = 1, refLootEntry = 12397 }; --Plans: Dancing Belt Buckle
+  { itemID = 967263, groupID = 1, refLootEntry = 12397 }; --Plans: Magus Belt Buckle
+  { itemID = 967266, groupID = 1, refLootEntry = 12397 }; --Plans: Cleric's Belt Buckle
+  { itemID = 967269, groupID = 1, refLootEntry = 12397 }; --Plans: Warlord's Belt Buckle
+  { itemID = 967272, groupID = 1, refLootEntry = 12397 }; --Plans: Guardman's Belt Buckle
+  { itemID = 967275, groupID = 1, refLootEntry = 12397 }; --Schematic: Gold Magnification Polish
+  { itemID = 967278, groupID = 1, refLootEntry = 12397 }; --Schematic: Mithril Sharpening Polish
+  { itemID = 967281, groupID = 1, refLootEntry = 12397 }; --Schematic: Silver Prismatic Polish
+  { itemID = 967284, groupID = 1, refLootEntry = 12397 }; --Schematic: Iron Sights Scope
+  { itemID = 967287, groupID = 1, refLootEntry = 12397 }; --Schematic: Precision Scope
+  { itemID = 967290, groupID = 1, refLootEntry = 12397 }; --Schematic: Reflex Scope
+  { itemID = 967293, groupID = 1, refLootEntry = 12397 }; --Pattern: Chain Cloak Lining
+  { itemID = 967296, groupID = 1, refLootEntry = 12397 }; --Pattern: Sustaining Cloak Lining
+  { itemID = 967299, groupID = 1, refLootEntry = 12397 }; --Pattern: Flowing Cloak Lining
+  { itemID = 967302, groupID = 1, refLootEntry = 12397 }; --Pattern: Rampager's Cloak Lining
+  { itemID = 967305, groupID = 1, refLootEntry = 12397 }; --Pattern: Absorptive Cloak Lining
+  { itemID = 967308, groupID = 1, refLootEntry = 12397 }; --Pattern: Nimble Cloak Lining
+  { itemID = 967321, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Living Soup
+  { itemID = 967324, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Charred Steak
+  { itemID = 967327, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Steamed Wontons
+  { itemID = 967330, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Air Fried Chops
+  { itemID = 967333, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Rock's Stew
+  { itemID = 967336, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Clear-Cut Chops
+  { itemID = 967339, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Clear-Cut Wontons
+  { itemID = 967342, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Clear-Cut Steak
+  { itemID = 967345, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Piercing Chops
+  { itemID = 967348, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Piercing Steak
+  { itemID = 967351, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Seared Wontons
+  { itemID = 967354, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Seared Chops
+  { itemID = 967369, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Red-Hot Stew
+  { itemID = 967375, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Duck Stew
+  { itemID = 967378, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Chunky Stew
+  { itemID = 967381, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Simmered Stew
+  { itemID = 967384, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Wizard Wontons
+  { itemID = 967387, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Wizard Soup
+  { itemID = 967393, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Hearty Living Soup
+  { itemID = 967396, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Hearty Air Fried Chops
+  { itemID = 967399, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Hearty Charred Steak
+  { itemID = 967402, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Hearty Steamed Wontons
+  { itemID = 967408, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Subtle Chops
+  { itemID = 967411, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Subtle Steak
+  { itemID = 967414, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Subtle Wontons
+  { itemID = 967417, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Subtle Soup
+  { itemID = 967420, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Bold Stew
+  { itemID = 967423, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Mana Imbued Roast
+  { itemID = 967426, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Sizzling Roast
+  { itemID = 967429, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Wild Roast
+  { itemID = 967432, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Winter Roast
+  { itemID = 967435, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Blackened Roast
+  { itemID = 967438, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Bold Simmered Stew
+  { itemID = 967441, groupID = 1, refLootEntry = 12397 }; --Recipe: Fused Bold Duck Stew
+  { itemID = 967477, groupID = 1, refLootEntry = 12397 }; --Recipe: Distilled Flask of Manifesting Power
+  { itemID = 967480, groupID = 1, refLootEntry = 12397 }; --Recipe: Distilled Flask of the Warsong
+  { itemID = 967483, groupID = 1, refLootEntry = 12397 }; --Recipe: Distilled Flask of the Kirin Tor
+  { itemID = 967486, groupID = 1, refLootEntry = 12397 }; --Recipe: Distilled Flask of Butchery
+  { itemID = 967489, groupID = 1, refLootEntry = 12397 }; --Recipe: Distilled Flask of the Unyielding
+  { itemID = 967492, groupID = 1, refLootEntry = 12397 }; --Recipe: Distilled Flask of Unrelenting Power
+  { itemID = 967495, groupID = 1, refLootEntry = 12397 }; --Recipe: Distilled Flask of Savage Assault
+  { itemID = 967498, groupID = 1, refLootEntry = 12397 }; --Recipe: Distilled Flask of Shattering Thunder
+  { itemID = 967501, groupID = 1, refLootEntry = 12397 }; --Recipe: Distilled Flask of the Executioner
+  { itemID = 967504, groupID = 1, refLootEntry = 12397 }; --Recipe: Distilled Flask of Deep Meditation
+  { itemID = 967507, groupID = 1, refLootEntry = 12397 }; --Recipe: Distilled Flask of Adept Striking
+  { itemID = 967731, groupID = 1, refLootEntry = 12397 }; --Recipe: Enchant Weapon - Unstoppable Assault
+  { itemID = 967737, groupID = 1, refLootEntry = 12397 }; --Recipe: Enchant Weapon - Spellbinder's Rage
+  { itemID = 967740, groupID = 1, refLootEntry = 12397 }; --Recipe: Enchant Weapon - Ninja's Focus
+  { itemID = 967743, groupID = 1, refLootEntry = 12397 }; --Recipe: Enchant Weapon - Grovewarden's Blessing
+  { itemID = 967752, groupID = 1, refLootEntry = 12397 }; --Recipe: Enchant Weapon - Arcane Artillery
+  { itemID = 967789, groupID = 1, refLootEntry = 12397 }; --Recipe: Enchant Weapon - Brutal Crusader
+  { itemID = 18347, groupID = 1, refLootEntry = 12397 }; --Well Balanced Axe
+  { itemID = 18353, groupID = 1, refLootEntry = 12397 }; --Stoneflower Staff
+  { itemID = 18460, groupID = 1, refLootEntry = 12397 }; --Unsophisticated Hand Cannon
+  { itemID = 18462, groupID = 1, refLootEntry = 12397 }; --Jagged Bone Fist
+  { itemID = 18463, groupID = 1, refLootEntry = 12397 }; --Ogre Pocket Knife
+  { itemID = 18481, groupID = 1, refLootEntry = 12397 }; --Skullcracking Mace
+  { itemID = 18482, groupID = 1, refLootEntry = 12397 }; --Ogre Toothpick Shooter
+  { itemID = 18345, groupID = 1, refLootEntry = 12397 }; --Murmuring Ring
+  { itemID = 18346, groupID = 1, refLootEntry = 12397 }; --Threadbare Trousers
+  { itemID = 18349, groupID = 1, refLootEntry = 12397 }; --Gauntlets of Accuracy
+  { itemID = 18350, groupID = 1, refLootEntry = 12397 }; --Amplifying Cloak
+  { itemID = 18351, groupID = 1, refLootEntry = 12397 }; --Magically Sealed Bracers
+  { itemID = 18352, groupID = 1, refLootEntry = 12397 }; --Petrified Bark Shield
+  { itemID = 18425, groupID = 1, refLootEntry = 12397 }; --Kreeg's Mug
+  { itemID = 18450, groupID = 1, refLootEntry = 12397 }; --Robe of Combustion
+  { itemID = 18451, groupID = 1, refLootEntry = 12397 }; --Hyena Hide Belt
+  { itemID = 18458, groupID = 1, refLootEntry = 12397 }; --Modest Armguards
+  { itemID = 18459, groupID = 1, refLootEntry = 12397 }; --Gallant's Wristguards
+  { itemID = 18464, groupID = 1, refLootEntry = 12397 }; --Gordok Nose Ring
+  { itemID = 18475, groupID = 1, refLootEntry = 12397 }; --Oddly Magical Belt
+  { itemID = 18476, groupID = 1, refLootEntry = 12397 }; --Mud Stained Boots
+  { itemID = 18477, groupID = 1, refLootEntry = 12397 }; --Shaggy Leggings
+  { itemID = 18478, groupID = 1, refLootEntry = 12397 }; --Hyena Hide Jerkin
+  { itemID = 18479, groupID = 1, refLootEntry = 12397 }; --Carrion Scorpid Helm
+  { itemID = 18480, groupID = 1, refLootEntry = 12397 }; --Scarab Plate Helm
+  { itemID = 2018464, groupID = 1, refLootEntry = 12397 }; --Gordok Knuckleband
+  { itemID = 2218464, groupID = 1, refLootEntry = 12397 }; --Flattened Elven Ring
+  { itemID = 6010801, groupID = 1, refLootEntry = 12397 }; --Barnacle Busters
   { itemID = 1615011, groupID = 0, refLootEntry = 12397 }; --Treasures of Azeroth
   { itemID = 13826, groupID = 1, refLootEntry = 12435 }; --Dragon Hunter's Mantle
   { itemID = 15026, groupID = 2, refLootEntry = 12435 }; --Living Blood Gem
@@ -3681,6 +3789,10 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 7669, groupID = 0, refLootEntry = 113757 }; --Shattered Necklace Ruby
   { itemID = 5824, groupID = 0, refLootEntry = 142088 }; --Tablet of Will
   { itemID = 11751, groupID = 1, refLootEntry = 160845 }; --Burning Essence
+  { itemID = 22205, groupID = 1, refLootEntry = 161495 }; --Black Steel Bindings
+  { itemID = 22254, groupID = 1, refLootEntry = 161495 }; --Wand of Eternal Light
+  { itemID = 22255, groupID = 1, refLootEntry = 161495 }; --Magma Forged Band
+  { itemID = 22256, groupID = 1, refLootEntry = 161495 }; --Mana Shaping Handwraps
   { itemID = 559301, groupID = 1, refLootEntry = 162700 }; --Mantle of Caged Light
   { itemID = 559306, groupID = 1, refLootEntry = 162700 }; --Faithful Servant's Wristwraps
   { itemID = 559311, groupID = 1, refLootEntry = 162700 }; --Dark Veil Girdle
@@ -3713,8 +3825,27 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 559357, groupID = 1, refLootEntry = 162716 }; --Fang of the Chimeric Embryo
   { itemID = 559365, groupID = 1, refLootEntry = 162716 }; --Cutter of the Spawn
   { itemID = 11309, groupID = 0, refLootEntry = 165554 }; --The Heart of the Mountain
+  { itemID = 11920, groupID = 1, refLootEntry = 169243 }; --Wraith Scythe
+  { itemID = 11921, groupID = 1, refLootEntry = 169243 }; --Impervious Giant
+  { itemID = 11922, groupID = 1, refLootEntry = 169243 }; --Blood-etched Blade
+  { itemID = 11923, groupID = 1, refLootEntry = 169243 }; --The Hammer of Grace
+  { itemID = 11925, groupID = 1, refLootEntry = 169243 }; --Ghostshroud
+  { itemID = 11926, groupID = 1, refLootEntry = 169243 }; --Deathdealer Breastplate
+  { itemID = 11927, groupID = 1, refLootEntry = 169243 }; --Legplates of the Eternal Guardian
+  { itemID = 11929, groupID = 1, refLootEntry = 169243 }; --Haunting Spectre Leggings
   { itemID = 12845, groupID = 0, refLootEntry = 176112 }; --Medallion of Faith
   { itemID = 12827, groupID = 0, refLootEntry = 176325 }; --Plans: Serenity
+  { itemID = 18495, groupID = 1, refLootEntry = 179564 }; --Redoubt Cloak
+  { itemID = 18499, groupID = 1, refLootEntry = 179564 }; --Barrier Shield
+  { itemID = 18500, groupID = 1, refLootEntry = 179564 }; --Tarnished Elven Ring
+  { itemID = 18528, groupID = 1, refLootEntry = 179564 }; --Cyclone Spaulders
+  { itemID = 18529, groupID = 1, refLootEntry = 179564 }; --Elemental Plate Girdle
+  { itemID = 18530, groupID = 1, refLootEntry = 179564 }; --Ogre Forged Hauberk
+  { itemID = 18531, groupID = 1, refLootEntry = 179564 }; --Unyielding Maul
+  { itemID = 18532, groupID = 1, refLootEntry = 179564 }; --Mindsurge Robe
+  { itemID = 18533, groupID = 1, refLootEntry = 179564 }; --Gordok Bracers of Power
+  { itemID = 18534, groupID = 1, refLootEntry = 179564 }; --Rod of the Ogre Magi
+  { itemID = 18537, groupID = 1, refLootEntry = 179564 }; --Counterattack Lodestone
   { itemID = 21984, groupID = 0, refLootEntry = 181083 }; --Left Piece of Lord Valthalak's Amulet
   { itemID = 254068, groupID = 0, refLootEntry = 254401 }; --Sigil of Cynfael
   { itemID = 254070, groupID = 0, refLootEntry = 254405 }; --Sigil of Sinners
