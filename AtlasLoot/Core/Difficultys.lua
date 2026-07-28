@@ -170,23 +170,23 @@ local difficultyList = {
 
 function Difficulties:GetMax(instanceType, max)
     if not instanceType and not max then return end
-    return difficultyList[max] or difficultyList[instanceType].Max
+    return difficultyList[max] or difficultyList[instanceType] and difficultyList[instanceType].Max
 end
 
 function Difficulties:GetMin(min)
     return difficultyList[min]
 end
 
-function Difficulties:GetList(type)
-    return difficultyList[type]
+function Difficulties:GetList(difficulty)
+    return difficultyList[difficulty]
 end
 
-function Difficulties:GetInfo(type, value)
-    return difficultyList[type][value]
+function Difficulties:GetInfo(difficulty, value)
+    return difficultyList[difficulty] and difficultyList[difficulty][value]
 end
 
-function Difficulties:GetCount(type)
-    return difficultyList[type] and #difficultyList[type] or 0
+function Difficulties:GetCount(difficulty)
+    return difficultyList[difficulty] and #difficultyList[difficulty] or 0
 end
 
 function Difficulties:GetSearch()
@@ -194,13 +194,13 @@ function Difficulties:GetSearch()
 end
 
 -- Finds the tablenumber to set where the difficulty slider should be.
-function Difficulties:GetMatch(type, match)
-	if not type and not difficultyList[type] then return end
-	for i, t in ipairs(difficultyList[type]) do
-		if t[2] == match then
-			return i
-		end
-	end
+function Difficulties:GetMatch(difficulty, match)
+	if not difficultyList[difficulty] then return end
+    for i, t in ipairs(difficultyList[difficulty]) do
+        if t[2] == match then
+            return i
+        end
+    end
     return 1
 end
 
