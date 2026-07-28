@@ -638,14 +638,16 @@ function AtlasLoot:InitializeSearch()
         local searchTerms = parseQuery(searchText)
         for dataID, data in pairs(self.data.item) do
             local extendedInfo = self:GetSourcesExtendedInfo(dataID)
-            if extendedInfo and self.selectedProfile.SearchOn[extendedInfo.Type] and self.selectedProfile.SearchOn[extendedInfo.Type][1] or (self.selectedProfile.SearchAscensionVanity and data.Type == "Vanity") then
+            local searchOn = extendedInfo and self.selectedProfile.SearchOn[extendedInfo.Type]
+
+            if searchOn then
                 for _, itemData in ipairs(data) do
                     if itemData.itemID or itemData.spellID then
                         if extendedInfo.Type then
                             itemData.Type = extendedInfo.Type
                         end
                         if self.selectedProfile.showdropLocationOnSearch then
-                            itemData.dropLoc = {extendedInfo.SourceName, extendedInfo.SourceName}
+                            itemData.dropLoc = {extendedInfo.Name, extendedInfo.SourceName}
                         end
                         tinsert(itemList, {{itemData, extendedInfo.Source[1], extendedInfo.Source[2], searchTerms, searchText}})
                     end
@@ -676,7 +678,12 @@ function AtlasLoot:InitializeSearch()
             {"Dungeon", "WrathDungeon"},
             {"Raid", "WrathRaid"},
             {"Crafting", "WrathCrafting"},
+        },
+        {
+            Name = "Other",
+            {"Vanity", "Vanity"},
         }
+
     }
 
     function AtlasLoot:ShowSearchOptions(button)
@@ -688,21 +695,11 @@ function AtlasLoot:InitializeSearch()
         for _, cat in pairs(searchCategories) do
             table.insert(menuList[1], {text = cat.Name, isTitle = true})
             for _, data in ipairs(cat) do
-                profile.SearchOn[data[2]] = profile.SearchOn[data[2]]
-                local searchState = profile.SearchOn[data[2]]
-                table.insert(menuList[1], {isRadio = true, text = data[1], checked = {searchState, 1}, func = function() searchState[1] = not searchState[1] end})
+                profile.SearchOn[data[2]] = profile.SearchOn[data[2]] or false
+                table.insert(menuList[1], {isRadio = true, text = data[1], checked = {profile.SearchOn, data[2]}, func = function() profile.SearchOn[data[2]] = not profile.SearchOn[data[2]] end})
             end
         end
-
-        local searchOptionsItems = {{
-            { text = "Search options", isTitle = true },
-            {
-                text = "Vanity Collection", isRadio = true, checked = {profile, "SearchAscensionVanity"},
-                tooltip = "If checked, AtlasLoot will search Ascension Vanity Collection", func = function() profile.SearchAscensionVanity = not profile.SearchAscensionVanity end
-            },
-        }}
-
-        self:OpenDewdropMenu(button, menuList, searchOptionsItems)
+        self:OpenDewdropMenu(button, menuList)
     end
 
     local MAX_ARGUMENTS = 6
@@ -1150,7 +1147,7 @@ function AtlasLoot:InitializeSearch()
         local allDisabled = true
         if allDisabled then
             for _, module in pairs(self.selectedProfile.SearchOn) do
-                if module and module[1] or self.selectedProfile.SearchAscensionVanity then
+                if module then
                     allDisabled = false
                     break
                 end
