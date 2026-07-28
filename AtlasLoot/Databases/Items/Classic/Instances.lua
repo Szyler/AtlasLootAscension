@@ -87,10 +87,912 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 19276, groupID = 0, refLootEntry = 1853 }; --Ace of Portals
   { itemID = 56988, groupID = 0, refLootEntry = 1853 }; --Sigil of Darkmaster Gandling
   { itemID = 2021814, groupID = 0, refLootEntry = 1853 }; --Dungeon Spoils
-  { itemID = 7672, groupID = 0, refLootEntry = 2748 }; --Shattered Necklace Power Source
-  { itemID = 2021814, groupID = 0, refLootEntry = 2748 }; --Dungeon Spoils
-  { itemID = 4635, groupID = 0, refLootEntry = 2932 }; --Hammertoe's Amulet
+  { itemID = 9413, groupID = 1, refLootEntry = 2748 }; --The Rockpounder
+  { itemID = 9418, groupID = 1, refLootEntry = 2748 }; --Stoneslayer
+  { itemID = 11118, groupID = 1, refLootEntry = 2748 }; --Archaedic Stone
+  { itemID = 1929, groupID = 1, refLootEntry = 2932 }; --Silk-threaded Trousers
+  { itemID = 1930, groupID = 1, refLootEntry = 2932 }; --Stonemason Cloak
+  { itemID = 1934, groupID = 1, refLootEntry = 2932 }; --Stonemason Trousers
+  { itemID = 1936, groupID = 1, refLootEntry = 2932 }; --Goblin Screwdriver
+  { itemID = 1943, groupID = 1, refLootEntry = 2932 }; --Goblin Mail Leggings
+  { itemID = 1944, groupID = 1, refLootEntry = 2932 }; --Metalworking Gloves
+  { itemID = 1945, groupID = 1, refLootEntry = 2932 }; --Woodworking Gloves
+  { itemID = 1951, groupID = 1, refLootEntry = 2932 }; --Blackwater Cutlass
+  { itemID = 5422, groupID = 1, refLootEntry = 2932 }; --Brambleweed Leggings
+  { itemID = 9489, groupID = 1, refLootEntry = 2932 }; --Gyromatic Icemaker
+  { itemID = 10298, groupID = 1, refLootEntry = 2932 }; --Gnomeregan Band
+  { itemID = 10299, groupID = 1, refLootEntry = 2932 }; --Gnomeregan Amulet
+  { itemID = 10400, groupID = 1, refLootEntry = 2932 }; --Blackened Defias Leggings
+  { itemID = 10401, groupID = 1, refLootEntry = 2932 }; --Blackened Defias Gloves
+  { itemID = 10402, groupID = 1, refLootEntry = 2932 }; --Blackened Defias Boots
+  { itemID = 720, groupID = 1, refLootEntry = 2932 }; --Brawler Gloves
+  { itemID = 754, groupID = 1, refLootEntry = 2932 }; --Shortsword of Vengeance
+  { itemID = 776, groupID = 1, refLootEntry = 2932 }; --Vendetta
+  { itemID = 791, groupID = 1, refLootEntry = 2932 }; --Gnarled Ash Staff
+  { itemID = 862, groupID = 1, refLootEntry = 2932 }; --Runed Ring
+  { itemID = 872, groupID = 1, refLootEntry = 2932 }; --Rockslicer
+  { itemID = 888, groupID = 1, refLootEntry = 2932 }; --Naga Battle Gloves
+  { itemID = 890, groupID = 1, refLootEntry = 2932 }; --Twisted Chanter's Staff
+  { itemID = 934, groupID = 1, refLootEntry = 2932 }; --Stalvan's Reaper
+  { itemID = 935, groupID = 1, refLootEntry = 2932 }; --Night Watch Shortsword
+  { itemID = 936, groupID = 1, refLootEntry = 2932 }; --Midnight Mace
+  { itemID = 937, groupID = 1, refLootEntry = 2932 }; --Black Duskwood Staff
+  { itemID = 1121, groupID = 1, refLootEntry = 2932 }; --Feet of the Lynx
+  { itemID = 1155, groupID = 1, refLootEntry = 2932 }; --Rod of the Sleepwalker
+  { itemID = 1156, groupID = 1, refLootEntry = 2932 }; --Lavishly Jeweled Ring
+  { itemID = 1203, groupID = 1, refLootEntry = 2932 }; --Aegis of Stormwind
+  { itemID = 1265, groupID = 1, refLootEntry = 2932 }; --Scorpion Sting
+  { itemID = 1292, groupID = 1, refLootEntry = 2932 }; --Butcher's Cleaver
+  { itemID = 1318, groupID = 1, refLootEntry = 2932 }; --Night Reaver
+  { itemID = 1404, groupID = 1, refLootEntry = 2932 }; --Tidal Charm
+  { itemID = 1454, groupID = 1, refLootEntry = 2932 }; --Axe of the Enforcer
+  { itemID = 1481, groupID = 1, refLootEntry = 2932 }; --Grimclaw
+  { itemID = 1482, groupID = 1, refLootEntry = 2932 }; --Shadowfang
+  { itemID = 1483, groupID = 1, refLootEntry = 2932 }; --Face Smasher
+  { itemID = 1484, groupID = 1, refLootEntry = 2932 }; --Witching Stave
+  { itemID = 1486, groupID = 1, refLootEntry = 2932 }; --Tree Bark Jacket
+  { itemID = 1488, groupID = 1, refLootEntry = 2932 }; --Avenger's Armor
+  { itemID = 1489, groupID = 1, refLootEntry = 2932 }; --Gloomshroud Armor
+  { itemID = 1491, groupID = 1, refLootEntry = 2932 }; --Ring of Precision
+  { itemID = 1493, groupID = 1, refLootEntry = 2932 }; --Heavy Marauder Scimitar
+  { itemID = 1602, groupID = 1, refLootEntry = 2932 }; --Sickle Axe
+  { itemID = 1607, groupID = 1, refLootEntry = 2932 }; --Soulkeeper
+  { itemID = 1678, groupID = 1, refLootEntry = 2932 }; --Black Ogre Kickers
+  { itemID = 1713, groupID = 1, refLootEntry = 2932 }; --Ankh of Life
+  { itemID = 1714, groupID = 1, refLootEntry = 2932 }; --Necklace of Calisea
+  { itemID = 1715, groupID = 1, refLootEntry = 2932 }; --Polished Jazeraint Armor
+  { itemID = 1716, groupID = 1, refLootEntry = 2932 }; --Robe of the Magi
+  { itemID = 1717, groupID = 1, refLootEntry = 2932 }; --Double Link Tunic
+  { itemID = 1718, groupID = 1, refLootEntry = 2932 }; --Basilisk Hide Pants
+  { itemID = 1720, groupID = 1, refLootEntry = 2932 }; --Tanglewood Staff
+  { itemID = 1721, groupID = 1, refLootEntry = 2932 }; --Viking Warhammer
+  { itemID = 1722, groupID = 1, refLootEntry = 2932 }; --Thornstone Sledgehammer
+  { itemID = 1726, groupID = 1, refLootEntry = 2932 }; --Poison-tipped Bone Spear
+  { itemID = 1727, groupID = 1, refLootEntry = 2932 }; --Sword of Decay
+  { itemID = 1935, groupID = 1, refLootEntry = 2932 }; --Assassin's Blade
+  { itemID = 1937, groupID = 1, refLootEntry = 2932 }; --Buzz Saw
+  { itemID = 1973, groupID = 1, refLootEntry = 2932 }; --Orb of Deception
+  { itemID = 1974, groupID = 1, refLootEntry = 2932 }; --Mindthrust Bracers
+  { itemID = 1975, groupID = 1, refLootEntry = 2932 }; --Pysan's Old Greatsword
+  { itemID = 1976, groupID = 1, refLootEntry = 2932 }; --Slaghammer
+  { itemID = 1978, groupID = 1, refLootEntry = 2932 }; --Wolfclaw Gloves
+  { itemID = 1992, groupID = 1, refLootEntry = 2932 }; --Swampchill Fetish
+  { itemID = 2011, groupID = 1, refLootEntry = 2932 }; --Twisted Sabre
+  { itemID = 2039, groupID = 1, refLootEntry = 2932 }; --Plains Ring
+  { itemID = 2040, groupID = 1, refLootEntry = 2932 }; --Troll Protector
+  { itemID = 2059, groupID = 1, refLootEntry = 2932 }; --Sentry Cloak
+  { itemID = 2098, groupID = 1, refLootEntry = 2932 }; --Double-barreled Shotgun
+  { itemID = 2169, groupID = 1, refLootEntry = 2932 }; --Buzzer Blade
+  { itemID = 2194, groupID = 1, refLootEntry = 2932 }; --Diamond Hammer
+  { itemID = 2205, groupID = 1, refLootEntry = 2932 }; --Duskbringer
+  { itemID = 2236, groupID = 1, refLootEntry = 2932 }; --Blackfang
+  { itemID = 2256, groupID = 1, refLootEntry = 2932 }; --Skeletal Club
+  { itemID = 2262, groupID = 1, refLootEntry = 2932 }; --Mark of Kern
+  { itemID = 2264, groupID = 1, refLootEntry = 2932 }; --Mantle of Thieves
+  { itemID = 2271, groupID = 1, refLootEntry = 2932 }; --Staff of the Blessed Seer
+  { itemID = 2276, groupID = 1, refLootEntry = 2932 }; --Swampwalker Boots
+  { itemID = 2277, groupID = 1, refLootEntry = 2932 }; --Necromancer Leggings
+  { itemID = 2278, groupID = 1, refLootEntry = 2932 }; --Forest Tracker Epaulets
+  { itemID = 2280, groupID = 1, refLootEntry = 2932 }; --Kam's Walking Stick
+  { itemID = 2292, groupID = 1, refLootEntry = 2932 }; --Necrology Robes
+  { itemID = 2299, groupID = 1, refLootEntry = 2932 }; --Burning War Axe
+  { itemID = 2549, groupID = 1, refLootEntry = 2932 }; --Staff of the Shade
+  { itemID = 2564, groupID = 1, refLootEntry = 2932 }; --Elven Spirit Claws
+  { itemID = 2565, groupID = 1, refLootEntry = 2932 }; --Rod of Molten Fire
+  { itemID = 2567, groupID = 1, refLootEntry = 2932 }; --Evocator's Blade
+  { itemID = 2721, groupID = 1, refLootEntry = 2932 }; --Holy Shroud
+  { itemID = 2800, groupID = 1, refLootEntry = 2932 }; --Black Velvet Robes
+  { itemID = 2802, groupID = 1, refLootEntry = 2932 }; --Blazing Emblem
+  { itemID = 2807, groupID = 1, refLootEntry = 2932 }; --Guillotine Axe
+  { itemID = 2815, groupID = 1, refLootEntry = 2932 }; --Curve-bladed Ripper
+  { itemID = 2816, groupID = 1, refLootEntry = 2932 }; --Death Speaker Scepter
+  { itemID = 2877, groupID = 1, refLootEntry = 2932 }; --Combatant Claymore
+  { itemID = 2878, groupID = 1, refLootEntry = 2932 }; --Bearded Boneaxe
+  { itemID = 2879, groupID = 1, refLootEntry = 2932 }; --Antipodean Rod
+  { itemID = 2911, groupID = 1, refLootEntry = 2932 }; --Keller's Girdle
+  { itemID = 2912, groupID = 1, refLootEntry = 2932 }; --Claw of the Shadowmancer
+  { itemID = 2941, groupID = 1, refLootEntry = 2932 }; --Prison Shank
+  { itemID = 2942, groupID = 1, refLootEntry = 2932 }; --Iron Knuckles
+  { itemID = 2951, groupID = 1, refLootEntry = 2932 }; --Ring of the Underwood
+  { itemID = 3020, groupID = 1, refLootEntry = 2932 }; --Enduring Cap
+  { itemID = 3021, groupID = 1, refLootEntry = 2932 }; --Ranger Bow
+  { itemID = 3078, groupID = 1, refLootEntry = 2932 }; --Naga Heartpiercer
+  { itemID = 3191, groupID = 1, refLootEntry = 2932 }; --Arced War Axe
+  { itemID = 3194, groupID = 1, refLootEntry = 2932 }; --Black Malice
+  { itemID = 3203, groupID = 1, refLootEntry = 2932 }; --Dense Triangle Mace
+  { itemID = 3228, groupID = 1, refLootEntry = 2932 }; --Jimmied Handcuffs
+  { itemID = 3230, groupID = 1, refLootEntry = 2932 }; --Black Wolf Bracers
+  { itemID = 3413, groupID = 1, refLootEntry = 2932 }; --Doomspike
+  { itemID = 3414, groupID = 1, refLootEntry = 2932 }; --Crested Scepter
+  { itemID = 3415, groupID = 1, refLootEntry = 2932 }; --Staff of the Friar
+  { itemID = 3416, groupID = 1, refLootEntry = 2932 }; --Martyr's Chain
+  { itemID = 3417, groupID = 1, refLootEntry = 2932 }; --Onyx Claymore
+  { itemID = 3748, groupID = 1, refLootEntry = 2932 }; --Feline Mantle
+  { itemID = 4090, groupID = 1, refLootEntry = 2932 }; --Mug O' Hurt
+  { itemID = 4091, groupID = 1, refLootEntry = 2932 }; --Widowmaker
+  { itemID = 4438, groupID = 1, refLootEntry = 2932 }; --Pugilist Bracers
+  { itemID = 4446, groupID = 1, refLootEntry = 2932 }; --Blackvenom Blade
+  { itemID = 4454, groupID = 1, refLootEntry = 2932 }; --Talon of Vultros
+  { itemID = 5183, groupID = 1, refLootEntry = 2932 }; --Pulsating Hydra Heart
+  { itemID = 5187, groupID = 1, refLootEntry = 2932 }; --Rhahk'Zor's Hammer
+  { itemID = 5191, groupID = 1, refLootEntry = 2932 }; --Cruel Barb
+  { itemID = 5192, groupID = 1, refLootEntry = 2932 }; --Thief's Blade
+  { itemID = 5193, groupID = 1, refLootEntry = 2932 }; --Cape of the Brotherhood
+  { itemID = 5194, groupID = 1, refLootEntry = 2932 }; --Taskmaster Axe
+  { itemID = 5195, groupID = 1, refLootEntry = 2932 }; --Gold-flecked Gloves
+  { itemID = 5196, groupID = 1, refLootEntry = 2932 }; --Smite's Reaver
+  { itemID = 5197, groupID = 1, refLootEntry = 2932 }; --Cookie's Tenderizer
+  { itemID = 5198, groupID = 1, refLootEntry = 2932 }; --Cookie's Stirring Rod
+  { itemID = 5199, groupID = 1, refLootEntry = 2932 }; --Smelting Pants
+  { itemID = 5200, groupID = 1, refLootEntry = 2932 }; --Impaling Harpoon
+  { itemID = 5201, groupID = 1, refLootEntry = 2932 }; --Emberstone Staff
+  { itemID = 5202, groupID = 1, refLootEntry = 2932 }; --Corsair's Overshirt
+  { itemID = 5243, groupID = 1, refLootEntry = 2932 }; --Firebelcher
+  { itemID = 5254, groupID = 1, refLootEntry = 2932 }; --Rugged Spaulders
+  { itemID = 5257, groupID = 1, refLootEntry = 2932 }; --Dark Hooded Cape
+  { itemID = 5266, groupID = 1, refLootEntry = 2932 }; --Eye of Adaegus
+  { itemID = 5267, groupID = 1, refLootEntry = 2932 }; --Scarlet Kris
+  { itemID = 5404, groupID = 1, refLootEntry = 2932 }; --Serpent's Shoulders
+  { itemID = 5423, groupID = 1, refLootEntry = 2932 }; --Boahn's Fang
+  { itemID = 5425, groupID = 1, refLootEntry = 2932 }; --Runescale Girdle
+  { itemID = 5426, groupID = 1, refLootEntry = 2932 }; --Serpent's Kiss
+  { itemID = 5443, groupID = 1, refLootEntry = 2932 }; --Gold-plated Buckler
+  { itemID = 5444, groupID = 1, refLootEntry = 2932 }; --Miner's Cape
+  { itemID = 5616, groupID = 1, refLootEntry = 2932 }; --Gutwrencher
+  { itemID = 5756, groupID = 1, refLootEntry = 2932 }; --Sliverblade
+  { itemID = 5819, groupID = 1, refLootEntry = 2932 }; --Sunblaze Coif
+  { itemID = 5943, groupID = 1, refLootEntry = 2932 }; --Rift Bracers
+  { itemID = 5970, groupID = 1, refLootEntry = 2932 }; --Serpent Gloves
+  { itemID = 6220, groupID = 1, refLootEntry = 2932 }; --Meteor Shard
+  { itemID = 6226, groupID = 1, refLootEntry = 2932 }; --Bloody Apron
+  { itemID = 6314, groupID = 1, refLootEntry = 2932 }; --Wolfmaster Cape
+  { itemID = 6318, groupID = 1, refLootEntry = 2932 }; --Odo's Ley Staff
+  { itemID = 6319, groupID = 1, refLootEntry = 2932 }; --Girdle of the Blindwatcher
+  { itemID = 6320, groupID = 1, refLootEntry = 2932 }; --Commander's Crest
+  { itemID = 6321, groupID = 1, refLootEntry = 2932 }; --Silverlaine's Family Seal
+  { itemID = 6323, groupID = 1, refLootEntry = 2932 }; --Baron's Scepter
+  { itemID = 6324, groupID = 1, refLootEntry = 2932 }; --Robes of Arugal
+  { itemID = 6327, groupID = 1, refLootEntry = 2932 }; --The Pacifier
+  { itemID = 6331, groupID = 1, refLootEntry = 2932 }; --Howling Blade
+  { itemID = 6332, groupID = 1, refLootEntry = 2932 }; --Black Pearl Ring
+  { itemID = 6340, groupID = 1, refLootEntry = 2932 }; --Fenrus' Hide
+  { itemID = 6341, groupID = 1, refLootEntry = 2932 }; --Eerie Stable Lantern
+  { itemID = 6392, groupID = 1, refLootEntry = 2932 }; --Belt of Arugal
+  { itemID = 6440, groupID = 1, refLootEntry = 2932 }; --Brainlash
+  { itemID = 6447, groupID = 1, refLootEntry = 2932 }; --Worn Turtle Shell Shield
+  { itemID = 6448, groupID = 1, refLootEntry = 2932 }; --Tail Spike
+  { itemID = 6449, groupID = 1, refLootEntry = 2932 }; --Glowing Lizardscale Cloak
+  { itemID = 6459, groupID = 1, refLootEntry = 2932 }; --Savage Trodders
+  { itemID = 6460, groupID = 1, refLootEntry = 2932 }; --Cobrahn's Grasp
+  { itemID = 6461, groupID = 1, refLootEntry = 2932 }; --Slime-encrusted Pads
+  { itemID = 6463, groupID = 1, refLootEntry = 2932 }; --Deep Fathom Ring
+  { itemID = 6465, groupID = 1, refLootEntry = 2932 }; --Robe of the Moccasin
+  { itemID = 6469, groupID = 1, refLootEntry = 2932 }; --Venomstrike
+  { itemID = 6472, groupID = 1, refLootEntry = 2932 }; --Stinging Viper
+  { itemID = 6473, groupID = 1, refLootEntry = 2932 }; --Armor of the Fang
+  { itemID = 6622, groupID = 1, refLootEntry = 2932 }; --Sword of Zeal
+  { itemID = 6627, groupID = 1, refLootEntry = 2932 }; --Mutant Scale Breastplate
+  { itemID = 6629, groupID = 1, refLootEntry = 2932 }; --Sporid Cape
+  { itemID = 6630, groupID = 1, refLootEntry = 2932 }; --Seedcloud Buckler
+  { itemID = 6631, groupID = 1, refLootEntry = 2932 }; --Living Root
+  { itemID = 6632, groupID = 1, refLootEntry = 2932 }; --Feyscale Cloak
+  { itemID = 6633, groupID = 1, refLootEntry = 2932 }; --Butcher's Slicer
+  { itemID = 6641, groupID = 1, refLootEntry = 2932 }; --Haunting Blade
+  { itemID = 6642, groupID = 1, refLootEntry = 2932 }; --Phantom Armor
+  { itemID = 6660, groupID = 1, refLootEntry = 2932 }; --Julie's Dagger
+  { itemID = 6679, groupID = 1, refLootEntry = 2932 }; --Armor Piercer
+  { itemID = 6681, groupID = 1, refLootEntry = 2932 }; --Thornspike
+  { itemID = 6682, groupID = 1, refLootEntry = 2932 }; --Death Speaker Robes
+  { itemID = 6685, groupID = 1, refLootEntry = 2932 }; --Death Speaker Mantle
+  { itemID = 6686, groupID = 1, refLootEntry = 2932 }; --Tusken Helm
+  { itemID = 6687, groupID = 1, refLootEntry = 2932 }; --Corpsemaker
+  { itemID = 6688, groupID = 1, refLootEntry = 2932 }; --Whisperwind Headdress
+  { itemID = 6689, groupID = 1, refLootEntry = 2932 }; --Wind Spirit Staff
+  { itemID = 6690, groupID = 1, refLootEntry = 2932 }; --Ferine Leggings
+  { itemID = 6691, groupID = 1, refLootEntry = 2932 }; --Swinetusk Shank
+  { itemID = 6692, groupID = 1, refLootEntry = 2932 }; --Pronged Reaver
+  { itemID = 6693, groupID = 1, refLootEntry = 2932 }; --Agamaggan's Clutch
+  { itemID = 6694, groupID = 1, refLootEntry = 2932 }; --Heart of Agamaggan
+  { itemID = 6695, groupID = 1, refLootEntry = 2932 }; --Stygian Bone Amulet
+  { itemID = 6696, groupID = 1, refLootEntry = 2932 }; --Nightstalker Bow
+  { itemID = 6697, groupID = 1, refLootEntry = 2932 }; --Batwing Mantle
+  { itemID = 6901, groupID = 1, refLootEntry = 2932 }; --Glowing Thresher Cape
+  { itemID = 6902, groupID = 1, refLootEntry = 2932 }; --Bands of Serra'kis
+  { itemID = 6903, groupID = 1, refLootEntry = 2932 }; --Gaze Dreamer Pants
+  { itemID = 6904, groupID = 1, refLootEntry = 2932 }; --Bite of Serra'kis
+  { itemID = 6905, groupID = 1, refLootEntry = 2932 }; --Reef Axe
+  { itemID = 6906, groupID = 1, refLootEntry = 2932 }; --Algae Fists
+  { itemID = 6907, groupID = 1, refLootEntry = 2932 }; --Tortoise Armor
+  { itemID = 6908, groupID = 1, refLootEntry = 2932 }; --Ghamoo-ra's Bind
+  { itemID = 6909, groupID = 1, refLootEntry = 2932 }; --Strike of the Hydra
+  { itemID = 6910, groupID = 1, refLootEntry = 2932 }; --Leech Pants
+  { itemID = 6911, groupID = 1, refLootEntry = 2932 }; --Moss Cinch
+  { itemID = 7001, groupID = 1, refLootEntry = 2932 }; --Gravestone Scepter
+  { itemID = 7002, groupID = 1, refLootEntry = 2932 }; --Arctic Buckler
+  { itemID = 7230, groupID = 1, refLootEntry = 2932 }; --Smite's Mighty Hammer
+  { itemID = 7682, groupID = 1, refLootEntry = 2932 }; --Torturing Poker
+  { itemID = 7683, groupID = 1, refLootEntry = 2932 }; --Bloody Brass Knuckles
+  { itemID = 7684, groupID = 1, refLootEntry = 2932 }; --Bloodmage Mantle
+  { itemID = 7685, groupID = 1, refLootEntry = 2932 }; --Orb of the Forgotten Seer
+  { itemID = 7686, groupID = 1, refLootEntry = 2932 }; --Ironspine's Eye
+  { itemID = 7687, groupID = 1, refLootEntry = 2932 }; --Ironspine's Fist
+  { itemID = 7688, groupID = 1, refLootEntry = 2932 }; --Ironspine's Ribcage
+  { itemID = 7689, groupID = 1, refLootEntry = 2932 }; --Morbid Dawn
+  { itemID = 7690, groupID = 1, refLootEntry = 2932 }; --Ebon Vise
+  { itemID = 7691, groupID = 1, refLootEntry = 2932 }; --Embalmed Shroud
+  { itemID = 7708, groupID = 1, refLootEntry = 2932 }; --Necrotic Wand
+  { itemID = 7709, groupID = 1, refLootEntry = 2932 }; --Blighted Leggings
+  { itemID = 7710, groupID = 1, refLootEntry = 2932 }; --Loksey's Training Stick
+  { itemID = 7711, groupID = 1, refLootEntry = 2932 }; --Robe of Doan
+  { itemID = 7712, groupID = 1, refLootEntry = 2932 }; --Mantle of Doan
+  { itemID = 7713, groupID = 1, refLootEntry = 2932 }; --Illusionary Rod
+  { itemID = 7714, groupID = 1, refLootEntry = 2932 }; --Hypnotic Blade
+  { itemID = 7717, groupID = 1, refLootEntry = 2932 }; --Ravager
+  { itemID = 7718, groupID = 1, refLootEntry = 2932 }; --Herod's Shoulder
+  { itemID = 7719, groupID = 1, refLootEntry = 2932 }; --Raging Berserker's Helm
+  { itemID = 7720, groupID = 1, refLootEntry = 2932 }; --Whitemane's Chapeau
+  { itemID = 7721, groupID = 1, refLootEntry = 2932 }; --Hand of Righteousness
+  { itemID = 7722, groupID = 1, refLootEntry = 2932 }; --Triune Amulet
+  { itemID = 7723, groupID = 1, refLootEntry = 2932 }; --Mograine's Might
+  { itemID = 7724, groupID = 1, refLootEntry = 2932 }; --Gauntlets of Divinity
+  { itemID = 7726, groupID = 1, refLootEntry = 2932 }; --Aegis of the Scarlet Commander
+  { itemID = 7727, groupID = 1, refLootEntry = 2932 }; --Watchman Pauldrons
+  { itemID = 7728, groupID = 1, refLootEntry = 2932 }; --Beguiler Robes
+  { itemID = 7729, groupID = 1, refLootEntry = 2932 }; --Chesterfall Musket
+  { itemID = 7730, groupID = 1, refLootEntry = 2932 }; --Cobalt Crusher
+  { itemID = 7731, groupID = 1, refLootEntry = 2932 }; --Ghostshard Talisman
+  { itemID = 7734, groupID = 1, refLootEntry = 2932 }; --Six Demon Bag
+  { itemID = 7736, groupID = 1, refLootEntry = 2932 }; --Fight Club
+  { itemID = 7752, groupID = 1, refLootEntry = 2932 }; --Dreamslayer
+  { itemID = 7753, groupID = 1, refLootEntry = 2932 }; --Bloodspiller
+  { itemID = 7754, groupID = 1, refLootEntry = 2932 }; --Harbinger Boots
+  { itemID = 7755, groupID = 1, refLootEntry = 2932 }; --Flintrock Shoulders
+  { itemID = 7756, groupID = 1, refLootEntry = 2932 }; --Dog Training Gloves
+  { itemID = 7757, groupID = 1, refLootEntry = 2932 }; --Windweaver Staff
+  { itemID = 7758, groupID = 1, refLootEntry = 2932 }; --Ruthless Shiv
+  { itemID = 7759, groupID = 1, refLootEntry = 2932 }; --Archon Chestpiece
+  { itemID = 7760, groupID = 1, refLootEntry = 2932 }; --Warchief Kilt
+  { itemID = 7761, groupID = 1, refLootEntry = 2932 }; --Steelclaw Reaver
+  { itemID = 7786, groupID = 1, refLootEntry = 2932 }; --Headsplitter
+  { itemID = 7787, groupID = 1, refLootEntry = 2932 }; --Resplendent Guardian
+  { itemID = 8006, groupID = 1, refLootEntry = 2932 }; --The Ziggler
+  { itemID = 8190, groupID = 1, refLootEntry = 2932 }; --Hanzo Sword
+  { itemID = 8223, groupID = 1, refLootEntry = 2932 }; --Blade of the Basilisk
+  { itemID = 8225, groupID = 1, refLootEntry = 2932 }; --Tainted Pierce
+  { itemID = 8226, groupID = 1, refLootEntry = 2932 }; --The Butcher
+  { itemID = 9359, groupID = 1, refLootEntry = 2932 }; --Wirt's Third Leg
+  { itemID = 9375, groupID = 1, refLootEntry = 2932 }; --Expert Goldminer's Helmet
+  { itemID = 9378, groupID = 1, refLootEntry = 2932 }; --Shovelphlange's Mining Axe
+  { itemID = 9379, groupID = 1, refLootEntry = 2932 }; --Sang'thraze the Deflector
+  { itemID = 9381, groupID = 1, refLootEntry = 2932 }; --Earthen Rod
+  { itemID = 9383, groupID = 1, refLootEntry = 2932 }; --Obsidian Cleaver
+  { itemID = 9384, groupID = 1, refLootEntry = 2932 }; --Stonevault Shiv
+  { itemID = 9385, groupID = 1, refLootEntry = 2932 }; --Archaic Defender
+  { itemID = 9386, groupID = 1, refLootEntry = 2932 }; --Excavator's Brand
+  { itemID = 9387, groupID = 1, refLootEntry = 2932 }; --Revelosh's Boots
+  { itemID = 9388, groupID = 1, refLootEntry = 2932 }; --Revelosh's Armguards
+  { itemID = 9389, groupID = 1, refLootEntry = 2932 }; --Revelosh's Spaulders
+  { itemID = 9390, groupID = 1, refLootEntry = 2932 }; --Revelosh's Gloves
+  { itemID = 9391, groupID = 1, refLootEntry = 2932 }; --The Shoveler
+  { itemID = 9392, groupID = 1, refLootEntry = 2932 }; --Annealed Blade
+  { itemID = 9393, groupID = 1, refLootEntry = 2932 }; --Beacon of Hope
+  { itemID = 9394, groupID = 1, refLootEntry = 2932 }; --Horned Viking Helmet
+  { itemID = 9395, groupID = 1, refLootEntry = 2932 }; --Gloves of Old
+  { itemID = 9396, groupID = 1, refLootEntry = 2932 }; --Legguards of the Vault
+  { itemID = 9397, groupID = 1, refLootEntry = 2932 }; --Energy Cloak
+  { itemID = 9398, groupID = 1, refLootEntry = 2932 }; --Worn Running Boots
+  { itemID = 9400, groupID = 1, refLootEntry = 2932 }; --Baelog's Shortbow
+  { itemID = 9401, groupID = 1, refLootEntry = 2932 }; --Nordic Longshank
+  { itemID = 9402, groupID = 1, refLootEntry = 2932 }; --Earthborn Kilt
+  { itemID = 9403, groupID = 1, refLootEntry = 2932 }; --Battered Viking Shield
+  { itemID = 9404, groupID = 1, refLootEntry = 2932 }; --Olaf's All Purpose Shield
+  { itemID = 9405, groupID = 1, refLootEntry = 2932 }; --Girdle of Golem Strength
+  { itemID = 9406, groupID = 1, refLootEntry = 2932 }; --Spirewind Fetter
+  { itemID = 9407, groupID = 1, refLootEntry = 2932 }; --Stoneweaver Leggings
+  { itemID = 9408, groupID = 1, refLootEntry = 2932 }; --Ironshod Bludgeon
+  { itemID = 9409, groupID = 1, refLootEntry = 2932 }; --Ironaya's Bracers
+  { itemID = 9410, groupID = 1, refLootEntry = 2932 }; --Cragfists
+  { itemID = 9411, groupID = 1, refLootEntry = 2932 }; --Rockshard Pauldrons
+  { itemID = 9412, groupID = 1, refLootEntry = 2932 }; --Galgann's Fireblaster
+  { itemID = 9413, groupID = 1, refLootEntry = 2932 }; --The Rockpounder
+  { itemID = 9414, groupID = 1, refLootEntry = 2932 }; --Oilskin Leggings
+  { itemID = 9415, groupID = 1, refLootEntry = 2932 }; --Grimlok's Tribal Vestments
+  { itemID = 9416, groupID = 1, refLootEntry = 2932 }; --Grimlok's Charge
+  { itemID = 9418, groupID = 1, refLootEntry = 2932 }; --Stoneslayer
+  { itemID = 9419, groupID = 1, refLootEntry = 2932 }; --Galgann's Firehammer
+  { itemID = 9420, groupID = 1, refLootEntry = 2932 }; --Adventurer's Pith Helmet
+  { itemID = 9422, groupID = 1, refLootEntry = 2932 }; --Shadowforge Bushmaster
+  { itemID = 9423, groupID = 1, refLootEntry = 2932 }; --The Jackhammer
+  { itemID = 9424, groupID = 1, refLootEntry = 2932 }; --Ginn-su Sword
+  { itemID = 9425, groupID = 1, refLootEntry = 2932 }; --Pendulum of Doom
+  { itemID = 9426, groupID = 1, refLootEntry = 2932 }; --Monolithic Bow
+  { itemID = 9427, groupID = 1, refLootEntry = 2932 }; --Stonevault Bonebreaker
+  { itemID = 9428, groupID = 1, refLootEntry = 2932 }; --Unearthed Bands
+  { itemID = 9429, groupID = 1, refLootEntry = 2932 }; --Miner's Hat of the Deep
+  { itemID = 9430, groupID = 1, refLootEntry = 2932 }; --Spaulders of a Lost Age
+  { itemID = 9431, groupID = 1, refLootEntry = 2932 }; --Papal Fez
+  { itemID = 9432, groupID = 1, refLootEntry = 2932 }; --Skullplate Bracers
+  { itemID = 9433, groupID = 1, refLootEntry = 2932 }; --Forgotten Wraps
+  { itemID = 9434, groupID = 1, refLootEntry = 2932 }; --Elemental Raiment
+  { itemID = 9435, groupID = 1, refLootEntry = 2932 }; --Reticulated Bone Gauntlets
+  { itemID = 9445, groupID = 1, refLootEntry = 2932 }; --Grubbis Paws
+  { itemID = 9446, groupID = 1, refLootEntry = 2932 }; --Electrocutioner Leg
+  { itemID = 9447, groupID = 1, refLootEntry = 2932 }; --Electrocutioner Lagnut
+  { itemID = 9448, groupID = 1, refLootEntry = 2932 }; --Spidertank Oilrag
+  { itemID = 9449, groupID = 1, refLootEntry = 2932 }; --Manual Crowd Pummeler
+  { itemID = 9450, groupID = 1, refLootEntry = 2932 }; --Gnomebot Operating Boots
+  { itemID = 9452, groupID = 1, refLootEntry = 2932 }; --Hydrocane
+  { itemID = 9453, groupID = 1, refLootEntry = 2932 }; --Toxic Revenger
+  { itemID = 9454, groupID = 1, refLootEntry = 2932 }; --Acidic Walkers
+  { itemID = 9455, groupID = 1, refLootEntry = 2932 }; --Emissary Cuffs
+  { itemID = 9456, groupID = 1, refLootEntry = 2932 }; --Glass Shooter
+  { itemID = 9457, groupID = 1, refLootEntry = 2932 }; --Royal Diplomatic Scepter
+  { itemID = 9458, groupID = 1, refLootEntry = 2932 }; --Thermaplugg's Central Core
+  { itemID = 9459, groupID = 1, refLootEntry = 2932 }; --Thermaplugg's Left Arm
+  { itemID = 9461, groupID = 1, refLootEntry = 2932 }; --Charged Gear
+  { itemID = 9465, groupID = 1, refLootEntry = 2932 }; --Digmaster 5000
+  { itemID = 9467, groupID = 1, refLootEntry = 2932 }; --Gahz'rilla Fang
+  { itemID = 9469, groupID = 1, refLootEntry = 2932 }; --Gahz'rilla Scale Armor
+  { itemID = 9470, groupID = 1, refLootEntry = 2932 }; --Bad Mojo Mask
+  { itemID = 9473, groupID = 1, refLootEntry = 2932 }; --Jinxed Hoodoo Skin
+  { itemID = 9474, groupID = 1, refLootEntry = 2932 }; --Jinxed Hoodoo Kilt
+  { itemID = 9475, groupID = 1, refLootEntry = 2932 }; --Diabolic Skiver
+  { itemID = 9476, groupID = 1, refLootEntry = 2932 }; --Big Bad Pauldrons
+  { itemID = 9477, groupID = 1, refLootEntry = 2932 }; --The Chief's Enforcer
+  { itemID = 9478, groupID = 1, refLootEntry = 2932 }; --Ripsaw
+  { itemID = 9479, groupID = 1, refLootEntry = 2932 }; --Embrace of the Lycan
+  { itemID = 9480, groupID = 1, refLootEntry = 2932 }; --Eyegouger
+  { itemID = 9481, groupID = 1, refLootEntry = 2932 }; --The Minotaur
+  { itemID = 9482, groupID = 1, refLootEntry = 2932 }; --Witch Doctor's Cane
+  { itemID = 9483, groupID = 1, refLootEntry = 2932 }; --Flaming Incinerator
+  { itemID = 9484, groupID = 1, refLootEntry = 2932 }; --Spellshock Leggings
+  { itemID = 9485, groupID = 1, refLootEntry = 2932 }; --Vibroblade
+  { itemID = 9486, groupID = 1, refLootEntry = 2932 }; --Supercharger Battle Axe
+  { itemID = 9487, groupID = 1, refLootEntry = 2932 }; --Hi-tech Supergun
+  { itemID = 9488, groupID = 1, refLootEntry = 2932 }; --Oscillating Power Hammer
+  { itemID = 9490, groupID = 1, refLootEntry = 2932 }; --Gizmotron Megachopper
+  { itemID = 9491, groupID = 1, refLootEntry = 2932 }; --Hotshot Pilot's Gloves
+  { itemID = 9492, groupID = 1, refLootEntry = 2932 }; --Electromagnetic Gigaflux Reactivator
+  { itemID = 9508, groupID = 1, refLootEntry = 2932 }; --Mechbuilder's Overalls
+  { itemID = 9509, groupID = 1, refLootEntry = 2932 }; --Petrolspill Leggings
+  { itemID = 9510, groupID = 1, refLootEntry = 2932 }; --Caverndeep Trudgers
+  { itemID = 9511, groupID = 1, refLootEntry = 2932 }; --Bloodletter Scalpel
+  { itemID = 9512, groupID = 1, refLootEntry = 2932 }; --Blackmetal Cape
+  { itemID = 9639, groupID = 1, refLootEntry = 2932 }; --The Hand of Antu'sul
+  { itemID = 9640, groupID = 1, refLootEntry = 2932 }; --Vice Grips
+  { itemID = 9641, groupID = 1, refLootEntry = 2932 }; --Lifeblood Amulet
+  { itemID = 10328, groupID = 1, refLootEntry = 2932 }; --Scarlet Chestpiece
+  { itemID = 10330, groupID = 1, refLootEntry = 2932 }; --Scarlet Leggings
+  { itemID = 10332, groupID = 1, refLootEntry = 2932 }; --Scarlet Boots
+  { itemID = 10399, groupID = 1, refLootEntry = 2932 }; --Blackened Defias Armor
+  { itemID = 10403, groupID = 1, refLootEntry = 2932 }; --Blackened Defias Belt
+  { itemID = 10410, groupID = 1, refLootEntry = 2932 }; --Leggings of the Fang
+  { itemID = 10411, groupID = 1, refLootEntry = 2932 }; --Footpads of the Fang
+  { itemID = 10412, groupID = 1, refLootEntry = 2932 }; --Belt of the Fang
+  { itemID = 10413, groupID = 1, refLootEntry = 2932 }; --Gloves of the Fang
+  { itemID = 10567, groupID = 1, refLootEntry = 2932 }; --Quillshooter
+  { itemID = 10570, groupID = 1, refLootEntry = 2932 }; --Manslayer
+  { itemID = 10571, groupID = 1, refLootEntry = 2932 }; --Ebony Boneclub
+  { itemID = 10572, groupID = 1, refLootEntry = 2932 }; --Freezing Shard
+  { itemID = 10573, groupID = 1, refLootEntry = 2932 }; --Boneslasher
+  { itemID = 10574, groupID = 1, refLootEntry = 2932 }; --Corpseshroud
+  { itemID = 10578, groupID = 1, refLootEntry = 2932 }; --Thoughtcast Boots
+  { itemID = 10581, groupID = 1, refLootEntry = 2932 }; --Death's Head Vestment
+  { itemID = 10582, groupID = 1, refLootEntry = 2932 }; --Briar Tredders
+  { itemID = 10583, groupID = 1, refLootEntry = 2932 }; --Quillward Harness
+  { itemID = 10584, groupID = 1, refLootEntry = 2932 }; --Stormgale Fists
+  { itemID = 10623, groupID = 1, refLootEntry = 2932 }; --Winter's Bite
+  { itemID = 10624, groupID = 1, refLootEntry = 2932 }; --Stinging Bow
+  { itemID = 10625, groupID = 1, refLootEntry = 2932 }; --Stealthblade
+  { itemID = 10626, groupID = 1, refLootEntry = 2932 }; --Ragehammer
+  { itemID = 10627, groupID = 1, refLootEntry = 2932 }; --Bludgeon of the Grinning Dog
+  { itemID = 10628, groupID = 1, refLootEntry = 2932 }; --Deathblow
+  { itemID = 10629, groupID = 1, refLootEntry = 2932 }; --Mistwalker Boots
+  { itemID = 10630, groupID = 1, refLootEntry = 2932 }; --Soulcatcher Halo
+  { itemID = 10631, groupID = 1, refLootEntry = 2932 }; --Murkwater Gauntlets
+  { itemID = 10632, groupID = 1, refLootEntry = 2932 }; --Slimescale Bracers
+  { itemID = 10633, groupID = 1, refLootEntry = 2932 }; --Silvershell Leggings
+  { itemID = 10634, groupID = 1, refLootEntry = 2932 }; --Mindseye Circle
+  { itemID = 10758, groupID = 1, refLootEntry = 2932 }; --X'caliboar
+  { itemID = 10760, groupID = 1, refLootEntry = 2932 }; --Swine Fists
+  { itemID = 10761, groupID = 1, refLootEntry = 2932 }; --Coldrage Dagger
+  { itemID = 10762, groupID = 1, refLootEntry = 2932 }; --Robes of the Lich
+  { itemID = 10763, groupID = 1, refLootEntry = 2932 }; --Icemetal Barbute
+  { itemID = 10764, groupID = 1, refLootEntry = 2932 }; --Deathchill Armor
+  { itemID = 10765, groupID = 1, refLootEntry = 2932 }; --Bonefingers
+  { itemID = 10766, groupID = 1, refLootEntry = 2932 }; --Plaguerot Sprig
+  { itemID = 10767, groupID = 1, refLootEntry = 2932 }; --Savage Boar's Guard
+  { itemID = 10768, groupID = 1, refLootEntry = 2932 }; --Boar Champion's Belt
+  { itemID = 10769, groupID = 1, refLootEntry = 2932 }; --Glowing Eye of Mordresh
+  { itemID = 10770, groupID = 1, refLootEntry = 2932 }; --Mordresh's Lifeless Skull
+  { itemID = 10771, groupID = 1, refLootEntry = 2932 }; --Deathmage Sash
+  { itemID = 10772, groupID = 1, refLootEntry = 2932 }; --Glutton's Cleaver
+  { itemID = 10774, groupID = 1, refLootEntry = 2932 }; --Fleshhide Shoulders
+  { itemID = 10775, groupID = 1, refLootEntry = 2932 }; --Carapace of Tuten'kash
+  { itemID = 10776, groupID = 1, refLootEntry = 2932 }; --Silky Spider Cape
+  { itemID = 10777, groupID = 1, refLootEntry = 2932 }; --Arachnid Gloves
+  { itemID = 10795, groupID = 1, refLootEntry = 2932 }; --Drakeclaw Band
+  { itemID = 10796, groupID = 1, refLootEntry = 2932 }; --Drakestone
+  { itemID = 10797, groupID = 1, refLootEntry = 2932 }; --Firebreather
+  { itemID = 10798, groupID = 1, refLootEntry = 2932 }; --Atal'alarion's Tusk Ring
+  { itemID = 10799, groupID = 1, refLootEntry = 2932 }; --Headspike
+  { itemID = 10800, groupID = 1, refLootEntry = 2932 }; --Darkwater Bracers
+  { itemID = 10801, groupID = 1, refLootEntry = 2932 }; --Slitherscale Boots
+  { itemID = 10802, groupID = 1, refLootEntry = 2932 }; --Wingveil Cloak
+  { itemID = 10806, groupID = 1, refLootEntry = 2932 }; --Vestments of the Atal'ai Prophet
+  { itemID = 10807, groupID = 1, refLootEntry = 2932 }; --Kilt of the Atal'ai Prophet
+  { itemID = 10808, groupID = 1, refLootEntry = 2932 }; --Gloves of the Atal'ai Prophet
+  { itemID = 10828, groupID = 1, refLootEntry = 2932 }; --Dire Nail
+  { itemID = 10829, groupID = 1, refLootEntry = 2932 }; --The Dragon's Eye
+  { itemID = 10833, groupID = 1, refLootEntry = 2932 }; --Horns of Eranikus
+  { itemID = 10835, groupID = 1, refLootEntry = 2932 }; --Crest of Supremacy
+  { itemID = 10836, groupID = 1, refLootEntry = 2932 }; --Rod of Corrosion
+  { itemID = 10837, groupID = 1, refLootEntry = 2932 }; --Tooth of Eranikus
+  { itemID = 10838, groupID = 1, refLootEntry = 2932 }; --Might of Hakkar
+  { itemID = 10842, groupID = 1, refLootEntry = 2932 }; --Windscale Sarong
+  { itemID = 10843, groupID = 1, refLootEntry = 2932 }; --Featherskin Cape
+  { itemID = 10844, groupID = 1, refLootEntry = 2932 }; --Spire of Hakkar
+  { itemID = 10845, groupID = 1, refLootEntry = 2932 }; --Warrior's Embrace
+  { itemID = 10846, groupID = 1, refLootEntry = 2932 }; --Bloodshot Greaves
+  { itemID = 11086, groupID = 1, refLootEntry = 2932 }; --Jang'thraze the Protector
+  { itemID = 11118, groupID = 1, refLootEntry = 2932 }; --Archaedic Stone
+  { itemID = 11121, groupID = 1, refLootEntry = 2932 }; --Darkwater Talwar
+  { itemID = 11302, groupID = 1, refLootEntry = 2932 }; --Uther's Strength
+  { itemID = 11310, groupID = 1, refLootEntry = 2932 }; --Flameseer Mantle
+  { itemID = 11311, groupID = 1, refLootEntry = 2932 }; --Emberscale Cape
+  { itemID = 11603, groupID = 1, refLootEntry = 2932 }; --Vilerend Slicer
+  { itemID = 11623, groupID = 1, refLootEntry = 2932 }; --Spritecaster Cape
+  { itemID = 11624, groupID = 1, refLootEntry = 2932 }; --Kentic Amice
+  { itemID = 11625, groupID = 1, refLootEntry = 2932 }; --Enthralled Sphere
+  { itemID = 11626, groupID = 1, refLootEntry = 2932 }; --Blackveil Cape
+  { itemID = 11627, groupID = 1, refLootEntry = 2932 }; --Fleetfoot Greaves
+  { itemID = 11628, groupID = 1, refLootEntry = 2932 }; --Houndmaster's Bow
+  { itemID = 11629, groupID = 1, refLootEntry = 2932 }; --Houndmaster's Rifle
+  { itemID = 11631, groupID = 1, refLootEntry = 2932 }; --Stoneshell Guard
+  { itemID = 11632, groupID = 1, refLootEntry = 2932 }; --Earthslag Shoulders
+  { itemID = 11633, groupID = 1, refLootEntry = 2932 }; --Spiderfang Carapace
+  { itemID = 11634, groupID = 1, refLootEntry = 2932 }; --Silkweb Gloves
+  { itemID = 11635, groupID = 1, refLootEntry = 2932 }; --Hookfang Shanker
+  { itemID = 11662, groupID = 1, refLootEntry = 2932 }; --Ban'thok Sash
+  { itemID = 11665, groupID = 1, refLootEntry = 2932 }; --Ogreseer Fists
+  { itemID = 11675, groupID = 1, refLootEntry = 2932 }; --Shadefiend Boots
+  { itemID = 11677, groupID = 1, refLootEntry = 2932 }; --Graverot Cape
+  { itemID = 11678, groupID = 1, refLootEntry = 2932 }; --Carapace of Anub'shiah
+  { itemID = 11679, groupID = 1, refLootEntry = 2932 }; --Rubicund Armguards
+  { itemID = 11685, groupID = 1, refLootEntry = 2932 }; --Splinthide Shoulders
+  { itemID = 11686, groupID = 1, refLootEntry = 2932 }; --Girdle of Beastial Fury
+  { itemID = 11702, groupID = 1, refLootEntry = 2932 }; --Grizzle's Skinner
+  { itemID = 11703, groupID = 1, refLootEntry = 2932 }; --Stonewall Girdle
+  { itemID = 11722, groupID = 1, refLootEntry = 2932 }; --Dregmetal Spaulders
+  { itemID = 11728, groupID = 1, refLootEntry = 2932 }; --Savage Gladiator Leggings
+  { itemID = 11729, groupID = 1, refLootEntry = 2932 }; --Savage Gladiator Helm
+  { itemID = 11730, groupID = 1, refLootEntry = 2932 }; --Savage Gladiator Grips
+  { itemID = 11731, groupID = 1, refLootEntry = 2932 }; --Savage Gladiator Greaves
+  { itemID = 11735, groupID = 1, refLootEntry = 2932 }; --Ragefury Eyepatch
+  { itemID = 11744, groupID = 1, refLootEntry = 2932 }; --Bloodfist
+  { itemID = 11745, groupID = 1, refLootEntry = 2932 }; --Fists of Phalanx
+  { itemID = 11746, groupID = 1, refLootEntry = 2932 }; --Golem Skull Helm
+  { itemID = 11747, groupID = 1, refLootEntry = 2932 }; --Flamestrider Robes
+  { itemID = 11748, groupID = 1, refLootEntry = 2932 }; --Pyric Caduceus
+  { itemID = 11749, groupID = 1, refLootEntry = 2932 }; --Searingscale Leggings
+  { itemID = 11750, groupID = 1, refLootEntry = 2932 }; --Kindling Stave
+  { itemID = 11755, groupID = 1, refLootEntry = 2932 }; --Verek's Collar
+  { itemID = 11764, groupID = 1, refLootEntry = 2932 }; --Cinderhide Armsplints
+  { itemID = 11765, groupID = 1, refLootEntry = 2932 }; --Pyremail Wristguards
+  { itemID = 11766, groupID = 1, refLootEntry = 2932 }; --Flameweave Cuffs
+  { itemID = 11767, groupID = 1, refLootEntry = 2932 }; --Emberplate Armguards
+  { itemID = 11768, groupID = 1, refLootEntry = 2932 }; --Incendic Bracers
+  { itemID = 11782, groupID = 1, refLootEntry = 2932 }; --Boreal Mantle
+  { itemID = 11783, groupID = 1, refLootEntry = 2932 }; --Chillsteel Girdle
+  { itemID = 11784, groupID = 1, refLootEntry = 2932 }; --Arbiter's Blade
+  { itemID = 11785, groupID = 1, refLootEntry = 2932 }; --Rock Golem Bulwark
+  { itemID = 11786, groupID = 1, refLootEntry = 2932 }; --Stone of the Earth
+  { itemID = 11787, groupID = 1, refLootEntry = 2932 }; --Shalehusk Boots
+  { itemID = 11802, groupID = 1, refLootEntry = 2932 }; --Lavacrest Leggings
+  { itemID = 11803, groupID = 1, refLootEntry = 2932 }; --Force of Magma
+  { itemID = 11805, groupID = 1, refLootEntry = 2932 }; --Rubidium Hammer
+  { itemID = 11807, groupID = 1, refLootEntry = 2932 }; --Sash of the Burning Heart
+  { itemID = 11809, groupID = 1, refLootEntry = 2932 }; --Flame Wrath
+  { itemID = 11811, groupID = 1, refLootEntry = 2932 }; --Smoking Heart of the Mountain
+  { itemID = 11812, groupID = 1, refLootEntry = 2932 }; --Cape of the Fire Salamander
+  { itemID = 11814, groupID = 1, refLootEntry = 2932 }; --Molten Fists
+  { itemID = 11815, groupID = 1, refLootEntry = 2932 }; --Hand of Justice
+  { itemID = 11816, groupID = 1, refLootEntry = 2932 }; --Angerforge's Battle Axe
+  { itemID = 11817, groupID = 1, refLootEntry = 2932 }; --Lord General's Sword
+  { itemID = 11820, groupID = 1, refLootEntry = 2932 }; --Royal Decorated Armor
+  { itemID = 11821, groupID = 1, refLootEntry = 2932 }; --Warstrife Leggings
+  { itemID = 11824, groupID = 1, refLootEntry = 2932 }; --Cyclopean Band
+  { itemID = 11832, groupID = 1, refLootEntry = 2932 }; --Burst of Knowledge
+  { itemID = 11839, groupID = 1, refLootEntry = 2932 }; --Chief Architect's Monocle
+  { itemID = 11841, groupID = 1, refLootEntry = 2932 }; --Senior Designer's Pantaloons
+  { itemID = 11842, groupID = 1, refLootEntry = 2932 }; --Lead Surveyor's Mantle
+  { itemID = 11920, groupID = 1, refLootEntry = 2932 }; --Wraith Scythe
+  { itemID = 11921, groupID = 1, refLootEntry = 2932 }; --Impervious Giant
+  { itemID = 11922, groupID = 1, refLootEntry = 2932 }; --Blood-etched Blade
+  { itemID = 11923, groupID = 1, refLootEntry = 2932 }; --The Hammer of Grace
+  { itemID = 11925, groupID = 1, refLootEntry = 2932 }; --Ghostshroud
+  { itemID = 11926, groupID = 1, refLootEntry = 2932 }; --Deathdealer Breastplate
+  { itemID = 11927, groupID = 1, refLootEntry = 2932 }; --Legplates of the Eternal Guardian
+  { itemID = 11929, groupID = 1, refLootEntry = 2932 }; --Haunting Spectre Leggings
+  { itemID = 11935, groupID = 1, refLootEntry = 2932 }; --Magmus Stone
+  { itemID = 11945, groupID = 1, refLootEntry = 2932 }; --Dark Iron Ring
+  { itemID = 11946, groupID = 1, refLootEntry = 2932 }; --Fire Opal Necklace
+  { itemID = 12243, groupID = 1, refLootEntry = 2932 }; --Smoldering Claw
+  { itemID = 12463, groupID = 1, refLootEntry = 2932 }; --Drakefang Butcher
+  { itemID = 12464, groupID = 1, refLootEntry = 2932 }; --Bloodfire Talons
+  { itemID = 12465, groupID = 1, refLootEntry = 2932 }; --Nightfall Drape
+  { itemID = 12466, groupID = 1, refLootEntry = 2932 }; --Dawnspire Cord
+  { itemID = 12470, groupID = 1, refLootEntry = 2932 }; --Sandstalker Ankleguards
+  { itemID = 12471, groupID = 1, refLootEntry = 2932 }; --Desertwalker Cane
+  { itemID = 12527, groupID = 1, refLootEntry = 2932 }; --Ribsplitter
+  { itemID = 12528, groupID = 1, refLootEntry = 2932 }; --The Judge's Gavel
+  { itemID = 12531, groupID = 1, refLootEntry = 2932 }; --Searing Needle
+  { itemID = 12532, groupID = 1, refLootEntry = 2932 }; --Spire of the Stoneshaper
+  { itemID = 12535, groupID = 1, refLootEntry = 2932 }; --Doomforged Straightedge
+  { itemID = 12542, groupID = 1, refLootEntry = 2932 }; --Funeral Pyre Vestment
+  { itemID = 12546, groupID = 1, refLootEntry = 2932 }; --Aristocratic Cuffs
+  { itemID = 12547, groupID = 1, refLootEntry = 2932 }; --Mar Alom's Grip
+  { itemID = 12549, groupID = 1, refLootEntry = 2932 }; --Braincage
+  { itemID = 12550, groupID = 1, refLootEntry = 2932 }; --Runed Golem Shackles
+  { itemID = 12551, groupID = 1, refLootEntry = 2932 }; --Stoneshield Cloak
+  { itemID = 12552, groupID = 1, refLootEntry = 2932 }; --Blisterbane Wrap
+  { itemID = 12555, groupID = 1, refLootEntry = 2932 }; --Battlechaser's Greaves
+  { itemID = 12605, groupID = 1, refLootEntry = 2932 }; --Serpentine Skuller
+  { itemID = 12608, groupID = 1, refLootEntry = 2932 }; --Butcher's Apron
+  { itemID = 12791, groupID = 1, refLootEntry = 2932 }; --Barman Shanker
+  { itemID = 12793, groupID = 1, refLootEntry = 2932 }; --Mixologist's Tunic
+  { itemID = 12974, groupID = 1, refLootEntry = 2932 }; --The Black Knight
+  { itemID = 12975, groupID = 1, refLootEntry = 2932 }; --Prospector Axe
+  { itemID = 12976, groupID = 1, refLootEntry = 2932 }; --Ironpatch Blade
+  { itemID = 12977, groupID = 1, refLootEntry = 2932 }; --Magefist Gloves
+  { itemID = 12978, groupID = 1, refLootEntry = 2932 }; --Stormbringer Belt
+  { itemID = 12979, groupID = 1, refLootEntry = 2932 }; --Firebane Cloak
+  { itemID = 12982, groupID = 1, refLootEntry = 2932 }; --Silver-linked Footguards
+  { itemID = 12983, groupID = 1, refLootEntry = 2932 }; --Rakzur Club
+  { itemID = 12984, groupID = 1, refLootEntry = 2932 }; --Skycaller
+  { itemID = 12985, groupID = 1, refLootEntry = 2932 }; --Ring of Defense
+  { itemID = 12987, groupID = 1, refLootEntry = 2932 }; --Darkweave Breeches
+  { itemID = 12988, groupID = 1, refLootEntry = 2932 }; --Starsight Tunic
+  { itemID = 12989, groupID = 1, refLootEntry = 2932 }; --Gargoyle's Bite
+  { itemID = 12990, groupID = 1, refLootEntry = 2932 }; --Razor's Edge
+  { itemID = 12992, groupID = 1, refLootEntry = 2932 }; --Searing Blade
+  { itemID = 12994, groupID = 1, refLootEntry = 2932 }; --Thorbia's Gauntlets
+  { itemID = 12996, groupID = 1, refLootEntry = 2932 }; --Band of Purification
+  { itemID = 12997, groupID = 1, refLootEntry = 2932 }; --Redbeard Crest
+  { itemID = 12998, groupID = 1, refLootEntry = 2932 }; --Magician's Mantle
+  { itemID = 12999, groupID = 1, refLootEntry = 2932 }; --Drakewing Bands
+  { itemID = 13000, groupID = 1, refLootEntry = 2932 }; --Staff of Hale Magefire
+  { itemID = 13001, groupID = 1, refLootEntry = 2932 }; --Maiden's Circle
+  { itemID = 13002, groupID = 1, refLootEntry = 2932 }; --Lady Alizabeth's Pendant
+  { itemID = 13003, groupID = 1, refLootEntry = 2932 }; --Lord Alexander's Battle Axe
+  { itemID = 13004, groupID = 1, refLootEntry = 2932 }; --Torch of Austen
+  { itemID = 13005, groupID = 1, refLootEntry = 2932 }; --Amy's Blanket
+  { itemID = 13006, groupID = 1, refLootEntry = 2932 }; --Mass of McGowan
+  { itemID = 13007, groupID = 1, refLootEntry = 2932 }; --Mageflame Cloak
+  { itemID = 13008, groupID = 1, refLootEntry = 2932 }; --Dalewind Trousers
+  { itemID = 13009, groupID = 1, refLootEntry = 2932 }; --Cow King's Hide
+  { itemID = 13010, groupID = 1, refLootEntry = 2932 }; --Dreamsinger Legguards
+  { itemID = 13011, groupID = 1, refLootEntry = 2932 }; --Silver-lined Belt
+  { itemID = 13012, groupID = 1, refLootEntry = 2932 }; --Yorgen Bracers
+  { itemID = 13013, groupID = 1, refLootEntry = 2932 }; --Elder Wizard's Mantle
+  { itemID = 13014, groupID = 1, refLootEntry = 2932 }; --Axe of Rin'ji
+  { itemID = 13015, groupID = 1, refLootEntry = 2932 }; --Serathil
+  { itemID = 13016, groupID = 1, refLootEntry = 2932 }; --Killmaim
+  { itemID = 13017, groupID = 1, refLootEntry = 2932 }; --Hellslayer Battle Axe
+  { itemID = 13018, groupID = 1, refLootEntry = 2932 }; --Executioner's Cleaver
+  { itemID = 13019, groupID = 1, refLootEntry = 2932 }; --Harpyclaw Short Bow
+  { itemID = 13020, groupID = 1, refLootEntry = 2932 }; --Skystriker Bow
+  { itemID = 13021, groupID = 1, refLootEntry = 2932 }; --Needle Threader
+  { itemID = 13022, groupID = 1, refLootEntry = 2932 }; --Gryphonwing Long Bow
+  { itemID = 13023, groupID = 1, refLootEntry = 2932 }; --Eaglehorn Long Bow
+  { itemID = 13024, groupID = 1, refLootEntry = 2932 }; --Beazel's Basher
+  { itemID = 13025, groupID = 1, refLootEntry = 2932 }; --Deadwood Sledge
+  { itemID = 13026, groupID = 1, refLootEntry = 2932 }; --Heaven's Light
+  { itemID = 13027, groupID = 1, refLootEntry = 2932 }; --Bonesnapper
+  { itemID = 13028, groupID = 1, refLootEntry = 2932 }; --Bludstone Hammer
+  { itemID = 13029, groupID = 1, refLootEntry = 2932 }; --Umbral Crystal
+  { itemID = 13030, groupID = 1, refLootEntry = 2932 }; --Basilisk Bone
+  { itemID = 13031, groupID = 1, refLootEntry = 2932 }; --Orb of Mistmantle
+  { itemID = 13032, groupID = 1, refLootEntry = 2932 }; --Sword of Corruption
+  { itemID = 13033, groupID = 1, refLootEntry = 2932 }; --Zealot Blade
+  { itemID = 13034, groupID = 1, refLootEntry = 2932 }; --Speedsteel Rapier
+  { itemID = 13035, groupID = 1, refLootEntry = 2932 }; --Serpent Slicer
+  { itemID = 13036, groupID = 1, refLootEntry = 2932 }; --Assassination Blade
+  { itemID = 13037, groupID = 1, refLootEntry = 2932 }; --Crystalpine Stinger
+  { itemID = 13038, groupID = 1, refLootEntry = 2932 }; --Swiftwind
+  { itemID = 13039, groupID = 1, refLootEntry = 2932 }; --Skull Splitting Crossbow
+  { itemID = 13040, groupID = 1, refLootEntry = 2932 }; --Heartseeking Crossbow
+  { itemID = 13041, groupID = 1, refLootEntry = 2932 }; --Guardian Blade
+  { itemID = 13042, groupID = 1, refLootEntry = 2932 }; --Sword of the Magistrate
+  { itemID = 13043, groupID = 1, refLootEntry = 2932 }; --Blade of the Titans
+  { itemID = 13044, groupID = 1, refLootEntry = 2932 }; --Demonslayer
+  { itemID = 13045, groupID = 1, refLootEntry = 2932 }; --Viscous Hammer
+  { itemID = 13046, groupID = 1, refLootEntry = 2932 }; --Blanchard's Stout
+  { itemID = 13047, groupID = 1, refLootEntry = 2932 }; --Twig of the World Tree
+  { itemID = 13048, groupID = 1, refLootEntry = 2932 }; --Looming Gavel
+  { itemID = 13049, groupID = 1, refLootEntry = 2932 }; --Deanship Claymore
+  { itemID = 13051, groupID = 1, refLootEntry = 2932 }; --Witchfury
+  { itemID = 13052, groupID = 1, refLootEntry = 2932 }; --Warmonger
+  { itemID = 13053, groupID = 1, refLootEntry = 2932 }; --Doombringer
+  { itemID = 13054, groupID = 1, refLootEntry = 2932 }; --Grim Reaper
+  { itemID = 13055, groupID = 1, refLootEntry = 2932 }; --Bonechewer
+  { itemID = 13056, groupID = 1, refLootEntry = 2932 }; --Frenzied Striker
+  { itemID = 13057, groupID = 1, refLootEntry = 2932 }; --Bloodpike
+  { itemID = 13058, groupID = 1, refLootEntry = 2932 }; --Khoo's Point
+  { itemID = 13059, groupID = 1, refLootEntry = 2932 }; --Stoneraven
+  { itemID = 13060, groupID = 1, refLootEntry = 2932 }; --The Needler
+  { itemID = 13062, groupID = 1, refLootEntry = 2932 }; --Thunderwood
+  { itemID = 13063, groupID = 1, refLootEntry = 2932 }; --Starfaller
+  { itemID = 13064, groupID = 1, refLootEntry = 2932 }; --Jaina's Firestarter
+  { itemID = 13065, groupID = 1, refLootEntry = 2932 }; --Wand of Allistarj
+  { itemID = 13066, groupID = 1, refLootEntry = 2932 }; --Wyrmslayer Spaulders
+  { itemID = 13067, groupID = 1, refLootEntry = 2932 }; --Hydralick Armor
+  { itemID = 13068, groupID = 1, refLootEntry = 2932 }; --Obsidian Greaves
+  { itemID = 13070, groupID = 1, refLootEntry = 2932 }; --Sapphiron's Scale Boots
+  { itemID = 13071, groupID = 1, refLootEntry = 2932 }; --Plated Fist of Hakoo
+  { itemID = 13072, groupID = 1, refLootEntry = 2932 }; --Stonegrip Gauntlets
+  { itemID = 13073, groupID = 1, refLootEntry = 2932 }; --Mugthol's Helm
+  { itemID = 13074, groupID = 1, refLootEntry = 2932 }; --Golem Shard Leggings
+  { itemID = 13075, groupID = 1, refLootEntry = 2932 }; --Direwing Legguards
+  { itemID = 13076, groupID = 1, refLootEntry = 2932 }; --Giantslayer Bracers
+  { itemID = 13077, groupID = 1, refLootEntry = 2932 }; --Girdle of Uther
+  { itemID = 13079, groupID = 1, refLootEntry = 2932 }; --Shield of Thorsen
+  { itemID = 13081, groupID = 1, refLootEntry = 2932 }; --Skullance Shield
+  { itemID = 13082, groupID = 1, refLootEntry = 2932 }; --Mountainside Buckler
+  { itemID = 13083, groupID = 1, refLootEntry = 2932 }; --Garrett Family Crest
+  { itemID = 13084, groupID = 1, refLootEntry = 2932 }; --Kaleidoscope Chain
+  { itemID = 13085, groupID = 1, refLootEntry = 2932 }; --Horizon Choker
+  { itemID = 13087, groupID = 1, refLootEntry = 2932 }; --River Pride Choker
+  { itemID = 13088, groupID = 1, refLootEntry = 2932 }; --Gazlowe's Charm
+  { itemID = 13089, groupID = 1, refLootEntry = 2932 }; --Skibi's Pendant
+  { itemID = 13091, groupID = 1, refLootEntry = 2932 }; --Medallion of Grand Marshal Morris
+  { itemID = 13093, groupID = 1, refLootEntry = 2932 }; --Blush Ember Ring
+  { itemID = 13094, groupID = 1, refLootEntry = 2932 }; --The Queen's Jewel
+  { itemID = 13095, groupID = 1, refLootEntry = 2932 }; --Assault Band
+  { itemID = 13096, groupID = 1, refLootEntry = 2932 }; --Band of the Hierophant
+  { itemID = 13097, groupID = 1, refLootEntry = 2932 }; --Thunderbrow Ring
+  { itemID = 13099, groupID = 1, refLootEntry = 2932 }; --Moccasins of the White Hare
+  { itemID = 13100, groupID = 1, refLootEntry = 2932 }; --Furen's Boots
+  { itemID = 13101, groupID = 1, refLootEntry = 2932 }; --Wolfrunner Shoes
+  { itemID = 13102, groupID = 1, refLootEntry = 2932 }; --Cassandra's Grace
+  { itemID = 13103, groupID = 1, refLootEntry = 2932 }; --Pads of the Venom Spider
+  { itemID = 13105, groupID = 1, refLootEntry = 2932 }; --Sutarn's Ring
+  { itemID = 13106, groupID = 1, refLootEntry = 2932 }; --Glowing Magical Bracelets
+  { itemID = 13107, groupID = 1, refLootEntry = 2932 }; --Magiskull Cuffs
+  { itemID = 13108, groupID = 1, refLootEntry = 2932 }; --Tigerstrike Mantle
+  { itemID = 13109, groupID = 1, refLootEntry = 2932 }; --Blackflame Cape
+  { itemID = 13110, groupID = 1, refLootEntry = 2932 }; --Wolffear Harness
+  { itemID = 13111, groupID = 1, refLootEntry = 2932 }; --Sandals of the Insurgent
+  { itemID = 13112, groupID = 1, refLootEntry = 2932 }; --Winged Helm
+  { itemID = 13113, groupID = 1, refLootEntry = 2932 }; --Feathermoon Headdress
+  { itemID = 13114, groupID = 1, refLootEntry = 2932 }; --Troll's Bane Leggings
+  { itemID = 13115, groupID = 1, refLootEntry = 2932 }; --Sheepshear Mantle
+  { itemID = 13116, groupID = 1, refLootEntry = 2932 }; --Spaulders of the Unseen
+  { itemID = 13117, groupID = 1, refLootEntry = 2932 }; --Ogron's Sash
+  { itemID = 13118, groupID = 1, refLootEntry = 2932 }; --Serpentine Sash
+  { itemID = 13119, groupID = 1, refLootEntry = 2932 }; --Enchanted Kodo Bracers
+  { itemID = 13120, groupID = 1, refLootEntry = 2932 }; --Deepfury Bracers
+  { itemID = 13121, groupID = 1, refLootEntry = 2932 }; --Wing of the Whelpling
+  { itemID = 13122, groupID = 1, refLootEntry = 2932 }; --Dark Phantom Cape
+  { itemID = 13123, groupID = 1, refLootEntry = 2932 }; --Dreamwalker Armor
+  { itemID = 13124, groupID = 1, refLootEntry = 2932 }; --Ravasaur Scale Boots
+  { itemID = 13125, groupID = 1, refLootEntry = 2932 }; --Elven Chain Boots
+  { itemID = 13126, groupID = 1, refLootEntry = 2932 }; --Battlecaller Gauntlets
+  { itemID = 13127, groupID = 1, refLootEntry = 2932 }; --Frostreaver Crown
+  { itemID = 13128, groupID = 1, refLootEntry = 2932 }; --High Bergg Helm
+  { itemID = 13129, groupID = 1, refLootEntry = 2932 }; --Firemane Leggings
+  { itemID = 13130, groupID = 1, refLootEntry = 2932 }; --Windrunner Legguards
+  { itemID = 13131, groupID = 1, refLootEntry = 2932 }; --Sparkleshell Mantle
+  { itemID = 13132, groupID = 1, refLootEntry = 2932 }; --Skeletal Shoulders
+  { itemID = 13133, groupID = 1, refLootEntry = 2932 }; --Drakesfire Epaulets
+  { itemID = 13134, groupID = 1, refLootEntry = 2932 }; --Belt of the Gladiator
+  { itemID = 13135, groupID = 1, refLootEntry = 2932 }; --Lordly Armguards
+  { itemID = 13136, groupID = 1, refLootEntry = 2932 }; --Lil Timmy's Peashooter
+  { itemID = 13137, groupID = 1, refLootEntry = 2932 }; --Ironweaver
+  { itemID = 13138, groupID = 1, refLootEntry = 2932 }; --The Silencer
+  { itemID = 13139, groupID = 1, refLootEntry = 2932 }; --Guttbuster
+  { itemID = 13144, groupID = 1, refLootEntry = 2932 }; --Serenity Belt
+  { itemID = 13145, groupID = 1, refLootEntry = 2932 }; --Enormous Ogre Belt
+  { itemID = 13146, groupID = 1, refLootEntry = 2932 }; --Shell Launcher Shotgun
+  { itemID = 13181, groupID = 1, refLootEntry = 2932 }; --Demonskin Gloves
+  { itemID = 13182, groupID = 1, refLootEntry = 2932 }; --Phase Blade
+  { itemID = 13199, groupID = 1, refLootEntry = 2932 }; --Crushridge Bindings
+  { itemID = 13245, groupID = 1, refLootEntry = 2932 }; --Kresh's Back
+  { itemID = 13248, groupID = 1, refLootEntry = 2932 }; --Burstshot Harquebus
+  { itemID = 13254, groupID = 1, refLootEntry = 2932 }; --Astral Guard
+  { itemID = 13284, groupID = 1, refLootEntry = 2932 }; --Swiftdart Battleboots
+  { itemID = 13285, groupID = 1, refLootEntry = 2932 }; --The Blackrock Slicer
+  { itemID = 13286, groupID = 1, refLootEntry = 2932 }; --Rivenspike
+  { itemID = 13378, groupID = 1, refLootEntry = 2932 }; --Songbird Blouse
+  { itemID = 13379, groupID = 1, refLootEntry = 2932 }; --Piccolo of the Flaming Fire
+  { itemID = 13383, groupID = 1, refLootEntry = 2932 }; --Woollies of the Prancing Minstrel
+  { itemID = 13384, groupID = 1, refLootEntry = 2932 }; --Rainbow Girdle
+  { itemID = 13396, groupID = 1, refLootEntry = 2932 }; --Skul's Ghastly Touch
+  { itemID = 13404, groupID = 1, refLootEntry = 2932 }; --Mask of the Unforgiven
+  { itemID = 13405, groupID = 1, refLootEntry = 2932 }; --Wailing Nightbane Pauldrons
+  { itemID = 13408, groupID = 1, refLootEntry = 2932 }; --Soul Breaker
+  { itemID = 13409, groupID = 1, refLootEntry = 2932 }; --Tearfall Bracers
+  { itemID = 14145, groupID = 1, refLootEntry = 2932 }; --Cursed Felblade
+  { itemID = 14147, groupID = 1, refLootEntry = 2932 }; --Cavedweller Bracers
+  { itemID = 14148, groupID = 1, refLootEntry = 2932 }; --Crystalline Cuffs
+  { itemID = 14149, groupID = 1, refLootEntry = 2932 }; --Subterranean Cape
+  { itemID = 14150, groupID = 1, refLootEntry = 2932 }; --Robe of Evocation
+  { itemID = 14151, groupID = 1, refLootEntry = 2932 }; --Chanting Blade
+  { itemID = 16039, groupID = 1, refLootEntry = 2932 }; --Ta'Kierthan Songblade
+  { itemID = 16671, groupID = 1, refLootEntry = 2932 }; --Bindings of Elements
+  { itemID = 16673, groupID = 1, refLootEntry = 2932 }; --Cord of Elements
+  { itemID = 16680, groupID = 1, refLootEntry = 2932 }; --Beaststalker's Belt
+  { itemID = 16681, groupID = 1, refLootEntry = 2932 }; --Beaststalker's Bindings
+  { itemID = 16683, groupID = 1, refLootEntry = 2932 }; --Magister's Bindings
+  { itemID = 16685, groupID = 1, refLootEntry = 2932 }; --Magister's Belt
+  { itemID = 16696, groupID = 1, refLootEntry = 2932 }; --Devout Belt
+  { itemID = 16697, groupID = 1, refLootEntry = 2932 }; --Devout Bracers
+  { itemID = 16702, groupID = 1, refLootEntry = 2932 }; --Dreadmist Belt
+  { itemID = 16703, groupID = 1, refLootEntry = 2932 }; --Dreadmist Bracers
+  { itemID = 16710, groupID = 1, refLootEntry = 2932 }; --Shadowcraft Bracers
+  { itemID = 16713, groupID = 1, refLootEntry = 2932 }; --Shadowcraft Belt
+  { itemID = 16714, groupID = 1, refLootEntry = 2932 }; --Wildheart Bracers
+  { itemID = 16716, groupID = 1, refLootEntry = 2932 }; --Wildheart Belt
+  { itemID = 16722, groupID = 1, refLootEntry = 2932 }; --Lightforge Bracers
+  { itemID = 16723, groupID = 1, refLootEntry = 2932 }; --Lightforge Belt
+  { itemID = 16735, groupID = 1, refLootEntry = 2932 }; --Bracers of Valor
+  { itemID = 16736, groupID = 1, refLootEntry = 2932 }; --Belt of Valor
+  { itemID = 17050, groupID = 1, refLootEntry = 2932 }; --Chan's Imperial Robes
+  { itemID = 17054, groupID = 1, refLootEntry = 2932 }; --Joonho's Mercy
+  { itemID = 17055, groupID = 1, refLootEntry = 2932 }; --Changuk Smasher
+  { itemID = 17061, groupID = 1, refLootEntry = 2932 }; --Juno's Shadow
+  { itemID = 17707, groupID = 1, refLootEntry = 2932 }; --Gemshard Heart
+  { itemID = 17710, groupID = 1, refLootEntry = 2932 }; --Charstone Dirk
+  { itemID = 17711, groupID = 1, refLootEntry = 2932 }; --Elemental Rockridge Leggings
+  { itemID = 17713, groupID = 1, refLootEntry = 2932 }; --Blackstone Ring
+  { itemID = 17714, groupID = 1, refLootEntry = 2932 }; --Bracers of the Stone Princess
+  { itemID = 17715, groupID = 1, refLootEntry = 2932 }; --Eye of Theradras
+  { itemID = 17717, groupID = 1, refLootEntry = 2932 }; --Megashot Rifle
+  { itemID = 17718, groupID = 1, refLootEntry = 2932 }; --Gizlock's Hypertech Buckler
+  { itemID = 17719, groupID = 1, refLootEntry = 2932 }; --Inventor's Focal Sword
+  { itemID = 17728, groupID = 1, refLootEntry = 2932 }; --Albino Crocscale Boots
+  { itemID = 17730, groupID = 1, refLootEntry = 2932 }; --Gatorbite Axe
+  { itemID = 17732, groupID = 1, refLootEntry = 2932 }; --Rotgrip Mantle
+  { itemID = 17734, groupID = 1, refLootEntry = 2932 }; --Helm of the Mountain
+  { itemID = 17736, groupID = 1, refLootEntry = 2932 }; --Rockgrip Gauntlets
+  { itemID = 17737, groupID = 1, refLootEntry = 2932 }; --Cloud Stone
+  { itemID = 17738, groupID = 1, refLootEntry = 2932 }; --Claw of Celebras
+  { itemID = 17739, groupID = 1, refLootEntry = 2932 }; --Grovekeeper's Drape
+  { itemID = 17740, groupID = 1, refLootEntry = 2932 }; --Soothsayer's Headdress
+  { itemID = 17741, groupID = 1, refLootEntry = 2932 }; --Nature's Embrace
+  { itemID = 17742, groupID = 1, refLootEntry = 2932 }; --Fungus Shroud Armor
+  { itemID = 17744, groupID = 1, refLootEntry = 2932 }; --Heart of Noxxion
+  { itemID = 17745, groupID = 1, refLootEntry = 2932 }; --Noxious Shooter
+  { itemID = 17746, groupID = 1, refLootEntry = 2932 }; --Noxxion's Shackles
+  { itemID = 17748, groupID = 1, refLootEntry = 2932 }; --Vinerot Sandals
+  { itemID = 17749, groupID = 1, refLootEntry = 2932 }; --Phytoskin Spaulders
+  { itemID = 17750, groupID = 1, refLootEntry = 2932 }; --Chloromesh Girdle
+  { itemID = 17751, groupID = 1, refLootEntry = 2932 }; --Brusslehide Leggings
+  { itemID = 17752, groupID = 1, refLootEntry = 2932 }; --Satyr's Lash
+  { itemID = 17754, groupID = 1, refLootEntry = 2932 }; --Infernal Trickster Leggings
+  { itemID = 17755, groupID = 1, refLootEntry = 2932 }; --Satyrmane Sash
+  { itemID = 17766, groupID = 1, refLootEntry = 2932 }; --Princess Theradras' Scepter
+  { itemID = 17767, groupID = 1, refLootEntry = 2932 }; --Bloomsprout Headpiece
+  { itemID = 17943, groupID = 1, refLootEntry = 2932 }; --Fist of Stone
+  { itemID = 18043, groupID = 1, refLootEntry = 2932 }; --Coal Miner Boots
+  { itemID = 18044, groupID = 1, refLootEntry = 2932 }; --Hurley's Tankard
+  { itemID = 18082, groupID = 1, refLootEntry = 2932 }; --Zum'rah's Vexing Cane
+  { itemID = 18083, groupID = 1, refLootEntry = 2932 }; --Jumanza Grips
+  { itemID = 18289, groupID = 1, refLootEntry = 2932 }; --Barbed Thorn Necklace
+  { itemID = 18295, groupID = 1, refLootEntry = 2932 }; --Phasing Boots
+  { itemID = 18296, groupID = 1, refLootEntry = 2932 }; --Marksman Bands
+  { itemID = 18298, groupID = 1, refLootEntry = 2932 }; --Unbridled Leggings
+  { itemID = 18301, groupID = 1, refLootEntry = 2932 }; --Lethtendris's Wand
+  { itemID = 18302, groupID = 1, refLootEntry = 2932 }; --Band of Vigor
+  { itemID = 18305, groupID = 1, refLootEntry = 2932 }; --Breakwater Legguards
+  { itemID = 18306, groupID = 1, refLootEntry = 2932 }; --Gloves of Shadowy Mist
+  { itemID = 18307, groupID = 1, refLootEntry = 2932 }; --Riptide Shoes
+  { itemID = 18308, groupID = 1, refLootEntry = 2932 }; --Clever Hat
+  { itemID = 18311, groupID = 1, refLootEntry = 2932 }; --Quel'dorei Channeling Rod
+  { itemID = 18313, groupID = 1, refLootEntry = 2932 }; --Helm of Awareness
+  { itemID = 18317, groupID = 1, refLootEntry = 2932 }; --Tempest Talisman
+  { itemID = 18319, groupID = 1, refLootEntry = 2932 }; --Fervent Helm
+  { itemID = 18322, groupID = 1, refLootEntry = 2932 }; --Waterspout Boots
+  { itemID = 18323, groupID = 1, refLootEntry = 2932 }; --Satyr's Bow
+  { itemID = 18324, groupID = 1, refLootEntry = 2932 }; --Waveslicer
+  { itemID = 18325, groupID = 1, refLootEntry = 2932 }; --Felhide Cap
+  { itemID = 18338, groupID = 1, refLootEntry = 2932 }; --Wand of Arcane Potency
+  { itemID = 18340, groupID = 1, refLootEntry = 2932 }; --Eidolon Talisman
+  { itemID = 18344, groupID = 1, refLootEntry = 2932 }; --Stonebark Gauntlets
+  { itemID = 18475, groupID = 1, refLootEntry = 2932 }; --Oddly Magical Belt
+  { itemID = 18477, groupID = 1, refLootEntry = 2932 }; --Shaggy Leggings
+  { itemID = 18479, groupID = 1, refLootEntry = 2932 }; --Carrion Scorpid Helm
+  { itemID = 18483, groupID = 1, refLootEntry = 2932 }; --Mana Channeling Wand
+  { itemID = 18484, groupID = 1, refLootEntry = 2932 }; --Cho'Rush's Blade
+  { itemID = 18485, groupID = 1, refLootEntry = 2932 }; --Observer's Shield
+  { itemID = 18490, groupID = 1, refLootEntry = 2932 }; --Insightful Hood
+  { itemID = 18528, groupID = 1, refLootEntry = 2932 }; --Cyclone Spaulders
+  { itemID = 18530, groupID = 1, refLootEntry = 2932 }; --Ogre Forged Hauberk
+  { itemID = 18533, groupID = 1, refLootEntry = 2932 }; --Gordok Bracers of Power
+  { itemID = 18697, groupID = 1, refLootEntry = 2932 }; --Coldstone Slippers
+  { itemID = 18698, groupID = 1, refLootEntry = 2932 }; --Tattered Leather Hood
+  { itemID = 18699, groupID = 1, refLootEntry = 2932 }; --Icy Tomb Spaulders
+  { itemID = 18700, groupID = 1, refLootEntry = 2932 }; --Malefic Bracers
+  { itemID = 18709, groupID = 1, refLootEntry = 2932 }; --Arena Wristguards
+  { itemID = 18710, groupID = 1, refLootEntry = 2932 }; --Arena Bracers
+  { itemID = 18711, groupID = 1, refLootEntry = 2932 }; --Arena Bands
+  { itemID = 18712, groupID = 1, refLootEntry = 2932 }; --Arena Vambraces
+  { itemID = 18736, groupID = 1, refLootEntry = 2932 }; --Plaguehound Leggings
+  { itemID = 18741, groupID = 1, refLootEntry = 2932 }; --Morlune's Bracer
+  { itemID = 18742, groupID = 1, refLootEntry = 2932 }; --Stratholme Militia Shoulderguard
+  { itemID = 18743, groupID = 1, refLootEntry = 2932 }; --Gracious Cape
+  { itemID = 18744, groupID = 1, refLootEntry = 2932 }; --Plaguebat Fur Gloves
+  { itemID = 18745, groupID = 1, refLootEntry = 2932 }; --Sacred Cloth Leggings
+  { itemID = 19507, groupID = 1, refLootEntry = 2932 }; --Inquisitor's Shawl
+  { itemID = 19508, groupID = 1, refLootEntry = 2932 }; --Branded Leather Bracers
+  { itemID = 19509, groupID = 1, refLootEntry = 2932 }; --Dusty Mail Boots
+  { itemID = 21768, groupID = 1, refLootEntry = 2932 }; --Sapphire Signet
+  { itemID = 21791, groupID = 1, refLootEntry = 2932 }; --Living Emerald Pendant
+  { itemID = 22205, groupID = 1, refLootEntry = 2932 }; --Black Steel Bindings
+  { itemID = 22208, groupID = 1, refLootEntry = 2932 }; --Lavastone Hammer
+  { itemID = 22212, groupID = 1, refLootEntry = 2932 }; --Golem Fitted Pauldrons
+  { itemID = 22223, groupID = 1, refLootEntry = 2932 }; --Foreman's Head Protector
+  { itemID = 22234, groupID = 1, refLootEntry = 2932 }; --Mantle of Lost Hope
+  { itemID = 22240, groupID = 1, refLootEntry = 2932 }; --Greaves of Withering Despair
+  { itemID = 22241, groupID = 1, refLootEntry = 2932 }; --Dark Warder's Pauldrons
+  { itemID = 22242, groupID = 1, refLootEntry = 2932 }; --Verek's Leash
+  { itemID = 22245, groupID = 1, refLootEntry = 2932 }; --Soot Encrusted Footwear
+  { itemID = 22254, groupID = 1, refLootEntry = 2932 }; --Wand of Eternal Light
+  { itemID = 22255, groupID = 1, refLootEntry = 2932 }; --Magma Forged Band
+  { itemID = 22256, groupID = 1, refLootEntry = 2932 }; --Mana Shaping Handwraps
+  { itemID = 22257, groupID = 1, refLootEntry = 2932 }; --Bloodclot Band
+  { itemID = 22266, groupID = 1, refLootEntry = 2932 }; --Flarethorn
+  { itemID = 22270, groupID = 1, refLootEntry = 2932 }; --Entrenching Boots
+  { itemID = 22271, groupID = 1, refLootEntry = 2932 }; --Leggings of Frenzied Magic
+  { itemID = 22275, groupID = 1, refLootEntry = 2932 }; --Firemoss Boots
+  { itemID = 22395, groupID = 1, refLootEntry = 2932 }; --Totem of Rage
+  { itemID = 22397, groupID = 1, refLootEntry = 2932 }; --Idol of Ferocity
+  { itemID = 22400, groupID = 1, refLootEntry = 2932 }; --Libram of Truth
+  { itemID = 23168, groupID = 1, refLootEntry = 2932 }; --Scorn's Focal Dagger
+  { itemID = 23169, groupID = 1, refLootEntry = 2932 }; --Scorn's Icy Choker
+  { itemID = 23170, groupID = 1, refLootEntry = 2932 }; --The Frozen Clutch
+  { itemID = 23171, groupID = 1, refLootEntry = 2932 }; --The Axe of Severing
+  { itemID = 23173, groupID = 1, refLootEntry = 2932 }; --Abomination Skin Leggings
+  { itemID = 23177, groupID = 1, refLootEntry = 2932 }; --Lady Falther'ess' Finger
+  { itemID = 23178, groupID = 1, refLootEntry = 2932 }; --Mantle of Lady Falther'ess
+  { itemID = 23197, groupID = 1, refLootEntry = 2932 }; --Idol of the Moon
+  { itemID = 23198, groupID = 1, refLootEntry = 2932 }; --Idol of Brutality
+  { itemID = 23199, groupID = 1, refLootEntry = 2932 }; --Totem of the Storm
+  { itemID = 23203, groupID = 1, refLootEntry = 2932 }; --Libram of Fervor
+  { itemID = 24222, groupID = 1, refLootEntry = 2932 }; --The Shadowfoot Stabber
+  { itemID = 28972, groupID = 1, refLootEntry = 2932 }; --Flightblade Throwing Axe
+  { itemID = 51964, groupID = 1, refLootEntry = 2932 }; --Vigorous Belt
+  { itemID = 51965, groupID = 1, refLootEntry = 2932 }; --Vigorous Handguards
+  { itemID = 51966, groupID = 1, refLootEntry = 2932 }; --Vigorous Spaulders
+  { itemID = 51968, groupID = 1, refLootEntry = 2932 }; --Enumerated Wrap
+  { itemID = 51973, groupID = 1, refLootEntry = 2932 }; --Enumerated Handwraps
+  { itemID = 51974, groupID = 1, refLootEntry = 2932 }; --Enumerated Shoulderpads
+  { itemID = 51976, groupID = 1, refLootEntry = 2932 }; --Earthbound Shoulderguards
+  { itemID = 51978, groupID = 1, refLootEntry = 2932 }; --Earthbound Girdle
+  { itemID = 51980, groupID = 1, refLootEntry = 2932 }; --Earthbound Handgrips
+  { itemID = 51984, groupID = 1, refLootEntry = 2932 }; --Stalwart Shoulderpads
+  { itemID = 51992, groupID = 1, refLootEntry = 2932 }; --Tumultuous Ring
+  { itemID = 51994, groupID = 1, refLootEntry = 2932 }; --Tumultuous Cloak
+  { itemID = 51996, groupID = 1, refLootEntry = 2932 }; --Tumultuous Necklace
+  { itemID = 269280, groupID = 1, refLootEntry = 2932 }; --Blade of the Wretched
+  { itemID = 269456, groupID = 1, refLootEntry = 2932 }; --Fist of the Damned
+  { itemID = 269644, groupID = 1, refLootEntry = 2932 }; --Eater of the Dead
+  { itemID = 269747, groupID = 1, refLootEntry = 2932 }; --Atal'ai Spaulders
+  { itemID = 269807, groupID = 1, refLootEntry = 2932 }; --Atal'ai Breastplate
+  { itemID = 269850, groupID = 1, refLootEntry = 2932 }; --Atal'ai Leggings
+  { itemID = 272892, groupID = 1, refLootEntry = 2932 }; --Atal'ai Boots
+  { itemID = 272967, groupID = 1, refLootEntry = 2932 }; --Atal'ai Gloves
+  { itemID = 273130, groupID = 1, refLootEntry = 2932 }; --Atal'ai Girdle
+  { itemID = 4300, groupID = 0, refLootEntry = 2932 }; --Pattern: Guardian Leather Bracers
+  { itemID = 4353, groupID = 0, refLootEntry = 2932 }; --Pattern: Spider Belt
+  { itemID = 4416, groupID = 0, refLootEntry = 2932 }; --Schematic: Goblin Land Mine
   { itemID = 4636, groupID = 0, refLootEntry = 2932 }; --Strong Iron Lockbox
+  { itemID = 5974, groupID = 0, refLootEntry = 2932 }; --Pattern: Guardian Cloak
+  { itemID = 3831, groupID = 1, refLootEntry = 2932 }; --Recipe: Major Troll's Blood Elixir
+  { itemID = 17780, groupID = 1, refLootEntry = 2932 }; --Blade of Eternal Darkness
+  { itemID = 20976, groupID = 1, refLootEntry = 2932 }; --Design: Citrine Pendant of Golden Healing
+  { itemID = 34227, groupID = 1, refLootEntry = 2932 }; --Deadman's Hand
+  { itemID = 7084, groupID = 0, refLootEntry = 2932 }; --Pattern: Crimson Silk Shoulders
   { itemID = 1278048, groupID = 1, refLootEntry = 2932 }; --Case of Fortune: Talents
   { itemID = 1278049, groupID = 1, refLootEntry = 2932 }; --Case of Fortune
   { itemID = 5443, groupID = 1, refLootEntry = 3586 }; --Gold-plated Buckler
@@ -150,9 +1052,11 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 57614, groupID = 0, refLootEntry = 3927 }; --Sigil of Wolf Master Nandos
   { itemID = 5805, groupID = 0, refLootEntry = 3974 }; --Heart of Zeal
   { itemID = 57616, groupID = 0, refLootEntry = 3974 }; --Sigil of Houndmaster Loksey
-  { itemID = 5805, groupID = 0, refLootEntry = 3975 }; --Heart of Zeal
+  { itemID = 7717, groupID = 1, refLootEntry = 3975 }; --Ravager
+  { itemID = 7718, groupID = 1, refLootEntry = 3975 }; --Herod's Shoulder
+  { itemID = 7719, groupID = 1, refLootEntry = 3975 }; --Raging Berserker's Helm
+  { itemID = 10330, groupID = 1, refLootEntry = 3975 }; --Scarlet Leggings
   { itemID = 57617, groupID = 0, refLootEntry = 3975 }; --Sigil of Herod
-  { itemID = 2021814, groupID = 0, refLootEntry = 3975 }; --Dungeon Spoils
   { itemID = 5805, groupID = 0, refLootEntry = 3976 }; --Heart of Zeal
   { itemID = 5805, groupID = 0, refLootEntry = 3977 }; --Heart of Zeal
   { itemID = 57618, groupID = 0, refLootEntry = 3977 }; --Sigil of High Inquisitor Whitemane
@@ -249,9 +1153,10 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 6689, groupID = 1, refLootEntry = 4842 }; --Wind Spirit Staff
   { itemID = 5825, groupID = 0, refLootEntry = 4842 }; --Treshala's Pendant
   { itemID = 57642, groupID = 0, refLootEntry = 4842 }; --Sigil of Earthcaller Halmgar
-  { itemID = 7670, groupID = 0, refLootEntry = 4854 }; --Shattered Necklace Sapphire
+  { itemID = 9414, groupID = 1, refLootEntry = 4854 }; --Oilskin Leggings
+  { itemID = 9415, groupID = 1, refLootEntry = 4854 }; --Grimlok's Tribal Vestments
+  { itemID = 9416, groupID = 1, refLootEntry = 4854 }; --Grimlok's Charge
   { itemID = 57643, groupID = 0, refLootEntry = 4854 }; --Sigil of Grimlok
-  { itemID = 2021814, groupID = 0, refLootEntry = 4854 }; --Dungeon Spoils
   { itemID = 6907, groupID = 1, refLootEntry = 4887 }; --Tortoise Armor
   { itemID = 6908, groupID = 1, refLootEntry = 4887 }; --Ghamoo-ra's Bind
   { itemID = 57644, groupID = 0, refLootEntry = 4887 }; --Sigil of Ghamoo-ra
@@ -349,12 +1254,946 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 58493, groupID = 0, refLootEntry = 6488 }; --Sigil of Fallen Champion
   { itemID = 58494, groupID = 0, refLootEntry = 6489 }; --Sigil of Ironspine
   { itemID = 58495, groupID = 0, refLootEntry = 6490 }; --Sigil of Azshir the Sleepless
+  { itemID = 9400, groupID = 1, refLootEntry = 6906 }; --Baelog's Shortbow
+  { itemID = 9401, groupID = 1, refLootEntry = 6906 }; --Nordic Longshank
   { itemID = 58847, groupID = 0, refLootEntry = 6906 }; --Sigil of Baelog
   { itemID = 7741, groupID = 0, refLootEntry = 6910 }; --The Shaft of Tsol
+  { itemID = 9387, groupID = 1, refLootEntry = 6910 }; --Revelosh's Boots
+  { itemID = 9388, groupID = 1, refLootEntry = 6910 }; --Revelosh's Armguards
+  { itemID = 9389, groupID = 1, refLootEntry = 6910 }; --Revelosh's Spaulders
+  { itemID = 9390, groupID = 1, refLootEntry = 6910 }; --Revelosh's Gloves
   { itemID = 58848, groupID = 0, refLootEntry = 6910 }; --Sigil of Revelosh
+  { itemID = 3868, groupID = 0, refLootEntry = 7023 }; --Plans: Frost Tiger Blade
+  { itemID = 4416, groupID = 0, refLootEntry = 7023 }; --Schematic: Goblin Land Mine
   { itemID = 4637, groupID = 0, refLootEntry = 7023 }; --Steel Lockbox
-  { itemID = 8053, groupID = 0, refLootEntry = 7023 }; --Obsidian Power Source
-  { itemID = 98005, groupID = 1, refLootEntry = 7023 }; --Weathered Treasure Map
+  { itemID = 7975, groupID = 0, refLootEntry = 7023 }; --Plans: Heavy Mithril Pants
+  { itemID = 7976, groupID = 0, refLootEntry = 7023 }; --Plans: Mithril Shield Spike
+  { itemID = 8029, groupID = 0, refLootEntry = 7023 }; --Plans: Wicked Mithril Blade
+  { itemID = 8386, groupID = 0, refLootEntry = 7023 }; --Pattern: Big Voodoo Robe
+  { itemID = 8387, groupID = 0, refLootEntry = 7023 }; --Pattern: Big Voodoo Mask
+  { itemID = 9293, groupID = 0, refLootEntry = 7023 }; --Recipe: Magic Resistance Potion
+  { itemID = 9298, groupID = 0, refLootEntry = 7023 }; --Recipe: Elixir of Giants
+  { itemID = 9384, groupID = 0, refLootEntry = 7023 }; --Stonevault Shiv
+  { itemID = 9393, groupID = 0, refLootEntry = 7023 }; --Beacon of Hope
+  { itemID = 9396, groupID = 0, refLootEntry = 7023 }; --Legguards of the Vault
+  { itemID = 9420, groupID = 0, refLootEntry = 7023 }; --Adventurer's Pith Helmet
+  { itemID = 9424, groupID = 0, refLootEntry = 7023 }; --Ginn-su Sword
+  { itemID = 9425, groupID = 0, refLootEntry = 7023 }; --Pendulum of Doom
+  { itemID = 9426, groupID = 0, refLootEntry = 7023 }; --Monolithic Bow
+  { itemID = 9427, groupID = 0, refLootEntry = 7023 }; --Stonevault Bonebreaker
+  { itemID = 9428, groupID = 0, refLootEntry = 7023 }; --Unearthed Bands
+  { itemID = 9431, groupID = 0, refLootEntry = 7023 }; --Papal Fez
+  { itemID = 10300, groupID = 0, refLootEntry = 7023 }; --Pattern: Red Mageweave Vest
+  { itemID = 10301, groupID = 0, refLootEntry = 7023 }; --Pattern: White Bandit Mask
+  { itemID = 10302, groupID = 0, refLootEntry = 7023 }; --Pattern: Red Mageweave Pants
+  { itemID = 10312, groupID = 0, refLootEntry = 7023 }; --Pattern: Red Mageweave Gloves
+  { itemID = 10315, groupID = 0, refLootEntry = 7023 }; --Pattern: Red Mageweave Shoulders
+  { itemID = 10320, groupID = 0, refLootEntry = 7023 }; --Pattern: Red Mageweave Headband
+  { itemID = 10603, groupID = 0, refLootEntry = 7023 }; --Schematic: Catseye Ultra Goggles
+  { itemID = 10604, groupID = 0, refLootEntry = 7023 }; --Schematic: Mithril Heavy-bore Rifle
+  { itemID = 10606, groupID = 0, refLootEntry = 7023 }; --Schematic: Parachute Cloak
+  { itemID = 20976, groupID = 0, refLootEntry = 7023 }; --Design: Citrine Pendant of Golden Healing
+  { itemID = 867, groupID = 1, refLootEntry = 7023 }; --Gloves of Holy Might
+  { itemID = 868, groupID = 1, refLootEntry = 7023 }; --Ardent Custodian
+  { itemID = 1980, groupID = 1, refLootEntry = 7023 }; --Underworld Band
+  { itemID = 2825, groupID = 1, refLootEntry = 7023 }; --Bow of Searing Arrows
+  { itemID = 1929, groupID = 1, refLootEntry = 7057 }; --Silk-threaded Trousers
+  { itemID = 1930, groupID = 1, refLootEntry = 7057 }; --Stonemason Cloak
+  { itemID = 1934, groupID = 1, refLootEntry = 7057 }; --Stonemason Trousers
+  { itemID = 1936, groupID = 1, refLootEntry = 7057 }; --Goblin Screwdriver
+  { itemID = 1943, groupID = 1, refLootEntry = 7057 }; --Goblin Mail Leggings
+  { itemID = 1944, groupID = 1, refLootEntry = 7057 }; --Metalworking Gloves
+  { itemID = 1945, groupID = 1, refLootEntry = 7057 }; --Woodworking Gloves
+  { itemID = 1951, groupID = 1, refLootEntry = 7057 }; --Blackwater Cutlass
+  { itemID = 5422, groupID = 1, refLootEntry = 7057 }; --Brambleweed Leggings
+  { itemID = 9489, groupID = 1, refLootEntry = 7057 }; --Gyromatic Icemaker
+  { itemID = 10298, groupID = 1, refLootEntry = 7057 }; --Gnomeregan Band
+  { itemID = 10299, groupID = 1, refLootEntry = 7057 }; --Gnomeregan Amulet
+  { itemID = 10400, groupID = 1, refLootEntry = 7057 }; --Blackened Defias Leggings
+  { itemID = 10401, groupID = 1, refLootEntry = 7057 }; --Blackened Defias Gloves
+  { itemID = 10402, groupID = 1, refLootEntry = 7057 }; --Blackened Defias Boots
+  { itemID = 720, groupID = 1, refLootEntry = 7057 }; --Brawler Gloves
+  { itemID = 754, groupID = 1, refLootEntry = 7057 }; --Shortsword of Vengeance
+  { itemID = 776, groupID = 1, refLootEntry = 7057 }; --Vendetta
+  { itemID = 791, groupID = 1, refLootEntry = 7057 }; --Gnarled Ash Staff
+  { itemID = 862, groupID = 1, refLootEntry = 7057 }; --Runed Ring
+  { itemID = 872, groupID = 1, refLootEntry = 7057 }; --Rockslicer
+  { itemID = 888, groupID = 1, refLootEntry = 7057 }; --Naga Battle Gloves
+  { itemID = 890, groupID = 1, refLootEntry = 7057 }; --Twisted Chanter's Staff
+  { itemID = 934, groupID = 1, refLootEntry = 7057 }; --Stalvan's Reaper
+  { itemID = 935, groupID = 1, refLootEntry = 7057 }; --Night Watch Shortsword
+  { itemID = 936, groupID = 1, refLootEntry = 7057 }; --Midnight Mace
+  { itemID = 937, groupID = 1, refLootEntry = 7057 }; --Black Duskwood Staff
+  { itemID = 1121, groupID = 1, refLootEntry = 7057 }; --Feet of the Lynx
+  { itemID = 1155, groupID = 1, refLootEntry = 7057 }; --Rod of the Sleepwalker
+  { itemID = 1156, groupID = 1, refLootEntry = 7057 }; --Lavishly Jeweled Ring
+  { itemID = 1203, groupID = 1, refLootEntry = 7057 }; --Aegis of Stormwind
+  { itemID = 1265, groupID = 1, refLootEntry = 7057 }; --Scorpion Sting
+  { itemID = 1292, groupID = 1, refLootEntry = 7057 }; --Butcher's Cleaver
+  { itemID = 1318, groupID = 1, refLootEntry = 7057 }; --Night Reaver
+  { itemID = 1404, groupID = 1, refLootEntry = 7057 }; --Tidal Charm
+  { itemID = 1454, groupID = 1, refLootEntry = 7057 }; --Axe of the Enforcer
+  { itemID = 1481, groupID = 1, refLootEntry = 7057 }; --Grimclaw
+  { itemID = 1482, groupID = 1, refLootEntry = 7057 }; --Shadowfang
+  { itemID = 1483, groupID = 1, refLootEntry = 7057 }; --Face Smasher
+  { itemID = 1484, groupID = 1, refLootEntry = 7057 }; --Witching Stave
+  { itemID = 1486, groupID = 1, refLootEntry = 7057 }; --Tree Bark Jacket
+  { itemID = 1488, groupID = 1, refLootEntry = 7057 }; --Avenger's Armor
+  { itemID = 1489, groupID = 1, refLootEntry = 7057 }; --Gloomshroud Armor
+  { itemID = 1491, groupID = 1, refLootEntry = 7057 }; --Ring of Precision
+  { itemID = 1493, groupID = 1, refLootEntry = 7057 }; --Heavy Marauder Scimitar
+  { itemID = 1602, groupID = 1, refLootEntry = 7057 }; --Sickle Axe
+  { itemID = 1607, groupID = 1, refLootEntry = 7057 }; --Soulkeeper
+  { itemID = 1678, groupID = 1, refLootEntry = 7057 }; --Black Ogre Kickers
+  { itemID = 1713, groupID = 1, refLootEntry = 7057 }; --Ankh of Life
+  { itemID = 1714, groupID = 1, refLootEntry = 7057 }; --Necklace of Calisea
+  { itemID = 1715, groupID = 1, refLootEntry = 7057 }; --Polished Jazeraint Armor
+  { itemID = 1716, groupID = 1, refLootEntry = 7057 }; --Robe of the Magi
+  { itemID = 1717, groupID = 1, refLootEntry = 7057 }; --Double Link Tunic
+  { itemID = 1718, groupID = 1, refLootEntry = 7057 }; --Basilisk Hide Pants
+  { itemID = 1720, groupID = 1, refLootEntry = 7057 }; --Tanglewood Staff
+  { itemID = 1721, groupID = 1, refLootEntry = 7057 }; --Viking Warhammer
+  { itemID = 1722, groupID = 1, refLootEntry = 7057 }; --Thornstone Sledgehammer
+  { itemID = 1726, groupID = 1, refLootEntry = 7057 }; --Poison-tipped Bone Spear
+  { itemID = 1727, groupID = 1, refLootEntry = 7057 }; --Sword of Decay
+  { itemID = 1935, groupID = 1, refLootEntry = 7057 }; --Assassin's Blade
+  { itemID = 1937, groupID = 1, refLootEntry = 7057 }; --Buzz Saw
+  { itemID = 1973, groupID = 1, refLootEntry = 7057 }; --Orb of Deception
+  { itemID = 1974, groupID = 1, refLootEntry = 7057 }; --Mindthrust Bracers
+  { itemID = 1975, groupID = 1, refLootEntry = 7057 }; --Pysan's Old Greatsword
+  { itemID = 1976, groupID = 1, refLootEntry = 7057 }; --Slaghammer
+  { itemID = 1978, groupID = 1, refLootEntry = 7057 }; --Wolfclaw Gloves
+  { itemID = 1992, groupID = 1, refLootEntry = 7057 }; --Swampchill Fetish
+  { itemID = 2011, groupID = 1, refLootEntry = 7057 }; --Twisted Sabre
+  { itemID = 2039, groupID = 1, refLootEntry = 7057 }; --Plains Ring
+  { itemID = 2040, groupID = 1, refLootEntry = 7057 }; --Troll Protector
+  { itemID = 2059, groupID = 1, refLootEntry = 7057 }; --Sentry Cloak
+  { itemID = 2098, groupID = 1, refLootEntry = 7057 }; --Double-barreled Shotgun
+  { itemID = 2169, groupID = 1, refLootEntry = 7057 }; --Buzzer Blade
+  { itemID = 2194, groupID = 1, refLootEntry = 7057 }; --Diamond Hammer
+  { itemID = 2205, groupID = 1, refLootEntry = 7057 }; --Duskbringer
+  { itemID = 2236, groupID = 1, refLootEntry = 7057 }; --Blackfang
+  { itemID = 2256, groupID = 1, refLootEntry = 7057 }; --Skeletal Club
+  { itemID = 2262, groupID = 1, refLootEntry = 7057 }; --Mark of Kern
+  { itemID = 2264, groupID = 1, refLootEntry = 7057 }; --Mantle of Thieves
+  { itemID = 2271, groupID = 1, refLootEntry = 7057 }; --Staff of the Blessed Seer
+  { itemID = 2276, groupID = 1, refLootEntry = 7057 }; --Swampwalker Boots
+  { itemID = 2277, groupID = 1, refLootEntry = 7057 }; --Necromancer Leggings
+  { itemID = 2278, groupID = 1, refLootEntry = 7057 }; --Forest Tracker Epaulets
+  { itemID = 2280, groupID = 1, refLootEntry = 7057 }; --Kam's Walking Stick
+  { itemID = 2292, groupID = 1, refLootEntry = 7057 }; --Necrology Robes
+  { itemID = 2299, groupID = 1, refLootEntry = 7057 }; --Burning War Axe
+  { itemID = 2549, groupID = 1, refLootEntry = 7057 }; --Staff of the Shade
+  { itemID = 2564, groupID = 1, refLootEntry = 7057 }; --Elven Spirit Claws
+  { itemID = 2565, groupID = 1, refLootEntry = 7057 }; --Rod of Molten Fire
+  { itemID = 2567, groupID = 1, refLootEntry = 7057 }; --Evocator's Blade
+  { itemID = 2721, groupID = 1, refLootEntry = 7057 }; --Holy Shroud
+  { itemID = 2800, groupID = 1, refLootEntry = 7057 }; --Black Velvet Robes
+  { itemID = 2802, groupID = 1, refLootEntry = 7057 }; --Blazing Emblem
+  { itemID = 2807, groupID = 1, refLootEntry = 7057 }; --Guillotine Axe
+  { itemID = 2815, groupID = 1, refLootEntry = 7057 }; --Curve-bladed Ripper
+  { itemID = 2816, groupID = 1, refLootEntry = 7057 }; --Death Speaker Scepter
+  { itemID = 2877, groupID = 1, refLootEntry = 7057 }; --Combatant Claymore
+  { itemID = 2878, groupID = 1, refLootEntry = 7057 }; --Bearded Boneaxe
+  { itemID = 2879, groupID = 1, refLootEntry = 7057 }; --Antipodean Rod
+  { itemID = 2911, groupID = 1, refLootEntry = 7057 }; --Keller's Girdle
+  { itemID = 2912, groupID = 1, refLootEntry = 7057 }; --Claw of the Shadowmancer
+  { itemID = 2941, groupID = 1, refLootEntry = 7057 }; --Prison Shank
+  { itemID = 2942, groupID = 1, refLootEntry = 7057 }; --Iron Knuckles
+  { itemID = 2951, groupID = 1, refLootEntry = 7057 }; --Ring of the Underwood
+  { itemID = 3020, groupID = 1, refLootEntry = 7057 }; --Enduring Cap
+  { itemID = 3021, groupID = 1, refLootEntry = 7057 }; --Ranger Bow
+  { itemID = 3078, groupID = 1, refLootEntry = 7057 }; --Naga Heartpiercer
+  { itemID = 3191, groupID = 1, refLootEntry = 7057 }; --Arced War Axe
+  { itemID = 3194, groupID = 1, refLootEntry = 7057 }; --Black Malice
+  { itemID = 3203, groupID = 1, refLootEntry = 7057 }; --Dense Triangle Mace
+  { itemID = 3228, groupID = 1, refLootEntry = 7057 }; --Jimmied Handcuffs
+  { itemID = 3230, groupID = 1, refLootEntry = 7057 }; --Black Wolf Bracers
+  { itemID = 3413, groupID = 1, refLootEntry = 7057 }; --Doomspike
+  { itemID = 3414, groupID = 1, refLootEntry = 7057 }; --Crested Scepter
+  { itemID = 3415, groupID = 1, refLootEntry = 7057 }; --Staff of the Friar
+  { itemID = 3416, groupID = 1, refLootEntry = 7057 }; --Martyr's Chain
+  { itemID = 3417, groupID = 1, refLootEntry = 7057 }; --Onyx Claymore
+  { itemID = 3748, groupID = 1, refLootEntry = 7057 }; --Feline Mantle
+  { itemID = 4090, groupID = 1, refLootEntry = 7057 }; --Mug O' Hurt
+  { itemID = 4091, groupID = 1, refLootEntry = 7057 }; --Widowmaker
+  { itemID = 4438, groupID = 1, refLootEntry = 7057 }; --Pugilist Bracers
+  { itemID = 4446, groupID = 1, refLootEntry = 7057 }; --Blackvenom Blade
+  { itemID = 4454, groupID = 1, refLootEntry = 7057 }; --Talon of Vultros
+  { itemID = 5183, groupID = 1, refLootEntry = 7057 }; --Pulsating Hydra Heart
+  { itemID = 5187, groupID = 1, refLootEntry = 7057 }; --Rhahk'Zor's Hammer
+  { itemID = 5191, groupID = 1, refLootEntry = 7057 }; --Cruel Barb
+  { itemID = 5192, groupID = 1, refLootEntry = 7057 }; --Thief's Blade
+  { itemID = 5193, groupID = 1, refLootEntry = 7057 }; --Cape of the Brotherhood
+  { itemID = 5194, groupID = 1, refLootEntry = 7057 }; --Taskmaster Axe
+  { itemID = 5195, groupID = 1, refLootEntry = 7057 }; --Gold-flecked Gloves
+  { itemID = 5196, groupID = 1, refLootEntry = 7057 }; --Smite's Reaver
+  { itemID = 5197, groupID = 1, refLootEntry = 7057 }; --Cookie's Tenderizer
+  { itemID = 5198, groupID = 1, refLootEntry = 7057 }; --Cookie's Stirring Rod
+  { itemID = 5199, groupID = 1, refLootEntry = 7057 }; --Smelting Pants
+  { itemID = 5200, groupID = 1, refLootEntry = 7057 }; --Impaling Harpoon
+  { itemID = 5201, groupID = 1, refLootEntry = 7057 }; --Emberstone Staff
+  { itemID = 5202, groupID = 1, refLootEntry = 7057 }; --Corsair's Overshirt
+  { itemID = 5243, groupID = 1, refLootEntry = 7057 }; --Firebelcher
+  { itemID = 5254, groupID = 1, refLootEntry = 7057 }; --Rugged Spaulders
+  { itemID = 5257, groupID = 1, refLootEntry = 7057 }; --Dark Hooded Cape
+  { itemID = 5266, groupID = 1, refLootEntry = 7057 }; --Eye of Adaegus
+  { itemID = 5267, groupID = 1, refLootEntry = 7057 }; --Scarlet Kris
+  { itemID = 5404, groupID = 1, refLootEntry = 7057 }; --Serpent's Shoulders
+  { itemID = 5423, groupID = 1, refLootEntry = 7057 }; --Boahn's Fang
+  { itemID = 5425, groupID = 1, refLootEntry = 7057 }; --Runescale Girdle
+  { itemID = 5426, groupID = 1, refLootEntry = 7057 }; --Serpent's Kiss
+  { itemID = 5443, groupID = 1, refLootEntry = 7057 }; --Gold-plated Buckler
+  { itemID = 5444, groupID = 1, refLootEntry = 7057 }; --Miner's Cape
+  { itemID = 5616, groupID = 1, refLootEntry = 7057 }; --Gutwrencher
+  { itemID = 5756, groupID = 1, refLootEntry = 7057 }; --Sliverblade
+  { itemID = 5819, groupID = 1, refLootEntry = 7057 }; --Sunblaze Coif
+  { itemID = 5943, groupID = 1, refLootEntry = 7057 }; --Rift Bracers
+  { itemID = 5970, groupID = 1, refLootEntry = 7057 }; --Serpent Gloves
+  { itemID = 6220, groupID = 1, refLootEntry = 7057 }; --Meteor Shard
+  { itemID = 6226, groupID = 1, refLootEntry = 7057 }; --Bloody Apron
+  { itemID = 6314, groupID = 1, refLootEntry = 7057 }; --Wolfmaster Cape
+  { itemID = 6318, groupID = 1, refLootEntry = 7057 }; --Odo's Ley Staff
+  { itemID = 6319, groupID = 1, refLootEntry = 7057 }; --Girdle of the Blindwatcher
+  { itemID = 6320, groupID = 1, refLootEntry = 7057 }; --Commander's Crest
+  { itemID = 6321, groupID = 1, refLootEntry = 7057 }; --Silverlaine's Family Seal
+  { itemID = 6323, groupID = 1, refLootEntry = 7057 }; --Baron's Scepter
+  { itemID = 6324, groupID = 1, refLootEntry = 7057 }; --Robes of Arugal
+  { itemID = 6327, groupID = 1, refLootEntry = 7057 }; --The Pacifier
+  { itemID = 6331, groupID = 1, refLootEntry = 7057 }; --Howling Blade
+  { itemID = 6332, groupID = 1, refLootEntry = 7057 }; --Black Pearl Ring
+  { itemID = 6340, groupID = 1, refLootEntry = 7057 }; --Fenrus' Hide
+  { itemID = 6341, groupID = 1, refLootEntry = 7057 }; --Eerie Stable Lantern
+  { itemID = 6392, groupID = 1, refLootEntry = 7057 }; --Belt of Arugal
+  { itemID = 6440, groupID = 1, refLootEntry = 7057 }; --Brainlash
+  { itemID = 6447, groupID = 1, refLootEntry = 7057 }; --Worn Turtle Shell Shield
+  { itemID = 6448, groupID = 1, refLootEntry = 7057 }; --Tail Spike
+  { itemID = 6449, groupID = 1, refLootEntry = 7057 }; --Glowing Lizardscale Cloak
+  { itemID = 6459, groupID = 1, refLootEntry = 7057 }; --Savage Trodders
+  { itemID = 6460, groupID = 1, refLootEntry = 7057 }; --Cobrahn's Grasp
+  { itemID = 6461, groupID = 1, refLootEntry = 7057 }; --Slime-encrusted Pads
+  { itemID = 6463, groupID = 1, refLootEntry = 7057 }; --Deep Fathom Ring
+  { itemID = 6465, groupID = 1, refLootEntry = 7057 }; --Robe of the Moccasin
+  { itemID = 6469, groupID = 1, refLootEntry = 7057 }; --Venomstrike
+  { itemID = 6472, groupID = 1, refLootEntry = 7057 }; --Stinging Viper
+  { itemID = 6473, groupID = 1, refLootEntry = 7057 }; --Armor of the Fang
+  { itemID = 6622, groupID = 1, refLootEntry = 7057 }; --Sword of Zeal
+  { itemID = 6627, groupID = 1, refLootEntry = 7057 }; --Mutant Scale Breastplate
+  { itemID = 6629, groupID = 1, refLootEntry = 7057 }; --Sporid Cape
+  { itemID = 6630, groupID = 1, refLootEntry = 7057 }; --Seedcloud Buckler
+  { itemID = 6631, groupID = 1, refLootEntry = 7057 }; --Living Root
+  { itemID = 6632, groupID = 1, refLootEntry = 7057 }; --Feyscale Cloak
+  { itemID = 6633, groupID = 1, refLootEntry = 7057 }; --Butcher's Slicer
+  { itemID = 6641, groupID = 1, refLootEntry = 7057 }; --Haunting Blade
+  { itemID = 6642, groupID = 1, refLootEntry = 7057 }; --Phantom Armor
+  { itemID = 6660, groupID = 1, refLootEntry = 7057 }; --Julie's Dagger
+  { itemID = 6679, groupID = 1, refLootEntry = 7057 }; --Armor Piercer
+  { itemID = 6681, groupID = 1, refLootEntry = 7057 }; --Thornspike
+  { itemID = 6682, groupID = 1, refLootEntry = 7057 }; --Death Speaker Robes
+  { itemID = 6685, groupID = 1, refLootEntry = 7057 }; --Death Speaker Mantle
+  { itemID = 6686, groupID = 1, refLootEntry = 7057 }; --Tusken Helm
+  { itemID = 6687, groupID = 1, refLootEntry = 7057 }; --Corpsemaker
+  { itemID = 6688, groupID = 1, refLootEntry = 7057 }; --Whisperwind Headdress
+  { itemID = 6689, groupID = 1, refLootEntry = 7057 }; --Wind Spirit Staff
+  { itemID = 6690, groupID = 1, refLootEntry = 7057 }; --Ferine Leggings
+  { itemID = 6691, groupID = 1, refLootEntry = 7057 }; --Swinetusk Shank
+  { itemID = 6692, groupID = 1, refLootEntry = 7057 }; --Pronged Reaver
+  { itemID = 6693, groupID = 1, refLootEntry = 7057 }; --Agamaggan's Clutch
+  { itemID = 6694, groupID = 1, refLootEntry = 7057 }; --Heart of Agamaggan
+  { itemID = 6695, groupID = 1, refLootEntry = 7057 }; --Stygian Bone Amulet
+  { itemID = 6696, groupID = 1, refLootEntry = 7057 }; --Nightstalker Bow
+  { itemID = 6697, groupID = 1, refLootEntry = 7057 }; --Batwing Mantle
+  { itemID = 6901, groupID = 1, refLootEntry = 7057 }; --Glowing Thresher Cape
+  { itemID = 6902, groupID = 1, refLootEntry = 7057 }; --Bands of Serra'kis
+  { itemID = 6903, groupID = 1, refLootEntry = 7057 }; --Gaze Dreamer Pants
+  { itemID = 6904, groupID = 1, refLootEntry = 7057 }; --Bite of Serra'kis
+  { itemID = 6905, groupID = 1, refLootEntry = 7057 }; --Reef Axe
+  { itemID = 6906, groupID = 1, refLootEntry = 7057 }; --Algae Fists
+  { itemID = 6907, groupID = 1, refLootEntry = 7057 }; --Tortoise Armor
+  { itemID = 6908, groupID = 1, refLootEntry = 7057 }; --Ghamoo-ra's Bind
+  { itemID = 6909, groupID = 1, refLootEntry = 7057 }; --Strike of the Hydra
+  { itemID = 6910, groupID = 1, refLootEntry = 7057 }; --Leech Pants
+  { itemID = 6911, groupID = 1, refLootEntry = 7057 }; --Moss Cinch
+  { itemID = 7001, groupID = 1, refLootEntry = 7057 }; --Gravestone Scepter
+  { itemID = 7002, groupID = 1, refLootEntry = 7057 }; --Arctic Buckler
+  { itemID = 7230, groupID = 1, refLootEntry = 7057 }; --Smite's Mighty Hammer
+  { itemID = 7682, groupID = 1, refLootEntry = 7057 }; --Torturing Poker
+  { itemID = 7683, groupID = 1, refLootEntry = 7057 }; --Bloody Brass Knuckles
+  { itemID = 7684, groupID = 1, refLootEntry = 7057 }; --Bloodmage Mantle
+  { itemID = 7685, groupID = 1, refLootEntry = 7057 }; --Orb of the Forgotten Seer
+  { itemID = 7686, groupID = 1, refLootEntry = 7057 }; --Ironspine's Eye
+  { itemID = 7687, groupID = 1, refLootEntry = 7057 }; --Ironspine's Fist
+  { itemID = 7688, groupID = 1, refLootEntry = 7057 }; --Ironspine's Ribcage
+  { itemID = 7689, groupID = 1, refLootEntry = 7057 }; --Morbid Dawn
+  { itemID = 7690, groupID = 1, refLootEntry = 7057 }; --Ebon Vise
+  { itemID = 7691, groupID = 1, refLootEntry = 7057 }; --Embalmed Shroud
+  { itemID = 7708, groupID = 1, refLootEntry = 7057 }; --Necrotic Wand
+  { itemID = 7709, groupID = 1, refLootEntry = 7057 }; --Blighted Leggings
+  { itemID = 7710, groupID = 1, refLootEntry = 7057 }; --Loksey's Training Stick
+  { itemID = 7711, groupID = 1, refLootEntry = 7057 }; --Robe of Doan
+  { itemID = 7712, groupID = 1, refLootEntry = 7057 }; --Mantle of Doan
+  { itemID = 7713, groupID = 1, refLootEntry = 7057 }; --Illusionary Rod
+  { itemID = 7714, groupID = 1, refLootEntry = 7057 }; --Hypnotic Blade
+  { itemID = 7717, groupID = 1, refLootEntry = 7057 }; --Ravager
+  { itemID = 7718, groupID = 1, refLootEntry = 7057 }; --Herod's Shoulder
+  { itemID = 7719, groupID = 1, refLootEntry = 7057 }; --Raging Berserker's Helm
+  { itemID = 7720, groupID = 1, refLootEntry = 7057 }; --Whitemane's Chapeau
+  { itemID = 7721, groupID = 1, refLootEntry = 7057 }; --Hand of Righteousness
+  { itemID = 7722, groupID = 1, refLootEntry = 7057 }; --Triune Amulet
+  { itemID = 7723, groupID = 1, refLootEntry = 7057 }; --Mograine's Might
+  { itemID = 7724, groupID = 1, refLootEntry = 7057 }; --Gauntlets of Divinity
+  { itemID = 7726, groupID = 1, refLootEntry = 7057 }; --Aegis of the Scarlet Commander
+  { itemID = 7727, groupID = 1, refLootEntry = 7057 }; --Watchman Pauldrons
+  { itemID = 7728, groupID = 1, refLootEntry = 7057 }; --Beguiler Robes
+  { itemID = 7729, groupID = 1, refLootEntry = 7057 }; --Chesterfall Musket
+  { itemID = 7730, groupID = 1, refLootEntry = 7057 }; --Cobalt Crusher
+  { itemID = 7731, groupID = 1, refLootEntry = 7057 }; --Ghostshard Talisman
+  { itemID = 7734, groupID = 1, refLootEntry = 7057 }; --Six Demon Bag
+  { itemID = 7736, groupID = 1, refLootEntry = 7057 }; --Fight Club
+  { itemID = 7752, groupID = 1, refLootEntry = 7057 }; --Dreamslayer
+  { itemID = 7753, groupID = 1, refLootEntry = 7057 }; --Bloodspiller
+  { itemID = 7754, groupID = 1, refLootEntry = 7057 }; --Harbinger Boots
+  { itemID = 7755, groupID = 1, refLootEntry = 7057 }; --Flintrock Shoulders
+  { itemID = 7756, groupID = 1, refLootEntry = 7057 }; --Dog Training Gloves
+  { itemID = 7757, groupID = 1, refLootEntry = 7057 }; --Windweaver Staff
+  { itemID = 7758, groupID = 1, refLootEntry = 7057 }; --Ruthless Shiv
+  { itemID = 7759, groupID = 1, refLootEntry = 7057 }; --Archon Chestpiece
+  { itemID = 7760, groupID = 1, refLootEntry = 7057 }; --Warchief Kilt
+  { itemID = 7761, groupID = 1, refLootEntry = 7057 }; --Steelclaw Reaver
+  { itemID = 7786, groupID = 1, refLootEntry = 7057 }; --Headsplitter
+  { itemID = 7787, groupID = 1, refLootEntry = 7057 }; --Resplendent Guardian
+  { itemID = 8006, groupID = 1, refLootEntry = 7057 }; --The Ziggler
+  { itemID = 8190, groupID = 1, refLootEntry = 7057 }; --Hanzo Sword
+  { itemID = 8223, groupID = 1, refLootEntry = 7057 }; --Blade of the Basilisk
+  { itemID = 8225, groupID = 1, refLootEntry = 7057 }; --Tainted Pierce
+  { itemID = 8226, groupID = 1, refLootEntry = 7057 }; --The Butcher
+  { itemID = 9359, groupID = 1, refLootEntry = 7057 }; --Wirt's Third Leg
+  { itemID = 9375, groupID = 1, refLootEntry = 7057 }; --Expert Goldminer's Helmet
+  { itemID = 9378, groupID = 1, refLootEntry = 7057 }; --Shovelphlange's Mining Axe
+  { itemID = 9379, groupID = 1, refLootEntry = 7057 }; --Sang'thraze the Deflector
+  { itemID = 9381, groupID = 1, refLootEntry = 7057 }; --Earthen Rod
+  { itemID = 9383, groupID = 1, refLootEntry = 7057 }; --Obsidian Cleaver
+  { itemID = 9384, groupID = 1, refLootEntry = 7057 }; --Stonevault Shiv
+  { itemID = 9385, groupID = 1, refLootEntry = 7057 }; --Archaic Defender
+  { itemID = 9386, groupID = 1, refLootEntry = 7057 }; --Excavator's Brand
+  { itemID = 9387, groupID = 1, refLootEntry = 7057 }; --Revelosh's Boots
+  { itemID = 9388, groupID = 1, refLootEntry = 7057 }; --Revelosh's Armguards
+  { itemID = 9389, groupID = 1, refLootEntry = 7057 }; --Revelosh's Spaulders
+  { itemID = 9390, groupID = 1, refLootEntry = 7057 }; --Revelosh's Gloves
+  { itemID = 9391, groupID = 1, refLootEntry = 7057 }; --The Shoveler
+  { itemID = 9392, groupID = 1, refLootEntry = 7057 }; --Annealed Blade
+  { itemID = 9393, groupID = 1, refLootEntry = 7057 }; --Beacon of Hope
+  { itemID = 9394, groupID = 1, refLootEntry = 7057 }; --Horned Viking Helmet
+  { itemID = 9395, groupID = 1, refLootEntry = 7057 }; --Gloves of Old
+  { itemID = 9396, groupID = 1, refLootEntry = 7057 }; --Legguards of the Vault
+  { itemID = 9397, groupID = 1, refLootEntry = 7057 }; --Energy Cloak
+  { itemID = 9398, groupID = 1, refLootEntry = 7057 }; --Worn Running Boots
+  { itemID = 9400, groupID = 1, refLootEntry = 7057 }; --Baelog's Shortbow
+  { itemID = 9401, groupID = 1, refLootEntry = 7057 }; --Nordic Longshank
+  { itemID = 9402, groupID = 1, refLootEntry = 7057 }; --Earthborn Kilt
+  { itemID = 9403, groupID = 1, refLootEntry = 7057 }; --Battered Viking Shield
+  { itemID = 9404, groupID = 1, refLootEntry = 7057 }; --Olaf's All Purpose Shield
+  { itemID = 9405, groupID = 1, refLootEntry = 7057 }; --Girdle of Golem Strength
+  { itemID = 9406, groupID = 1, refLootEntry = 7057 }; --Spirewind Fetter
+  { itemID = 9407, groupID = 1, refLootEntry = 7057 }; --Stoneweaver Leggings
+  { itemID = 9408, groupID = 1, refLootEntry = 7057 }; --Ironshod Bludgeon
+  { itemID = 9409, groupID = 1, refLootEntry = 7057 }; --Ironaya's Bracers
+  { itemID = 9410, groupID = 1, refLootEntry = 7057 }; --Cragfists
+  { itemID = 9411, groupID = 1, refLootEntry = 7057 }; --Rockshard Pauldrons
+  { itemID = 9412, groupID = 1, refLootEntry = 7057 }; --Galgann's Fireblaster
+  { itemID = 9413, groupID = 1, refLootEntry = 7057 }; --The Rockpounder
+  { itemID = 9414, groupID = 1, refLootEntry = 7057 }; --Oilskin Leggings
+  { itemID = 9415, groupID = 1, refLootEntry = 7057 }; --Grimlok's Tribal Vestments
+  { itemID = 9416, groupID = 1, refLootEntry = 7057 }; --Grimlok's Charge
+  { itemID = 9418, groupID = 1, refLootEntry = 7057 }; --Stoneslayer
+  { itemID = 9419, groupID = 1, refLootEntry = 7057 }; --Galgann's Firehammer
+  { itemID = 9420, groupID = 1, refLootEntry = 7057 }; --Adventurer's Pith Helmet
+  { itemID = 9422, groupID = 1, refLootEntry = 7057 }; --Shadowforge Bushmaster
+  { itemID = 9423, groupID = 1, refLootEntry = 7057 }; --The Jackhammer
+  { itemID = 9424, groupID = 1, refLootEntry = 7057 }; --Ginn-su Sword
+  { itemID = 9425, groupID = 1, refLootEntry = 7057 }; --Pendulum of Doom
+  { itemID = 9426, groupID = 1, refLootEntry = 7057 }; --Monolithic Bow
+  { itemID = 9427, groupID = 1, refLootEntry = 7057 }; --Stonevault Bonebreaker
+  { itemID = 9428, groupID = 1, refLootEntry = 7057 }; --Unearthed Bands
+  { itemID = 9429, groupID = 1, refLootEntry = 7057 }; --Miner's Hat of the Deep
+  { itemID = 9430, groupID = 1, refLootEntry = 7057 }; --Spaulders of a Lost Age
+  { itemID = 9431, groupID = 1, refLootEntry = 7057 }; --Papal Fez
+  { itemID = 9432, groupID = 1, refLootEntry = 7057 }; --Skullplate Bracers
+  { itemID = 9433, groupID = 1, refLootEntry = 7057 }; --Forgotten Wraps
+  { itemID = 9434, groupID = 1, refLootEntry = 7057 }; --Elemental Raiment
+  { itemID = 9435, groupID = 1, refLootEntry = 7057 }; --Reticulated Bone Gauntlets
+  { itemID = 9445, groupID = 1, refLootEntry = 7057 }; --Grubbis Paws
+  { itemID = 9446, groupID = 1, refLootEntry = 7057 }; --Electrocutioner Leg
+  { itemID = 9447, groupID = 1, refLootEntry = 7057 }; --Electrocutioner Lagnut
+  { itemID = 9448, groupID = 1, refLootEntry = 7057 }; --Spidertank Oilrag
+  { itemID = 9449, groupID = 1, refLootEntry = 7057 }; --Manual Crowd Pummeler
+  { itemID = 9450, groupID = 1, refLootEntry = 7057 }; --Gnomebot Operating Boots
+  { itemID = 9452, groupID = 1, refLootEntry = 7057 }; --Hydrocane
+  { itemID = 9453, groupID = 1, refLootEntry = 7057 }; --Toxic Revenger
+  { itemID = 9454, groupID = 1, refLootEntry = 7057 }; --Acidic Walkers
+  { itemID = 9455, groupID = 1, refLootEntry = 7057 }; --Emissary Cuffs
+  { itemID = 9456, groupID = 1, refLootEntry = 7057 }; --Glass Shooter
+  { itemID = 9457, groupID = 1, refLootEntry = 7057 }; --Royal Diplomatic Scepter
+  { itemID = 9458, groupID = 1, refLootEntry = 7057 }; --Thermaplugg's Central Core
+  { itemID = 9459, groupID = 1, refLootEntry = 7057 }; --Thermaplugg's Left Arm
+  { itemID = 9461, groupID = 1, refLootEntry = 7057 }; --Charged Gear
+  { itemID = 9465, groupID = 1, refLootEntry = 7057 }; --Digmaster 5000
+  { itemID = 9467, groupID = 1, refLootEntry = 7057 }; --Gahz'rilla Fang
+  { itemID = 9469, groupID = 1, refLootEntry = 7057 }; --Gahz'rilla Scale Armor
+  { itemID = 9470, groupID = 1, refLootEntry = 7057 }; --Bad Mojo Mask
+  { itemID = 9473, groupID = 1, refLootEntry = 7057 }; --Jinxed Hoodoo Skin
+  { itemID = 9474, groupID = 1, refLootEntry = 7057 }; --Jinxed Hoodoo Kilt
+  { itemID = 9475, groupID = 1, refLootEntry = 7057 }; --Diabolic Skiver
+  { itemID = 9476, groupID = 1, refLootEntry = 7057 }; --Big Bad Pauldrons
+  { itemID = 9477, groupID = 1, refLootEntry = 7057 }; --The Chief's Enforcer
+  { itemID = 9478, groupID = 1, refLootEntry = 7057 }; --Ripsaw
+  { itemID = 9479, groupID = 1, refLootEntry = 7057 }; --Embrace of the Lycan
+  { itemID = 9480, groupID = 1, refLootEntry = 7057 }; --Eyegouger
+  { itemID = 9481, groupID = 1, refLootEntry = 7057 }; --The Minotaur
+  { itemID = 9482, groupID = 1, refLootEntry = 7057 }; --Witch Doctor's Cane
+  { itemID = 9483, groupID = 1, refLootEntry = 7057 }; --Flaming Incinerator
+  { itemID = 9484, groupID = 1, refLootEntry = 7057 }; --Spellshock Leggings
+  { itemID = 9485, groupID = 1, refLootEntry = 7057 }; --Vibroblade
+  { itemID = 9486, groupID = 1, refLootEntry = 7057 }; --Supercharger Battle Axe
+  { itemID = 9487, groupID = 1, refLootEntry = 7057 }; --Hi-tech Supergun
+  { itemID = 9488, groupID = 1, refLootEntry = 7057 }; --Oscillating Power Hammer
+  { itemID = 9490, groupID = 1, refLootEntry = 7057 }; --Gizmotron Megachopper
+  { itemID = 9491, groupID = 1, refLootEntry = 7057 }; --Hotshot Pilot's Gloves
+  { itemID = 9492, groupID = 1, refLootEntry = 7057 }; --Electromagnetic Gigaflux Reactivator
+  { itemID = 9508, groupID = 1, refLootEntry = 7057 }; --Mechbuilder's Overalls
+  { itemID = 9509, groupID = 1, refLootEntry = 7057 }; --Petrolspill Leggings
+  { itemID = 9510, groupID = 1, refLootEntry = 7057 }; --Caverndeep Trudgers
+  { itemID = 9511, groupID = 1, refLootEntry = 7057 }; --Bloodletter Scalpel
+  { itemID = 9512, groupID = 1, refLootEntry = 7057 }; --Blackmetal Cape
+  { itemID = 9639, groupID = 1, refLootEntry = 7057 }; --The Hand of Antu'sul
+  { itemID = 9640, groupID = 1, refLootEntry = 7057 }; --Vice Grips
+  { itemID = 9641, groupID = 1, refLootEntry = 7057 }; --Lifeblood Amulet
+  { itemID = 10328, groupID = 1, refLootEntry = 7057 }; --Scarlet Chestpiece
+  { itemID = 10330, groupID = 1, refLootEntry = 7057 }; --Scarlet Leggings
+  { itemID = 10332, groupID = 1, refLootEntry = 7057 }; --Scarlet Boots
+  { itemID = 10399, groupID = 1, refLootEntry = 7057 }; --Blackened Defias Armor
+  { itemID = 10403, groupID = 1, refLootEntry = 7057 }; --Blackened Defias Belt
+  { itemID = 10410, groupID = 1, refLootEntry = 7057 }; --Leggings of the Fang
+  { itemID = 10411, groupID = 1, refLootEntry = 7057 }; --Footpads of the Fang
+  { itemID = 10412, groupID = 1, refLootEntry = 7057 }; --Belt of the Fang
+  { itemID = 10413, groupID = 1, refLootEntry = 7057 }; --Gloves of the Fang
+  { itemID = 10567, groupID = 1, refLootEntry = 7057 }; --Quillshooter
+  { itemID = 10570, groupID = 1, refLootEntry = 7057 }; --Manslayer
+  { itemID = 10571, groupID = 1, refLootEntry = 7057 }; --Ebony Boneclub
+  { itemID = 10572, groupID = 1, refLootEntry = 7057 }; --Freezing Shard
+  { itemID = 10573, groupID = 1, refLootEntry = 7057 }; --Boneslasher
+  { itemID = 10574, groupID = 1, refLootEntry = 7057 }; --Corpseshroud
+  { itemID = 10578, groupID = 1, refLootEntry = 7057 }; --Thoughtcast Boots
+  { itemID = 10581, groupID = 1, refLootEntry = 7057 }; --Death's Head Vestment
+  { itemID = 10582, groupID = 1, refLootEntry = 7057 }; --Briar Tredders
+  { itemID = 10583, groupID = 1, refLootEntry = 7057 }; --Quillward Harness
+  { itemID = 10584, groupID = 1, refLootEntry = 7057 }; --Stormgale Fists
+  { itemID = 10623, groupID = 1, refLootEntry = 7057 }; --Winter's Bite
+  { itemID = 10624, groupID = 1, refLootEntry = 7057 }; --Stinging Bow
+  { itemID = 10625, groupID = 1, refLootEntry = 7057 }; --Stealthblade
+  { itemID = 10626, groupID = 1, refLootEntry = 7057 }; --Ragehammer
+  { itemID = 10627, groupID = 1, refLootEntry = 7057 }; --Bludgeon of the Grinning Dog
+  { itemID = 10628, groupID = 1, refLootEntry = 7057 }; --Deathblow
+  { itemID = 10629, groupID = 1, refLootEntry = 7057 }; --Mistwalker Boots
+  { itemID = 10630, groupID = 1, refLootEntry = 7057 }; --Soulcatcher Halo
+  { itemID = 10631, groupID = 1, refLootEntry = 7057 }; --Murkwater Gauntlets
+  { itemID = 10632, groupID = 1, refLootEntry = 7057 }; --Slimescale Bracers
+  { itemID = 10633, groupID = 1, refLootEntry = 7057 }; --Silvershell Leggings
+  { itemID = 10634, groupID = 1, refLootEntry = 7057 }; --Mindseye Circle
+  { itemID = 10758, groupID = 1, refLootEntry = 7057 }; --X'caliboar
+  { itemID = 10760, groupID = 1, refLootEntry = 7057 }; --Swine Fists
+  { itemID = 10761, groupID = 1, refLootEntry = 7057 }; --Coldrage Dagger
+  { itemID = 10762, groupID = 1, refLootEntry = 7057 }; --Robes of the Lich
+  { itemID = 10763, groupID = 1, refLootEntry = 7057 }; --Icemetal Barbute
+  { itemID = 10764, groupID = 1, refLootEntry = 7057 }; --Deathchill Armor
+  { itemID = 10765, groupID = 1, refLootEntry = 7057 }; --Bonefingers
+  { itemID = 10766, groupID = 1, refLootEntry = 7057 }; --Plaguerot Sprig
+  { itemID = 10767, groupID = 1, refLootEntry = 7057 }; --Savage Boar's Guard
+  { itemID = 10768, groupID = 1, refLootEntry = 7057 }; --Boar Champion's Belt
+  { itemID = 10769, groupID = 1, refLootEntry = 7057 }; --Glowing Eye of Mordresh
+  { itemID = 10770, groupID = 1, refLootEntry = 7057 }; --Mordresh's Lifeless Skull
+  { itemID = 10771, groupID = 1, refLootEntry = 7057 }; --Deathmage Sash
+  { itemID = 10772, groupID = 1, refLootEntry = 7057 }; --Glutton's Cleaver
+  { itemID = 10774, groupID = 1, refLootEntry = 7057 }; --Fleshhide Shoulders
+  { itemID = 10775, groupID = 1, refLootEntry = 7057 }; --Carapace of Tuten'kash
+  { itemID = 10776, groupID = 1, refLootEntry = 7057 }; --Silky Spider Cape
+  { itemID = 10777, groupID = 1, refLootEntry = 7057 }; --Arachnid Gloves
+  { itemID = 10795, groupID = 1, refLootEntry = 7057 }; --Drakeclaw Band
+  { itemID = 10796, groupID = 1, refLootEntry = 7057 }; --Drakestone
+  { itemID = 10797, groupID = 1, refLootEntry = 7057 }; --Firebreather
+  { itemID = 10798, groupID = 1, refLootEntry = 7057 }; --Atal'alarion's Tusk Ring
+  { itemID = 10799, groupID = 1, refLootEntry = 7057 }; --Headspike
+  { itemID = 10800, groupID = 1, refLootEntry = 7057 }; --Darkwater Bracers
+  { itemID = 10801, groupID = 1, refLootEntry = 7057 }; --Slitherscale Boots
+  { itemID = 10802, groupID = 1, refLootEntry = 7057 }; --Wingveil Cloak
+  { itemID = 10806, groupID = 1, refLootEntry = 7057 }; --Vestments of the Atal'ai Prophet
+  { itemID = 10807, groupID = 1, refLootEntry = 7057 }; --Kilt of the Atal'ai Prophet
+  { itemID = 10808, groupID = 1, refLootEntry = 7057 }; --Gloves of the Atal'ai Prophet
+  { itemID = 10828, groupID = 1, refLootEntry = 7057 }; --Dire Nail
+  { itemID = 10829, groupID = 1, refLootEntry = 7057 }; --The Dragon's Eye
+  { itemID = 10833, groupID = 1, refLootEntry = 7057 }; --Horns of Eranikus
+  { itemID = 10835, groupID = 1, refLootEntry = 7057 }; --Crest of Supremacy
+  { itemID = 10836, groupID = 1, refLootEntry = 7057 }; --Rod of Corrosion
+  { itemID = 10837, groupID = 1, refLootEntry = 7057 }; --Tooth of Eranikus
+  { itemID = 10838, groupID = 1, refLootEntry = 7057 }; --Might of Hakkar
+  { itemID = 10842, groupID = 1, refLootEntry = 7057 }; --Windscale Sarong
+  { itemID = 10843, groupID = 1, refLootEntry = 7057 }; --Featherskin Cape
+  { itemID = 10844, groupID = 1, refLootEntry = 7057 }; --Spire of Hakkar
+  { itemID = 10845, groupID = 1, refLootEntry = 7057 }; --Warrior's Embrace
+  { itemID = 10846, groupID = 1, refLootEntry = 7057 }; --Bloodshot Greaves
+  { itemID = 11086, groupID = 1, refLootEntry = 7057 }; --Jang'thraze the Protector
+  { itemID = 11118, groupID = 1, refLootEntry = 7057 }; --Archaedic Stone
+  { itemID = 11121, groupID = 1, refLootEntry = 7057 }; --Darkwater Talwar
+  { itemID = 11302, groupID = 1, refLootEntry = 7057 }; --Uther's Strength
+  { itemID = 11310, groupID = 1, refLootEntry = 7057 }; --Flameseer Mantle
+  { itemID = 11311, groupID = 1, refLootEntry = 7057 }; --Emberscale Cape
+  { itemID = 11603, groupID = 1, refLootEntry = 7057 }; --Vilerend Slicer
+  { itemID = 11623, groupID = 1, refLootEntry = 7057 }; --Spritecaster Cape
+  { itemID = 11624, groupID = 1, refLootEntry = 7057 }; --Kentic Amice
+  { itemID = 11625, groupID = 1, refLootEntry = 7057 }; --Enthralled Sphere
+  { itemID = 11626, groupID = 1, refLootEntry = 7057 }; --Blackveil Cape
+  { itemID = 11627, groupID = 1, refLootEntry = 7057 }; --Fleetfoot Greaves
+  { itemID = 11628, groupID = 1, refLootEntry = 7057 }; --Houndmaster's Bow
+  { itemID = 11629, groupID = 1, refLootEntry = 7057 }; --Houndmaster's Rifle
+  { itemID = 11631, groupID = 1, refLootEntry = 7057 }; --Stoneshell Guard
+  { itemID = 11632, groupID = 1, refLootEntry = 7057 }; --Earthslag Shoulders
+  { itemID = 11633, groupID = 1, refLootEntry = 7057 }; --Spiderfang Carapace
+  { itemID = 11634, groupID = 1, refLootEntry = 7057 }; --Silkweb Gloves
+  { itemID = 11635, groupID = 1, refLootEntry = 7057 }; --Hookfang Shanker
+  { itemID = 11662, groupID = 1, refLootEntry = 7057 }; --Ban'thok Sash
+  { itemID = 11665, groupID = 1, refLootEntry = 7057 }; --Ogreseer Fists
+  { itemID = 11675, groupID = 1, refLootEntry = 7057 }; --Shadefiend Boots
+  { itemID = 11677, groupID = 1, refLootEntry = 7057 }; --Graverot Cape
+  { itemID = 11678, groupID = 1, refLootEntry = 7057 }; --Carapace of Anub'shiah
+  { itemID = 11679, groupID = 1, refLootEntry = 7057 }; --Rubicund Armguards
+  { itemID = 11685, groupID = 1, refLootEntry = 7057 }; --Splinthide Shoulders
+  { itemID = 11686, groupID = 1, refLootEntry = 7057 }; --Girdle of Beastial Fury
+  { itemID = 11702, groupID = 1, refLootEntry = 7057 }; --Grizzle's Skinner
+  { itemID = 11703, groupID = 1, refLootEntry = 7057 }; --Stonewall Girdle
+  { itemID = 11722, groupID = 1, refLootEntry = 7057 }; --Dregmetal Spaulders
+  { itemID = 11728, groupID = 1, refLootEntry = 7057 }; --Savage Gladiator Leggings
+  { itemID = 11729, groupID = 1, refLootEntry = 7057 }; --Savage Gladiator Helm
+  { itemID = 11730, groupID = 1, refLootEntry = 7057 }; --Savage Gladiator Grips
+  { itemID = 11731, groupID = 1, refLootEntry = 7057 }; --Savage Gladiator Greaves
+  { itemID = 11735, groupID = 1, refLootEntry = 7057 }; --Ragefury Eyepatch
+  { itemID = 11744, groupID = 1, refLootEntry = 7057 }; --Bloodfist
+  { itemID = 11745, groupID = 1, refLootEntry = 7057 }; --Fists of Phalanx
+  { itemID = 11746, groupID = 1, refLootEntry = 7057 }; --Golem Skull Helm
+  { itemID = 11747, groupID = 1, refLootEntry = 7057 }; --Flamestrider Robes
+  { itemID = 11748, groupID = 1, refLootEntry = 7057 }; --Pyric Caduceus
+  { itemID = 11749, groupID = 1, refLootEntry = 7057 }; --Searingscale Leggings
+  { itemID = 11750, groupID = 1, refLootEntry = 7057 }; --Kindling Stave
+  { itemID = 11755, groupID = 1, refLootEntry = 7057 }; --Verek's Collar
+  { itemID = 11764, groupID = 1, refLootEntry = 7057 }; --Cinderhide Armsplints
+  { itemID = 11765, groupID = 1, refLootEntry = 7057 }; --Pyremail Wristguards
+  { itemID = 11766, groupID = 1, refLootEntry = 7057 }; --Flameweave Cuffs
+  { itemID = 11767, groupID = 1, refLootEntry = 7057 }; --Emberplate Armguards
+  { itemID = 11768, groupID = 1, refLootEntry = 7057 }; --Incendic Bracers
+  { itemID = 11782, groupID = 1, refLootEntry = 7057 }; --Boreal Mantle
+  { itemID = 11783, groupID = 1, refLootEntry = 7057 }; --Chillsteel Girdle
+  { itemID = 11784, groupID = 1, refLootEntry = 7057 }; --Arbiter's Blade
+  { itemID = 11785, groupID = 1, refLootEntry = 7057 }; --Rock Golem Bulwark
+  { itemID = 11786, groupID = 1, refLootEntry = 7057 }; --Stone of the Earth
+  { itemID = 11787, groupID = 1, refLootEntry = 7057 }; --Shalehusk Boots
+  { itemID = 11802, groupID = 1, refLootEntry = 7057 }; --Lavacrest Leggings
+  { itemID = 11803, groupID = 1, refLootEntry = 7057 }; --Force of Magma
+  { itemID = 11805, groupID = 1, refLootEntry = 7057 }; --Rubidium Hammer
+  { itemID = 11807, groupID = 1, refLootEntry = 7057 }; --Sash of the Burning Heart
+  { itemID = 11809, groupID = 1, refLootEntry = 7057 }; --Flame Wrath
+  { itemID = 11811, groupID = 1, refLootEntry = 7057 }; --Smoking Heart of the Mountain
+  { itemID = 11812, groupID = 1, refLootEntry = 7057 }; --Cape of the Fire Salamander
+  { itemID = 11814, groupID = 1, refLootEntry = 7057 }; --Molten Fists
+  { itemID = 11815, groupID = 1, refLootEntry = 7057 }; --Hand of Justice
+  { itemID = 11816, groupID = 1, refLootEntry = 7057 }; --Angerforge's Battle Axe
+  { itemID = 11817, groupID = 1, refLootEntry = 7057 }; --Lord General's Sword
+  { itemID = 11820, groupID = 1, refLootEntry = 7057 }; --Royal Decorated Armor
+  { itemID = 11821, groupID = 1, refLootEntry = 7057 }; --Warstrife Leggings
+  { itemID = 11824, groupID = 1, refLootEntry = 7057 }; --Cyclopean Band
+  { itemID = 11832, groupID = 1, refLootEntry = 7057 }; --Burst of Knowledge
+  { itemID = 11839, groupID = 1, refLootEntry = 7057 }; --Chief Architect's Monocle
+  { itemID = 11841, groupID = 1, refLootEntry = 7057 }; --Senior Designer's Pantaloons
+  { itemID = 11842, groupID = 1, refLootEntry = 7057 }; --Lead Surveyor's Mantle
+  { itemID = 11920, groupID = 1, refLootEntry = 7057 }; --Wraith Scythe
+  { itemID = 11921, groupID = 1, refLootEntry = 7057 }; --Impervious Giant
+  { itemID = 11922, groupID = 1, refLootEntry = 7057 }; --Blood-etched Blade
+  { itemID = 11923, groupID = 1, refLootEntry = 7057 }; --The Hammer of Grace
+  { itemID = 11925, groupID = 1, refLootEntry = 7057 }; --Ghostshroud
+  { itemID = 11926, groupID = 1, refLootEntry = 7057 }; --Deathdealer Breastplate
+  { itemID = 11927, groupID = 1, refLootEntry = 7057 }; --Legplates of the Eternal Guardian
+  { itemID = 11929, groupID = 1, refLootEntry = 7057 }; --Haunting Spectre Leggings
+  { itemID = 11935, groupID = 1, refLootEntry = 7057 }; --Magmus Stone
+  { itemID = 11945, groupID = 1, refLootEntry = 7057 }; --Dark Iron Ring
+  { itemID = 11946, groupID = 1, refLootEntry = 7057 }; --Fire Opal Necklace
+  { itemID = 12243, groupID = 1, refLootEntry = 7057 }; --Smoldering Claw
+  { itemID = 12463, groupID = 1, refLootEntry = 7057 }; --Drakefang Butcher
+  { itemID = 12464, groupID = 1, refLootEntry = 7057 }; --Bloodfire Talons
+  { itemID = 12465, groupID = 1, refLootEntry = 7057 }; --Nightfall Drape
+  { itemID = 12466, groupID = 1, refLootEntry = 7057 }; --Dawnspire Cord
+  { itemID = 12470, groupID = 1, refLootEntry = 7057 }; --Sandstalker Ankleguards
+  { itemID = 12471, groupID = 1, refLootEntry = 7057 }; --Desertwalker Cane
+  { itemID = 12527, groupID = 1, refLootEntry = 7057 }; --Ribsplitter
+  { itemID = 12528, groupID = 1, refLootEntry = 7057 }; --The Judge's Gavel
+  { itemID = 12531, groupID = 1, refLootEntry = 7057 }; --Searing Needle
+  { itemID = 12532, groupID = 1, refLootEntry = 7057 }; --Spire of the Stoneshaper
+  { itemID = 12535, groupID = 1, refLootEntry = 7057 }; --Doomforged Straightedge
+  { itemID = 12542, groupID = 1, refLootEntry = 7057 }; --Funeral Pyre Vestment
+  { itemID = 12546, groupID = 1, refLootEntry = 7057 }; --Aristocratic Cuffs
+  { itemID = 12547, groupID = 1, refLootEntry = 7057 }; --Mar Alom's Grip
+  { itemID = 12549, groupID = 1, refLootEntry = 7057 }; --Braincage
+  { itemID = 12550, groupID = 1, refLootEntry = 7057 }; --Runed Golem Shackles
+  { itemID = 12551, groupID = 1, refLootEntry = 7057 }; --Stoneshield Cloak
+  { itemID = 12552, groupID = 1, refLootEntry = 7057 }; --Blisterbane Wrap
+  { itemID = 12555, groupID = 1, refLootEntry = 7057 }; --Battlechaser's Greaves
+  { itemID = 12605, groupID = 1, refLootEntry = 7057 }; --Serpentine Skuller
+  { itemID = 12608, groupID = 1, refLootEntry = 7057 }; --Butcher's Apron
+  { itemID = 12791, groupID = 1, refLootEntry = 7057 }; --Barman Shanker
+  { itemID = 12793, groupID = 1, refLootEntry = 7057 }; --Mixologist's Tunic
+  { itemID = 12974, groupID = 1, refLootEntry = 7057 }; --The Black Knight
+  { itemID = 12975, groupID = 1, refLootEntry = 7057 }; --Prospector Axe
+  { itemID = 12976, groupID = 1, refLootEntry = 7057 }; --Ironpatch Blade
+  { itemID = 12977, groupID = 1, refLootEntry = 7057 }; --Magefist Gloves
+  { itemID = 12978, groupID = 1, refLootEntry = 7057 }; --Stormbringer Belt
+  { itemID = 12979, groupID = 1, refLootEntry = 7057 }; --Firebane Cloak
+  { itemID = 12982, groupID = 1, refLootEntry = 7057 }; --Silver-linked Footguards
+  { itemID = 12983, groupID = 1, refLootEntry = 7057 }; --Rakzur Club
+  { itemID = 12984, groupID = 1, refLootEntry = 7057 }; --Skycaller
+  { itemID = 12985, groupID = 1, refLootEntry = 7057 }; --Ring of Defense
+  { itemID = 12987, groupID = 1, refLootEntry = 7057 }; --Darkweave Breeches
+  { itemID = 12988, groupID = 1, refLootEntry = 7057 }; --Starsight Tunic
+  { itemID = 12989, groupID = 1, refLootEntry = 7057 }; --Gargoyle's Bite
+  { itemID = 12990, groupID = 1, refLootEntry = 7057 }; --Razor's Edge
+  { itemID = 12992, groupID = 1, refLootEntry = 7057 }; --Searing Blade
+  { itemID = 12994, groupID = 1, refLootEntry = 7057 }; --Thorbia's Gauntlets
+  { itemID = 12996, groupID = 1, refLootEntry = 7057 }; --Band of Purification
+  { itemID = 12997, groupID = 1, refLootEntry = 7057 }; --Redbeard Crest
+  { itemID = 12998, groupID = 1, refLootEntry = 7057 }; --Magician's Mantle
+  { itemID = 12999, groupID = 1, refLootEntry = 7057 }; --Drakewing Bands
+  { itemID = 13000, groupID = 1, refLootEntry = 7057 }; --Staff of Hale Magefire
+  { itemID = 13001, groupID = 1, refLootEntry = 7057 }; --Maiden's Circle
+  { itemID = 13002, groupID = 1, refLootEntry = 7057 }; --Lady Alizabeth's Pendant
+  { itemID = 13003, groupID = 1, refLootEntry = 7057 }; --Lord Alexander's Battle Axe
+  { itemID = 13004, groupID = 1, refLootEntry = 7057 }; --Torch of Austen
+  { itemID = 13005, groupID = 1, refLootEntry = 7057 }; --Amy's Blanket
+  { itemID = 13006, groupID = 1, refLootEntry = 7057 }; --Mass of McGowan
+  { itemID = 13007, groupID = 1, refLootEntry = 7057 }; --Mageflame Cloak
+  { itemID = 13008, groupID = 1, refLootEntry = 7057 }; --Dalewind Trousers
+  { itemID = 13009, groupID = 1, refLootEntry = 7057 }; --Cow King's Hide
+  { itemID = 13010, groupID = 1, refLootEntry = 7057 }; --Dreamsinger Legguards
+  { itemID = 13011, groupID = 1, refLootEntry = 7057 }; --Silver-lined Belt
+  { itemID = 13012, groupID = 1, refLootEntry = 7057 }; --Yorgen Bracers
+  { itemID = 13013, groupID = 1, refLootEntry = 7057 }; --Elder Wizard's Mantle
+  { itemID = 13014, groupID = 1, refLootEntry = 7057 }; --Axe of Rin'ji
+  { itemID = 13015, groupID = 1, refLootEntry = 7057 }; --Serathil
+  { itemID = 13016, groupID = 1, refLootEntry = 7057 }; --Killmaim
+  { itemID = 13017, groupID = 1, refLootEntry = 7057 }; --Hellslayer Battle Axe
+  { itemID = 13018, groupID = 1, refLootEntry = 7057 }; --Executioner's Cleaver
+  { itemID = 13019, groupID = 1, refLootEntry = 7057 }; --Harpyclaw Short Bow
+  { itemID = 13020, groupID = 1, refLootEntry = 7057 }; --Skystriker Bow
+  { itemID = 13021, groupID = 1, refLootEntry = 7057 }; --Needle Threader
+  { itemID = 13022, groupID = 1, refLootEntry = 7057 }; --Gryphonwing Long Bow
+  { itemID = 13023, groupID = 1, refLootEntry = 7057 }; --Eaglehorn Long Bow
+  { itemID = 13024, groupID = 1, refLootEntry = 7057 }; --Beazel's Basher
+  { itemID = 13025, groupID = 1, refLootEntry = 7057 }; --Deadwood Sledge
+  { itemID = 13026, groupID = 1, refLootEntry = 7057 }; --Heaven's Light
+  { itemID = 13027, groupID = 1, refLootEntry = 7057 }; --Bonesnapper
+  { itemID = 13028, groupID = 1, refLootEntry = 7057 }; --Bludstone Hammer
+  { itemID = 13029, groupID = 1, refLootEntry = 7057 }; --Umbral Crystal
+  { itemID = 13030, groupID = 1, refLootEntry = 7057 }; --Basilisk Bone
+  { itemID = 13031, groupID = 1, refLootEntry = 7057 }; --Orb of Mistmantle
+  { itemID = 13032, groupID = 1, refLootEntry = 7057 }; --Sword of Corruption
+  { itemID = 13033, groupID = 1, refLootEntry = 7057 }; --Zealot Blade
+  { itemID = 13034, groupID = 1, refLootEntry = 7057 }; --Speedsteel Rapier
+  { itemID = 13035, groupID = 1, refLootEntry = 7057 }; --Serpent Slicer
+  { itemID = 13036, groupID = 1, refLootEntry = 7057 }; --Assassination Blade
+  { itemID = 13037, groupID = 1, refLootEntry = 7057 }; --Crystalpine Stinger
+  { itemID = 13038, groupID = 1, refLootEntry = 7057 }; --Swiftwind
+  { itemID = 13039, groupID = 1, refLootEntry = 7057 }; --Skull Splitting Crossbow
+  { itemID = 13040, groupID = 1, refLootEntry = 7057 }; --Heartseeking Crossbow
+  { itemID = 13041, groupID = 1, refLootEntry = 7057 }; --Guardian Blade
+  { itemID = 13042, groupID = 1, refLootEntry = 7057 }; --Sword of the Magistrate
+  { itemID = 13043, groupID = 1, refLootEntry = 7057 }; --Blade of the Titans
+  { itemID = 13044, groupID = 1, refLootEntry = 7057 }; --Demonslayer
+  { itemID = 13045, groupID = 1, refLootEntry = 7057 }; --Viscous Hammer
+  { itemID = 13046, groupID = 1, refLootEntry = 7057 }; --Blanchard's Stout
+  { itemID = 13047, groupID = 1, refLootEntry = 7057 }; --Twig of the World Tree
+  { itemID = 13048, groupID = 1, refLootEntry = 7057 }; --Looming Gavel
+  { itemID = 13049, groupID = 1, refLootEntry = 7057 }; --Deanship Claymore
+  { itemID = 13051, groupID = 1, refLootEntry = 7057 }; --Witchfury
+  { itemID = 13052, groupID = 1, refLootEntry = 7057 }; --Warmonger
+  { itemID = 13053, groupID = 1, refLootEntry = 7057 }; --Doombringer
+  { itemID = 13054, groupID = 1, refLootEntry = 7057 }; --Grim Reaper
+  { itemID = 13055, groupID = 1, refLootEntry = 7057 }; --Bonechewer
+  { itemID = 13056, groupID = 1, refLootEntry = 7057 }; --Frenzied Striker
+  { itemID = 13057, groupID = 1, refLootEntry = 7057 }; --Bloodpike
+  { itemID = 13058, groupID = 1, refLootEntry = 7057 }; --Khoo's Point
+  { itemID = 13059, groupID = 1, refLootEntry = 7057 }; --Stoneraven
+  { itemID = 13060, groupID = 1, refLootEntry = 7057 }; --The Needler
+  { itemID = 13062, groupID = 1, refLootEntry = 7057 }; --Thunderwood
+  { itemID = 13063, groupID = 1, refLootEntry = 7057 }; --Starfaller
+  { itemID = 13064, groupID = 1, refLootEntry = 7057 }; --Jaina's Firestarter
+  { itemID = 13065, groupID = 1, refLootEntry = 7057 }; --Wand of Allistarj
+  { itemID = 13066, groupID = 1, refLootEntry = 7057 }; --Wyrmslayer Spaulders
+  { itemID = 13067, groupID = 1, refLootEntry = 7057 }; --Hydralick Armor
+  { itemID = 13068, groupID = 1, refLootEntry = 7057 }; --Obsidian Greaves
+  { itemID = 13070, groupID = 1, refLootEntry = 7057 }; --Sapphiron's Scale Boots
+  { itemID = 13071, groupID = 1, refLootEntry = 7057 }; --Plated Fist of Hakoo
+  { itemID = 13072, groupID = 1, refLootEntry = 7057 }; --Stonegrip Gauntlets
+  { itemID = 13073, groupID = 1, refLootEntry = 7057 }; --Mugthol's Helm
+  { itemID = 13074, groupID = 1, refLootEntry = 7057 }; --Golem Shard Leggings
+  { itemID = 13075, groupID = 1, refLootEntry = 7057 }; --Direwing Legguards
+  { itemID = 13076, groupID = 1, refLootEntry = 7057 }; --Giantslayer Bracers
+  { itemID = 13077, groupID = 1, refLootEntry = 7057 }; --Girdle of Uther
+  { itemID = 13079, groupID = 1, refLootEntry = 7057 }; --Shield of Thorsen
+  { itemID = 13081, groupID = 1, refLootEntry = 7057 }; --Skullance Shield
+  { itemID = 13082, groupID = 1, refLootEntry = 7057 }; --Mountainside Buckler
+  { itemID = 13083, groupID = 1, refLootEntry = 7057 }; --Garrett Family Crest
+  { itemID = 13084, groupID = 1, refLootEntry = 7057 }; --Kaleidoscope Chain
+  { itemID = 13085, groupID = 1, refLootEntry = 7057 }; --Horizon Choker
+  { itemID = 13087, groupID = 1, refLootEntry = 7057 }; --River Pride Choker
+  { itemID = 13088, groupID = 1, refLootEntry = 7057 }; --Gazlowe's Charm
+  { itemID = 13089, groupID = 1, refLootEntry = 7057 }; --Skibi's Pendant
+  { itemID = 13091, groupID = 1, refLootEntry = 7057 }; --Medallion of Grand Marshal Morris
+  { itemID = 13093, groupID = 1, refLootEntry = 7057 }; --Blush Ember Ring
+  { itemID = 13094, groupID = 1, refLootEntry = 7057 }; --The Queen's Jewel
+  { itemID = 13095, groupID = 1, refLootEntry = 7057 }; --Assault Band
+  { itemID = 13096, groupID = 1, refLootEntry = 7057 }; --Band of the Hierophant
+  { itemID = 13097, groupID = 1, refLootEntry = 7057 }; --Thunderbrow Ring
+  { itemID = 13099, groupID = 1, refLootEntry = 7057 }; --Moccasins of the White Hare
+  { itemID = 13100, groupID = 1, refLootEntry = 7057 }; --Furen's Boots
+  { itemID = 13101, groupID = 1, refLootEntry = 7057 }; --Wolfrunner Shoes
+  { itemID = 13102, groupID = 1, refLootEntry = 7057 }; --Cassandra's Grace
+  { itemID = 13103, groupID = 1, refLootEntry = 7057 }; --Pads of the Venom Spider
+  { itemID = 13105, groupID = 1, refLootEntry = 7057 }; --Sutarn's Ring
+  { itemID = 13106, groupID = 1, refLootEntry = 7057 }; --Glowing Magical Bracelets
+  { itemID = 13107, groupID = 1, refLootEntry = 7057 }; --Magiskull Cuffs
+  { itemID = 13108, groupID = 1, refLootEntry = 7057 }; --Tigerstrike Mantle
+  { itemID = 13109, groupID = 1, refLootEntry = 7057 }; --Blackflame Cape
+  { itemID = 13110, groupID = 1, refLootEntry = 7057 }; --Wolffear Harness
+  { itemID = 13111, groupID = 1, refLootEntry = 7057 }; --Sandals of the Insurgent
+  { itemID = 13112, groupID = 1, refLootEntry = 7057 }; --Winged Helm
+  { itemID = 13113, groupID = 1, refLootEntry = 7057 }; --Feathermoon Headdress
+  { itemID = 13114, groupID = 1, refLootEntry = 7057 }; --Troll's Bane Leggings
+  { itemID = 13115, groupID = 1, refLootEntry = 7057 }; --Sheepshear Mantle
+  { itemID = 13116, groupID = 1, refLootEntry = 7057 }; --Spaulders of the Unseen
+  { itemID = 13117, groupID = 1, refLootEntry = 7057 }; --Ogron's Sash
+  { itemID = 13118, groupID = 1, refLootEntry = 7057 }; --Serpentine Sash
+  { itemID = 13119, groupID = 1, refLootEntry = 7057 }; --Enchanted Kodo Bracers
+  { itemID = 13120, groupID = 1, refLootEntry = 7057 }; --Deepfury Bracers
+  { itemID = 13121, groupID = 1, refLootEntry = 7057 }; --Wing of the Whelpling
+  { itemID = 13122, groupID = 1, refLootEntry = 7057 }; --Dark Phantom Cape
+  { itemID = 13123, groupID = 1, refLootEntry = 7057 }; --Dreamwalker Armor
+  { itemID = 13124, groupID = 1, refLootEntry = 7057 }; --Ravasaur Scale Boots
+  { itemID = 13125, groupID = 1, refLootEntry = 7057 }; --Elven Chain Boots
+  { itemID = 13126, groupID = 1, refLootEntry = 7057 }; --Battlecaller Gauntlets
+  { itemID = 13127, groupID = 1, refLootEntry = 7057 }; --Frostreaver Crown
+  { itemID = 13128, groupID = 1, refLootEntry = 7057 }; --High Bergg Helm
+  { itemID = 13129, groupID = 1, refLootEntry = 7057 }; --Firemane Leggings
+  { itemID = 13130, groupID = 1, refLootEntry = 7057 }; --Windrunner Legguards
+  { itemID = 13131, groupID = 1, refLootEntry = 7057 }; --Sparkleshell Mantle
+  { itemID = 13132, groupID = 1, refLootEntry = 7057 }; --Skeletal Shoulders
+  { itemID = 13133, groupID = 1, refLootEntry = 7057 }; --Drakesfire Epaulets
+  { itemID = 13134, groupID = 1, refLootEntry = 7057 }; --Belt of the Gladiator
+  { itemID = 13135, groupID = 1, refLootEntry = 7057 }; --Lordly Armguards
+  { itemID = 13136, groupID = 1, refLootEntry = 7057 }; --Lil Timmy's Peashooter
+  { itemID = 13137, groupID = 1, refLootEntry = 7057 }; --Ironweaver
+  { itemID = 13138, groupID = 1, refLootEntry = 7057 }; --The Silencer
+  { itemID = 13139, groupID = 1, refLootEntry = 7057 }; --Guttbuster
+  { itemID = 13144, groupID = 1, refLootEntry = 7057 }; --Serenity Belt
+  { itemID = 13145, groupID = 1, refLootEntry = 7057 }; --Enormous Ogre Belt
+  { itemID = 13146, groupID = 1, refLootEntry = 7057 }; --Shell Launcher Shotgun
+  { itemID = 13181, groupID = 1, refLootEntry = 7057 }; --Demonskin Gloves
+  { itemID = 13182, groupID = 1, refLootEntry = 7057 }; --Phase Blade
+  { itemID = 13199, groupID = 1, refLootEntry = 7057 }; --Crushridge Bindings
+  { itemID = 13245, groupID = 1, refLootEntry = 7057 }; --Kresh's Back
+  { itemID = 13248, groupID = 1, refLootEntry = 7057 }; --Burstshot Harquebus
+  { itemID = 13254, groupID = 1, refLootEntry = 7057 }; --Astral Guard
+  { itemID = 13284, groupID = 1, refLootEntry = 7057 }; --Swiftdart Battleboots
+  { itemID = 13285, groupID = 1, refLootEntry = 7057 }; --The Blackrock Slicer
+  { itemID = 13286, groupID = 1, refLootEntry = 7057 }; --Rivenspike
+  { itemID = 13378, groupID = 1, refLootEntry = 7057 }; --Songbird Blouse
+  { itemID = 13379, groupID = 1, refLootEntry = 7057 }; --Piccolo of the Flaming Fire
+  { itemID = 13383, groupID = 1, refLootEntry = 7057 }; --Woollies of the Prancing Minstrel
+  { itemID = 13384, groupID = 1, refLootEntry = 7057 }; --Rainbow Girdle
+  { itemID = 13396, groupID = 1, refLootEntry = 7057 }; --Skul's Ghastly Touch
+  { itemID = 13404, groupID = 1, refLootEntry = 7057 }; --Mask of the Unforgiven
+  { itemID = 13405, groupID = 1, refLootEntry = 7057 }; --Wailing Nightbane Pauldrons
+  { itemID = 13408, groupID = 1, refLootEntry = 7057 }; --Soul Breaker
+  { itemID = 13409, groupID = 1, refLootEntry = 7057 }; --Tearfall Bracers
+  { itemID = 14145, groupID = 1, refLootEntry = 7057 }; --Cursed Felblade
+  { itemID = 14147, groupID = 1, refLootEntry = 7057 }; --Cavedweller Bracers
+  { itemID = 14148, groupID = 1, refLootEntry = 7057 }; --Crystalline Cuffs
+  { itemID = 14149, groupID = 1, refLootEntry = 7057 }; --Subterranean Cape
+  { itemID = 14150, groupID = 1, refLootEntry = 7057 }; --Robe of Evocation
+  { itemID = 14151, groupID = 1, refLootEntry = 7057 }; --Chanting Blade
+  { itemID = 16039, groupID = 1, refLootEntry = 7057 }; --Ta'Kierthan Songblade
+  { itemID = 16671, groupID = 1, refLootEntry = 7057 }; --Bindings of Elements
+  { itemID = 16673, groupID = 1, refLootEntry = 7057 }; --Cord of Elements
+  { itemID = 16680, groupID = 1, refLootEntry = 7057 }; --Beaststalker's Belt
+  { itemID = 16681, groupID = 1, refLootEntry = 7057 }; --Beaststalker's Bindings
+  { itemID = 16683, groupID = 1, refLootEntry = 7057 }; --Magister's Bindings
+  { itemID = 16685, groupID = 1, refLootEntry = 7057 }; --Magister's Belt
+  { itemID = 16696, groupID = 1, refLootEntry = 7057 }; --Devout Belt
+  { itemID = 16697, groupID = 1, refLootEntry = 7057 }; --Devout Bracers
+  { itemID = 16702, groupID = 1, refLootEntry = 7057 }; --Dreadmist Belt
+  { itemID = 16703, groupID = 1, refLootEntry = 7057 }; --Dreadmist Bracers
+  { itemID = 16710, groupID = 1, refLootEntry = 7057 }; --Shadowcraft Bracers
+  { itemID = 16713, groupID = 1, refLootEntry = 7057 }; --Shadowcraft Belt
+  { itemID = 16714, groupID = 1, refLootEntry = 7057 }; --Wildheart Bracers
+  { itemID = 16716, groupID = 1, refLootEntry = 7057 }; --Wildheart Belt
+  { itemID = 16722, groupID = 1, refLootEntry = 7057 }; --Lightforge Bracers
+  { itemID = 16723, groupID = 1, refLootEntry = 7057 }; --Lightforge Belt
+  { itemID = 16735, groupID = 1, refLootEntry = 7057 }; --Bracers of Valor
+  { itemID = 16736, groupID = 1, refLootEntry = 7057 }; --Belt of Valor
+  { itemID = 17050, groupID = 1, refLootEntry = 7057 }; --Chan's Imperial Robes
+  { itemID = 17054, groupID = 1, refLootEntry = 7057 }; --Joonho's Mercy
+  { itemID = 17055, groupID = 1, refLootEntry = 7057 }; --Changuk Smasher
+  { itemID = 17061, groupID = 1, refLootEntry = 7057 }; --Juno's Shadow
+  { itemID = 17707, groupID = 1, refLootEntry = 7057 }; --Gemshard Heart
+  { itemID = 17710, groupID = 1, refLootEntry = 7057 }; --Charstone Dirk
+  { itemID = 17711, groupID = 1, refLootEntry = 7057 }; --Elemental Rockridge Leggings
+  { itemID = 17713, groupID = 1, refLootEntry = 7057 }; --Blackstone Ring
+  { itemID = 17714, groupID = 1, refLootEntry = 7057 }; --Bracers of the Stone Princess
+  { itemID = 17715, groupID = 1, refLootEntry = 7057 }; --Eye of Theradras
+  { itemID = 17717, groupID = 1, refLootEntry = 7057 }; --Megashot Rifle
+  { itemID = 17718, groupID = 1, refLootEntry = 7057 }; --Gizlock's Hypertech Buckler
+  { itemID = 17719, groupID = 1, refLootEntry = 7057 }; --Inventor's Focal Sword
+  { itemID = 17728, groupID = 1, refLootEntry = 7057 }; --Albino Crocscale Boots
+  { itemID = 17730, groupID = 1, refLootEntry = 7057 }; --Gatorbite Axe
+  { itemID = 17732, groupID = 1, refLootEntry = 7057 }; --Rotgrip Mantle
+  { itemID = 17734, groupID = 1, refLootEntry = 7057 }; --Helm of the Mountain
+  { itemID = 17736, groupID = 1, refLootEntry = 7057 }; --Rockgrip Gauntlets
+  { itemID = 17737, groupID = 1, refLootEntry = 7057 }; --Cloud Stone
+  { itemID = 17738, groupID = 1, refLootEntry = 7057 }; --Claw of Celebras
+  { itemID = 17739, groupID = 1, refLootEntry = 7057 }; --Grovekeeper's Drape
+  { itemID = 17740, groupID = 1, refLootEntry = 7057 }; --Soothsayer's Headdress
+  { itemID = 17741, groupID = 1, refLootEntry = 7057 }; --Nature's Embrace
+  { itemID = 17742, groupID = 1, refLootEntry = 7057 }; --Fungus Shroud Armor
+  { itemID = 17744, groupID = 1, refLootEntry = 7057 }; --Heart of Noxxion
+  { itemID = 17745, groupID = 1, refLootEntry = 7057 }; --Noxious Shooter
+  { itemID = 17746, groupID = 1, refLootEntry = 7057 }; --Noxxion's Shackles
+  { itemID = 17748, groupID = 1, refLootEntry = 7057 }; --Vinerot Sandals
+  { itemID = 17749, groupID = 1, refLootEntry = 7057 }; --Phytoskin Spaulders
+  { itemID = 17750, groupID = 1, refLootEntry = 7057 }; --Chloromesh Girdle
+  { itemID = 17751, groupID = 1, refLootEntry = 7057 }; --Brusslehide Leggings
+  { itemID = 17752, groupID = 1, refLootEntry = 7057 }; --Satyr's Lash
+  { itemID = 17754, groupID = 1, refLootEntry = 7057 }; --Infernal Trickster Leggings
+  { itemID = 17755, groupID = 1, refLootEntry = 7057 }; --Satyrmane Sash
+  { itemID = 17766, groupID = 1, refLootEntry = 7057 }; --Princess Theradras' Scepter
+  { itemID = 17767, groupID = 1, refLootEntry = 7057 }; --Bloomsprout Headpiece
+  { itemID = 17943, groupID = 1, refLootEntry = 7057 }; --Fist of Stone
+  { itemID = 18043, groupID = 1, refLootEntry = 7057 }; --Coal Miner Boots
+  { itemID = 18044, groupID = 1, refLootEntry = 7057 }; --Hurley's Tankard
+  { itemID = 18082, groupID = 1, refLootEntry = 7057 }; --Zum'rah's Vexing Cane
+  { itemID = 18083, groupID = 1, refLootEntry = 7057 }; --Jumanza Grips
+  { itemID = 18289, groupID = 1, refLootEntry = 7057 }; --Barbed Thorn Necklace
+  { itemID = 18295, groupID = 1, refLootEntry = 7057 }; --Phasing Boots
+  { itemID = 18296, groupID = 1, refLootEntry = 7057 }; --Marksman Bands
+  { itemID = 18298, groupID = 1, refLootEntry = 7057 }; --Unbridled Leggings
+  { itemID = 18301, groupID = 1, refLootEntry = 7057 }; --Lethtendris's Wand
+  { itemID = 18302, groupID = 1, refLootEntry = 7057 }; --Band of Vigor
+  { itemID = 18305, groupID = 1, refLootEntry = 7057 }; --Breakwater Legguards
+  { itemID = 18306, groupID = 1, refLootEntry = 7057 }; --Gloves of Shadowy Mist
+  { itemID = 18307, groupID = 1, refLootEntry = 7057 }; --Riptide Shoes
+  { itemID = 18308, groupID = 1, refLootEntry = 7057 }; --Clever Hat
+  { itemID = 18311, groupID = 1, refLootEntry = 7057 }; --Quel'dorei Channeling Rod
+  { itemID = 18313, groupID = 1, refLootEntry = 7057 }; --Helm of Awareness
+  { itemID = 18317, groupID = 1, refLootEntry = 7057 }; --Tempest Talisman
+  { itemID = 18319, groupID = 1, refLootEntry = 7057 }; --Fervent Helm
+  { itemID = 18322, groupID = 1, refLootEntry = 7057 }; --Waterspout Boots
+  { itemID = 18323, groupID = 1, refLootEntry = 7057 }; --Satyr's Bow
+  { itemID = 18324, groupID = 1, refLootEntry = 7057 }; --Waveslicer
+  { itemID = 18325, groupID = 1, refLootEntry = 7057 }; --Felhide Cap
+  { itemID = 18338, groupID = 1, refLootEntry = 7057 }; --Wand of Arcane Potency
+  { itemID = 18340, groupID = 1, refLootEntry = 7057 }; --Eidolon Talisman
+  { itemID = 18344, groupID = 1, refLootEntry = 7057 }; --Stonebark Gauntlets
+  { itemID = 18475, groupID = 1, refLootEntry = 7057 }; --Oddly Magical Belt
+  { itemID = 18477, groupID = 1, refLootEntry = 7057 }; --Shaggy Leggings
+  { itemID = 18479, groupID = 1, refLootEntry = 7057 }; --Carrion Scorpid Helm
+  { itemID = 18483, groupID = 1, refLootEntry = 7057 }; --Mana Channeling Wand
+  { itemID = 18484, groupID = 1, refLootEntry = 7057 }; --Cho'Rush's Blade
+  { itemID = 18485, groupID = 1, refLootEntry = 7057 }; --Observer's Shield
+  { itemID = 18490, groupID = 1, refLootEntry = 7057 }; --Insightful Hood
+  { itemID = 18528, groupID = 1, refLootEntry = 7057 }; --Cyclone Spaulders
+  { itemID = 18530, groupID = 1, refLootEntry = 7057 }; --Ogre Forged Hauberk
+  { itemID = 18533, groupID = 1, refLootEntry = 7057 }; --Gordok Bracers of Power
+  { itemID = 18697, groupID = 1, refLootEntry = 7057 }; --Coldstone Slippers
+  { itemID = 18698, groupID = 1, refLootEntry = 7057 }; --Tattered Leather Hood
+  { itemID = 18699, groupID = 1, refLootEntry = 7057 }; --Icy Tomb Spaulders
+  { itemID = 18700, groupID = 1, refLootEntry = 7057 }; --Malefic Bracers
+  { itemID = 18709, groupID = 1, refLootEntry = 7057 }; --Arena Wristguards
+  { itemID = 18710, groupID = 1, refLootEntry = 7057 }; --Arena Bracers
+  { itemID = 18711, groupID = 1, refLootEntry = 7057 }; --Arena Bands
+  { itemID = 18712, groupID = 1, refLootEntry = 7057 }; --Arena Vambraces
+  { itemID = 18736, groupID = 1, refLootEntry = 7057 }; --Plaguehound Leggings
+  { itemID = 18741, groupID = 1, refLootEntry = 7057 }; --Morlune's Bracer
+  { itemID = 18742, groupID = 1, refLootEntry = 7057 }; --Stratholme Militia Shoulderguard
+  { itemID = 18743, groupID = 1, refLootEntry = 7057 }; --Gracious Cape
+  { itemID = 18744, groupID = 1, refLootEntry = 7057 }; --Plaguebat Fur Gloves
+  { itemID = 18745, groupID = 1, refLootEntry = 7057 }; --Sacred Cloth Leggings
+  { itemID = 19507, groupID = 1, refLootEntry = 7057 }; --Inquisitor's Shawl
+  { itemID = 19508, groupID = 1, refLootEntry = 7057 }; --Branded Leather Bracers
+  { itemID = 19509, groupID = 1, refLootEntry = 7057 }; --Dusty Mail Boots
+  { itemID = 21768, groupID = 1, refLootEntry = 7057 }; --Sapphire Signet
+  { itemID = 21791, groupID = 1, refLootEntry = 7057 }; --Living Emerald Pendant
+  { itemID = 22205, groupID = 1, refLootEntry = 7057 }; --Black Steel Bindings
+  { itemID = 22208, groupID = 1, refLootEntry = 7057 }; --Lavastone Hammer
+  { itemID = 22212, groupID = 1, refLootEntry = 7057 }; --Golem Fitted Pauldrons
+  { itemID = 22223, groupID = 1, refLootEntry = 7057 }; --Foreman's Head Protector
+  { itemID = 22234, groupID = 1, refLootEntry = 7057 }; --Mantle of Lost Hope
+  { itemID = 22240, groupID = 1, refLootEntry = 7057 }; --Greaves of Withering Despair
+  { itemID = 22241, groupID = 1, refLootEntry = 7057 }; --Dark Warder's Pauldrons
+  { itemID = 22242, groupID = 1, refLootEntry = 7057 }; --Verek's Leash
+  { itemID = 22245, groupID = 1, refLootEntry = 7057 }; --Soot Encrusted Footwear
+  { itemID = 22254, groupID = 1, refLootEntry = 7057 }; --Wand of Eternal Light
+  { itemID = 22255, groupID = 1, refLootEntry = 7057 }; --Magma Forged Band
+  { itemID = 22256, groupID = 1, refLootEntry = 7057 }; --Mana Shaping Handwraps
+  { itemID = 22257, groupID = 1, refLootEntry = 7057 }; --Bloodclot Band
+  { itemID = 22266, groupID = 1, refLootEntry = 7057 }; --Flarethorn
+  { itemID = 22270, groupID = 1, refLootEntry = 7057 }; --Entrenching Boots
+  { itemID = 22271, groupID = 1, refLootEntry = 7057 }; --Leggings of Frenzied Magic
+  { itemID = 22275, groupID = 1, refLootEntry = 7057 }; --Firemoss Boots
+  { itemID = 22395, groupID = 1, refLootEntry = 7057 }; --Totem of Rage
+  { itemID = 22397, groupID = 1, refLootEntry = 7057 }; --Idol of Ferocity
+  { itemID = 22400, groupID = 1, refLootEntry = 7057 }; --Libram of Truth
+  { itemID = 23168, groupID = 1, refLootEntry = 7057 }; --Scorn's Focal Dagger
+  { itemID = 23169, groupID = 1, refLootEntry = 7057 }; --Scorn's Icy Choker
+  { itemID = 23170, groupID = 1, refLootEntry = 7057 }; --The Frozen Clutch
+  { itemID = 23171, groupID = 1, refLootEntry = 7057 }; --The Axe of Severing
+  { itemID = 23173, groupID = 1, refLootEntry = 7057 }; --Abomination Skin Leggings
+  { itemID = 23177, groupID = 1, refLootEntry = 7057 }; --Lady Falther'ess' Finger
+  { itemID = 23178, groupID = 1, refLootEntry = 7057 }; --Mantle of Lady Falther'ess
+  { itemID = 23197, groupID = 1, refLootEntry = 7057 }; --Idol of the Moon
+  { itemID = 23198, groupID = 1, refLootEntry = 7057 }; --Idol of Brutality
+  { itemID = 23199, groupID = 1, refLootEntry = 7057 }; --Totem of the Storm
+  { itemID = 23203, groupID = 1, refLootEntry = 7057 }; --Libram of Fervor
+  { itemID = 24222, groupID = 1, refLootEntry = 7057 }; --The Shadowfoot Stabber
+  { itemID = 28972, groupID = 1, refLootEntry = 7057 }; --Flightblade Throwing Axe
+  { itemID = 51964, groupID = 1, refLootEntry = 7057 }; --Vigorous Belt
+  { itemID = 51965, groupID = 1, refLootEntry = 7057 }; --Vigorous Handguards
+  { itemID = 51966, groupID = 1, refLootEntry = 7057 }; --Vigorous Spaulders
+  { itemID = 51968, groupID = 1, refLootEntry = 7057 }; --Enumerated Wrap
+  { itemID = 51973, groupID = 1, refLootEntry = 7057 }; --Enumerated Handwraps
+  { itemID = 51974, groupID = 1, refLootEntry = 7057 }; --Enumerated Shoulderpads
+  { itemID = 51976, groupID = 1, refLootEntry = 7057 }; --Earthbound Shoulderguards
+  { itemID = 51978, groupID = 1, refLootEntry = 7057 }; --Earthbound Girdle
+  { itemID = 51980, groupID = 1, refLootEntry = 7057 }; --Earthbound Handgrips
+  { itemID = 51984, groupID = 1, refLootEntry = 7057 }; --Stalwart Shoulderpads
+  { itemID = 51992, groupID = 1, refLootEntry = 7057 }; --Tumultuous Ring
+  { itemID = 51994, groupID = 1, refLootEntry = 7057 }; --Tumultuous Cloak
+  { itemID = 51996, groupID = 1, refLootEntry = 7057 }; --Tumultuous Necklace
+  { itemID = 269280, groupID = 1, refLootEntry = 7057 }; --Blade of the Wretched
+  { itemID = 269456, groupID = 1, refLootEntry = 7057 }; --Fist of the Damned
+  { itemID = 269644, groupID = 1, refLootEntry = 7057 }; --Eater of the Dead
+  { itemID = 269747, groupID = 1, refLootEntry = 7057 }; --Atal'ai Spaulders
+  { itemID = 269807, groupID = 1, refLootEntry = 7057 }; --Atal'ai Breastplate
+  { itemID = 269850, groupID = 1, refLootEntry = 7057 }; --Atal'ai Leggings
+  { itemID = 272892, groupID = 1, refLootEntry = 7057 }; --Atal'ai Boots
+  { itemID = 272967, groupID = 1, refLootEntry = 7057 }; --Atal'ai Gloves
+  { itemID = 273130, groupID = 1, refLootEntry = 7057 }; --Atal'ai Girdle
+  { itemID = 3831, groupID = 1, refLootEntry = 7057 }; --Recipe: Major Troll's Blood Elixir
+  { itemID = 17780, groupID = 1, refLootEntry = 7057 }; --Blade of Eternal Darkness
+  { itemID = 20976, groupID = 1, refLootEntry = 7057 }; --Design: Citrine Pendant of Golden Healing
+  { itemID = 34227, groupID = 1, refLootEntry = 7057 }; --Deadman's Hand
   { itemID = 58852, groupID = 0, refLootEntry = 7057 }; --Sigil of Digmaster Shovelphlange
   { itemID = 1278048, groupID = 1, refLootEntry = 7057 }; --Case of Fortune: Talents
   { itemID = 1278049, groupID = 1, refLootEntry = 7057 }; --Case of Fortune
@@ -362,26 +2201,188 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 9453, groupID = 1, refLootEntry = 7079 }; --Toxic Revenger
   { itemID = 9454, groupID = 1, refLootEntry = 7079 }; --Acidic Walkers
   { itemID = 58853, groupID = 0, refLootEntry = 7079 }; --Sigil of Viscous Fallout
+  { itemID = 9410, groupID = 1, refLootEntry = 7206 }; --Cragfists
+  { itemID = 9411, groupID = 1, refLootEntry = 7206 }; --Rockshard Pauldrons
   { itemID = 58857, groupID = 0, refLootEntry = 7206 }; --Sigil of Ancient Stone Keeper
-  { itemID = 2021814, groupID = 0, refLootEntry = 7228 }; --Dungeon Spoils
-  { itemID = 9523, groupID = 0, refLootEntry = 7267 }; --Troll Temper
+  { itemID = 9407, groupID = 1, refLootEntry = 7228 }; --Stoneweaver Leggings
+  { itemID = 9408, groupID = 1, refLootEntry = 7228 }; --Ironshod Bludgeon
+  { itemID = 9409, groupID = 1, refLootEntry = 7228 }; --Ironaya's Bracers
+  { itemID = 9476, groupID = 1, refLootEntry = 7267 }; --Big Bad Pauldrons
+  { itemID = 9477, groupID = 1, refLootEntry = 7267 }; --The Chief's Enforcer
+  { itemID = 9478, groupID = 1, refLootEntry = 7267 }; --Ripsaw
+  { itemID = 9479, groupID = 1, refLootEntry = 7267 }; --Embrace of the Lycan
+  { itemID = 11086, groupID = 1, refLootEntry = 7267 }; --Jang'thraze the Protector
   { itemID = 58859, groupID = 0, refLootEntry = 7267 }; --Sigil of Chief Ukorz Sandscalp
-  { itemID = 2021814, groupID = 0, refLootEntry = 7267 }; --Dungeon Spoils
+  { itemID = 18082, groupID = 1, refLootEntry = 7271 }; --Zum'rah's Vexing Cane
+  { itemID = 18083, groupID = 1, refLootEntry = 7271 }; --Jumanza Grips
   { itemID = 58861, groupID = 0, refLootEntry = 7271 }; --Sigil of Witch Doctor Zum'rah
+  { itemID = 2040, groupID = 0, refLootEntry = 7272 }; --Troll Protector
+  { itemID = 3869, groupID = 0, refLootEntry = 7272 }; --Plans: Shadow Crescent Axe
+  { itemID = 3874, groupID = 0, refLootEntry = 7272 }; --Plans: Polished Steel Boots
+  { itemID = 3875, groupID = 0, refLootEntry = 7272 }; --Plans: Golden Scale Boots
+  { itemID = 4300, groupID = 0, refLootEntry = 7272 }; --Pattern: Guardian Leather Bracers
+  { itemID = 4416, groupID = 0, refLootEntry = 7272 }; --Schematic: Goblin Land Mine
+  { itemID = 4417, groupID = 0, refLootEntry = 7272 }; --Schematic: Large Seaforium Charge
   { itemID = 4637, groupID = 0, refLootEntry = 7272 }; --Steel Lockbox
   { itemID = 4638, groupID = 0, refLootEntry = 7272 }; --Reinforced Steel Lockbox
+  { itemID = 5616, groupID = 0, refLootEntry = 7272 }; --Gutwrencher
+  { itemID = 5974, groupID = 0, refLootEntry = 7272 }; --Pattern: Guardian Cloak
+  { itemID = 7086, groupID = 0, refLootEntry = 7272 }; --Pattern: Earthen Silk Belt
+  { itemID = 7989, groupID = 0, refLootEntry = 7272 }; --Plans: Mithril Spurs
+  { itemID = 7990, groupID = 0, refLootEntry = 7272 }; --Plans: Heavy Mithril Helm
+  { itemID = 7992, groupID = 0, refLootEntry = 7272 }; --Plans: Blue Glittering Axe
+  { itemID = 7993, groupID = 0, refLootEntry = 7272 }; --Plans: Dazzling Mithril Rapier
+  { itemID = 8386, groupID = 0, refLootEntry = 7272 }; --Pattern: Big Voodoo Robe
+  { itemID = 8387, groupID = 0, refLootEntry = 7272 }; --Pattern: Big Voodoo Mask
+  { itemID = 8389, groupID = 0, refLootEntry = 7272 }; --Pattern: Big Voodoo Pants
+  { itemID = 8390, groupID = 0, refLootEntry = 7272 }; --Pattern: Big Voodoo Cloak
   { itemID = 8623, groupID = 0, refLootEntry = 7272 }; --OOX-17\/TN Distress Beacon
-  { itemID = 9523, groupID = 0, refLootEntry = 7272 }; --Troll Temper
-  { itemID = 10660, groupID = 0, refLootEntry = 7272 }; --First Mosh'aru Tablet
-  { itemID = 98005, groupID = 1, refLootEntry = 7272 }; --Weathered Treasure Map
+  { itemID = 9293, groupID = 0, refLootEntry = 7272 }; --Recipe: Magic Resistance Potion
+  { itemID = 9295, groupID = 0, refLootEntry = 7272 }; --Recipe: Invisibility Potion
+  { itemID = 9298, groupID = 0, refLootEntry = 7272 }; --Recipe: Elixir of Giants
+  { itemID = 9480, groupID = 0, refLootEntry = 7272 }; --Eyegouger
+  { itemID = 9482, groupID = 0, refLootEntry = 7272 }; --Witch Doctor's Cane
+  { itemID = 9483, groupID = 0, refLootEntry = 7272 }; --Flaming Incinerator
+  { itemID = 9511, groupID = 0, refLootEntry = 7272 }; --Bloodletter Scalpel
+  { itemID = 9512, groupID = 0, refLootEntry = 7272 }; --Blackmetal Cape
+  { itemID = 10300, groupID = 0, refLootEntry = 7272 }; --Pattern: Red Mageweave Vest
+  { itemID = 10302, groupID = 0, refLootEntry = 7272 }; --Pattern: Red Mageweave Pants
+  { itemID = 10312, groupID = 0, refLootEntry = 7272 }; --Pattern: Red Mageweave Gloves
+  { itemID = 10315, groupID = 0, refLootEntry = 7272 }; --Pattern: Red Mageweave Shoulders
+  { itemID = 10603, groupID = 0, refLootEntry = 7272 }; --Schematic: Catseye Ultra Goggles
+  { itemID = 10604, groupID = 0, refLootEntry = 7272 }; --Schematic: Mithril Heavy-bore Rifle
+  { itemID = 10606, groupID = 0, refLootEntry = 7272 }; --Schematic: Parachute Cloak
+  { itemID = 11224, groupID = 0, refLootEntry = 7272 }; --Formula: Enchant Shield - Frost Resistance
+  { itemID = 12683, groupID = 0, refLootEntry = 7272 }; --Plans: Thorium Belt
+  { itemID = 12684, groupID = 0, refLootEntry = 7272 }; --Plans: Thorium Bracers
+  { itemID = 12691, groupID = 0, refLootEntry = 7272 }; --Plans: Wildthorn Mail
+  { itemID = 1713, groupID = 1, refLootEntry = 7272 }; --Ankh of Life
+  { itemID = 1715, groupID = 1, refLootEntry = 7272 }; --Polished Jazeraint Armor
+  { itemID = 2815, groupID = 1, refLootEntry = 7272 }; --Curve-bladed Ripper
+  { itemID = 9359, groupID = 1, refLootEntry = 7272 }; --Wirt's Third Leg
+  { itemID = 13026, groupID = 1, refLootEntry = 7272 }; --Heaven's Light
+  { itemID = 13051, groupID = 1, refLootEntry = 7272 }; --Witchfury
+  { itemID = 13058, groupID = 1, refLootEntry = 7272 }; --Khoo's Point
+  { itemID = 13071, groupID = 1, refLootEntry = 7272 }; --Plated Fist of Hakoo
+  { itemID = 13095, groupID = 1, refLootEntry = 7272 }; --Assault Band
+  { itemID = 13100, groupID = 1, refLootEntry = 7272 }; --Furen's Boots
+  { itemID = 13115, groupID = 1, refLootEntry = 7272 }; --Sheepshear Mantle
+  { itemID = 13145, groupID = 1, refLootEntry = 7272 }; --Enormous Ogre Belt
+  { itemID = 754, groupID = 1, refLootEntry = 7272 }; --Shortsword of Vengeance
+  { itemID = 1720, groupID = 1, refLootEntry = 7272 }; --Tanglewood Staff
+  { itemID = 4090, groupID = 1, refLootEntry = 7272 }; --Mug O' Hurt
+  { itemID = 4091, groupID = 1, refLootEntry = 7272 }; --Widowmaker
+  { itemID = 9433, groupID = 1, refLootEntry = 7272 }; --Forgotten Wraps
+  { itemID = 13021, groupID = 1, refLootEntry = 7272 }; --Needle Threader
+  { itemID = 13074, groupID = 1, refLootEntry = 7272 }; --Golem Shard Leggings
+  { itemID = 13082, groupID = 1, refLootEntry = 7272 }; --Mountainside Buckler
+  { itemID = 13102, groupID = 1, refLootEntry = 7272 }; --Cassandra's Grace
+  { itemID = 13128, groupID = 1, refLootEntry = 7272 }; --High Bergg Helm
+  { itemID = 13018, groupID = 1, refLootEntry = 7272 }; --Executioner's Cleaver
+  { itemID = 13035, groupID = 1, refLootEntry = 7272 }; --Serpent Slicer
+  { itemID = 13039, groupID = 1, refLootEntry = 7272 }; --Skull Splitting Crossbow
+  { itemID = 13043, groupID = 1, refLootEntry = 7272 }; --Blade of the Titans
+  { itemID = 13055, groupID = 1, refLootEntry = 7272 }; --Bonechewer
+  { itemID = 13076, groupID = 1, refLootEntry = 7272 }; --Giantslayer Bracers
+  { itemID = 13089, groupID = 1, refLootEntry = 7272 }; --Skibi's Pendant
+  { itemID = 13109, groupID = 1, refLootEntry = 7272 }; --Blackflame Cape
+  { itemID = 13112, groupID = 1, refLootEntry = 7272 }; --Winged Helm
+  { itemID = 13134, groupID = 1, refLootEntry = 7272 }; --Belt of the Gladiator
   { itemID = 58862, groupID = 0, refLootEntry = 7272 }; --Sigil of Theka the Martyr
-  { itemID = 8707, groupID = 0, refLootEntry = 7273 }; --Gahz'rilla's Electrified Scale
+  { itemID = 9467, groupID = 1, refLootEntry = 7273 }; --Gahz'rilla Fang
+  { itemID = 9469, groupID = 1, refLootEntry = 7273 }; --Gahz'rilla Scale Armor
   { itemID = 58863, groupID = 0, refLootEntry = 7273 }; --Sigil of Gahz'rilla
+  { itemID = 2040, groupID = 0, refLootEntry = 7274 }; --Troll Protector
+  { itemID = 3395, groupID = 0, refLootEntry = 7274 }; --Recipe: Limited Invulnerability Potion
   { itemID = 4638, groupID = 0, refLootEntry = 7274 }; --Reinforced Steel Lockbox
+  { itemID = 5616, groupID = 0, refLootEntry = 7274 }; --Gutwrencher
+  { itemID = 6440, groupID = 0, refLootEntry = 7274 }; --Brainlash
+  { itemID = 7975, groupID = 0, refLootEntry = 7274 }; --Plans: Heavy Mithril Pants
+  { itemID = 7989, groupID = 0, refLootEntry = 7274 }; --Plans: Mithril Spurs
+  { itemID = 7990, groupID = 0, refLootEntry = 7274 }; --Plans: Heavy Mithril Helm
+  { itemID = 7993, groupID = 0, refLootEntry = 7274 }; --Plans: Dazzling Mithril Rapier
+  { itemID = 8029, groupID = 0, refLootEntry = 7274 }; --Plans: Wicked Mithril Blade
+  { itemID = 8387, groupID = 0, refLootEntry = 7274 }; --Pattern: Big Voodoo Mask
+  { itemID = 8389, groupID = 0, refLootEntry = 7274 }; --Pattern: Big Voodoo Pants
+  { itemID = 8390, groupID = 0, refLootEntry = 7274 }; --Pattern: Big Voodoo Cloak
   { itemID = 8623, groupID = 0, refLootEntry = 7274 }; --OOX-17\/TN Distress Beacon
-  { itemID = 9523, groupID = 0, refLootEntry = 7274 }; --Troll Temper
-  { itemID = 98005, groupID = 1, refLootEntry = 7274 }; --Weathered Treasure Map
+  { itemID = 9295, groupID = 0, refLootEntry = 7274 }; --Recipe: Invisibility Potion
+  { itemID = 9298, groupID = 0, refLootEntry = 7274 }; --Recipe: Elixir of Giants
+  { itemID = 9480, groupID = 0, refLootEntry = 7274 }; --Eyegouger
+  { itemID = 9482, groupID = 0, refLootEntry = 7274 }; --Witch Doctor's Cane
+  { itemID = 9483, groupID = 0, refLootEntry = 7274 }; --Flaming Incinerator
+  { itemID = 9511, groupID = 0, refLootEntry = 7274 }; --Bloodletter Scalpel
+  { itemID = 9512, groupID = 0, refLootEntry = 7274 }; --Blackmetal Cape
+  { itemID = 10300, groupID = 0, refLootEntry = 7274 }; --Pattern: Red Mageweave Vest
+  { itemID = 10302, groupID = 0, refLootEntry = 7274 }; --Pattern: Red Mageweave Pants
+  { itemID = 10312, groupID = 0, refLootEntry = 7274 }; --Pattern: Red Mageweave Gloves
+  { itemID = 10315, groupID = 0, refLootEntry = 7274 }; --Pattern: Red Mageweave Shoulders
+  { itemID = 10320, groupID = 0, refLootEntry = 7274 }; --Pattern: Red Mageweave Headband
+  { itemID = 10606, groupID = 0, refLootEntry = 7274 }; --Schematic: Parachute Cloak
+  { itemID = 11204, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Bracer - Greater Spirit
+  { itemID = 11208, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Weapon - Demonslaying
+  { itemID = 11225, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Bracer - Greater Stamina
+  { itemID = 11226, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Gloves - Riding Skill
+  { itemID = 12682, groupID = 0, refLootEntry = 7274 }; --Plans: Thorium Armor
+  { itemID = 12689, groupID = 0, refLootEntry = 7274 }; --Plans: Radiant Breastplate
+  { itemID = 12691, groupID = 0, refLootEntry = 7274 }; --Plans: Wildthorn Mail
+  { itemID = 14467, groupID = 0, refLootEntry = 7274 }; --Pattern: Frostweave Robe
+  { itemID = 14474, groupID = 0, refLootEntry = 7274 }; --Pattern: Frostweave Gloves
+  { itemID = 14484, groupID = 0, refLootEntry = 7274 }; --Pattern: Brightcloth Cloak
+  { itemID = 15731, groupID = 0, refLootEntry = 7274 }; --Pattern: Runic Leather Gauntlets
+  { itemID = 16043, groupID = 0, refLootEntry = 7274 }; --Schematic: Thorium Rifle
+  { itemID = 16215, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Boots - Greater Stamina
+  { itemID = 16218, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Bracer - Superior Spirit
+  { itemID = 16220, groupID = 0, refLootEntry = 7274 }; --Formula: Enchant Boots - Spirit
+  { itemID = 1713, groupID = 1, refLootEntry = 7274 }; --Ankh of Life
+  { itemID = 1715, groupID = 1, refLootEntry = 7274 }; --Polished Jazeraint Armor
+  { itemID = 2815, groupID = 1, refLootEntry = 7274 }; --Curve-bladed Ripper
+  { itemID = 9359, groupID = 1, refLootEntry = 7274 }; --Wirt's Third Leg
+  { itemID = 13026, groupID = 1, refLootEntry = 7274 }; --Heaven's Light
+  { itemID = 13051, groupID = 1, refLootEntry = 7274 }; --Witchfury
+  { itemID = 13058, groupID = 1, refLootEntry = 7274 }; --Khoo's Point
+  { itemID = 13071, groupID = 1, refLootEntry = 7274 }; --Plated Fist of Hakoo
+  { itemID = 13095, groupID = 1, refLootEntry = 7274 }; --Assault Band
+  { itemID = 13100, groupID = 1, refLootEntry = 7274 }; --Furen's Boots
+  { itemID = 13115, groupID = 1, refLootEntry = 7274 }; --Sheepshear Mantle
+  { itemID = 13145, groupID = 1, refLootEntry = 7274 }; --Enormous Ogre Belt
+  { itemID = 754, groupID = 1, refLootEntry = 7274 }; --Shortsword of Vengeance
+  { itemID = 1720, groupID = 1, refLootEntry = 7274 }; --Tanglewood Staff
+  { itemID = 4090, groupID = 1, refLootEntry = 7274 }; --Mug O' Hurt
+  { itemID = 4091, groupID = 1, refLootEntry = 7274 }; --Widowmaker
+  { itemID = 9433, groupID = 1, refLootEntry = 7274 }; --Forgotten Wraps
+  { itemID = 13021, groupID = 1, refLootEntry = 7274 }; --Needle Threader
+  { itemID = 13074, groupID = 1, refLootEntry = 7274 }; --Golem Shard Leggings
+  { itemID = 13082, groupID = 1, refLootEntry = 7274 }; --Mountainside Buckler
+  { itemID = 13102, groupID = 1, refLootEntry = 7274 }; --Cassandra's Grace
+  { itemID = 13128, groupID = 1, refLootEntry = 7274 }; --High Bergg Helm
+  { itemID = 13018, groupID = 1, refLootEntry = 7274 }; --Executioner's Cleaver
+  { itemID = 13035, groupID = 1, refLootEntry = 7274 }; --Serpent Slicer
+  { itemID = 13039, groupID = 1, refLootEntry = 7274 }; --Skull Splitting Crossbow
+  { itemID = 13043, groupID = 1, refLootEntry = 7274 }; --Blade of the Titans
+  { itemID = 13055, groupID = 1, refLootEntry = 7274 }; --Bonechewer
+  { itemID = 13076, groupID = 1, refLootEntry = 7274 }; --Giantslayer Bracers
+  { itemID = 13089, groupID = 1, refLootEntry = 7274 }; --Skibi's Pendant
+  { itemID = 13109, groupID = 1, refLootEntry = 7274 }; --Blackflame Cape
+  { itemID = 13112, groupID = 1, refLootEntry = 7274 }; --Winged Helm
+  { itemID = 13134, groupID = 1, refLootEntry = 7274 }; --Belt of the Gladiator
+  { itemID = 871, groupID = 1, refLootEntry = 7274 }; --Flurry Axe
+  { itemID = 940, groupID = 1, refLootEntry = 7274 }; --Robes of Insight
+  { itemID = 1169, groupID = 1, refLootEntry = 7274 }; --Blackskull Shield
+  { itemID = 1447, groupID = 1, refLootEntry = 7274 }; --Ring of Saviors
+  { itemID = 943, groupID = 1, refLootEntry = 7274 }; --Warden Staff
+  { itemID = 2100, groupID = 1, refLootEntry = 7274 }; --Precisely Calibrated Boomstick
+  { itemID = 2291, groupID = 1, refLootEntry = 7274 }; --Kang the Decapitator
+  { itemID = 14551, groupID = 1, refLootEntry = 7274 }; --Edgemaster's Handguards
+  { itemID = 9470, groupID = 1, refLootEntry = 7275 }; --Bad Mojo Mask
+  { itemID = 9473, groupID = 1, refLootEntry = 7275 }; --Jinxed Hoodoo Skin
+  { itemID = 9474, groupID = 1, refLootEntry = 7275 }; --Jinxed Hoodoo Kilt
+  { itemID = 9475, groupID = 1, refLootEntry = 7275 }; --Diabolic Skiver
   { itemID = 58868, groupID = 0, refLootEntry = 7275 }; --Sigil of Shadowpriest Sezz'ziz
+  { itemID = 9412, groupID = 1, refLootEntry = 7291 }; --Galgann's Fireblaster
+  { itemID = 9419, groupID = 1, refLootEntry = 7291 }; --Galgann's Firehammer
+  { itemID = 11310, groupID = 1, refLootEntry = 7291 }; --Flameseer Mantle
+  { itemID = 11311, groupID = 1, refLootEntry = 7291 }; --Emberscale Cape
   { itemID = 58869, groupID = 0, refLootEntry = 7291 }; --Sigil of Galgann Firehammer
   { itemID = 10758, groupID = 1, refLootEntry = 7354 }; --X'caliboar
   { itemID = 10767, groupID = 1, refLootEntry = 7354 }; --Savage Boar's Guard
@@ -404,21 +2405,195 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 11429, groupID = 1, refLootEntry = 7529 }; --Desecrator
   { itemID = 11430, groupID = 1, refLootEntry = 7529 }; --Soul Essence Vial
   { itemID = 1615011, groupID = 0, refLootEntry = 7529 }; --Treasures of Azeroth
+  { itemID = 3874, groupID = 0, refLootEntry = 7604 }; --Plans: Polished Steel Boots
   { itemID = 4637, groupID = 0, refLootEntry = 7604 }; --Steel Lockbox
+  { itemID = 5616, groupID = 0, refLootEntry = 7604 }; --Gutwrencher
+  { itemID = 7085, groupID = 0, refLootEntry = 7604 }; --Pattern: Azure Shoulders
+  { itemID = 7086, groupID = 0, refLootEntry = 7604 }; --Pattern: Earthen Silk Belt
+  { itemID = 7992, groupID = 0, refLootEntry = 7604 }; --Plans: Blue Glittering Axe
+  { itemID = 8029, groupID = 0, refLootEntry = 7604 }; --Plans: Wicked Mithril Blade
+  { itemID = 8384, groupID = 0, refLootEntry = 7604 }; --Pattern: Comfortable Leather Hat
+  { itemID = 8386, groupID = 0, refLootEntry = 7604 }; --Pattern: Big Voodoo Robe
+  { itemID = 8387, groupID = 0, refLootEntry = 7604 }; --Pattern: Big Voodoo Mask
+  { itemID = 8389, groupID = 0, refLootEntry = 7604 }; --Pattern: Big Voodoo Pants
+  { itemID = 8390, groupID = 0, refLootEntry = 7604 }; --Pattern: Big Voodoo Cloak
   { itemID = 8623, groupID = 0, refLootEntry = 7604 }; --OOX-17\/TN Distress Beacon
-  { itemID = 98005, groupID = 1, refLootEntry = 7604 }; --Weathered Treasure Map
+  { itemID = 9293, groupID = 0, refLootEntry = 7604 }; --Recipe: Magic Resistance Potion
+  { itemID = 9482, groupID = 0, refLootEntry = 7604 }; --Witch Doctor's Cane
+  { itemID = 10300, groupID = 0, refLootEntry = 7604 }; --Pattern: Red Mageweave Vest
+  { itemID = 10301, groupID = 0, refLootEntry = 7604 }; --Pattern: White Bandit Mask
+  { itemID = 10302, groupID = 0, refLootEntry = 7604 }; --Pattern: Red Mageweave Pants
+  { itemID = 10312, groupID = 0, refLootEntry = 7604 }; --Pattern: Red Mageweave Gloves
+  { itemID = 10320, groupID = 0, refLootEntry = 7604 }; --Pattern: Red Mageweave Headband
+  { itemID = 10603, groupID = 0, refLootEntry = 7604 }; --Schematic: Catseye Ultra Goggles
+  { itemID = 10604, groupID = 0, refLootEntry = 7604 }; --Schematic: Mithril Heavy-bore Rifle
+  { itemID = 10605, groupID = 0, refLootEntry = 7604 }; --Schematic: Spellpower Goggles Xtreme
+  { itemID = 11202, groupID = 0, refLootEntry = 7604 }; --Formula: Enchant Shield - Stamina
+  { itemID = 11204, groupID = 0, refLootEntry = 7604 }; --Formula: Enchant Bracer - Greater Spirit
+  { itemID = 11208, groupID = 0, refLootEntry = 7604 }; --Formula: Enchant Weapon - Demonslaying
+  { itemID = 11225, groupID = 0, refLootEntry = 7604 }; --Formula: Enchant Bracer - Greater Stamina
+  { itemID = 1714, groupID = 1, refLootEntry = 7604 }; --Necklace of Calisea
+  { itemID = 1718, groupID = 1, refLootEntry = 7604 }; --Basilisk Hide Pants
+  { itemID = 1722, groupID = 1, refLootEntry = 7604 }; --Thornstone Sledgehammer
+  { itemID = 2802, groupID = 1, refLootEntry = 7604 }; --Blazing Emblem
+  { itemID = 13029, groupID = 1, refLootEntry = 7604 }; --Umbral Crystal
+  { itemID = 13064, groupID = 1, refLootEntry = 7604 }; --Jaina's Firestarter
+  { itemID = 13117, groupID = 1, refLootEntry = 7604 }; --Ogron's Sash
+  { itemID = 13132, groupID = 1, refLootEntry = 7604 }; --Skeletal Shoulders
+  { itemID = 13138, groupID = 1, refLootEntry = 7604 }; --The Silencer
+  { itemID = 1713, groupID = 1, refLootEntry = 7604 }; --Ankh of Life
+  { itemID = 1715, groupID = 1, refLootEntry = 7604 }; --Polished Jazeraint Armor
+  { itemID = 2815, groupID = 1, refLootEntry = 7604 }; --Curve-bladed Ripper
+  { itemID = 9359, groupID = 1, refLootEntry = 7604 }; --Wirt's Third Leg
+  { itemID = 13026, groupID = 1, refLootEntry = 7604 }; --Heaven's Light
+  { itemID = 13051, groupID = 1, refLootEntry = 7604 }; --Witchfury
+  { itemID = 13058, groupID = 1, refLootEntry = 7604 }; --Khoo's Point
+  { itemID = 13071, groupID = 1, refLootEntry = 7604 }; --Plated Fist of Hakoo
+  { itemID = 13095, groupID = 1, refLootEntry = 7604 }; --Assault Band
+  { itemID = 13100, groupID = 1, refLootEntry = 7604 }; --Furen's Boots
+  { itemID = 13115, groupID = 1, refLootEntry = 7604 }; --Sheepshear Mantle
+  { itemID = 13145, groupID = 1, refLootEntry = 7604 }; --Enormous Ogre Belt
+  { itemID = 754, groupID = 1, refLootEntry = 7604 }; --Shortsword of Vengeance
+  { itemID = 1720, groupID = 1, refLootEntry = 7604 }; --Tanglewood Staff
+  { itemID = 4090, groupID = 1, refLootEntry = 7604 }; --Mug O' Hurt
+  { itemID = 4091, groupID = 1, refLootEntry = 7604 }; --Widowmaker
+  { itemID = 9433, groupID = 1, refLootEntry = 7604 }; --Forgotten Wraps
+  { itemID = 13021, groupID = 1, refLootEntry = 7604 }; --Needle Threader
+  { itemID = 13074, groupID = 1, refLootEntry = 7604 }; --Golem Shard Leggings
+  { itemID = 13082, groupID = 1, refLootEntry = 7604 }; --Mountainside Buckler
+  { itemID = 13102, groupID = 1, refLootEntry = 7604 }; --Cassandra's Grace
+  { itemID = 13128, groupID = 1, refLootEntry = 7604 }; --High Bergg Helm
+  { itemID = 867, groupID = 1, refLootEntry = 7604 }; --Gloves of Holy Might
+  { itemID = 868, groupID = 1, refLootEntry = 7604 }; --Ardent Custodian
+  { itemID = 1980, groupID = 1, refLootEntry = 7604 }; --Underworld Band
+  { itemID = 2825, groupID = 1, refLootEntry = 7604 }; --Bow of Searing Arrows
+  { itemID = 1981, groupID = 1, refLootEntry = 7604 }; --Icemail Jerkin
+  { itemID = 1982, groupID = 1, refLootEntry = 7604 }; --Nightblade
+  { itemID = 2164, groupID = 1, refLootEntry = 7604 }; --Gut Ripper
+  { itemID = 14549, groupID = 1, refLootEntry = 7604 }; --Boots of Avoidance
+  { itemID = 406013, groupID = 1, refLootEntry = 7604 }; --Trollbane's Hammerlock
+  { itemID = 3395, groupID = 0, refLootEntry = 7795 }; --Recipe: Limited Invulnerability Potion
   { itemID = 4638, groupID = 0, refLootEntry = 7795 }; --Reinforced Steel Lockbox
+  { itemID = 5616, groupID = 0, refLootEntry = 7795 }; --Gutwrencher
+  { itemID = 7989, groupID = 0, refLootEntry = 7795 }; --Plans: Mithril Spurs
+  { itemID = 7990, groupID = 0, refLootEntry = 7795 }; --Plans: Heavy Mithril Helm
+  { itemID = 7992, groupID = 0, refLootEntry = 7795 }; --Plans: Blue Glittering Axe
+  { itemID = 7993, groupID = 0, refLootEntry = 7795 }; --Plans: Dazzling Mithril Rapier
+  { itemID = 8029, groupID = 0, refLootEntry = 7795 }; --Plans: Wicked Mithril Blade
+  { itemID = 8389, groupID = 0, refLootEntry = 7795 }; --Pattern: Big Voodoo Pants
+  { itemID = 8390, groupID = 0, refLootEntry = 7795 }; --Pattern: Big Voodoo Cloak
   { itemID = 8623, groupID = 0, refLootEntry = 7795 }; --OOX-17\/TN Distress Beacon
-  { itemID = 9234, groupID = 0, refLootEntry = 7795 }; --Tiara of the Deep
-  { itemID = 10661, groupID = 0, refLootEntry = 7795 }; --Second Mosh'aru Tablet
-  { itemID = 98005, groupID = 1, refLootEntry = 7795 }; --Weathered Treasure Map
+  { itemID = 9295, groupID = 0, refLootEntry = 7795 }; --Recipe: Invisibility Potion
+  { itemID = 9298, groupID = 0, refLootEntry = 7795 }; --Recipe: Elixir of Giants
+  { itemID = 9481, groupID = 0, refLootEntry = 7795 }; --The Minotaur
+  { itemID = 9483, groupID = 0, refLootEntry = 7795 }; --Flaming Incinerator
+  { itemID = 9512, groupID = 0, refLootEntry = 7795 }; --Blackmetal Cape
+  { itemID = 10300, groupID = 0, refLootEntry = 7795 }; --Pattern: Red Mageweave Vest
+  { itemID = 10315, groupID = 0, refLootEntry = 7795 }; --Pattern: Red Mageweave Shoulders
+  { itemID = 10320, groupID = 0, refLootEntry = 7795 }; --Pattern: Red Mageweave Headband
+  { itemID = 10604, groupID = 0, refLootEntry = 7795 }; --Schematic: Mithril Heavy-bore Rifle
+  { itemID = 11202, groupID = 0, refLootEntry = 7795 }; --Formula: Enchant Shield - Stamina
+  { itemID = 11208, groupID = 0, refLootEntry = 7795 }; --Formula: Enchant Weapon - Demonslaying
+  { itemID = 11225, groupID = 0, refLootEntry = 7795 }; --Formula: Enchant Bracer - Greater Stamina
+  { itemID = 12682, groupID = 0, refLootEntry = 7795 }; --Plans: Thorium Armor
+  { itemID = 12683, groupID = 0, refLootEntry = 7795 }; --Plans: Thorium Belt
+  { itemID = 14466, groupID = 0, refLootEntry = 7795 }; --Pattern: Frostweave Tunic
+  { itemID = 14479, groupID = 0, refLootEntry = 7795 }; --Pattern: Brightcloth Gloves
+  { itemID = 14484, groupID = 0, refLootEntry = 7795 }; --Pattern: Brightcloth Cloak
+  { itemID = 15731, groupID = 0, refLootEntry = 7795 }; --Pattern: Runic Leather Gauntlets
+  { itemID = 15737, groupID = 0, refLootEntry = 7795 }; --Pattern: Chimeric Boots
+  { itemID = 1713, groupID = 1, refLootEntry = 7795 }; --Ankh of Life
+  { itemID = 1715, groupID = 1, refLootEntry = 7795 }; --Polished Jazeraint Armor
+  { itemID = 2815, groupID = 1, refLootEntry = 7795 }; --Curve-bladed Ripper
+  { itemID = 9359, groupID = 1, refLootEntry = 7795 }; --Wirt's Third Leg
+  { itemID = 13026, groupID = 1, refLootEntry = 7795 }; --Heaven's Light
+  { itemID = 13051, groupID = 1, refLootEntry = 7795 }; --Witchfury
+  { itemID = 13058, groupID = 1, refLootEntry = 7795 }; --Khoo's Point
+  { itemID = 13071, groupID = 1, refLootEntry = 7795 }; --Plated Fist of Hakoo
+  { itemID = 13095, groupID = 1, refLootEntry = 7795 }; --Assault Band
+  { itemID = 13100, groupID = 1, refLootEntry = 7795 }; --Furen's Boots
+  { itemID = 13115, groupID = 1, refLootEntry = 7795 }; --Sheepshear Mantle
+  { itemID = 13145, groupID = 1, refLootEntry = 7795 }; --Enormous Ogre Belt
+  { itemID = 754, groupID = 1, refLootEntry = 7795 }; --Shortsword of Vengeance
+  { itemID = 1720, groupID = 1, refLootEntry = 7795 }; --Tanglewood Staff
+  { itemID = 4090, groupID = 1, refLootEntry = 7795 }; --Mug O' Hurt
+  { itemID = 4091, groupID = 1, refLootEntry = 7795 }; --Widowmaker
+  { itemID = 9433, groupID = 1, refLootEntry = 7795 }; --Forgotten Wraps
+  { itemID = 13021, groupID = 1, refLootEntry = 7795 }; --Needle Threader
+  { itemID = 13074, groupID = 1, refLootEntry = 7795 }; --Golem Shard Leggings
+  { itemID = 13082, groupID = 1, refLootEntry = 7795 }; --Mountainside Buckler
+  { itemID = 13102, groupID = 1, refLootEntry = 7795 }; --Cassandra's Grace
+  { itemID = 13128, groupID = 1, refLootEntry = 7795 }; --High Bergg Helm
+  { itemID = 1981, groupID = 1, refLootEntry = 7795 }; --Icemail Jerkin
+  { itemID = 1982, groupID = 1, refLootEntry = 7795 }; --Nightblade
+  { itemID = 2164, groupID = 1, refLootEntry = 7795 }; --Gut Ripper
+  { itemID = 14549, groupID = 1, refLootEntry = 7795 }; --Boots of Avoidance
+  { itemID = 871, groupID = 1, refLootEntry = 7795 }; --Flurry Axe
+  { itemID = 940, groupID = 1, refLootEntry = 7795 }; --Robes of Insight
+  { itemID = 1169, groupID = 1, refLootEntry = 7795 }; --Blackskull Shield
+  { itemID = 1447, groupID = 1, refLootEntry = 7795 }; --Ring of Saviors
+  { itemID = 943, groupID = 1, refLootEntry = 7795 }; --Warden Staff
+  { itemID = 2100, groupID = 1, refLootEntry = 7795 }; --Precisely Calibrated Boomstick
+  { itemID = 2291, groupID = 1, refLootEntry = 7795 }; --Kang the Decapitator
+  { itemID = 14551, groupID = 1, refLootEntry = 7795 }; --Edgemaster's Handguards
   { itemID = 58876, groupID = 0, refLootEntry = 7795 }; --Sigil of Hydromancer Velratha
   { itemID = 4637, groupID = 0, refLootEntry = 7796 }; --Steel Lockbox
   { itemID = 4638, groupID = 0, refLootEntry = 7796 }; --Reinforced Steel Lockbox
+  { itemID = 7975, groupID = 0, refLootEntry = 7796 }; --Plans: Heavy Mithril Pants
+  { itemID = 7989, groupID = 0, refLootEntry = 7796 }; --Plans: Mithril Spurs
+  { itemID = 7990, groupID = 0, refLootEntry = 7796 }; --Plans: Heavy Mithril Helm
+  { itemID = 7993, groupID = 0, refLootEntry = 7796 }; --Plans: Dazzling Mithril Rapier
+  { itemID = 8029, groupID = 0, refLootEntry = 7796 }; --Plans: Wicked Mithril Blade
+  { itemID = 8389, groupID = 0, refLootEntry = 7796 }; --Pattern: Big Voodoo Pants
+  { itemID = 8390, groupID = 0, refLootEntry = 7796 }; --Pattern: Big Voodoo Cloak
   { itemID = 8623, groupID = 0, refLootEntry = 7796 }; --OOX-17\/TN Distress Beacon
-  { itemID = 9471, groupID = 0, refLootEntry = 7796 }; --Nekrum's Medallion
-  { itemID = 9523, groupID = 0, refLootEntry = 7796 }; --Troll Temper
-  { itemID = 98005, groupID = 1, refLootEntry = 7796 }; --Weathered Treasure Map
+  { itemID = 9293, groupID = 0, refLootEntry = 7796 }; --Recipe: Magic Resistance Potion
+  { itemID = 9295, groupID = 0, refLootEntry = 7796 }; --Recipe: Invisibility Potion
+  { itemID = 9298, groupID = 0, refLootEntry = 7796 }; --Recipe: Elixir of Giants
+  { itemID = 9480, groupID = 0, refLootEntry = 7796 }; --Eyegouger
+  { itemID = 9482, groupID = 0, refLootEntry = 7796 }; --Witch Doctor's Cane
+  { itemID = 9511, groupID = 0, refLootEntry = 7796 }; --Bloodletter Scalpel
+  { itemID = 10301, groupID = 0, refLootEntry = 7796 }; --Pattern: White Bandit Mask
+  { itemID = 10302, groupID = 0, refLootEntry = 7796 }; --Pattern: Red Mageweave Pants
+  { itemID = 10320, groupID = 0, refLootEntry = 7796 }; --Pattern: Red Mageweave Headband
+  { itemID = 10603, groupID = 0, refLootEntry = 7796 }; --Schematic: Catseye Ultra Goggles
+  { itemID = 10604, groupID = 0, refLootEntry = 7796 }; --Schematic: Mithril Heavy-bore Rifle
+  { itemID = 10606, groupID = 0, refLootEntry = 7796 }; --Schematic: Parachute Cloak
+  { itemID = 11202, groupID = 0, refLootEntry = 7796 }; --Formula: Enchant Shield - Stamina
+  { itemID = 11204, groupID = 0, refLootEntry = 7796 }; --Formula: Enchant Bracer - Greater Spirit
+  { itemID = 11208, groupID = 0, refLootEntry = 7796 }; --Formula: Enchant Weapon - Demonslaying
+  { itemID = 11225, groupID = 0, refLootEntry = 7796 }; --Formula: Enchant Bracer - Greater Stamina
+  { itemID = 14474, groupID = 0, refLootEntry = 7796 }; --Pattern: Frostweave Gloves
+  { itemID = 14478, groupID = 0, refLootEntry = 7796 }; --Pattern: Brightcloth Robe
+  { itemID = 14479, groupID = 0, refLootEntry = 7796 }; --Pattern: Brightcloth Gloves
+  { itemID = 16215, groupID = 0, refLootEntry = 7796 }; --Formula: Enchant Boots - Greater Stamina
+  { itemID = 16220, groupID = 0, refLootEntry = 7796 }; --Formula: Enchant Boots - Spirit
+  { itemID = 1713, groupID = 1, refLootEntry = 7796 }; --Ankh of Life
+  { itemID = 1715, groupID = 1, refLootEntry = 7796 }; --Polished Jazeraint Armor
+  { itemID = 2815, groupID = 1, refLootEntry = 7796 }; --Curve-bladed Ripper
+  { itemID = 9359, groupID = 1, refLootEntry = 7796 }; --Wirt's Third Leg
+  { itemID = 13026, groupID = 1, refLootEntry = 7796 }; --Heaven's Light
+  { itemID = 13051, groupID = 1, refLootEntry = 7796 }; --Witchfury
+  { itemID = 13058, groupID = 1, refLootEntry = 7796 }; --Khoo's Point
+  { itemID = 13071, groupID = 1, refLootEntry = 7796 }; --Plated Fist of Hakoo
+  { itemID = 13095, groupID = 1, refLootEntry = 7796 }; --Assault Band
+  { itemID = 13100, groupID = 1, refLootEntry = 7796 }; --Furen's Boots
+  { itemID = 13115, groupID = 1, refLootEntry = 7796 }; --Sheepshear Mantle
+  { itemID = 13145, groupID = 1, refLootEntry = 7796 }; --Enormous Ogre Belt
+  { itemID = 754, groupID = 1, refLootEntry = 7796 }; --Shortsword of Vengeance
+  { itemID = 1720, groupID = 1, refLootEntry = 7796 }; --Tanglewood Staff
+  { itemID = 4090, groupID = 1, refLootEntry = 7796 }; --Mug O' Hurt
+  { itemID = 4091, groupID = 1, refLootEntry = 7796 }; --Widowmaker
+  { itemID = 9433, groupID = 1, refLootEntry = 7796 }; --Forgotten Wraps
+  { itemID = 13021, groupID = 1, refLootEntry = 7796 }; --Needle Threader
+  { itemID = 13074, groupID = 1, refLootEntry = 7796 }; --Golem Shard Leggings
+  { itemID = 13082, groupID = 1, refLootEntry = 7796 }; --Mountainside Buckler
+  { itemID = 13102, groupID = 1, refLootEntry = 7796 }; --Cassandra's Grace
+  { itemID = 13128, groupID = 1, refLootEntry = 7796 }; --High Bergg Helm
+  { itemID = 1981, groupID = 1, refLootEntry = 7796 }; --Icemail Jerkin
+  { itemID = 1982, groupID = 1, refLootEntry = 7796 }; --Nightblade
+  { itemID = 2164, groupID = 1, refLootEntry = 7796 }; --Gut Ripper
+  { itemID = 14549, groupID = 1, refLootEntry = 7796 }; --Boots of Avoidance
   { itemID = 58878, groupID = 0, refLootEntry = 7796 }; --Sigil of Nekrum Gutchewer
   { itemID = 9458, groupID = 1, refLootEntry = 7800 }; --Thermaplugg's Central Core
   { itemID = 9459, groupID = 1, refLootEntry = 7800 }; --Thermaplugg's Left Arm
@@ -428,7 +2603,10 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 9327, groupID = 0, refLootEntry = 7800 }; --Security DELTA Data Access Card
   { itemID = 58879, groupID = 0, refLootEntry = 7800 }; --Sigil of Mekgineer Thermaplugg
   { itemID = 2021814, groupID = 0, refLootEntry = 7800 }; --Dungeon Spoils
-  { itemID = 9523, groupID = 0, refLootEntry = 8127 }; --Troll Temper
+  { itemID = 9379, groupID = 1, refLootEntry = 8127 }; --Sang'thraze the Deflector
+  { itemID = 9639, groupID = 1, refLootEntry = 8127 }; --The Hand of Antu'sul
+  { itemID = 9640, groupID = 1, refLootEntry = 8127 }; --Vice Grips
+  { itemID = 9641, groupID = 1, refLootEntry = 8127 }; --Lifeblood Amulet
   { itemID = 59124, groupID = 0, refLootEntry = 8127 }; --Sigil of Antu'sul
   { itemID = 59819, groupID = 0, refLootEntry = 8443 }; --Sigil of Avatar of Hakkar
   { itemID = 59821, groupID = 0, refLootEntry = 8567 }; --Sigil of Glutton
@@ -792,13 +2970,35 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 98005, groupID = 1, refLootEntry = 9956 }; --Weathered Treasure Map
   { itemID = 4637, groupID = 0, refLootEntry = 10081 }; --Steel Lockbox
   { itemID = 8623, groupID = 0, refLootEntry = 10081 }; --OOX-17\/TN Distress Beacon
-  { itemID = 9523, groupID = 0, refLootEntry = 10081 }; --Troll Temper
-  { itemID = 98005, groupID = 1, refLootEntry = 10081 }; --Weathered Treasure Map
+  { itemID = 12471, groupID = 0, refLootEntry = 10081 }; --Desertwalker Cane
   { itemID = 59867, groupID = 0, refLootEntry = 10081 }; --Sigil of Dustwraith
+  { itemID = 2040, groupID = 0, refLootEntry = 10082 }; --Troll Protector
+  { itemID = 3869, groupID = 0, refLootEntry = 10082 }; --Plans: Shadow Crescent Axe
   { itemID = 4637, groupID = 0, refLootEntry = 10082 }; --Steel Lockbox
+  { itemID = 5974, groupID = 0, refLootEntry = 10082 }; --Pattern: Guardian Cloak
+  { itemID = 6440, groupID = 0, refLootEntry = 10082 }; --Brainlash
+  { itemID = 7990, groupID = 0, refLootEntry = 10082 }; --Plans: Heavy Mithril Helm
+  { itemID = 7992, groupID = 0, refLootEntry = 10082 }; --Plans: Blue Glittering Axe
+  { itemID = 8029, groupID = 0, refLootEntry = 10082 }; --Plans: Wicked Mithril Blade
   { itemID = 8623, groupID = 0, refLootEntry = 10082 }; --OOX-17\/TN Distress Beacon
-  { itemID = 9523, groupID = 0, refLootEntry = 10082 }; --Troll Temper
-  { itemID = 98005, groupID = 1, refLootEntry = 10082 }; --Weathered Treasure Map
+  { itemID = 9512, groupID = 0, refLootEntry = 10082 }; --Blackmetal Cape
+  { itemID = 12470, groupID = 0, refLootEntry = 10082 }; --Sandstalker Ankleguards
+  { itemID = 1713, groupID = 1, refLootEntry = 10082 }; --Ankh of Life
+  { itemID = 1715, groupID = 1, refLootEntry = 10082 }; --Polished Jazeraint Armor
+  { itemID = 2815, groupID = 1, refLootEntry = 10082 }; --Curve-bladed Ripper
+  { itemID = 9359, groupID = 1, refLootEntry = 10082 }; --Wirt's Third Leg
+  { itemID = 13026, groupID = 1, refLootEntry = 10082 }; --Heaven's Light
+  { itemID = 13051, groupID = 1, refLootEntry = 10082 }; --Witchfury
+  { itemID = 13058, groupID = 1, refLootEntry = 10082 }; --Khoo's Point
+  { itemID = 13071, groupID = 1, refLootEntry = 10082 }; --Plated Fist of Hakoo
+  { itemID = 13095, groupID = 1, refLootEntry = 10082 }; --Assault Band
+  { itemID = 13100, groupID = 1, refLootEntry = 10082 }; --Furen's Boots
+  { itemID = 13115, groupID = 1, refLootEntry = 10082 }; --Sheepshear Mantle
+  { itemID = 13145, groupID = 1, refLootEntry = 10082 }; --Enormous Ogre Belt
+  { itemID = 1981, groupID = 1, refLootEntry = 10082 }; --Icemail Jerkin
+  { itemID = 1982, groupID = 1, refLootEntry = 10082 }; --Nightblade
+  { itemID = 2164, groupID = 1, refLootEntry = 10082 }; --Gut Ripper
+  { itemID = 14549, groupID = 1, refLootEntry = 10082 }; --Boots of Avoidance
   { itemID = 59868, groupID = 0, refLootEntry = 10082 }; --Sigil of Zerillis
   { itemID = 11571, groupID = 4, refLootEntry = 10184 }; --Flame-Infused Sceptre
   { itemID = 12596, groupID = 4, refLootEntry = 10184 }; --Charred Breastplate

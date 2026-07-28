@@ -84,7 +84,7 @@ AtlasLoot:AddNewMenus({
 		{ "Archimonde", {17968} },
 		{ "Chromius", {92179} },
 		{ "Trash Mobs", {92190} },
-		{ "Rep Rings", {} },
+		{ "Rep Rings", {"scaleOfSandsRings"} },
 	},
 
 	["CFRSlavePens"] = {

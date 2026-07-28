@@ -258,9 +258,6 @@ local equipmentSlots = {
 	},
 }
 
-
-
-
 -- custom getiteminfo returns same formate as getiteminfo but will use info from either getiteminfo or getiteminfoinstant
 function ItemUtil:GetItemInfo(item)
 	if not item or item == 0 then return end

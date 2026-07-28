@@ -210,7 +210,7 @@ AtlasLoot:AddNewMenus({
 
 	["ScaleSands"] = {
 		Name = "The Scale of the Sands",
-		{ "Rings", {} },
+		{ "Rings", {"scaleOfSandsRings"} },
 		{ "Friendly", {} },
 		{ "Honored", {} },
 		{ "Revered", {} },

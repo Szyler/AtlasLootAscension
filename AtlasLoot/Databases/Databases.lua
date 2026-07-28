@@ -6230,6 +6230,43 @@ function AtlasLoot:InitializeDatabases()
 		{ itemID = 18481, refLootEntry = 179564 }, --Skullcracking Mace
 		{ itemID = 18482, refLootEntry = 179564 }, --Ogre Toothpick Shooter
 		{ itemID = 18655, refLootEntry = 179564 }, --Schematic: Major Recombobulator
+		{ itemID = 559300, groupID = 1, refLootEntry = 162703 }; --Withered Faith Cowl
+		{ itemID = 559309, groupID = 1, refLootEntry = 162703 }; --Shoulders of the Mad Gleam
+		{ itemID = 559315, groupID = 1, refLootEntry = 162703 }; --Gloves of the Nocturnal Breath
+		{ itemID = 559317, groupID = 1, refLootEntry = 162703 }; --Spaulders of the Whispering Flame
+		{ itemID = 559328, groupID = 1, refLootEntry = 162703 }; --Consumed Spirit Legplates
+		{ itemID = 559332, groupID = 2, refLootEntry = 162703 }; --Signet of Burning Shadows
+		{ itemID = 559341, groupID = 2, refLootEntry = 162703 }; --Talisman of the Inner Echo
+		{ itemID = 559342, groupID = 2, refLootEntry = 162703 }; --Cape of the Azure Whisper
+		{ itemID = 559350, groupID = 1, refLootEntry = 162703 }; --Skull of the Former King
+		{ itemID = 559351, groupID = 1, refLootEntry = 162703 }; --Excascepter of King Darkveil
+		{ itemID = 559311, groupID = 1, refLootEntry = 162700 }; --Dark Veil Girdle
+		{ itemID = 559319, groupID = 1, refLootEntry = 162700 }; --Slumbering Voice Belt
+		{ itemID = 559320, groupID = 1, refLootEntry = 162700 }; --Legguards of Spiritual Hunger
+		{ itemID = 559339, groupID = 2, refLootEntry = 162700 }; --Pendant of Shattered Prayers
+		{ itemID = 559346, groupID = 2, refLootEntry = 162700 }; --Cloak of the Last Confessor
+		{ itemID = 559349, groupID = 1, refLootEntry = 162700 }; --Mace of the Dauntless Jailer
+		{ itemID = 559361, groupID = 2, refLootEntry = 162700 }; --Forgotten Sin Ring
+		{ itemID = 559305, groupID = 1, refLootEntry = 162704 }; --Ancient Sandals
+		{ itemID = 559307, groupID = 1, refLootEntry = 162704 }; --Venomsoaked Handwraps
+		{ itemID = 559312, groupID = 1, refLootEntry = 162704 }; --Voodoo Edge Britches
+		{ itemID = 559322, groupID = 1, refLootEntry = 162704 }; --Bracers of Reincarnation
+		{ itemID = 559324, groupID = 1, refLootEntry = 162704 }; --Helm of Divine Silence
+		{ itemID = 559326, groupID = 1, refLootEntry = 162704 }; --Breastplate of the Broken Echo
+		{ itemID = 559336, groupID = 2, refLootEntry = 162704 }; --Seal of Silent Temptation
+		{ itemID = 559338, groupID = 2, refLootEntry = 162704 }; --Gorget of the Broken Veil
+		{ itemID = 559347, groupID = 1, refLootEntry = 162704 }; --Deceiver's Sigh
+		{ itemID = 559352, groupID = 1, refLootEntry = 162704 }; --Dark Instinct
+		{ itemID = 559360, groupID = 2, refLootEntry = 162704 }; --Ancient Sigh Cloak
+		{ itemID = 559308, groupID = 1, refLootEntry = 162715 }; --Hood of Remorse
+		{ itemID = 559310, groupID = 1, refLootEntry = 162715 }; --Broken Thought Jerkin
+		{ itemID = 559316, groupID = 1, refLootEntry = 162715 }; --Helm of Eternal Penance
+		{ itemID = 559323, groupID = 1, refLootEntry = 162715 }; --Gauntlets of the Avid Spawn
+		{ itemID = 559327, groupID = 1, refLootEntry = 162715 }; --Belt of the Earthly Echo
+		{ itemID = 559335, groupID = 2, refLootEntry = 162715 }; --Loop of the Ancient Pact
+		{ itemID = 559337, groupID = 2, refLootEntry = 162715 }; --Amulet of the Inner Dusk
+		{ itemID = 559345, groupID = 2, refLootEntry = 162715 }; --Cape of the Last Feast
+		{ itemID = 559355, groupID = 1, refLootEntry = 162715 }; --Edict of the Sinister King
 
 	})
 
@@ -6437,7 +6474,229 @@ function AtlasLoot:InitializeDatabases()
 				{ itemID = 7729 }, --Chesterfall Musket
 			},
 		},
-
+		["OldKeys"] = {
+			{
+				{ icon = "INV_Box_01", name = "Keys" },
+				{ itemID = 7146 }, --The Scarlet Key
+				{ itemID = 12382 }, --Key to the City
+				{ itemID = 6893 }, --Workshop Key
+				{ itemID = 11000 }, --Shadowforge Key
+				{ itemID = 11140 }, --Prison Cell Key
+				{ itemID = 18249 }, --Crescent Key
+				{ itemID = 13704 }, --Skeleton Key
+				{ icon = "INV_Box_01", name = "Dungeon Set 2" },
+				{ itemID = 22057 }, --Brazier of Invocation
+				{ itemID = 21986 }, --Banner of Provocation
+				{ icon = "INV_Box_01", name = "Misc" },
+				{ itemID = 19931 }, --Gurubashi Mojo Madness
+				{ itemID = 13523 }, --Blood of Innocents
+				{ itemID = 18746 }, --Divination Scryer
+				{ itemID = 18663 }, --J'eevee's Jar
+				{ itemID = 19974 }, --Mudskunk Lure
+				{ itemID = 7733 }, --Staff of Prehistoria
+				{ itemID = 10818 }, --Yeh'kinya's Scroll
+			},
+		},
+		["SharedDungeonLoot"] = {
+			{
+				{ itemID = 1552721 }, --Holy Shroud
+				{ itemID = 1553020 }, --Enduring Cap
+				{ itemID = 1563102 }, --Cassandra's Grace
+				{ itemID = 1563112 }, --Winged Helm
+				{ itemID = 1563127 }, --Frostreaver Crown
+				{ itemID = 1563128 }, --High Bergg Helm
+				{ itemID = 1523169 }, --Scorn's Icy Choker
+				{ itemID = 1563087 }, --River Pride Choker
+				{ itemID = 1563089 }, --Skibi's Pendant
+				{ itemID = 1552278 }, --Forest Tracker Epaulets
+				{ itemID = 1563115 }, --Sheepshear Mantle
+				{ itemID = 1563131 }, --Sparkleshell Mantle
+				{ itemID = 1523178 }, --Mantle of Lady Falther'ess
+				{ itemID = 1563005 }, --Amy's Blanket
+				{ itemID = 1563109 }, --Blackflame Cape
+				{ itemID = 1551715 }, --Polished Jazeraint Armor
+				{ itemID = 1551717 }, --Double Link Tunic
+				{ itemID = 1552800 }, --Black Velvet Robes
+				{ itemID = 1559433 }, --Forgotten Wraps
+				{ itemID = 1563012 }, --Yorgen Bracers
+				{ itemID = 1563076 }, --Giantslayer Bracers
+				{ itemID = 1563106 }, --Glowing Magical Bracelets
+				{ itemID = 1550754 }, --Shortsword of Vengeance
+				{ itemID = 1552011 }, --Twisted Sabre
+				{ itemID = 1552912 }, --Claw of the Shadowmancer
+				{ itemID = 1554090 }, --Mug O' Hurt
+				{ itemID = 1554091 }, --Widowmaker
+				{ itemID = 1559359 }, --Wirt's Third Leg
+				{ itemID = 1562974 }, --The Black Knight
+				{ itemID = 1563024 }, --Beazel's Basher
+				{ itemID = 1563032 }, --Sword of Corruption
+				{ itemID = 1563035 }, --Serpent Slicer
+				{ itemID = 1563048 }, --Looming Gavel
+				{ itemID = 1552299 }, --Burning War Axe
+				{ itemID = 1552877 }, --Combatant Claymore
+				{ itemID = 1553203 }, --Dense Triangle Mace
+				{ itemID = 1563016 }, --Killmaim
+				{ itemID = 1563018 }, --Executioner's Cleaver
+				{ itemID = 1563041 }, --Guardian Blade
+				{ itemID = 1563043 }, --Blade of the Titans
+				{ itemID = 1563049 }, --Deanship Claymore
+				{ itemID = 1563051 }, --Witchfury
+				{ itemID = 1551203 }, --Aegis of Stormwind
+				{ itemID = 1563079 }, --Shield of Thorsen
+				{ itemID = 1563082 }, --Mountainside Buckler
+				{ itemID = 1563031 }, --Orb of Mistmantle
+				{ itemID = 1563019 }, --Harpyclaw Short Bow
+				{ itemID = 1563021 }, --Needle Threader
+				{ itemID = 2248297 }, --Oversimplified Stick Chucker
+				{ itemID = 1523177 }, --Lady Falther'ess' Finger
+				{ itemID = 1552098 }, --Double-barreled Shotgun
+				{ itemID = 1563037 }, --Crystalpine Stinger
+				{ itemID = 1563039 }, --Skull Splitting Crossbow
+				{ itemID = 1563062 }, --Thunderwood
+				{ itemID = 1523170 }, --The Frozen Clutch
+				{ itemID = 1550720 }, --Brawler Gloves
+				{ itemID = 1563071 }, --Plated Fist of Hakoo
+				{ itemID = 1559405 }, --Girdle of Golem Strength
+				{ itemID = 1563011 }, --Silver-lined Belt
+				{ itemID = 1563134 }, --Belt of the Gladiator
+				{ itemID = 1563145 }, --Enormous Ogre Belt
+				{ itemID = 1523173 }, --Abomination Skin Leggings
+				{ itemID = 1563010 }, --Dreamsinger Legguards
+				{ itemID = 1563074 }, --Golem Shard Leggings
+				{ itemID = 1563114 }, --Troll's Bane Leggings
+				{ itemID = 1563099 }, --Moccasins of the White Hare
+				{ itemID = 1563100 }, --Furen's Boots
+				{ itemID = 2248085 }, --Gordok Knuckleband
+				{ itemID = 2448085 }, --Flattened Elven Ring
+				{ itemID = 1563094 }, --The Queen's Jewel
+				{ itemID = 1563095 }, --Assault Band
+				{ itemID = 1563097 }, --Thunderbrow Ring
+				{ itemID = 1551713 }, --Ankh of Life
+			},
+			{
+				{ itemID = 2431147 }, --Pendant of Cunning
+				{ itemID = 2431178 }, --Amulet of Unstable Power
+				{ itemID = 2431196 }, --Amulet of Sanctification
+				{ itemID = 2431148 }, --Demon Hide Spaulders
+				{ itemID = 294191 }, --Cloak of Dark Bargain
+				{ itemID = 2431140 }, --Cloak of Entropy
+				{ itemID = 2431143 }, --Shroud of Frenzy
+				{ itemID = 2431127 }, --Hauberk of Totemic Rage
+				{ itemID = 2431136 }, --Breastplate of Blade Turning
+				{ itemID = 2431152 }, --Chestguard of Illumination
+				{ itemID = 2431286 }, --Breastplate of Rapid Striking
+				{ itemID = 2431127 }, --Hauberk of Totemic Rage
+				{ itemID = 2431136 }, --Breastplate of Blade Turning
+				{ itemID = 2431152 }, --Chestguard of Illumination
+				{ itemID = 2431286 }, --Breastplate of Rapid Striking
+				{ itemID = 2431175 }, --Blade Dancer's Wristguards
+				{ itemID = 2431284 }, --Bracers of Recklessness
+				{ itemID = 2431175 }, --Blade Dancer's Wristguards
+				{ itemID = 2431284 }, --Bracers of Recklessness
+				{ itemID = 2431134 }, --Blade of Misfortune
+				{ itemID = 2431139 }, --Fist of Reckoning
+				{ itemID = 2431142 }, --Blade of Trapped Knowledge
+				{ itemID = 2431153 }, --Axe of the Legion
+				{ itemID = 2431193 }, --Blade of Unquenched Thirst
+				{ itemID = 2431200 }, --Shield of the Wayward Footman
+				{ itemID = 2431204 }, --The Gunblade
+				{ itemID = 2431137 }, --Gauntlets of Purification
+				{ itemID = 2431149 }, --Gloves of Pandemonium
+				{ itemID = 2431150 }, --Gloves of Piety
+				{ itemID = 2431180 }, --Gauntlets of the Skullsplitter
+				{ itemID = 2431131 }, --Sash of Silent Blades
+				{ itemID = 2431138 }, --Storm Lord's Girdle
+				{ itemID = 2431151 }, --Girdle of Siege
+				{ itemID = 2431202 }, --Girdle of Divine Blessing
+				{ itemID = 2431133 }, --Leggings of Concentrated Darkness
+				{ itemID = 2431226 }, --Leggings of the Sly
+				{ itemID = 431276 }, --Boots of Zealotry
+				{ itemID = 2431125 }, --Boots of the Decimator
+				{ itemID = 2431173 }, --Boots of Savagery
+				{ itemID = 2431187 }, --Boots of the Pathfinder
+				{ itemID = 2431230 }, --Abyss Walker's Boots
+			},
+		},
+		["FrozenReach"] = {
+			{
+				{ itemID = 1519391 }, -- Reclaimed Blade of the Frozen Sepulcher
+				{ itemID = 1519392 }, -- Frigid Bow of the Bonded Souls
+				{ itemID = 1519380 }, -- Necklace of Frozen Reach
+				{ itemID = 1519381 }, -- Beartooth Pendant
+				{ itemID = 1519382 }, -- Alva's Gift
+				{ itemID = 1519383 }, -- Ring of the Frozen Sepulcher
+				{ itemID = 1519384 }, -- Ring of Bonded Souls
+				{ itemID = 1519385 }, -- Signet of Arktos
+				{ itemID = 1519386 }, -- Alva's Kinship Ring
+				{ itemID = 1519387 }, -- Frozen Forgiveness
+				{ itemID = 1519388 }, -- Frozen Vengeance
+				{ itemID = 1519389 }, -- Call of the Sepulcher
+				{ itemID = 1519390 }, -- Arktos' Resillience
+				{ itemID = 1519379 }, -- Amulet of the Bonded Souls
+				{ itemID = 1519393 }, -- Beastmaster's Whistle: Arktos
+				{ itemID = 49095 }, -- Incarnation: Arktos
+				{ itemID = 49093 }, -- Arktos
+			},
+		},
+		["FrozenReachTBC"] = {
+			{
+				{ itemID = 1529392 }, --Frigid Bow of the Bonded Souls
+				{ itemID = 1529391 }, --Reclaimed Blade of the Frozen Sepulcher
+				{ itemID = 1529390 }, --Arktos' Resillience
+				{ itemID = 1529389 }, --Call of the Sepulcher
+				{ itemID = 1529388 }, --Frozen Vengeance
+				{ itemID = 1529387 }, --Frozen Forgiveness
+				{ itemID = 1529386 }, --Alva's Kinship Ring
+				{ itemID = 1529385 }, --Signet of Arktos
+				{ itemID = 1529384 }, --Ring of Bonded Souls
+				{ itemID = 1529383 }, --Ring of the Frozen Sepulcher
+				{ itemID = 1529382 }, --Alva's Gift
+				{ itemID = 1529381 }, --Beartooth Pendant
+				{ itemID = 1529380 }, --Necklace of Frozen Reach
+				{ itemID = 1529379 }, --Amulet of the Bonded Souls
+				{ itemID = 1519393 }, --Beastmaster's Whistle: Arktos
+				{ itemID = 49095 }, --Incarnation: Arktos
+				{ itemID = 49093 }, --Arktos
+			},
+		},
+		["BCKeys"] = {
+			{
+				{ itemID = 27991 }, --Shadow Labyrinth Key
+				{ itemID = 28395 }, --Shattered Halls Key
+				{ itemID = 31084 }, --Key to the Arcatraz
+				{ itemID = 30622, minDifficulty = "Heroic" }, --Flamewrought Key
+				{ itemID = 30637, minDifficulty = "Heroic" }, --Flamewrought Key
+				{ itemID = 30623, minDifficulty = "Heroic" }, --Reservoir Key
+				{ itemID = 30633, minDifficulty = "Heroic" }, --Auchenai Key
+				{ itemID = 30635, minDifficulty = "Heroic" }, --Key of Time
+				{ itemID = 30634, minDifficulty = "Heroic" }, --Warpforged Key
+				{ itemID = 24490, minDifficulty = "Heroic" }, --The Master's Key
+				{ itemID = 32092, minDifficulty = "Heroic" }, --The Eye of Haramad
+				{ itemID = 32449, minDifficulty = "Heroic" }, --Essence-Infused Moonstone
+			},
+		},
+		["scaleOfSandsRings"] = {
+			{ itemID = 29298, rep = "Friendly", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Champion
+			{ itemID = 29299, rep = "Honored", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Champion
+			{ itemID = 29300, rep = "Revered", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Champion
+			{ itemID = 29301, rep = "Exalted", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Champion
+			{ itemID = 29294, rep = "Friendly", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Defender
+			{ itemID = 29295, rep = "Honored", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Defender
+			{ itemID = 29296, rep = "Revered", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Defender
+			{ itemID = 29297, rep = "Exalted", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Defender
+			{ itemID = 15037, rep = "Friendly", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Assassin
+			{ itemID = 15038, rep = "Honored", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Assassin
+			{ itemID = 15039, rep = "Revered", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Assassin
+			{ itemID = 15040, rep = "Exalted", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Assassin
+			{ itemID = 29302, rep = "Friendly", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Sage
+			{ itemID = 29303, rep = "Honored", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Sage
+			{ itemID = 29304, rep = "Revered", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Sage
+			{ itemID = 29305, rep = "Exalted", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Sage
+			{ itemID = 29307, rep = "Friendly", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Restorer
+			{ itemID = 29306, rep = "Honored", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Restorer
+			{ itemID = 29308, rep = "Revered", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Restorer
+			{ itemID = 29309, rep = "Exalted", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Restorer
+		},
 	})
 
 end
