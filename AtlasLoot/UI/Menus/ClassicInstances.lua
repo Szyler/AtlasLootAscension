@@ -20,7 +20,6 @@ AtlasLoot:AddNewMenus({
     },
 
 	["Onyxia60"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Onyxia's Lair",
 		Type = "ClassicRaid",
  		{"Basalthane", {10185} },
@@ -28,7 +27,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["RuinsofAQ"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Ruins of Ahn'Qiraj",
 		Type = "ClassicRaid",
  		{"Kurinnaxx", {15348} },
@@ -41,7 +39,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["TempleofAQ"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Temple of Ahn'Qiraj",
 		Type = "ClassicRaid",
  		{"The Prophet Skeram", {15263} },
@@ -58,7 +55,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Naxxramas60"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Naxxramas",
 		Type = "ClassicRaid",
  		{"Patchwerk", {16028} },
@@ -80,7 +76,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["WorldBossesCLASSIC"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "World Bosses",
 		Type = "ClassicRaid",
 		{"Azuregos", {6109} },
@@ -98,7 +93,6 @@ AtlasLoot:AddNewMenus({
 
 	-- ClassicDungeons
 	["BlackfathomDeeps"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Blackfathom Deeps",
 		Type = "ClassicDungeon",
  		{"Ghamoo-ra", {4887} },
@@ -111,7 +105,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["BlackrockDepths"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Blackrock Depths",
 		Type = "ClassicDungeonExt",
  		{"Overmaster Pyron", {9026} },
@@ -143,7 +136,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["BlackrockCavernsCLASSIC"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Blackrock Caverns",
 		Type = "ClassicDungeonExt",
 		{"Ascendant Lord Obsidius", {39705} },
@@ -154,7 +146,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["LowerBlackrock"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Lower Blackrock Spire",
 		Type = "ClassicDungeonExt",
 		Loadfirst = 3,
@@ -179,7 +170,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["UpperBlackrock"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Upper Blackrock Spire",
 		Type = "ClassicDungeonExt",
  		{"Pyroguard Emberseer", {9816} },
@@ -193,7 +183,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["MoltenCore"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Molten Core",
 		Type = "ClassicRaid",
  		{"Lucifron", {12118} },
@@ -210,7 +199,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["BlackwingLair"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Blackwing Lair",
 		Type = "ClassicRaid",
  		{"Razorgore the Untamed", {12435} },
@@ -222,7 +210,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["DireMaulEast"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Dire Maul East",
 		Type = "ClassicDungeonExt",
  		{"Pusillin", {14354} },
@@ -234,7 +221,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["DireMaulNorth"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Dire Maul North",
 		Type = "ClassicDungeonExt",
  		{"Guard Mol'dar", {14326} },
@@ -249,7 +235,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["DireMaulWest"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Dire Maul West",
 		Type = "ClassicDungeonExt",
  		{"Tendris Warpwood", {11489} },
@@ -262,7 +247,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Gnomeregan"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Gnomeregan",
 		Type = "ClassicDungeon",
  		{"Techbot", {6231} },
@@ -275,7 +259,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["KarazhanCrypts"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "The Karazhan Crypts",
 		Type = "ClassicDungeonExt",
 		{"Cynfael", {254401} },
@@ -287,7 +270,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Maraudon"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Maraudon",
 		Type = "ClassicDungeon",
  		{"Noxxion", {13282} },
@@ -302,7 +284,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["RagefireChasm"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Ragefire Chasm",
 		Type = "ClassicDungeon",
  		{"Taragaman the Hungerer", {11520,2075751} },
@@ -312,7 +293,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["RazorfenDowns"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Razorfen Downs",
 		Type = "ClassicDungeon",
  		{"Tuten'kash", {7355} },
@@ -326,7 +306,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["RazorfenKraul"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Razorfen Kraul",
 		Type = "ClassicDungeon",
  		{"Roogug", {6168,2075273} },
@@ -341,14 +320,12 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["ScarletMonasteryArmory"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Scarlet Monastery - Armory",
 		Type = "ClassicDungeon",
  		{"Herod", {3975} },
 	},
 
 	["ScarletMonasteryCathedral"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Scarlet Monastery - Cathedral",
 		Type = "ClassicDungeon",
  		{"High Inquisitor Fairbanks", {4542,2060073} },
@@ -357,7 +334,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["ScarletMonasteryGraveyard"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Scarlet Monastery - Graveyard",
 		Type = "ClassicDungeon",
  		{"Interrogator Vishas", {3983,2060013} },
@@ -368,7 +344,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["ScarletMonasteryLibrary"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Scarlet Monastery - Library",
 		Type = "ClassicDungeon",
  		{"Houndmaster Loksey", {3974,2062271} },
@@ -376,7 +351,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Scholomance"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Scholomance",
 		Type = "ClassicDungeonExt",
 		Loadfirst = 3,
@@ -399,7 +373,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["ShadowfangKeep"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Shadowfang Keep",
 		Type = "ClassicDungeon",
  		{"Apothecary Hummel", {36296,2061045} },
@@ -416,7 +389,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Stratholme"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Stratholme",
 		Type = "ClassicDungeonExt",
  		{"Skul", {10393} },
@@ -444,7 +416,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["TheDeadmines"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "The Deadmines",
 		Type = "ClassicDungeon",
  		{"Marisa du'Paige", {599} },
@@ -461,7 +432,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["TheStockade"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "The Stockade",
 		Type = "ClassicDungeon",
  		{"Targorr the Dread", {1696,2074427} },
@@ -473,7 +443,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["SunkenTemple"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Sunken Temple",
 		Type = "ClassicDungeon",
  		{"Spawn of Hakkar", {24028} },
@@ -489,7 +458,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["Uldaman"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Uldaman",
 		Type = "ClassicDungeon",
  		{"Magregan Deepshadow", {2932} },
@@ -507,7 +475,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["WailingCaverns"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Wailing Caverns",
 		Type = "ClassicDungeon",
  		{"Lord Cobrahn", {3669,2062556} },
@@ -522,7 +489,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["ZulFarrak"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Zul'Farrak",
 		Type = "ClassicDungeon",
  		{"Antu'sul", {8127,2062888} },
@@ -540,7 +506,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["VaultsOfTheInquisition"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Vaults of the Inquisition",
 		Type = "ClassicDungeonExt",
 		{"His Majesty Darkandle", {162703} },
@@ -549,7 +514,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["RoadToDeOtherSide"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Road to De Other Side",
 		Type = "ClassicDungeonExt",
 		{"Chimeric Embryo", {162716} },
@@ -558,7 +522,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["SharedDungeonLoot"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Shared Dungeon Loot",
 		Type = "ClassicDungeonExt",
 		{"Heroic", {} },
@@ -566,7 +529,6 @@ AtlasLoot:AddNewMenus({
 	},
 
 	["FrozenReach"] = {
-		Module = "AtlasLoot_OriginalWoW",
 		Name = "Frozen Reach",
 		Type = "Manastorm",
 		WebID = {98888,"item" },
