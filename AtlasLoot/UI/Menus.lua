@@ -85,19 +85,10 @@ function AtlasLoot:GetDataVanity(id)
 	end
 end
 
-function AtlasLoot:GetDataName(id)
-	if self.ui.menus.data[id] then
-		return self.ui.menus.data[id].Name or ""
-	elseif menusKeyTable[id] then
-		return self.ui.menus.data[menusKeyTable[id][1]] and self.ui.menus.data[menusKeyTable[id][1]].Name or ""
-	end
-	return ""
-end
-
 function AtlasLoot:GetSplitDisplayName(name)
 	if not name then return end
 	local _, displayName = string.split("%-", name, 2)
-	displayName = displayName  and displayName:gsub("^%s+", "") or name
+	return displayName and displayName:gsub("^%s+", "") or name
 end
 
 function AtlasLoot:GetDisplayNameByID(id)
