@@ -383,7 +383,12 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 98005, groupID = 1, refLootEntry = 7274 }; --Weathered Treasure Map
   { itemID = 58868, groupID = 0, refLootEntry = 7275 }; --Sigil of Shadowpriest Sezz'ziz
   { itemID = 58869, groupID = 0, refLootEntry = 7291 }; --Sigil of Galgann Firehammer
+  { itemID = 10758, groupID = 1, refLootEntry = 7354 }; --X'caliboar
+  { itemID = 10767, groupID = 1, refLootEntry = 7354 }; --Savage Boar's Guard
+  { itemID = 10768, groupID = 1, refLootEntry = 7354 }; --Boar Champion's Belt
   { itemID = 58870, groupID = 0, refLootEntry = 7355 }; --Sigil of Tuten'kash
+  { itemID = 10760, groupID = 1, refLootEntry = 7356 }; --Swine Fists
+  { itemID = 10766, groupID = 1, refLootEntry = 7356 }; --Plaguerot Sprig
   { itemID = 58872, groupID = 0, refLootEntry = 7357 }; --Sigil of Mordresh Fire Eye
   { itemID = 10420, groupID = 0, refLootEntry = 7358 }; --Skull of the Coldbringer
   { itemID = 58874, groupID = 0, refLootEntry = 7358 }; --Sigil of Amnennar the Coldbringer
@@ -1947,18 +1952,42 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 1278048, groupID = 37, refLootEntry = 12118 }; --Case of Fortune: Talents
   { itemID = 1278049, groupID = 37, refLootEntry = 12118 }; --Case of Fortune
   { itemID = 17684, groupID = 0, refLootEntry = 12201 }; --Theradric Crystal Carving
+  { itemID = 17707, groupID = 1, refLootEntry = 12201 }; --Gemshard Heart
+  { itemID = 17710, groupID = 1, refLootEntry = 12201 }; --Charstone Dirk
+  { itemID = 17711, groupID = 1, refLootEntry = 12201 }; --Elemental Rockridge Leggings
+  { itemID = 17713, groupID = 1, refLootEntry = 12201 }; --Blackstone Ring
+  { itemID = 17714, groupID = 1, refLootEntry = 12201 }; --Bracers of the Stone Princess
+  { itemID = 17715, groupID = 1, refLootEntry = 12201 }; --Eye of Theradras
+  { itemID = 17766, groupID = 1, refLootEntry = 12201 }; --Princess Theradras' Scepter
+  { itemID = 17780, groupID = 1, refLootEntry = 12201 }; --Blade of Eternal Darkness
   { itemID = 59995, groupID = 0, refLootEntry = 12201 }; --Sigil of Princess Theradras
   { itemID = 2021814, groupID = 0, refLootEntry = 12201 }; --Dungeon Spoils
   { itemID = 17684, groupID = 0, refLootEntry = 12203 }; --Theradric Crystal Carving
+  { itemID = 17734, groupID = 1, refLootEntry = 12203 }; --Helm of the Mountain
+  { itemID = 17736, groupID = 1, refLootEntry = 12203 }; --Rockgrip Gauntlets
+  { itemID = 17737, groupID = 1, refLootEntry = 12203 }; --Cloud Stone
+  { itemID = 17943, groupID = 1, refLootEntry = 12203 }; --Fist of Stone
   { itemID = 17684, groupID = 0, refLootEntry = 12225 }; --Theradric Crystal Carving
+  { itemID = 17738, groupID = 1, refLootEntry = 12225 }; --Claw of Celebras
+  { itemID = 17739, groupID = 1, refLootEntry = 12225 }; --Grovekeeper's Drape
+  { itemID = 17740, groupID = 1, refLootEntry = 12225 }; --Soothsayer's Headdress
   { itemID = 59997, groupID = 0, refLootEntry = 12225 }; --Sigil of Celebras the Cursed
   { itemID = 17684, groupID = 0, refLootEntry = 12236 }; --Theradric Crystal Carving
   { itemID = 17703, groupID = 0, refLootEntry = 12236 }; --Celebrian Diamond
+  { itemID = 17752, groupID = 1, refLootEntry = 12236 }; --Satyr's Lash
+  { itemID = 17754, groupID = 1, refLootEntry = 12236 }; --Infernal Trickster Leggings
+  { itemID = 17755, groupID = 1, refLootEntry = 12236 }; --Satyrmane Sash
   { itemID = 59998, groupID = 0, refLootEntry = 12236 }; --Sigil of Lord Vyletongue
   { itemID = 2021814, groupID = 0, refLootEntry = 12236 }; --Dungeon Spoils
   { itemID = 17684, groupID = 0, refLootEntry = 12237 }; --Theradric Crystal Carving
+  { itemID = 17741, groupID = 1, refLootEntry = 12237 }; --Nature's Embrace
+  { itemID = 17742, groupID = 1, refLootEntry = 12237 }; --Fungus Shroud Armor
   { itemID = 59999, groupID = 0, refLootEntry = 12237 }; --Sigil of Meshlok the Harvester
   { itemID = 17684, groupID = 0, refLootEntry = 12258 }; --Theradric Crystal Carving
+  { itemID = 17748, groupID = 1, refLootEntry = 12258 }; --Vinerot Sandals
+  { itemID = 17749, groupID = 1, refLootEntry = 12258 }; --Phytoskin Spaulders
+  { itemID = 17750, groupID = 1, refLootEntry = 12258 }; --Chloromesh Girdle
+  { itemID = 17751, groupID = 1, refLootEntry = 12258 }; --Brusslehide Leggings
   { itemID = 22529, groupID = 0, refLootEntry = 12258 }; --Savage Frond
   { itemID = 60000, groupID = 0, refLootEntry = 12258 }; --Sigil of Razorlash
   { itemID = 2021814, groupID = 0, refLootEntry = 12258 }; --Dungeon Spoils
@@ -2067,10 +2096,19 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 60012, groupID = 0, refLootEntry = 13280 }; --Sigil of Hydrospawn
   { itemID = 17684, groupID = 0, refLootEntry = 13282 }; --Theradric Crystal Carving
   { itemID = 17702, groupID = 0, refLootEntry = 13282 }; --Celebrian Rod
+  { itemID = 17744, groupID = 1, refLootEntry = 13282 }; --Heart of Noxxion
+  { itemID = 17745, groupID = 1, refLootEntry = 13282 }; --Noxious Shooter
+  { itemID = 17746, groupID = 1, refLootEntry = 13282 }; --Noxxion's Shackles
   { itemID = 60013, groupID = 0, refLootEntry = 13282 }; --Sigil of Noxxion
   { itemID = 17684, groupID = 0, refLootEntry = 13596 }; --Theradric Crystal Carving
+  { itemID = 17728, groupID = 1, refLootEntry = 13596 }; --Albino Crocscale Boots
+  { itemID = 17730, groupID = 1, refLootEntry = 13596 }; --Gatorbite Axe
+  { itemID = 17732, groupID = 1, refLootEntry = 13596 }; --Rotgrip Mantle
   { itemID = 60014, groupID = 0, refLootEntry = 13596 }; --Sigil of Rotgrip
   { itemID = 17684, groupID = 0, refLootEntry = 13601 }; --Theradric Crystal Carving
+  { itemID = 17717, groupID = 1, refLootEntry = 13601 }; --Megashot Rifle
+  { itemID = 17718, groupID = 1, refLootEntry = 13601 }; --Gizlock's Hypertech Buckler
+  { itemID = 17719, groupID = 1, refLootEntry = 13601 }; --Inventor's Focal Sword
   { itemID = 60015, groupID = 0, refLootEntry = 13601 }; --Sigil of Tinkerer Gizlock
   { itemID = 13636, groupID = 2, refLootEntry = 14020 }; --Dragonsbane Headguard
   { itemID = 14995, groupID = 2, refLootEntry = 14020 }; --Death Talon Tunic
@@ -2519,6 +2557,8 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 60104, groupID = 0, refLootEntry = 14517 }; --Sigil of High Priestess Jeklik
   { itemID = 400750, groupID = 0, refLootEntry = 14517 }; --Raider's Commendation
   { itemID = 1170083, groupID = 0, refLootEntry = 14517 }; --Personal Cache
+  { itemID = 23177, groupID = 1, refLootEntry = 14686 }; --Lady Falther'ess' Finger
+  { itemID = 23178, groupID = 1, refLootEntry = 14686 }; --Mantle of Lady Falther'ess
   { itemID = 19852, groupID = 2, refLootEntry = 14834 }; --Ancient Hakkari Manslayer
   { itemID = 19853, groupID = 2, refLootEntry = 14834 }; --Gurubashi Dwarf Destroyer
   { itemID = 19854, groupID = 2, refLootEntry = 14834 }; --Zin'rokh, Destroyer of Worlds
