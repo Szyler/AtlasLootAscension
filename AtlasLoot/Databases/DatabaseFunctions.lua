@@ -48,7 +48,7 @@ local function getMythicLevel(description)
 end
 
 function AtlasLoot:GetDifficultyFromDescription(item)
-	if not item then return end
+	if not item or not item.description then return end
 	local _, description, _ = string.split("@", item.description, 3)
 	if not description then return end
 	local dif, difNum = getMythicLevel(description)
@@ -103,7 +103,7 @@ function AtlasLoot:GetSourceList()
 			local diffList = self.Difficulties:GetList(typeData)
 			if typeData and diffList and itemData.itemID then
 				for _, dif in ipairs(diffList) do
-					local itemInfo = self:GetItemInfo(itemData.itemID) or nil
+					local itemInfo = self.ItemUtil:GetItemInfo(itemData.itemID) or nil
 					if dif[2] ~= 3 and itemInfo then
 						itemSource[dif[1]] = itemSource[dif[1]] or {}
 						local name = itemInfo.name:gsub( "%W", "" )..itemInfo.inventoryType
