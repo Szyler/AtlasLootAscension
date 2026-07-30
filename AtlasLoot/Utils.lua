@@ -269,19 +269,6 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 	self.ui.itemPopupframe:Show()
 end
 
-
---Adds explanatory tooltips to UI objects.
-function AtlasLoot:AddTooltip(frameb, tooltiptext)
-	if not tooltiptext or not frameb then return end
-	local frame = _G[frameb]
-	frame:SetScript("OnEnter", function()
-	   GameTooltip:SetOwner(frame, "ANCHOR_RIGHT")
-	   GameTooltip:SetText(tooltiptext)
-	   GameTooltip:Show()
-	end)
-	frame:SetScript("OnLeave", function() GameTooltip:Hide() end)
- end
-
 --------- rate limited item frame refresh ---------
 local refreshTimer
 function AtlasLoot:ItemRefreshTimer()
@@ -320,7 +307,7 @@ function AtlasLoot:ItemsLoading(count)
 	end
 end
 
-local function CheckTooltipForDuplicate(tooltip, text)
+local function checkTooltipForDuplicate(tooltip, text)
     -- Check if we already added to this tooltip.
     for i = 1, tooltip:NumLines() do
         local frame = _G[tooltip:GetName() .. "TextLeft" .. i]
@@ -331,13 +318,23 @@ local function CheckTooltipForDuplicate(tooltip, text)
 end
 
 -- finds and sets the tooltip for the itemID that it is sent
-local function SetTooltip(itemID, tooltip)
+local function setTooltip(itemID, tooltip)
     local self = AtlasLoot
 	if not self.selectedProfile.showUnknownRecipeTooltip then return end
 	local text = self:IsRecipeUnknown(itemID)
 	if not text then return end
 	text = "Recipe could be learned by: "..self.Colors.GREEN..text
-	if not CheckTooltipForDuplicate(tooltip, text) then
+	if not checkTooltipForDuplicate(tooltip, text) then
+		tooltip:AddLine(text)
+	end
+end
+
+local function setItemSourceTooltip(itemID, tooltip)
+	local button = GetMouseFocus()
+	local self = AtlasLoot
+	if not self.selectedProfile.showdropLocationTooltips or (button and button.isAtlasLoot) then return end
+	local text = self:GetItemSource(itemID)
+	if text then
 		tooltip:AddLine(text)
 	end
 end
@@ -351,8 +348,8 @@ local function TooltipHandlerItem(tooltip)
 	if not link then return end
 	local itemID = GetItemInfoFromHyperlink(link)
 	if not itemID then return end
-    SetTooltip(itemID, tooltip)
-	AtlasLoot:ItemSourceTooltip(itemID, tooltip)
+    setTooltip(itemID, tooltip)
+	setItemSourceTooltip(itemID, tooltip)
 end
 
 GameTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)
@@ -444,7 +441,7 @@ function AtlasLoot:CreateItemSourceList()
 	end
 end
 
-local function findBaseItemID(id)
+local function getNormalItemID(id)
 	if ItemIDsDatabaseCorrectedIDs[id] or ItemIDsDatabase[id] then return id end
 	-- Corrected itemIDs database
 	-- Search's and returns the normal itemID
@@ -468,18 +465,9 @@ end
 
 -- Gets the drop source for an item
 function AtlasLoot:GetItemSource(itemID)
-	local itemSource = itemSourceList[findBaseItemID(itemID)]
+	local itemSource = itemSourceList[getNormalItemID(itemID)]
 	if itemSource and itemSource[1] and itemSource[2] then
 		return "Item Source: " .. self.Colors.CYAN.. self:GetDisplayNameByID(itemSource[1]) .. self.Colors.WHITE .. " - " .. self:GetDataPageName(itemSource[1], itemSource[2])
-	end
-end
-
-function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
-	local button = GetMouseFocus()
-	if not self.selectedProfile.showdropLocationTooltips or (button and button.isAtlasLoot) then return end
-	local text = self:GetItemSource(itemID)
-	if text then
-		tooltip:AddLine(text)
 	end
 end
 
@@ -506,24 +494,6 @@ function AtlasLoot:InitializeWishlistMerchantGlow()
 		MerchantNextPageButton:HookScript("OnClick", function() AtlasLoot:SetMerchantFrameGlow() end)
 		MerchantPrevPageButton:HookScript("OnClick", function() AtlasLoot:SetMerchantFrameGlow() end)
 	end
-end
-
--- returns true, if player has item with given ID in inventory or bags and it's not on cooldown
-function AtlasLoot:HasItem(itemID)
-	local item, found, id
-	-- scan bags
-	for bag = 0, 4 do
-		for slot = 1, GetContainerNumSlots(bag) do
-			item = GetContainerItemLink(bag, slot)
-			if item then
-				found, _, id = item:find('^|c%x+|Hitem:(%d+):.+')
-				if found and tonumber(id) == itemID then
-					return true, bag, slot
-				end
-			end
-		end
-	end
-	return false
 end
 
 --========================================

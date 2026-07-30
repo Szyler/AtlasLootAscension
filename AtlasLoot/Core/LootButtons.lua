@@ -4,7 +4,7 @@ local playerName = UnitName("player")
 local playerFaction = UnitFactionGroup("player")
 
 --Set Tooltip for extra crafting data
-function AtlasLoot:SetCraftingTooltip(data)
+local function setCraftingTooltip(self, data)
     local craftingData = data.craftingData
     if not craftingData then return end
     --extra information on where to find the recipe
@@ -30,7 +30,7 @@ function AtlasLoot:SetCraftingTooltip(data)
 end
 
 --Set quest tooltip info
-function AtlasLoot:SetQuestTooltip(data)
+local function setQuestTooltip(self, data)
     if not data.quest then return end
     for _,v in ipairs(data.quest) do
         local quest = self.data.crafting["QuestList"][v]
@@ -41,7 +41,7 @@ function AtlasLoot:SetQuestTooltip(data)
 end
 
 --Set droprate tooltip
-function AtlasLoot:SetDroprateTooltip(data)
+local function setDroprateTooltip(self, data)
     if not data.droprate then return end
     if type(data.droprate) == "table" then
         if not data.droprate[self.ItemindexID] then return end
@@ -60,7 +60,7 @@ function AtlasLoot:SetDroprateTooltip(data)
 end
 
 --Set extra info tooltip
-function AtlasLoot:SetExtraTooltip(data)
+local function setExtraTooltip(self,data)
     if not data.extraInfo then return end
     GameTooltip:AddLine("Extra Info: "..data.extraInfo, 1, 1, 0)
 end
@@ -80,10 +80,10 @@ function AtlasLoot:ItemOnEnter(data)
                 if self.ItemUtil:GetItemName(itemID) then
                     GameTooltip:SetOwner(data, "ANCHOR_RIGHT", -(data:GetWidth() / 2), 24)
                     GameTooltip:SetHyperlink("item:"..itemID..":0:0:0")
-                    self:SetQuestTooltip(data)
-                    self:SetExtraTooltip(data)
-                    self:SetDroprateTooltip(data)
-                    self:SetCraftingTooltip(data)
+                    setQuestTooltip(self,data)
+                    setExtraTooltip(self,data)
+                    setDroprateTooltip(self,data)
+                    setCraftingTooltip(self,data)
                     GameTooltip:Show()
                     if self.selectedProfile.EquipCompare or IsShiftKeyDown() then
                         GameTooltip_ShowCompareItem()
