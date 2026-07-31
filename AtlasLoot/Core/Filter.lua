@@ -1,6 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-
 local FilterTable = {
 	{
 		Name = "Primary Stats",
