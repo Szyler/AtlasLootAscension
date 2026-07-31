@@ -282,6 +282,8 @@ function AtlasLoot:InitializeMenus()
 		{ "MiningCLASSIC" },
 		{ "CookingCLASSIC" },
 		{ "FirstAidCLASSIC" },
+		{ "WoodworkingCLASSIC" },
+		{ "WoodcuttingCLASSIC" },
 	}
 
 	collection.CraftingTBC = {
@@ -295,6 +297,8 @@ function AtlasLoot:InitializeMenus()
 		{ "MiningTBC" },
 		{ "CookingTBC" },
 		{ "FirstAidTBC" },
+		{ "WoodworkingCLASSIC" },
+		{ "WoodcuttingCLASSIC" },
 	}
 
 	collection.CraftingWRATH = {

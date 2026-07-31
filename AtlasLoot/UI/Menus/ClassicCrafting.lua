@@ -166,5 +166,15 @@ AtlasLoot:AddNewMenus({
 		{ "Miscellaneous", {} },
 		{ "Shirts", {} },
 		{ "High Risk", {} },
+	},
+	["WoodworkingCLASSIC"] = {
+		Name = "Woodworking",
+		Type = "ClassicCrafting",
+		{ "Woodworking", {} },
+	},
+	["WoodcuttingCLASSIC"] = {
+		Name = "Woodcutting",
+		Type = "ClassicCrafting",
+		{ "Woodcutting", {} },
 	}
 })

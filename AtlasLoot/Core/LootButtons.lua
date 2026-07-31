@@ -98,7 +98,7 @@ function AtlasLoot:ItemOnEnter(data)
                 GameTooltip:SetHyperlink(link)
             end
 
-            self:SetCraftingTooltip(data)
+            setCraftingTooltip(self,data)
 
             local showOwn
             --adds tooltip showing if you know a recipe and it is one of your chars trade skills
