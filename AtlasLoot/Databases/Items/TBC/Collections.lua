@@ -71,6 +71,21 @@ AtlasLoot:AddItemData("lootableLinks", {
     [29753] = {"TFOUR", 5,"Token"}, --Chest
     [29767] = {"TFOUR", 7,"Token"}, --Legs
     [29758] = {"TFOUR", 10,"Token"}, --Hands
+	--Tier Five
+    [30243] = {"TFIVE", 1,"Token"}, --Head
+    [30249] = {"TFIVE", 3,"Token"}, --Shoulders
+    [30237] = {"TFIVE", 5,"Token"}, --Chest
+    [30246] = {"TFIVE", 7,"Token"}, --Legs
+    [30240] = {"TFIVE", 10,"Token"}, --Hands
+	--Tier Six
+    [31097] = {"TSIX", 1,"Token"}, --Head
+    [31101] = {"TSIX", 3,"Token"}, --Shoulders
+    [31089] = {"TSIX", 5,"Token"}, --Chest
+    [31098] = {"TSIX", 7,"Token"}, --Legs
+    [31092] = {"TSIX", 10,"Token"}, --Hands
+	[34853] = {"TSIX", 6,"Token"}, --Waist
+    [34856] = {"TSIX", 8,"Token"}, --Feet
+    [34848] = {"TSIX", 9,"Token"}, --Wrists
 })
 
 AtlasLoot:AddItemData("dontSort", {
