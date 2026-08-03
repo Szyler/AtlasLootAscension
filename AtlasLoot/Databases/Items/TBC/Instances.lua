@@ -3866,10 +3866,33 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 35764, groupID = 2, refLootEntry = 92190 }; --Design: Steady Seaspray Emerald
   { itemID = 35765, groupID = 2, refLootEntry = 92190 }; --Design: Forceful Seaspray Emerald
   { itemID = 884039, groupID = 2, refLootEntry = 92190 }; --Design: Fractured Crimson Spinel
+  { itemID = 34189, groupID = 2, refLootEntry = 92377 }; --Band of Ruinous Delight
+  { itemID = 34190, groupID = 2, refLootEntry = 92377 }; --Crimson Paragon's Cover
+  { itemID = 34192, groupID = 2, refLootEntry = 92377 }; --Pauldrons of Perseverance
+  { itemID = 34193, groupID = 1, refLootEntry = 92377 }; --Spaulders of the Thalassian Savior
+  { itemID = 34194, groupID = 2, refLootEntry = 92377 }; --Mantle of the Golden Forest
+  { itemID = 34195, groupID = 2, refLootEntry = 92377 }; --Shoulderpads of Vehemence
+  { itemID = 34196, groupID = 2, refLootEntry = 92377 }; --Golden Bow of Quel'Thalas
+  { itemID = 34197, groupID = 2, refLootEntry = 92377 }; --Shiv of Exsanguination
+  { itemID = 34198, groupID = 2, refLootEntry = 92377 }; --Stanchion of Primal Instinct
+  { itemID = 34199, groupID = 1, refLootEntry = 92377 }; --Archon's Gavel
+  { itemID = 34202, groupID = 1, refLootEntry = 92377 }; --Shawl of Wonderment
+  { itemID = 34203, groupID = 2, refLootEntry = 92377 }; --Grip of Mannoroth
+  { itemID = 34204, groupID = 1, refLootEntry = 92377 }; --Amulet of Unfettered Magics
+  { itemID = 34205, groupID = 1, refLootEntry = 92377 }; --Shroud of Redeemed Souls
+  { itemID = 34206, groupID = 1, refLootEntry = 92377 }; --Book of Highborne Hymns
+  { itemID = 34208, groupID = 1, refLootEntry = 92377 }; --Equilibrium Epaulets
+  { itemID = 34209, groupID = 1, refLootEntry = 92377 }; --Spaulders of Reclamation
+  { itemID = 34210, groupID = 1, refLootEntry = 92377 }; --Amice of the Convoker
+  { itemID = 34388, groupID = 99, refLootEntry = 92377 }; --Pauldrons of Berserking
+  { itemID = 34389, groupID = 99, refLootEntry = 92377 }; --Spaulders of the Thalassian Defender
+  { itemID = 34390, groupID = 99, refLootEntry = 92377 }; --Erupting Epaulets
+  { itemID = 34391, groupID = 99, refLootEntry = 92377 }; --Spaulders of Devastation
+  { itemID = 34392, groupID = 99, refLootEntry = 92377 }; --Demontooth Shoulderpads
+  { itemID = 34393, groupID = 99, refLootEntry = 92377 }; --Shoulderpads of Knowledge's Pursuit
   { itemID = 63984, groupID = 15, refLootEntry = 92377 }; --Sigil of Lady Sacrolash
   { itemID = 63985, groupID = 15, refLootEntry = 92377 }; --Sigil of Grand Warlock Alythess
   { itemID = 1170083, groupID = 0, refLootEntry = 92377 }; --Personal Cache
-  { itemID = 400751, groupID = 5, refLootEntry = 92377 }; --Raider's Commendation
   { itemID = 28581, groupID = 1, refLootEntry = 117521 }; --Wolfslayer Sniper Rifle
   { itemID = 28582, groupID = 1, refLootEntry = 117521 }; --Red Riding Hood's Cloak
   { itemID = 28583, groupID = 1, refLootEntry = 117521 }; --Big Bad Wolf's Head
