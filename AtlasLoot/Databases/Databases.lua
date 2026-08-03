@@ -6267,6 +6267,26 @@ function AtlasLoot:InitializeDatabases()
 		{ itemID = 559337, groupID = 2, refLootEntry = 162715 }; --Amulet of the Inner Dusk
 		{ itemID = 559345, groupID = 2, refLootEntry = 162715 }; --Cape of the Last Feast
 		{ itemID = 559355, groupID = 1, refLootEntry = 162715 }; --Edict of the Sinister King
+		{ itemID = 29298, rep = "Friendly", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Champion
+		{ itemID = 29299, rep = "Honored", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Champion
+		{ itemID = 29300, rep = "Revered", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Champion
+		{ itemID = 29301, rep = "Exalted", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Champion
+		{ itemID = 29294, rep = "Friendly", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Defender
+		{ itemID = 29295, rep = "Honored", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Defender
+		{ itemID = 29296, rep = "Revered", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Defender
+		{ itemID = 29297, rep = "Exalted", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Defender
+		{ itemID = 15037, rep = "Friendly", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Assassin
+		{ itemID = 15038, rep = "Honored", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Assassin
+		{ itemID = 15039, rep = "Revered", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Assassin
+		{ itemID = 15040, rep = "Exalted", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Assassin
+		{ itemID = 29302, rep = "Friendly", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Sage
+		{ itemID = 29303, rep = "Honored", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Sage
+		{ itemID = 29304, rep = "Revered", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Sage
+		{ itemID = 29305, rep = "Exalted", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Sage
+		{ itemID = 29307, rep = "Friendly", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Restorer
+		{ itemID = 29306, rep = "Honored", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Restorer
+		{ itemID = 29308, rep = "Revered", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Restorer
+		{ itemID = 29309, rep = "Exalted", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Restorer
 
 	})
 
@@ -6674,28 +6694,6 @@ function AtlasLoot:InitializeDatabases()
 				{ itemID = 32092, minDifficulty = "Heroic" }, --The Eye of Haramad
 				{ itemID = 32449, minDifficulty = "Heroic" }, --Essence-Infused Moonstone
 			},
-		},
-		["scaleOfSandsRings"] = {
-			{ itemID = 29298, rep = "Friendly", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Champion
-			{ itemID = 29299, rep = "Honored", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Champion
-			{ itemID = 29300, rep = "Revered", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Champion
-			{ itemID = 29301, rep = "Exalted", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Champion
-			{ itemID = 29294, rep = "Friendly", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Defender
-			{ itemID = 29295, rep = "Honored", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Defender
-			{ itemID = 29296, rep = "Revered", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Defender
-			{ itemID = 29297, rep = "Exalted", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Defender
-			{ itemID = 15037, rep = "Friendly", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Assassin
-			{ itemID = 15038, rep = "Honored", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Assassin
-			{ itemID = 15039, rep = "Revered", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Assassin
-			{ itemID = 15040, rep = "Exalted", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Assassin
-			{ itemID = 29302, rep = "Friendly", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Sage
-			{ itemID = 29303, rep = "Honored", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Sage
-			{ itemID = 29304, rep = "Revered", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Sage
-			{ itemID = 29305, rep = "Exalted", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Sage
-			{ itemID = 29307, rep = "Friendly", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Band of the Eternal Restorer
-			{ itemID = 29306, rep = "Honored", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Superior Band of the Eternal Restorer
-			{ itemID = 29308, rep = "Revered", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Restorer
-			{ itemID = 29309, rep = "Exalted", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Restorer
 		},
 		["SunwellJewelcrafting"] = {
 			{ itemID = 32228, groupID = 3, refLootEntry = 25315 }, --Empyrean Sapphire
