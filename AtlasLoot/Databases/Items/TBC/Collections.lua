@@ -62,6 +62,36 @@ AtlasLoot:AddItemData("extraItemInfo",{
 		{ itemID = 30007 }, --The Darkener's Grasp
 		{ itemID = 30015 }, --The Sun King's Talisman
 	},
+	[34170] = {{ itemID = 34386 }}, --Pantaloons of Calming Strife
+	[34169] = {{ itemID = 34384 }}, --Breeches of Natural Aggression
+	[34167] = {{ itemID = 34382 }}, --Legplates of the Holy Juggernaut
+	[34180] = {{ itemID = 34381 },{ itemID = 11517 }}, --Felfury Legplates
+	[34188] = {{ itemID = 34385 }}, --Leggings of the Immortal Night
+	[34186] = {{ itemID = 34383 },{ itemID = 11518 }}, --Chain Links of the Tumultuous Storm
+	[34202] = {{ itemID = 34393 }}, --Shawl of Wonderment
+	[34209] = {{ itemID = 34391 }}, --Spaulders of Reclamation
+	[34195] = {{ itemID = 34392 }}, --Shoulderpads of Vehemence
+	[34208] = {{ itemID = 34390 },{ itemID = 11433 }}, --Equilibrium Epaulets
+	[34192] = {{ itemID = 34388 }}, --Pauldrons of Perseverance
+	[34193] = {{ itemID = 34389 },{ itemID = 11483 }}, --Spaulders of the Thalassian Savior
+	[34233] = {{ itemID = 34399 }}, --Robes of Faltered Light
+	[34212] = {{ itemID = 34398 }}, --Sunglow Vest
+	[34211] = {{ itemID = 34397 }}, --Harness of Carnal Instinct
+	[34234] = {{ itemID = 34408 }}, --Shadowed Gauntlets of Paroxysm
+	[34229] = {{ itemID = 34396 },{ itemID = 11485 }}, --Garments of Serene Shores
+	[34215] = {{ itemID = 34394 },{ itemID = 11484 }}, --Warharness of Reckless Fury
+	[34216] = {{ itemID = 34395 }}, --Valiant Judicator's Chestguard
+	[34339] = {{ itemID = 34405 }}, --Cowl of Light's Purity
+	[34342] = {{ itemID = 34406 }}, --Handguards of the Dawn
+	[34244] = {{ itemID = 34404 }}, --Duplicitous Guise
+	[34245] = {{ itemID = 34403 }}, --Cover of Ursol the Wise
+	[34332] = {{ itemID = 34402 },{ itemID = 10736 }}, --Cowl of Gul'dan
+	[34243] = {{ itemID = 34401 }}, --Helm of Burning Righteousness
+	[34345] = {{ itemID = 10735 },{ itemID = 34400 }}, --Crown of Anasterian
+	[34341] = {{ itemID = 11520 }}, --Borderland Paingrips
+	[34351] = {{ itemID = 34407 }}, --Tranquil Majesty Wraps
+	[34350] = {{ itemID = 34409 },{ itemID = 11519 }}, --Gauntlets of the Ancient Shadowmoon
+	[450010] = {{itemID = 450009},{ itemID = 450010 },{ itemID = 34334 }}, --Thori'dal, the Stars' Fury
 })
 
 AtlasLoot:AddItemData("lootableLinks", {
