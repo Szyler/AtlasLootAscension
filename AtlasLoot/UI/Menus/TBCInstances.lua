@@ -243,8 +243,8 @@ AtlasLoot:AddNewMenus({
 		{ "M'uru", {25840} },
 		{ "Kil'jaeden", {25315} },
 		{ "Trash Mobs", {25597} },
-		{ "Jewelcrafting", {} },
-		{ "Patterns/Plans", {} },
+		{ "Jewelcrafting", {"SunwellJewelcrafting"} },
+		{ "Patterns/Plans", {"SunwellPatternsAndPlans"} },
 	},
 
 	["ZulAman"] = {

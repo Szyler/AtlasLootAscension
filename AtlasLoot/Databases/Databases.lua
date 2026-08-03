@@ -6697,6 +6697,49 @@ function AtlasLoot:InitializeDatabases()
 			{ itemID = 29308, rep = "Revered", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Exquisite Band of the Eternal Restorer
 			{ itemID = 29309, rep = "Exalted", maxDifficulty = "Normal", refLootEntry = "scaleOfSandsRings" }, --Flawless Band of the Eternal Restorer
 		},
+		["SunwellJewelcrafting"] = {
+			{ itemID = 32228, groupID = 3, refLootEntry = 25315 }, --Empyrean Sapphire
+			{ itemID = 32231, groupID = 3, refLootEntry = 25315 }, --Pyrestone
+			{ itemID = 32229, groupID = 3, refLootEntry = 25315 }, --Lionseye
+			{ itemID = 32249, groupID = 3, refLootEntry = 25315 }, --Seaspray Emerald
+			{ itemID = 32230, groupID = 3, refLootEntry = 25315 }, --Shadowsong Amethyst
+			{ itemID = 32227, groupID = 3, refLootEntry = 25315 }, --Crimson Spinel
+			{ itemID = 35198, droprate = "0.06%" }, --Design: Loop of Forged Power
+			{ itemID = 35201, droprate = "0.06%" }, --Design: Pendant of Sunfire
+			{ itemID = 35199, droprate = "0.06%" }, --Design: Ring of Flowing Life
+			{ itemID = 35202, droprate = "0.06%" }, --Design: Amulet of Flowing Life
+			{ itemID = 35200, droprate = "0.06%" }, --Design: Hard Khorium Band
+			{ itemID = 35203, droprate = "0.06%" }, --Design: Hard Khorium Choker
+		},
+		["SunwellPatternsAndPlans"] = {
+			{ itemID = 35212, droprate = "0.06%" }, --Pattern: Leather Gauntlets of the Sun
+			{ itemID = 35216, droprate = "0.06%" }, --Pattern: Leather Chestguard of the Sun
+			{ itemID = 35213, droprate = "0.06%" }, --Pattern: Fletcher's Gloves of the Phoenix
+			{ itemID = 35217, droprate = "0.06%" }, --Pattern: Pattern: Embrace of the Phoenix
+			{ itemID = 35214, droprate = "0.06%" }, --Pattern: Gloves of Immortal Dusk
+			{ itemID = 35218, droprate = "0.06%" }, --Pattern: Carapace of Sun and Shadow
+			{ itemID = 35215, droprate = "0.06%" }, --Pattern: Sun-Drenched Scale Gloves
+			{ itemID = 35219, droprate = "0.06%" }, --Pattern: Sun-Drenched Scale Chestguard
+			{ itemID = 35204, droprate = "0.06%" }, --Pattern: Sunfire Handwraps
+			{ itemID = 35206, droprate = "0.06%" }, --Pattern: Sunfire Robe
+			{ itemID = 35205, droprate = "0.06%" }, --Pattern: Hands of Eternal Light
+			{ itemID = 35207, droprate = "0.06%" }, --Pattern: Robe of Eternal Light
+			{ itemID = 35208, droprate = "0.06%" }, --Plans: Sunblessed Gauntlets
+			{ itemID = 35210, droprate = "0.06%" }, --Plans: Sunblessed Breastplate
+			{ itemID = 35209, droprate = "0.06%" }, --Plans: Hard Khorium Battlefists
+			{ itemID = 35211, droprate = "0.06%" }, --Plans: Hard Khorium Battleplate
+			{ itemID = 35186, droprate = "0.06%" }, --Schematic: Annihilator Holo-Gogs
+			{ itemID = 35187, droprate = "0.06%" }, --Schematic: Justicebringer 3000 Specs
+			{ itemID = 35189, droprate = "0.06%" }, --Schematic: Powerheal 9000 Lens
+			{ itemID = 35190, droprate = "0.06%" }, --Schematic: Hyper-Magnified Moon Specs
+			{ itemID = 35191, droprate = "0.06%" }, --Schematic: Wonderheal XT68 Shades
+			{ itemID = 35192, droprate = "0.06%" }, --Schematic: Primal-Attuned Goggles
+			{ itemID = 35193, droprate = "0.06%" }, --Schematic: Lightning Etched Specs
+			{ itemID = 35194, droprate = "0.06%" }, --Schematic: Surestrike Goggles v3.0
+			{ itemID = 35195, droprate = "0.06%" }, --Schematic: Mayhem Projection Goggles
+			{ itemID = 35196, droprate = "0.06%" }, --Schematic: Hard Khorium Goggles
+			{ itemID = 35197, droprate = "0.06%" }, --Schematic: Quad Deathblow X44 Goggles
+		},
 	})
 
 end
