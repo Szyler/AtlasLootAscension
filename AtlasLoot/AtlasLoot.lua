@@ -46,9 +46,7 @@ AtlasLoot.DBDefaults = {
 			LootBrowserStyle = 1,
 			LootBrowserScale = 1.0,
 			MerchantGlow = false,
-			SearchOn = {
-				All = false,
-			},
+			SearchOn = {},
 			txtSize = 12,
 			showUnknownRecipeTooltip = true,
 			ItemLoadingSpeed = 1,

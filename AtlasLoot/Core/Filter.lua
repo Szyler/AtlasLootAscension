@@ -43,6 +43,10 @@ local CraftingFilterTable = {
 	{"Unknown", "Unknown"},
 }
 
+function AtlasLoot:GetFilterList()
+	return FilterTable
+end
+
 -- **********************************************************************
 -- ItemFilter:
 --	AtlasLoot:FilterItem()
