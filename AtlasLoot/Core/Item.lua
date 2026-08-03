@@ -1,5 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local ItemUtil = {}
+local ItemUtil = {parent = AtlasLoot}
 AtlasLoot.ItemUtil = ItemUtil
 
 local equipmentSlots = {
@@ -268,7 +268,7 @@ function ItemUtil:GetItemInfo(item)
 	if not itemInfo.itemID then return {} end
 
 	itemInfo.className = _G["ITEM_CLASS_"..itemInfo.classID]
-	itemInfo.subclassName = _G["ITEM_SUBCLASS_"..itemInfo.classID.."_"..itemInfo.subclassID]
+	itemInfo.subclassName = self:GetSubClassName(itemInfo.classID, itemInfo.subclassID)
 	itemInfo.inventoryTypeName = equipmentSlots[itemInfo.inventoryType] and equipmentSlots[itemInfo.inventoryType].name
 	itemInfo.isToken = itemInfo.description and itemInfo.description:find("Global Token for Tier", 1, true) or nil
 	return itemInfo
@@ -294,12 +294,17 @@ function ItemUtil:GetItemQuality(id)
 	return self:GetItemInfo(id).quality
 end
 
+function ItemUtil:GetItemLevel(id)
+	return GetItemLevelInstant(id)
+end
+
 function ItemUtil:GetClassName(id)
 	return self:GetItemInfo(id).className
 end
 
-function ItemUtil:GetSubClassName(id)
-	return self:GetItemInfo(id).subclassName
+function ItemUtil:GetSubClassName(classID, subclassID)
+	if not subclassID then return end
+	return _G["ITEM_SUBCLASS_"..classID.."_"..subclassID]
 end
 
 function ItemUtil:GetSlotName(slot)
