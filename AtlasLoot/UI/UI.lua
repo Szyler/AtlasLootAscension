@@ -66,7 +66,10 @@ function AtlasLoot:InitializeUI()
         {
             name = "Search",
             atlas = "communities-icon-searchmagnifyingglass",
-            onClick = function(...) self:ShowSearchTab(...) end,
+            onClick = function(...)
+		        self:ToogleWishListButtons()
+                self:ShowSearchTab(...)
+            end,
         },
     }
 
