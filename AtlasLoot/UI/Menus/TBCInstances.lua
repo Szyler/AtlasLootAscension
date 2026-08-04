@@ -90,7 +90,7 @@ AtlasLoot:AddNewMenus({
 	["CFRSlavePens"] = {
 		Name = "Coilfang Reservoir - The Slave Pens",
 		Type = "BCDungeon",
-		{ "Mennu the Betrayer", {17941, 2061629} },
+		{ "Mennu the Betrayer", {17941} },
 		{ "Rokmar the Crackler", {17991} },
 		{ "Quagmirran", {17942} },
 	},
@@ -100,7 +100,7 @@ AtlasLoot:AddNewMenus({
 		Type = "BCDungeon",
  		{ "Hydromancer Thespia", {17797} },
 		{ "Mekgineer Steamrigger", {17796} },
-		{ "Warlord Kalithresh", {17798,2061802} },
+		{ "Warlord Kalithresh", {17798} },
 	},
 
 	["CFRUnderbog"] = {
@@ -108,7 +108,7 @@ AtlasLoot:AddNewMenus({
 		Type = "BCDungeon",
  		{ "Hungarfen", {17770} },
 		{ "Ghaz'an", {18105} },
-		{ "Swamplord Musel'ek", {17826,2061716} },
+		{ "Swamplord Musel'ek", {17826} },
 		{ "The Black Stalker", {17882} },
 	},
 
@@ -151,8 +151,8 @@ AtlasLoot:AddNewMenus({
 		Name = "Hellfire Citadel - The Shattered Halls",
 		Type = "BCDungeon",
  		{ "Grand Warlock Nethekurse", {16807} },
-		{ "Blood Guard Porung", {20923, 2061628} },
-		{ "Warbringer O'mrogg", {16809, 2076150} },
+		{ "Blood Guard Porung", {20923} },
+		{ "Warbringer O'mrogg", {16809} },
 		{ "Warchief Kargath Bladefist", {16808} },
 	},
 
@@ -197,7 +197,7 @@ AtlasLoot:AddNewMenus({
 		Type = "BCDungeon",
  		{ "Zereketh the Unbound", {40080} },
 		{ "Wrath-Scryer Soccothrates", {40081} },
-		{ "Dalliah the Doomsayer", {40082,2076655} },
+		{ "Dalliah the Doomsayer", {40082} },
 		{ "Harbinger Skyriss", {25004} },
 		{ "Trash Mobs", {} },
 	},
@@ -205,8 +205,8 @@ AtlasLoot:AddNewMenus({
 	["TKBot"] = {
 		Name = "Tempest Keep - The Botanica",
 		Type = "BCDungeon",
- 		{ "Commander Sarannis", {40070,2061739} },
-		{ "High Botanist Freywinn", {40071,2060635} },
+ 		{ "Commander Sarannis", {40070} },
+		{ "High Botanist Freywinn", {40071} },
 		{ "Thorngrin the Tender", {40072} },
 		{ "Laj", {40073} },
 		{ "Warp Splinter", {40074} },
@@ -217,8 +217,8 @@ AtlasLoot:AddNewMenus({
 		Type = "BCDungeon",
  		{ "Cache of the Legion", {184465} },
 		{ "Mechano-Lord Capacitus", {40060} },
-		{ "Nethermancer Sepethrea", {40061,2060796} },
-		{ "Pathaleon the Calculator", {40062, 2061806} },
+		{ "Nethermancer Sepethrea", {40061} },
+		{ "Pathaleon the Calculator", {40062} },
 	},
 
 	["TKEye"] = {
