@@ -165,7 +165,10 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 		end
 		local craftingSpellID = self:GetTradeSkillByRecipeID(itemID)
 		if craftingSpellID then
-			crafedItemID = {{self:GetCraftedItemID(craftingSpellID)}}
+			local foundID = self:GetCraftedItemID(craftingSpellID)
+			if foundID then
+				crafedItemID = {{foundID}}
+			end
 		end
 	else
 		if itemNumber.name then
