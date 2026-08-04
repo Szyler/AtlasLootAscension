@@ -3960,6 +3960,39 @@ AtlasLoot:AddItemData("sort", {
   { itemID = 27937, groupID = 1, refLootEntry = 118478 }; --Sky Breaker
   { itemID = 28268, groupID = 1, refLootEntry = 118478 }; --Natural Mender's Wraps
   { itemID = 28558, groupID = 0, refLootEntry = 118478 }; --Spirit Shard
+  { itemID = 12126, groupID = 2, refLootEntry = 121217 }; --Bracers of Abyssal Might
+  { itemID = 12165, groupID = 2, refLootEntry = 121217 }; --Amulet of Tidal Fury
+  { itemID = 30057, groupID = 2, refLootEntry = 121217 }; --Bracers of Eradication
+  { itemID = 30058, groupID = 2, refLootEntry = 121217 }; --Mallet of the Tides
+  { itemID = 30059, groupID = 2, refLootEntry = 121217 }; --Choker of Animalistic Fury
+  { itemID = 30060, groupID = 2, refLootEntry = 121217 }; --Boots of Effortless Striking
+  { itemID = 30061, groupID = 2, refLootEntry = 121217 }; --Ancestral Ring of Conquest
+  { itemID = 30062, groupID = 1, refLootEntry = 121217 }; --Grove-Bands of Remulos
+  { itemID = 30063, groupID = 1, refLootEntry = 121217 }; --Libram of Absolute Truth
+  { itemID = 30064, groupID = 1, refLootEntry = 121217 }; --Cord of Screaming Terrors
+  { itemID = 30065, groupID = 1, refLootEntry = 121217 }; --Glowing Breastplate of Truth
+  { itemID = 30066, groupID = 1, refLootEntry = 121217 }; --Tempest-Strider Boots
+  { itemID = 30067, groupID = 1, refLootEntry = 121217 }; --Velvet Boots of the Guardian
+  { itemID = 30665, groupID = 1, refLootEntry = 121217 }; --Earring of Soulful Meditation
+  { itemID = 33054, groupID = 1, refLootEntry = 121217 }; --The Seal of Danzalar
+  { itemID = 12149, groupID = 2, refLootEntry = 121217 }; --Ring of Unstable Currents
+  { itemID = 30047, groupID = 1, refLootEntry = 121217 }; --Blackfathom Warbands
+  { itemID = 30048, groupID = 1, refLootEntry = 121217 }; --Brighthelm of Justice
+  { itemID = 30049, groupID = 1, refLootEntry = 121217 }; --Fathomstone
+  { itemID = 30050, groupID = 1, refLootEntry = 121217 }; --Boots of the Shifting Nightmare
+  { itemID = 30051, groupID = 1, refLootEntry = 121217 }; --Idol of the Crescent Goddess
+  { itemID = 30052, groupID = 2, refLootEntry = 121217 }; --Ring of Lethality
+  { itemID = 30053, groupID = 2, refLootEntry = 121217 }; --Pauldrons of the Wardancer
+  { itemID = 30054, groupID = 2, refLootEntry = 121217 }; --Ranger-General's Chestguard
+  { itemID = 30055, groupID = 2, refLootEntry = 121217 }; --Shoulderpads of the Stranger
+  { itemID = 30056, groupID = 1, refLootEntry = 121217 }; --Robe of Hateful Echoes
+  { itemID = 30629, groupID = 2, refLootEntry = 121217 }; --Scarab of Displacement
+  { itemID = 30664, groupID = 2, refLootEntry = 121217 }; --Living Root of the Wildheart
+  { itemID = 32516, groupID = 1, refLootEntry = 121217 }; --Wraps of Purification
+  { itemID = 33055, groupID = 2, refLootEntry = 121217 }; --Band of Vile Aggression
+  { itemID = 63338, groupID = 15, refLootEntry = 121217 }; --Sigil of Hydross the Unstable
+  { itemID = 816254, groupID = 5, refLootEntry = 121217 }; --Formula: Enchant Cloak - Crushing Wave
+  { itemID = 1170083, groupID = 0, refLootEntry = 121217 }; --Personal Cache
   { itemID = 24152, groupID = 0, refLootEntry = 181963 }; --Charred Bone Fragment
   { itemID = 28248, groupID = 1, refLootEntry = 184465 }; --Totem of the Void
   { itemID = 28249, groupID = 1, refLootEntry = 184465 }; --Capacitus' Cloak of Calibration
