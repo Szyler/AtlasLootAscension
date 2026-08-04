@@ -92,7 +92,6 @@ function AtlasLoot:OnEnable()
 	self:InitializeUI()
 	self:CreateItemSourceList()
 	self:CreateSearchFrame()
-	self:InitializeSkins()
 	self:MinimapIconSetup()
 	self:InitializeOptionsFrame()
 	self:PopulateProfessions()
@@ -101,6 +100,7 @@ function AtlasLoot:OnEnable()
 	self:RegisterComm("AtlasLootWishlist")
 	self:InitializeWishlistMerchantGlow()
 	self:PatchNotes()
+	self:InitializeSkins()
 
 	if self.selectedProfile.isAdmin then
 		ATLASLOOT = self
