@@ -21,7 +21,9 @@ function AtlasLoot:CreateToken(dataID, slotNumber)
 	while self.data.item[dataID..count] do
 		for _, item in ipairs(self.data.item[dataID..count]) do
 			if item.itemID then
-				if slotNumber == self.ItemUtil:GetItemEquiplocation(item.itemID) then
+				local slot = self.ItemUtil:GetItemEquiplocation(item.itemID)
+				if slot == 20 then slot = 5 end
+				if slotNumber == slot then
 					table.insert(self.data.token[newDataID][1], {itemID = item.itemID, desc = self:GetDataPageName(dataID..count)})
 				end
 			end
