@@ -257,15 +257,6 @@ function AtlasLoot:InitializeSearch()
         RunQuary()
     end
 
-    searchPanel.levelmin:SetText("")
-    searchPanel.levelmax:SetText("")
-    searchPanel.ilevelmin:SetText("")
-    searchPanel.ilevelmax:SetText("")
-    searchPanel.equipbtn:SetText("Select Item Type")
-    searchPanel.equipbtn.subbtn:Disable()
-    searchPanel.equipbtn.subbtn:SetText("Select Option")
-
-
     ---------------------------------New Search System---------------------------------
     local function setupParameters(self)
         if self.searchParameters then return end
@@ -437,10 +428,11 @@ function AtlasLoot:InitializeSearch()
         searchPanel.levelmax:SetText("")
         searchPanel.ilevelmin:SetText("")
         searchPanel.ilevelmax:SetText("")
-        searchPanel.equipbtn:SetText("Select Item Type")
+        searchPanel.equipbtn:SetText("Select Option")
         searchPanel.equipbtn.subbtn:Disable()
         searchPanel.equipbtn.subbtn:SetText("Select Option")
     end
+    Search:ResetParameters()
 
     local function advSearchArgButtonToggle()
         if ACTIVE_ARGUMENT == MAX_ARGUMENTS then
