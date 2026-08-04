@@ -84,7 +84,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 	local show = true
 	local text, extra
 	local itemData = self.ItemUtil:GetItemInfo(itemID)
-	local spellName, spellIcon
+	local spellName, spellIcon, crafedItemID
 	--Use shortcuts for easier reference to parts of the item button
 	local iconFrame  = itemButton.Icon
 	local nameFrame  = itemButton.Name
@@ -163,6 +163,10 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 				end
 			end
 		end
+		local craftingSpellID = self:GetTradeSkillByRecipeID(itemID)
+		if craftingSpellID then
+			crafedItemID = {{self:GetCraftedItemID(craftingSpellID)}}
+		end
 	else
 		if itemNumber.name then
 			--If it has a manuel entry use that
@@ -202,11 +206,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 		extra = ""
 	end
 
-	if self.data.extraItemInfo[itemNumber.itemID]and dataID ~= "SearchResult" then
-		extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
-	end
-
-	if itemNumber.contentsPreview and dataID ~= "SearchResult" then
+	if (itemNumber.contentsPreview or crafedItemID) and dataID ~= "SearchResult" then
 		extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
 	end
 
@@ -272,7 +272,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 	itemButton.tablenum = tablenum
 	itemButton.dataID = dataID
 	itemButton.dataSource = dataSource_backup
-	itemButton.contentsPreview = itemNumber.contentsPreview
+	itemButton.contentsPreview = itemNumber.contentsPreview or crafedItemID
 	itemButton.price = itemNumber.price or nil
 	itemButton.droprate = itemNumber.droprate or self:GetDropRate(itemNumber.refLootEntry, itemNumber.groupID)
 	itemButton.extraInfo = itemNumber.extraInfo or nil
