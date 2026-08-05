@@ -123,6 +123,7 @@ function AtlasLoot:InitializeSearch()
         return string.find(string.lower(itemDetails.name), string.lower(searchText))
     end
 
+    -- all querys matches will return true if they are nil
     local function queryMatchesAllParameters(searchText, itemDetails)
         if not nameMatches(searchText,itemDetails) then
             return false
@@ -403,23 +404,23 @@ function AtlasLoot:InitializeSearch()
     }
 
     function Search:ShowSearchOptions(button)
-            local profile = self.parent.selectedProfile
-            local menuList = {{
-                    {text = "Search Categories", func = function() self.parent:AddWishList() end, isTitle = true},
-            }}
+        local profile = self.parent.selectedProfile
+        local menuList = {{
+                {text = "Search Categories", func = function() self.parent:AddWishList() end, isTitle = true},
+        }}
 
-            for _, cat in pairs(searchCategories) do
-                table.insert(menuList[1], {text = cat.Name, isTitle = true})
-                for _, data in ipairs(cat) do
-                    profile.SearchOn[data[2]] = profile.SearchOn[data[2]] or false
-                    table.insert(menuList[1], {isRadio = true, text = data[1], checked = {profile.SearchOn, data[2]}, dontCloseWhenClicked = true,
-                    func = function()
-                        profile.SearchOn[data[2]] = not profile.SearchOn[data[2]]
-                    end})
-                end
+        for _, cat in pairs(searchCategories) do
+            table.insert(menuList[1], {text = cat.Name, isTitle = true})
+            for _, data in ipairs(cat) do
+                profile.SearchOn[data[2]] = profile.SearchOn[data[2]] or false
+                table.insert(menuList[1], {isRadio = true, text = data[1], checked = {profile.SearchOn, data[2]}, dontCloseWhenClicked = true,
+                func = function()
+                    profile.SearchOn[data[2]] = not profile.SearchOn[data[2]]
+                end})
             end
-            self.parent:OpenDewdropMenu(button, menuList)
         end
+        self.parent:OpenDewdropMenu(button, menuList)
+    end
 
     function Search:ResetParameters()
         self.searchParameters = nil
