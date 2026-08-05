@@ -167,7 +167,8 @@ AtlasLoot:PopoupItemFrame(item, data)
 Used to create a popup item frame for items like gem sacks to show what they contain
 ]] 
 function AtlasLoot:PopoupItemFrame(frame, data)
-	if not data then self.ui.itemPopupframe:Hide() return end
+	if not data then return end
+	self.ui.itemPopupframe:Show()
 	--hide the unused buttons
 	for i = 1, 15 do
 		local button = _G["AtlasLoot_PopupButton_"..i]

@@ -84,7 +84,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 	local show = true
 	local text, extra
 	local itemData = self.ItemUtil:GetItemInfo(itemID)
-	local spellName, spellIcon, crafedItemID
+	local spellName, spellIcon, crafedItemID, reagents
 	--Use shortcuts for easier reference to parts of the item button
 	local iconFrame  = itemButton.Icon
 	local nameFrame  = itemButton.Name
@@ -117,6 +117,8 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 				hightlightFrame:Show()
 			end
 		end
+
+		reagents = self:GetReagentItems(spellID)
 
 	elseif itemID then
 		--If the client has the name of the item in cache, use that instead.					
@@ -209,7 +211,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 		extra = ""
 	end
 
-	if (itemNumber.contentsPreview or crafedItemID) and dataID ~= "SearchResult" then
+	if (itemNumber.contentsPreview or self.data.extraItemInfo[itemID] or crafedItemID) and dataID ~= "SearchResult" then
 		extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
 	end
 
@@ -275,7 +277,8 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 	itemButton.tablenum = tablenum
 	itemButton.dataID = dataID
 	itemButton.dataSource = dataSource_backup
-	itemButton.contentsPreview = itemNumber.contentsPreview or crafedItemID
+	itemButton.contentsPreview = itemNumber.contentsPreview or reagents or self.data.extraItemInfo[itemID] or crafedItemID
+	itemButton.craftedID = crafedItemID
 	itemButton.price = itemNumber.price or nil
 	itemButton.droprate = itemNumber.droprate or self:GetDropRate(itemNumber.refLootEntry, itemNumber.groupID)
 	itemButton.extraInfo = itemNumber.extraInfo or nil

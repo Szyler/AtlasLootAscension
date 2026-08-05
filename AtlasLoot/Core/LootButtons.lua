@@ -214,20 +214,8 @@ function AtlasLoot:ItemOnClick(item, button)
         if self.wishListLockState == "Unlocked" then
             self:MoveWishlistItem("Up", item.item.positionNumber)
             return
-        elseif not isItem then
-            local reagents = self:GetReagentItems(spellID)
-            if reagents then
-                self:PopoupItemFrame(item, reagents)
-                self.ui.itemPopupframe:Show()
-                return
-            end
-        elseif itemID and self.data.extraItemInfo[itemID] then
-            self:PopoupItemFrame(item, self.data.extraItemInfo[itemID] )
-            self.ui.itemPopupframe:Show()
-            return
         elseif item.contentsPreview then
             self:PopoupItemFrame(item, item.contentsPreview )
-            self.ui.itemPopupframe:Show()
             return
         elseif item.sourcePage and item.sourcePage[2] == "Source" then
             local dataID, dataSource, dataPage = unpack(item.sourcePage[1])
