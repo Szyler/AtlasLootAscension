@@ -31,7 +31,7 @@ function AtlasLoot:CreateSearchFrame()
 
     --Create quality button
     searchPanel.searchCategory = CreateFrame("Button", "AtlasLoot_Search_CategoryButton", searchPanel, "AtlasLootDropMenuTemplate")
-    searchPanel.searchCategory:SetSize(235, 25)
+    searchPanel.searchCategory:SetSize(235, 30)
     searchPanel.searchCategory:SetPoint("TOPLEFT", searchPanel.searchbox, "BOTTOMLEFT", -7, -10)
     searchPanel.searchCategory:SetText("Category Selections")
     searchPanel.searchCategory:SetScript("OnClick", function(frame)
@@ -42,7 +42,7 @@ function AtlasLoot:CreateSearchFrame()
 
     --Create equip type button
     searchPanel.equipbtn = CreateFrame("Button", "AtlasLoot_Search_EquipButton", searchPanel, "AtlasLootDropMenuTemplate")
-    searchPanel.equipbtn:SetSize(112, 25)
+    searchPanel.equipbtn:SetSize(112, 30)
     searchPanel.equipbtn:SetPoint("TOPLEFT", searchPanel.searchCategory, "BOTTOMLEFT", 3, -25)
     searchPanel.equipbtn.title = searchPanel.equipbtn:CreateFontString(nil, "ARTWORK", "GameFontNormal")
     searchPanel.equipbtn.title:SetText("Item Type")
@@ -50,7 +50,7 @@ function AtlasLoot:CreateSearchFrame()
 
     --Create equip sub type button
     searchPanel.equipbtn.subbtn = CreateFrame("Button", "AtlasLoot_Search_EquipSubButton", searchPanel.equipbtn, "AtlasLootDropMenuTemplate")
-    searchPanel.equipbtn.subbtn:SetSize(112, 25)
+    searchPanel.equipbtn.subbtn:SetSize(112, 30)
     searchPanel.equipbtn.subbtn:SetPoint("LEFT", searchPanel.equipbtn, "RIGHT", 10, 0)
     searchPanel.equipbtn.subbtn.title = searchPanel.equipbtn.subbtn:CreateFontString(nil, "ARTWORK", "GameFontNormal")
     searchPanel.equipbtn.subbtn.title:SetText("Item Subtype")
@@ -129,7 +129,7 @@ function AtlasLoot:CreateSearchFrame()
     searchPanel.sub = {}
     searchPanel.value = {}
     for i = 1, MAX_ARGUMENTS do
-        local point = (i == 1 and {"TOPLEFT", searchPanel.argpanel.title, "BOTTOMLEFT", 0,-15}) or {"TOPLEFT", searchPanel.main[(i-1)], "BOTTOMLEFT", 0, -5}
+        local point = (i == 1 and {"TOPLEFT", searchPanel.argpanel.title, "BOTTOMLEFT", 0,-10}) or {"TOPLEFT", searchPanel.main[(i-1)], "BOTTOMLEFT", 0, -5}
         searchPanel.main[i] = CreateFrame("Button", "AtlasLoot_Search_ArgumentContainer" .. i, searchPanel.argpanel, "AtlasLootDropMenuTemplate")
         searchPanel.main[i]:SetPoint(unpack(point))
         searchPanel.main[i]:SetSize(90, 25)
@@ -168,17 +168,31 @@ function AtlasLoot:CreateSearchFrame()
     end
 
     --Search Button
-    searchPanel.searchbtn = CreateFrame("Button", "AtlasLoot_Search_SearchButton", searchPanel, "AtlasLootDropMenuTemplate")
-    searchPanel.searchbtn:SetSize(235,25)
-    searchPanel.searchbtn.Icon:Hide()
-    searchPanel.searchbtn:SetPoint("BOTTOMLEFT", searchPanel, "BOTTOMLEFT", 15, 15)
-    searchPanel.searchbtn:SetScript("OnShow", function(button)
-        button:SetText("Search")
+    searchPanel.searchButton = CreateFrame("Button", "AtlasLoot_Search_SearchButton", searchPanel, "AtlasLootDropMenuTemplate")
+    searchPanel.searchButton:SetSize(112.5,30)
+    searchPanel.searchButton.Icon:Hide()
+    searchPanel.searchButton:SetText("Search")
+    searchPanel.searchButton:SetPoint("BOTTOMLEFT", searchPanel, "BOTTOMLEFT", 15, 15)
+    searchPanel.searchButton:SetScript("OnShow", function(button)
         button:SetFrameLevel( (button:GetParent()):GetFrameLevel() + 1 )
     end)
-    searchPanel.searchbtn:SetScript("OnClick", function()
+    searchPanel.searchButton:SetScript("OnClick", function()
         self.Search:RunQuary()
         searchPanel.searchbox:ClearFocus()
+    end)
+
+    --Search Button
+    searchPanel.searchResetButton = CreateFrame("Button", "AtlasLoot_Search_ResetButton", searchPanel, "AtlasLootDropMenuTemplate")
+    searchPanel.searchResetButton:SetSize(112.5,30)
+    searchPanel.searchResetButton:SetPoint("LEFT", searchPanel.searchButton, "RIGHT", 10, 2)
+    searchPanel.searchResetButton.Icon:Hide()
+    searchPanel.searchResetButton:SetText("Reset")
+    searchPanel.searchResetButton:SetPoint("BOTTOMLEFT", searchPanel, "BOTTOMLEFT", 15, 15)
+    searchPanel.searchResetButton:SetScript("OnShow", function(button)
+        button:SetFrameLevel( (button:GetParent()):GetFrameLevel() + 1 )
+    end)
+    searchPanel.searchResetButton:SetScript("OnClick", function()
+        self.Search:ResetParameters()
     end)
 
     self:InitializeSearch()

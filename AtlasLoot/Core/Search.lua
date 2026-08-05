@@ -424,6 +424,7 @@ function AtlasLoot:InitializeSearch()
     function Search:ResetParameters()
         self.searchParameters = nil
         setupParameters(self)
+        searchPanel.searchbox:SetText("")
         searchPanel.levelmin:SetText("")
         searchPanel.levelmax:SetText("")
         searchPanel.ilevelmin:SetText("")
@@ -431,6 +432,9 @@ function AtlasLoot:InitializeSearch()
         searchPanel.equipbtn:SetText("Select Option")
         searchPanel.equipbtn.subbtn:Disable()
         searchPanel.equipbtn.subbtn:SetText("Select Option")
+        for i = 1, ACTIVE_ARGUMENT do
+            self:RemoveArgumentContainer()
+        end
     end
     Search:ResetParameters()
 
