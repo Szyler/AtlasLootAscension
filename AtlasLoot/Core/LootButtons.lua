@@ -161,95 +161,94 @@ function AtlasLoot:ItemOnClick(item, button)
     self.Dewdrop:Close()
     local spellID = item.spellID
     local itemID = item.itemID
-    local dataID, dataSource, dataPage
+    local isItem = not spellID and itemID
+    local itemData = self.ItemUtil:GetItemInfo(itemID)
+    local link = itemData and itemData.link
 
-    if not spellID and itemID then
-        local itemData = self.ItemUtil:GetItemInfo(itemID)
-        --If shift-clicked, link in the chat window
-        if button == "RightButton" and self.wishListLockState == "Unlocked" then
-            self:MoveWishlistItem("Down", item.item.positionNumber)
-
-        elseif button == "LeftButton" and self.wishListLockState == "Unlocked" then
-            self:MoveWishlistItem("Up", item.item.positionNumber)
-
-        elseif button == "RightButton" and itemID and IsAltKeyDown() and self.itemframe.refresh[2] ~= "currentWishList" then
-            local wList = AtlasLootWishList.Options[playerName].DefaultWishList
-
-            self:AddItemToWishList(wList[1], wList[3], item)
-        elseif button == "RightButton" and itemID then
-            self:ItemContextMenu(item, "item")
-
-        elseif IsShiftKeyDown() and itemData.name then
-            ChatEdit_InsertLink(itemData.link)
-
-        elseif ChatFrame1EditBox and ChatFrame1EditBox:IsVisible() and IsShiftKeyDown() then
-            ChatFrame1EditBox:Insert(itemData.name)  -- <-- this line just inserts plain text, does not need any adjustment
-            --If control-clicked, use the dressing room
-        elseif IsControlKeyDown() and itemData.name then
-            --view item in dressing room
-            DressUpItemLink(itemData.link)
-        elseif IsAltKeyDown() then
-            if self.itemframe.refresh[2] == "currentWishList" then
-                self:DeleteFromWishList(item.item)
-            end
-        elseif item.sourcePage and item.sourcePage[2] == "Source" then
-            dataID, dataSource, dataPage = unpack(item.sourcePage[1])
-            if dataID and dataID ~= "" and dataSource then
-                self.backEnabled = true
-                self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
-            end
-        elseif item.sourcePage and item.sourcePage[3] == "Token" then
-            local source = item.sourcePage[1]..item.sourcePage[2]
-            --Create token table if there isnt one
-            if self.data.token[source] == nil then
-                self:CreateToken(item.sourcePage[1], item.sourcePage[2])
-            end
-            --Show token table
-            self:ShowItemsFrame(source, "token", 1)
-        elseif button == "LeftButton" and itemID and self.data.extraItemInfo[itemID] then
-            self:PopoupItemFrame(item, self.data.extraItemInfo[itemID] )
-            self.ui.itemPopupframe:Show()
-        elseif button == "LeftButton" and item.contentsPreview then
-            self:PopoupItemFrame(item, item.contentsPreview )
-            self.ui.itemPopupframe:Show()
-        end
-    else
-        if IsShiftKeyDown() then
+    if IsShiftKeyDown() then
+        if not isItem then
             ChatEdit_InsertLink(self:GetEnchantLink(spellID))
-        elseif button == "RightButton" and self.wishListLockState == "Unlocked" then
-            self:MoveWishlistItem("Down", item.item.positionNumber)
-        elseif button == "LeftButton" and self.wishListLockState == "Unlocked" then
-            self:MoveWishlistItem("Up", item.item.positionNumber)
-        elseif button == "RightButton" then
+            return
+        elseif itemData and ChatFrame1EditBox and ChatFrame1EditBox:IsVisible() then
+            ChatFrame1EditBox:Insert(itemData.name)  -- <-- this line just inserts plain text, does not need any adjustment
+            return
+        elseif link then
+            ChatEdit_InsertLink(link)
+            return
+        end
+    end
+
+    if IsAltKeyDown() then
+        if button == "RightButton" and itemID and self.itemframe.refresh[2] ~= "currentWishList" then
+            local wList = AtlasLootWishList.Options[playerName].DefaultWishList
+            self:AddItemToWishList(wList[1], wList[3], item)
+            return
+        elseif self.itemframe.refresh[2] == "currentWishList" then
+            self:DeleteFromWishList(item.item)
+            return
+        end
+    end
+
+    if IsControlKeyDown() then
+        if link then
+            --view item in dressing room
+            DressUpItemLink(link)
+            return
+        end
+    end
+
+    if button == "RightButton" then
+        if not isItem then
             self:ItemContextMenu(item, "spell")
-        elseif IsAltKeyDown() then
-            if self.itemframe.refresh[2] == "currentWishList" then
-                self:DeleteFromWishList(item.item)
-            end
-        elseif IsControlKeyDown() then
-            DressUpItemLink("item:"..item.itemID..":0:0:0:0:0:0:0")
-        elseif item.sourcePage and item.sourcePage[2] == "Source" then
-            dataID, dataSource, dataPage = unpack(item.sourcePage[1])
-            if dataID and dataID ~= "" and dataSource then
-                self.backEnabled = true
-                self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
-            end       
-        elseif item.sourcePage and item.sourcePage[3] == "Token" then
-            local source = item.sourcePage[1]..item.sourcePage[2]
-            --Create token table if there isnt one
-            if self.data.token[source] == nil then
-                self:CreateToken(item.sourcePage[1], item.sourcePage[2])
-            end
-            --Show token table
-            self:ShowItemsFrame(source, "token", 1)
-        elseif button == "LeftButton" then
+            return
+        elseif self.wishListLockState == "Unlocked" then
+            self:MoveWishlistItem("Down", item.item.positionNumber)
+            return
+        elseif isItem then
+            self:ItemContextMenu(item, "item")
+            return
+        end
+    end
+
+    if button == "LeftButton" then
+        if self.wishListLockState == "Unlocked" then
+            self:MoveWishlistItem("Up", item.item.positionNumber)
+            return
+        elseif not isItem then
             local reagents = self:GetReagentItems(spellID)
             if reagents then
                 self:PopoupItemFrame(item, reagents)
                 self.ui.itemPopupframe:Show()
+                return
             end
+        elseif itemID and self.data.extraItemInfo[itemID] then
+            self:PopoupItemFrame(item, self.data.extraItemInfo[itemID] )
+            self.ui.itemPopupframe:Show()
+            return
+        elseif item.contentsPreview then
+            self:PopoupItemFrame(item, item.contentsPreview )
+            self.ui.itemPopupframe:Show()
+            return
+        elseif item.sourcePage and item.sourcePage[2] == "Source" then
+            local dataID, dataSource, dataPage = unpack(item.sourcePage[1])
+            if dataID and dataID ~= "" and dataSource then
+                self.backEnabled = true
+                self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
+                return
+            end
+        elseif item.sourcePage and item.sourcePage[3] == "Token" then
+            local source = item.sourcePage[1]..item.sourcePage[2]
+            --Create token table if there isnt one
+            if self.data.token[source] == nil then
+                self:CreateToken(item.sourcePage[1], item.sourcePage[2])
+            end
+            --Show token table
+            self:ShowItemsFrame(source, "token", 1)
+                return
         end
     end
+
+ 
 end
 
 AtlasLootGlobals.ItemOnEnter = AtlasLoot.ItemOnEnter
