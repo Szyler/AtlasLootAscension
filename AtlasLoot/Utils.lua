@@ -547,14 +547,6 @@ function AtlasLoot:SetGameTooltip(button, text, bottom)
 	GameTooltip:Show()
 end
 
-function AtlasLoot:DewdropToggle(button)
-	if self.Dewdrop:IsOpen() then
-		self.Dewdrop:Close()
-	else
-		self.Dewdrop:Open(button)
-	end
-end
-
 function AtlasLoot:RateLimitLoadTable(taskData, taskFunction)
 	-- rate limit tied to half the current frame rate
 	local maxDuration = ((self.selectedProfile and self.selectedProfile.ItemLoadingSpeed or 1)*500)/GetFramerate()
