@@ -192,49 +192,47 @@ function AtlasLoot:MERCHANT_UPDATE()
 	self:SetMerchantFrameGlow()
 end
 
-local serverClasses = {
-	OGCLASSES = {
-		"DRUID",
-		"HUNTER",
-		"MAGE",
-		"PALADIN",
-		"PRIEST",
-		"ROGUE",
-		"SHAMAN",
-		"WARLOCK",
-		"WARRIOR",
-		"DEATHKNIGHT",
-	},
-	COA = {
-		"BARBARIAN",
-    	"WITCHDOCTOR",
-    	"DEMONHUNTER",
-    	"WITCHHUNTER",
-    	"STORMBRINGER",
-    	"FLESHWARDEN",
-    	"GUARDIAN",
-    	"MONK",
-    	"SONOFARUGAL",
-    	"RANGER",
-    	"CHRONOMANCER",
-    	"NECROMANCER",
-    	"PYROMANCER",
-    	"CULTIST",
-    	"STARCALLER",
-    	"SUNCLERIC",
-    	"TINKER",
-    	"PROPHET",
-    	"REAPER",
-    	"WILDWALKER",
-    	"SPIRITMAGE",
-	},
-	CLASSESLESS = {
-		"HERO"
-	}
-
-}
-
 function AtlasLoot:SetSeverType()
+	local serverClasses = {
+		OGCLASSES = {
+			"DRUID",
+			"HUNTER",
+			"MAGE",
+			"PALADIN",
+			"PRIEST",
+			"ROGUE",
+			"SHAMAN",
+			"WARLOCK",
+			"WARRIOR",
+			"DEATHKNIGHT",
+		},
+		COA = {
+			"BARBARIAN",
+    		"WITCHDOCTOR",
+    		"DEMONHUNTER",
+    		"WITCHHUNTER",
+    		"STORMBRINGER",
+    		"FLESHWARDEN",
+    		"GUARDIAN",
+    		"MONK",
+    		"SONOFARUGAL",
+    		"RANGER",
+    		"CHRONOMANCER",
+    		"NECROMANCER",
+    		"PYROMANCER",
+    		"CULTIST",
+    		"STARCALLER",
+    		"SUNCLERIC",
+    		"TINKER",
+    		"PROPHET",
+    		"REAPER",
+    		"WILDWALKER",
+    		"SPIRITMAGE",
+		},
+		CLASSESLESS = {
+			"HERO"
+		}
+	}
 	local _, playerClass = UnitClass("player")
 	for type, classes in pairs(serverClasses) do
 		for _, class in pairs(classes) do
