@@ -219,3 +219,82 @@ end
 function ItemUtil:GetList()
     return equipmentSlots
 end
+
+function ItemUtil:GetDropRate(refLootEntry, groupID)
+	if not refLootEntry or not groupID then return end
+
+	if self.parent.data.itemDropRates[refLootEntry] and self.parent.data.itemDropRates[refLootEntry][groupID] then
+		return string.format("%.2f%%",(self.parent.data.itemDropRates[refLootEntry][groupID])*100) or nil
+	end
+end
+
+local function IgnoreTables(dataSource)
+	local cTable = {"CraftingCLASSIC", "CraftingTBC", "CraftingWRATH", "CollectionsAscensionCLASSIC", "CollectionsAscensionTBC", "CollectionsAscensionWRATH"}
+	for _, t in pairs(cTable) do
+		for _, crafting in  ipairs(AtlasLoot.ui.menus.collection[t]) do
+			if crafting[3] then
+				for _, ignore in pairs(crafting[3]) do
+					if dataSource == ignore[2] then return true end
+				end
+			end
+			if dataSource == crafting[2] then return true end
+		end
+	end
+end
+
+local itemSourceList = {}
+function ItemUtil:CreateItemSourceList()
+	local function addItem(itemData, dataType)
+		if type(itemData) == "table" then
+			local sourceData = self.parent:GetSourcesExtendedInfo(dataType)
+			if sourceData and sourceData.Source and itemData.itemID then
+				itemSourceList[itemData.itemID] = sourceData.Source
+				if itemData.spellID then
+					local recipeID = self.parent:GetRecipeID(itemData.spellID) or nil
+					if recipeID and (itemSourceList[recipeID] and not IgnoreTables(dataType) or not itemSourceList[recipeID]) then
+						itemSourceList[recipeID] = sourceData.Source
+					end
+				end
+			else
+				for _, nextData in pairs(itemData) do
+					addItem(nextData, dataType)
+				end
+			end
+		end
+	end
+
+	for dataType, data in pairs(self.parent.data.item) do
+		addItem(data, dataType)
+	end
+end
+
+
+local function getNormalItemID(id)
+	if ItemIDsDatabaseCorrectedIDs[id] or ItemIDsDatabase[id] then return id end
+	-- Corrected itemIDs database
+	-- Search's and returns the normal itemID
+	for normalID, item in pairs(ItemIDsDatabaseCorrectedIDs) do
+		for _, newID in pairs(item) do
+			if newID == id then
+				return normalID
+			end
+		end
+	end
+	-- Main itemIDs database
+	-- Search's and returns the normal itemID
+	for normalID, item in pairs(ItemIDsDatabase) do
+		for _, newID in pairs(item) do
+			if newID == id then
+				return normalID
+			end
+		end
+	end
+end
+
+-- Gets the drop source for an item
+function ItemUtil:GetItemSource(itemID)
+	local itemSource = itemSourceList[getNormalItemID(itemID)]
+	if itemSource and itemSource[1] and itemSource[2] then
+		return "Item Source: " .. self.parent.Colors.CYAN.. self.parent:GetDisplayNameByID(itemSource[1]) .. self.parent.Colors.WHITE .. " - " .. self.parent:GetDataPageName(itemSource[1], itemSource[2])
+	end
+end

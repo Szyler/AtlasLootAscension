@@ -280,7 +280,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 	itemButton.contentsPreview = itemNumber.contentsPreview or reagents or self.data.extraItemInfo[itemID] or crafedItemID
 	itemButton.craftedID = crafedItemID
 	itemButton.price = itemNumber.price or nil
-	itemButton.droprate = itemNumber.droprate or self:GetDropRate(itemNumber.refLootEntry, itemNumber.groupID)
+	itemButton.droprate = itemNumber.droprate or self.ItemUtil:GetDropRate(itemNumber.refLootEntry, itemNumber.groupID)
 	itemButton.extraInfo = itemNumber.extraInfo or nil
 	itemButton.quest = itemNumber.quest or nil
 	itemButton.item = itemNumber

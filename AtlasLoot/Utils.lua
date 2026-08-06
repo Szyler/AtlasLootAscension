@@ -337,7 +337,7 @@ local function setItemSourceTooltip(itemID, tooltip)
 	local button = GetMouseFocus()
 	local self = AtlasLoot
 	if not self.selectedProfile.showdropLocationTooltips or (button and button.isAtlasLoot) then return end
-	local text = self:GetItemSource(itemID)
+	local text = self.ItemUtil:GetItemSource(itemID)
 	if text then
 		tooltip:AddLine(text)
 	end
@@ -395,84 +395,6 @@ function AtlasLoot:SearchAuctionHouse(text)
 		Atr_Search_Button:Click()
 	end
 
-end
-
-function AtlasLoot:GetDropRate(refLootEntry, groupID)
-	if not refLootEntry or not groupID then return end
-
-	if self.data.itemDropRates[refLootEntry] and self.data.itemDropRates[refLootEntry][groupID] then
-		return string.format("%.2f%%",(self.data.itemDropRates[refLootEntry][groupID])*100) or nil
-	end
-end
-
-local function IgnoreTables(dataSource)
-	local cTable = {"CraftingCLASSIC", "CraftingTBC", "CraftingWRATH", "CollectionsAscensionCLASSIC", "CollectionsAscensionTBC", "CollectionsAscensionWRATH"}
-	for _, t in pairs(cTable) do
-		for _, crafting in  ipairs(AtlasLoot.ui.menus.collection[t]) do
-			if crafting[3] then
-				for _, ignore in pairs(crafting[3]) do
-					if dataSource == ignore[2] then return true end
-				end
-			end
-			if dataSource == crafting[2] then return true end
-		end
-	end
-end
-
-local itemSourceList = {}
-function AtlasLoot:CreateItemSourceList()
-	local function addItem(itemData, dataType)
-		if type(itemData) == "table" then
-			local sourceData = self:GetSourcesExtendedInfo(dataType)
-			if sourceData and sourceData.Source and itemData.itemID then
-				itemSourceList[itemData.itemID] = sourceData.Source
-				if itemData.spellID then
-					local recipeID = self:GetRecipeID(itemData.spellID) or nil
-					if recipeID and (itemSourceList[recipeID] and not IgnoreTables(dataType) or not itemSourceList[recipeID]) then
-						itemSourceList[recipeID] = sourceData.Source
-					end
-				end
-			else
-				for _, nextData in pairs(itemData) do
-					addItem(nextData, dataType)
-				end
-			end
-		end
-	end
-
-	for dataType, data in pairs(self.data.item) do
-		addItem(data, dataType)
-	end
-end
-
-local function getNormalItemID(id)
-	if ItemIDsDatabaseCorrectedIDs[id] or ItemIDsDatabase[id] then return id end
-	-- Corrected itemIDs database
-	-- Search's and returns the normal itemID
-	for normalID, item in pairs(ItemIDsDatabaseCorrectedIDs) do
-		for _, newID in pairs(item) do
-			if newID == id then
-				return normalID
-			end
-		end
-	end
-	-- Main itemIDs database
-	-- Search's and returns the normal itemID
-	for normalID, item in pairs(ItemIDsDatabase) do
-		for _, newID in pairs(item) do
-			if newID == id then
-				return normalID
-			end
-		end
-	end
-end
-
--- Gets the drop source for an item
-function AtlasLoot:GetItemSource(itemID)
-	local itemSource = itemSourceList[getNormalItemID(itemID)]
-	if itemSource and itemSource[1] and itemSource[2] then
-		return "Item Source: " .. self.Colors.CYAN.. self:GetDisplayNameByID(itemSource[1]) .. self.Colors.WHITE .. " - " .. self:GetDataPageName(itemSource[1], itemSource[2])
-	end
 end
 
 function AtlasLoot:SetMerchantFrameGlow()

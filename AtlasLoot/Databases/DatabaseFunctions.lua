@@ -220,7 +220,7 @@ function AtlasLoot:GetMerchantItems(missingOnly)
 			local currencyID = currency and GetItemInfoFromHyperlink(currency)
 
 			if missingOnly then
-				if not self:GetItemSource(itemID) then
+				if not self.ItemUtil:GetItemSource(itemID) then
 					tinsert(AtlasLootOtherIds[#AtlasLootOtherIds], { itemID, itemName })
 				end
 			elseif not missingOnly then

@@ -199,7 +199,6 @@ function AtlasLoot:CreateVanityCollection()
 			table.insert(group[#group], item)
 		end
 	end
-	
 end
 
 function AtlasLoot:LearnAllUnknownVanitySpells()
