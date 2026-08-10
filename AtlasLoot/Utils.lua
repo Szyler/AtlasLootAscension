@@ -168,42 +168,47 @@ Used to create a popup item frame for items like gem sacks to show what they con
 ]] 
 function AtlasLoot:PopoupItemFrame(frame, data)
 	if not data then return end
-	self.ui.itemPopupframe:Show()
+	local itemFrame = self.ui.itemPopupframe
+	if not itemFrame.buttons then itemFrame.buttons = {} end
+	itemFrame:Show()
 	--hide the unused buttons
 	for i = 1, 15 do
-		local button = _G["AtlasLoot_PopupButton_"..i]
+		local button = itemFrame.buttons[i]
 		if button then
 			button:Hide()
 		end
 	end
 	--creates a button only if one dosnt already exist re use old one if it does
 	local function createButton(num)
-		if _G["AtlasLoot_PopupButton_"..num] then return end
-		local button = CreateFrame("Button", "AtlasLoot_PopupButton_"..num, self.ui.itemPopupframe, "ItemButtonTemplate")
-		button:SetID(num)
-		button:SetSize(30,30)
-		button:EnableMouse()
-		button:RegisterForClicks("AnyDown")
-		button:SetScript("OnClick", function(btn, arg1) self:ItemOnClick(btn, arg1) end)
-		button:SetScript("OnEnter", function(btn)
-			self:ItemOnEnter(btn)
-			self.ui.itemPopupframe:Show()
-		end)
-		button:SetScript("OnLeave", function(btn)
-			if not self.Dewdrop:IsOpen(_G["AtlasLoot_PopupButton_"..num]) then
-				self:ItemOnLeave(btn)
-			end
-		end)
+		if not itemFrame.buttons[num] then
+			local button = CreateFrame("Button", "AtlasLoot_PopupButton_"..num, itemFrame, "ItemButtonTemplate")
+			button:SetID(num)
+			button:SetSize(30,30)
+			button:EnableMouse()
+			button:RegisterForClicks("AnyDown")
+			button:SetScript("OnClick", function(btn) self:ItemOnClick(btn) end)
+			button:SetScript("OnEnter", function(btn)
+				self:ItemOnEnter(btn)
+				itemFrame:Show()
+			end)
+			button:SetScript("OnLeave", function(btn)
+				if not self.Dewdrop:IsOpen(btn) then
+					self:ItemOnLeave(btn)
+				end
+			end)
 
-		if num == 1 then
-			button:SetPoint("TOPLEFT", self.ui.itemPopupframe, 9, -8)
-		elseif num == 7 then
-			button:SetPoint("BOTTOM", "AtlasLoot_PopupButton_1", 0, -33)
-		elseif num == 13 then
-			button:SetPoint("BOTTOM", "AtlasLoot_PopupButton_6", 0, -33)
-		else
-			button:SetPoint("LEFT", _G["AtlasLoot_PopupButton_"..(num-1)],"RIGHT",3,0)
+			if num == 1 then
+				button:SetPoint("TOPLEFT", itemFrame, 9, -8)
+			elseif num == 7 then
+				button:SetPoint("BOTTOM", itemFrame.buttons[1], 0, -33)
+			elseif num == 13 then
+				button:SetPoint("BOTTOM", itemFrame.buttons[6], 0, -33)
+			else
+				button:SetPoint("LEFT", itemFrame.buttons[(num-1)],"RIGHT",3,0)
+			end
+			itemFrame.buttons[num] = button
 		end
+		return itemFrame.buttons[num]
 	end
 	if data.Faction then
 		data = data[self:GetReputationFaction(data.Faction)]
@@ -211,66 +216,73 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 	end
 
 	local numberBtns
-	local craftedItemID = self:GetCraftedItemID(frame.spellID)
-	if craftedItemID then
-		table.insert(data, 1, {ItemID = craftedItemID})
-		local bloodforged = self:GetItemDifficultyID(craftedItemID, 1)
-		local firstBlank = 2
-		if bloodforged and bloodforged ~= craftedItemID then
-			table.insert(data, 2, {ItemID = bloodforged})
-			firstBlank = 3
-		end
+	if not data.reagents then
 
-		for i = firstBlank, 6 do
-			table.insert(data, i, "blank")
+		local craftedItemID = self.TradeSkill:GetCraftedItemID(frame.spellID)
+		if craftedItemID then
+			table.insert(data, 1, {ItemID = craftedItemID})
+			local bloodforged = self:GetItemDifficultyID(craftedItemID, 1)
+			local firstBlank = 2
+			if bloodforged and bloodforged ~= craftedItemID then
+				table.insert(data, 2, {ItemID = bloodforged})
+				firstBlank = 3
+			end
+
+			for i = firstBlank, 6 do
+				table.insert(data, i, "blank")
+			end
+			data.reagents = true
 		end
 	end
 
 	for i, item in ipairs(data) do
-		createButton(i)
-		local button = _G["AtlasLoot_PopupButton_"..i]
-		if item == "blank" then
-			button:Hide()
-		else
-			local correctID = (type(item) == "number" and item) or (type(item) == "table" and (item.ItemID or item.itemID or item[1]))
-			local itemCount = (type(item) == "table" and (item.Count or item[2])) or nil
-			local itemID = self:GetItemDifficultyID(correctID, self.ItemindexID)
-			local itemData = self.ItemUtil:GetItemInfo(itemID)
-			if not itemData then break end
-			SetItemButtonTexture(button, itemData.icon)
-			SetItemButtonQuality(button, itemData.quality)
+		local button = createButton(i)
+		if button then
+			if item == "blank" then
+				button:Hide()
+			else
+				local correctID = (type(item) == "number" and item) or (type(item) == "table" and (item.ItemID or item.itemID or item[1]))
+				local itemCount = (type(item) == "table" and (item.Count or item[2])) or nil
+				local itemID = self:GetItemDifficultyID(correctID, self.ItemindexID)
+				local itemData = self.ItemUtil:GetItemInfo(itemID)
 
-			button.itemID = itemID
-			button.itemTexture = frame.itemTexture
-			button.isAtlasLoot = true
-			local recipeSpellID = self:GetTradeSkillByRecipeID(itemID)
-			if recipeSpellID then
-				button.craftingData = self:GetRecipeSource(recipeSpellID)
+				if not itemData then break end
+
+				SetItemButtonTexture(button, itemData.icon)
+				SetItemButtonQuality(button, itemData.quality)
+
+				button.itemID = itemID
+				button.itemTexture = frame.itemTexture
+				button.isAtlasLoot = true
+				local recipeSpellID = self.TradeSkill:GetTradeSkillByRecipeID(itemID)
+				if recipeSpellID then
+					button.craftingData = self.TradeSkill:GetRecipeSource(recipeSpellID)
+				end
+				SetItemButtonCount(button, itemCount)
+				button:Show()
 			end
-			SetItemButtonCount(button, itemCount)
-			button:Show()
 		end
 		numberBtns = i
 	end
 
 	if numberBtns < 6 then
-		self.ui.itemPopupframe:SetWidth((numberBtns*33)+16)
+		itemFrame:SetWidth((numberBtns*33)+16)
 	else
-		self.ui.itemPopupframe:SetWidth(214)
+		itemFrame:SetWidth(214)
 	end
 
 	if numberBtns > 6 then
-		self.ui.itemPopupframe:SetHeight(79)
+		itemFrame:SetHeight(79)
 	elseif numberBtns > 12 then
-		self.ui.itemPopupframe:SetHeight(107)
+		itemFrame:SetHeight(107)
 	else
-		self.ui.itemPopupframe:SetHeight(46)
+		itemFrame:SetHeight(46)
 	end
 
-	self.ui.itemPopupframe:SetParent(frame)
-	self.ui.itemPopupframe:ClearAllPoints()
-	self.ui.itemPopupframe:SetPoint("TOPLEFT",frame,0,-25)
-	self.ui.itemPopupframe:Show()
+	itemFrame:SetParent(frame)
+	itemFrame:ClearAllPoints()
+	itemFrame:SetPoint("TOPLEFT",frame,0,-25)
+	itemFrame:Show()
 end
 
 --------- rate limited item frame refresh ---------
@@ -325,7 +337,7 @@ end
 local function setTooltip(itemID, tooltip)
     local self = AtlasLoot
 	if not self.selectedProfile.showUnknownRecipeTooltip then return end
-	local text = self:IsRecipeUnknown(itemID)
+	local text = self.TradeSkill:IsRecipeUnknown(itemID)
 	if not text then return end
 	text = "Recipe could be learned by: "..self.Colors.GREEN..text
 	if not checkTooltipForDuplicate(tooltip, text) then

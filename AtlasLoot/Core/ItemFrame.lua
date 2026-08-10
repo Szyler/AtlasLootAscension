@@ -68,12 +68,12 @@ local function getItemConditionals(self, item, dataSource)
 	if minDif and minDif > itemDif then
 		show = false
 	end
-	itemID = item and ((item.spellID and self:GetCraftedItemID(item.spellID)) or item.itemID)
+	itemID = item and ((item.spellID and self.TradeSkill:GetCraftedItemID(item.spellID)) or item.itemID)
 	if item and item.itemID then
 		itemID = self:GetItemDifficultyID(item.itemID, itemDif)
 	end
 	if item and item.spellID then
-		recipeID = self:GetRecipeID(item.spellID)
+		recipeID = self.TradeSkill:GetRecipeID(item.spellID)
 	end
 	return show, itemID, recipeID
 end
@@ -112,13 +112,13 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 		else
 			itemButton.hasTrade = false
 			hightlightFrame:Hide()
-			if self:GetKnownRecipes(spellID) then
+			if self.TradeSkill:GetKnownRecipes(spellID) then
 				hightlightFrame:SetTexture(itemHighlightBlue)
 				hightlightFrame:Show()
 			end
 		end
 
-		reagents = self:GetReagentItems(spellID)
+		reagents = self.TradeSkill:GetReagentItems(spellID)
 
 	elseif itemID then
 		--If the client has the name of the item in cache, use that instead.					
@@ -149,7 +149,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 			end
 		end
 
-		local recipeSpellID = self:GetTradeSkillByRecipeID(itemID)
+		local recipeSpellID = self.TradeSkill:GetTradeSkillByRecipeID(itemID)
 		if recipeSpellID then
 			if CA_IsSpellKnown(recipeSpellID) then
 				--Adds button highlights if you know a recipe or have a char that knows one
@@ -159,15 +159,15 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 			else
 				itemButton.hasTrade = false
 				hightlightFrame:Hide()
-				if self:GetKnownRecipes(recipeSpellID) then
+				if self.TradeSkill:GetKnownRecipes(recipeSpellID) then
 					hightlightFrame:SetTexture(itemHighlightBlue)
 					hightlightFrame:Show()
 				end
 			end
 		end
-		local craftingSpellID = self:GetTradeSkillByRecipeID(itemID)
+		local craftingSpellID = self.TradeSkill:GetTradeSkillByRecipeID(itemID)
 		if craftingSpellID then
-			local foundID = self:GetCraftedItemID(craftingSpellID)
+			local foundID = self.TradeSkill:GetCraftedItemID(craftingSpellID)
 			if foundID then
 				crafedItemID = {{foundID}}
 			end
@@ -232,7 +232,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 		extra = extra ..self.Colors.WHITE.." ("..price..")"
 	end
 
-	local recipeSpellID = self:GetTradeSkillByRecipeID(itemID)
+	local recipeSpellID = self.TradeSkill:GetTradeSkillByRecipeID(itemID)
 	if recipeSpellID and self.data.crafting["CraftingLevels"] and self.data.crafting["CraftingLevels"][recipeSpellID] then
 		local lvls = self.data.crafting["CraftingLevels"][recipeSpellID]
 		extra = extra ..self.Colors.WHITE.." ( "..lvls[1].." )"
@@ -265,7 +265,6 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 			text = itemwishicons.." "..text
 		end
 	end
-
 	--Set the name and description of the item
 	nameFrame:SetText(text)
 	extraFrame:SetText(extra)
@@ -273,12 +272,11 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 	--For convenience, we store information about the objects in the objects so that it can be easily accessed later
 	itemButton.itemID = itemID
 	itemButton.spellID = spellID
-	itemButton.craftingData = self:GetRecipeSource(spellID)
+	itemButton.craftingData = self.TradeSkill:GetRecipeSource(spellID)
 	itemButton.tablenum = tablenum
 	itemButton.dataID = dataID
 	itemButton.dataSource = dataSource_backup
 	itemButton.contentsPreview = itemNumber.contentsPreview or reagents or self.data.extraItemInfo[itemID] or crafedItemID
-	itemButton.craftedID = crafedItemID
 	itemButton.price = itemNumber.price or nil
 	itemButton.droprate = itemNumber.droprate or self.ItemUtil:GetDropRate(itemNumber.refLootEntry, itemNumber.groupID)
 	itemButton.extraInfo = itemNumber.extraInfo or nil

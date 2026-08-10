@@ -110,7 +110,7 @@ function AtlasLoot:ItemOnEnter(data)
                 end
             end
             --gets a list of characters with this recipe known
-            local text = self:GetKnownRecipes(spellID)
+            local text = self.TradeSkill:GetKnownRecipes(spellID)
             local hasSpace
             if (text or showOwn) and not hasSpace then
                 GameTooltip:AddLine(" ")
@@ -215,7 +215,7 @@ function AtlasLoot:ItemOnClick(item, button)
             self:MoveWishlistItem("Up", item.item.positionNumber)
             return
         elseif item.contentsPreview then
-            self:PopoupItemFrame(item, item.contentsPreview )
+            self:PopoupItemFrame(item, item.contentsPreview)
             return
         elseif item.sourcePage and item.sourcePage[2] == "Source" then
             local dataID, dataSource, dataPage = unpack(item.sourcePage[1])
@@ -254,8 +254,8 @@ function AtlasLoot:ItemContextMenu(data, Type)
         linkID = spellID
     end
 
-    local recipeID = self:GetRecipeID(spellID)
-    local craftedID = self:GetCraftedItemID(spellID)
+    local recipeID = self.TradeSkill:GetRecipeID(spellID)
+    local craftedID = self.TradeSkill:GetCraftedItemID(spellID)
     local isAuction = AuctionFrame and AuctionFrame:IsVisible() and true or false
     local isCrafted = isAuction and craftedID or false
     local isRecipe = isCrafted and recipeID or false
@@ -332,7 +332,7 @@ function AtlasLoot:ItemContextMenu(data, Type)
                         end
                     end
                 end, showOnCondition = isWaypoint},
-                {text = "Add pin to map for every missing recipe", func = function() self:SetRecipeMapPins() end, showOnCondition = isWaypoint},
+                {text = "Add pin to map for every missing recipe", func = function() self.TradeSkill:SetRecipeMapPins() end, showOnCondition = isWaypoint},
             }}
         end
     end

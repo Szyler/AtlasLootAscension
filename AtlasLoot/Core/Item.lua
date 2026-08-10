@@ -250,7 +250,7 @@ function ItemUtil:CreateItemSourceList()
 			if sourceData and sourceData.Source and itemData.itemID then
 				itemSourceList[itemData.itemID] = sourceData.Source
 				if itemData.spellID then
-					local recipeID = self.parent:GetRecipeID(itemData.spellID) or nil
+					local recipeID = self.parent.TradeSkill:GetRecipeID(itemData.spellID) or nil
 					if recipeID and (itemSourceList[recipeID] and not IgnoreTables(dataType) or not itemSourceList[recipeID]) then
 						itemSourceList[recipeID] = sourceData.Source
 					end
