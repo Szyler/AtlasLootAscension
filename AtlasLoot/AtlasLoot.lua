@@ -54,145 +54,7 @@ AtlasLoot.DBDefaults = {
 	}
 }
 
---[[
-AtlasLoot:OnInitialize()
-Performs inital setup of the mod and registers it for further setup when
-the required resources are in place
-]]
-function AtlasLoot:OnInitialize()
-
-	local CharDefaultSettings = {
-		QuickLooks = {},
-		SearchResult = {Name = "Search Result" , Type = "Search", Back = true, {{}}},
-	}
-
-	local LootFilterDefaultSettings = {
-		VanityFilters = {},
-		CraftingFilters = {},
-	}
-
-    self:SetupDB("AtlasLootCharDB", CharDefaultSettings)
-	self:SetupDB("AtlasLootFilterDB", LootFilterDefaultSettings)
-	self.db = self:SetupDB("AtlasLootDB", self.DBDefaults)
-	self.selectedProfile = self.db.settingsProfiles[self.db.profile.settingsProfile]
-	self.selectedProfile.ItemLoadingSpeed = self.selectedProfile.ItemLoadingSpeed or 1
-	self:InitializeDatabases()
-	self:InitializeSlashCommands()
-
-	--Sets the default loot tables for the current expansion enabled on the server.
-	self.currentExpansion = self.expansionList[GetAccountExpansionLevel()+1]
-end
-
---Runs after all addons have fully loaded
-function AtlasLoot:OnEnable()
-
-	self:SetSeverType()
-	LoadItemIDsDatabase()
-	self:InitializeWishLists()
-	self:InitializeUI()
-	self.ItemUtil:CreateItemSourceList()
-	self:CreateSearchFrame()
-	self:MinimapIconSetup()
-	self:InitializeOptionsFrame()
-	self:PopulateProfessions()
-	self:CreateVanityCollection()
-	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
-	self:RegisterComm("AtlasLootWishlist")
-	self:InitializeWishlistMerchantGlow()
-	self:PatchNotes()
-	self:InitializeSkins()
-
-	if self.selectedProfile.isAdmin then
-		ATLASLOOT = self
-	end
-
-	collectgarbage("collect")
-end
-
-function AtlasLoot:Reset(data)
-    self.ui:Hide()
-    if data == "frames" then
-		self.ui:ClearAllPoints()
-		self.ui:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
-        self.selectedProfile.LootBrowserScale = 1.0
-        self:UpdateLootBrowserScale()
-    elseif data == "quicklooks" then
-        AtlasLootCharDB.QuickLooks = {}
-    elseif data == "wishlist" then
-		AtlasLootWishList = {}
-		self:WishlistSetup()
-        AtlasLootCharDB.SearchResult = {}
-    elseif data == "all" then
-		self.ui:ClearAllPoints()
-		self.ui:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
-        self.selectedProfile.LootBrowserScale = 1.0
-        self:UpdateLootBrowserScale()
-        AtlasLootCharDB.QuickLooks = {}
-        AtlasLootCharDB.SearchResult = {}
-		AtlasLootWishList = {}
-		self:WishlistSetup()
-    end
-    DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot"..": "..self.Colors.RED.."Reset complete!")
-end
-
-function AtlasLoot:InitializeSlashCommands()
-	--Enable the use of /al or /atlasloot to open the loot browser
-	SLASH_ATLASLOOT1 = "/atlasloot"
-	SLASH_ATLASLOOT2 = "/al"
-	SlashCmdList["ATLASLOOT"] = function(msg) self:SlashCommand(msg) end
-end
-
---[[
-AtlasLoot:SlashCommand(msg):
-msg - takes the argument for the /atlasloot command so that the appropriate action can be performed
-If someone types /atlasloot, bring up the options box
-]]
-function AtlasLoot:SlashCommand(msg)
-	msg = msg or ""
-
-	local cmd, arg1 = string.split(" ", msg, 2)
-	cmd = string.lower(cmd or "")
-
-	if cmd == "reset" then
-		self:Reset("frames")
-	elseif cmd == "options" then
-		self:OptionsToggle()
-	elseif cmd == "updatecache" and self.selectedProfile.isAdmin then
-		local low, high = string.split(" ", arg1, 2)
-		self:UpdateItemIDsDatabase(tonumber(low), tonumber(high))
-	elseif cmd == "clearcache" and self.selectedProfile.isAdmin then
-		wipe(AtlasLootItemCache)
-	elseif cmd == "clearmerchantcache" and self.selectedProfile.isAdmin then
-		wipe(AtlasLootOtherIds)
-	elseif cmd == "news" then
-		self:OpenNewsFrame("AtlasLoot")
-	elseif cmd == "getwishlist" then
-		self:GetWishListVanityItems(arg1)
-	elseif cmd == "getmerchant" and self.selectedProfile.isAdmin then
-		self:GetMerchantItems(arg1)
-	elseif cmd == "admin" then
-		self.selectedProfile.isAdmin = not self.selectedProfile.isAdmin
-		DEFAULT_CHAT_FRAME:AddMessage(self.selectedProfile.isAdmin and "AtlasLoot Admin mode is now enabled" or "AtlasLoot Admin is mode now disabled")
-	else
-		self.ui:Show()
-	end
-end
-
-function AtlasLoot:UNIT_SPELLCAST_SUCCEEDED(event, arg1, arg2 , arg3)
-	if arg1 == "player" and arg2 == "Learning" then
-		self:PopulateProfessions()
-	end
-end
-
-function AtlasLoot:MERCHANT_SHOW()
-	self:SetMerchantFrameGlow()
-end
-
-function AtlasLoot:MERCHANT_UPDATE()
-	self:SetMerchantFrameGlow()
-end
-
-function AtlasLoot:SetSeverType()
+local function setSeverType(self)
 	local serverClasses = {
 		OGCLASSES = {
 			"DRUID",
@@ -242,4 +104,142 @@ function AtlasLoot:SetSeverType()
 			end
 		end
 	end
+end
+
+--[[
+slashCommand(self, msg):
+msg - takes the argument for the /atlasloot command so that the appropriate action can be performed
+If someone types /atlasloot, bring up the options box
+]]
+local function slashCommand(self, msg)
+	msg = msg or ""
+
+	local cmd, arg1 = string.split(" ", msg, 2)
+	cmd = string.lower(cmd or "")
+
+	if cmd == "reset" then
+		self:Reset("frames")
+	elseif cmd == "options" then
+		self:OptionsToggle()
+	elseif cmd == "updatecache" and self.selectedProfile.isAdmin then
+		local low, high = string.split(" ", arg1, 2)
+		self:UpdateItemIDsDatabase(tonumber(low), tonumber(high))
+	elseif cmd == "clearcache" and self.selectedProfile.isAdmin then
+		wipe(AtlasLootItemCache)
+	elseif cmd == "clearmerchantcache" and self.selectedProfile.isAdmin then
+		wipe(AtlasLootOtherIds)
+	elseif cmd == "news" then
+		self:OpenNewsFrame("AtlasLoot")
+	elseif cmd == "getwishlist" then
+		self:GetWishListVanityItems(arg1)
+	elseif cmd == "getmerchant" and self.selectedProfile.isAdmin then
+		self:GetMerchantItems(arg1)
+	elseif cmd == "admin" then
+		self.selectedProfile.isAdmin = not self.selectedProfile.isAdmin
+		DEFAULT_CHAT_FRAME:AddMessage(self.selectedProfile.isAdmin and "AtlasLoot Admin mode is now enabled" or "AtlasLoot Admin is mode now disabled")
+	else
+		self.ui:Show()
+	end
+end
+
+local function initializeSlashCommands(self)
+	--Enable the use of /al or /atlasloot to open the loot browser
+	SLASH_ATLASLOOT1 = "/atlasloot"
+	SLASH_ATLASLOOT2 = "/al"
+	SlashCmdList["ATLASLOOT"] = function(msg) slashCommand(self, msg) end
+end
+
+--[[
+AtlasLoot:OnInitialize()
+Performs inital setup of the mod and registers it for further setup when
+the required resources are in place
+]]
+function AtlasLoot:OnInitialize()
+
+	local CharDefaultSettings = {
+		QuickLooks = {},
+		SearchResult = {Name = "Search Result" , Type = "Search", Back = true, {{}}},
+	}
+
+	local LootFilterDefaultSettings = {
+		VanityFilters = {},
+		CraftingFilters = {},
+	}
+
+    self:SetupDB("AtlasLootCharDB", CharDefaultSettings)
+	self:SetupDB("AtlasLootFilterDB", LootFilterDefaultSettings)
+	self.db = self:SetupDB("AtlasLootDB", self.DBDefaults)
+	self.selectedProfile = self.db.settingsProfiles[self.db.profile.settingsProfile]
+	self.selectedProfile.ItemLoadingSpeed = self.selectedProfile.ItemLoadingSpeed or 1
+	self:InitializeDatabases()
+	initializeSlashCommands(self)
+
+	--Sets the default loot tables for the current expansion enabled on the server.
+	self.currentExpansion = self.expansionList[GetAccountExpansionLevel()+1]
+end
+
+--Runs after all addons have fully loaded
+function AtlasLoot:OnEnable()
+
+	setSeverType(self)
+	LoadItemIDsDatabase()
+	self:InitializeWishLists()
+	self:InitializeUI()
+	self.ItemUtil:CreateItemSourceList()
+	self:CreateSearchFrame()
+	self:MinimapIconSetup()
+	self:InitializeOptionsFrame()
+	self.TradeSkill:PopulateProfessions()
+	self:CreateVanityCollection()
+	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+	self:RegisterComm("AtlasLootWishlist")
+	self:InitializeWishlistMerchantGlow()
+	self:PatchNotes()
+	self:InitializeSkins()
+
+	if self.selectedProfile.isAdmin then
+		ATLASLOOT = self
+	end
+
+	collectgarbage("collect")
+end
+
+function AtlasLoot:Reset(data)
+    self.ui:Hide()
+    if data == "frames" then
+		self.ui:ClearAllPoints()
+		self.ui:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
+        self.selectedProfile.LootBrowserScale = 1.0
+        self:UpdateLootBrowserScale()
+    elseif data == "quicklooks" then
+        AtlasLootCharDB.QuickLooks = {}
+    elseif data == "wishlist" then
+		AtlasLootWishList = {}
+		self:WishlistSetup()
+        AtlasLootCharDB.SearchResult = {}
+    elseif data == "all" then
+		self.ui:ClearAllPoints()
+		self.ui:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
+        self.selectedProfile.LootBrowserScale = 1.0
+        self:UpdateLootBrowserScale()
+        AtlasLootCharDB.QuickLooks = {}
+        AtlasLootCharDB.SearchResult = {}
+		AtlasLootWishList = {}
+		self:WishlistSetup()
+    end
+    DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE.."AtlasLoot"..": "..self.Colors.RED.."Reset complete!")
+end
+
+function AtlasLoot:UNIT_SPELLCAST_SUCCEEDED(event, arg1, arg2 , arg3)
+	if arg1 == "player" and arg2 == "Learning" then
+		self.TradeSkill:PopulateProfessions()
+	end
+end
+
+function AtlasLoot:MERCHANT_SHOW()
+	self:SetMerchantFrameGlow()
+end
+
+function AtlasLoot:MERCHANT_UPDATE()
+	self:SetMerchantFrameGlow()
 end
