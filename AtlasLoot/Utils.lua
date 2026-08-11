@@ -416,7 +416,7 @@ function AtlasLoot:SetMerchantFrameGlow()
 		local link = _G["MerchantItem"..num.."ItemButton"].link
 		if not link then return end
 		local itemID = GetItemInfoFromHyperlink(link)
-		if self:WishListCheck(itemID, true) then
+		if self.WishList:CheckListForItem(itemID, true) then
 			ActionButton_ShowOverlayGlow(_G["MerchantItem"..num.."ItemButton"])
 		else
 			ActionButton_HideOverlayGlow(_G["MerchantItem"..num.."ItemButton"])

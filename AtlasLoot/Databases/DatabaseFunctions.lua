@@ -487,8 +487,8 @@ end
 function AtlasLoot:GetSourceData(dataSource_backup, dataID, tablenum)
 	local itemData, dataSource
 	if dataSource_backup == "currentWishList" then
-		dataSource = self.currentWishList[dataID]
-		itemData = self.currentWishList[dataID][tablenum]
+		dataSource = self.WishList.current[dataID]
+		itemData = self.WishList.current[dataID][tablenum]
 	elseif dataSource_backup == "token" then
 		dataSource = self.data.token[dataID]
 		itemData = self.data.token[dataID]

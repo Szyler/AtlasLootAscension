@@ -181,10 +181,10 @@ function AtlasLoot:ItemOnClick(item, button)
     if IsAltKeyDown() then
         if button == "RightButton" and itemID and self.itemframe.refresh[2] ~= "currentWishList" then
             local wList = AtlasLootWishList.Options[playerName].DefaultWishList
-            self:AddItemToWishList(wList[1], wList[3], item)
+            self.WishList:AddItemToList(wList[1], wList[3], item)
             return
         elseif self.itemframe.refresh[2] == "currentWishList" then
-            self:DeleteFromWishList(item.item)
+            self.WishList:DeleteItemFromList(item.item)
             return
         end
     end
@@ -201,8 +201,8 @@ function AtlasLoot:ItemOnClick(item, button)
         if not isItem then
             self:ItemContextMenu(item, "spell")
             return
-        elseif self.wishListLockState == "Unlocked" then
-            self:MoveWishlistItem("Down", item.item.positionNumber)
+        elseif self.WishList.lockState == "Unlocked" then
+            self.WishList:MovelistItem("Down", item.item.positionNumber)
             return
         elseif isItem then
             self:ItemContextMenu(item, "item")
@@ -211,8 +211,8 @@ function AtlasLoot:ItemOnClick(item, button)
     end
 
     if button == "LeftButton" then
-        if self.wishListLockState == "Unlocked" then
-            self:MoveWishlistItem("Up", item.item.positionNumber)
+        if self.WishList.lockState == "Unlocked" then
+            self.WishList:MovelistItem("Up", item.item.positionNumber)
             return
         elseif item.contentsPreview then
             self:PopoupItemFrame(item, item.contentsPreview)
@@ -284,11 +284,11 @@ function AtlasLoot:ItemContextMenu(data, Type)
             {
                     {text = "Wishlists", isTitle = true, divider = true},
                     {text = "Add Custom Header/Blank Line", func = function() StaticPopup_Show("ATLASLOOT_ADD_CUSTOMHEADER") StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = data.item.positionNumber end, showOnCondition = isWishlist},
-                    {text = "Delete", func = function() self:DeleteFromWishList(data.item) end, showOnCondition = isWishlist},
-                    {text = "Add To Default", func = function() self:AddItemToWishList(wList[1], wList[3], data) end, showOnCondition = notWishlist},
+                    {text = "Delete", func = function() self.WishList:DeleteItemFromList(data.item) end, showOnCondition = isWishlist},
+                    {text = "Add To Default", func = function() self.WishList:AddItemToList(wList[1], wList[3], data) end, showOnCondition = notWishlist},
                     {text = "Own Wishlists", value = "OwnWishlists", hasArrow = true, showOnCondition = notWishlist},
                     {text = "Shared Wishlists", value = "SharedWishlists", hasArrow = true, showOnCondition = notWishlist},
-                    {text = "Add Wishlist", func = function() self:AddWishList() end, showOnCondition = notWishlist},
+                    {text = "Add Wishlist", func = function() self.WishList:AddList() end, showOnCondition = notWishlist},
                     {text = "Vanity Collection", isTitle = true, showOnCondition = isCollectionItem},
                     {text = "Learn/Recive Vanity Item", func = function() self:DeliverVanityItem(itemID) end, showOnCondition = isCollectionItem}
             },{}}
@@ -296,13 +296,13 @@ function AtlasLoot:ItemContextMenu(data, Type)
         table.insert(wishList[2], {text = "OwnWishlists", isTitle = true, show = "OwnWishlists"})
         for i,v in pairs(AtlasLootWishList.Own) do
             if type(v) == "table" then
-                table.insert(wishList[2],{text = v.Name, func = function() self:AddItemToWishList("Own", i, data) end, show = "OwnWishlists"})
+                table.insert(wishList[2],{text = v.Name, func = function() self.WishList:AddItemToList("Own", i, data) end, show = "OwnWishlists"})
             end
         end
         table.insert(wishList[2], {text = "SharedWishlists", isTitle = true, show = "SharedWishlists"})
         for i,v in pairs(AtlasLootWishList["Shared"]) do
             if type(v) == "table" then
-                table.insert(wishList[2],{text = v.Name,func = function() self:AddItemToWishList("Shared", i, data) end, show = "SharedWishlists"})
+                table.insert(wishList[2],{text = v.Name,func = function() self.WishList:AddItemToList("Shared", i, data) end, show = "SharedWishlists"})
             end
         end
 

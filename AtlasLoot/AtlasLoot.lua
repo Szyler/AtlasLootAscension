@@ -131,7 +131,7 @@ local function slashCommand(self, msg)
 	elseif cmd == "news" then
 		self:OpenNewsFrame("AtlasLoot")
 	elseif cmd == "getwishlist" then
-		self:GetWishListVanityItems(arg1)
+		self.WishList:GetWishListVanityItems(arg1)
 	elseif cmd == "getmerchant" and self.selectedProfile.isAdmin then
 		self:GetMerchantItems(arg1)
 	elseif cmd == "admin" then
@@ -183,7 +183,7 @@ function AtlasLoot:OnEnable()
 
 	setSeverType(self)
 	LoadItemIDsDatabase()
-	self:InitializeWishLists()
+	self.WishList:InitializeLists()
 	self:InitializeUI()
 	self.ItemUtil:CreateItemSourceList()
 	self:CreateSearchFrame()

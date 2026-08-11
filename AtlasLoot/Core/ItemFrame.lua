@@ -260,7 +260,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 
 	--Highlight items in the wishlist
 	if itemID and dataSource_backup ~= "currentWishList" and (AtlasLootWishList.Options[UnitName("player")] and AtlasLootWishList.Options[UnitName("player")]["Mark"]) then
-		local xitemexistwish, itemwishicons = self:WishListCheck(itemID, true)
+		local xitemexistwish, itemwishicons = self.WishList:CheckListForItem(itemID, true)
 		if xitemexistwish then
 			text = itemwishicons.." "..text
 		end
@@ -318,7 +318,7 @@ local function itemFrameUpdate(self, dataID, dataSource_backup, tablenum, pageNu
 		if displayItems and displayItems[i] then
 			if displayItems[i][2] then
 				local show = setupButton(self, displayItems[i][2].itemID or displayItems[i][2].recipeID, displayItems[i][1], button, dataSource, dataID, tablenum, dataSource_backup)
-				if show or (self.wishListLockState ~= "Locked" and displayItems[i][1] == "blankLine") then
+				if show or (self.WishList.lockState ~= "Locked" and displayItems[i][1] == "blankLine") then
 					button:Show()
 				end
 			end
@@ -399,7 +399,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 	end
 
 	if dataSource_backup ~= "currentWishList" then
-		self:WishListLockButtonReset()
+		self.lockState = "Locked"
+    	self.ui.wishlistLockButton:SetText("Locked")
 	end
 
 	local difType = false

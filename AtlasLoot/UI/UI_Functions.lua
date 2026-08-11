@@ -206,7 +206,7 @@ function AtlasLoot:InitializeUIFunctions()
             if favButton then
                 button.currentTable = favButton[5]
                 if favButton[2] == "AtlasLootWishList" then
-                    self:ShowWishList(favButton[3])
+                    self.WishList:Show(favButton[3])
                 else
                     self:ShowItemsFrame(favButton[1], favButton[2], favButton[3], favButton[4])
                 end
@@ -220,7 +220,7 @@ function AtlasLoot:InitializeUIFunctions()
     ]]
     function self:SetFavorites(num)
         if self.itemframe.refresh[2] == "currentWishList" then
-            AtlasLootCharDB.QuickLooks[num]={self.currentWishList.Show.ListType, "AtlasLootWishList", self.currentWishList.Show.ListNum, "", self.currentTable, _G["AtlasLootWishList"][self.currentWishList.Show.ListType][self.currentWishList.Show.ListNum].Name}
+            AtlasLootCharDB.QuickLooks[num]={self.WishList.current.Show.ListType, "AtlasLootWishList", self.WishList.current.Show.ListNum, "", self.currentTable, _G["AtlasLootWishList"][self.WishList.current.Show.ListType][self.currentWishList.Show.ListNum].Name}
         else
             AtlasLootCharDB.QuickLooks[num]={self.itemframe.refreshOri[1], self.itemframe.refreshOri[2], self.itemframe.refreshOri[3], "", self.currentTable, _G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]][self.itemframe.refreshOri[3]].Name}
         end

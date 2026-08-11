@@ -406,7 +406,7 @@ function AtlasLoot:InitializeSearch()
     function Search:ShowSearchOptions(button)
         local profile = self.parent.selectedProfile
         local menuList = {{
-                {text = "Search Categories", func = function() self.parent:AddWishList() end, isTitle = true},
+                {text = "Search Categories", func = function() AtlasLoot.WishList:AddList() end, isTitle = true},
         }}
 
         for _, cat in pairs(searchCategories) do

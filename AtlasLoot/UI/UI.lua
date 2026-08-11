@@ -57,7 +57,7 @@ function AtlasLoot:InitializeUI()
         {
             name = "Wishlist",
             atlas = "poi-workorders",
-            onClick = function(button, buttonClick)self:ShowWishListTab(button,buttonClick,true) end,
+            onClick = function(button, buttonClick)self.WishList:ShowTab(button,buttonClick,true) end,
             onEnter = function(button)
                 self:SetGameTooltip(button,"Right Click to view options", "ANCHOR_BOTTOMRIGHT")
             end,
@@ -243,7 +243,7 @@ function AtlasLoot:InitializeUI()
     self.ui.wishlistLockButton.IconAtlas:SetSize(35,35)
     self.ui.wishlistLockButton.IconAtlas:SetAtlas("spell-list-locked")
     self.ui.wishlistLockButton:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
-    self.ui.wishlistLockButton:SetScript("OnClick", function(button) self:WishListItemLockStateClick() end)
+    self.ui.wishlistLockButton:SetScript("OnClick", function(button) self.WishList:ItemLockStateClick() end)
     self.ui.wishlistLockButton:SetScript("OnEnter", function(button)
         local text = {
             "Toggle Item Lock",
@@ -276,7 +276,7 @@ function AtlasLoot:InitializeUI()
     self.ui.wishlistShareButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
     self.ui.wishlistShareButton:SetScript("OnMouseDown", function(button)
         button.IconAtlas:SetAtlas("communities-create-button-wow-down")
-        self:ShareMenu(button)
+        self.WishList:ShareMenu(button)
     end)
     self.ui.wishlistShareButton:SetScript("OnMouseUp", function(button)
         button.IconAtlas:SetAtlas("communities-create-button-wow-up")
@@ -402,7 +402,7 @@ function self:ScrollFrameUpdate(hide,wishlist)
                 row:SetText("|cffFFd200"..text)
                 row.itemIndex = value
 
-                if row.itemIndex == self.currentWishList.selected then
+                if row.itemIndex == self.WishList.current.selected then
                     row:SetChecked(true)
                 end
                 row:Show()
@@ -462,8 +462,8 @@ local rows = setmetatable({}, { __index = function(t, i)
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
     row:SetScript("OnClick", function()
         if self.ui.difficultyScrollFrame.wishList then
-            self.currentWishList.selected = row.itemIndex
-            self:ShowWishList()
+            self.WishList.current.selected = row.itemIndex
+            self.WishList:Show()
             self:ScrollFrameUpdate(nil,self.ui.difficultyScrollFrame.wishList)
         else
             self.ItemindexID = row.itemIndex
