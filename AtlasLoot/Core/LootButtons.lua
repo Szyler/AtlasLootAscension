@@ -169,11 +169,11 @@ function AtlasLoot:ItemOnClick(item, button)
         if not isItem then
             ChatEdit_InsertLink(self:GetEnchantLink(spellID))
             return
-        elseif itemData and ChatFrame1EditBox and ChatFrame1EditBox:IsVisible() then
-            ChatFrame1EditBox:Insert(itemData.name)  -- <-- this line just inserts plain text, does not need any adjustment
-            return
         elseif link then
             ChatEdit_InsertLink(link)
+            return
+        elseif itemData and ChatFrame1EditBox and ChatFrame1EditBox:IsVisible() then
+            ChatFrame1EditBox:Insert(itemData.name)  -- <-- this line just inserts plain text, does not need any adjustment
             return
         end
     end
