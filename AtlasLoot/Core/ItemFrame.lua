@@ -379,20 +379,20 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum, pageNumbe
 
 	-- Enable map button if there is a map for this table.
 	if dataSource_backup ~= "onDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "currentWishList" then
-		local map = self:GetMapInfo(dataID)
+		local map = self.MapUtil:GetMapInfo(dataID)
 		if map then
 		-- Stops map reseting to default while still in the same raid/instance table
 			if self.itemframe.refresh == nil or dataID ~= self.itemframe.refresh[1] then
-				self.MapNum = 1
-				self.CurrentMap = dataID
+				self.MapUtil.mapNum = 1
+				self.MapUtil.selectedMap = dataID
 			end
 		else
-			self.CurrentMap = nil
-			self.MapNum = nil
+			self.MapUtil.selectedMap = nil
+			self.MapUtil.mapNum = nil
 		end
 	end
 
-	if self.CurrentMap then
+	if self.MapUtil.selectedMap then
 		self.ui.tabs.Map.tabButton:Enable()
 	else
 		self.ui.tabs.Map.tabButton:Disable()

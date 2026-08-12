@@ -239,7 +239,7 @@ function AtlasLoot:InitializeUIFunctions()
     ]]
     function self:NavButton_OnClick(btn)
         if self.ui.tabs.Map:IsVisible() then
-            self:MapSelect(btn.mapID, btn.mapNum)
+            self.MapUtil:MapSelect(btn.mapID, btn.MapUtil.mapNum)
         else
             if #btn.dataSource > self.ui.tabs.Loot.TableScrollFrame.maxRows and btn.tablenum ~= 1 then
                 local min, max = AtlasLootSubTableScrollScrollBar:GetMinMaxValues()

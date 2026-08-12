@@ -48,7 +48,7 @@ function AtlasLoot:InitializeUI()
         {
             name = "Map",
             atlas = "poi-islands-table",
-            onClick = function(...) self:ShowMapTab(...) end,
+            onClick = function(...) self.MapUtil:ShowMapTab(...) end,
             onEnter = function(button)
                 self:SetGameTooltip(button,"Right Click to select the map", "ANCHOR_BOTTOMRIGHT")
             end,
@@ -678,12 +678,12 @@ self.ui.tabs.Loot.TableScrollFrame.rows = rows2
     self.ui.tabs.Map:EnableMouse()
     self.ui.tabs.Map:SetScript("OnMouseDown", function(button, buttonClick)
         if buttonClick == "RightButton" then
-            self:MapOnShow(self.CurrentMap, self.MapNum or 1)
+            self.MapUtil:OnShow(self.MapUtil.selectedMap, self.MapUtil.mapNum or 1)
         elseif buttonClick == "LeftButton" then
             --print(self:GetCursorCords())
         end
     end)
-    self.ui.tabs.Map:SetScript("OnShow", function() self:MapOnShow(self.CurrentMap, self.MapNum or 1) end)
+    self.ui.tabs.Map:SetScript("OnShow", function() self.MapUtil:OnShow(self.MapUtil.selectedMap, self.MapUtil.mapNum or 1) end)
 
     self.ui.tabs.Map:EnableMouseWheel(true)
     self.ui.tabs.Map.cursorCords = self.ui.tabs.Map:CreateFontString(nil,"ARTWORK","GameFontNormal")
@@ -701,8 +701,8 @@ self.ui.tabs.Loot.TableScrollFrame.rows = rows2
     end)
 
     self.ui.tabs.Map:SetScript("OnShow", function() self.ui.tabs.Map.cursorCords:SetText(self.Colors.WHITE.."Cursor: ---") end)
-    self.ui.tabs.Map:SetScript("OnEnter", function() self.showCords = true self:MapOnEnter() end)
-    self.ui.tabs.Map:SetScript("OnUpdate", function() self:MapOnEnter() end)
+    self.ui.tabs.Map:SetScript("OnEnter", function() self.showCords = true self.MapUtil:OnEnter() end)
+    self.ui.tabs.Map:SetScript("OnUpdate", function() self.MapUtil:OnEnter() end)
     self.ui.tabs.Map:SetScript("OnLeave", function()
         self.showCords = false
         self.ui.tabs.Map.cursorCords:SetText(self.Colors.WHITE.."Cursor: ---")
