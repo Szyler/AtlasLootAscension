@@ -84,8 +84,15 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 	local function correctText(text)
 		text = gsub(text, "Cloth Armor %- Back", "Back")
 		text = gsub(text, "Miscellaneous Armor %- " , "")
-		text = gsub(text, "Armor %- " , "Armor "..self.Colors.WHITE.."%- ")
-		text = gsub(text, "Weapon %- " , self.Colors.WHITE.."%- ")
+		text = gsub(text, "Miscellaneous %- " , "")
+		text = gsub(text, " %- Two%-Handed Weapon" , "")
+		text = gsub(text, " %- One%-Handed Weapon" , "")
+		text = gsub(text, " %- Thrown" , "")
+		text = gsub(text, " %- Ranged Right" , "")
+		text = gsub(text, " %- Ranged" , "")
+		text = gsub(text, " %- Shield" , "")
+		text = gsub(text, " %- Relic" , "")
+		text = gsub(text, "Misc %- Bag" , "Bags")
 		return text
 	end
 
@@ -126,7 +133,7 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 					local slot = self.ItemUtil:GetSlotName(eLoc)
 					local className = self.ItemUtil:GetClassName(items[2])
 					local subClassName = self.ItemUtil:GetSubClassName(items[2], subClassID)
-					local name = slot and subClassName and className.." "..subClassName.." - "..slot or className or ""
+					local name = slot and subClassName and subClassName.." - "..slot or className or ""
 					local lootType = self.data.onDemand[typeL]
 					if i == 1 then
 						table.insert(lootType,{Name = correctText(name), {}})
