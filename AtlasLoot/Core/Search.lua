@@ -271,7 +271,7 @@ function AtlasLoot:InitializeSearch()
 
     function Search:SetSearchString(searchValue)
         setupParameters(self)
-        self.searchParameters.searchString = searchValue or nil
+        self.searchParameters.searchString = searchValue or ""
     end
 
     ---------------------------Menus---------------------------
@@ -424,7 +424,7 @@ function AtlasLoot:InitializeSearch()
 
     function Search:ResetParameters()
         self.searchParameters = nil
-        setupParameters(self)
+        self:SetSearchString()
         searchPanel.searchbox:SetText("")
         searchPanel.levelmin:SetText("")
         searchPanel.levelmax:SetText("")
