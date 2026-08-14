@@ -1,5 +1,10 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
+AtlasLoot.skinKeys = {
+        {"Modern", "Modern"},
+        {"OldAtlasLoot", "Old AtlasLoot"},
+        {"ElvUIDark", "ElvUI Dark"},
+    }
 
 function AtlasLoot:InitializeSkins()
     self.CloseDefaults = {}
@@ -10,11 +15,7 @@ function AtlasLoot:InitializeSkins()
     local TDF = self.TitleDefaults
     TDF[1], TDF[2], TDF[3], TDF[4], TDF[5] = self.ui.TitleText:GetPoint()
 
-    self.skinKeys = {
-        {"Modern", "Modern"},
-        {"OldAtlasLoot", "Old AtlasLoot"},
-        {"ElvUIDark", "ElvUI Dark"},
-    }
+    
 
     local skins = {
         Modern = {
