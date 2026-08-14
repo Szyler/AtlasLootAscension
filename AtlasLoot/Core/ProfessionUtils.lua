@@ -1,5 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local TradeSkill = {parent = AtlasLoot}
+local TradeSkill = {}
 AtlasLoot.TradeSkill = TradeSkill
 local craftingData = AtlasLoot.data.crafting
 local colors = AtlasLoot.Colors
@@ -62,7 +62,7 @@ end
  -- returns a list of characters with the recipe
 function TradeSkill:GetKnownRecipes(spellID)
 	local text
-    for key, profile in pairs(self.parent.db.profiles) do
+    for key, profile in pairs(AtlasLoot.db.profiles) do
         if gsub(key,"-",""):match(gsub(realmName,"-","")) and not gsub(key,"-",""):match(gsub(playerName,"-","")) and self:IsRecipeKnown(spellID, profile) then
             local charName = strsplit("-", key, 5)
             text = text and text..", "..gsub(charName, " ", "") or gsub(charName, " ", "")
@@ -83,7 +83,7 @@ function TradeSkill:IsRecipeUnknown(itemID)
 	if not recipeSpellID then return end
 
 	local text
-	for key, profile in pairs(self.parent.db.profiles) do
+	for key, profile in pairs(AtlasLoot.db.profiles) do
 		if gsub(key,"-",""):match(gsub(realmName,"-","")) and
 		self:IsProfessionKnown(skillIndex, profile) and not self:IsRecipeKnown(recipeSpellID, profile) then
 			local charName = strsplit("-", key, 5)
@@ -154,11 +154,11 @@ function TradeSkill:SetRecipeMapPins()
 
 	local craftingXpac = { ClassicCrafting = 1, BCCrafting = 2, WrathCrafting = 3 }
 	local xpac = GetAccountExpansionLevel()+1
-	for profKey, _ in pairs(self.parent.db.profile.professions) do
+	for profKey, _ in pairs(AtlasLoot.db.profile.professions) do
 		if professionTable[profKey] then
 			for _, profTable in pairs(professionTable[profKey]) do
-				if craftingXpac[self:GetDataType(profTable)] <= xpac then
-					for _, recipeData in ipairs(self.parent.data.item[profTable.."1"]) do
+				if craftingXpac[AtlasLoot:GetDataType(profTable)] <= xpac then
+					for _, recipeData in ipairs(AtlasLoot.data.item[profTable.."1"]) do
 						if recipeData.spellID and not CA_IsSpellKnown(recipeData.spellID) then
 							local craftingData = self:GetRecipeSource(recipeData.spellID)
 							if craftingData then
@@ -167,7 +167,7 @@ function TradeSkill:SetRecipeMapPins()
 										local line1 = v[1]
 										local line2 = v[2]
 										if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
-										self:AddWayPoint(line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1)
+										AtlasLoot.WorldMap:AddWayPoint(line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1)
 									end
 								end
 							end
@@ -305,8 +305,8 @@ end
 
 -- Creates list characters known recipes
 function TradeSkill:PopulateProfessions()
-	self.parent.db.profile.professions = self.parent.db.profile.professions or {}
-	local profile = self.parent.db.profile.professions
+	AtlasLoot.db.profile.professions = AtlasLoot.db.profile.professions or {}
+	local profile = AtlasLoot.db.profile.professions
 	for _, skillID in pairs(PRIMARY_PROFESSIONS) do
 		local _, _, _, skillMaxRank = GetSkillInfo(skillID)
 		if skillMaxRank and skillMaxRank > 0 then

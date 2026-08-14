@@ -1,17 +1,36 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 Enum.POIType.AtlasLootPins = "AtlasLootPins"
 WORLD_MAP_FILTER_ATLASLOOTPINS = "AtlasLoot Pins"
+local WorldMap = {}
+AtlasLoot.WorldMap = WorldMap
 local scale = 0.8
 local flags = EnumUtil.CombineMasks(Enum.POIFlags.HasTooltip)
 local playerFaction = UnitFactionGroup("player")
 local pois = {}
+
+local worldMapAreaData
+-- Loads the tradeskill data .json
+local function getAreaID(id)
+	if not worldMapAreaData then
+        worldMapAreaData = {}
+		local content = C_ContentLoader:Load("WorldMapAreaData")
+
+		content:SetParser(function(_, data)
+            worldMapAreaData[data.AreaID] = data.ID
+		end)
+
+		content:Parse()
+    end
+    return worldMapAreaData[id]
+end
+
 --Adds map pins to Ascension POI system
-function AtlasLoot:AddWayPoint(areaName, x, y, vendorName)
+function WorldMap:AddWayPoint(areaName, x, y, vendorName)
 
     --Adds a waypoint to client poi system
 	local zoneID = GetAreaIdByName(areaName)
     local mapID = C_WorldMap.GetMapIDByZoneID(zoneID)
-	local z = self:GetAreaID(zoneID)
+	local z = getAreaID(zoneID)
 	local bottom, right  = C_WorldMap.GetWorldPosition(z, 1, 1)
 	local top, left = C_WorldMap.GetWorldPosition(z, 0, 0)
 	local worldX = (left + (tonumber(x) / 100 * (right-left)))
@@ -37,22 +56,6 @@ function AtlasLoot_Remove_Pin(id)
     if IsShiftKeyDown() then
         DB_MapPOI.RemovePOIByID(id)
     end
-end
-
-local worldMapAreaData
--- Loads the tradeskill data .json
-function AtlasLoot:GetAreaID(id)
-	if not worldMapAreaData then
-        worldMapAreaData = {}
-		local content = C_ContentLoader:Load("WorldMapAreaData")
-
-		content:SetParser(function(_, data)
-            worldMapAreaData[data.AreaID] = data.ID
-		end)
-
-		content:Parse()
-    end
-    return worldMapAreaData[id]
 end
 
 --[[ function DB_MapPOI.CreatePOI(id, name, description, x, y, z, type, flags, textureID, scale, onClickFunction, mapID, events, extra)

@@ -328,7 +328,7 @@ function AtlasLoot:ItemContextMenu(data, Type)
                 func = function()
                     for _,v in pairs(wayPoint) do
                         if not v[5] or (v[5] and (v[5] == playerFaction or v[5] == "Netural")) then
-                            self:AddWayPoint(unpack(v))
+                            self.WorldMap:AddWayPoint(unpack(v))
                         end
                     end
                 end, showOnCondition = isWaypoint},
