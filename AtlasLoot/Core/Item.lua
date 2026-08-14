@@ -166,7 +166,7 @@ function ItemUtil:GetItemInfo(item)
 	itemInfo.link = item:GetLink()
 	if not itemInfo.itemID then return {} end
 
-	itemInfo.className = _G["ITEM_CLASS_"..itemInfo.classID]
+	itemInfo.className = self:GetClassName(itemInfo.classID)
 	itemInfo.subclassName = self:GetSubClassName(itemInfo.classID, itemInfo.subclassID)
 	itemInfo.inventoryTypeName = equipmentSlots[itemInfo.inventoryType] and equipmentSlots[itemInfo.inventoryType].name
 	itemInfo.isToken = itemInfo.description and itemInfo.description:find("Global Token for Tier", 1, true) or nil
@@ -197,8 +197,8 @@ function ItemUtil:GetItemLevel(id)
 	return GetItemLevelInstant(id)
 end
 
-function ItemUtil:GetClassName(id)
-	return self:GetItemInfo(id).className
+function ItemUtil:GetClassName(classID)
+	return _G["ITEM_CLASS_"..classID]
 end
 
 function ItemUtil:GetSubClassName(classID, subclassID)

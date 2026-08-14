@@ -120,11 +120,13 @@ function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name, isDungeon)
 		end
 
 		self.data.onDemand[typeL] = {Name = name, Type = typeL, filter = true }
-		for aType, v in pairs(unsorted) do
+		for subClassID, v in pairs(unsorted) do
 			for eLoc, t in pairs(v) do
 				for i, items in ipairs(t) do
 					local slot = self.ItemUtil:GetSlotName(eLoc)
-					local name = slot and items[2] and aType.." "..items[2].." - "..slot or aType or ""
+					local className = self.ItemUtil:GetClassName(items[2])
+					local subClassName = self.ItemUtil:GetSubClassName(items[2], subClassID)
+					local name = slot and subClassName and className.." "..subClassName.." - "..slot or className or ""
 					local lootType = self.data.onDemand[typeL]
 					if i == 1 then
 						table.insert(lootType,{Name = correctText(name), {}})
