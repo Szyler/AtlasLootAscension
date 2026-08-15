@@ -1,5 +1,7 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local icon = LibStub('LibDBIcon-1.0')
+local Minimap = {}
+AtlasLoot.Minimap = Minimap
 local minimap = LibStub:GetLibrary('LibDataBroker-1.1'):NewDataObject("AtlasLoot", {
     type = 'data source',
     text = "AtlasLoot",
@@ -34,23 +36,22 @@ function minimap.OnEnter(frame)
     GameTooltip:Show()
 end
 
-function AtlasLoot:MinimapIconSetup()
-	if not self.selectedProfile.minimap then
-		self.selectedProfile.minimap = {hide = false}
+function Minimap:IconSetup()
+	if not AtlasLoot.selectedProfile.minimap then
+		AtlasLoot.selectedProfile.minimap = false
 	end
 
 	if icon then
-		icon:Register('AtlasLoot', minimap, self.selectedProfile.minimap)
+		icon:Register('AtlasLoot', minimap, {hide = AtlasLoot.selectedProfile.minimap})
 	end
 end
 
 -- show/hide minimap icon
-function AtlasLoot:ToggleMinimap()
-    local hide = not self.selectedProfile.minimap.hide
-    self.selectedProfile.minimap.hide = hide
-    if hide then
-      icon:Hide("AtlasLoot")
+function Minimap:Toggle()
+    AtlasLoot.selectedProfile.minimap = not AtlasLoot.selectedProfile.minimap
+    if AtlasLoot.selectedProfile.minimap then
+        icon:Hide("AtlasLoot")
     else
-      icon:Show("AtlasLoot")
+        icon:Show("AtlasLoot")
     end
 end

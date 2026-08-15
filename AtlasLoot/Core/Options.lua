@@ -131,7 +131,7 @@ function AtlasLoot:InitializeOptionsFrame()
                         Type = "CheckButton",
                         Name = "minimap",
                         Lable = "Hide minimap icon",
-                        OnClick = function() self:ToggleMinimap() end
+                        OnClick = function() self.Minimap:Toggle() end
                     },
                     {
                         Type = "Menu",
