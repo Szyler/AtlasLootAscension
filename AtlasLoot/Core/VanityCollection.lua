@@ -146,12 +146,13 @@ function AtlasLoot:CreateVanityCollection()
 	for _, item in pairs(vanityItems) do
         local group
 		local flavor = GetItemFlavorText(item.itemid)
+		flavor = flavor and flavor:lower() or ""
         local itemInfo = self.ItemUtil:GetItemInfo(item.itemid)
 
         local groupByName = setGroupByName(item)
 		if item.quality == 7 then
             group = setGroup("Heirlooms")
-		elseif flavor:lower():find("|cff33fff0manastorm", 1, true) then
+		elseif flavor:find("|cff33fff0manastorm", 1, true) then
             group = setGroup("Manastorm")
 		elseif groupByName then
             group = setGroup(groupByName[1], groupByName[2])
