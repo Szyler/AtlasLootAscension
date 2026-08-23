@@ -220,7 +220,7 @@ local function mapMenuOpen(frame)
         end
     local menuList = { 
     {
-        {text = AtlasLoot.Colors.ORANGE.."Open AscensionDB To Zone Map", divider = true, func = function() AtlasLoot:OpenDBURL(AtlasLoot.data.map[MapUtil.selectedMap].ZoneName[2] , "zone") end},
+        {text = AtlasLoot.Colors.ORANGE.."Open AscensionDB", divider = true, func = function() AtlasLoot:OpenDBURL(AtlasLoot.data.map[MapUtil.selectedMap].ZoneName[2] , "zone") end},
     }}
 
     AtlasLoot:OpenDewdropMenu(frame, zones, menuList)

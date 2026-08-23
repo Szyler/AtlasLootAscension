@@ -235,8 +235,6 @@ function AtlasLoot:ItemOnClick(item, button)
                 return
         end
     end
-
- 
 end
 
 AtlasLootGlobals.ItemOnEnter = AtlasLoot.ItemOnEnter
@@ -263,7 +261,7 @@ function AtlasLoot:ItemContextMenu(data, Type)
     local menuList = {
         {
                 {text = "Links", isTitle = true},
-                {text = self.Colors.ORANGE.."Open AscensionDB To Entry", func = function() self:OpenDBURL(linkID,Type) end},
+                {text = self.Colors.ORANGE.."Open AscensionDB", func = function() self:OpenDBURL(linkID,Type) end},
                 {text = self.Colors.GREEN.."Guild", func = function() self:Chatlink(linkID,"GUILD",Type) end},
                 {text = self.Colors.LIGHTBLUE.."Party", func = function() self:Chatlink(linkID,"PARTY",Type) end},
                 {text = self.Colors.ORANGE2.."Raid", func = function() self:Chatlink(linkID,"RAID",Type) end},

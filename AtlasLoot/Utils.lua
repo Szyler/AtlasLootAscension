@@ -102,7 +102,7 @@ end
 --drop down map menu
 function AtlasLoot:OpenDB(frame, type, text)
     local menuList = { [1] = {
-        {text = self.Colors.ORANGE.."Open AscensionDB To NPC", func = function() self:OpenDBURL(text , type) end},
+        {text = self.Colors.ORANGE.."Open AscensionDB", func = function() self:OpenDBURL(text , type) end},
 		}
 	}
     self:OpenDewdropMenu(frame, menuList)

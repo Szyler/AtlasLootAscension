@@ -20,9 +20,6 @@ if AL then
 	AL["Created Item"] = true
 	AL["Recipe"] = true
 	AL["Mystic Enchanting"] = true
-	AL["Open AscensionDB To Zone Map"] = true
-	AL["Open AscensionDB To NPC"] = true
-	AL["Open AscensionDB To Entry"] = true
 	AL["Links"] = true
 	AL["Add To Default"] = true
 	AL["Clear Search"] = true
