@@ -34,6 +34,18 @@ AtlasLoot:AddItemData("extraItemInfo", {
 		{ itemID = 21712 }, --Amulet of the Fallen God
 		{ itemID = 21709 }, --Ring of the Fallen God
 	},
+	[18563] = {
+		{ itemID = 19019 }, --Thunderfury, Blessed Blade of the Windseeker
+	},
+	[18564] = {
+		{ itemID = 19019 }, --Thunderfury, Blessed Blade of the Windseeker
+	},
+	[17203] = {
+		{ itemID = 17182 }, --Sulfuras, Hand of Ragnaros
+	},
+	[17204] = {
+		{ itemID = 17182 }, --Sulfuras, Hand of Ragnaros
+	}
 })
 
 AtlasLoot:AddItemData("lootableLinks", {
