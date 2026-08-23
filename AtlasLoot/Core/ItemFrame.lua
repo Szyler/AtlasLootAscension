@@ -201,7 +201,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 		local lvls = self.data.crafting["CraftingLevels"][spellID]
 		local name = self:FixText(dataSource.Name)
 		extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
-	elseif self.data.lootableLinks[itemID] and self.data.lootableLinks[itemID][3] == "Token" then
+	elseif self.data.lootableLinks[itemNumber.itemID] and self.data.lootableLinks[itemNumber.itemID][3] == "Token" then
 		extra = self:FixText("Set Token (Click)")
 	elseif itemData and itemData.subclassName and itemData.inventoryTypeName then
 		extra = itemData.subclassName .. ", " .. itemData.inventoryTypeName
@@ -211,7 +211,7 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 		extra = ""
 	end
 
-	if (itemNumber.contentsPreview or self.data.extraItemInfo[itemID] or crafedItemID) and dataID ~= "SearchResult" then
+	if (itemNumber.contentsPreview or self.data.extraItemInfo[itemNumber.itemID] or crafedItemID) and dataID ~= "SearchResult" then
 		extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
 	end
 
@@ -276,13 +276,13 @@ local function setupButton(self, itemID, itemNumber, itemButton, dataSource, dat
 	itemButton.tablenum = tablenum
 	itemButton.dataID = dataID
 	itemButton.dataSource = dataSource_backup
-	itemButton.contentsPreview = itemNumber.contentsPreview or reagents or self.data.extraItemInfo[itemID] or crafedItemID
+	itemButton.contentsPreview = itemNumber.contentsPreview or reagents or self.data.extraItemInfo[itemNumber.itemID] or crafedItemID
 	itemButton.price = itemNumber.price or nil
 	itemButton.droprate = itemNumber.droprate or self.ItemUtil:GetDropRate(itemNumber.refLootEntry, itemNumber.groupID)
 	itemButton.extraInfo = itemNumber.extraInfo or nil
 	itemButton.quest = itemNumber.quest or nil
 	itemButton.item = itemNumber
-	itemButton.sourcePage = self.data.lootableLinks[itemID] and self.data.lootableLinks[itemID] or itemNumber.sourcePage
+	itemButton.sourcePage = self.data.lootableLinks[itemNumber.itemID] and self.data.lootableLinks[itemNumber.itemID] or itemNumber.sourcePage
 
 	local searchDif = self.Difficulties:GetSearch()
 	itemButton.difficulty = searchDif and itemNumber[searchDif] or self.ItemindexID
