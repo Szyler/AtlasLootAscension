@@ -120,6 +120,7 @@ function AtlasLoot:InitializeSearch()
     end
 
     local function nameMatches(searchText, itemDetails)
+        if not itemDetails.name or not searchText then return end
         return string.find(string.lower(itemDetails.name), string.lower(searchText))
     end
 
